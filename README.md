@@ -23,7 +23,7 @@ If you need custom software built, [get in touch](https://noblerworks.com/).
 >
 > Whether you've never opened a terminal or you're chasing your fifth cert, start here.
 >
-> Patrick: Ex-AWS Solutions Architect | 10 Years in Tech | 46 Certifications
+> Patrick: Ex-AWS Solutions Architect | 10 Years in Tech | 60 Certifications & Accreditations | 18x Multi Cloud Certified
 >
 > 🎥 [@patrickwiloak](https://youtube.com/@patrickwiloak) | 💼 [LinkedIn](https://www.linkedin.com/in/patricklukewilson/)
 
@@ -327,7 +327,7 @@ If these materials helped you pass a certification or advance your career, pleas
 
 Created and maintained by **[Patrick Wiloak](https://patrickwiloak.com)**
 
-**16x Multi Cloud Certified** | **Prev @ AWS** | **11x AWS Certified** | **3x GCP** | **2x Azure**
+**18x Multi Cloud Certified** | **60 Certifications & Accreditations** | **Prev @ AWS** | **12x AWS Certified** | **4x GCP** | **2x Azure**
 
 🎥 **[YouTube: @patrickwiloak](https://youtube.com/@patrickwiloak)** - Cloud certification tips and tutorials
 📝 **[Blog: Study Guide 2025](https://patrickwiloak.com/blog/aws-certification-study-framework-how-to-prepare-pass-certifications)** - Proven study strategies

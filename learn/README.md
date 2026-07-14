@@ -2,7 +2,7 @@
 
 > **Plain-English explanations of cloud computing and AI/ML for people who want to understand the technology, not just pass an exam.**
 >
-> Built and maintained by [Patrick Wiloak](https://patrickwiloak.com) - Ex-AWS Solutions Architect, 16x cloud certified, 10 years in tech. If certs aren't your goal, start here.
+> Built and maintained by [Patrick Wiloak](https://patrickwiloak.com) - Ex-AWS Solutions Architect, 18x multi cloud certified, 60 certifications and accreditations, 10 years in tech. If certs aren't your goal, start here.
 >
 > 🎥 [@patrickwiloak](https://youtube.com/@patrickwiloak) | 💼 [LinkedIn](https://www.linkedin.com/in/patricklukewilson/)
 
