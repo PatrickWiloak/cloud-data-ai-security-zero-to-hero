@@ -2,6 +2,10 @@
 last-updated: 2026-05-03
 difficulty: advanced
 reading-time: 18 min
+certs:
+  - nvidia/genai-llms-professional
+  - databricks/ml-professional
+  - azure/dp-100
 ---
 
 # Fine-tune with LoRA

@@ -1,5 +1,10 @@
 ---
 last-updated: 2026-05-03
+certs:
+  - aws/professional/solutions-architect-pro-sap-c02
+  - azure/az-305
+  - gcp/cloud-architect
+  - comptia/cloud-plus
 ---
 
 # Hands-On Project: Disaster Recovery Drill

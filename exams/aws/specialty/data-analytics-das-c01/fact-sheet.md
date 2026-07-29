@@ -1,5 +1,7 @@
 ---
 last-updated: 2026-05-03
+exam-version: DAS-C01
+exam-retires: 2024-04-08
 ---
 
 # AWS Data Analytics Specialty (DAS-C01) - Fact Sheet

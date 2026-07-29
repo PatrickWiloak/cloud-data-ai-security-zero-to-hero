@@ -1,0 +1,37 @@
+Question,Answer,Tags
+How long is the FinOps Certified Professional (FOCP-Pro) exam?,120 minutes,exam-logistics
+How many questions are on the FinOps Certified Professional (FOCP-Pro) exam?,"65 multiple choice, multi-response, and scenario-based",exam-logistics
+What is the passing score for FinOps Certified Professional (FOCP-Pro)?,75 percent,exam-logistics
+What does the FinOps Certified Professional (FOCP-Pro) exam cost?,450 USD (may bundle with training),exam-logistics
+How long is FinOps Certified Professional (FOCP-Pro) valid for?,2 years,exam-logistics
+How is the FinOps Certified Professional (FOCP-Pro) exam delivered?,Online proctored via Linux Foundation portal,exam-logistics
+EDP (Enterprise Discount Program) (rate optimization ri sp cud),"multi-year spend commit for an AWS-wide discount, typically 5-15 percent","notes,rate-optimization-ri-sp-cud"
+PPA (Private Pricing Agreement) (rate optimization ri sp cud),service-specific negotiated rates,"notes,rate-optimization-ri-sp-cud"
+Support tier discounts (rate optimization ri sp cud),Business/Enterprise/Enterprise On-Ramp,"notes,rate-optimization-ri-sp-cud"
+Reservations (rate optimization ri sp cud),"1 or 3 year; compute, SQL DB, Cosmos DB, Storage, and more","notes,rate-optimization-ri-sp-cud"
+Azure Savings Plan for Compute (rate optimization ri sp cud),similar to AWS Compute SP; commits hourly spend for compute flexibility,"notes,rate-optimization-ri-sp-cud"
+Azure Hybrid Benefit (rate optimization ri sp cud),BYOL for Windows/SQL with Software Assurance,"notes,rate-optimization-ri-sp-cud"
+Spot VMs (rate optimization ri sp cud),interruptible capacity discount,"notes,rate-optimization-ri-sp-cud"
+Azure Consumption Commitment (MACC) (rate optimization ri sp cud),multi-year spend commit for Azure-wide discount,"notes,rate-optimization-ri-sp-cud"
+Resource-based CUDs (rate optimization ri sp cud),commit to specific instance types in a region; up to ~57 percent discount; 1 or 3 year,"notes,rate-optimization-ri-sp-cud"
+Spend-based CUDs (rate optimization ri sp cud),"commit to a dollar amount across compute SKUs; more flexibility, lower discount","notes,rate-optimization-ri-sp-cud"
+Flexible CUDs (rate optimization ri sp cud),even broader flexibility across machine types,"notes,rate-optimization-ri-sp-cud"
+Sustained Use Discounts (rate optimization ri sp cud),"automatic monthly discount for running instances; automatic, no commitment","notes,rate-optimization-ri-sp-cud"
+Custom CUDs (rate optimization ri sp cud),negotiated for large customers,"notes,rate-optimization-ri-sp-cud"
+Spot VMs / Preemptible (rate optimization ri sp cud),interruptible capacity discount,"notes,rate-optimization-ri-sp-cud"
+BilledCost (multi cloud finops with focus),what the invoice will show. Use for finance reconciliation.,"notes,multi-cloud-finops-with-focus"
+EffectiveCost (multi cloud finops with focus),"amortized, post-discount. Use for unit economics and business reporting.","notes,multi-cloud-finops-with-focus"
+ListCost (multi cloud finops with focus),what it would cost at public rates. Use for savings math (ESR).,"notes,multi-cloud-finops-with-focus"
+ContractedCost (multi cloud finops with focus),what it would cost at your negotiated rate before commitment discounts.,"notes,multi-cloud-finops-with-focus"
+CFO and Finance leaders (organizational maturity and governance),"budget, chargeback, forecast accuracy, accounting treatment","notes,organizational-maturity-and-governance"
+CTO and engineering leaders (organizational maturity and governance),"architecture, efficiency, speed vs cost trade-offs","notes,organizational-maturity-and-governance"
+CPO and product leaders (organizational maturity and governance),"unit economics, feature cost","notes,organizational-maturity-and-governance"
+Procurement (organizational maturity and governance),"contracts, EDPs, MACCs, vendor strategy","notes,organizational-maturity-and-governance"
+Security (organizational maturity and governance),"shared tooling, policy overlap, vendor risk","notes,organizational-maturity-and-governance"
+Sustainability (organizational maturity and governance),carbon reporting and alignment,"notes,organizational-maturity-and-governance"
+Crawl (organizational maturity and governance),"manual, inconsistent, reactive","notes,organizational-maturity-and-governance"
+Walk (organizational maturity and governance),"automated, consistent, periodic","notes,organizational-maturity-and-governance"
+Run (organizational maturity and governance),"integrated, continuous, culturally embedded","notes,organizational-maturity-and-governance"
+Scope 1 (sustainability and greenops),"direct emissions (owned equipment, fleet, on-site generation)","notes,sustainability-and-greenops"
+Scope 2 (sustainability and greenops),purchased energy (grid electricity),"notes,sustainability-and-greenops"
+Scope 3 (sustainability and greenops),"everything else in the value chain (supply chain, travel, purchased goods, and cloud usage as an upstream service)","notes,sustainability-and-greenops"

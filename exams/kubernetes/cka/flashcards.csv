@@ -1,0 +1,22 @@
+Question,Answer,Tags
+How long is the Certified Kubernetes Administrator (CKA) exam?,2 hours,exam-logistics
+What is the passing score for Certified Kubernetes Administrator (CKA)?,66%,exam-logistics
+What does the Certified Kubernetes Administrator (CKA) exam cost?,$395 USD (includes one free retake and two killer.sh simulator sessions),exam-logistics
+How long is Certified Kubernetes Administrator (CKA) valid for?,3 years,exam-logistics
+How is the Certified Kubernetes Administrator (CKA) exam delivered?,PSI online proctoring (remote only),exam-logistics
+Node Controller (cluster architecture),"monitors node health, evicts pods from unhealthy nodes","notes,cluster-architecture"
+Replication Controller (cluster architecture),maintains the correct number of pods for replication objects,"notes,cluster-architecture"
+Endpoints Controller (cluster architecture),populates endpoint objects (joins Services and Pods),"notes,cluster-architecture"
+ServiceAccount Controller (cluster architecture),creates default service accounts for new namespaces,"notes,cluster-architecture"
+Deployment Controller (cluster architecture),manages deployment rollouts and rollbacks,"notes,cluster-architecture"
+Job Controller (cluster architecture),watches for Job objects and creates pods to run tasks,"notes,cluster-architecture"
+containerd (cluster architecture),"most widely used, default in many distributions","notes,cluster-architecture"
+CRI-O (cluster architecture),"lightweight, designed specifically for Kubernetes","notes,cluster-architecture"
+Docker Engine (cluster architecture),"no longer directly supported (dockershim removed in v1.24), but containerd (used by Docker) works","notes,cluster-architecture"
+Recreate (workloads scheduling),terminates all existing pods before creating new ones (causes downtime),"notes,workloads-scheduling"
+Requests (workloads scheduling),the minimum amount of resources guaranteed to the container,"notes,workloads-scheduling"
+Limits (workloads scheduling),the maximum amount of resources the container can use,"notes,workloads-scheduling"
+Block (storage),volume is presented as a raw block device (no filesystem),"notes,storage"
+Retain (storage),"PV is kept with its data intact, must be manually cleaned up","notes,storage"
+Delete (storage),PV and the underlying storage resource are deleted,"notes,storage"
+WaitForFirstConsumer (storage),PV provisioning is delayed until a pod using the PVC is scheduled. This ensures the PV is created in the same topology zone as the pod.,"notes,storage"

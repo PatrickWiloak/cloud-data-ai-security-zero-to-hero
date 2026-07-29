@@ -1,5 +1,11 @@
 ---
 last-updated: 2026-05-03
+certs:
+  - cloud-security-alliance/ccsk
+  - azure/az-500
+  - aws/specialty/security-scs-c02
+  - gcp/cloud-security-engineer
+  - kubernetes/cks
 ---
 
 # Hands-On Project: Implement Zero Trust Security

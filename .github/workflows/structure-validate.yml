@@ -14,6 +14,8 @@ on:
       - '.github/scripts/build-freshness-ledger.sh'
       - '.github/scripts/build-certs-index.py'
       - '.github/scripts/build-provider-indexes.py'
+      - '.github/scripts/build-lab-map.py'
+      - '.github/scripts/build-flashcards.py'
   pull_request:
     paths:
       - 'exams/**'
@@ -26,6 +28,8 @@ on:
       - '.github/scripts/build-freshness-ledger.sh'
       - '.github/scripts/build-certs-index.py'
       - '.github/scripts/build-provider-indexes.py'
+      - '.github/scripts/build-lab-map.py'
+      - '.github/scripts/build-flashcards.py'
   workflow_dispatch:
 
 permissions:
@@ -51,6 +55,17 @@ jobs:
 
       - name: Check generated navigation is current
         run: python3 .github/scripts/build-provider-indexes.py --check
+
+      - name: Check lab-to-cert map is current
+        run: python3 .github/scripts/build-lab-map.py --check
+
+      - name: Check flashcard decks are current
+        run: python3 .github/scripts/build-flashcards.py --check
+
+      # Advisory: reports which cert guides are due for re-verification this month.
+      - name: Cert freshness rotation (advisory)
+        continue-on-error: true
+        run: python3 .github/scripts/check-cert-freshness.py
 
       # Advisory, never blocking. Orphan detection is a heuristic: some pages are
       # legitimately reachable only through a directory listing, so a hit is a prompt

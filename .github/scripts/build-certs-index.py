@@ -145,7 +145,10 @@ def title_of(path, fallback):
         if line.startswith("# "):
             title = strip_md(line[2:])
             title = re.sub(r"\s*[-–]\s*RETIRED\s*$", "", title, flags=re.I)
-            return re.sub(r"\s*Fact Sheet\s*$", "", title, flags=re.I).strip()
+            # Page-type suffixes are about the document, not the certification.
+            title = re.sub(r"\s*(Fact Sheet|Exam Guide|Certification Exam Guide)\s*$",
+                           "", title, flags=re.I)
+            return title.strip()
     return fallback
 
 
@@ -241,11 +244,18 @@ def classify_status(cert_dir, notes_count):
     return "active"
 
 
-def frontmatter_date(path):
+def frontmatter(path, key):
+    """Read a single scalar key out of the leading YAML frontmatter block."""
     if not os.path.isfile(path):
         return None
-    match = re.search(r"^last-updated:\s*(\d{4}-\d{2}-\d{2})", open(path, encoding="utf-8").read()[:400], re.M)
+    head = open(path, encoding="utf-8").read()[:600]
+    match = re.search(rf"^{re.escape(key)}:\s*(.+?)\s*$", head, re.M)
     return match.group(1) if match else None
+
+
+def frontmatter_date(path):
+    value = frontmatter(path, "last-updated")
+    return value if value and re.fullmatch(r"\d{4}-\d{2}-\d{2}", value) else None
 
 
 def build():
@@ -286,6 +296,10 @@ def build():
             "notes_count": len(notes),
             "files": {f: os.path.isfile(os.path.join(root, f)) for f in STANDARD_FILES},
             "last_updated": frontmatter_date(fact_sheet),
+            # Optional, declared by hand in the fact-sheet frontmatter. Lets
+            # check-cert-freshness.py warn before an exam revision lands.
+            "exam_version": frontmatter(fact_sheet, "exam-version"),
+            "exam_retires": frontmatter(fact_sheet, "exam-retires"),
         })
 
     certs.sort(key=lambda c: c["id"])

@@ -47,6 +47,8 @@
 | ☸️ Specialize in Kubernetes | [Kubernetes Track](#kubernetes-track) |
 | 📚 Browse all materials | [Resource Library](#-resource-library) |
 | 📅 Per-cert last-verified dates | [Freshness ledger](./docs/freshness.md) |
+| 🧪 Find the lab for my cert | [Labs by certification](./resources/hands-on-projects/labs-by-cert.md) |
+| 🃏 Flashcards for a cert | `flashcards.csv` in each cert dir (Anki-importable) |
 
 ---
 

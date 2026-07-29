@@ -1,0 +1,35 @@
+Question,Answer,Tags
+How long is the Linux Foundation Certified IT Associate (LFCA) exam?,90 minutes,exam-logistics
+How many questions are on the Linux Foundation Certified IT Associate (LFCA) exam?,60 multiple-choice questions,exam-logistics
+What is the passing score for Linux Foundation Certified IT Associate (LFCA)?,70%,exam-logistics
+What does the Linux Foundation Certified IT Associate (LFCA) exam cost?,$250 USD,exam-logistics
+How long is Linux Foundation Certified IT Associate (LFCA) valid for?,3 years,exam-logistics
+How is the Linux Foundation Certified IT Associate (LFCA) exam delivered?,Online proctored,exam-logistics
+Repository (linux fundamentals),Server hosting packages (configured in /etc/apt/sources.list or /etc/yum.repos.d/),"notes,linux-fundamentals"
+Dependencies (linux fundamentals),Required packages installed automatically,"notes,linux-fundamentals"
+apt/dnf (linux fundamentals),High-level tools that handle dependencies,"notes,linux-fundamentals"
+dpkg/rpm (linux fundamentals),Low-level tools for individual packages,"notes,linux-fundamentals"
+Shebang (#!/bin/bash) (linux fundamentals),Specifies the interpreter,"notes,linux-fundamentals"
+Variables (linux fundamentals),No spaces around = sign,"notes,linux-fundamentals"
+Exit codes (linux fundamentals),"0 = success, non-zero = failure","notes,linux-fundamentals"
+$? (linux fundamentals),Exit code of last command,"notes,linux-fundamentals"
+"$1, $2, ... (linux fundamentals)",Command-line arguments,"notes,linux-fundamentals"
+Image (cloud computing),Read-only template (like a VM snapshot),"notes,cloud-computing"
+Container (cloud computing),Running instance of an image,"notes,cloud-computing"
+Dockerfile (cloud computing),Instructions to build an image,"notes,cloud-computing"
+Registry (cloud computing),Repository for storing images (Docker Hub),"notes,cloud-computing"
+Amazon EKS (cloud computing),AWS managed Kubernetes,"notes,cloud-computing"
+Azure AKS (cloud computing),Azure managed Kubernetes,"notes,cloud-computing"
+Google GKE (cloud computing),Google managed Kubernetes,"notes,cloud-computing"
+Scalability (cloud computing),Ability to handle increased load,"notes,cloud-computing"
+Vertical (scale up) (cloud computing),Add more resources to existing instance,"notes,cloud-computing"
+Horizontal (scale out) (cloud computing),Add more instances,"notes,cloud-computing"
+Elasticity (cloud computing),Automatically scale based on demand,"notes,cloud-computing"
+Reproducibility (devops fundamentals),Same code creates same infrastructure,"notes,devops-fundamentals"
+Version control (devops fundamentals),Track changes over time,"notes,devops-fundamentals"
+Automation (devops fundamentals),No manual steps,"notes,devops-fundamentals"
+Documentation (devops fundamentals),Code is the documentation,"notes,devops-fundamentals"
+Testing (devops fundamentals),Can validate before applying,"notes,devops-fundamentals"
+TLS (Transport Layer Security) (security networking),Encrypts data in transit,"notes,security-networking"
+SSL (Secure Sockets Layer) (security networking),Deprecated predecessor to TLS,"notes,security-networking"
+Certificate (security networking),"Proves server identity, issued by Certificate Authority (CA)","notes,security-networking"

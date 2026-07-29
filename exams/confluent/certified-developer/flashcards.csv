@@ -1,0 +1,31 @@
+Question,Answer,Tags
+How long is the Confluent Certified Developer for Apache Kafka exam?,90 minutes,exam-logistics
+How many questions are on the Confluent Certified Developer for Apache Kafka exam?,60 multiple-choice questions,exam-logistics
+What is the passing score for Confluent Certified Developer for Apache Kafka?,70%,exam-logistics
+What does the Confluent Certified Developer for Apache Kafka exam cost?,$150 USD,exam-logistics
+How long is Confluent Certified Developer for Apache Kafka valid for?,2 years,exam-logistics
+How is the Confluent Certified Developer for Apache Kafka exam delivered?,Online proctored,exam-logistics
+Key (kafka fundamentals),"Optional, used for partitioning and compaction","notes,kafka-fundamentals"
+Value (kafka fundamentals),The message payload,"notes,kafka-fundamentals"
+Headers (kafka fundamentals),Key-value metadata pairs,"notes,kafka-fundamentals"
+Timestamp (kafka fundamentals),CreateTime (producer) or LogAppendTime (broker),"notes,kafka-fundamentals"
+Offset (kafka fundamentals),Sequential ID assigned by the broker,"notes,kafka-fundamentals"
+Source processors (kafka streams),Read from Kafka topics,"notes,kafka-streams"
+Stream processors (kafka streams),"Transform data (filter, map, join, aggregate)","notes,kafka-streams"
+Sink processors (kafka streams),Write to Kafka topics,"notes,kafka-streams"
+Important (kafka streams),map() that changes the key triggers repartitioning,"notes,kafka-streams"
+Workers (connect and schema registry),JVM processes that execute connectors and tasks,"notes,connect-and-schema-registry"
+Connectors (connect and schema registry),Logical jobs that define source/sink configuration,"notes,connect-and-schema-registry"
+Tasks (connect and schema registry),Units of work that actually move data,"notes,connect-and-schema-registry"
+Converters (connect and schema registry),Serialize/deserialize data between Connect and Kafka,"notes,connect-and-schema-registry"
+Transforms (connect and schema registry),Optional record modifications (Single Message Transforms),"notes,connect-and-schema-registry"
+Interactive Mode (ksqldb),Submit queries via CLI or REST API,"notes,ksqldb"
+Headless Mode (ksqldb),Load queries from a file at startup (production recommended),"notes,ksqldb"
+UDF (ksqldb),Scalar function (one input row to one output value),"notes,ksqldb"
+UDAF (ksqldb),Aggregate function (many input rows to one output value),"notes,ksqldb"
+UDTF (ksqldb),Table function (one input row to zero or more output rows),"notes,ksqldb"
+String (ksqldb),"CONCAT, SUBSTRING, TRIM, LPAD, RPAD, REPLACE, UCASE, LCASE","notes,ksqldb"
+Math (ksqldb),"ABS, CEIL, FLOOR, ROUND, SQRT, POWER, MOD","notes,ksqldb"
+Date/Time (ksqldb),"UNIX_TIMESTAMP, DATETOSTRING, STRINGTODATE, TIMESTAMPTOSTRING","notes,ksqldb"
+Conditional (ksqldb),"CASE, IFNULL, COALESCE","notes,ksqldb"
+Type (ksqldb),"CAST, ARRAY, MAP, STRUCT","notes,ksqldb"

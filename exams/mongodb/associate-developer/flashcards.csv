@@ -1,0 +1,27 @@
+Question,Answer,Tags
+How long is the MongoDB Associate Developer exam?,75 minutes,exam-logistics
+How many questions are on the MongoDB Associate Developer exam?,62 multiple-choice questions,exam-logistics
+What is the passing score for MongoDB Associate Developer?,65%,exam-logistics
+What does the MongoDB Associate Developer exam cost?,$150 USD,exam-logistics
+How long is MongoDB Associate Developer valid for?,3 years,exam-logistics
+How is the MongoDB Associate Developer exam delivered?,Online proctored,exam-logistics
+$match early (aggregation),"Reduces documents for subsequent stages, can use indexes","notes,aggregation"
+$project early (aggregation),"Reduces document size, less memory usage","notes,aggregation"
+$sort + $limit (aggregation),MongoDB optimizes this combination,"notes,aggregation"
+Pipeline memory limit (aggregation),100 MB per stage (use allowDiskUse: true to bypass),"notes,aggregation"
+Bar/Column (atlas tools),Categorical comparisons,"notes,atlas-tools"
+Line (atlas tools),Time-series trends,"notes,atlas-tools"
+Area (atlas tools),Stacked time-series,"notes,atlas-tools"
+Scatter (atlas tools),Correlations between variables,"notes,atlas-tools"
+Donut/Pie (atlas tools),Proportional distribution,"notes,atlas-tools"
+Heatmap (atlas tools),Two-dimensional distribution,"notes,atlas-tools"
+Geospatial (atlas tools),Map-based visualization,"notes,atlas-tools"
+Number (atlas tools),Single metric display,"notes,atlas-tools"
+Table (atlas tools),Tabular data display,"notes,atlas-tools"
+Gauge (atlas tools),Progress toward a goal,"notes,atlas-tools"
+Data Source (atlas tools),Connect to Atlas collections or views,"notes,atlas-tools"
+Aggregation (atlas tools),Charts use aggregation pipeline under the hood,"notes,atlas-tools"
+Filters (atlas tools),Interactive filtering on dashboards,"notes,atlas-tools"
+Embedding (atlas tools),Embed charts in web applications via SDK,"notes,atlas-tools"
+Dashboards (atlas tools),Organize multiple charts into dashboards,"notes,atlas-tools"
+Sharing (atlas tools),Share with team members or embed publicly,"notes,atlas-tools"

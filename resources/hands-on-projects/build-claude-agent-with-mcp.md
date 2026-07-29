@@ -2,6 +2,10 @@
 last-updated: 2026-05-03
 difficulty: intermediate
 reading-time: 18 min
+certs:
+  - anthropic/claude-application-developer
+  - aws/professional/genai-developer-aip-c01
+  - nvidia/agentic-ai-professional
 ---
 
 # Build a Claude agent with MCP

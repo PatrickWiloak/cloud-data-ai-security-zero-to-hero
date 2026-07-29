@@ -1,0 +1,34 @@
+Question,Answer,Tags
+How long is the AWS Certified SAP on AWS - Specialty (PAS-C01) exam?,170 minutes (2 hours 50 minutes),exam-logistics
+How many questions are on the AWS Certified SAP on AWS - Specialty (PAS-C01) exam?,65 questions,exam-logistics
+What is the passing score for AWS Certified SAP on AWS - Specialty (PAS-C01)?,"750/1000 (scaled scoring, approximately 75%)",exam-logistics
+What does the AWS Certified SAP on AWS - Specialty (PAS-C01) exam cost?,$300 USD,exam-logistics
+How long is AWS Certified SAP on AWS - Specialty (PAS-C01) valid for?,3 years,exam-logistics
+How is the AWS Certified SAP on AWS - Specialty (PAS-C01) exam delivered?,Pearson VUE (online proctored or testing center),exam-logistics
+Small HANA (<1 TB) (sap architecture aws),r5.24xlarge single instance,"notes,sap-architecture-aws"
+Large HANA (>4 TB) (sap architecture aws),u-instances or scale-out,"notes,sap-architecture-aws"
+High availability (sap architecture aws),Multi-AZ with HSR,"notes,sap-architecture-aws"
+DR (sap architecture aws),Different region with ASYNC replication,"notes,sap-architecture-aws"
+Backup (sap architecture aws),AWS Backint Agent to S3,"notes,sap-architecture-aws"
+Migration (sap architecture aws),"SAP DMO, SAP HANA migration","notes,sap-architecture-aws"
+HA setup (sap architecture aws),Pacemaker cluster with overlay IP,"notes,sap-architecture-aws"
+Scaling (sap architecture aws),Add application servers horizontally,"notes,sap-architecture-aws"
+Performance (sap architecture aws),"Right-size instances, optimize storage","notes,sap-architecture-aws"
+Cost (sap architecture aws),"Reserved Instances, Savings Plans","notes,sap-architecture-aws"
+SAP Software Update Manager (SUM/DMO) (sap hana deployment operations),AWS Application Migration Service (MGN),"notes,sap-hana-deployment-operations"
+CloudEndure Migration (sap hana deployment operations),SAP LT Replication Server,"notes,sap-hana-deployment-operations"
+HA Setup (sap hana deployment operations),SYNC HSR + Pacemaker + Overlay IP,"notes,sap-hana-deployment-operations"
+DR Setup (sap hana deployment operations),ASYNC HSR to different region,"notes,sap-hana-deployment-operations"
+Backup (sap hana deployment operations),Daily full to S3 with Backint,"notes,sap-hana-deployment-operations"
+Performance (sap hana deployment operations),"Monitor CloudWatch, optimize queries","notes,sap-hana-deployment-operations"
+Patching (sap hana deployment operations),"Test on non-prod, patch secondary first in HA","notes,sap-hana-deployment-operations"
+Exam Scenario (study notes),"""Pacemaker cluster without STONITH - what's the risk?""","notes,study-notes"
+Answer (study notes),Split-brain scenario - both nodes could become primary,"notes,study-notes"
+Solution (study notes),Always configure AWS fence agent,"notes,study-notes"
+1656250 (study notes),SAP on AWS - Support prerequisites,"notes,study-notes"
+2015404 (study notes),SAP HANA on AWS - Installation and operation,"notes,study-notes"
+2456406 (study notes),AWS Launch Wizard for SAP,"notes,study-notes"
+2927211 (study notes),AWS Backint Agent for SAP HANA,"notes,study-notes"
+2369910 (study notes),SAP Software on AWS - General information,"notes,study-notes"
+2235581 (study notes),SAP HANA Support on AWS,"notes,study-notes"
+3108316 (study notes),SAP HANA High Availability across AZs,"notes,study-notes"

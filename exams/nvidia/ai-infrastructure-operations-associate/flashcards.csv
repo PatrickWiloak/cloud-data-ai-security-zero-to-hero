@@ -1,0 +1,26 @@
+Question,Answer,Tags
+How long is the NVIDIA Certified Associate - AI Infrastructure Operations (NCA-AIIO) exam?,60 minutes,exam-logistics
+How many questions are on the NVIDIA Certified Associate - AI Infrastructure Operations (NCA-AIIO) exam?,50-60 questions,exam-logistics
+What is the passing score for NVIDIA Certified Associate - AI Infrastructure Operations (NCA-AIIO)?,Not officially published,exam-logistics
+What does the NVIDIA Certified Associate - AI Infrastructure Operations (NCA-AIIO) exam cost?,$135 USD,exam-logistics
+How long is NVIDIA Certified Associate - AI Infrastructure Operations (NCA-AIIO) valid for?,2 years,exam-logistics
+Streaming Multiprocessors (SMs) (gpu fundamentals),Primary compute units,"notes,gpu-fundamentals"
+Tensor Cores (gpu fundamentals),Specialized for matrix math (AI training/inference),"notes,gpu-fundamentals"
+HBM Memory (gpu fundamentals),High-bandwidth GPU memory,"notes,gpu-fundamentals"
+NVLink (gpu fundamentals),High-speed GPU-to-GPU interconnect,"notes,gpu-fundamentals"
+PCIe Interface (gpu fundamentals),Connection to CPU and system,"notes,gpu-fundamentals"
+Ampere (gpu fundamentals),"A100, A30 (generation)","notes,gpu-fundamentals"
+Hopper (gpu fundamentals),"H100, H200 (current generation)","notes,gpu-fundamentals"
+Ada Lovelace (gpu fundamentals),L40S (workstation/inference),"notes,gpu-fundamentals"
+Level 1 (Quick) (gpu fundamentals),"~15 seconds, basic checks","notes,gpu-fundamentals"
+Level 2 (Medium) (gpu fundamentals),"~2 minutes, hardware short test","notes,gpu-fundamentals"
+Level 3 (Long) (gpu fundamentals),"~15 minutes, comprehensive stress test","notes,gpu-fundamentals"
+nvidia-container-runtime (container management),OCI-compliant runtime wrapper,"notes,container-management"
+nvidia-container-cli (container management),CLI for configuring GPU containers,"notes,container-management"
+libnvidia-container (container management),Library for GPU device management,"notes,container-management"
+nvidia-ctk (container management),Configuration and setup utility,"notes,container-management"
+📖 NGC Catalog (container management),Browse available images,"notes,container-management"
+nvidia-smi (troubleshooting),Basic real-time monitoring,"notes,troubleshooting"
+DCGM (troubleshooting),Enterprise GPU monitoring,"notes,troubleshooting"
+Prometheus + Grafana (troubleshooting),Metrics dashboard,"notes,troubleshooting"
+Nsight Systems (troubleshooting),Detailed performance profiling,"notes,troubleshooting"

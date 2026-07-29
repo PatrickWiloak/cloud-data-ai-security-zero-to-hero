@@ -1,5 +1,7 @@
 ---
 last-updated: 2026-05-03
+exam-version: SOA-C02
+exam-retires: 2025-09-29
 ---
 
 # AWS SysOps Administrator Associate (SOA-C02) - Fact Sheet

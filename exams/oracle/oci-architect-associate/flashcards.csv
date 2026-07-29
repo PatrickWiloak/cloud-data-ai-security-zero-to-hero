@@ -1,0 +1,28 @@
+Question,Answer,Tags
+How long is the Oracle Cloud Infrastructure Architect Associate (1Z0-1072-24) exam?,105 minutes,exam-logistics
+How many questions are on the Oracle Cloud Infrastructure Architect Associate (1Z0-1072-24) exam?,60 questions,exam-logistics
+What is the passing score for Oracle Cloud Infrastructure Architect Associate (1Z0-1072-24)?,68%,exam-logistics
+What does the Oracle Cloud Infrastructure Architect Associate (1Z0-1072-24) exam cost?,$150 USD,exam-logistics
+How long is Oracle Cloud Infrastructure Architect Associate (1Z0-1072-24) valid for?,18 months (non-renewing),exam-logistics
+How is the Oracle Cloud Infrastructure Architect Associate (1Z0-1072-24) exam delivered?,Pearson VUE (Testing center or online proctored),exam-logistics
+Compute (architecture design and networking),"Right-size instances, use Flex shapes","notes,architecture-design-and-networking"
+Storage (architecture design and networking),Choose appropriate tier and IOPS,"notes,architecture-design-and-networking"
+Network (architecture design and networking),Use FastConnect for low latency,"notes,architecture-design-and-networking"
+Database (architecture design and networking),"Use Autonomous Database, caching","notes,architecture-design-and-networking"
+OKE (architecture design and networking),Managed Kubernetes for containers,"notes,architecture-design-and-networking"
+API Gateway (architecture design and networking),Entry point for APIs,"notes,architecture-design-and-networking"
+Service Mesh (architecture design and networking),Service-to-service communication,"notes,architecture-design-and-networking"
+Container Registry (architecture design and networking),Store container images,"notes,architecture-design-and-networking"
+Autonomous Database (architecture design and networking),Managed database backend,"notes,architecture-design-and-networking"
+Total reserved (architecture design and networking),5 addresses per subnet,"notes,architecture-design-and-networking"
+BASELINE_1_8 (compute and storage solutions),12.5% baseline (burstable),"notes,compute-and-storage-solutions"
+BASELINE_1_1 (compute and storage solutions),100% baseline (full performance),"notes,compute-and-storage-solutions"
+ObjectRead (compute and storage solutions),Read single object,"notes,compute-and-storage-solutions"
+ObjectWrite (compute and storage solutions),Write single object,"notes,compute-and-storage-solutions"
+ObjectReadWrite (compute and storage solutions),Read and write single object,"notes,compute-and-storage-solutions"
+AnyObjectRead (compute and storage solutions),Read any object in bucket,"notes,compute-and-storage-solutions"
+AnyObjectWrite (compute and storage solutions),Write any object in bucket,"notes,compute-and-storage-solutions"
+source (compute and storage solutions),IP range allowed to mount,"notes,compute-and-storage-solutions"
+access (compute and storage solutions),READ_WRITE or READ_ONLY,"notes,compute-and-storage-solutions"
+identity-squash (compute and storage solutions),NONE: Preserve user/group IDs,"notes,compute-and-storage-solutions"
+require-privileged-source-port (compute and storage solutions),Require mount from privileged port (<1024),"notes,compute-and-storage-solutions"

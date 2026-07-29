@@ -1,5 +1,7 @@
 ---
 last-updated: 2026-05-03
+exam-version: DBS-C01
+exam-retires: 2024-04-29
 ---
 
 # AWS Database Specialty (DBS-C01) - Fact Sheet

@@ -1,0 +1,25 @@
+Question,Answer,Tags
+How long is the Confluent Certified Administrator for Apache Kafka exam?,90 minutes,exam-logistics
+How many questions are on the Confluent Certified Administrator for Apache Kafka exam?,60 multiple-choice questions,exam-logistics
+What is the passing score for Confluent Certified Administrator for Apache Kafka?,70%,exam-logistics
+What does the Confluent Certified Administrator for Apache Kafka exam cost?,$150 USD,exam-logistics
+How long is Confluent Certified Administrator for Apache Kafka valid for?,2 years,exam-logistics
+How is the Confluent Certified Administrator for Apache Kafka exam delivered?,Online proctored,exam-logistics
+Network Layer (kafka architecture),Accepts client connections via listeners configuration,"notes,kafka-architecture"
+Request Handler Pool (kafka architecture),"Processes API requests (num.io.threads, default: 8)","notes,kafka-architecture"
+Network Thread Pool (kafka architecture),"Handles network I/O (num.network.threads, default: 3)","notes,kafka-architecture"
+Log Manager (kafka architecture),Manages partition log segments on disk,"notes,kafka-architecture"
+Replica Manager (kafka architecture),Handles replication between leader and followers,"notes,kafka-architecture"
+Group Coordinator (kafka architecture),Manages consumer group membership and offsets,"notes,kafka-architecture"
+Controller (kafka architecture),One broker elected as controller for cluster-wide operations,"notes,kafka-architecture"
+Produce quota (cluster operations),Limits bytes per second a client can produce,"notes,cluster-operations"
+Consume quota (cluster operations),Limits bytes per second a client can fetch,"notes,cluster-operations"
+Request percentage (cluster operations),Limits percentage of broker request handler time,"notes,cluster-operations"
+CURRENT-OFFSET (monitoring troubleshooting),Last committed offset for the consumer,"notes,monitoring-troubleshooting"
+LOG-END-OFFSET (monitoring troubleshooting),Latest offset in the partition,"notes,monitoring-troubleshooting"
+LAG (monitoring troubleshooting),Difference (LOG-END-OFFSET - CURRENT-OFFSET),"notes,monitoring-troubleshooting"
+Literal (security),Exact resource name match (default),"notes,security"
+Prefixed (security),Matches all resources starting with the pattern,"notes,security"
+Filesystem-level encryption (security),"dm-crypt, LUKS, eCryptfs","notes,security"
+Volume-level encryption (security),"Cloud provider volume encryption (EBS, Azure Disk)","notes,security"
+Application-level encryption (security),Encrypt before producing to Kafka,"notes,security"

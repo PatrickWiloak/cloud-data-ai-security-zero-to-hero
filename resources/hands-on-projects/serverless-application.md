@@ -1,5 +1,9 @@
 ---
 last-updated: 2026-05-03
+certs:
+  - aws/associate/developer-dva-c02
+  - azure/az-204
+  - gcp/cloud-developer
 ---
 
 # Hands-On Project: Build a Serverless Application

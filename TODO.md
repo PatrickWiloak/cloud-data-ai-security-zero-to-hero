@@ -32,9 +32,9 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 ### Priority 2 - content substance
 
 - [ ] Write notes for the 10 outline-stage certs (cisco/ccnp-encor, comptia/cysa-plus, comptia/network-plus, isaca/cisa, isaca/cism, offensive-security/oscp, palo-alto/pcnsa, salesforce/pd2, servicenow/csa, vmware/vcp-dcv). As each lands, restore the real links and drop its `_(planned)_` markers and the outline-stage banner.
-- [ ] Resolve the diagram standard: produce PNGs under `assets/diagrams/` (currently zero exist) or promote mermaid to primary in `CLAUDE.md` and `docs/ARCHITECTURE.md`.
+- [x] ~~Resolve the diagram standard~~ ✅ done 2026-07-29 - Mermaid is now the documented default, PNG the exception. Updated `CLAUDE.md`, `docs/ARCHITECTURE.md`, `CONTRIBUTING.md`, `assets/diagrams/README.md`.
 - [x] ~~Add index READMEs to the 21 provider directories that lack one~~ ✅ done 2026-07-29 (all 27 now generated from `docs/certs.json`; the 6 hand-written ones kept their editorial content)
-- [ ] Complete `aws/professional/genai-developer-aip-c01` (missing practice-plan, scenarios, strategy) and link it from the hub.
+- [x] ~~Complete `aws/professional/genai-developer-aip-c01`~~ ✅ done 2026-07-29 - practice-plan, scenarios, strategy written. Structure validator is at zero warnings.
 - [x] ~~Move `exams/aws/genai` under `foundational/`; reconcile `azure/genai` and `gcp/genai` placement~~ ✅ done 2026-07-29 (AI Practitioner moved to `exams/aws/foundational/ai-practitioner-aif-c01/`; the Azure and GCP dirs are study tracks, kept in place and now counted as `track` rather than certification)
 - [x] ~~Replace the 2 remaining `last-updated: YYYY-MM-DD` placeholders~~ ✅ 2026-07-29 - not applicable. Both live inside ```yaml fenced blocks in `CLAUDE.md` and `CONTRIBUTING.md` that document the frontmatter convention. The original scan did not skip code fences. No stale frontmatter exists.
 
@@ -43,12 +43,12 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 - [x] ~~Build `docs/certs.json` from fact-sheets; generate the hub table and provider indexes from it~~ ✅ done 2026-07-29 (CI fails if either is stale). Freshness ledger still generates independently - fold it in if it drifts.
 - [ ] Add practice questions for uncovered certs (34 of 137 covered today).
 - [ ] Add Tier 1 certifications: SC-100, SC-300, SC-400, PL-300, CNCF associates (OTCA/CGOA/CAPA/CCA/CNPA), Oracle OCI GenAI, Google GenAI Leader, ISC2 CC, an observability cert.
-- [ ] Stagger `last-updated` re-verification by provider batch so 326 files do not all go stale on 2026-10-30.
+- [x] ~~Stagger `last-updated` re-verification by provider batch~~ ✅ done 2026-07-29 - `check-cert-freshness.py` assigns each provider a review month and reports what is due. The rotation exists; the re-verification work itself is ongoing (12 certs due in month 7).
 
 ### Priority 4 - differentiation
 
-- [ ] Per-cert `flashcards.csv` (Anki-importable) generated from fact-sheets and notes.
-- [ ] Map `resources/hands-on-projects/` labs to the certs they support.
-- [ ] Add `status:` and `exam-version:` fact-sheet frontmatter plus a revision-warning script.
-- [ ] Wire `check-orphan-links.sh` into CI or document it as manual in `.github/AUTOMATION.md`.
-- [ ] Prune stale absolute paths and the blanket `Bash(*)` allow from `.claude/settings.json`.
+- [x] ~~Per-cert `flashcards.csv` (Anki-importable)~~ ✅ done 2026-07-29 - 80 decks, 6,487 cards. 57 certs fall below the 15-card threshold and get no deck; raising that means writing more `- **Term** - definition` lines in their notes.
+- [x] ~~Map labs to the certs they support~~ ✅ done 2026-07-29 - 15 labs mapped to 46 certs, generated both directions. 91 certs still have no lab.
+- [x] ~~Add `status:` and `exam-version:` frontmatter plus a revision-warning script~~ ✅ done 2026-07-29 - `status` is derived in `certs.json` rather than hand-declared (no drift). `exam-version:`/`exam-retires:` are optional frontmatter, seeded on the 4 retired AWS certs; `check-cert-freshness.py` warns ahead of a known retirement.
+- [x] ~~Wire `check-orphan-links.sh` into CI~~ ✅ done 2026-07-29 - runs advisory (never blocking, since orphan detection is heuristic). Orphans are currently 0.
+- [x] ~~Prune `.claude/settings.json`~~ ✅ done 2026-07-29

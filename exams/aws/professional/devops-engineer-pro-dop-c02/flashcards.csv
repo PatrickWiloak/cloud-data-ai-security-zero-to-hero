@@ -1,0 +1,22 @@
+Question,Answer,Tags
+How long is the AWS Certified DevOps Engineer - Professional (DOP-C02) exam?,180 minutes (3 hours),exam-logistics
+How many questions are on the AWS Certified DevOps Engineer - Professional (DOP-C02) exam?,75 questions,exam-logistics
+What is the passing score for AWS Certified DevOps Engineer - Professional (DOP-C02)?,750/1000 (estimated ~72%),exam-logistics
+What does the AWS Certified DevOps Engineer - Professional (DOP-C02) exam cost?,$300 USD,exam-logistics
+How long is AWS Certified DevOps Engineer - Professional (DOP-C02) valid for?,3 years,exam-logistics
+How is the AWS Certified DevOps Engineer - Professional (DOP-C02) exam delivered?,Pearson VUE (Testing center or online proctored),exam-logistics
+Fast feedback needed (cicd deployment strategies),Parallel test actions,"notes,cicd-deployment-strategies"
+Zero downtime required (cicd deployment strategies),Blue/green deployment,"notes,cicd-deployment-strategies"
+Gradual rollout (cicd deployment strategies),Canary with CloudWatch alarms,"notes,cicd-deployment-strategies"
+Multi-region (cicd deployment strategies),Cross-region actions in pipeline,"notes,cicd-deployment-strategies"
+Multi-account (cicd deployment strategies),Cross-account IAM roles,"notes,cicd-deployment-strategies"
+Docker builds (cicd deployment strategies),CodeBuild with privileged mode,"notes,cicd-deployment-strategies"
+Automated rollback (cicd deployment strategies),CloudWatch alarms with CodeDeploy,"notes,cicd-deployment-strategies"
+"""Most automated solution"" (study notes)","Minimize manual intervention (State Manager, EventBridge)","notes,study-notes"
+"""Zero downtime"" (study notes)",Blue/green or canary deployments,"notes,study-notes"
+"""Immediate rollback"" (study notes)",Blue/green with instant traffic switch,"notes,study-notes"
+"""Gradual rollout"" (study notes)",Canary deployment with traffic shifting,"notes,study-notes"
+"""Multi-account"" (study notes)","StackSets, cross-account roles, Organizations","notes,study-notes"
+"""Multi-region"" (study notes)","Route 53, Global Accelerator, DynamoDB Global Tables","notes,study-notes"
+"""Compliance"" (study notes)","Config rules, Security Hub, CloudTrail","notes,study-notes"
+"""Least privilege"" (study notes)","Specific IAM policies, resource-level permissions","notes,study-notes"

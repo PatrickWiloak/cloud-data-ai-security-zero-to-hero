@@ -1,0 +1,28 @@
+Question,Answer,Tags
+How long is the NVIDIA Certified Professional - Networking (NCP-NET) exam?,120 minutes,exam-logistics
+How many questions are on the NVIDIA Certified Professional - Networking (NCP-NET) exam?,60-70 questions,exam-logistics
+What is the passing score for NVIDIA Certified Professional - Networking (NCP-NET)?,Not officially published,exam-logistics
+What does the NVIDIA Certified Professional - Networking (NCP-NET) exam cost?,$200 USD,exam-logistics
+How long is NVIDIA Certified Professional - Networking (NCP-NET) valid for?,2 years,exam-logistics
+Master (infiniband),Active SM controlling the fabric,"notes,infiniband"
+Standby (infiniband),Backup SM ready for failover,"notes,infiniband"
+Zero-copy (rdma roce),Data moves directly between application buffers,"notes,rdma-roce"
+Kernel bypass (rdma roce),No system call overhead,"notes,rdma-roce"
+Low latency (rdma roce),Single-digit microsecond RTT,"notes,rdma-roce"
+High throughput (rdma roce),Near wire-speed data transfer,"notes,rdma-roce"
+Low CPU overhead (rdma roce),CPU is free for computation,"notes,rdma-roce"
+Send (rdma roce),Sender pushes data to receiver's pre-posted buffer,"notes,rdma-roce"
+Receive (rdma roce),Receiver posts buffers for incoming sends,"notes,rdma-roce"
+RDMA Write (rdma roce),Write data to remote memory without remote CPU involvement,"notes,rdma-roce"
+RDMA Read (rdma roce),Read data from remote memory without remote CPU involvement,"notes,rdma-roce"
+Compare-and-Swap (rdma roce),Atomic read-modify-write on remote memory,"notes,rdma-roce"
+Fetch-and-Add (rdma roce),Atomic increment on remote memory,"notes,rdma-roce"
+Protection Domain (PD) (rdma roce),Security boundary for resources,"notes,rdma-roce"
+Queue Pair (QP) (rdma roce),Send and receive queue pair for communication,"notes,rdma-roce"
+Completion Queue (CQ) (rdma roce),Reports completion of work requests,"notes,rdma-roce"
+Memory Region (MR) (rdma roce),Registered memory for RDMA access,"notes,rdma-roce"
+Work Request (WR) (rdma roce),"Operation to perform (send, RDMA write, etc.)","notes,rdma-roce"
+Work Completion (WC) (rdma roce),Result of completed operation,"notes,rdma-roce"
+Critical (ufm),"Link failures, hardware errors, switch down","notes,ufm"
+Warning (ufm),"Rising error rates, temperature approaching threshold","notes,ufm"
+Information (ufm),"Topology changes, configuration updates","notes,ufm"

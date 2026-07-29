@@ -19,8 +19,11 @@ This directory holds CI workflows, validation scripts, and contributor templates
 │   └── structure-validate.yml
 └── scripts/                  # local-runnable validators + helpers
     ├── build-certs-index.py
+    ├── build-flashcards.py
     ├── build-freshness-ledger.sh
+    ├── build-lab-map.py
     ├── build-provider-indexes.py
+    ├── check-cert-freshness.py
     ├── check-internal-links.py
     ├── check-orphan-links.sh
     ├── glossary-add-anchors.py
@@ -105,6 +108,24 @@ Verifies every relative markdown link resolves on disk. Skips fenced code blocks
 python3 .github/scripts/check-internal-links.py
 ```
 
+**`build-lab-map.py`**
+Reads the `certs:` frontmatter list from each `resources/hands-on-projects/*.md` and generates two views: a lab-to-cert table in the projects README, and the reverse index at `resources/hands-on-projects/labs-by-cert.md`. Cert IDs are validated against `docs/certs.json`, so a typo fails the run instead of producing a dead link. Blocking in CI.
+
+**`build-flashcards.py`**
+Writes `flashcards.csv` (Anki-importable) into each cert dir. Cards are extracted, never invented: exam logistics come from `docs/certs.json`, and term-definition cards come from the `- **Term** - definition` lines the notes already use. Certs yielding fewer than 15 cards get no deck and are listed in the report. Decks are capped at 300 cards with an explicit in-deck note when truncated. Blocking in CI.
+
+```bash
+python3 .github/scripts/build-flashcards.py --report   # counts, no writes
+```
+
+**`check-cert-freshness.py`**
+Advisory. Reports which cert guides are due for re-verification, using a per-provider monthly rotation so the whole repo does not fall due on one day. Also warns when a fact-sheet declares `exam-version:` / `exam-retires:` frontmatter and the retirement date is near.
+
+```bash
+python3 .github/scripts/check-cert-freshness.py --due     # just this month's batch
+python3 .github/scripts/check-cert-freshness.py --month 3 # preview another month
+```
+
 ### Glossary autolink (mutates files)
 
 These three scripts work as a pipeline. Run them in order when the glossary gains new terms or when adding a new content directory to the autolink scope.
@@ -147,7 +168,9 @@ python3 .github/scripts/glossary-upgrade-existing-links.py
 
 | Trigger | What to update |
 |---|---|
-| New cert added | Add `fact-sheet.md`, then run `build-certs-index.py` and `build-provider-indexes.py` so counts and tables regenerate. If it's a new senior tier, add it to the curated senior-cert list in `validate-cert-structure.sh` |
+| New cert added | Add `fact-sheet.md`, then run `build-certs-index.py`, `build-provider-indexes.py`, and `build-flashcards.py` so counts, tables, and decks regenerate. If it's a new senior tier, add it to the curated senior-cert list in `validate-cert-structure.sh` |
+| New hands-on project | Add a `certs:` list to its frontmatter, then run `build-lab-map.py` |
+| Cert notes edited | Re-run `build-flashcards.py`; the deck is derived from the notes |
 | New provider added | Add a display name to `PROVIDER_NAMES` and a highlights line to `PROVIDER_HIGHLIGHTS`, then regenerate. CI fails until both generators are re-run |
 | Cert renamed, retired, or its fact-sheet edited | Re-run both generators. `structure-validate.yml` fails with the exact command if you forget |
 | New concept / hands-on / topic page | Add `last-updated` frontmatter; rerun `build-freshness-ledger.sh` |

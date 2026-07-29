@@ -1,5 +1,8 @@
 ---
 last-updated: 2026-05-03
+certs:
+  - hashicorp/terraform-associate
+  - hashicorp/terraform-authoring-operations-pro
 ---
 
 # Hands-On Project: Build Infrastructure with Terraform

@@ -2,6 +2,12 @@
 last-updated: 2026-05-03
 difficulty: intermediate
 reading-time: 20 min
+certs:
+  - aws/professional/genai-developer-aip-c01
+  - aws/foundational/ai-practitioner-aif-c01
+  - azure/ai-102
+  - databricks/genai-engineer-associate
+  - anthropic/claude-certified-architect-foundations
 ---
 
 # Build a RAG pipeline

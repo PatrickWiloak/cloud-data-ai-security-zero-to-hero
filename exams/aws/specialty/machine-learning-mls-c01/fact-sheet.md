@@ -1,5 +1,7 @@
 ---
 last-updated: 2026-05-03
+exam-version: MLS-C01
+exam-retires: 2025-04-15
 ---
 
 # AWS Certified Machine Learning - Specialty (MLS-C01) - Fact Sheet

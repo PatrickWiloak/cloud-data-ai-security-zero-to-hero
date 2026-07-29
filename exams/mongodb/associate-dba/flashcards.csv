@@ -1,0 +1,24 @@
+Question,Answer,Tags
+How long is the MongoDB Associate DBA exam?,75 minutes,exam-logistics
+How many questions are on the MongoDB Associate DBA exam?,62 multiple-choice questions,exam-logistics
+What is the passing score for MongoDB Associate DBA?,65%,exam-logistics
+What does the MongoDB Associate DBA exam cost?,$150 USD,exam-logistics
+How long is MongoDB Associate DBA valid for?,3 years,exam-logistics
+How is the MongoDB Associate DBA exam delivered?,Online proctored,exam-logistics
+Internal Cache (server administration),Working set data in memory,"notes,server-administration"
+Journal (server administration),Write-ahead log for durability,"notes,server-administration"
+Checkpoints (server administration),Consistent snapshots of data on disk,"notes,server-administration"
+Compression (server administration),On-disk data and index compression,"notes,server-administration"
+Stale reads (replication),Secondaries may be behind the primary,"notes,replication"
+Primary only (replication),Guaranteed latest data,"notes,replication"
+Secondary (replication),"May return stale data, reduces primary load","notes,replication"
+Nearest (replication),Best for geographically distributed clusters,"notes,replication"
+Causal consistency (replication),"Use sessions for ""read your writes""","notes,replication"
+Step down primary (replication),rs.stepDown() - graceful primary handoff,"notes,replication"
+Freeze a member (replication),rs.freeze(seconds) - prevent election participation,"notes,replication"
+Sync from specific member (replication),"db.adminCommand({replSetSyncFrom: ""host:port""})","notes,replication"
+Compact (replication),"db.runCommand({compact: ""collection""}) - defragment collection","notes,replication"
+Data locality (sharding),Keep data in specific geographic regions,"notes,sharding"
+Hardware tiering (sharding),"Route hot data to SSD shards, cold to HDD","notes,sharding"
+Compliance (sharding),Keep sensitive data in specific jurisdictions,"notes,sharding"
+Workload isolation (sharding),Separate read-heavy and write-heavy data,"notes,sharding"

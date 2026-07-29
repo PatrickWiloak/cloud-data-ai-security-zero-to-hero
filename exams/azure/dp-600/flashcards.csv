@@ -1,0 +1,19 @@
+Question,Answer,Tags
+How long is the Microsoft Fabric Analytics Engineer Associate (DP-600) exam?,120 minutes,exam-logistics
+How many questions are on the Microsoft Fabric Analytics Engineer Associate (DP-600) exam?,40-60 questions,exam-logistics
+What is the passing score for Microsoft Fabric Analytics Engineer Associate (DP-600)?,700/1000,exam-logistics
+What does the Microsoft Fabric Analytics Engineer Associate (DP-600) exam cost?,$165 USD,exam-logistics
+How long is Microsoft Fabric Analytics Engineer Associate (DP-600) valid for?,3 years,exam-logistics
+Hierarchical namespace (microsoft fabric overview),Parquet and Delta Lake format,"notes,microsoft-fabric-overview"
+Spark job definitions (microsoft fabric overview),Lakehouse: Data storage and compute,"notes,microsoft-fabric-overview"
+Auto-tune and optimize (microsoft fabric overview),Separates storage and compute,"notes,microsoft-fabric-overview"
+Kusto Query Language (KQL) (microsoft fabric overview),Time-series data,"notes,microsoft-fabric-overview"
+Interactive dashboards (microsoft fabric overview),Natural language queries (Q&A),"notes,microsoft-fabric-overview"
+Schema enforcement (microsoft fabric overview),Time travel (versioning),"notes,microsoft-fabric-overview"
+Unstructured data (microsoft fabric overview),"Any format: CSV, JSON, Parquet","notes,microsoft-fabric-overview"
+Structured data (microsoft fabric overview),Delta Lake format,"notes,microsoft-fabric-overview"
+Best performance (microsoft fabric overview),Automatic refresh,"notes,microsoft-fabric-overview"
+"Output to Lakehouse, Warehouse, or KQL DB (microsoft fabric overview)",Incremental refresh,"notes,microsoft-fabric-overview"
+Event streaming (microsoft fabric overview),Time-series data,"notes,microsoft-fabric-overview"
+Real-time processing (microsoft fabric overview),Integration with Fabric components,"notes,microsoft-fabric-overview"
+OneLake data access roles (microsoft fabric overview),Row-level security (RLS) in semantic models,"notes,microsoft-fabric-overview"

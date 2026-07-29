@@ -1,0 +1,24 @@
+Question,Answer,Tags
+How long is the Google Cloud Professional Cloud Database Engineer (Specialty) Certification exam?,120 minutes (2 hours),exam-logistics
+How many questions are on the Google Cloud Professional Cloud Database Engineer (Specialty) Certification exam?,50-60 questions,exam-logistics
+What is the passing score for Google Cloud Professional Cloud Database Engineer (Specialty) Certification?,~70% (not officially published),exam-logistics
+What does the Google Cloud Professional Cloud Database Engineer (Specialty) Certification exam cost?,$200 USD,exam-logistics
+How long is Google Cloud Professional Cloud Database Engineer (Specialty) Certification valid for?,2 years,exam-logistics
+MySQL 5.7 (database design and implementation),"Legacy support, EOL October 2023","notes,database-design-and-implementation"
+MySQL 8.0 (database design and implementation),"Current version, improved performance, JSON support","notes,database-design-and-implementation"
+Editions (database design and implementation),"Enterprise (all features), Express (testing/dev)","notes,database-design-and-implementation"
+Versions (database design and implementation),"9.6, 10, 11, 12, 13, 14, 15, 16","notes,database-design-and-implementation"
+Extensions (database design and implementation),"PostGIS, pgaudit, pg_stat_statements, timescaledb","notes,database-design-and-implementation"
+Recommended (database design and implementation),PostgreSQL 14+ for production,"notes,database-design-and-implementation"
+Default encryption (database security and compliance),All GCP databases encrypted at rest by default with Google-managed keys,"notes,database-security-and-compliance"
+CMEK (Customer-Managed Encryption Keys) (database security and compliance),Customer controls key lifecycle through Cloud KMS,"notes,database-security-and-compliance"
+CSEK (Customer-Supplied Encryption Keys) (database security and compliance),"Limited support, customer provides keys per operation","notes,database-security-and-compliance"
+Application-layer encryption (database security and compliance),Encrypt data before storing in database,"notes,database-security-and-compliance"
+Admin Activity logs (database security and compliance),"Always enabled, no charge, 400-day retention","notes,database-security-and-compliance"
+Data Access logs (database security and compliance),"Must be enabled, charged, captures data reads/writes","notes,database-security-and-compliance"
+System Event logs (database security and compliance),"Always enabled, no charge","notes,database-security-and-compliance"
+Policy Denied logs (database security and compliance),Always enabled when VPC-SC is used,"notes,database-security-and-compliance"
+PCI-DSS (database security and compliance),"Payment card data - CMEK, network isolation, VPC-SC, audit logs","notes,database-security-and-compliance"
+HIPAA (database security and compliance),"Healthcare data - BAA, CMEK, 7-year audit retention, DLP","notes,database-security-and-compliance"
+GDPR (database security and compliance),"EU personal data - EU regions, data subject rights, consent tracking","notes,database-security-and-compliance"
+SOC 2 (database security and compliance),SaaS trust - All five trust service criteria controls,"notes,database-security-and-compliance"

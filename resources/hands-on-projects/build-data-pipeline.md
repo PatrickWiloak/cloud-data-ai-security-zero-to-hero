@@ -1,5 +1,10 @@
 ---
 last-updated: 2026-05-03
+certs:
+  - aws/associate/data-engineer-dea-c01
+  - azure/dp-203
+  - gcp/data-engineer
+  - databricks/data-engineer-associate
 ---
 
 # Hands-On Project: Build a Data Pipeline

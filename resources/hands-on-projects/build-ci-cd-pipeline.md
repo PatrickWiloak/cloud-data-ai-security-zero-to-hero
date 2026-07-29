@@ -1,5 +1,10 @@
 ---
 last-updated: 2026-05-03
+certs:
+  - github/actions
+  - azure/az-400
+  - aws/professional/devops-engineer-pro-dop-c02
+  - gcp/cloud-devops-engineer
 ---
 
 # Hands-On Project: Build a CI/CD Pipeline

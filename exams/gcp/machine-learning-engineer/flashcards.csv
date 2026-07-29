@@ -1,0 +1,27 @@
+Question,Answer,Tags
+How long is the Google Cloud Professional Machine Learning Engineer Certification exam?,120 minutes (2 hours),exam-logistics
+How many questions are on the Google Cloud Professional Machine Learning Engineer Certification exam?,50-60 questions,exam-logistics
+What is the passing score for Google Cloud Professional Machine Learning Engineer Certification?,~70% (not officially published),exam-logistics
+What does the Google Cloud Professional Machine Learning Engineer Certification exam cost?,$200 USD,exam-logistics
+How long is Google Cloud Professional Machine Learning Engineer Certification valid for?,2 years,exam-logistics
+BigQuery (ml data and features),"Petabyte-scale analytics, structured data","notes,ml-data-and-features"
+Cloud Storage (ml data and features),"Object storage (CSV, JSON, Parquet, Avro, TFRecord)","notes,ml-data-and-features"
+Pub/Sub (ml data and features),Real-time streaming data ingestion,"notes,ml-data-and-features"
+Cloud SQL/Spanner (ml data and features),Relational databases,"notes,ml-data-and-features"
+Bigtable (ml data and features),NoSQL for time-series and high-throughput workloads,"notes,ml-data-and-features"
+Firestore (ml data and features),Document database,"notes,ml-data-and-features"
+External APIs (ml data and features),"RESTful services, partner data","notes,ml-data-and-features"
+Featurestore (ml data and features),Container for all features,"notes,ml-data-and-features"
+Entity Type (ml data and features),"Represents an object (e.g., user, product)","notes,ml-data-and-features"
+Feature (ml data and features),Individual feature within an entity,"notes,ml-data-and-features"
+Online Serving (ml data and features),Low-latency feature retrieval for predictions,"notes,ml-data-and-features"
+Offline Serving (ml data and features),Batch feature retrieval for training,"notes,ml-data-and-features"
+Point-in-time lookup (ml data and features),Historical feature values at specific timestamps,"notes,ml-data-and-features"
+Grid Search (ml development and training),"Small parameter space, exhaustive search needed","notes,ml-development-and-training"
+Random Search (ml development and training),"Moderate parameter space, exploration","notes,ml-development-and-training"
+Bayesian (Vizier) (ml development and training),"Large parameter space, expensive training, best performance","notes,ml-development-and-training"
+BigQuery ML (ml development and training),"SQL users, data already in BigQuery, simple models","notes,ml-development-and-training"
+AutoML (ml development and training),"Quick POC, no ML expertise, standard problems","notes,ml-development-and-training"
+Vertex AI Training (ml development and training),"Custom code, specific requirements, research","notes,ml-development-and-training"
+Pre-trained APIs (ml development and training),"No training data, standard tasks, immediate results","notes,ml-development-and-training"
+Answer (ml development and training),AutoML Vision (8000 milli node hours budget),"notes,ml-development-and-training"

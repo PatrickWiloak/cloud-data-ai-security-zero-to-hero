@@ -1,0 +1,22 @@
+Question,Answer,Tags
+How long is the NVIDIA Certified Professional - AI Operations (NCP-AIO) exam?,120 minutes,exam-logistics
+How many questions are on the NVIDIA Certified Professional - AI Operations (NCP-AIO) exam?,60-70 questions,exam-logistics
+What is the passing score for NVIDIA Certified Professional - AI Operations (NCP-AIO)?,Not officially published,exam-logistics
+What does the NVIDIA Certified Professional - AI Operations (NCP-AIO) exam cost?,$200 USD,exam-logistics
+How long is NVIDIA Certified Professional - AI Operations (NCP-AIO) valid for?,2 years,exam-logistics
+Model Repository (model deployment),Storage location for model artifacts and configs,"notes,model-deployment"
+Scheduler (model deployment),Manages request queuing and batching,"notes,model-deployment"
+Backend (model deployment),Framework-specific execution engines,"notes,model-deployment"
+Metrics (model deployment),Prometheus-compatible performance metrics,"notes,model-deployment"
+GPU utilization (model deployment),Scale up when GPUs are saturated,"notes,model-deployment"
+Request queue depth (model deployment),Scale up when requests are waiting,"notes,model-deployment"
+Latency P95 (model deployment),Scale up when latency exceeds target,"notes,model-deployment"
+Throughput (model deployment),Scale to maintain target requests/second,"notes,model-deployment"
+Single-Bit Errors (SBE) (incident response),"Correctable, data is repaired automatically","notes,incident-response"
+Double-Bit Errors (DBE) (incident response),"Uncorrectable, causes computation failure","notes,incident-response"
+Transient error (incident response),"Reset GPU (nvidia-smi -r -i ), monitor","notes,incident-response"
+Driver issue (incident response),Update or rollback driver version,"notes,incident-response"
+ECC errors (incident response),"Retire pages, schedule replacement if persistent","notes,incident-response"
+Hardware failure (incident response),Replace GPU or node,"notes,incident-response"
+Thermal (incident response),"Fix cooling, reduce workload until repaired","notes,incident-response"
+Software (incident response),"Fix workload configuration, update libraries","notes,incident-response"

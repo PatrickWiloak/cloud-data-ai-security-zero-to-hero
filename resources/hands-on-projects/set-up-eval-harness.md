@@ -2,6 +2,10 @@
 last-updated: 2026-05-03
 difficulty: intermediate
 reading-time: 15 min
+certs:
+  - anthropic/claude-prompt-engineering-specialist
+  - aws/professional/genai-developer-aip-c01
+  - databricks/genai-engineer-associate
 ---
 
 # Set up an eval harness

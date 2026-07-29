@@ -1,5 +1,10 @@
 ---
 last-updated: 2026-05-03
+certs:
+  - aws/associate/ml-engineer-mla-c01
+  - azure/dp-100
+  - gcp/machine-learning-engineer
+  - databricks/ml-associate
 ---
 
 # Hands-On Project: Deploy a Machine Learning Model

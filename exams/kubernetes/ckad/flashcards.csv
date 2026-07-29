@@ -1,0 +1,28 @@
+Question,Answer,Tags
+How long is the Certified Kubernetes Application Developer (CKAD) exam?,2 hours,exam-logistics
+What is the passing score for Certified Kubernetes Application Developer (CKAD)?,66%,exam-logistics
+What does the Certified Kubernetes Application Developer (CKAD) exam cost?,$395 USD (includes one free retake),exam-logistics
+How long is Certified Kubernetes Application Developer (CKAD) valid for?,3 years,exam-logistics
+How is the Certified Kubernetes Application Developer (CKAD) exam delivered?,PSI online proctoring,exam-logistics
+Retain (application design build),Keep the PV and its data after PVC is deleted (manual cleanup),"notes,application-design-build"
+Delete (application design build),Delete the PV and underlying storage when PVC is deleted (default for dynamic provisioning),"notes,application-design-build"
+Recycle (application design build),Deprecated - basic scrub (rm -rf /thevolume/*),"notes,application-design-build"
+Chart (application deployment),A Helm package containing Kubernetes resource templates and metadata,"notes,application-deployment"
+Release (application deployment),A running instance of a chart in a cluster,"notes,application-deployment"
+Repository (application deployment),A location where charts are stored and shared,"notes,application-deployment"
+Values (application deployment),Configuration that is merged into chart templates,"notes,application-deployment"
+Conditions (observability maintenance),"Shows PodScheduled, Initialized, ContainersReady, Ready","notes,observability-maintenance"
+Container state (observability maintenance),"Waiting, Running, or Terminated with reason","notes,observability-maintenance"
+Last State (observability maintenance),Previous container state (useful for CrashLoopBackOff),"notes,observability-maintenance"
+Ingress (observability maintenance),Moved from extensions/v1beta1 and networking.k8s.io/v1beta1 to networking.k8s.io/v1,"notes,observability-maintenance"
+NetworkPolicy (observability maintenance),Moved from extensions/v1beta1 to networking.k8s.io/v1,"notes,observability-maintenance"
+CronJob (observability maintenance),Moved from batch/v1beta1 to batch/v1,"notes,observability-maintenance"
+Requests (environment configuration security),Used by the scheduler to decide which node to place the Pod on. The node must have this capacity available.,"notes,environment-configuration-security"
+Limits (environment configuration security),Maximum the container can use. CPU is throttled when exceeded. Memory causes OOMKill when exceeded.,"notes,environment-configuration-security"
+Validating (environment configuration security),"Accept or reject a request (e.g., enforce policies)","notes,environment-configuration-security"
+Mutating (environment configuration security),"Modify the request object (e.g., inject defaults)","notes,environment-configuration-security"
+Every task may use a different cluster context (exam tips),always run the provided kubectl config use-context command,"notes,exam-tips"
+Always check the namespace (exam tips),use -n or set it with kn,"notes,exam-tips"
+Indentation matters (exam tips),"use 2 spaces, never tabs","notes,exam-tips"
+Labels must match (exam tips),spec.selector.matchLabels must match spec.template.metadata.labels in Deployments,"notes,exam-tips"
+Name conflicts (exam tips),check if a resource with the same name already exists: k get -n,"notes,exam-tips"

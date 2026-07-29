@@ -1,0 +1,35 @@
+Question,Answer,Tags
+How long is the Kubernetes and Cloud Native Security Associate (KCSA) exam?,90 minutes,exam-logistics
+What is the passing score for Kubernetes and Cloud Native Security Associate (KCSA)?,75%,exam-logistics
+What does the Kubernetes and Cloud Native Security Associate (KCSA) exam cost?,$250 USD (includes one free retake),exam-logistics
+How long is Kubernetes and Cloud Native Security Associate (KCSA) valid for?,3 years,exam-logistics
+How is the Kubernetes and Cloud Native Security Associate (KCSA) exam delivered?,Online proctored via PSI,exam-logistics
+IAM (cloud native security),Identity and access management for cloud resources,"notes,cloud-native-security"
+Network (cloud native security),"VPCs, subnets, security groups, firewall rules","notes,cloud-native-security"
+Encryption (cloud native security),"Data at rest (KMS, encrypted volumes) and in transit (TLS)","notes,cloud-native-security"
+Logging (cloud native security),"Cloud provider audit logs (CloudTrail, Cloud Audit Logs)","notes,cloud-native-security"
+Compliance (cloud native security),"Cloud provider compliance certifications (SOC 2, ISO 27001)","notes,cloud-native-security"
+User (security fundamentals),External user identity (no Kubernetes User object - managed externally),"notes,security-fundamentals"
+Group (security fundamentals),"Collection of users (e.g., system:masters has cluster-admin access)","notes,security-fundamentals"
+ServiceAccount (security fundamentals),"Identity for pods, namespaced Kubernetes resource","notes,security-fundamentals"
+apiGroups (security fundamentals),"API group (empty string for core, ""apps"", ""networking.k8s.io"", etc.)","notes,security-fundamentals"
+resources (security fundamentals),"What resources (pods, deployments, secrets, etc.)","notes,security-fundamentals"
+verbs (security fundamentals),"What actions (get, list, watch, create, update, patch, delete)","notes,security-fundamentals"
+resourceNames (security fundamentals),(optional) Specific named resources,"notes,security-fundamentals"
+Least Privilege (security fundamentals),Grant only the minimum permissions required,"notes,security-fundamentals"
+Namespace Scope (security fundamentals),Prefer Role/RoleBinding over ClusterRole/ClusterRoleBinding,"notes,security-fundamentals"
+No Wildcards (security fundamentals),"Avoid * for verbs, resources, or apiGroups in production","notes,security-fundamentals"
+No cluster-admin for workloads (security fundamentals),Never bind cluster-admin to service accounts,"notes,security-fundamentals"
+Regular Audits (security fundamentals),Periodically review bindings and remove unnecessary permissions,"notes,security-fundamentals"
+Dedicated Service Accounts (security fundamentals),Create specific service accounts per workload,"notes,security-fundamentals"
+Ingress (security fundamentals),Controls incoming traffic to selected pods,"notes,security-fundamentals"
+Egress (security fundamentals),Controls outgoing traffic from selected pods,"notes,security-fundamentals"
+Minimal images (platform and compliance),"Use distroless, scratch, or Alpine to reduce attack surface","notes,platform-and-compliance"
+Multi-stage builds (platform and compliance),"Build in one stage, copy artifacts to a minimal runtime image","notes,platform-and-compliance"
+Pin versions (platform and compliance),Never use latest tag - use specific version tags or digests,"notes,platform-and-compliance"
+Non-root user (platform and compliance),Set USER directive in Dockerfile,"notes,platform-and-compliance"
+No unnecessary tools (platform and compliance),"Remove shells, package managers, and debug tools from production images","notes,platform-and-compliance"
+OPA/Gatekeeper (platform and compliance),Rego-based policies for Kubernetes admission,"notes,platform-and-compliance"
+Kyverno (platform and compliance),Kubernetes-native policy engine (YAML-based policies),"notes,platform-and-compliance"
+Kubewarden (platform and compliance),WebAssembly-based policy engine,"notes,platform-and-compliance"
+Datree (platform and compliance),Policy enforcement in CI/CD pipelines,"notes,platform-and-compliance"

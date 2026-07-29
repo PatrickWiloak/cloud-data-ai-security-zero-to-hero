@@ -1,5 +1,10 @@
 ---
 last-updated: 2026-05-03
+certs:
+  - aws/associate/solutions-architect-saa-c03
+  - azure/az-104
+  - gcp/cloud-engineer
+  - comptia/cloud-plus
 ---
 
 # Hands-On Project: Deploy a 3-Tier Application

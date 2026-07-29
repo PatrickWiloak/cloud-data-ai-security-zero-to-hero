@@ -225,7 +225,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "anthropic/claude-certified-architect-advanced",
@@ -253,7 +255,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "anthropic/claude-certified-architect-foundations",
@@ -281,7 +285,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "anthropic/claude-prompt-engineering-specialist",
@@ -309,7 +315,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/associate/cloudops-engineer-soa-c03",
@@ -337,7 +345,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/associate/data-engineer-dea-c01",
@@ -365,7 +375,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/associate/developer-dva-c02",
@@ -393,7 +405,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/associate/ml-engineer-mla-c01",
@@ -421,7 +435,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/associate/solutions-architect-saa-c03",
@@ -449,7 +465,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/associate/sysops-administrator-soa-c02",
@@ -477,7 +495,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": "SOA-C02",
+      "exam_retires": "2025-09-29"
     },
     {
       "id": "aws/foundational/ai-practitioner-aif-c01",
@@ -505,14 +525,16 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/foundational/cloud-practitioner-clf-c02",
       "provider": "aws",
       "provider_name": "AWS",
       "slug": "cloud-practitioner-clf-c02",
-      "name": "AWS Cloud Practitioner (CLF-C02) Exam Guide",
+      "name": "AWS Cloud Practitioner (CLF-C02)",
       "exam_code": "CLF-C02",
       "level": "foundational",
       "status": "active",
@@ -533,14 +555,16 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/professional/devops-engineer-pro-dop-c02",
       "provider": "aws",
       "provider_name": "AWS",
       "slug": "devops-engineer-pro-dop-c02",
-      "name": "AWS Certified DevOps Engineer - Professional (DOP-C02) Exam Guide",
+      "name": "AWS Certified DevOps Engineer - Professional (DOP-C02)",
       "exam_code": "DOP-C02",
       "level": "professional",
       "status": "active",
@@ -561,7 +585,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/professional/genai-developer-aip-c01",
@@ -589,7 +615,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-08"
+      "last_updated": "2026-05-08",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/professional/solutions-architect-pro-sap-c02",
@@ -617,14 +645,16 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/specialty/advanced-networking-ans-c01",
       "provider": "aws",
       "provider_name": "AWS",
       "slug": "advanced-networking-ans-c01",
-      "name": "AWS Certified Advanced Networking - Specialty (ANS-C01) Exam Guide",
+      "name": "AWS Certified Advanced Networking - Specialty (ANS-C01)",
       "exam_code": "ANS-C01",
       "level": "specialty",
       "status": "active",
@@ -645,7 +675,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/specialty/data-analytics-das-c01",
@@ -673,7 +705,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": "DAS-C01",
+      "exam_retires": "2024-04-08"
     },
     {
       "id": "aws/specialty/database-dbs-c01",
@@ -701,7 +735,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": "DBS-C01",
+      "exam_retires": "2024-04-29"
     },
     {
       "id": "aws/specialty/machine-learning-mls-c01",
@@ -729,7 +765,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": "MLS-C01",
+      "exam_retires": "2025-04-15"
     },
     {
       "id": "aws/specialty/quantum-practitioner-qpc-c01",
@@ -757,14 +795,16 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/specialty/sap-on-aws-pas-c01",
       "provider": "aws",
       "provider_name": "AWS",
       "slug": "sap-on-aws-pas-c01",
-      "name": "AWS Certified SAP on AWS - Specialty (PAS-C01) Exam Guide",
+      "name": "AWS Certified SAP on AWS - Specialty (PAS-C01)",
       "exam_code": "PAS-C01",
       "level": "specialty",
       "status": "active",
@@ -785,14 +825,16 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "aws/specialty/security-scs-c02",
       "provider": "aws",
       "provider_name": "AWS",
       "slug": "security-scs-c02",
-      "name": "AWS Certified Security - Specialty (SCS-C02) Exam Guide",
+      "name": "AWS Certified Security - Specialty (SCS-C02)",
       "exam_code": "SCS-C02",
       "level": "specialty",
       "status": "active",
@@ -813,7 +855,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/ai-102",
@@ -841,7 +885,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/ai-900",
@@ -869,7 +915,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/az-104",
@@ -897,7 +945,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/az-204",
@@ -925,7 +975,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/az-305",
@@ -953,7 +1005,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/az-400",
@@ -981,7 +1035,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/az-500",
@@ -1009,7 +1065,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/az-700",
@@ -1037,7 +1095,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/az-900",
@@ -1065,7 +1125,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/dp-100",
@@ -1093,7 +1155,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/dp-203",
@@ -1121,7 +1185,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/dp-300",
@@ -1149,7 +1215,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/dp-420",
@@ -1177,7 +1245,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/dp-600",
@@ -1205,7 +1275,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/dp-700",
@@ -1233,7 +1305,9 @@
         "scenarios.md": true,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/dp-900",
@@ -1261,7 +1335,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/genai",
@@ -1289,7 +1365,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/ms-900",
@@ -1317,7 +1395,9 @@
         "scenarios.md": true,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/pl-100",
@@ -1345,7 +1425,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/pl-200",
@@ -1373,7 +1455,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/pl-900",
@@ -1401,7 +1485,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/sc-200",
@@ -1429,7 +1515,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "azure/sc-900",
@@ -1457,7 +1545,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "cisco/ccna-200-301",
@@ -1485,7 +1575,9 @@
         "scenarios.md": true,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "cisco/ccnp-enterprise-encor-350-401",
@@ -1513,7 +1605,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "cloud-security-alliance/ccsk",
@@ -1541,7 +1635,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "comptia/cloud-plus",
@@ -1569,7 +1665,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "comptia/cysa-plus",
@@ -1597,7 +1695,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "comptia/network-plus",
@@ -1625,7 +1725,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "comptia/security-plus",
@@ -1653,7 +1755,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "confluent/certified-administrator",
@@ -1681,7 +1785,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "confluent/certified-developer",
@@ -1709,7 +1815,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "databricks/data-engineer-associate",
@@ -1737,7 +1845,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "databricks/data-engineer-professional",
@@ -1765,7 +1875,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "databricks/genai-engineer-associate",
@@ -1793,7 +1905,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "databricks/lakehouse-platform-administrator",
@@ -1821,7 +1935,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "databricks/ml-associate",
@@ -1849,7 +1965,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "databricks/ml-professional",
@@ -1877,7 +1995,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "finops/certified-analyst",
@@ -1905,7 +2025,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "finops/certified-engineer",
@@ -1933,7 +2055,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "finops/certified-practitioner",
@@ -1961,7 +2085,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "finops/certified-professional",
@@ -1989,7 +2115,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "gcp/cloud-architect",
@@ -2017,7 +2145,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "gcp/cloud-database-engineer",
@@ -2045,7 +2175,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "gcp/cloud-developer",
@@ -2073,7 +2205,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "gcp/cloud-devops-engineer",
@@ -2101,7 +2235,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "gcp/cloud-digital-leader",
@@ -2129,7 +2265,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "gcp/cloud-engineer",
@@ -2157,7 +2295,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "gcp/cloud-network-engineer",
@@ -2185,7 +2325,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "gcp/cloud-security-engineer",
@@ -2213,7 +2355,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "gcp/data-engineer",
@@ -2241,7 +2385,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "gcp/genai",
@@ -2269,7 +2415,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "gcp/machine-learning-engineer",
@@ -2297,7 +2445,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "gcp/workspace-administrator",
@@ -2325,7 +2475,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "github/actions",
@@ -2353,7 +2505,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "github/administration",
@@ -2381,14 +2535,16 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "github/advanced-security",
       "provider": "github",
       "provider_name": "GitHub",
       "slug": "advanced-security",
-      "name": "GitHub Advanced Security (GHAS) Certification Exam Guide",
+      "name": "GitHub Advanced Security (GHAS)",
       "exam_code": null,
       "level": "professional",
       "status": "active",
@@ -2409,14 +2565,16 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "github/copilot",
       "provider": "github",
       "provider_name": "GitHub",
       "slug": "copilot",
-      "name": "GitHub Copilot Certification Exam Guide",
+      "name": "GitHub Copilot",
       "exam_code": null,
       "level": "unspecified",
       "status": "active",
@@ -2437,14 +2595,16 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "github/foundations",
       "provider": "github",
       "provider_name": "GitHub",
       "slug": "foundations",
-      "name": "GitHub Foundations Certification Exam Guide",
+      "name": "GitHub Foundations",
       "exam_code": null,
       "level": "foundational",
       "status": "active",
@@ -2465,7 +2625,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "hashicorp/boundary-associate",
@@ -2493,7 +2655,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "hashicorp/consul-associate",
@@ -2521,7 +2685,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "hashicorp/nomad-associate",
@@ -2549,7 +2715,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "hashicorp/packer-associate",
@@ -2577,7 +2745,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "hashicorp/terraform-associate",
@@ -2605,7 +2775,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "hashicorp/terraform-authoring-operations-pro",
@@ -2633,7 +2805,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "hashicorp/vault-associate",
@@ -2661,7 +2835,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "ibm/cloud-advocate",
@@ -2689,7 +2865,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "ibm/cloud-developer",
@@ -2717,7 +2895,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "ibm/cloud-security-engineer",
@@ -2745,7 +2925,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "ibm/cloud-site-reliability-engineer",
@@ -2773,7 +2955,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "ibm/cloud-solution-architect",
@@ -2801,7 +2985,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "isaca/cisa",
@@ -2829,7 +3015,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "isaca/cism",
@@ -2857,7 +3045,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "isc2/ccsp",
@@ -2885,7 +3075,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "isc2/cissp",
@@ -2913,7 +3105,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "kubernetes/cka",
@@ -2941,7 +3135,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "kubernetes/ckad",
@@ -2969,7 +3165,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "kubernetes/cks",
@@ -2997,7 +3195,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "kubernetes/ica",
@@ -3025,7 +3225,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "kubernetes/kcna",
@@ -3053,7 +3255,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "kubernetes/kcsa",
@@ -3081,7 +3285,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "kubernetes/pca",
@@ -3109,7 +3315,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "linux-foundation/lfca",
@@ -3137,7 +3345,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "linux-foundation/lfcs",
@@ -3165,7 +3375,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "mongodb/associate-atlas-administrator",
@@ -3193,7 +3405,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "mongodb/associate-dba",
@@ -3221,7 +3435,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "mongodb/associate-developer",
@@ -3249,7 +3465,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "nvidia/accelerated-data-science-professional",
@@ -3277,7 +3495,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "nvidia/agentic-ai-professional",
@@ -3305,7 +3525,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "nvidia/ai-infrastructure-operations-associate",
@@ -3333,7 +3555,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "nvidia/ai-infrastructure-professional",
@@ -3361,7 +3585,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "nvidia/ai-operations-professional",
@@ -3389,7 +3615,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "nvidia/genai-llms-associate",
@@ -3417,7 +3645,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "nvidia/genai-llms-professional",
@@ -3445,7 +3675,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "nvidia/multimodal-genai-associate",
@@ -3473,7 +3705,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "nvidia/networking-professional",
@@ -3501,7 +3735,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "nvidia/openusd-professional",
@@ -3529,7 +3765,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "offensive-security/oscp-pen-200",
@@ -3557,7 +3795,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "oracle/oci-architect-associate",
@@ -3585,7 +3825,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "oracle/oci-architect-professional",
@@ -3613,7 +3855,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "oracle/oci-developer-associate",
@@ -3641,7 +3885,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "oracle/oci-foundations",
@@ -3669,7 +3915,9 @@
         "scenarios.md": false,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "oracle/oci-operations-associate",
@@ -3697,7 +3945,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "palo-alto-networks/pcnsa",
@@ -3725,7 +3975,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "redhat/openshift-administrator-ex280",
@@ -3753,7 +4005,9 @@
         "scenarios.md": true,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "redhat/rhcsa-ex200",
@@ -3781,7 +4035,9 @@
         "scenarios.md": true,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "salesforce/administrator",
@@ -3809,7 +4065,9 @@
         "scenarios.md": true,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "salesforce/platform-developer-1",
@@ -3837,7 +4095,9 @@
         "scenarios.md": true,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "salesforce/platform-developer-2",
@@ -3865,7 +4125,9 @@
         "scenarios.md": true,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "servicenow/csa",
@@ -3893,7 +4155,9 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "snowflake/snowpro-advanced-administrator",
@@ -3921,7 +4185,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "snowflake/snowpro-advanced-architect",
@@ -3949,7 +4215,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "snowflake/snowpro-advanced-data-engineer",
@@ -3977,7 +4245,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "snowflake/snowpro-core",
@@ -4005,7 +4275,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     },
     {
       "id": "vmware/vcp-dcv-2v0-21-23",
@@ -4033,7 +4305,9 @@
         "scenarios.md": true,
         "strategy.md": true
       },
-      "last_updated": "2026-05-03"
+      "last_updated": "2026-05-03",
+      "exam_version": null,
+      "exam_retires": null
     }
   ]
 }

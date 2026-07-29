@@ -8,10 +8,10 @@ Study guides for GitHub in this repo. For the full picture across every provider
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
-| [GitHub Foundations Certification Exam Guide](foundations/) | - | Foundational | Ready | 5 |
-| [GitHub Advanced Security (GHAS) Certification Exam Guide](advanced-security/) | - | Professional | Ready | 6 |
+| [GitHub Foundations](foundations/) | - | Foundational | Ready | 5 |
+| [GitHub Advanced Security (GHAS)](advanced-security/) | - | Professional | Ready | 6 |
 | [GitHub Actions Certification](actions/) | - | - | Ready | 5 |
 | [GitHub Administration Certification](administration/) | - | - | Ready | 5 |
-| [GitHub Copilot Certification Exam Guide](copilot/) | - | - | Ready | 6 |
+| [GitHub Copilot](copilot/) | - | - | Ready | 6 |
 
 <!-- END GENERATED: provider-certs -->

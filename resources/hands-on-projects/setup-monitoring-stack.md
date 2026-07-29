@@ -1,5 +1,9 @@
 ---
 last-updated: 2026-05-03
+certs:
+  - kubernetes/pca
+  - aws/associate/cloudops-engineer-soa-c03
+  - gcp/cloud-devops-engineer
 ---
 
 # Hands-On Project: Set Up a Monitoring Stack

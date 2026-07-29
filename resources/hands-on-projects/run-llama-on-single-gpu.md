@@ -2,6 +2,9 @@
 last-updated: 2026-05-03
 difficulty: intermediate
 reading-time: 15 min
+certs:
+  - nvidia/ai-infrastructure-operations-associate
+  - nvidia/genai-llms-associate
 ---
 
 # Run Llama on a single GPU

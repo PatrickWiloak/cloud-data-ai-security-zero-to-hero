@@ -1,0 +1,36 @@
+Question,Answer,Tags
+How long is the GitHub Advanced Security (GHAS) exam?,120 minutes,exam-logistics
+How many questions are on the GitHub Advanced Security (GHAS) exam?,~75 multiple choice and multiple response,exam-logistics
+What is the passing score for GitHub Advanced Security (GHAS)?,70%,exam-logistics
+What does the GitHub Advanced Security (GHAS) exam cost?,$99 USD,exam-logistics
+How long is GitHub Advanced Security (GHAS) valid for?,2 years,exam-logistics
+How is the GitHub Advanced Security (GHAS) exam delivered?,Online proctored (PSI),exam-logistics
+Code scanning (ghas overview and licensing),Static analysis using CodeQL or any SARIF-compatible tool,"notes,ghas-overview-and-licensing"
+Secret scanning (ghas overview and licensing),"Detection of known secret formats, plus push protection","notes,ghas-overview-and-licensing"
+Push protection (ghas overview and licensing),Blocks pushes containing detected secrets,"notes,ghas-overview-and-licensing"
+Custom patterns (ghas overview and licensing),Customer-defined secret patterns,"notes,ghas-overview-and-licensing"
+Validity checks (ghas overview and licensing),Verifies whether detected tokens are still active (where supported),"notes,ghas-overview-and-licensing"
+Security overview (ghas overview and licensing),Org- and enterprise-level dashboards and reporting,"notes,ghas-overview-and-licensing"
+Security configurations (ghas overview and licensing),Reusable bundles for applying GHAS features at scale,"notes,ghas-overview-and-licensing"
+Advanced secret scanning options (ghas overview and licensing),"Delegated bypass, non-provider patterns, etc.","notes,ghas-overview-and-licensing"
+GitHub Enterprise Cloud (GHEC) (ghas overview and licensing),The most commonly tested deployment,"notes,ghas-overview-and-licensing"
+GitHub Enterprise Server (GHES) (ghas overview and licensing),Self-hosted; GHAS features are available but may lag GHEC,"notes,ghas-overview-and-licensing"
+GitHub Team (ghas overview and licensing),"Some features (like secret scanning with push protection) are available, but full GHAS is an enterprise feature","notes,ghas-overview-and-licensing"
+Query packs (code scanning and codeql),Bundle queries you want to run,"notes,code-scanning-and-codeql"
+Library packs (code scanning and codeql),Provide reusable CodeQL logic for other packs,"notes,code-scanning-and-codeql"
+Open (code scanning and codeql),New or still present,"notes,code-scanning-and-codeql"
+Fixed (code scanning and codeql),Code change resolved the issue,"notes,code-scanning-and-codeql"
+Dismissed (code scanning and codeql),Closed with a reason,"notes,code-scanning-and-codeql"
+False positive (code scanning and codeql),Not actually a vulnerability,"notes,code-scanning-and-codeql"
+Used in tests (code scanning and codeql),Intentional for testing purposes,"notes,code-scanning-and-codeql"
+Won't fix (code scanning and codeql),Acknowledged but no remediation planned,"notes,code-scanning-and-codeql"
+Active (secret scanning and push protection),Token is live according to partner,"notes,secret-scanning-and-push-protection"
+Inactive (secret scanning and push protection),Token is revoked or expired,"notes,secret-scanning-and-push-protection"
+Unknown (secret scanning and push protection),Validity not supported or cannot be determined,"notes,secret-scanning-and-push-protection"
+False positive (secret scanning and push protection),Not a real secret,"notes,secret-scanning-and-push-protection"
+Used in tests (secret scanning and push protection),Intentional test fixture,"notes,secret-scanning-and-push-protection"
+I'll fix it later (secret scanning and push protection),Will remove soon,"notes,secret-scanning-and-push-protection"
+GitHub-recommended (ghas administration and enterprise rollout),A preset with sensible defaults,"notes,ghas-administration-and-enterprise-rollout"
+Custom (ghas administration and enterprise rollout),Org-specific configurations,"notes,ghas-administration-and-enterprise-rollout"
+Security managers (ghas administration and enterprise rollout),Read-only visibility across all repos in the org,"notes,ghas-administration-and-enterprise-rollout"
+Enterprise owners (ghas administration and enterprise rollout),Cross-org view at enterprise level,"notes,ghas-administration-and-enterprise-rollout"

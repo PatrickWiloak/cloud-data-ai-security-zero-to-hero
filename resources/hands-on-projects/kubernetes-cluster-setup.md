@@ -1,5 +1,9 @@
 ---
 last-updated: 2026-05-03
+certs:
+  - kubernetes/cka
+  - kubernetes/ckad
+  - redhat/openshift-administrator-ex280
 ---
 
 # Hands-On Project: Set Up a Production-Like Kubernetes Cluster

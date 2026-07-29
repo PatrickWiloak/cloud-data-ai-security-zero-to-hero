@@ -290,6 +290,7 @@ cloud-data-ai-security-zero-to-hero/
 - [🗂️ Topic indexes](./topics/) - browse by subject across pillars
 - [🆕 What's new](./CHANGELOG.md)
 - [📅 Freshness ledger](./docs/freshness.md)
+- [🧪 Labs by certification](./resources/hands-on-projects/labs-by-cert.md) - which hands-on build backs which exam
 - [🛠️ Improvement roadmap](./docs/improvement-roadmap.md) - known gaps and what is being done about them
 - [📝 Contributing](./CONTRIBUTING.md)
 
