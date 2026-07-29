@@ -14,9 +14,16 @@ files, ~2.6M words, 137 cert directories across 27 providers: 133 certifications
 Every number below was produced by scanning the tree, not estimated. Re-run the
 commands in [How the numbers were produced](#how-the-numbers-were-produced) to refresh.
 
-> **Status: Phase 1 complete (2026-07-29).** All 383 broken internal links are fixed,
-> counts are corrected, and internal link checking now blocks a merge. Section 1 is kept
-> as the record of what was wrong and why. Phases 2 to 4 are open.
+> **Status (2026-07-29).** Phases 1 and 3-4 tooling are complete; Phase 2 is partly done.
+> Closed: all 383 broken internal links, the count drift, blocking link CI, the diagram
+> standard, cert placement, the last structure warning, `docs/certs.json` and generated
+> navigation, per-provider indexes, flashcard decks, the lab-to-cert map, and the
+> freshness rotation. Section 1 is kept as the record of what was wrong and why.
+>
+> **Still open, all content authoring rather than tooling:** notes for 8 of the 10
+> outline-stage certs (2 done), practice questions for 103 certs, and the Tier 1
+> certifications in [section 3](#3-certifications-we-could-add). These are measured in
+> tens of thousands of words each and are tracked in [TODO.md](../TODO.md).
 
 > **Correction (2026-07-29).** The first draft of this document reported 127 cert
 > directories. That number came from `validate-cert-structure.sh`, which discovered certs
@@ -133,7 +140,7 @@ rather than a preview.
 
 ## 2. Coverage gaps in existing content
 
-### 2.1 - Ten certs have zero notes
+### 2.1 - Ten certs have zero notes (2 fixed, 8 open)
 
 These directories have a README, fact-sheet, and practice-plan, but an empty or absent
 `notes/` directory. Their READMEs link to notes that do not exist, which is the source of
@@ -277,12 +284,17 @@ Unparseable fields are `null`, never guessed. The remaining gaps are mostly cert
 vendor exam code at all (GCP, Databricks, MongoDB, IBM), so the honest ceiling is below
 100%. Raising the rest is a matter of normalising fact-sheet frontmatter over time.
 
-### 4.2 - Spaced repetition assets
+### 4.2 - Spaced repetition assets (done 2026-07-29)
 
-There is no flashcard or quiz artifact anywhere in the repo. A per-cert `flashcards.csv`
-(Anki-importable, question/answer/tag columns) generated from fact-sheets and notes would
-be a genuine differentiator, and it is mechanical to produce from content that already
-exists.
+`.github/scripts/build-flashcards.py` writes an Anki-importable `flashcards.csv` into each
+cert dir: 82 decks, 6,885 cards. Cards are extracted rather than invented. Exam logistics
+come from `docs/certs.json`; term-definition cards come from the
+`- **Term** - definition` lines the notes already use.
+
+Nothing is generated from headings alone, because "What is Cluster Architecture?" with no
+sourced answer is a card that teaches nothing. 55 certs fall below the 15-card threshold
+and get no deck rather than a misleading one. Writing more term-definition lines in those
+certs' notes is what raises their card count.
 
 ### 4.3 - Exam-version tracking
 
@@ -300,11 +312,14 @@ approaching a known revision date.
 are likewise manual-only. Either wire them into CI or document in `.github/AUTOMATION.md`
 that they are intentionally run by hand.
 
-### 4.5 - Connect labs to certs
+### 4.5 - Connect labs to certs (done 2026-07-29)
 
-`resources/hands-on-projects/` has 15 solid projects and `exams/` has 127 certs, but
-nothing maps between them. A "labs for this exam" section in each cert README, or a
-mapping table in the projects index, turns two good resources into one better one.
+Each hands-on project now declares the certs it exercises in frontmatter, and
+`.github/scripts/build-lab-map.py` generates both directions: a lab-to-cert table in the
+projects index, and the reverse index at `resources/hands-on-projects/labs-by-cert.md`.
+
+46 of 137 certs have a matching lab. The page says so explicitly rather than implying full
+coverage. Adding labs for the uncovered 91 is open work.
 
 ### 4.6 - Repo hygiene
 

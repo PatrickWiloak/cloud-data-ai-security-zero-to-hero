@@ -31,7 +31,17 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 
 ### Priority 2 - content substance
 
-- [ ] Write notes for the 10 outline-stage certs (cisco/ccnp-encor, comptia/cysa-plus, comptia/network-plus, isaca/cisa, isaca/cism, offensive-security/oscp, palo-alto/pcnsa, salesforce/pd2, servicenow/csa, vmware/vcp-dcv). As each lands, restore the real links and drop its `_(planned)_` markers and the outline-stage banner.
+- [ ] Write notes for the remaining 8 outline-stage certs. As each lands, restore the real links, drop its `_(planned)_` markers and the outline-stage banner, then re-run the generators.
+  - [x] ~~comptia/cysa-plus~~ ✅ done 2026-07-29 (4 domain notes)
+  - [x] ~~comptia/network-plus~~ ✅ done 2026-07-29 (5 domain notes)
+  - [ ] cisco/ccnp-enterprise-encor-350-401 (6 notes outlined)
+  - [ ] isaca/cisa (5 notes outlined)
+  - [ ] isaca/cism (4 notes outlined)
+  - [ ] offensive-security/oscp-pen-200 (6 notes outlined)
+  - [ ] palo-alto-networks/pcnsa (6 notes outlined)
+  - [ ] salesforce/platform-developer-2 (5 notes outlined)
+  - [ ] servicenow/csa (6 notes outlined)
+  - [ ] vmware/vcp-dcv-2v0-21-23 (4 notes outlined)
 - [x] ~~Resolve the diagram standard~~ ✅ done 2026-07-29 - Mermaid is now the documented default, PNG the exception. Updated `CLAUDE.md`, `docs/ARCHITECTURE.md`, `CONTRIBUTING.md`, `assets/diagrams/README.md`.
 - [x] ~~Add index READMEs to the 21 provider directories that lack one~~ ✅ done 2026-07-29 (all 27 now generated from `docs/certs.json`; the 6 hand-written ones kept their editorial content)
 - [x] ~~Complete `aws/professional/genai-developer-aip-c01`~~ ✅ done 2026-07-29 - practice-plan, scenarios, strategy written. Structure validator is at zero warnings.
@@ -41,7 +51,7 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 ### Priority 3 - leverage
 
 - [x] ~~Build `docs/certs.json` from fact-sheets; generate the hub table and provider indexes from it~~ ✅ done 2026-07-29 (CI fails if either is stale). Freshness ledger still generates independently - fold it in if it drifts.
-- [ ] Add practice questions for uncovered certs (34 of 137 covered today).
+- [ ] Add practice questions for uncovered certs. 34 of 137 covered; 103 have none. Use [the template](./resources/practice-questions/template.md). Highest value first: the certs that already have complete notes but no question bank.
 - [ ] Add Tier 1 certifications: SC-100, SC-300, SC-400, PL-300, CNCF associates (OTCA/CGOA/CAPA/CCA/CNPA), Oracle OCI GenAI, Google GenAI Leader, ISC2 CC, an observability cert.
 - [x] ~~Stagger `last-updated` re-verification by provider batch~~ ✅ done 2026-07-29 - `check-cert-freshness.py` assigns each provider a review month and reports what is due. The rotation exists; the re-verification work itself is ongoing (12 certs due in month 7).
 
