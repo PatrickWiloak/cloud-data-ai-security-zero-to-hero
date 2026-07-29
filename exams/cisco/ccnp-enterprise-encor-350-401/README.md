@@ -1,9 +1,5 @@
 # Cisco Certified Network Professional (CCNP) Enterprise - ENCOR 350-401
 
-> **Study-guide status: outline stage.** The README, fact-sheet, and practice plan are
-> written. The topic notes are outlined but not yet drafted - entries marked _(planned)_
-> below do not exist yet. Track progress in [TODO.md](../../../TODO.md).
-
 
 ## Overview
 
@@ -87,12 +83,12 @@ Data formats (JSON, XML, YAML), REST APIs (verbs, status codes, payloads, pagina
 | File | Description |
 |---|---|
 | [fact-sheet.md](fact-sheet.md) | High-yield reference: routing metrics, QoS markings, IPv6, wireless, IOS commands, REST/Python |
-| notes/01-architecture.md _(planned)_ | Enterprise design, SD-WAN, SD-Access, QoS, hardware/software switching |
-| notes/02-virtualization.md _(planned)_ | VRFs, VDCs, GRE, IPsec, LISP, VXLAN |
-| notes/03-infrastructure.md _(planned)_ | STP, EtherChannel, EIGRP, OSPF, BGP, wireless, IP services |
-| notes/04-network-assurance.md _(planned)_ | NetFlow, IP SLA, syslog, SNMP, DNA Center Assurance, streaming telemetry |
-| notes/05-security.md _(planned)_ | AAA, CoPP, TrustSec, MACsec, WPA3, REST API security |
-| notes/06-automation.md _(planned)_ | JSON/XML/YAML, Python, Ansible, NETCONF/RESTCONF, YANG, DNA Center APIs |
+| [notes/01-architecture.md](notes/01-architecture.md) | Enterprise design, SD-WAN, SD-Access, QoS, hardware/software switching |
+| [notes/02-virtualization.md](notes/02-virtualization.md) | VRFs, VDCs, GRE, IPsec, LISP, VXLAN |
+| [notes/03-infrastructure.md](notes/03-infrastructure.md) | STP, EtherChannel, EIGRP, OSPF, BGP, wireless, IP services |
+| [notes/04-network-assurance.md](notes/04-network-assurance.md) | NetFlow, IP SLA, syslog, SNMP, DNA Center Assurance, streaming telemetry |
+| [notes/05-security.md](notes/05-security.md) | AAA, CoPP, TrustSec, MACsec, WPA3, REST API security |
+| [notes/06-automation.md](notes/06-automation.md) | JSON/XML/YAML, Python, Ansible, NETCONF/RESTCONF, YANG, DNA Center APIs |
 | [practice-plan.md](practice-plan.md) | 14-18 week study plan |
 | [scenarios.md](scenarios.md) | 15+ enterprise lab scenarios |
 | [strategy.md](strategy.md) | Test-taking tactics and pitfalls |

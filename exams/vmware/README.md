@@ -8,8 +8,6 @@ Study guides for VMware in this repo. For the full picture across every provider
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
-| [VMware Certified Professional - Data Center Virtualization 2024 (VCP-DCV, 2V0-21.23)](vcp-dcv-2v0-21-23/) | 2V0-21.23 | Professional | Outline ◇ | - |
-
-◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
+| [VMware Certified Professional - Data Center Virtualization 2024 (VCP-DCV, 2V0-21.23)](vcp-dcv-2v0-21-23/) | 2V0-21.23 | Professional | Ready | 6 |
 
 <!-- END GENERATED: provider-certs -->

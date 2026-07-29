@@ -178,7 +178,7 @@ What's your starting point?
 | **Snowflake** | 4 | SnowPro Core + 3 Advanced (Architect, Data Eng, Admin) | [exams/snowflake/](./exams/snowflake/) |
 | **GitHub** | 5 | Foundations, Actions, Administration, Advanced Security, Copilot | [exams/github/](./exams/github/) |
 | **Red Hat** | 2 | RHCSA (EX200), OpenShift Administrator (EX280) | [exams/redhat/](./exams/redhat/) |
-| **Cisco** | 2 | CCNA (200-301), CCNP Enterprise ENCOR (350-401) (1 at outline stage ◇) | [exams/cisco/](./exams/cisco/) |
+| **Cisco** | 2 | CCNA (200-301), CCNP Enterprise ENCOR (350-401) | [exams/cisco/](./exams/cisco/) |
 | **Salesforce** | 3 | Administrator, Platform Developer I, Platform Developer II (1 at outline stage ◇) | [exams/salesforce/](./exams/salesforce/) |
 | **Confluent/Kafka** | 2 | Certified Developer, Certified Administrator | [exams/confluent/](./exams/confluent/) |
 | **MongoDB** | 3 | Associate Developer, DBA, Atlas Administrator | [exams/mongodb/](./exams/mongodb/) |
@@ -193,7 +193,7 @@ What's your starting point?
 | **Oracle Cloud (OCI)** | 5 | Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc | [exams/oracle/](./exams/oracle/) |
 | **IBM Cloud** | 5 | Advocate, Developer, Solution Architect, Security, SRE | [exams/ibm/](./exams/ibm/) |
 | **ServiceNow** | 1 | Certified System Administrator | [exams/servicenow/](./exams/servicenow/) |
-| **VMware** | 1 | VCP-DCV (2V0-21.23) (1 at outline stage ◇) | [exams/vmware/](./exams/vmware/) |
+| **VMware** | 1 | VCP-DCV (2V0-21.23) | [exams/vmware/](./exams/vmware/) |
 | **CERTIFICATIONS TOTAL** | **131** | across 26 providers | |
 | **Anthropic Claude (study tracks)** | 4 | Architect Foundations + Advanced, Application Developer, Prompt Engineering Specialist | [exams/anthropic/](./exams/anthropic/) |
 

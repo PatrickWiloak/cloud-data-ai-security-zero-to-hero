@@ -9,8 +9,6 @@ Study guides for Cisco in this repo. For the full picture across every provider,
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
 | [Cisco Certified Network Associate (CCNA) - 200-301](ccna-200-301/) | 200-301 | Associate | Ready | 5 |
-| [Cisco Certified Network Professional (CCNP) Enterprise - ENCOR 350-401](ccnp-enterprise-encor-350-401/) | 350-401 | Professional | Outline ◇ | - |
-
-◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
+| [Cisco Certified Network Professional (CCNP) Enterprise - ENCOR 350-401](ccnp-enterprise-encor-350-401/) | 350-401 | Professional | Ready | 6 |
 
 <!-- END GENERATED: provider-certs -->
