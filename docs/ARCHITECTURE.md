@@ -47,11 +47,10 @@ Use the lowercase, hyphen-free provider name when possible:
 
 AWS uses an extra layer because it has many tiers:
 
-- `exams/aws/foundational/` - CLF-C02, AIF-C01
+- `exams/aws/foundational/` - CLF-C02 (Cloud Practitioner), AIF-C01 (AI Practitioner)
 - `exams/aws/associate/` - SAA-C03, DVA-C02, SOA-C03, MLA-C01, DEA-C01, SOA-C02 (retired but retained)
 - `exams/aws/professional/` - SAP-C02, DOP-C02
 - `exams/aws/specialty/` - SCS-C02, ANS-C01, PAS-C01, QPC-C01, MLS-C01 (retired), DAS-C01 (retired), DBS-C01 (retired)
-- `exams/aws/genai/` - AI Practitioner study materials (cross-tier)
 - `exams/aws/shared/services/` - shared service references (compute, storage, network, etc.)
 
 Other providers don't use tier subdirs - the cert dir sits directly under the provider dir.
@@ -188,27 +187,42 @@ Link audits run with a code-block-aware scanner. See `CONTRIBUTING.md` for the d
 
 ### Where diagrams go
 
-- **Canonical**: PNG files generated from draw.io, stored under `assets/diagrams/<topic>/<slug>.png`. Topic subdirs are created lazily: `cloud/`, `ai/`, `networking/`, `architecture/`, `security/`, etc.
-- **Inline fallback**: Mermaid in fenced ` ```mermaid ` code blocks. Renders natively on GitHub and most modern markdown viewers. Use this when (a) the draw.io tooling isn't available, (b) the diagram is small enough to be readable as text, or (c) you want it to be editable directly in the markdown.
+- **Canonical: Mermaid** in fenced ` ```mermaid ` code blocks, written inline in the page that uses it. GitHub renders it natively. It stays editable in the markdown, diffs as text in review, needs no tooling to update, and never rots into a broken image link.
+- **Exception: PNG** files under `assets/diagrams/<topic>/<slug>.png`, for diagrams too dense to read inline - large multi-region topologies, detailed multi-service reference architectures. Topic subdirs are created lazily: `cloud/`, `ai/`, `networking/`, `architecture/`, `security/`.
 
-Both are valid. Choose based on what the page needs.
+Reach for Mermaid first. Only fall back to PNG when the diagram genuinely does not read as inline text.
+
+This reflects what the repo actually does: 89 pages use Mermaid today and no PNG has ever been added. The convention previously named PNG as canonical, which meant the documented standard had zero instances while the real one was undocumented.
 
 ### Authoring
 
-PNG diagrams should be created with the **draw.io MCP server** when available. Export at 2x resolution for retina screens. Keep file size reasonable (< 200 KB per diagram for inline use).
+For Mermaid, prefer `flowchart TB` / `flowchart LR` over the older `graph` syntax. Use `subgraph` blocks for grouped components (regions, AZs, tiers). Keep node labels short; put detail in the surrounding prose, not inside the boxes.
 
-For Mermaid, prefer `flowchart TB` / `flowchart LR` over the older `graph` syntax. Use `subgraph` blocks for grouped components (regions, AZs, tiers).
+Mermaid renders in GitHub's light and dark themes, so do not hard-code colours that only work against one background. Default styling is preferred.
+
+PNG diagrams, when justified, are created with the **draw.io MCP server**. Export at 2x resolution for retina screens and keep files under 200 KB.
 
 ### Embedding
 
-**PNG**:
-```markdown
-![3-tier web application architecture](../../assets/diagrams/architecture/web-app-3-tier.png)
+**Mermaid**: a fenced code block tagged `mermaid`. Don't wrap it in HTML.
+
+````markdown
+```mermaid
+flowchart LR
+    Client --> LB[Load balancer]
+    LB --> App1[App server]
+    LB --> App2[App server]
+    App1 & App2 --> DB[(Database)]
 ```
+````
 
-Always include descriptive alt text. The alt text should be useful when the image fails to render or for screen-reader users.
+Because a Mermaid diagram carries no alt text, give it a caption or a sentence of surrounding prose that states what it shows. Screen readers and anyone whose renderer does not support Mermaid rely on that text.
 
-**Mermaid**: just a fenced code block tagged `mermaid`. Don't wrap in HTML.
+**PNG**: always include descriptive alt text, useful both when the image fails to render and for screen-reader users.
+
+```markdown
+![3-tier architecture with load balancer, two app servers, and a database](../../assets/diagrams/architecture/web-app-3-tier.png)
+```
 
 ### Where to add diagrams
 

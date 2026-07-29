@@ -60,7 +60,7 @@ flowchart LR
 Certs that test ML systems engineering specifically:
 
 **Foundational**
-- [AWS AI Practitioner](../exams/aws/genai/) - cross-cert GenAI study track
+- [AWS AI Practitioner](../exams/aws/foundational/ai-practitioner-aif-c01/) - cross-cert GenAI study track
 - [Azure AI Fundamentals (AI-900)](../exams/azure/ai-900/)
 
 **Associate**

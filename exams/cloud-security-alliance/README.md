@@ -31,7 +31,7 @@ CSA operates extensive research working groups that produce freely available gui
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-1 study guide in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+1 certification in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|

@@ -4,7 +4,7 @@ Study guides for GCP in this repo. For the full picture across every provider, s
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-12 study guides in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+11 certifications and 1 self-directed study track in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
@@ -19,6 +19,8 @@ Study guides for GCP in this repo. For the full picture across every provider, s
 | [Google Cloud Professional Google Workspace Administrator Certification](workspace-administrator/) | Professional Google Workspace Administrator | Professional | Ready | 3 |
 | [Google Cloud Professional Machine Learning Engineer Certification](machine-learning-engineer/) | Professional Machine Learning Engineer | Professional | Ready | 3 |
 | [Google Cloud Professional Cloud Database Engineer (Specialty) Certification](cloud-database-engineer/) | Professional Cloud Database Engineer | Specialty | Ready | 3 |
-| [Google Cloud Generative AI - Self-Directed Study Track](genai/) | - | - | Ready | 3 |
+| [Google Cloud Generative AI - Self-Directed Study Track](genai/) | - | - | Study track | 3 |
+
+**Study track** - a self-directed guide spanning several exams or none. Not a certification, and not counted as one.
 
 <!-- END GENERATED: provider-certs -->

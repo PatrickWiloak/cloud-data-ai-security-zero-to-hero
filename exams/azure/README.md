@@ -4,7 +4,7 @@ Study guides for Azure in this repo. For the full picture across every provider,
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-23 study guides in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+22 certifications and 1 self-directed study track in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
@@ -29,7 +29,9 @@ Study guides for Azure in this repo. For the full picture across every provider,
 | [Microsoft Azure Cosmos DB Developer Specialty (DP-420)](dp-420/) | DP-420 | Specialty | Ready | 3 |
 | [Microsoft DevOps Engineer Expert (AZ-400)](az-400/) | AZ-400 | Expert | Ready | 3 |
 | [Azure AZ-305: Designing Microsoft Azure Infrastructure Solutions](az-305/) | AZ-305 | - | Ready | 5 |
-| [Azure Generative AI - Self-Directed Study Track](genai/) | - | - | Ready | 3 |
+| [Azure Generative AI - Self-Directed Study Track](genai/) | - | - | Study track | 3 |
 | [Microsoft Azure Administrator (AZ-104)](az-104/) | AZ-104 | - | Ready | 10 |
+
+**Study track** - a self-directed guide spanning several exams or none. Not a certification, and not counted as one.
 
 <!-- END GENERATED: provider-certs -->

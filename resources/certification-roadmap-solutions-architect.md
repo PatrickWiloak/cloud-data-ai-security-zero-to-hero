@@ -1077,7 +1077,7 @@ Professional Cloud Architect
 **Salary Range**: $150,000-$220,000
 
 **Resources:**
-- [AWS GenAI Certification](../exams/aws/genai/README.md)
+- [AWS GenAI Certification](../exams/aws/foundational/ai-practitioner-aif-c01/README.md)
 - [Azure AI Certification](../exams/azure/genai/README.md)
 - [GCP GenAI Certification](../exams/gcp/genai/README.md)
 

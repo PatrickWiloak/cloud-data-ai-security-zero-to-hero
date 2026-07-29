@@ -172,12 +172,21 @@ listing with no ordering, no difficulty signal, and no suggested path.
 A short generated index per provider (cert name, code, level, status, link) would fix
 this and could be script-generated from the fact-sheets.
 
-### 2.4 - Structural inconsistency in the GenAI directories
+### 2.4 - Structural inconsistency in the GenAI directories (fixed 2026-07-29)
 
-`exams/aws/genai`, `exams/azure/genai`, and `exams/gcp/genai` sit at provider level while
-every sibling cert sits under a level directory. `exams/aws/genai` is actually the AWS
-Certified AI Practitioner, which belongs under `exams/aws/foundational/`. The
-structure validator counts them as certs, which is part of the 122-vs-127 drift.
+`exams/aws/genai`, `exams/azure/genai`, and `exams/gcp/genai` all sat at provider level
+while every sibling cert sat under a level directory. Investigating showed they are not
+the same kind of thing:
+
+- `exams/aws/genai` was the AWS Certified AI Practitioner (AIF-C01), a real exam in the
+  wrong place. Moved to `exams/aws/foundational/ai-practitioner-aif-c01/`, with all
+  inbound links repointed.
+- `exams/azure/genai` and `exams/gcp/genai` are explicitly self-directed study tracks
+  rather than single exams, the same shape as the four Anthropic tracks. They are
+  correctly at provider level, but were being counted as certifications.
+
+The index now carries a distinct `track` status, so headline counts separate real exams
+from study tracks instead of conflating them.
 
 ### 2.5 - One outstanding structure warning
 

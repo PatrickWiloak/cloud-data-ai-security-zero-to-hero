@@ -2,7 +2,7 @@
 
 15 scenario-based questions for AIF-C01 prep.
 
-> **Cert page:** [exams/aws/genai/](../../exams/aws/genai/)
+> **Cert page:** [exams/aws/foundational/ai-practitioner-aif-c01/](../../exams/aws/foundational/ai-practitioner-aif-c01/)
 
 ---
 

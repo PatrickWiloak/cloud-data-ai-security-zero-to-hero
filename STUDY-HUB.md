@@ -1,13 +1,13 @@
 # 📚 Study Hub - Cloud + AI Learning Hub
 
-> **Your navigation hub for the whole repo: 133 certifications across 26 providers, plus the [Learn](./learn/) pillar for non-cert students - bite-size concepts, beginner on-ramp, and structured cloud + AI paths.**
+> **Your navigation hub for the whole repo: 131 certifications across 26 providers, plus the [Learn](./learn/) pillar for non-cert students - bite-size concepts, beginner on-ramp, and structured cloud + AI paths.**
 
 <div align="center">
 
-![Total Certifications](https://img.shields.io/badge/Certifications-133-blue.svg)
+![Total Certifications](https://img.shields.io/badge/Certifications-131-blue.svg)
 ![Documentation Links](https://img.shields.io/badge/Docs%20Links-12000+-green.svg)
 ![Providers](https://img.shields.io/badge/Providers-26-orange.svg)
-![Study Tracks](https://img.shields.io/badge/Study%20Tracks-12-purple.svg)
+![Career Roadmaps](https://img.shields.io/badge/Career%20Roadmaps-11-purple.svg)
 
 **Welcome. Whether you're new to all this or chasing your fifth cert, this is the entry point.**
 
@@ -164,11 +164,11 @@ What's your starting point?
 
 <!-- BEGIN GENERATED: provider-table - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-| Provider | Count | Highlights | Browse |
+| Provider | Certs | Highlights | Browse |
 |----------|------:|------------|--------|
 | **AWS** | 18 | CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, Quantum (QPC-C01); 4 retired specialties retained | [exams/aws/](./exams/aws/) |
-| **Azure** | 23 | AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-200, PL-100/200, MS-900 | [exams/azure/](./exams/azure/) |
-| **GCP** | 12 | Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI | [exams/gcp/](./exams/gcp/) |
+| **Azure** | 22 | AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-200, PL-100/200, MS-900 (+1 study track) | [exams/azure/](./exams/azure/) |
+| **GCP** | 11 | Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI (+1 study track) | [exams/gcp/](./exams/gcp/) |
 | **Kubernetes/CNCF** | 7 | KCNA, KCSA, CKA, CKAD, CKS, PCA (Prometheus), ICA (Istio) | [exams/kubernetes/](./exams/kubernetes/) |
 | **NVIDIA** | 10 | AI Infra & Ops, GenAI/LLM, Multimodal, Agentic AI, Networking, OpenUSD | [exams/nvidia/](./exams/nvidia/) |
 | **HashiCorp** | 7 | Terraform Assoc + Pro, Vault, Consul, Packer, Boundary, Nomad | [exams/hashicorp/](./exams/hashicorp/) |
@@ -192,8 +192,10 @@ What's your starting point?
 | **IBM Cloud** | 5 | Advocate, Developer, Solution Architect, Security, SRE | [exams/ibm/](./exams/ibm/) |
 | **ServiceNow** | 1 | Certified System Administrator (1 at outline stage ◇) | [exams/servicenow/](./exams/servicenow/) |
 | **VMware** | 1 | VCP-DCV (2V0-21.23) (1 at outline stage ◇) | [exams/vmware/](./exams/vmware/) |
-| **CERTIFICATIONS TOTAL** | **133** | across 26 providers | |
+| **CERTIFICATIONS TOTAL** | **131** | across 26 providers | |
 | **Anthropic Claude (study tracks)** | 4 | Architect Foundations + Advanced, Application Developer, Prompt Engineering Specialist | [exams/anthropic/](./exams/anthropic/) |
+
+The Certs column counts real exams. This repo also carries 6 self-directed study tracks (the Anthropic Claude tracks plus the Azure and GCP GenAI tracks), which are study guides spanning several exams or none, not certifications in their own right.
 
 ◇ = outline stage: README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting queue.
 

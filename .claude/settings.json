@@ -1,7 +1,14 @@
 {
+  "_comment": [
+    "Permissions for working in this repo. It is a markdown knowledge base, so file",
+    "reads and edits are broadly allowed. Bash is scoped to the commands this repo",
+    "actually uses (git, the validators and generators under .github/scripts, and",
+    "read-only shell tools) rather than a blanket wildcard.",
+    "Entries referencing absolute paths on a previous machine were removed; they were",
+    "already dead, since a wildcard Bash rule subsumed every narrower one."
+  ],
   "permissions": {
     "allow": [
-      "Bash(*)",
       "Read(*)",
       "Edit(*)",
       "Write(*)",
@@ -9,6 +16,28 @@
       "Grep(*)",
       "WebFetch(*)",
       "WebSearch(*)",
+
+      "Bash(git:*)",
+      "Bash(python3 .github/scripts/*)",
+      "Bash(bash .github/scripts/*)",
+      "Bash(npx markdownlint-cli2:*)",
+      "Bash(npx cspell:*)",
+
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(sort:*)",
+      "Bash(uniq:*)",
+      "Bash(diff:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+
       "mcp__github__*",
       "mcp__aws-docs__*",
       "mcp__aws-terraform__*",
@@ -17,21 +46,7 @@
       "mcp__notion__*",
       "mcp__playwright__*",
       "mcp__docker__*",
-      "mcp__sequential-thinking__*",
-      "Bash(/tmp/count.txt:*)",
-      "Read(//tmp/**)",
-      "Bash(git -C /home/plw/coding/cloud-certification-study-guides status --short)",
-      "Bash(git -C /home/plw/coding/cloud-certification-study-guides ls-files --others --exclude-standard)",
-      "Bash(git -C /home/plw/coding/cloud-certification-study-guides diff --stat)",
-      "Bash(for d:*)",
-      "Bash(do echo:*)",
-      "Read(//home/plw/coding/cloud-certification-study-guides/exams/kubernetes/**)",
-      "Bash(done)",
-      "Read(//home/plw/coding/cloud-certification-study-guides/exams/github/**)",
-      "Bash(for dir:*)",
-      "Read(//home/plw/coding/cloud-certification-study-guides/exams/**)",
-      "Bash(git push:*)",
-      "Bash(git -C /home/plw/coding/cloud-certification-study-guides remote get-url origin)"
+      "mcp__sequential-thinking__*"
     ]
   }
 }

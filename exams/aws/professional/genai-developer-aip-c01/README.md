@@ -5,6 +5,9 @@ The AWS Certified Generative AI Developer - Professional (AIP-C01) certification
 ## Quick Links
 
 - [Fact Sheet](fact-sheet.md) - Exam logistics, blueprint, in-scope and out-of-scope services
+- [Practice Plan](practice-plan.md) - 8-week study schedule with checkpoints
+- [Scenarios](scenarios.md) - Eight worked exam-style scenarios with distractor analysis
+- [Strategy](strategy.md) - Time management, trap list, exam-day tactics
 - [Official Exam Page](https://aws.amazon.com/certification/certified-generative-ai-developer-professional/) - Registration and exam details
 - [Official Exam Guide PDF](https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/certification/approved/pdfs/docs-aip/AWS-Certified-Generative-AI-Developer-Pro_Exam-Guide.pdf) - Authoritative blueprint
 - [Official Exam Guide (HTML)](https://docs.aws.amazon.com/aws-certification/latest/ai-professional-01/ai-professional-01.html) - Same content, navigable by domain
@@ -26,7 +29,7 @@ The AWS Certified Generative AI Developer - Professional (AIP-C01) certification
 - [AWS Services Mapping (reverse index)](notes/aws-services-mapping.md) - Last-mile service-by-service review
 
 ### Companion materials in this repo (background, not Pro-level)
-- [AWS Certified AI Practitioner (AIF-C01)](../../genai/) - Foundational cert; useful background only
+- [AWS Certified AI Practitioner (AIF-C01)](../../foundational/ai-practitioner-aif-c01/) - Foundational cert; useful background only
 - [AWS Certified Machine Learning Engineer Associate (MLA-C01)](../../associate/ml-engineer-mla-c01/) - Some overlap with Bedrock and SageMaker AI
 - [LLMs and GenAI topic notes](../../../../topics/llms-and-genai.md) - Cross-cloud GenAI concepts
 - [Cross-cloud GenAI platform comparison](../../../../resources/service-comparison-genai-platforms.md)

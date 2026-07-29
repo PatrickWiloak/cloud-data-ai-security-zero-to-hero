@@ -40,9 +40,10 @@ cloud-data-ai-security-zero-to-hero/
 - No verbatim vendor exam questions.
 
 ### Visual content standards
-- **Diagrams are created via the draw.io MCP server and saved as PNG files** in `assets/diagrams/<topic>/<slug>.png`. Topic subdirs (cloud/, ai/, networking/, architecture/, security/) are created lazily as content grows.
-- Embed PNGs in markdown with descriptive alt text. Example: `![3-tier architecture with load balancer, app servers, and database](../../assets/diagrams/architecture/web-app-3-tier.png)`
-- **Mermaid fenced code blocks are an acceptable fallback** when (a) the draw.io MCP isn't available, (b) the diagram is small enough to be readable inline, or (c) you want it editable directly in the markdown. GitHub renders Mermaid natively.
+- **Mermaid fenced code blocks are the default.** Write the diagram inline in the page that uses it. GitHub renders Mermaid natively, it stays editable in the markdown, and it diffs as text in review.
+- Prefer `flowchart TB` / `flowchart LR` over the older `graph` syntax. Use `subgraph` for grouped components. Don't hard-code colours; the diagram has to read in both light and dark themes.
+- Mermaid has no alt text, so give each diagram a caption or a sentence of prose saying what it shows.
+- **PNG is the exception**, for diagrams too dense to read inline. Save to `assets/diagrams/<topic>/<slug>.png` (topic subdirs created lazily) and embed with descriptive alt text: `![3-tier architecture with load balancer, app servers, and database](../../assets/diagrams/architecture/web-app-3-tier.png)`
 - See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md#visual-content-standards) for the full convention.
 
 ### Frontmatter convention (new and refreshed pages)

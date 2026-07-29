@@ -35,6 +35,7 @@ LEVEL_LABEL = {
 STATUS_LABEL = {
     "active": "Ready",
     "outline": "Outline ◇",
+    "track": "Study track",
     "retired": "Retired",
     "anticipated": "Anticipated",
 }
@@ -116,6 +117,11 @@ def legend(certs):
             "**Anticipated** - a self-directed study track for an exam the vendor has not "
             "formally announced. Not a real certification yet."
         )
+    if any(c["status"] == "track" for c in certs):
+        notes.append(
+            "**Study track** - a self-directed guide spanning several exams or none. Not a "
+            "certification, and not counted as one."
+        )
     return ("\n\n" + "\n\n".join(notes)) if notes else ""
 
 
@@ -135,9 +141,15 @@ def splice(text, name, body):
 
 def build_provider_readme(provider, provider_name, certs, existing):
     table = provider_table(certs, from_provider_dir=True)
-    count = len(certs)
+    exams_n = sum(1 for c in certs if c["status"] != "track")
+    tracks_n = len(certs) - exams_n
+    parts = []
+    if exams_n:
+        parts.append(f"{exams_n} certification{'s' if exams_n != 1 else ''}")
+    if tracks_n:
+        parts.append(f"{tracks_n} self-directed study track{'s' if tracks_n != 1 else ''}")
     summary = (
-        f"{count} study guide{'s' if count != 1 else ''} in this repo. "
+        f"{' and '.join(parts)} in this repo. "
         f"Counts and statuses are generated from [docs/certs.json](../../docs/certs.json)."
     )
     body = f"{summary}\n\n{table}{legend(certs)}"
@@ -182,13 +194,19 @@ def build_hub_table(index):
     missing = [p for p in providers if p not in ordered and p != "anthropic"]
     ordered += sorted(missing)
 
-    rows = ["| Provider | Count | Highlights | Browse |", "|----------|------:|------------|--------|"]
+    rows = ["| Provider | Certs | Highlights | Browse |", "|----------|------:|------------|--------|"]
     for provider in ordered:
         entry = providers[provider]
+        notes = []
         outline = sum(1 for c in certs_by_provider[provider] if c["status"] == "outline")
-        highlight = PROVIDER_HIGHLIGHTS.get(provider, "")
         if outline:
-            highlight += f" ({outline} at outline stage ◇)" if highlight else f"{outline} at outline stage ◇"
+            notes.append(f"{outline} at outline stage ◇")
+        if entry["tracks"]:
+            notes.append(f"+{entry['tracks']} study track{'s' if entry['tracks'] != 1 else ''}")
+        highlight = PROVIDER_HIGHLIGHTS.get(provider, "")
+        if notes:
+            suffix = "(" + "; ".join(notes) + ")"
+            highlight = f"{highlight} {suffix}" if highlight else suffix
         rows.append(
             f"| **{entry['name']}** | {entry['count']} | {highlight} "
             f"| [{entry['path']}](./{entry['path']}) |"
@@ -201,10 +219,14 @@ def build_hub_table(index):
     if "anthropic" in providers:
         entry = providers["anthropic"]
         rows.append(
-            f"| **{entry['name']}** | {entry['count']} | {PROVIDER_HIGHLIGHTS['anthropic']} "
+            f"| **{entry['name']}** | {entry['directories']} | {PROVIDER_HIGHLIGHTS['anthropic']} "
             f"| [{entry['path']}](./{entry['path']}) |"
         )
     legend_text = (
+        f"\n\nThe Certs column counts real exams. This repo also carries "
+        f"{totals['study_tracks']} self-directed study tracks (the Anthropic Claude tracks "
+        f"plus the Azure and GCP GenAI tracks), which are study guides spanning several "
+        f"exams or none, not certifications in their own right."
         "\n\n◇ = outline stage: README, fact-sheet, and practice plan are written; topic "
         "notes are outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting "
         "queue."

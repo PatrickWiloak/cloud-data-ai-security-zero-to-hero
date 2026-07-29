@@ -12,7 +12,7 @@ Thanks for your interest in improving this repo. It's a markdown knowledge base 
 - **Resource updates**: better practice questions, scenarios, or hands-on lab walkthroughs.
 - **Roadmap additions** for under-served career paths.
 - **`learn/` content**: new concept pages (`learn/concepts/<topic>.md`), day-one onramp expansions, glossary additions. Keep concept pages 5-10 minute reads, plain English, no exam framing.
-- **Diagrams**: PNG diagrams (draw.io export) under `assets/diagrams/<topic>/`, or inline Mermaid in existing pages. See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md#visual-content-standards).
+- **Diagrams**: inline Mermaid in the page that needs it (the default), or a PNG under `assets/diagrams/<topic>/` when the diagram is too dense to read inline. See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md#visual-content-standards).
 
 ## What is out of scope
 
@@ -116,8 +116,9 @@ Other conventions:
 
 ## Diagrams
 
-- Canonical: PNG files generated from draw.io, stored under `assets/diagrams/<topic>/<slug>.png`. Always include descriptive alt text when embedding.
-- Acceptable fallback: Mermaid in fenced ` ```mermaid ` code blocks (renders inline on GitHub). Use when small/simple or when draw.io tooling isn't available.
+- Default: Mermaid in fenced ` ```mermaid ` code blocks, written inline in the page. GitHub renders it natively, it stays editable in the markdown, and it diffs as text in review.
+- Mermaid carries no alt text, so add a caption or a sentence of prose saying what the diagram shows.
+- Exception: PNG under `assets/diagrams/<topic>/<slug>.png` for diagrams too dense to read inline. Always include descriptive alt text.
 - See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md#visual-content-standards) for the full convention.
 
 ## Frontmatter (new and refreshed pages)
@@ -134,6 +135,8 @@ reading-time: 10 min                            # optional
 ```
 
 Backfilling existing files is opportunistic - do it when you touch a file, don't open a frontmatter-only PR for thousands of files.
+
+The optional `tags:` field draws from a fixed vocabulary. See [docs/tag-taxonomy.md](./docs/tag-taxonomy.md) before adding tags, and propose new ones there first rather than inventing them inline.
 
 ## YouTube tie-in (optional)
 

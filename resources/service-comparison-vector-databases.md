@@ -247,4 +247,4 @@ Numbers move fast - confirm with vendor calculators before committing.
 - **Concepts**: [Embeddings and vector search](../learn/concepts/embeddings-and-vector-search.md), [RAG explained](../learn/concepts/rag-explained.md), [Context windows](../learn/concepts/context-windows-and-management.md)
 - **Topic**: [LLMs and GenAI](../topics/llms-and-genai.md), [Databases](../topics/databases.md)
 - **Build**: [Build a RAG pipeline](./hands-on-projects/build-rag-pipeline.md)
-- **Certs that touch this**: [AWS AI Practitioner](../exams/aws/genai/), [Anthropic Architect](../exams/anthropic/claude-certified-architect-foundations/), [Databricks GenAI Engineer](../exams/databricks/genai-engineer-associate/), [Azure AI Engineer (AI-102)](../exams/azure/ai-102/)
+- **Certs that touch this**: [AWS AI Practitioner](../exams/aws/foundational/ai-practitioner-aif-c01/), [Anthropic Architect](../exams/anthropic/claude-certified-architect-foundations/), [Databricks GenAI Engineer](../exams/databricks/genai-engineer-associate/), [Azure AI Engineer (AI-102)](../exams/azure/ai-102/)

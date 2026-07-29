@@ -4,7 +4,7 @@ Study guides for Oracle Cloud (OCI) in this repo. For the full picture across ev
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-5 study guides in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+5 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|

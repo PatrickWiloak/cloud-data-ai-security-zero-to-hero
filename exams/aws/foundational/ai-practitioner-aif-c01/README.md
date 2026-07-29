@@ -15,8 +15,8 @@ The AWS Certified AI Practitioner certification validates foundational knowledge
 - [Responsible AI on AWS](notes/responsible-ai-aws-services.md) - Ethics, governance, and AWS responsible-AI services
 
 ### Companion Materials
-- [AWS Machine Learning Engineer Associate (MLA-C01)](../associate/ml-engineer-mla-c01/) - The natural deeper-dive cert after AI Practitioner
-- [Anthropic Claude Application Developer track](../../anthropic/claude-application-developer/) - For production GenAI applications
+- [AWS Machine Learning Engineer Associate (MLA-C01)](../../associate/ml-engineer-mla-c01/) - The natural deeper-dive cert after AI Practitioner
+- [Anthropic Claude Application Developer track](../../../anthropic/claude-application-developer/) - For production GenAI applications
 
 ## 🎯 Exam Focus Areas
 

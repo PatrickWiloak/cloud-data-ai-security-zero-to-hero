@@ -52,5 +52,12 @@ jobs:
       - name: Check generated navigation is current
         run: python3 .github/scripts/build-provider-indexes.py --check
 
+      # Advisory, never blocking. Orphan detection is a heuristic: some pages are
+      # legitimately reachable only through a directory listing, so a hit is a prompt
+      # to look, not a failure.
+      - name: Report orphaned pages (advisory)
+        continue-on-error: true
+        run: bash .github/scripts/check-orphan-links.sh
+
       - name: Build freshness ledger (preview)
         run: bash .github/scripts/build-freshness-ledger.sh > /tmp/freshness.preview.md && head -40 /tmp/freshness.preview.md

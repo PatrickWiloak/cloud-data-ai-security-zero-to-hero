@@ -218,4 +218,4 @@ Numbers move; this is for relative ordering only. Confirm with vendor calculator
 - **Concepts**: [LLM basics](../learn/concepts/llm-basics.md), [Tool use](../learn/concepts/tool-use-and-function-calling.md), [Prompt caching](../learn/concepts/prompt-caching.md), [Inference servers](../learn/concepts/inference-servers.md)
 - **Topic**: [LLMs and GenAI](../topics/llms-and-genai.md)
 - **Related comparisons**: [Vector databases](./service-comparison-vector-databases.md), [Agent frameworks](./service-comparison-agent-frameworks.md), [LLM observability](./service-comparison-llm-observability.md)
-- **Certs**: [Anthropic Architect Foundations](../exams/anthropic/claude-certified-architect-foundations/), [AWS AI Practitioner](../exams/aws/genai/), [Azure AI-102](../exams/azure/ai-102/), [Databricks GenAI Engineer](../exams/databricks/genai-engineer-associate/)
+- **Certs**: [Anthropic Architect Foundations](../exams/anthropic/claude-certified-architect-foundations/), [AWS AI Practitioner](../exams/aws/foundational/ai-practitioner-aif-c01/), [Azure AI-102](../exams/azure/ai-102/), [Databricks GenAI Engineer](../exams/databricks/genai-engineer-associate/)

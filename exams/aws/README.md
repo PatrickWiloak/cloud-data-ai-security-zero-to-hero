@@ -4,11 +4,11 @@ Study guides for AWS in this repo. For the full picture across every provider, s
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-18 study guides in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+18 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
-| [AWS Certified AI Practitioner](genai/) | AIF-C01 | Foundational | Ready | 3 |
+| [AWS Certified AI Practitioner](foundational/ai-practitioner-aif-c01/) | AIF-C01 | Foundational | Ready | 3 |
 | [AWS Cloud Practitioner (CLF-C02) Exam Guide](foundational/cloud-practitioner-clf-c02/) | CLF-C02 | Foundational | Ready | 9 |
 | [AWS Certified CloudOps Engineer - Associate (SOA-C03)](associate/cloudops-engineer-soa-c03/) | SOA-C03 | Associate | Ready | 6 |
 | [AWS Certified Data Engineer - Associate (DEA-C01)](associate/data-engineer-dea-c01/) | DEA-C01 | Associate | Ready | 6 |

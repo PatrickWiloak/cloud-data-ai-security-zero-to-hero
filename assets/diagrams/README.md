@@ -1,10 +1,20 @@
 # Diagrams
 
-PNG diagrams used throughout the repo, generated from [draw.io](https://app.diagrams.net/) (or the draw.io MCP server when available).
+PNG diagrams, for the cases where an inline diagram will not do.
+
+**Mermaid is the default in this repo.** Write diagrams inline in the page that uses
+them, in a fenced ` ```mermaid ` block. GitHub renders it natively, it stays editable in
+the markdown, and it diffs as text in review. See
+[docs/ARCHITECTURE.md](../../docs/ARCHITECTURE.md#visual-content-standards) for the full
+convention.
+
+Use a PNG here only when the diagram is too dense to read as inline text: large
+multi-region topologies, detailed multi-service reference architectures. If you are
+unsure, write it in Mermaid first and see whether it reads.
 
 ## Layout
 
-Diagrams are organized by topic. Subdirectories are created lazily as content grows:
+Organised by topic. Subdirectories are created lazily as content grows:
 
 ```
 assets/diagrams/
@@ -17,14 +27,10 @@ assets/diagrams/
 
 ## Authoring
 
-- Create diagrams in draw.io (preferred) or any tool that exports PNG.
+- Create diagrams in [draw.io](https://app.diagrams.net/) (or the draw.io MCP server when available).
 - Export at 2x resolution for retina displays.
 - Keep file size under ~200 KB for inline use.
-- Save the source `.drawio` file alongside the PNG when feasible (so others can edit).
-
-## Source files
-
-`_src/` is tracked in git so editable draw.io sources stay alongside the exported PNGs. When you add a new diagram, commit both the `.drawio` source and the rendered `.png`.
+- Commit the editable `.drawio` source alongside the exported `.png` so others can edit it.
 
 ## Embedding
 
@@ -32,4 +38,5 @@ assets/diagrams/
 ![Descriptive alt text](../../assets/diagrams/<topic>/<slug>.png)
 ```
 
-Always include alt text. See [docs/ARCHITECTURE.md](../../docs/ARCHITECTURE.md#visual-content-standards) for the full convention, including when to use Mermaid as an inline fallback.
+Always include alt text. It matters both when the image fails to render and for
+screen-reader users.

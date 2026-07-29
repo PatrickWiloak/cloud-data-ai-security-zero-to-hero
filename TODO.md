@@ -35,8 +35,8 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 - [ ] Resolve the diagram standard: produce PNGs under `assets/diagrams/` (currently zero exist) or promote mermaid to primary in `CLAUDE.md` and `docs/ARCHITECTURE.md`.
 - [x] ~~Add index READMEs to the 21 provider directories that lack one~~ ✅ done 2026-07-29 (all 27 now generated from `docs/certs.json`; the 6 hand-written ones kept their editorial content)
 - [ ] Complete `aws/professional/genai-developer-aip-c01` (missing practice-plan, scenarios, strategy) and link it from the hub.
-- [ ] Move `exams/aws/genai` under `foundational/` as the AI Practitioner cert; reconcile `azure/genai` and `gcp/genai` placement.
-- [ ] Replace the 2 remaining `last-updated: YYYY-MM-DD` placeholders.
+- [x] ~~Move `exams/aws/genai` under `foundational/`; reconcile `azure/genai` and `gcp/genai` placement~~ ✅ done 2026-07-29 (AI Practitioner moved to `exams/aws/foundational/ai-practitioner-aif-c01/`; the Azure and GCP dirs are study tracks, kept in place and now counted as `track` rather than certification)
+- [x] ~~Replace the 2 remaining `last-updated: YYYY-MM-DD` placeholders~~ ✅ 2026-07-29 - not applicable. Both live inside ```yaml fenced blocks in `CLAUDE.md` and `CONTRIBUTING.md` that document the frontmatter convention. The original scan did not skip code fences. No stale frontmatter exists.
 
 ### Priority 3 - leverage
 
