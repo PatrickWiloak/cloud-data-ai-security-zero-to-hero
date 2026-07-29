@@ -1,9 +1,5 @@
 # CISM - Certified Information Security Manager
 
-> **Study-guide status: outline stage.** The README, fact-sheet, and practice plan are
-> written. The topic notes are outlined but not yet drafted - entries marked _(planned)_
-> below do not exist yet. Track progress in [TODO.md](../../../TODO.md).
-
 
 ## Exam Overview
 
@@ -80,10 +76,10 @@ You may sit for the exam without the experience and submit the experience verifi
 ## Study Materials
 
 ### Notes
-- 01 - Information Security Governance _(planned)_
-- 02 - Information Security Risk Management _(planned)_
-- 03 - Information Security Program _(planned)_
-- 04 - Incident Management _(planned)_
+- [01 - Information Security Governance](notes/01-information-security-governance.md)
+- [02 - Information Security Risk Management](notes/02-information-security-risk-management.md)
+- [03 - Information Security Program](notes/03-information-security-program.md)
+- [04 - Incident Management](notes/04-incident-management.md)
 
 ### Study Resources
 - [Fact Sheet](fact-sheet.md) - Quick reference

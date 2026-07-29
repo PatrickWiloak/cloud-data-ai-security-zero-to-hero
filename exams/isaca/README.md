@@ -39,10 +39,8 @@ ISACA maintains some of the most widely recognized credentials for IT audit, gov
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
-| [CISA - Certified Information Systems Auditor](cisa/) | CISA | - | Outline ◇ | - |
-| [CISM - Certified Information Security Manager](cism/) | CISM | - | Outline ◇ | - |
-
-◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
+| [CISA - Certified Information Systems Auditor](cisa/) | CISA | - | Ready | 5 |
+| [CISM - Certified Information Security Manager](cism/) | CISM | - | Ready | 4 |
 
 <!-- END GENERATED: provider-certs -->
 

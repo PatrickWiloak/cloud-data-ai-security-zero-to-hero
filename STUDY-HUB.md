@@ -185,7 +185,7 @@ What's your starting point?
 | **FinOps Foundation** | 4 | Practitioner, Engineer, Analyst, Professional | [exams/finops/](./exams/finops/) |
 | **CompTIA** | 4 | Cloud+ (CV0-004), Security+ (SY0-701), Network+, CySA+ | [exams/comptia/](./exams/comptia/) |
 | **ISC2** | 2 | CISSP, CCSP | [exams/isc2/](./exams/isc2/) |
-| **ISACA** | 2 | CISA, CISM (2 at outline stage ◇) | [exams/isaca/](./exams/isaca/) |
+| **ISACA** | 2 | CISA, CISM | [exams/isaca/](./exams/isaca/) |
 | **Cloud Security Alliance** | 1 | CCSK v5 | [exams/cloud-security-alliance/](./exams/cloud-security-alliance/) |
 | **Offensive Security** | 1 | OSCP (PEN-200) (1 at outline stage ◇) | [exams/offensive-security/](./exams/offensive-security/) |
 | **Palo Alto Networks** | 1 | PCNSA (1 at outline stage ◇) | [exams/palo-alto-networks/](./exams/palo-alto-networks/) |
