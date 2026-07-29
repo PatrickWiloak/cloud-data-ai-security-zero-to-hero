@@ -5,11 +5,11 @@ last-updated: 2026-07-29
 # CSA 06 - Reporting, Knowledge, and Platform Applications
 
 Reporting and dashboards, plus the application-level content the exam expects an
-administrator to recognise.
+administrator to recognize.
 
 ## Reporting
 
-- **Report** - a saved visualisation of data from one table or database view.
+- **Report** - a saved visualization of data from one table or database view.
 - **Report types** - bar, column, pie, donut, line, time series, trend, pivot, single score, list, and map.
 - **Data source for a report** - a table or a **database view** when data from joined tables is needed. A report cannot join tables by itself.
 - **Group by** - the dimension for aggregation.
@@ -23,7 +23,7 @@ administrator to recognise.
 **Report permissions** - `report_user` can create personal reports, `report_publisher` can
 publish and share, and `report_admin` administers reporting. Sharing a report does not
 bypass ACLs: recipients see only records they are allowed to see, so two users can open the
-same report and see different row counts. That behaviour is a favourite exam question.
+same report and see different row counts. That behavior is a favorite exam question.
 
 ## Dashboards and Performance Analytics
 
@@ -52,7 +52,7 @@ scheduled collections. That distinction is examined.
 
 - **Portal** - the end-user experience, composed of pages built from widgets.
 - **Widget** - a reusable component with HTML, CSS, client script, and server script.
-- **Theme** - branding: colours, logos, fonts.
+- **Theme** - branding: colors, logos, fonts.
 - **Page** - a portal route with a unique ID.
 
 At CSA level you are expected to know the components and how to brand a portal, not to
@@ -83,7 +83,7 @@ CSA is platform-focused, so these appear as recognition questions rather than de
 ## Instance security and administration
 
 - **Instance security hardening settings** - a documented checklist including session timeouts, password policies, and blocking of high-risk features.
-- **High Security Settings plugin** - introduces the `security_admin` elevated role and default-deny behaviour.
+- **High Security Settings plugin** - introduces the `security_admin` elevated role and default-deny behavior.
 - **Login and session management** - SSO via SAML, multi-factor authentication, and the local login fallback.
 - **System logs and transaction logs** - diagnosing errors and slow transactions.
 

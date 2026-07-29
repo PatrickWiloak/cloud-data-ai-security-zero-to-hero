@@ -12,10 +12,10 @@ represented on the exam because it is what administrators do daily.
 - **List view** - a table of records with configurable columns.
 - **Condition builder** - the structured filter interface, reached via the funnel icon.
 - **Breadcrumb** - the filter shown above the list. Clicking a segment removes the conditions to its right, which is the fastest way to widen a filter.
-- **Personalise list (gear icon)** - changes columns for you only.
+- **Personalize list (gear icon)** - changes columns for you only.
 - **Configure list layout** - changes columns for everyone, and requires a role.
 
-The personalise-versus-configure distinction is exactly the personal-versus-global pattern
+The personalize-versus-configure distinction is exactly the personal-versus-global pattern
 the exam tests throughout.
 
 **Filtering operators** - `is`, `is not`, `contains`, `starts with`, `is empty`,
@@ -36,7 +36,7 @@ the exam tests throughout.
 - **Form layout / Configure Form Layout** - which fields appear and in what order, for everyone.
 - **Form sections** - grouping of fields, displayed as tabs or stacked.
 - **Form design** - the drag-and-drop alternative to form layout.
-- **Personalise form** - shows or hides fields for the current user only.
+- **Personalize form** - shows or hides fields for the current user only.
 - **View** - a named form or list arrangement, so different audiences see different layouts of the same table.
 - **View rule** - determines which view a user sees automatically.
 
@@ -44,11 +44,11 @@ the exam tests throughout.
 
 - **Mandatory field** - marked with a red asterisk or bar; the record cannot be saved without it.
 - **Read-only field** - visible but not editable.
-- **Field status indicator** - the coloured bar at the left of a field showing mandatory or read-only state.
+- **Field status indicator** - the colored bar at the left of a field showing mandatory or read-only state.
 - **Save versus Update** - Save keeps you on the form; Update saves and returns you to the previous list.
 - **Insert and Insert and Stay** - available from the context menu, create a *copy* as a new record.
 
-Insert creating a copy rather than updating the original is a favourite exam point.
+Insert creating a copy rather than updating the original is a favorite exam point.
 
 - **Context menu (three bars / hamburger)** - form actions including Save, Insert, Copy sys_id, Configure, and History.
 - **Related list** - records related to this one, for example Affected CIs on a Change.
@@ -89,7 +89,7 @@ restore service, problems remove causes.
 
 ## Exam pointers
 
-- Personalise affects you; Configure affects everyone and requires a role.
+- Personalize affects you; Configure affects everyone and requires a role.
 - Insert creates a copy; Update modifies the existing record.
 - Work notes are internal, Additional comments are customer-visible.
 - Priority is derived from Impact and Urgency. Change the lookup rules, not the field.

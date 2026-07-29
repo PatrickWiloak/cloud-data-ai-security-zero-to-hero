@@ -14,7 +14,7 @@ Performance on the platform is inseparable from governor limits. Code that is sl
 also approaches a limit, and code that respects limits is usually fast enough.
 
 - **Design for bulk from the start** - assume every entry point (trigger, batch, API) can receive many records.
-- **Minimise queries and DML** - the scarce resources. Query once, process in memory, write once.
+- **Minimize queries and DML** - the scarce resources. Query once, process in memory, write once.
 - **Watch CPU time** - complex in-memory processing, nested loops, and heavy string work consume the 10,000 ms synchronous budget. CPU-time limit failures are common in poorly structured triggers.
 - **Manage heap** - large query results and collections consume the 6 MB heap. Use the SOQL for loop to process in batches.
 
@@ -28,13 +28,13 @@ also approaches a limit, and code that respects limits is usually fast enough.
 - **Short-circuit** - exit early from loops and methods when further work is unnecessary.
 - **Static caching within a transaction** - cache expensive results in static variables for reuse during the same transaction.
 
-The map-based correlation pattern is worth internalising: whenever you find yourself looping
+The map-based correlation pattern is worth internalizing: whenever you find yourself looping
 over one list inside a loop over another, a map keyed by the join field removes the inner
 loop.
 
 ## Query performance and large data volumes
 
-- **Selective queries** - filter on indexed fields with selective values so the optimiser uses the index. Non-selective queries on large objects fail with a timeout.
+- **Selective queries** - filter on indexed fields with selective values so the optimizer uses the index. Non-selective queries on large objects fail with a timeout.
 - **Indexes** - standard on Id, Name, owner, foreign keys, audit fields; custom on External ID and unique fields; and support-created for others.
 - **The query plan tool** - shows the cost and whether an index is used. The way to diagnose a slow query.
 - **Avoid negative and wildcard-leading filters** - `!=`, `NOT`, and `LIKE '%term'` cannot use an index.
@@ -53,7 +53,7 @@ loop.
 ## Concurrency and locking
 
 - **Record locks** - DML locks the records it touches for the transaction. Two transactions updating related records can deadlock or throw `UNABLE_TO_LOCK_ROW`.
-- **`FOR UPDATE`** - explicitly locks queried rows to serialise access and prevent lost updates.
+- **`FOR UPDATE`** - explicitly locks queried rows to serialize access and prevent lost updates.
 - **Ownership skew and locking** - many child records under one parent means updates contend for the parent lock. A frequent cause of intermittent `UNABLE_TO_LOCK_ROW` errors at scale.
 - **Reduce lock scope** - process in smaller batches, and order operations consistently to avoid deadlock.
 

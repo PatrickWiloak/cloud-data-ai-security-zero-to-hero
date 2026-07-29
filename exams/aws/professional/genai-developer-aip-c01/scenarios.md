@@ -50,29 +50,29 @@ metadata before you touch the model.
 ## Scenario 2 - The fine-tuning decision (Domain 1: 31%)
 
 A bank wants an assistant that replies in the bank's specific regulatory tone, using a
-fixed disclosure format, over a product catalogue that changes weekly. Prompt engineering
+fixed disclosure format, over a product catalog that changes weekly. Prompt engineering
 gets the format right about 70% of the time. Compliance requires the disclosure wording
 to be exact every time.
 
 What should the team implement?
 
-A. Fine-tune on the product catalogue so the model memorises current products.
-B. Fine-tune for tone and disclosure format, and use RAG for the product catalogue.
-C. Use RAG for both tone and catalogue by retrieving example responses.
-D. Put the entire catalogue and a style guide in the system prompt on every call.
+A. Fine-tune on the product catalog so the model memorizes current products.
+B. Fine-tune for tone and disclosure format, and use RAG for the product catalog.
+C. Use RAG for both tone and catalog by retrieving example responses.
+D. Put the entire catalog and a style guide in the system prompt on every call.
 
 **Answer: B.**
 
 This scenario deliberately contains both signals. Tone and a fixed output format are
-stable behavioural properties, which is what fine-tuning is for. A weekly-changing
-catalogue is exactly what fine-tuning handles badly and RAG handles well. The correct
+stable behavioral properties, which is what fine-tuning is for. A weekly-changing
+catalog is exactly what fine-tuning handles badly and RAG handles well. The correct
 architecture uses each for what it is good at.
 
 - **A** would require retraining every week and still would not guarantee format.
 - **C** can nudge tone through few-shot examples but will not reach "exact every time."
 - **D** is expensive on every call, and long system prompts degrade instruction-following.
 
-**Takeaway:** RAG and fine-tuning are not competitors. Stable behaviour, fine-tune.
+**Takeaway:** RAG and fine-tuning are not competitors. Stable behavior, fine-tune.
 Changing knowledge, retrieve.
 
 ---
@@ -94,7 +94,7 @@ D. Yes, and additionally enable model invocation logging.
 
 Guardrails filter *what is said*, in either direction: content categories, denied topics,
 PII, word filters. They have no concept of which principal is calling. Restricting who may
-invoke which model is an authorisation question, so it belongs in IAM, scoped to the model
+invoke which model is an authorization question, so it belongs in IAM, scoped to the model
 ARN.
 
 - **A** and **D** both misuse Guardrails for access control. Logging is good practice but
@@ -109,13 +109,13 @@ a *team* or *role* being restricted are IAM questions.
 ## Scenario 4 - Provisioned Throughput or not (Domain 4: 12%)
 
 A retailer runs a product-description generator. Traffic is bursty: near zero most of the
-week, then roughly 40,000 requests over six hours every Monday during catalogue refresh.
+week, then roughly 40,000 requests over six hours every Monday during catalog refresh.
 Finance wants the lowest total cost. Latency during the burst may degrade gracefully.
 
 Which approach is most cost-effective?
 
 A. Purchase Provisioned Throughput sized for the Monday peak.
-B. Use On-Demand invocation, and use batch inference for the Monday catalogue refresh.
+B. Use On-Demand invocation, and use batch inference for the Monday catalog refresh.
 C. Purchase Provisioned Throughput sized for average weekly volume.
 D. Provision a SageMaker real-time endpoint with autoscaling.
 
@@ -123,7 +123,7 @@ D. Provision a SageMaker real-time endpoint with autoscaling.
 
 Provisioned Throughput bills for committed capacity whether or not you use it, so buying
 for a six-hour weekly peak means paying for idle capacity the other 162 hours. The
-workload is also asynchronous by nature: catalogue descriptions do not need interactive
+workload is also asynchronous by nature: catalog descriptions do not need interactive
 latency, which is precisely what batch inference is for and it is cheaper per token.
 
 - **A** is the trap for people who pattern-match "high volume" to Provisioned Throughput
@@ -171,7 +171,7 @@ contract before you change the model.
 
 ## Scenario 6 - PII on the way in and out (Domain 3: 20%)
 
-A healthcare provider sends clinician notes to a foundation model for summarisation. Legal
+A healthcare provider sends clinician notes to a foundation model for summarization. Legal
 requires that patient identifiers never reach the model, and that any identifier the model
 happens to emit is blocked before reaching the user. Engineering wants minimal custom code.
 
@@ -217,7 +217,7 @@ evaluation set and a defined metric so the two configurations are compared on id
 inputs. Judging with a model is acceptable at scale provided humans spot-check the judge.
 
 - **A** is a slow, noisy signal, and ships an unvalidated change to real users first.
-- **C** is B without the rigour: no fixed dataset, no ground truth, no human check.
+- **C** is B without the rigor: no fixed dataset, no ground truth, no human check.
 - **D** measures the wrong dimension entirely.
 
 **Takeaway:** evaluation questions want a held-out dataset plus a stated metric. Anecdotes
@@ -255,7 +255,7 @@ serve enough requests," not "each request is too slow."
 
 ---
 
-## Patterns worth memorising
+## Patterns worth memorizing
 
 | Symptom in the scenario | Usual answer |
 |---|---|

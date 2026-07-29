@@ -13,7 +13,7 @@ independence, sufficient evidence, and conclusions that follow from what was tes
 - **Code of Professional Ethics** - binding on CISA holders. Breaching it can cost the certification.
 - **Due professional care** - applying the diligence a reasonably competent auditor would apply.
 - **Independence** - freedom from relationships that impair objectivity. *Independence in appearance* matters as much as independence in fact.
-- **Organisational independence** - the audit function reports to the audit committee or board, not to the management it audits.
+- **Organizational independence** - the audit function reports to the audit committee or board, not to the management it audits.
 
 If an exam scenario has an auditor reviewing a system they helped design, the answer
 almost always involves impaired independence and reassignment.
@@ -25,7 +25,7 @@ almost always involves impaired independence and reassignment.
 - **Operational audit** - efficiency and effectiveness of operations.
 - **Integrated audit** - combines financial and IS controls testing.
 - **Forensic audit** - evidence gathering for suspected fraud or legal proceedings.
-- **Attestation and SOC engagements** - third-party assurance over a service organisation's controls.
+- **Attestation and SOC engagements** - third-party assurance over a service organization's controls.
 
 ## Risk-based audit planning
 
@@ -68,15 +68,15 @@ system-generated with strong ITGC, auditee-prepared, verbal representation.
 - **Observation** - watching a process. Shows what happens while you watch, which is a limitation.
 - **Inspection** - examining documents or configuration.
 - **Reperformance** - the auditor independently executes the control. Strongest.
-- **CAAT (Computer-Assisted Audit Technique)** - software to analyse whole populations rather than samples. Enables 100% testing.
+- **CAAT (Computer-Assisted Audit Technique)** - software to analyze whole populations rather than samples. Enables 100% testing.
 
 ## Sampling
 
 - **Statistical sampling** - each item has a known probability of selection, so results can be projected to the population with a measurable confidence level.
-- **Non-statistical (judgemental) sampling** - auditor judgement selects items; results cannot be statistically projected.
+- **Non-statistical (judgmental) sampling** - auditor judgment selects items; results cannot be statistically projected.
 - **Attribute sampling** - tests whether a control operated or not, giving a rate of deviation. The usual choice for compliance testing.
 - **Variable sampling** - tests monetary or numeric amounts. Used in substantive testing.
-- **Stop-or-go sampling** - stops early when results are clearly acceptable, minimising sample size.
+- **Stop-or-go sampling** - stops early when results are clearly acceptable, minimizing sample size.
 - **Discovery sampling** - designed to find at least one instance of a rare but critical condition, such as fraud.
 - **Confidence coefficient, tolerable error, and expected error** - drive sample size. Higher confidence or lower tolerable error means a bigger sample.
 
@@ -102,7 +102,7 @@ compliance testing shows controls failing, substantive testing must expand.
 - **Audit charter** - the document granting the audit function its authority, scope, and responsibility. Approved by the board or audit committee.
 - **Engagement letter** - scope and terms for a specific audit.
 - **Qualified versus unqualified opinion** - unqualified means no material exceptions; qualified means exceptions exist.
-- **Exit meeting** - findings are discussed with management before the report is finalised, to confirm factual accuracy.
+- **Exit meeting** - findings are discussed with management before the report is finalized, to confirm factual accuracy.
 
 ## Control self-assessment
 
@@ -114,7 +114,7 @@ compliance testing shows controls failing, substantive testing must expand.
 - The first step in almost any audit scenario is understanding the business process and its risks, not testing.
 - Inquiry alone is never sufficient evidence. Look for reperformance or inspection.
 - If independence is questionable, that is the answer, regardless of how competent the auditor is.
-- CAATs are the answer when a question mentions analysing an entire population or large data volumes.
+- CAATs are the answer when a question mentions analyzing an entire population or large data volumes.
 - The auditor recommends; management decides and owns the remediation. Answers where the auditor implements a fix are wrong.
 
 ## Official documentation

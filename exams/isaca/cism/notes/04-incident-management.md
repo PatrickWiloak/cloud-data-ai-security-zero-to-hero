@@ -11,9 +11,9 @@ that surrounds them. Second-largest domain, and heavily scenario-based.
 
 - **Event** - any observable occurrence. Most are routine.
 - **Incident** - an event that adversely affects, or threatens, confidentiality, integrity, or availability.
-- **Breach** - an incident resulting in confirmed unauthorised access to or disclosure of protected data. Breach usually triggers legal notification duties, which is why the distinction matters.
+- **Breach** - an incident resulting in confirmed unauthorized access to or disclosure of protected data. Breach usually triggers legal notification duties, which is why the distinction matters.
 - **Disaster** - a disruption severe enough to invoke continuity and recovery plans.
-- **Crisis** - an event threatening the organisation's viability or reputation, requiring executive-level management.
+- **Crisis** - an event threatening the organization's viability or reputation, requiring executive-level management.
 
 ## Incident response planning
 
@@ -33,11 +33,11 @@ the incident is what the exam rewards.
 Aligned to NIST SP 800-61:
 
 1. **Preparation** - plans, tooling, training, and exercises.
-2. **Detection and analysis** - recognising and validating the incident, and scoping it.
+2. **Detection and analysis** - recognizing and validating the incident, and scoping it.
 3. **Containment, eradication, and recovery** - limiting damage, removing the cause, restoring service.
 4. **Post-incident activity** - lessons learned feeding back into preparation.
 
-- **Triage** - validating and prioritising. Separates real incidents from false positives.
+- **Triage** - validating and prioritizing. Separates real incidents from false positives.
 - **Scoping** - determining full extent before eradication. Eradicating on partial scope means the attacker returns.
 - **Containment strategy** - short-term to stop damage, long-term to allow business operation while eradication is prepared. Balance evidence preservation against speed.
 - **Eradication** - removing malware, attacker accounts, persistence, and closing the entry vector.
@@ -47,7 +47,7 @@ Aligned to NIST SP 800-61:
 
 - **Chain of custody** - documented handling record, without which evidence may be inadmissible.
 - **Order of volatility** - collect the most perishable first: memory before disk.
-- **Forensic image** - a bit-for-bit copy; analyse the copy.
+- **Forensic image** - a bit-for-bit copy; analyze the copy.
 - **Legal hold** - preservation directive overriding routine deletion.
 - **When to involve law enforcement** - a business and legal decision with consequences for disclosure and control of the investigation. The security manager advises; executives and legal decide.
 
@@ -90,7 +90,7 @@ are both expected.
 
 - **Lessons learned review** - conducted promptly, blameless, with owners and dates for each action.
 - **Root cause analysis** - why it was possible, not merely what happened.
-- **Plan updates** - the review's output must change the plan, or the exercise was theatre.
+- **Plan updates** - the review's output must change the plan, or the exercise was theater.
 - **Metrics** - mean time to detect, mean time to respond, mean time to recover, and incident recurrence.
 
 ## Exam pointers
@@ -100,7 +100,7 @@ are both expected.
 - BIA is always the first step in continuity planning.
 - RPO drives backup frequency; RTO drives recovery capability.
 - An untested plan provides no assurance.
-- A breach is an incident with confirmed unauthorised data access, and that distinction usually triggers notification obligations.
+- A breach is an incident with confirmed unauthorized data access, and that distinction usually triggers notification obligations.
 
 ## Official documentation
 

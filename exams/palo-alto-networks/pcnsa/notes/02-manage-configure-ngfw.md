@@ -40,15 +40,15 @@ applying them.
 - **PAN-OS upgrade path** - you must step through major versions in order rather than jumping. Check the release notes for required intermediate versions.
 - **Content version requirement** - a minimum content version is often required before a PAN-OS upgrade.
 
-Application and Threats updates can change App-ID behaviour, which can change which rules
+Application and Threats updates can change App-ID behavior, which can change which rules
 match. This is why a review period before installing is a real operational control.
 
 ## High availability
 
-- **Active/passive HA** - one firewall processes traffic, the peer stands by synchronised. The most common deployment.
+- **Active/passive HA** - one firewall processes traffic, the peer stands by synchronized. The most common deployment.
 - **Active/active HA** - both process traffic; used for asymmetric routing environments, and more complex.
 - **HA1 link** - control link, exchanging hellos, heartbeats, and configuration sync.
-- **HA2 link** - data link, synchronising sessions so failover does not drop established connections.
+- **HA2 link** - data link, synchronizing sessions so failover does not drop established connections.
 - **HA3 link** - packet forwarding link, active/active only.
 - **Backup HA links** - avoid a single point of failure in the HA path itself.
 - **Heartbeat polling and hello messages** - failure detection.
@@ -71,7 +71,7 @@ match. This is why a review period before installing is a real operational contr
 
 - **Log forwarding profile** - sends logs to Panorama, syslog, email, SNMP, or HTTP. Attached to security rules, so a rule without a log forwarding profile forwards nothing.
 - **Log storage quotas** - allocate space per log type; when full, oldest entries are overwritten.
-- **Panorama log collection** - centralises logs for correlation and longer retention.
+- **Panorama log collection** - centralizes logs for correlation and longer retention.
 
 **Monitoring tools**
 

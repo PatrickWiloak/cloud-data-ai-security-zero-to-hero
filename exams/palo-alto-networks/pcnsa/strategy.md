@@ -35,7 +35,7 @@ That list covers a disproportionate share of the exam.
 ## The top traps
 
 1. **NAT and security policy interaction.** Security policy matches pre-NAT addresses and
-   post-NAT zones. This is the single most-tested behaviour. If a question describes a
+   post-NAT zones. This is the single most-tested behavior. If a question describes a
    published server that is unreachable, check the address in the security rule first.
 
 2. **Default rules do not log.** Both intrazone-default (allow) and interzone-default
@@ -56,7 +56,7 @@ That list covers a disproportionate share of the exam.
 6. **What a tap interface cannot do.** It observes. It cannot block. Any question asking a
    tap deployment to prevent something has a wrong premise.
 
-7. **HA link roles.** HA1 control, HA2 session synchronisation, HA3 packet forwarding in
+7. **HA link roles.** HA1 control, HA2 session synchronization, HA3 packet forwarding in
    active/active only. Dropped sessions on failover means HA2.
 
 8. **User-ID coverage.** User-based rules only match traffic the firewall has mapped to a

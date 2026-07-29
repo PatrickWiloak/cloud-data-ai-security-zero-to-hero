@@ -48,7 +48,7 @@ later in the exam assumes this vocabulary.
 
 ## Table inheritance
 
-The concept the fact-sheet tells you to memorise.
+The concept the fact-sheet tells you to memorize.
 
 - **Base table** - a parent whose fields are inherited by children.
 - **Extended table** - inherits all fields of its parent and adds its own.
@@ -87,7 +87,7 @@ before ACLs can be edited, even by an admin.
 
 - **Global scope** - the default scope where the base system lives.
 - **Scoped application** - a namespaced application with its own tables and restricted access to other scopes' data, protecting the platform from unintended interference.
-- **Application scope selector** - determines which scope new artefacts are created in. Creating something in the wrong scope is a common beginner mistake.
+- **Application scope selector** - determines which scope new artifacts are created in. Creating something in the wrong scope is a common beginner mistake.
 
 ## Instance administration basics
 
@@ -95,7 +95,7 @@ before ACLs can be edited, even by an admin.
 - **Plugins** - optional functionality activated per instance. Some cannot be deactivated once active, which is why they are activated on sub-production first.
 - **Update sets** - the mechanism for moving configuration between instances. Covered in the configuration note.
 - **System logs** - platform activity, in `syslog` and related tables.
-- **Instance upgrade** - the ServiceNow-run process of applying a new family release, with skipped-changes review for customised records.
+- **Instance upgrade** - the ServiceNow-run process of applying a new family release, with skipped-changes review for customized records.
 
 ## Exam pointers
 

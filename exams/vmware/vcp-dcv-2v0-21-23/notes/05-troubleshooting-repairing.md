@@ -51,7 +51,7 @@ remembering.
 ## Storage problems
 
 - **APD (All Paths Down)** - the host has lost all paths to a device but the array has not said the device is gone. The host keeps retrying, hoping it returns.
-- **PDL (Permanent Device Loss)** - the array has explicitly signalled the device is gone permanently.
+- **PDL (Permanent Device Loss)** - the array has explicitly signaled the device is gone permanently.
 - **VMCP (VM Component Protection)** - configures HA's response to APD and PDL conditions, including restarting affected VMs elsewhere.
 - **Path thrashing** - two hosts alternately claiming ownership of a LUN on an active/passive array, usually caused by a wrong path selection policy.
 - **High DAVG** - array or fabric latency, escalate to the storage team.

@@ -8,7 +8,7 @@ Deploying ESXi and vCenter, then configuring networking and storage.
 
 ## ESXi installation
 
-- **Hardware requirements** - a supported 64-bit x86 CPU with hardware virtualisation enabled in firmware, the minimum RAM for the release, and a supported boot device. Always verify against the **VMware Compatibility Guide**; unsupported hardware is the first thing to check in a failed-install scenario.
+- **Hardware requirements** - a supported 64-bit x86 CPU with hardware virtualization enabled in firmware, the minimum RAM for the release, and a supported boot device. Always verify against the **VMware Compatibility Guide**; unsupported hardware is the first thing to check in a failed-install scenario.
 - **Interactive installation** - from ISO via ILO/iDRAC virtual media or USB.
 - **Scripted installation** - a **kickstart** file (`ks.cfg`) supplied by boot option, for repeatable deployment at scale.
 - **Auto Deploy** - PXE-boots stateless hosts from an image profile held by vCenter. Suits large, uniform estates.
@@ -23,7 +23,7 @@ Deploying ESXi and vCenter, then configuring networking and storage.
 - **Target** - deployed onto an ESXi host or an existing vCenter.
 - **SSO domain** - create a new one or join an existing for Enhanced Linked Mode.
 - **DNS** - forward and reverse records must exist and resolve correctly *before* deployment. DNS misconfiguration is the leading cause of failed vCenter deployments and is a reliable exam answer.
-- **NTP** - time synchronisation is required; certificate validation and SSO token exchange fail with skew.
+- **NTP** - time synchronization is required; certificate validation and SSO token exchange fail with skew.
 
 ## Networking configuration
 
@@ -50,7 +50,7 @@ Deploying ESXi and vCenter, then configuring networking and storage.
 ## Storage configuration
 
 - **iSCSI** - software adapter, dependent hardware adapter, or independent hardware adapter. Configure targets (static or dynamic discovery), CHAP authentication, and port binding for multipathing.
-- **Fibre Channel and FCoE** - zoning and LUN masking are done on the fabric and array.
+- **Fiber Channel and FCoE** - zoning and LUN masking are done on the fabric and array.
 - **NFS** - mount an export; NFS 4.1 supports multipathing and Kerberos, NFS 3 does not.
 - **Multipathing (PSA/NMP)** - path selection policies are **Fixed**, **Most Recently Used (MRU)**, and **Round Robin**. Round Robin is the common default for active/active arrays.
 - **Datastore creation** - VMFS6 on a LUN, or mounting NFS.
@@ -64,7 +64,7 @@ Deploying ESXi and vCenter, then configuring networking and storage.
 - **Network adapters** - **VMXNET3** is the paravirtual default and requires VMware Tools. E1000e is emulated and used when drivers are unavailable during installation.
 - **CPU and memory hot add** - allows increases while powered on, enabled per VM in advance, with guest OS support required.
 - **VM options** - boot options, firmware (BIOS or EFI), and advanced parameters.
-- **OVF and OVA** - open virtualisation packaging for import and export.
+- **OVF and OVA** - open virtualization packaging for import and export.
 
 Choosing paravirtual devices (VMXNET3, PVSCSI) gives better performance but depends on
 VMware Tools being installed, which is the trade-off the exam tests.

@@ -8,9 +8,9 @@ Device hardening, access control, and network security features. Roughly 20% of 
 
 ## Device access control
 
-- **AAA** - authentication (who you are), authorisation (what you may do), accounting (what you did).
-- **TACACS+** - TCP 49, encrypts the entire payload, separates authentication from authorisation. Preferred for device administration because it supports per-command authorisation.
-- **RADIUS** - UDP 1812/1813 (or legacy 1645/1646), encrypts only the password, combines authentication and authorisation. Preferred for network access such as 802.1X.
+- **AAA** - authentication (who you are), authorization (what you may do), accounting (what you did).
+- **TACACS+** - TCP 49, encrypts the entire payload, separates authentication from authorization. Preferred for device administration because it supports per-command authorization.
+- **RADIUS** - UDP 1812/1813 (or legacy 1645/1646), encrypts only the password, combines authentication and authorization. Preferred for network access such as 802.1X.
 - **Local authentication fallback** - a local account configured as a backup method so loss of the AAA server does not lock you out. Configuring AAA without a fallback is how administrators lock themselves out of production.
 - **Privilege levels** - 0, 1 (user EXEC), and 15 (privileged EXEC), with custom levels in between.
 - **Role-based CLI (parser views)** - finer-grained command restriction than privilege levels.
@@ -64,7 +64,7 @@ reliably examined.
 
 ## Endpoint and infrastructure protection
 
-- **Cisco ISE (Identity Services Engine)** - centralised policy for 802.1X, profiling, posture assessment, and guest access. Issues SGTs for TrustSec.
+- **Cisco ISE (Identity Services Engine)** - centralized policy for 802.1X, profiling, posture assessment, and guest access. Issues SGTs for TrustSec.
 - **Cisco Umbrella** - DNS-layer security.
 - **Cisco Stealthwatch / Secure Network Analytics** - flow-based anomaly detection using NetFlow.
 - **Cisco AMP / Secure Endpoint** - endpoint malware protection.
@@ -80,7 +80,7 @@ reliably examined.
 
 ## Exam pointers
 
-- TACACS+ encrypts the whole payload and supports per-command authorisation; RADIUS does not.
+- TACACS+ encrypts the whole payload and supports per-command authorization; RADIUS does not.
 - Always configure a local fallback when enabling AAA.
 - Dynamic ARP Inspection depends on DHCP snooping.
 - Port security default violation action is shutdown (err-disable).

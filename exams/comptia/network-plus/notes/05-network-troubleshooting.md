@@ -38,18 +38,18 @@ Two rules the exam enforces: never skip documentation, and always verify before 
 | `iperf` | Throughput testing | Measure actual bandwidth |
 
 - **`ping` succeeds by IP but fails by name** - the network is fine; DNS is the problem. This is one of the most common exam scenarios.
-- **`traceroute` showing asterisks mid-path** - not necessarily a fault. Many routers deprioritise or block ICMP. Only a break that persists to the destination indicates a real problem.
+- **`traceroute` showing asterisks mid-path** - not necessarily a fault. Many routers deprioritize or block ICMP. Only a break that persists to the destination indicates a real problem.
 
 ## Hardware tools
 
 - **Cable tester** - verifies continuity and correct pinout.
 - **Toner and probe** - traces which cable is which in a bundle or patch panel.
-- **Time-domain reflectometer (TDR)** - locates a break or fault along a copper run by distance. OTDR is the fibre equivalent.
-- **Light meter / optical power meter** - measures fibre signal strength, diagnosing dirty or damaged connectors.
+- **Time-domain reflectometer (TDR)** - locates a break or fault along a copper run by distance. OTDR is the fiber equivalent.
+- **Light meter / optical power meter** - measures fiber signal strength, diagnosing dirty or damaged connectors.
 - **Multimeter** - electrical measurements, including PoE voltage.
 - **Loopback adapter** - tests a port by returning its own signal.
-- **Wi-Fi analyser** - shows channel usage, signal strength, and interference.
-- **Protocol analyser** - captures and decodes traffic.
+- **Wi-Fi analyzer** - shows channel usage, signal strength, and interference.
+- **Protocol analyzer** - captures and decodes traffic.
 
 ## Common wired issues
 
@@ -71,7 +71,7 @@ Two rules the exam enforces: never skip documentation, and always verify before 
 - **Insufficient signal strength** - too far, or an obstruction. Measured in dBm, where closer to zero is stronger.
 - **Channel overlap and interference** - in 2.4 GHz, use only channels 1, 6, and 11.
 - **Client capability** - an old client cannot use a newer standard's speeds and can slow the cell for everyone.
-- **Roaming misbehaviour** - a client clinging to a distant AP rather than switching to a closer one.
+- **Roaming misbehavior** - a client clinging to a distant AP rather than switching to a closer one.
 - **Captive portal problems** - the client associates but has no access until authentication completes.
 - **Incorrect passphrase or authentication type** - association fails immediately.
 - **Simultaneous wired and wireless connections** - can create routing ambiguity on the host.
@@ -95,7 +95,7 @@ Two rules the exam enforces: never skip documentation, and always verify before 
 
 ## Exam pointers
 
-- Methodology-order questions are guaranteed. Memorise the seven steps and their sequence.
+- Methodology-order questions are guaranteed. Memorize the seven steps and their sequence.
 - "Works by IP, not by name" is DNS. Almost every time.
 - Local traffic fine, remote traffic broken points at subnet mask or default gateway.
 - Late collisions on a link that is up means duplex mismatch.

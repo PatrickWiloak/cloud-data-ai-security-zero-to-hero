@@ -17,7 +17,7 @@ cloud-data-ai-security-zero-to-hero/
 ├── CHANGELOG.md        # User-visible / operationally-significant changes
 ├── .templates/         # Cross-cert resources hubs (resources-aws.md, resources-azure.md, resources-gcp.md)
 ├── assets/diagrams/    # PNG diagrams (draw.io exports), organized by topic subdir
-├── docs/               # Repository-level documentation (ARCHITECTURE.md)
+├── docs/               # Repo docs: ARCHITECTURE.md, certs.json (generated index), freshness.md, tag-taxonomy.md, improvement-roadmap.md
 ├── exams/              # All certification study guides, organized by provider
 ├── learn/              # Plain-English learning content for non-cert students
 │   ├── concepts/       # Bite-size topic pages (5-10 min reads): cloud + AI primitives
@@ -80,7 +80,7 @@ exams/<provider>/<cert>/
 
 **Recommended for senior-tier certs only (validator warns on missing):** scenarios.md, strategy.md
 
-**Optional, used selectively (validator silent):** notes/, cram-1p.md, cheat-sheets/, labs/, flashcards.md
+**Optional, used selectively (validator silent):** notes/, cram-1p.md, cheat-sheets/, labs/. **Generated (do not hand-edit):** flashcards.csv (from notes, by build-flashcards.py).
 
 ### Tier classification
 
@@ -112,11 +112,11 @@ resources/
 ├── architecture-patterns/      # Multi-cloud architecture write-ups (17 files)
 ├── compliance-guides/          # SOC 2, HIPAA, PCI DSS, GDPR, FedRAMP (5 files)
 ├── cost-optimization/          # Per-cloud cost optimization playbooks (4 files)
-├── hands-on-projects/          # Guided builds (10 files)
+├── hands-on-projects/          # 15 guided builds + generated labs-by-cert.md index
 ├── interview-prep/             # Role-based interview prep (6 files)
 ├── migration-guides/           # On-prem and cloud-to-cloud migration (5 files)
 ├── networking-deep-dives/      # Hybrid, multi-cloud, DNS, load balancing (4 files)
-├── practice-questions/         # Per-cert question banks (33+ files)
+├── practice-questions/         # Per-cert question banks (34 files + template)
 ├── troubleshooting/            # Per-platform troubleshooting (4 files)
 └── well-architected/           # AWS / Azure / GCP frameworks (3 files)
 ```

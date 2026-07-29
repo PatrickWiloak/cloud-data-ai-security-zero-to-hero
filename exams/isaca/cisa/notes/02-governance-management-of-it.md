@@ -4,7 +4,7 @@ last-updated: 2026-07-29
 
 # CISA Domain 2 - Governance and Management of IT (17%)
 
-Whether IT is directed and controlled so it supports the organisation's objectives. The
+Whether IT is directed and controlled so it supports the organization's objectives. The
 recurring exam theme: governance sets direction and accountability, management executes.
 
 ## Governance versus management
@@ -21,10 +21,10 @@ accountable are right.
 ## Strategy and value
 
 - **IT strategy** - how IT will support business objectives. Must derive from business strategy, not run parallel to it.
-- **IT steering committee** - cross-functional body prioritising IT investment and monitoring major projects. Membership includes business representation, which is the point.
+- **IT steering committee** - cross-functional body prioritizing IT investment and monitoring major projects. Membership includes business representation, which is the point.
 - **Strategic alignment** - IT objectives demonstrably supporting business objectives.
 - **Value delivery** - IT investments producing the benefits that justified them.
-- **Benefits realisation** - measuring whether promised benefits actually arrived, after the project closed.
+- **Benefits realization** - measuring whether promised benefits actually arrived, after the project closed.
 - **Balanced scorecard** - measures performance across financial, customer, internal process, and learning perspectives. An IT balanced scorecard adapts this to IT.
 - **Portfolio management** - selecting and balancing the set of investments, rather than judging each in isolation.
 
@@ -40,19 +40,19 @@ The hierarchy is tested directly.
 Policies say *what and why*, standards say *how much*, procedures say *how*, guidelines
 *suggest*.
 
-## Organisational structure and roles
+## Organizational structure and roles
 
 - **Segregation of duties (SoD)** - no single individual controls all phases of a transaction. The classic IT example: developers must not have access to promote their own code into production.
-- **Compensating controls for SoD** - in small organisations where separation is impossible: supervisory review, audit trails, reconciliation, and rotation of duties.
-- **Data owner** - accountable for classification and authorising access to a data set. A business role, not an IT role.
+- **Compensating controls for SoD** - in small organizations where separation is impossible: supervisory review, audit trails, reconciliation, and rotation of duties.
+- **Data owner** - accountable for classification and authorizing access to a data set. A business role, not an IT role.
 - **Data custodian** - implements and maintains the controls the owner specifies. Usually IT.
 - **Data user** - uses the data within the granted permissions.
-- **Chief information security officer (CISO)** - responsible for the security programme. Reporting to the CIO can create a conflict of interest, which the exam sometimes probes.
+- **Chief information security officer (CISO)** - responsible for the security program. Reporting to the CIO can create a conflict of interest, which the exam sometimes probes.
 - **Job rotation and mandatory vacation** - detective controls that surface concealed irregularities.
 
 ## Risk management
 
-- **Risk appetite** - the amount of risk the organisation is willing to accept in pursuit of objectives.
+- **Risk appetite** - the amount of risk the organization is willing to accept in pursuit of objectives.
 - **Risk tolerance** - acceptable variation around the appetite.
 - **Risk register** - the record of identified risks, owners, treatments, and status.
 - **Risk treatment options** - mitigate (reduce), transfer (share, for example insurance), avoid (stop the activity), accept (document and monitor).
@@ -72,12 +72,12 @@ requires an owner with the authority to accept it.
 
 Outsourcing transfers the activity, never the accountability. If a question asks who
 remains responsible for the security of outsourced processing, the answer is the
-organisation.
+organization.
 
 ## Performance and compliance monitoring
 
 - **Key performance indicator (KPI)** - measures whether an objective is being achieved.
-- **Key risk indicator (KRI)** - forward-looking measure signalling increasing risk exposure.
+- **Key risk indicator (KRI)** - forward-looking measure signaling increasing risk exposure.
 - **Maturity model** - assesses process capability on a scale, showing the gap between current and target state.
 - **Benchmarking** - comparing performance against peers or standards.
 - **Regulatory compliance monitoring** - tracking obligations and evidencing adherence.
@@ -90,7 +90,7 @@ distinction.
 - **Business impact analysis (BIA)** - identifies critical processes and the impact of their disruption over time. It is the input to continuity planning, and it comes first.
 - **RTO (Recovery Time Objective)** - maximum tolerable time to restore a process.
 - **RPO (Recovery Point Objective)** - maximum tolerable data loss, expressed as time.
-- **MTO / MTD (Maximum Tolerable Outage/Downtime)** - the point beyond which the organisation cannot survive the disruption.
+- **MTO / MTD (Maximum Tolerable Outage/Downtime)** - the point beyond which the organization cannot survive the disruption.
 - **BCP governance** - senior management owns and approves the plan; it is tested and maintained, not written once.
 
 The BIA always precedes strategy selection. Choosing a recovery site before performing a
@@ -99,7 +99,7 @@ BIA is a standard wrong answer.
 ## Exam pointers
 
 - Governance directs and monitors; management executes. Sort every answer into one of those two before choosing.
-- The data owner classifies and authorises access. The custodian implements. Do not swap them.
+- The data owner classifies and authorizes access. The custodian implements. Do not swap them.
 - The first step in continuity planning is the BIA.
 - Outsourcing never transfers accountability.
 - If segregation of duties is impossible, the answer is compensating controls, not accepting the exposure silently.

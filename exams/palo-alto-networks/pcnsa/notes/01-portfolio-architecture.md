@@ -18,9 +18,9 @@ PCNSA is a Strata exam. Prisma and Cortex appear only as context.
 
 ## Firewall form factors
 
-- **PA-Series** - physical hardware appliances, from branch to data centre.
+- **PA-Series** - physical hardware appliances, from branch to data center.
 - **VM-Series** - virtual firewalls for private and public cloud.
-- **CN-Series** - containerised firewall for Kubernetes environments.
+- **CN-Series** - containerized firewall for Kubernetes environments.
 - **Cloud NGFW** - managed firewall service in public cloud.
 
 ## Single-pass parallel processing
@@ -83,27 +83,27 @@ An interface must be assigned to a zone before it can pass traffic through polic
 ## Management
 
 - **Web interface, CLI, and XML/REST API** - the management paths.
-- **Panorama** - centralised management for many firewalls: shared policy via device groups, and shared configuration via templates.
+- **Panorama** - centralized management for many firewalls: shared policy via device groups, and shared configuration via templates.
 - **Device group** - policy and objects pushed to a set of firewalls.
 - **Template and template stack** - network and device configuration pushed to firewalls.
 - **Candidate configuration** - your edits, not yet active.
 - **Running configuration** - what the firewall is actually enforcing.
-- **Commit** - moves candidate to running. Nothing you change takes effect until commit, which is a favourite exam point.
+- **Commit** - moves candidate to running. Nothing you change takes effect until commit, which is a favorite exam point.
 
 With Panorama, pre-rules and post-rules sandwich locally defined rules, and local
 administrators cannot edit the pushed rules.
 
-## Licences and subscriptions
+## Licenses and subscriptions
 
 - **Threat Prevention** - IPS, anti-malware, anti-spyware.
-- **Advanced URL Filtering** - web categorisation and credential-theft prevention.
+- **Advanced URL Filtering** - web categorization and credential-theft prevention.
 - **WildFire** - cloud sandboxing for unknown files, returning verdicts and new signatures.
 - **DNS Security** - blocks malicious domains and DNS tunnelling.
 - **GlobalProtect** - remote access VPN, licensed for advanced features.
 - **SD-WAN and IoT Security** - additional subscriptions.
 
 The base firewall does App-ID and policy without subscriptions. Threat signatures, URL
-categories, and sandboxing all require active licences, and expired licences silently
+categories, and sandboxing all require active licenses, and expired licenses silently
 degrade protection.
 
 ## Exam pointers

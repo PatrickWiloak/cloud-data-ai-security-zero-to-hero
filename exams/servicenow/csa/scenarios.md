@@ -64,7 +64,7 @@ A field on the Task table must be mandatory on Incident but not on Change.
 
 **Answer:** a dictionary override on the Incident table.
 
-**Takeaway:** dictionary overrides change inherited field behaviour on one child table.
+**Takeaway:** dictionary overrides change inherited field behavior on one child table.
 
 ---
 
@@ -141,7 +141,7 @@ A report is shared with a group. Two members open it and see different record co
 
 ## 12. Reaching an internal system
 
-An integration must pull data from a database inside the customer's data centre, which has
+An integration must pull data from a database inside the customer's data center, which has
 no internet exposure.
 
 **Answer:** a MID Server, installed on the customer network, which polls the instance and
@@ -174,7 +174,7 @@ precedence over Can-Read.
 
 ---
 
-## Patterns worth memorising
+## Patterns worth memorizing
 
 | Symptom or requirement | Answer |
 |---|---|

@@ -5,7 +5,7 @@ last-updated: 2026-07-29
 # PD2 05 - Testing, Debugging, and Deployment
 
 Apex testing beyond the coverage minimum, debugging tools, and the deployment lifecycle.
-The exam expects testing rigour, not just "hit 75%."
+The exam expects testing rigor, not just "hit 75%."
 
 ## Apex testing
 
@@ -15,7 +15,7 @@ The exam expects testing rigour, not just "hit 75%."
 - **`Test.startTest()` and `Test.stopTest()`** - reset governor limits for the code between them (so you test your code's limits, not the setup's), and force asynchronous code enqueued inside to run synchronously at `stopTest`. This is how you test future, queueable, and batch logic.
 - **Assertions** - `Assert.areEqual`, `Assert.isTrue`, and so on. A test with no assertions proves nothing beyond that the code ran; the exam treats assertion-free tests as inadequate.
 - **Positive and negative testing** - test the success path, the failure path, boundary values, and bulk (200 records) to prove bulkification.
-- **`System.runAs`** - runs a block as a specified user, the way to test sharing, profiles, and permission behaviour.
+- **`System.runAs`** - runs a block as a specified user, the way to test sharing, profiles, and permission behavior.
 - **Mocking callouts** - `HttpCalloutMock` and `Test.setMock` provide fake responses, because tests cannot make real callouts.
 - **Test.loadData and static resources** - loading test data from a CSV static resource.
 
@@ -35,12 +35,12 @@ create their own data. Coverage percentage alone is not the target.
 ## Exceptions and error handling
 
 - **Try/catch/finally** - catch specific exception types before generic `Exception`.
-- **Custom exceptions** - a class extending `Exception`, for meaningful error signalling.
+- **Custom exceptions** - a class extending `Exception`, for meaningful error signaling.
 - **`addError()`** - on a record or field in a trigger, to block the DML with a user-facing message.
 - **Uncatchable exceptions** - `LimitException` cannot be caught; design to stay within limits rather than catching.
 - **Platform events for error logging** - publishing an error event so the log survives a rollback, because a caught-and-logged error written by DML is rolled back with the transaction otherwise.
 
-That last point is a subtle exam favourite: to persist a log record even when the
+That last point is a subtle exam favorite: to persist a log record even when the
 transaction rolls back, publish a Platform Event, which is not rolled back.
 
 ## Deployment and application lifecycle
@@ -49,7 +49,7 @@ transaction rolls back, publish a Platform Event, which is not rolled back.
 - **Metadata API** - programmatic retrieve and deploy, the basis of tooling.
 - **Salesforce CLI (sf)** - the command-line tool for source-driven development and deployment.
 - **Source-driven development** - metadata stored in version control as the source of truth, deployed via CLI, enabling real CI/CD.
-- **Unlocked packages** - versioned, source-based packaging for modular deployment. The modern recommended approach for organising and deploying customisations.
+- **Unlocked packages** - versioned, source-based packaging for modular deployment. The modern recommended approach for organizing and deploying customisations.
 - **Scratch orgs** - ephemeral, source-defined orgs for development and testing, spun up and torn down from configuration.
 - **Sandboxes** - Developer, Developer Pro, Partial Copy, and Full, differing in data and refresh interval. Full sandboxes copy production data and are for final testing.
 

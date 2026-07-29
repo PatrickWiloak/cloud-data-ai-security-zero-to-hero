@@ -1,7 +1,7 @@
 # Cloud + AI Learning Resource - Project Instructions
 
 ## Overview
-A learning resource for cloud and AI - concepts, hands-on builds, deep references, and certification prep. Covers 122+ certifications across 22 providers (AWS, Azure, GCP, Kubernetes/CNCF, NVIDIA, HashiCorp, Databricks, Snowflake, GitHub, Red Hat, Cisco, Salesforce, Confluent/Kafka, MongoDB, FinOps, CompTIA, ISC2, Cloud Security Alliance, Linux Foundation, Oracle, IBM) plus 4 self-directed vendor study tracks for Anthropic Claude. Certifications are one pillar; the repo also serves non-cert learners.
+A learning resource for cloud and AI - concepts, hands-on builds, deep references, and certification prep. Covers 131 certifications across 26 providers (AWS, Azure, GCP, Kubernetes/CNCF, NVIDIA, HashiCorp, Databricks, Snowflake, GitHub, Red Hat, Cisco, Salesforce, Confluent/Kafka, MongoDB, FinOps, CompTIA, ISC2, ISACA, Cloud Security Alliance, Offensive Security, Palo Alto Networks, Linux Foundation, Oracle, IBM, ServiceNow, VMware) plus 6 self-directed study tracks (4 Anthropic Claude, plus Azure and GCP GenAI). Counts are generated from `docs/certs.json`, not maintained by hand. Certifications are one pillar; the repo also serves non-cert learners.
 
 ## Structure
 ```
@@ -16,7 +16,7 @@ cloud-data-ai-security-zero-to-hero/
 │   └── youtube.md
 ├── resources/          # Cross-cert reference (build + reference pillars)
 ├── assets/diagrams/    # PNG diagrams (draw.io exports), organized by topic
-├── docs/               # Repo-level docs (ARCHITECTURE.md)
+├── docs/               # Repo-level docs (ARCHITECTURE.md, certs.json, freshness.md, tag-taxonomy.md, improvement-roadmap.md)
 ├── README.md           # Top-level overview
 ├── STUDY-HUB.md        # Navigation hub
 └── CONTRIBUTING.md     # How to contribute

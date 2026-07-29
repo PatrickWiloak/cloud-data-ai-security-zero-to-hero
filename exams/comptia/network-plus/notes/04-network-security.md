@@ -9,11 +9,11 @@ exploit network protocols, and the switch and router features that stop them.
 
 ## Core principles
 
-- **Confidentiality** - only authorised parties can read the data.
+- **Confidentiality** - only authorized parties can read the data.
 - **Integrity** - data has not been altered.
 - **Availability** - the service is reachable when needed.
 - **Least privilege** - grant the minimum access needed to do the job.
-- **Defence in depth** - layered controls so one failure is not fatal.
+- **Defense in depth** - layered controls so one failure is not fatal.
 - **Zero trust** - no implicit trust from network location; verify every request.
 - **Separation of duties** - split sensitive tasks so no single person can act unchecked.
 
@@ -39,13 +39,13 @@ exploit network protocols, and the switch and router features that stop them.
 **Wireless**
 
 - **Evil twin** - a rogue access point advertising a legitimate SSID to harvest credentials or intercept traffic.
-- **Rogue access point** - any unauthorised AP attached to the network, often installed by an employee for convenience.
+- **Rogue access point** - any unauthorized AP attached to the network, often installed by an employee for convenience.
 - **Deauthentication attack** - forged management frames disconnect clients, often to force a reconnection the attacker can capture. 802.11w management frame protection mitigates it.
 
 **Human**
 
 - **Phishing, spear phishing, whaling** - fraudulent messages, targeted at anyone, at a specific person, or at an executive.
-- **Tailgating and piggybacking** - following an authorised person through a controlled door, without and with their awareness respectively.
+- **Tailgating and piggybacking** - following an authorized person through a controlled door, without and with their awareness respectively.
 - **Shoulder surfing** - observing credentials being entered.
 - **Social engineering** - manipulating people rather than technology. Training is the control.
 
@@ -66,17 +66,17 @@ exploit network protocols, and the switch and router features that stop them.
 - **SSH** - encrypted remote administration, and a tunnel for other protocols.
 - **IKE** - negotiates the IPsec security association, in two phases.
 
-## Authentication, authorisation, and accounting
+## Authentication, authorization, and accounting
 
-- **AAA** - authentication proves identity, authorisation decides permissions, accounting records what was done.
+- **AAA** - authentication proves identity, authorization decides permissions, accounting records what was done.
 - **RADIUS** - AAA protocol, UDP, encrypts only the password. Widely used for network access including 802.1X.
-- **TACACS+** - Cisco-oriented, TCP, encrypts the entire payload, separates authentication from authorisation. Preferred for device administration.
+- **TACACS+** - Cisco-oriented, TCP, encrypts the entire payload, separates authentication from authorization. Preferred for device administration.
 - **Kerberos** - ticket-based authentication using a Key Distribution Center. Time-sensitive: clock skew beyond about five minutes breaks it.
 - **LDAP** - directory access protocol. LDAPS is the TLS-protected form.
 - **SAML** - XML-based federation for web single sign-on.
 - **Multifactor authentication** - combining something you know, have, and are.
 
-RADIUS versus TACACS+ is a favourite comparison: RADIUS for network access, TACACS+ for
+RADIUS versus TACACS+ is a favorite comparison: RADIUS for network access, TACACS+ for
 device administration, and only TACACS+ encrypts the whole payload.
 
 ## Hardening

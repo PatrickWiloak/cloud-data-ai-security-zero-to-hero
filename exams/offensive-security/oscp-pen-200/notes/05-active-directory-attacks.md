@@ -8,7 +8,7 @@ Active Directory is a major component of the current OSCP exam, worth a dedicate
 block. The exam presents a small domain to compromise from an initial foothold to domain
 controller.
 
-> Authorised testing only. Methodology as taught in PEN-200, for the exam, your lab, or
+> Authorized testing only. Methodology as taught in PEN-200, for the exam, your lab, or
 > engagements with written permission.
 
 ## Why AD matters on this exam
@@ -23,8 +23,8 @@ this material deserves proportionate study.
 - **Domain** - a boundary of administration and a shared authentication database.
 - **Domain controller (DC)** - hosts the directory and authenticates users. The usual objective is control of a DC or a Domain Admin account.
 - **Forest** - one or more domains sharing a schema and trust.
-- **Organisational unit (OU)** - a container for grouping objects and applying policy.
-- **Group Policy (GPO)** - centralised configuration. Control of a GPO applied to a target is a path to compromise it.
+- **Organizational unit (OU)** - a container for grouping objects and applying policy.
+- **Group Policy (GPO)** - centralized configuration. Control of a GPO applied to a target is a path to compromise it.
 - **Kerberos** - the primary authentication protocol, based on tickets from the Key Distribution Center.
 - **NTLM** - the legacy challenge-response protocol, still present and central to several attacks.
 - **Service Principal Name (SPN)** - links a service to the account running it, and is the basis of Kerberoasting.
@@ -67,7 +67,7 @@ enumerate-thoroughly principle applies.
 
 ## Persistence and dominance techniques (conceptual)
 
-Recognise these; the exam is about achieving the goal, not maintaining covert access:
+Recognize these; the exam is about achieving the goal, not maintaining covert access:
 
 - **DCSync** - abusing replication rights to pull password hashes from the DC without running code on it.
 - **Golden ticket** - forging a Kerberos ticket-granting ticket using the domain's krbtgt hash.

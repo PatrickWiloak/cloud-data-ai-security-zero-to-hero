@@ -14,13 +14,13 @@ whether they actually work.
 - **Data classification** - the foundation. Protection should be proportionate to sensitivity, and you cannot be proportionate without classification.
 - **Asset inventory** - you cannot protect what you have not identified.
 - **Privacy by design** - building privacy protections into systems from the start.
-- **Data privacy principles** - purpose limitation, data minimisation, accuracy, storage limitation, and accountability.
+- **Data privacy principles** - purpose limitation, data minimization, accuracy, storage limitation, and accountability.
 
 ## Identity and access management
 
 - **Identification** - claiming an identity.
 - **Authentication** - proving it.
-- **Authorisation** - what the proven identity may do.
+- **Authorization** - what the proven identity may do.
 - **Accountability** - attributing actions to an individual. Shared accounts destroy accountability, which is why they are a standing finding.
 
 **Authentication factors** - something you know, something you have, something you are.
@@ -47,9 +47,9 @@ Two factors from the *same* category is not multifactor.
 - **IDS versus IPS** - detection and alerting versus inline prevention.
 - **Network segmentation** - limits lateral movement and reduces audit scope.
 - **VPN** - encrypted tunnel over an untrusted network.
-- **Data loss prevention (DLP)** - detects and blocks sensitive data leaving the organisation.
+- **Data loss prevention (DLP)** - detects and blocks sensitive data leaving the organization.
 - **Endpoint protection** - anti-malware, host firewall, and EDR telemetry.
-- **Patch management** - risk-prioritised, tested, and evidenced. The absence of a defined patch cycle is a finding regardless of how current systems happen to be.
+- **Patch management** - risk-prioritized, tested, and evidenced. The absence of a defined patch cycle is a finding regardless of how current systems happen to be.
 
 ## Cryptography
 
@@ -77,16 +77,16 @@ uses the sender's private key; confidentiality uses the recipient's public key.
 
 ## Security monitoring and incident response
 
-- **Logging and monitoring** - logs must be complete, protected from modification, time-synchronised, and actually reviewed. Collected-but-unreviewed logs are a finding.
+- **Logging and monitoring** - logs must be complete, protected from modification, time-synchronized, and actually reviewed. Collected-but-unreviewed logs are a finding.
 - **SIEM** - correlation and alerting across sources.
 - **Security incident response plan** - roles, escalation, communication, and evidence handling.
 - **Forensic readiness** - chain of custody and imaging procedures defined in advance.
-- **Penetration testing** - authorised simulated attack. Scope, rules of engagement, and written authorisation are mandatory.
+- **Penetration testing** - authorized simulated attack. Scope, rules of engagement, and written authorization are mandatory.
 - **Vulnerability assessment** - identifies weaknesses; it does not exploit them. Penetration testing does.
 
 ## Auditing security controls
 
-- **Testing access controls** - request a user listing, sample accounts, and trace back to authorised approvals. Look for terminated employees with live accounts.
+- **Testing access controls** - request a user listing, sample accounts, and trace back to authorized approvals. Look for terminated employees with live accounts.
 - **Reviewing privileged accounts** - who holds them, why, and whether activity is logged and reviewed.
 - **Testing the recertification process** - was it performed, by the owner, with evidence, and were revocations acted on?
 - **Evaluating encryption** - what is encrypted, with what algorithm and key length, and how keys are managed.
@@ -103,5 +103,5 @@ uses the sender's private key; confidentiality uses the recipient's public key.
 ## Official documentation
 
 **[📖 ISACA CISA exam content outline](https://www.isaca.org/credentialing/cisa)** - authoritative domain list
-**[📖 NIST SP 800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)** - security and privacy controls catalogue
+**[📖 NIST SP 800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)** - security and privacy controls catalog
 **[📖 ISO/IEC 27001](https://www.iso.org/standard/27001)** - information security management systems

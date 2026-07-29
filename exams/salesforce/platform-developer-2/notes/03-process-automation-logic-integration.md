@@ -40,7 +40,7 @@ async is the answer to large-volume scenarios.
 - **Dynamic SOQL** - `Database.query(String)` builds queries at runtime. Guard against SOQL injection by using bind variables or `String.escapeSingleQuotes`.
 - **Aggregate functions** - `GROUP BY`, `HAVING`, `COUNT`, `SUM`, returning `AggregateResult`.
 - **FOR UPDATE** - locks rows to prevent concurrent update, used to avoid race conditions.
-- **Query optimisation** - selective filters on indexed fields, as covered in the data note.
+- **Query optimization** - selective filters on indexed fields, as covered in the data note.
 
 Dynamic SOQL injection is a security topic the exam tests: always bind or escape user
 input.

@@ -6,7 +6,7 @@ last-updated: 2026-07-29
 
 Fourteen worked scenarios in PCNSA style. Illustrative, written for this repo, not real
 exam questions. PCNSA questions are shorter than AWS professional-tier scenarios but turn
-on precise product behaviour, especially NAT, policy evaluation order, and what each
+on precise product behavior, especially NAT, policy evaluation order, and what each
 feature can and cannot do.
 
 Attempt each before reading the analysis.
@@ -97,7 +97,7 @@ Static address groups do not.
 A firewall has 200 legacy port-based rules. Management wants App-ID rules without breaking
 production.
 
-**Answer:** use the policy optimiser. It shows which applications actually matched each
+**Answer:** use the policy optimizer. It shows which applications actually matched each
 port-based rule, so rules can be converted from evidence rather than guesswork.
 
 **Takeaway:** never convert to App-ID rules without first observing what traffic really
@@ -110,7 +110,7 @@ matched.
 An active/passive HA pair fails over. Users lose all established sessions and must
 reconnect.
 
-**Why?** The HA2 link, which synchronises session state, is not configured or has failed.
+**Why?** The HA2 link, which synchronizes session state, is not configured or has failed.
 HA1 carries control traffic only, so the pair can be healthy for failover purposes while
 session state is not shared.
 
@@ -147,7 +147,7 @@ Certificate-pinned applications must be excluded or they will break.
 ## 11. The change that did nothing
 
 An administrator edits a security rule, verifies it on screen, and asks a user to retest.
-Behaviour is unchanged.
+Behavior is unchanged.
 
 **Why?** The change is in the candidate configuration. It takes effect only on commit.
 
@@ -193,7 +193,7 @@ Security profiles attach to rules and handle content.
 
 ---
 
-## Patterns worth memorising
+## Patterns worth memorizing
 
 | Symptom | Usual answer |
 |---|---|

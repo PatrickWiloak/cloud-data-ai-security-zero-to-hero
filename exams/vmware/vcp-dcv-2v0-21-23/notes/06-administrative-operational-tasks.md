@@ -11,7 +11,7 @@ automation.
 
 - **Create** - from scratch, from a template, by cloning, or by deploying an OVF/OVA.
 - **Template** - a master image that cannot be powered on. Convert to template or clone to template.
-- **Guest customisation specification** - applies hostname, IP, domain join, and SID regeneration during deployment. Without it, cloned Windows machines share identities.
+- **Guest customization specification** - applies hostname, IP, domain join, and SID regeneration during deployment. Without it, cloned Windows machines share identities.
 - **Clone** - a copy taken now. Cloning a running VM produces a crash-consistent copy unless quiesced.
 - **Instant Clone** - a running clone sharing memory and disk state with its parent, used for rapid provisioning such as VDI.
 - **Snapshot** - a point-in-time state, comprising memory (optional) and delta disks. **Not a backup.** Delete or consolidate promptly.
@@ -45,7 +45,7 @@ examined.
 - **ESXi firewall** - service-based rules with allowed IP ranges.
 - **ESXi Shell and SSH** - disabled by default and should stay disabled, enabled temporarily with a timeout when needed.
 - **Certificate management** - VMCA acts as an internal CA, or you install custom or enterprise CA certificates.
-- **VM encryption** - encrypts VM files using a key provider (a standard key provider with an external KMS, or the native key provider). Requires the appropriate licence and a configured key provider.
+- **VM encryption** - encrypts VM files using a key provider (a standard key provider with an external KMS, or the native key provider). Requires the appropriate license and a configured key provider.
 - **vMotion encryption** - opportunistic, required, or disabled, per VM.
 - **Virtual TPM (vTPM)** - a virtual Trusted Platform Module for guests requiring it, such as Windows 11. Depends on VM encryption being available.
 - **UEFI Secure Boot** - for hosts and for VMs.
@@ -80,7 +80,7 @@ examined.
 ## Exam pointers
 
 - Remove from inventory keeps the files; Delete from disk destroys them.
-- Guest customisation prevents duplicate identities on cloned Windows VMs.
+- Guest customization prevents duplicate identities on cloned Windows VMs.
 - Alarms defined at a parent object propagate to children.
 - Acknowledging an alarm is not the same as resolving or resetting it.
 - Host profiles enforce configuration consistency across hosts.

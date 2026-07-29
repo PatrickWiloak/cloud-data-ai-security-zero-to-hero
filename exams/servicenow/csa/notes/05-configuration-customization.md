@@ -2,18 +2,18 @@
 last-updated: 2026-07-29
 ---
 
-# CSA 05 - Configuration, Customisation, and Migration
+# CSA 05 - Configuration, Customization, and Migration
 
-The distinction between configuring and customising, and how changes move between
+The distinction between configuring and customizing, and how changes move between
 instances. Update sets are heavily examined.
 
-## Configuration versus customisation
+## Configuration versus customization
 
 - **Configuration** - changing the platform using its intended settings: form layouts, UI policies, business rules on your own tables, flows, catalog items. Survives upgrades cleanly.
-- **Customisation** - modifying base system artefacts, for example editing a ServiceNow-provided business rule or script include. Creates upgrade risk, because your change and the vendor's change collide.
+- **Customization** - modifying base system artifacts, for example editing a ServiceNow-provided business rule or script include. Creates upgrade risk, because your change and the vendor's change collide.
 - **Skipped changes** - during an upgrade, records you modified that ServiceNow also changed are *skipped* and left for manual review. Reviewing skipped changes is a required post-upgrade activity.
 
-The exam's expected preference: configure rather than customise, and when customisation is
+The exam's expected preference: configure rather than customize, and when customization is
 unavoidable, document it and expect upgrade review.
 
 ## Update sets
@@ -38,7 +38,7 @@ unavoidable, document it and expect upgrade review.
 
 - **Data**, as opposed to configuration. Records in `sys_user`, `incident`, and other data tables are not captured.
 - **Scheduled job execution history**, logs, and similar runtime records.
-- Some artefacts require manual movement or an explicit "add to update set" action.
+- Some artifacts require manual movement or an explicit "add to update set" action.
 
 The data exclusion is a reliable exam question: moving users, groups, or CMDB records
 between instances requires an export/import or a data-migration tool, not an update set.
@@ -90,8 +90,8 @@ tested point.
 - Always confirm which update set is current before making changes.
 - Preview before commit; resolve collisions rather than ignoring them.
 - Mark an update set Complete before retrieving it elsewhere.
-- Skipped changes after an upgrade are records you customised that ServiceNow also changed.
-- Prefer configuration over customisation; prefer UI policies over client scripts.
+- Skipped changes after an upgrade are records you customized that ServiceNow also changed.
+- Prefer configuration over customization; prefer UI policies over client scripts.
 - Avoid synchronous GlideRecord in client scripts.
 
 ## Official documentation

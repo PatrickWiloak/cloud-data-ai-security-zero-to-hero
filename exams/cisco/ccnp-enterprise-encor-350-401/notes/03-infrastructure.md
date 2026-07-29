@@ -26,9 +26,9 @@ roughly 30% of the exam.
 - **Port states (RSTP)** - discarding, learning, forwarding.
 - **PortFast** - immediate forwarding for access ports connected to end devices.
 - **BPDU Guard** - err-disables a PortFast port that receives a BPDU.
-- **Root Guard** - prevents a neighbour from becoming root on that port.
+- **Root Guard** - prevents a neighbor from becoming root on that port.
 - **Loop Guard** - protects against unidirectional link failures causing a blocked port to start forwarding.
-- **UDLD** - detects unidirectional fibre links.
+- **UDLD** - detects unidirectional fiber links.
 
 Root bridge election and the guard features are staple exam content. Set the root bridge
 deliberately with priority rather than letting MAC address decide.
@@ -48,7 +48,7 @@ deliberately with priority rather than letting MAC address decide.
 - Advanced distance vector, Cisco-originated, AD 90 internal and 170 external.
 - **Metric** - bandwidth and delay by default (K1 and K3).
 - **Feasible distance (FD)** - the best metric to a destination.
-- **Reported/advertised distance (RD)** - the neighbour's metric to the destination.
+- **Reported/advertised distance (RD)** - the neighbor's metric to the destination.
 - **Feasibility condition** - RD < FD, which guarantees loop freedom.
 - **Successor** - the best path. **Feasible successor** - a backup meeting the feasibility condition, allowing instant failover without going active.
 - **Active versus passive** - a route goes active when no feasible successor exists and queries must be sent. Stuck-in-active is a scaling problem.
@@ -73,7 +73,7 @@ deliberately with priority rather than letting MAC address decide.
 - **Attributes** - well-known mandatory (origin, AS path, next hop), well-known discretionary (local preference, atomic aggregate), optional transitive (community, aggregator), optional non-transitive (MED).
 - **Route reflector** - relaxes the iBGP full-mesh requirement.
 
-Memorise the BGP path selection order. It is examined directly, and weight before local
+Memorize the BGP path selection order. It is examined directly, and weight before local
 preference is the pair most often confused.
 
 ## Wireless
@@ -99,7 +99,7 @@ preference is the pair most often confused.
 
 ## Exam pointers
 
-- BGP path selection order, memorised, in sequence.
+- BGP path selection order, memorized, in sequence.
 - OSPF adjacency failures: check area, timers, subnet, MTU, and authentication.
 - EIGRP feasible successor requires RD < FD.
 - A VTP server with a higher revision number can overwrite the VLAN database.

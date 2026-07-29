@@ -11,7 +11,7 @@ the highest-yield item in the whole exam.
 
 - **Table (`sys_db_object`)** - the definition; records live in it.
 - **Dictionary (`sys_dictionary`)** - defines every field: type, length, default, and attributes.
-- **Dictionary override** - changes a field's behaviour on a *child* table without altering the parent. The mechanism for making an inherited field mandatory on Incident but not on Task.
+- **Dictionary override** - changes a field's behavior on a *child* table without altering the parent. The mechanism for making an inherited field mandatory on Incident but not on Task.
 - **Label (`sys_documentation`)** - the human-readable field and table names, and how they are translated.
 - **Field types** - string, integer, decimal, boolean (true/false), date, date/time, choice, reference, glide list, journal, HTML, currency, duration.
 - **Auto-numbering** - configured per table in Number Maintenance, producing INC0010001 and similar.
@@ -102,7 +102,7 @@ repeated imports.
 - `security_admin` must be elevated to edit ACLs.
 - Coalesce determines insert versus update on import.
 - Import sets are staging tables; data is transformed into the target table.
-- Dictionary overrides change inherited field behaviour on a child table only.
+- Dictionary overrides change inherited field behavior on a child table only.
 - Query business rules filter what a user can see; ACLs deny access to what they request.
 
 ## Official documentation

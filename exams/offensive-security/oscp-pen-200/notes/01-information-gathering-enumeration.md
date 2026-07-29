@@ -8,7 +8,7 @@ The phase that decides whether the rest of the exam goes well. Most failed OSCP 
 are enumeration failures, not exploitation failures: the path was there and the candidate
 did not find it.
 
-> This material is for authorised testing only: the OSCP exam environment, your own lab, or
+> This material is for authorized testing only: the OSCP exam environment, your own lab, or
 > engagements with written permission. Everything below is methodology, of the kind Offensive
 > Security's own course teaches.
 
@@ -79,7 +79,7 @@ Because it is where most footholds come from:
 - **Reading exploit code before running it** - mandatory. Understand what it does, fix hard-coded addresses or ports, and never run something you have not read on a system you care about.
 - **Manual verification** - a scanner claim is a hypothesis. Confirm it manually before committing time.
 
-## Note-taking and organisation
+## Note-taking and organization
 
 - Keep a per-host record: open ports, service versions, findings, credentials, and what you have already tried.
 - Record every credential found. Credential reuse across hosts is the single most productive lateral movement technique in lab environments.

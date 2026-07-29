@@ -33,7 +33,7 @@ penalty, so a flagged guess always beats a blank.
 1. **RAG versus fine-tuning versus prompt engineering.** The most common decision on the
    exam. The deciding constraint is usually in the last sentence. Knowledge that changes
    frequently or must be cited points to RAG. Consistent tone, format, or a domain
-   vocabulary the base model lacks points to fine-tuning. Behaviour achievable with better
+   vocabulary the base model lacks points to fine-tuning. Behavior achievable with better
    instructions points to prompt engineering. Cost and latency budgets break ties.
 
 2. **"Least operational overhead" versus "lowest cost."** These select different answers,
@@ -71,7 +71,7 @@ penalty, so a flagged guess always beats a blank.
 | 1. Foundation model integration, data management, compliance | 31% | Largest domain. RAG design and data handling dominate |
 | 2. Implementation and integration | 26% | Agents, action groups, API integration patterns |
 | 3. AI safety, security, and governance | 20% | Guardrails, IAM, PII handling, model access control |
-| 4. Operational efficiency and optimisation | 12% | Caching, batching, model selection for cost and latency |
+| 4. Operational efficiency and optimization | 12% | Caching, batching, model selection for cost and latency |
 | 5. Testing, validation, troubleshooting | 11% | Evaluation methodology, debugging retrieval and agents |
 
 Domains 1 and 2 are 57% of the exam between them. If time is short, make sure RAG
@@ -108,7 +108,7 @@ Standard logistics are in the [exam-day checklist](../../../../resources/exam-da
 Two AIP-C01-specific notes:
 
 - The exam is Professional-tier length. Take the offered break if you are at a testing
-  centre, and pace hydration accordingly for online proctoring where you cannot leave.
+  center, and pace hydration accordingly for online proctoring where you cannot leave.
 - Expect several questions that feel like they have two right answers. They do. One is
   merely correct, the other is the AWS-recommended pattern under the stated constraint.
   Pick the recommended pattern.

@@ -7,8 +7,8 @@ last-updated: 2026-07-29
 Turning a low-privilege foothold into full control of the host. Like enumeration, this is
 mostly a search problem: the escalation path is usually present and the work is finding it.
 
-> Authorised testing only. Methodology as taught in PEN-200, for the exam, your lab, or
-> authorised engagements.
+> Authorized testing only. Methodology as taught in PEN-200, for the exam, your lab, or
+> authorized engagements.
 
 ## The universal method
 

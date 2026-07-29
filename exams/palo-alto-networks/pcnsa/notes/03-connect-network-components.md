@@ -52,7 +52,7 @@ The most-tested topic in this domain.
 - **Source NAT** - translates the source address of outbound traffic. Types: dynamic IP and port (many to one, the common internet access case), dynamic IP (many to many), and static IP (one to one).
 - **Destination NAT** - translates the destination address of inbound traffic, publishing an internal server on a public address.
 - **Bi-directional NAT** - a static source NAT option that automatically creates the matching destination NAT.
-- **U-Turn NAT (hairpin)** - internal clients reaching an internal server via its public address. Requires careful zone handling and is a favourite scenario.
+- **U-Turn NAT (hairpin)** - internal clients reaching an internal server via its public address. Requires careful zone handling and is a favorite scenario.
 
 **The rule that decides most NAT questions**
 
@@ -72,7 +72,7 @@ traffic that is denied despite an apparently correct rule.
 - **DHCP server, relay, and client** - the firewall can act as any of the three on a Layer 3 interface.
 - **DNS proxy** - the firewall resolves on behalf of clients, allowing DNS-based policy and split DNS.
 - **Service route** - specifies which interface and source address the firewall uses for its own outbound services (updates, DNS, syslog, LDAP). Management traffic defaults to the management interface.
-- **NTP** - time synchronisation, which matters for log correlation and certificate validation.
+- **NTP** - time synchronization, which matters for log correlation and certificate validation.
 
 ## VPN
 

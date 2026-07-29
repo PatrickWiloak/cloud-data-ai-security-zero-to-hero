@@ -92,14 +92,14 @@ component.
 - [ ] Read [guardrails and safety](../../../../learn/concepts/guardrails-and-safety.md)
 - [ ] Hands-on: configure a Guardrail with PII filters on both input and output, and confirm both directions actually block
 - [ ] Hands-on: write an IAM policy that permits one model and denies another for a specific role. Test it
-- [ ] Practise stating the difference between a Guardrail control and an IAM control in one sentence
+- [ ] Practice stating the difference between a Guardrail control and an IAM control in one sentence
 
 **Checkpoint:** you never confuse content filtering with access control. This is worth
 several marks.
 
 ---
 
-## Week 7 - Optimisation, testing, and validation
+## Week 7 - Optimization, testing, and validation
 
 - [ ] Read [notes/04-operational-efficiency-optimization.md](notes/04-operational-efficiency-optimization.md)
 - [ ] Read [notes/05-testing-validation-troubleshooting.md](notes/05-testing-validation-troubleshooting.md)
@@ -116,7 +116,7 @@ and you can describe a defensible evaluation.
 ## Week 8 - Consolidation and exam readiness
 
 - [ ] Work all of [scenarios.md](scenarios.md). For each, write why every distractor fails
-- [ ] Read [strategy.md](strategy.md) and internalise the trap list
+- [ ] Read [strategy.md](strategy.md) and internalize the trap list
 - [ ] Skim [notes/aws-services-mapping.md](notes/aws-services-mapping.md) as a reverse index: capability to service
 - [ ] Re-read [notes/bedrock-platform-deep-dive.md](notes/bedrock-platform-deep-dive.md) and [notes/rag-architecture-deep-dive.md](notes/rag-architecture-deep-dive.md)
 - [ ] Take a timed practice run. Hold to 2.4 minutes per question

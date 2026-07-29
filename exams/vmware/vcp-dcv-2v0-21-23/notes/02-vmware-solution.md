@@ -12,7 +12,7 @@ managed platform.
 - **vCenter Server Appliance (VCSA)** - the Photon OS-based appliance. The Windows version is discontinued, so VCSA is the only deployment form.
 - **vCenter Single Sign-On (SSO)** - the authentication service issuing tokens for vSphere components.
 - **vCenter Single Sign-On domain** - `vsphere.local` by default, distinct from your Active Directory domain. Confusing the two is a common error.
-- **Enhanced Linked Mode** - multiple vCenter Servers sharing roles, permissions, licences, tags, and policies, and manageable from one client view.
+- **Enhanced Linked Mode** - multiple vCenter Servers sharing roles, permissions, licenses, tags, and policies, and manageable from one client view.
 - **vCenter High Availability (VCHA)** - active, passive, and witness nodes protecting vCenter itself.
 - **vCenter backup** - file-based backup to FTP, SFTP, HTTP, HTTPS, SMB, or NFS. This is the supported protection mechanism and is examined.
 
@@ -80,7 +80,7 @@ are common.
 - **Content Library** - a repository of templates, ISOs, and scripts, which can be published and subscribed to across sites and vCenters.
 - **VM template** - a non-runnable master image for deploying VMs.
 - **Clone versus template** - a clone is a copy made now; a template is a master intended for repeated deployment.
-- **Guest customisation specification** - applies hostname, network settings, and domain join during deployment.
+- **Guest customization specification** - applies hostname, network settings, and domain join during deployment.
 - **vSphere Lifecycle Manager (vLCM)** - manages ESXi images and firmware for a cluster using a desired-state image, replacing the older baseline approach from Update Manager.
 
 ## Exam pointers

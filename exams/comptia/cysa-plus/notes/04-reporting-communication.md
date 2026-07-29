@@ -14,7 +14,7 @@ A report exists to drive a decision. Include:
 - **Vulnerability and affected hosts** - what, and where.
 - **Risk score** - CVSS adjusted for environment and exposure, not the raw base score.
 - **Mitigation and recommendation** - the specific action, not "apply best practice."
-- **Prioritisation** - the order to work in, with the reasoning visible.
+- **Prioritization** - the order to work in, with the reasoning visible.
 - **Affected business processes** - what breaks if this is exploited, and what breaks while you fix it.
 
 **Metrics and key performance indicators**
@@ -64,7 +64,7 @@ These belong in the report so decision-makers see the real constraint:
 - **Memorandum of understanding (MOU)** and **service level agreement (SLA)** obligations
 - **Business process interruption** and **degrading functionality**
 - **Legacy systems** and **proprietary systems** that cannot be patched
-- **Organisational governance** and required approvals
+- **Organizational governance** and required approvals
 
 Reporting an unremediated critical vulnerability without the inhibitor makes the security
 team look ineffective; reporting it with the inhibitor turns it into a business decision

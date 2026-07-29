@@ -60,8 +60,6 @@ The CompTIA 7-step troubleshooting methodology, command-line tools (ping, tracer
 ### Study Resources
 - [Fact Sheet](fact-sheet.md) - Port numbers, subnetting tables, cable specs, command reference
 - [Practice Plan](practice-plan.md) - Structured 6-week study schedule
-- Scenarios _(planned)_ - Troubleshooting and lab scenarios
-- Strategy _(planned)_ - Exam-day strategy and PBQ approach
 
 ## Recommended Study Time
 

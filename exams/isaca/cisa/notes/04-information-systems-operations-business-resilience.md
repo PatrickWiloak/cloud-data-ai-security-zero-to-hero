@@ -32,14 +32,14 @@ now is incident management; stopping it recurring is problem management.
 
 ## Hardware and infrastructure
 
-- **Capacity monitoring** - utilisation trends against thresholds.
+- **Capacity monitoring** - utilization trends against thresholds.
 - **Preventive maintenance** - scheduled servicing to avoid failure.
 - **RAID** - redundancy across disks. RAID 1 mirrors, RAID 5 uses distributed parity, RAID 6 tolerates two failures, RAID 10 mirrors and stripes. RAID protects against disk failure; it is not a backup, because it faithfully replicates deletion and corruption.
 - **Uninterruptible power supply (UPS)** - bridges short outages and allows orderly shutdown.
 - **Generator** - sustains longer outages. UPS covers the gap until the generator starts.
 - **Environmental controls** - HVAC, humidity, water detection, and fire suppression.
 
-## Virtualisation and cloud
+## Virtualization and cloud
 
 - **Hypervisor** - the layer running virtual machines. Compromise of the hypervisor exposes every guest, which concentrates risk.
 - **VM sprawl** - uncontrolled proliferation of virtual machines, creating unpatched and unmonitored assets.
@@ -83,7 +83,7 @@ now is incident management; stopping it recurring is problem management.
 | Warm | Days | Medium | Hardware present, data not current |
 | Cold | Weeks | Lowest | Space and utilities only |
 | Mobile | Varies | Medium | Transportable facility |
-| Reciprocal agreement | Uncertain | Lowest | Another organisation hosts you; rarely enforceable and hard to test |
+| Reciprocal agreement | Uncertain | Lowest | Another organization hosts you; rarely enforceable and hard to test |
 
 **Testing**
 
@@ -95,7 +95,7 @@ now is incident management; stopping it recurring is problem management.
 
 The ladder from checklist to full interruption trades disruption against assurance.
 Questions asking for the most thorough test point to full interruption; questions
-emphasising no business impact point to parallel.
+emphasizing no business impact point to parallel.
 
 ## Exam pointers
 

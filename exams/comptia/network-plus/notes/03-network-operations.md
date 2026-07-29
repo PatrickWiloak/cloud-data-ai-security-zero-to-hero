@@ -4,7 +4,7 @@ last-updated: 2026-07-29
 
 # Network+ Domain 3 - Network Operations (19%)
 
-Documentation, monitoring, availability, and the organisational paperwork. Light on
+Documentation, monitoring, availability, and the organizational paperwork. Light on
 technology, heavy on terminology the exam expects you to distinguish precisely.
 
 ## Documentation
@@ -22,7 +22,7 @@ technology, heavy on terminology the exam expects you to distinguish precisely.
 ## Monitoring
 
 - **SNMP** - polls devices for status. Traps are unsolicited alerts from the device.
-- **Syslog** - centralised event logging. Severity runs 0 (emergency) to 7 (debug); lower numbers are more severe.
+- **Syslog** - centralized event logging. Severity runs 0 (emergency) to 7 (debug); lower numbers are more severe.
 - **NetFlow / sFlow / IPFIX** - flow data describing who talked to whom, how much, and for how long. Flow data answers bandwidth questions that packet capture is too heavy for.
 - **Packet capture** - full payload, highest detail, highest storage cost.
 - **SIEM** - aggregates and correlates logs, generating alerts.
@@ -60,7 +60,7 @@ about throughput and is largely indifferent to jitter.
 RTO and RPO are the pair most often confused. RTO is about *time to restore*; RPO is about
 *data lost*. A one-hour RPO means backups at least hourly.
 
-## Organisational documents and policies
+## Organizational documents and policies
 
 - **SLA (Service Level Agreement)** - a commitment to a measurable service level, usually with penalties.
 - **MOU (Memorandum of Understanding)** - a statement of intent between parties, generally not legally binding.
@@ -69,7 +69,7 @@ RTO and RPO are the pair most often confused. RTO is about *time to restore*; RP
 - **BYOD policy** - terms for personal devices on the corporate network.
 - **SOP (Standard Operating Procedure)** - the documented way a routine task is performed.
 - **Onboarding and offboarding** - account and asset provisioning and, critically, revocation.
-- **Data loss prevention (DLP)** - controls detecting and blocking sensitive data leaving the organisation.
+- **Data loss prevention (DLP)** - controls detecting and blocking sensitive data leaving the organization.
 
 ## Change and configuration management
 

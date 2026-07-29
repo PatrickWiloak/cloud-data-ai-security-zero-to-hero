@@ -10,11 +10,11 @@ patterns. This note sets the foundation the rest build on.
 
 ## The multi-tenant platform
 
-- **Multi-tenancy** - many customers (orgs) share the same infrastructure. Your code runs alongside everyone else's, which is why governor limits exist: they stop one tenant monopolising shared resources.
+- **Multi-tenancy** - many customers (orgs) share the same infrastructure. Your code runs alongside everyone else's, which is why governor limits exist: they stop one tenant monopolizing shared resources.
 - **Governor limits** - per-transaction ceilings enforced by the runtime. Exceeding one throws an uncatchable `LimitException` that rolls back the transaction. Designing within limits is the central discipline of the exam.
 - **Metadata-driven** - the platform is configuration and metadata over a shared engine; your customisations are metadata.
 
-## Key governor limits to internalise
+## Key governor limits to internalize
 
 - **SOQL queries** - 100 synchronous, 200 asynchronous per transaction.
 - **DML statements** - 150 per transaction.
@@ -24,7 +24,7 @@ patterns. This note sets the foundation the rest build on.
 - **Heap size** - 6 MB synchronous, 12 MB asynchronous.
 - **Callouts** - 100 per transaction, with a total timeout budget.
 
-The exam does not ask you to recite every number, but it constantly asks you to recognise
+The exam does not ask you to recite every number, but it constantly asks you to recognize
 when code will breach one, and the fix is nearly always the same principle: bulkify.
 
 ## Bulkification
@@ -52,7 +52,7 @@ When a record is saved, the platform runs a defined sequence. Knowing it explain
 8. Processes and flows (depending on configuration and timing).
 9. Escalation rules.
 10. Roll-up summary recalculation, and parent record recalculation.
-11. Commit to the database, then post-commit logic (async such as `@future`, and Platform Events depending on publish behaviour).
+11. Commit to the database, then post-commit logic (async such as `@future`, and Platform Events depending on publish behavior).
 
 The practical consequences the exam probes: before-triggers can change field values without
 DML because the record is not yet saved; workflow field updates re-fire triggers; and

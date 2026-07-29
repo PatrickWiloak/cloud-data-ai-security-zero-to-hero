@@ -4,14 +4,14 @@ last-updated: 2026-07-29
 
 # VCP-DCV Section 1 - Architectures and Technologies
 
-The vSphere component model, licensing, and the virtualisation concepts everything else
+The vSphere component model, licensing, and the virtualization concepts everything else
 builds on.
 
 ## The core components
 
 - **ESXi** - the type-1 (bare-metal) hypervisor installed directly on server hardware. It runs virtual machines; it is not an application on top of an operating system.
 - **VMkernel** - the ESXi kernel, providing scheduling, memory management, and the network stack for host services.
-- **vCenter Server** - the centralised management plane. Features such as vMotion, DRS, and HA are configured and coordinated here.
+- **vCenter Server** - the centralized management plane. Features such as vMotion, DRS, and HA are configured and coordinated here.
 - **vSphere Client** - the HTML5 browser interface to vCenter.
 - **VM (virtual machine)** - an encapsulated set of files: `.vmx` (configuration), `.vmdk` (virtual disk), `.nvram`, plus logs and snapshot files.
 - **VMware Tools** - guest-side drivers and utilities. Required for graceful shutdown, time sync, quiescing for backups, and optimal driver performance. Missing Tools is a frequent root cause in troubleshooting scenarios.
@@ -24,10 +24,10 @@ requires vCenter, which is why vCenter availability matters so much.
 - **Datacenter object** - the top-level container; the boundary for vMotion without additional configuration.
 - **Cluster** - a group of hosts sharing resources, and the object on which HA and DRS are enabled.
 - **Resource pool** - a subdivision of cluster CPU and memory with its own shares, reservations, and limits.
-- **Folder** - organisational grouping for VMs, hosts, networks, or datastores.
+- **Folder** - organizational grouping for VMs, hosts, networks, or datastores.
 - **Tags and categories** - metadata for grouping and for storage-policy targeting.
 
-## Virtualisation fundamentals
+## Virtualization fundamentals
 
 - **Hypervisor type 1** - runs on the hardware directly (ESXi). Type 2 runs on a host OS (Workstation, Fusion).
 - **vCPU** - a virtual CPU presented to a guest, scheduled onto physical cores.
@@ -58,7 +58,7 @@ Learn it in that order.
 ## Networking concepts
 
 - **vSphere Standard Switch (VSS)** - configured per host. Simple, but consistency across hosts is manual and error-prone.
-- **vSphere Distributed Switch (VDS)** - configured centrally in vCenter and pushed to member hosts. Provides consistency plus advanced features such as NetFlow, port mirroring, LACP, and network I/O control. Requires the appropriate licence.
+- **vSphere Distributed Switch (VDS)** - configured centrally in vCenter and pushed to member hosts. Provides consistency plus advanced features such as NetFlow, port mirroring, LACP, and network I/O control. Requires the appropriate license.
 - **Port group** - a policy template for a set of virtual ports, including VLAN, security, and teaming settings.
 - **VMkernel adapter** - a host interface carrying management, vMotion, vSAN, or storage traffic.
 - **Uplink (vmnic)** - a physical NIC attached to a virtual switch.
@@ -95,7 +95,7 @@ often than architecture.
 - A resource *limit* causes poor VM performance even on an idle host.
 - HA restarts VMs with downtime; FT provides continuous availability.
 - EVC masks CPU features within one vendor; it does not allow Intel-to-AMD migration.
-- VDS is centrally managed and licence-gated; VSS is per host.
+- VDS is centrally managed and license-gated; VSS is per host.
 
 ## Official documentation
 

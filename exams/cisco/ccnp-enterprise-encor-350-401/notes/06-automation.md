@@ -32,7 +32,7 @@ Learn the verb-to-operation mapping and the common status codes. Both are direct
 
 - **NETCONF** - XML over SSH on port 830. Operates on datastores (running, candidate, startup) with operations `get`, `get-config`, `edit-config`, `copy-config`, `delete-config`, `lock`, `unlock`, and `commit`. Supports transactions, so a failed change can be rolled back atomically.
 - **RESTCONF** - REST over HTTPS exposing YANG models, using JSON or XML. Simpler than NETCONF but without full transaction semantics.
-- **YANG** - the modelling language defining the structure of configuration and operational data. Models are native (vendor-specific), OpenConfig, or IETF.
+- **YANG** - the modeling language defining the structure of configuration and operational data. Models are native (vendor-specific), OpenConfig, or IETF.
 - **gNMI** - gRPC-based, used mainly for streaming telemetry subscriptions.
 
 NETCONF supports candidate configuration and commit, which RESTCONF does not. That
@@ -75,7 +75,7 @@ particular value.
 - **Zero-touch provisioning (ZTP)** - devices fetch configuration on first boot via DHCP and a script.
 - **Cisco Plug and Play (PnP)** - Cisco's ZTP implementation within Catalyst Center.
 
-EEM is on-box and event-driven; a controller API is off-box and centralised. Choose by
+EEM is on-box and event-driven; a controller API is off-box and centralized. Choose by
 whether the reaction must be local and immediate.
 
 ## Intent-based networking

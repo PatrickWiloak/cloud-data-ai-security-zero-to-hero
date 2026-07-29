@@ -4,10 +4,10 @@ last-updated: 2026-07-29
 
 # ENCOR 02 - Virtualization
 
-Device virtualisation, path virtualisation, and the tunnelling technologies that build
+Device virtualization, path virtualization, and the tunnelling technologies that build
 overlays. Roughly 10% of the exam.
 
-## Device virtualisation
+## Device virtualization
 
 - **Hypervisor** - type 1 runs on bare metal (ESXi, KVM); type 2 runs on a host OS.
 - **Virtual machine** - a full guest OS with its own kernel.
@@ -26,7 +26,7 @@ overlays. Roughly 10% of the exam.
 VRF separates routing; VDC separates the whole device; VSS combines devices. Getting the
 direction right is what the exam checks.
 
-## Tunnelling and path virtualisation
+## Tunnelling and path virtualization
 
 - **GRE (Generic Routing Encapsulation)** - simple point-to-point tunnel, carries multicast and routing protocols, but provides **no encryption**. Protocol 47.
 - **IPsec** - encryption, authentication, and integrity. Does not natively carry multicast or routing protocols, which is why it is often paired with GRE.
@@ -34,7 +34,7 @@ direction right is what the exam checks.
 - **DMVPN (Dynamic Multipoint VPN)** - hub-and-spoke that builds dynamic spoke-to-spoke tunnels. Components: **mGRE** (multipoint GRE), **NHRP** (Next Hop Resolution Protocol, mapping tunnel addresses to physical addresses), and IPsec for protection.
   - **Phase 1** - all traffic through the hub.
   - **Phase 2** - dynamic spoke-to-spoke tunnels, spokes need full routing information.
-  - **Phase 3** - hub sends NHRP redirects, allowing summarisation at the hub while still building spoke-to-spoke tunnels.
+  - **Phase 3** - hub sends NHRP redirects, allowing summarization at the hub while still building spoke-to-spoke tunnels.
 - **LISP (Locator/ID Separation Protocol)** - separates *who* a device is (EID, endpoint identifier) from *where* it is (RLOC, routing locator). Components: map server, map resolver, ingress tunnel router (ITR), and egress tunnel router (ETR). Underpins SD-Access mobility.
 - **VXLAN** - MAC-in-UDP encapsulation extending Layer 2 over a Layer 3 underlay. Uses a **VNI (VXLAN Network Identifier)** of 24 bits, giving about 16 million segments against VLAN's 4094. UDP port 4789. Endpoints are **VTEPs** (VXLAN tunnel endpoints).
 
@@ -51,11 +51,11 @@ VXLAN's 24-bit VNI versus VLAN's 12-bit ID is the scalability point most often e
 | VXLAN | No (natively) | Via underlay | Layer 2 extension over Layer 3 fabric |
 | LISP | No | n/a | Endpoint mobility and location separation |
 
-## Network virtualisation in the fabric
+## Network virtualization in the fabric
 
 - **Underlay** - the physical routed network providing IP reachability between fabric nodes. Usually a simple IGP such as IS-IS or OSPF.
 - **Overlay** - the virtual topology built with VXLAN tunnels.
-- **Control plane for the overlay** - LISP in SD-Access, BGP EVPN in data-centre fabrics.
+- **Control plane for the overlay** - LISP in SD-Access, BGP EVPN in data-center fabrics.
 - **Macro-segmentation** - separation using virtual networks (VRFs), keeping whole groups apart.
 - **Micro-segmentation** - separation within a virtual network using SGTs, controlling traffic between groups on the same subnet.
 
@@ -65,7 +65,7 @@ directly examined.
 ## Exam pointers
 
 - GRE has no encryption. If a question needs both encryption and routing protocol support, the answer is GRE over IPsec or DMVPN.
-- DMVPN phase 3 uses NHRP redirects and allows hub summarisation.
+- DMVPN phase 3 uses NHRP redirects and allows hub summarization.
 - VXLAN uses a 24-bit VNI and UDP 4789; VTEPs are the tunnel endpoints.
 - LISP separates EID (identity) from RLOC (location).
 - VRF separates routing tables on one device; VDC partitions the device itself.

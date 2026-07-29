@@ -44,7 +44,7 @@ That list covers a large share of the exam.
 3. **Update sets do not carry data.** They capture configuration. Users, groups, CMDB
    records, and other data need export/import or an import set.
 
-4. **Personalise versus Configure.** Personalise affects only you; Configure changes it for
+4. **Personalize versus Configure.** Personalize affects only you; Configure changes it for
    everyone and needs a role. The same personal-versus-global split recurs across lists,
    forms, and reports.
 
@@ -54,7 +54,7 @@ That list covers a large share of the exam.
 6. **Catalog item versus record producer.** Item produces REQ/RITM/SCTASK; producer creates
    a record on a table.
 
-7. **UI policy versus data policy versus client script.** UI policy for form behaviour,
+7. **UI policy versus data policy versus client script.** UI policy for form behavior,
    data policy for data-layer enforcement including imports, client script only when
    scripting is genuinely required. ServiceNow's own preference is configuration over code,
    and the exam follows it.
@@ -111,7 +111,7 @@ Follow the week-by-week structure in [practice-plan.md](practice-plan.md).
 Standard logistics are in the [exam-day checklist](../../../resources/exam-day-checklist.md).
 
 CSA specifics: the platform vocabulary is precise, and several distractors differ from the
-correct answer by one word (personalise versus configure, insert versus update, catalog
+correct answer by one word (personalize versus configure, insert versus update, catalog
 item versus record producer). Read the full option text rather than matching on the first
 few words.
 

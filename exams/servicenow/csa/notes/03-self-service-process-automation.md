@@ -4,7 +4,7 @@ last-updated: 2026-07-29
 
 # CSA 03 - Self-Service and Process Automation
 
-The Service Catalog, Flow Designer, and the automation artefacts that move work along
+The Service Catalog, Flow Designer, and the automation artifacts that move work along
 without human intervention.
 
 ## Service Catalog
@@ -13,10 +13,10 @@ without human intervention.
 - **Catalog item** - a single requestable thing, with variables collecting the requester's input.
 - **Record producer** - a catalog-style form that creates a record on *any* table, commonly used to raise an Incident through a friendly interface. Distinguishing it from a catalog item is a standard exam question: a catalog item generates a request, a record producer creates a record directly.
 - **Order guide** - bundles several catalog items into one ordering experience, for example new-hire onboarding.
-- **Category** - organises items within a catalog.
+- **Category** - organizes items within a catalog.
 - **Variable** - a field on a catalog item: single line text, select box, reference, checkbox, multiple choice, and others.
 - **Variable set** - a reusable group of variables shared across items.
-- **Catalog client script** - runs in the browser on catalog forms, for dynamic behaviour.
+- **Catalog client script** - runs in the browser on catalog forms, for dynamic behavior.
 - **Catalog UI policy** - declaratively makes catalog variables mandatory, read-only, or visible.
 
 **The request lifecycle**
@@ -52,7 +52,7 @@ The current automation tool, replacing legacy Workflow for new work.
 - **Data pill** - a reference to data produced by an earlier step, used to pass values between steps.
 - **Flow versus legacy Workflow** - Flow Designer is the strategic tool; the Workflow editor still exists for older content. New automation should use Flow Designer.
 
-## Process automation artefacts
+## Process automation artifacts
 
 - **Business rule** - server-side JavaScript that runs when a record is queried, inserted, updated, or deleted. Timing options are **before**, **after**, **async**, and **display**.
   - **Before** - runs before the record is written; used to modify field values on the record being saved.
@@ -94,7 +94,7 @@ workflow. That preference is both ServiceNow's guidance and the exam's expected 
 
 - Catalog item produces a request; record producer creates a record on a table directly.
 - REQ contains RITM, which spawns SCTASK.
-- UI policy for form behaviour, data policy for data-layer enforcement including imports.
+- UI policy for form behavior, data policy for data-layer enforcement including imports.
 - Before business rules modify the current record; after business rules touch related records.
 - Display business rules populate `g_scratchpad` for client-side use.
 - User criteria control knowledge base access, not ACLs.

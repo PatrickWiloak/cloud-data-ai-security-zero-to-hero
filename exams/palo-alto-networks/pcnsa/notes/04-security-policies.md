@@ -28,7 +28,7 @@ port-based.
 - **Implicit application dependency** - applications such as `ssl` and `web-browsing` frequently underpin others.
 
 **Migrating from port-based rules** - the workflow is to run port-based rules, use the
-policy optimiser to see which applications actually matched, then rewrite as
+policy optimizer to see which applications actually matched, then rewrite as
 application-based rules. Cutting straight to App-ID rules without that data breaks
 traffic.
 
@@ -62,7 +62,7 @@ attached to allow rules, and have no effect on deny rules.
 - **Address objects and groups** - named addresses, reused across rules.
 - **Dynamic address groups (DAG)** - membership determined by tags, updated without a commit. The answer for environments where servers appear and disappear, such as cloud auto-scaling.
 - **Service objects** - port and protocol definitions.
-- **Tags** - colour-coded labels for organisation and for DAG membership.
+- **Tags** - color-coded labels for organization and for DAG membership.
 - **External dynamic list (EDL)** - a list of IPs, URLs, or domains fetched from a web server on a schedule, so third-party threat feeds can be enforced without manual updates.
 
 Dynamic address groups and EDLs both exist so policy can change without a commit, which is
@@ -75,7 +75,7 @@ the distinguishing benefit to remember.
 - **Authentication policy** - when to challenge a user.
 - **Policy-based forwarding** - overrides routing.
 - **DoS protection policy** - rate limits per rule, complementing zone protection profiles.
-- **QoS policy** - traffic prioritisation.
+- **QoS policy** - traffic prioritization.
 
 ## Best practice rulebase shape
 
@@ -84,12 +84,12 @@ the distinguishing benefit to remember.
 3. Logging enabled on rules that matter, at session end.
 4. Overridden interzone-default rule at the bottom with logging enabled, so denied traffic is visible.
 
-- **Policy optimiser** - identifies port-based rules to convert, unused rules, and unused applications within rules.
+- **Policy optimizer** - identifies port-based rules to convert, unused rules, and unused applications within rules.
 - **Rule usage tracking (hit count)** - shows which rules are actually matching, and finds dead rules.
 
 ## Exam pointers
 
-- First match wins, top down. Reordering rules changes behaviour.
+- First match wins, top down. Reordering rules changes behavior.
 - `application-default` restricts an application to its standard ports; this is the recommended service setting.
 - Security profiles only apply to allow rules.
 - DNS sinkholing exists so you can identify the *infected internal host*, not merely block the domain.

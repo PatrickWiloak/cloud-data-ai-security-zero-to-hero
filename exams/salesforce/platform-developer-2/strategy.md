@@ -19,7 +19,7 @@ because Salesforce changes this periodically.
 - About 105 minutes
 - Passing around 68% (verify current value)
 - Prerequisite: Platform Developer I
-- The superbadges are where the real hands-on rigour lives
+- The superbadges are where the real hands-on rigor lives
 
 ## How PD2 differs from PD1
 
@@ -27,7 +27,7 @@ PD1 asks whether you can write Apex and build components. PD2 asks whether you c
 **at scale, securely, and with proper testing**. The same topic appears one level deeper:
 
 - PD1: write a trigger. PD2: write a bulkified trigger that survives 200 records and does not breach a governor limit.
-- PD1: query with SOQL. PD2: query a large object selectively so the optimiser uses an index.
+- PD1: query with SOQL. PD2: query a large object selectively so the optimizer uses an index.
 - PD1: write a test to hit 75%. PD2: write meaningful tests with assertions, negative cases, and bulk data.
 
 If you find a PD2 question that feels like a PD1 question, look for the scale, security, or
@@ -47,7 +47,7 @@ testing twist in the answer options.
 
 6. **LWC.** Decorators, wire versus imperative Apex, component communication (properties down, events up, Lightning Message Service across), and preferring Lightning Data Service for CRUD.
 
-7. **Testing rigour.** `Test.startTest`/`stopTest`, `@testSetup`, `System.runAs`, callout mocking, assertions, and bulk tests.
+7. **Testing rigor.** `Test.startTest`/`stopTest`, `@testSetup`, `System.runAs`, callout mocking, assertions, and bulk tests.
 
 ## The traps
 

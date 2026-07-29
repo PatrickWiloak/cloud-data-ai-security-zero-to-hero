@@ -17,12 +17,12 @@ and subnetting are automatic for you.
 | 4 | Transport | Segment (TCP) / Datagram (UDP) | TCP, UDP, port numbers |
 | 3 | Network | Packet | IP, ICMP, routers |
 | 2 | Data Link | Frame | MAC addresses, switches, VLANs |
-| 1 | Physical | Bits | Cables, connectors, signalling |
+| 1 | Physical | Bits | Cables, connectors, signaling |
 
 - **Encapsulation** - each layer wraps the layer above with its own header as data moves down the stack.
 - **Decapsulation** - each header is stripped in turn as data moves up the stack on the receiving host.
 - **Maximum transmission unit (MTU)** - the largest frame payload a link will carry, 1500 bytes on standard Ethernet.
-- **Jumbo frame** - an Ethernet frame with an MTU around 9000 bytes, used in storage and data-centre networks to cut per-packet overhead.
+- **Jumbo frame** - an Ethernet frame with an MTU around 9000 bytes, used in storage and data-center networks to cut per-packet overhead.
 
 Troubleshooting shortcut: a device that makes decisions using MAC addresses is Layer 2, and
 one using IP addresses is Layer 3. That single distinction answers many questions.
@@ -42,7 +42,7 @@ Learn these cold. They appear throughout the exam.
 | 69 | TFTP | Trivial FTP, UDP, no authentication |
 | 80 | HTTP | Unencrypted web |
 | 110 | POP3 | Mail retrieval, downloads and typically deletes |
-| 123 | NTP | Time synchronisation |
+| 123 | NTP | Time synchronization |
 | 143 | IMAP | Mail retrieval, keeps mail on server |
 | 161/162 | SNMP | 161 queries, 162 traps |
 | 389 | LDAP | Directory services |
@@ -84,7 +84,7 @@ symptom) and **127.0.0.0/8** (loopback).
 
 ## Subnetting
 
-The most practised skill in the exam. Memorise the mask table:
+The most practiced skill in the exam. Memorize the mask table:
 
 | CIDR | Mask | Usable hosts | Block size |
 |---|---|---|---|
@@ -100,7 +100,7 @@ Usable hosts is 2^h - 2, subtracting the network and broadcast addresses. A /30 
 usable addresses, which is why it suits point-to-point links.
 
 - **VLSM (Variable Length Subnet Masking)** - using different mask lengths within one network so subnet sizes fit actual need.
-- **Supernetting / route summarisation** - combining contiguous networks into one advertisement to shrink routing tables.
+- **Supernetting / route summarization** - combining contiguous networks into one advertisement to shrink routing tables.
 
 ## Topologies and network types
 
@@ -122,14 +122,14 @@ See [IaaS, PaaS, SaaS explained](../../../../learn/concepts/iaas-paas-saas.md) a
 - **Public, private, hybrid, and community cloud** - deployment models distinguished by who owns the infrastructure and who may use it.
 - **VPC (Virtual Private Cloud)** - a logically isolated network inside a provider's cloud.
 - **Direct Connect / ExpressRoute** - dedicated private circuits between on-premises and the cloud, bypassing the internet.
-- **NFV (Network Function Virtualisation)** - running firewalls, load balancers, and routers as software instances.
+- **NFV (Network Function Virtualization)** - running firewalls, load balancers, and routers as software instances.
 
 ## Network services
 
 - **DHCP** - automatic IP configuration. The DORA sequence is Discover, Offer, Request, Acknowledge.
 - **DHCP relay / IP helper** - forwards DHCP broadcasts across a router to a server on another subnet.
 - **DNS** - resolves names to addresses. Record types: A (IPv4), AAAA (IPv6), CNAME (alias), MX (mail), TXT (arbitrary text, used for SPF), PTR (reverse), NS (name server), SOA (zone authority).
-- **NTP** - synchronises clocks. Stratum numbers indicate distance from the reference clock.
+- **NTP** - synchronizes clocks. Stratum numbers indicate distance from the reference clock.
 - **SNMP** - device monitoring. v3 adds authentication and encryption; v1 and v2c send community strings in clear text.
 
 See [DNS explained](../../../../learn/concepts/dns-explained.md) for the resolution walk-through.
@@ -151,7 +151,7 @@ See [DNS explained](../../../../learn/concepts/dns-explained.md) for the resolut
 - A host with a 169.254.x.x address did not reach a DHCP server. This is one of the most common scenario answers on the exam.
 - Duplicate IP addresses cause intermittent connectivity for both hosts.
 - If a question distinguishes collision domains from broadcast domains: switches split collision domains, routers split broadcast domains.
-- Practise subnetting until block size arithmetic is instant. It is the highest-yield preparation you can do.
+- Practice subnetting until block size arithmetic is instant. It is the highest-yield preparation you can do.
 
 ## Official documentation
 

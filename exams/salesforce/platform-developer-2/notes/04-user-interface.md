@@ -21,7 +21,7 @@ The current, standards-based UI framework and the exam's primary focus.
 ## LWC data access
 
 - **Lightning Data Service (LDS)** - reads and writes records without Apex, via wire adapters (`getRecord`, `getObjectInfo`) and functions (`createRecord`, `updateRecord`). LDS caches and keeps records consistent across components, and respects field-level security automatically. Prefer it over Apex for simple record operations.
-- **`lightning-record-form`, `-edit-form`, `-view-form`** - base components that build record UIs with minimal code and honour security.
+- **`lightning-record-form`, `-edit-form`, `-view-form`** - base components that build record UIs with minimal code and honor security.
 - **Apex methods** - `@AuraEnabled(cacheable=true)` for wire-compatible read methods; without `cacheable`, for imperative and write operations. `cacheable=true` methods must not mutate data.
 
 Prefer LDS and base components for CRUD; drop to Apex when the logic exceeds what they can
@@ -56,7 +56,7 @@ The oldest framework, page-based and server-rendered.
 
 - **Controllers** - standard controller (out-of-the-box CRUD for one object), custom controller (all logic in Apex), and controller extension (adds to a standard controller).
 - **`with sharing` versus `without sharing`** - a Visualforce custom controller runs in system mode by default, so declaring `with sharing` to respect the user's record access is a security decision the exam tests.
-- **View state** - the serialised state of a Visualforce page, with a size limit; large view state causes performance problems.
+- **View state** - the serialized state of a Visualforce page, with a size limit; large view state causes performance problems.
 - **When still used** - PDF rendering, email templates, and legacy pages.
 
 ## Security in the UI layer

@@ -2,7 +2,7 @@
 last-updated: 2026-07-29
 ---
 
-# VCP-DCV Section 4 - Performance, Optimisation, and Upgrades
+# VCP-DCV Section 4 - Performance, Optimization, and Upgrades
 
 Resource management, the metrics that identify a bottleneck, and how to upgrade the stack
 in the right order.
@@ -25,7 +25,7 @@ limit, or a resource pool with insufficient allocation.
 - **%RDY (ready time)** - percentage of time a vCPU was ready to run but waiting for a physical core. Sustained high ready time means CPU contention or too many vCPUs. The primary CPU metric.
 - **%CSTP (co-stop)** - time a multi-vCPU VM waited for its vCPUs to be co-scheduled. High co-stop means the VM has too many vCPUs for the host's load.
 - **%MLMTD** - time not run because of a configured limit.
-- **Usage** - simple utilisation, less diagnostic than ready time.
+- **Usage** - simple utilization, less diagnostic than ready time.
 
 **Memory**
 
@@ -44,7 +44,7 @@ Ballooning is a warning; host swapping is an emergency.
 - **Aborts and resets** - severe storage problems.
 
 Splitting GAVG into KAVG and DAVG is how you decide whether the storage team or the
-virtualisation team owns the problem. That reasoning is examined.
+virtualization team owns the problem. That reasoning is examined.
 
 **Network**
 
@@ -54,11 +54,11 @@ virtualisation team owns the problem. That reasoning is examined.
 ## Tools
 
 - **vSphere Client performance charts** - real-time and historical, with overview and advanced views.
-- **esxtop / resxtop** - the live command-line tool on the host. Press `c` for CPU, `m` for memory, `d` for disk adapter, `u` for disk device, `v` for disk VM, `n` for network. This key mapping is worth memorising.
+- **esxtop / resxtop** - the live command-line tool on the host. Press `c` for CPU, `m` for memory, `d` for disk adapter, `u` for disk device, `v` for disk VM, `n` for network. This key mapping is worth memorizing.
 - **vm-support** - collects a diagnostic bundle for VMware support.
 - **Aria Operations (formerly vRealize Operations)** - long-term analytics, capacity planning, and right-sizing recommendations.
 
-## Optimisation practice
+## Optimization practice
 
 - **Right-size VMs** - allocate the vCPUs and memory actually needed. Over-allocation harms performance through co-scheduling and NUMA effects.
 - **NUMA awareness** - keep a VM's vCPU and memory within a single NUMA node where possible. A VM larger than one node becomes a wide VM and pays a remote-memory penalty.

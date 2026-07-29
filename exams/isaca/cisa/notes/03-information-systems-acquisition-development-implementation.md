@@ -43,7 +43,7 @@ late to influence design, which is a recurring exam theme.
 - **Regression testing** - confirms existing functionality still works after a change.
 - **Parallel testing** - old and new systems run together and results are compared.
 - **Pilot testing** - deployment to a limited group before full rollout.
-- **Test data** - must be representative. Using live production data in test raises a privacy exposure; it should be masked or anonymised.
+- **Test data** - must be representative. Using live production data in test raises a privacy exposure; it should be masked or anonymized.
 
 ## Implementation and conversion
 
@@ -53,7 +53,7 @@ late to influence design, which is a recurring exam theme.
 - **Pilot changeover** - one site or group first.
 - **Data conversion controls** - record counts, control totals, and reconciliation before and after migration. Conversion is where data integrity is most often lost.
 - **Fallback / rollback plan** - how to return to the previous state. Required before go-live.
-- **Post-implementation review (PIR)** - conducted after the system has stabilised, comparing actual benefits to the business case.
+- **Post-implementation review (PIR)** - conducted after the system has stabilized, comparing actual benefits to the business case.
 
 Parallel running is the lowest-risk conversion and direct cutover the highest. Questions
 about a critical system with no tolerance for failure point to parallel.

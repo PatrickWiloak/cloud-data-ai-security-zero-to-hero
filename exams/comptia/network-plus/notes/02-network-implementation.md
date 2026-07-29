@@ -29,7 +29,7 @@ Domain 1 become configuration.
 **Protocols**
 
 - **RIP** - distance vector, metric is hop count, maximum 15 hops. Simple and slow to converge.
-- **OSPF** - link state, metric is cost derived from bandwidth, organised into areas with area 0 as the backbone. The most commonly tested interior protocol.
+- **OSPF** - link state, metric is cost derived from bandwidth, organized into areas with area 0 as the backbone. The most commonly tested interior protocol.
 - **EIGRP** - Cisco's advanced distance vector, metric from bandwidth and delay.
 - **BGP** - path vector, the routing protocol of the internet, chooses paths between autonomous systems using policy rather than pure speed.
 
@@ -43,7 +43,7 @@ Domain 1 become configuration.
 - **Access port** - carries one VLAN, connects to an end device.
 - **Trunk port** - carries multiple VLANs between switches, tagging frames with 802.1Q.
 - **Native VLAN** - the untagged VLAN on a trunk. Mismatched native VLANs cause traffic to leak between VLANs.
-- **Voice VLAN** - a separate VLAN for IP phones, so voice traffic is isolated and prioritised.
+- **Voice VLAN** - a separate VLAN for IP phones, so voice traffic is isolated and prioritized.
 - **Inter-VLAN routing** - performed by a Layer 3 switch or a router-on-a-stick subinterface configuration.
 
 **Spanning Tree Protocol**
@@ -74,7 +74,7 @@ Domain 1 become configuration.
 | 802.11be | Wi-Fi 7 | 2.4, 5, 6 GHz | Multi-link operation |
 
 - **Channel planning** - in 2.4 GHz only channels 1, 6, and 11 are non-overlapping. Overlapping channels are a leading cause of poor performance.
-- **Co-channel interference** - neighbouring access points on the same channel contending for airtime.
+- **Co-channel interference** - neighboring access points on the same channel contending for airtime.
 - **Service set identifier (SSID)** - the wireless network name.
 - **BSSID** - the MAC address of the radio, identifying a specific access point.
 - **Antenna types** - omnidirectional radiates in all directions; directional (Yagi, parabolic) focuses energy for point-to-point links.
@@ -90,12 +90,12 @@ Domain 1 become configuration.
 
 ## Physical installation
 
-- **Twisted pair categories** - Cat 5e up to 1 Gbps, Cat 6 up to 10 Gbps over shorter runs, Cat 6a 10 Gbps to 100 m, Cat 8 for short data-centre runs.
-- **100 metre limit** - the maximum copper Ethernet run, 90 m of solid cable plus 10 m of patch leads.
-- **Fibre: single-mode versus multimode** - single-mode carries one light path over long distances; multimode is cheaper and used for shorter runs.
+- **Twisted pair categories** - Cat 5e up to 1 Gbps, Cat 6 up to 10 Gbps over shorter runs, Cat 6a 10 Gbps to 100 m, Cat 8 for short data-center runs.
+- **100 meter limit** - the maximum copper Ethernet run, 90 m of solid cable plus 10 m of patch leads.
+- **Fiber: single-mode versus multimode** - single-mode carries one light path over long distances; multimode is cheaper and used for shorter runs.
 - **Straight-through versus crossover** - modern equipment auto-negotiates with Auto-MDIX, making crossover cables largely historical.
 - **Rack units (U)** - 1.75 inches of vertical rack space each.
-- **Environmental factors** - temperature, humidity, and airflow. Hot aisle and cold aisle containment manages data-centre heat.
+- **Environmental factors** - temperature, humidity, and airflow. Hot aisle and cold aisle containment manages data-center heat.
 - **Grounding and bonding** - protects equipment and people, and reduces interference.
 
 ## Exam pointers

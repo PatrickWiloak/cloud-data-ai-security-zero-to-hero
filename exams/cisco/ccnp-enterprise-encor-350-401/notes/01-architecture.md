@@ -12,9 +12,9 @@ Roughly 15% of the exam, and the conceptual foundation for the rest.
 - **Three-tier model** - access, distribution, and core. Used in large campuses where core and distribution serve too many devices to collapse.
 - **Two-tier (collapsed core)** - distribution and core combined. Standard in small and medium campuses.
 - **Access layer** - end-device connectivity, port security, PoE, and VLAN assignment.
-- **Distribution layer** - aggregation, routing between VLANs, policy enforcement, and route summarisation.
+- **Distribution layer** - aggregation, routing between VLANs, policy enforcement, and route summarization.
 - **Core layer** - high-speed transport between distribution blocks. Kept simple: no policy, no filtering.
-- **Spine-leaf** - the data-centre topology giving predictable any-to-any latency, with every leaf connected to every spine and no leaf-to-leaf links.
+- **Spine-leaf** - the data-center topology giving predictable any-to-any latency, with every leaf connected to every spine and no leaf-to-leaf links.
 
 Design questions usually reward keeping the core simple and pushing policy to the
 distribution layer.
@@ -41,7 +41,7 @@ CEF is the default and the expected answer for hardware forwarding. Punting to t
 
 ## Software-defined networking concepts
 
-- **SDN** - separation of control plane from data plane, with centralised control.
+- **SDN** - separation of control plane from data plane, with centralized control.
 - **Northbound API** - between the controller and applications, typically REST.
 - **Southbound API** - between the controller and network devices: NETCONF, RESTCONF, OpenFlow, or vendor protocols.
 - **Overlay and underlay** - the underlay is the physical IP transport; the overlay is the virtual topology built on top with tunnels.
@@ -57,17 +57,17 @@ CEF is the default and the expected answer for hardware forwarding. Punting to t
 - **Scalable Group Tag (SGT)** - a policy tag carried with traffic so policy follows the user rather than the IP address.
 - **Catalyst Center / DNA Center** - automation, assurance, and policy management.
 
-The triad to memorise: **LISP control plane, VXLAN data plane, TrustSec policy**.
+The triad to memorize: **LISP control plane, VXLAN data plane, TrustSec policy**.
 
 ## Cisco SD-WAN
 
-- **vManage** - centralised management and configuration GUI.
+- **vManage** - centralized management and configuration GUI.
 - **vSmart** - the control plane, distributing policy and routes using OMP.
 - **vBond** - the orchestrator, performing authentication and NAT traversal to introduce devices to each other.
 - **vEdge / cEdge** - the data-plane routers at each site.
 - **OMP (Overlay Management Protocol)** - distributes routing, TLOC, and service information between vSmart and edge devices.
 - **TLOC (Transport Locator)** - identifies a WAN transport attachment point.
-- **Benefits** - transport independence, centralised policy, application-aware routing, and zero-touch provisioning.
+- **Benefits** - transport independence, centralized policy, application-aware routing, and zero-touch provisioning.
 
 vBond authenticates and introduces, vSmart distributes policy, vManage manages, vEdge
 forwards. Role questions are common.
@@ -78,7 +78,7 @@ forwards. Role questions are common.
 - **Lightweight AP with WLC** - the AP tunnels traffic to a wireless LAN controller using CAPWAP.
 - **CAPWAP** - control (UDP 5246) and data (UDP 5247) tunnels between AP and WLC.
 - **Local mode** - traffic tunnelled back to the WLC. Simple, but adds a hairpin.
-- **FlexConnect** - traffic switched locally at the branch, control still centralised. The answer for branches with a slow WAN link.
+- **FlexConnect** - traffic switched locally at the branch, control still centralized. The answer for branches with a slow WAN link.
 - **Split MAC architecture** - real-time functions on the AP, management functions on the WLC.
 - **AP modes** - local, FlexConnect, monitor, sniffer, rogue detector, bridge.
 

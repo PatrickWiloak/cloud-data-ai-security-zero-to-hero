@@ -28,15 +28,15 @@ The loop matters: post-incident findings become preparation for the next inciden
 
 ## Detection and analysis
 
-- **Incident** - an event that actually or potentially jeopardises confidentiality, integrity, or availability.
+- **Incident** - an event that actually or potentially jeopardizes confidentiality, integrity, or availability.
 - **Event** - any observable occurrence. Most events are not incidents.
-- **True positive versus false positive** - triage exists to separate them before mobilising a response.
-- **Severity and prioritisation** - based on functional impact, information impact, and recoverability effort.
+- **True positive versus false positive** - triage exists to separate them before mobilizing a response.
+- **Severity and prioritization** - based on functional impact, information impact, and recoverability effort.
 - **Scoping** - determining how many systems and accounts are affected. Under-scoping causes premature eradication and reinfection.
 
 **Impact analysis dimensions**
 
-- **Organisation impact versus localised impact** - one workstation or the whole estate.
+- **Organization impact versus localized impact** - one workstation or the whole estate.
 - **Immediate versus total impact** - what is happening now against the eventual cost.
 - **Data integrity** - whether data can still be trusted.
 - **Economic and reputational impact** - fines, downtime cost, customer trust.
@@ -67,7 +67,7 @@ elsewhere and returns.
 
 - **Chain of custody** - documented record of who handled evidence, when, and why. Break it and the evidence may be inadmissible.
 - **Order of volatility** - collect the most perishable first: CPU registers and cache, memory, network state and running processes, disk, remote logs, then archival media.
-- **Forensic image** - a bit-for-bit copy. Analyse the copy, never the original.
+- **Forensic image** - a bit-for-bit copy. Analyze the copy, never the original.
 - **Write blocker** - hardware or software preventing modification of the source during acquisition.
 - **Hashing** - proving the image is identical to the source and unaltered since. Compute at acquisition and verify later.
 - **Legal hold** - a directive to preserve data relevant to litigation, overriding normal retention deletion.

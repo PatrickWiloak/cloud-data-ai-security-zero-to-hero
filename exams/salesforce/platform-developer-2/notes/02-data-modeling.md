@@ -21,19 +21,19 @@ roll-ups, cascade delete, or inherited sharing, and lookup when the child must s
 
 ## Schema design considerations
 
-- **Denormalisation for performance** - occasionally duplicating data to avoid expensive queries, weighed against maintenance cost.
+- **Denormalization for performance** - occasionally duplicating data to avoid expensive queries, weighed against maintenance cost.
 - **Record types** - different business processes, page layouts, and picklist values on one object.
 - **Field-level considerations** - external ID fields for upsert and integration, unique fields, and required fields.
 - **Skinny tables** - a Salesforce-managed performance feature (created by support) containing frequently used fields, avoiding joins to the standard field tables. You cannot create them directly; you request them for large-volume objects.
 
 ## Large data volumes (LDV)
 
-The area PD2 emphasises over PD1.
+The area PD2 emphasizes over PD1.
 
 - **Large data volume** - objects with millions of records, where naive queries and operations become slow or hit limits.
-- **Selective query** - a query whose filter uses an indexed field with a selective enough value that the optimiser can use the index. Non-selective queries on large objects time out or fail.
+- **Selective query** - a query whose filter uses an indexed field with a selective enough value that the optimizer can use the index. Non-selective queries on large objects time out or fail.
 - **Indexes** - standard indexes on Id, Name, owner, foreign keys, and audit fields; custom indexes on External ID and unique fields; and support-created indexes for other fields.
-- **The selectivity thresholds** - the query optimiser uses an index when the filter matches under a threshold share of records (roughly 10% for a standard index, 5% for a custom index, up to a cap). Filtering on a non-selective value forces a full scan.
+- **The selectivity thresholds** - the query optimizer uses an index when the filter matches under a threshold share of records (roughly 10% for a standard index, 5% for a custom index, up to a cap). Filtering on a non-selective value forces a full scan.
 - **Data skew** - too many child records pointing at one parent (ownership skew, lookup skew, account data skew), causing lock contention and slow sharing recalculation. Keep ownership per user under the guidance to avoid it.
 
 ## Querying at scale

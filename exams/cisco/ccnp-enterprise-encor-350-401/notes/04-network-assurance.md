@@ -11,7 +11,7 @@ about tool selection.
 
 - **ping** - reachability using ICMP echo. Extended ping allows source, size, and DF-bit control, which is how you test path MTU.
 - **traceroute** - hop-by-hop path discovery using TTL expiry.
-- **debug** - detailed real-time output. CPU-intensive and capable of destabilising a production device, so use conditional debugging and always have `undebug all` ready.
+- **debug** - detailed real-time output. CPU-intensive and capable of destabilizing a production device, so use conditional debugging and always have `undebug all` ready.
 - **show** commands - the safe default for state inspection.
 - **Conditional debugging** - `debug condition interface` or similar to limit output scope.
 - **Ping sweep and path MTU discovery** - `ping <ip> size <n> df-bit` to find the largest frame that traverses the path.
@@ -20,10 +20,10 @@ about tool selection.
 
 - **SPAN (local)** - mirrors traffic from source ports or VLANs to a destination port on the same switch.
 - **RSPAN** - mirrors across switches using a dedicated RSPAN VLAN.
-- **ERSPAN** - encapsulates mirrored traffic in GRE, so it can cross a routed network to a remote analyser.
-- **Embedded Packet Capture (EPC)** - captures on the device itself and exports a pcap, without needing an external analyser.
+- **ERSPAN** - encapsulates mirrored traffic in GRE, so it can cross a routed network to a remote analyzer.
+- **Embedded Packet Capture (EPC)** - captures on the device itself and exports a pcap, without needing an external analyzer.
 
-ERSPAN is the answer when the analyser is across a Layer 3 boundary.
+ERSPAN is the answer when the analyzer is across a Layer 3 boundary.
 
 ## Flow monitoring
 
@@ -49,7 +49,7 @@ ERSPAN is the answer when the analyser is across a Layer 3 boundary.
 ## Model-driven telemetry
 
 - **Streaming telemetry** - devices push data continuously, rather than being polled. Scales far better than SNMP polling and gives higher resolution.
-- **YANG** - the data modelling language describing device configuration and state.
+- **YANG** - the data modeling language describing device configuration and state.
 - **NETCONF** - XML-based configuration protocol over SSH (port 830), with candidate, running, and startup datastores.
 - **RESTCONF** - REST/HTTP interface to YANG models, using JSON or XML.
 - **gNMI** - gRPC network management interface, commonly used for telemetry subscriptions.
@@ -62,7 +62,7 @@ high-frequency versus interval-limited.
 
 - **Assurance** - correlates telemetry into health scores for clients, devices, and applications.
 - **Client health and network health scores** - aggregate indicators.
-- **Path trace** - visualises the path between two endpoints, showing ACLs and QoS along the way.
+- **Path trace** - visualizes the path between two endpoints, showing ACLs and QoS along the way.
 - **Sensor tests** - synthetic wireless client tests from purpose-built sensors.
 - **Issues and root cause analysis** - guided remediation suggestions.
 
@@ -76,7 +76,7 @@ high-frequency versus interval-limited.
 | Push-based, high-frequency metrics | Streaming telemetry (gNMI) |
 | Device event notification | Syslog, or SNMP traps/informs |
 | Configuration via programmatic interface | NETCONF or RESTCONF |
-| Visualise path with policy applied | Path trace in Catalyst Center |
+| Visualize path with policy applied | Path trace in Catalyst Center |
 
 ## Exam pointers
 

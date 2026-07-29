@@ -4,7 +4,7 @@ last-updated: 2026-07-29
 
 # CISM Domain 2 - Information Security Risk Management (20%)
 
-Identifying, analysing, treating, and monitoring risk. The domain where the exam is most
+Identifying, analyzing, treating, and monitoring risk. The domain where the exam is most
 precise about vocabulary, so learn the definitions exactly.
 
 ## Core vocabulary
@@ -13,14 +13,14 @@ precise about vocabulary, so learn the definitions exactly.
 - **Threat** - a potential cause of an unwanted incident. Threats exist independently of you and cannot be reduced.
 - **Vulnerability** - a weakness that a threat can exploit. This is what controls reduce.
 - **Risk** - the combination of likelihood and impact. Expressed as threat exploiting a vulnerability to cause harm to an asset.
-- **Exposure** - the extent of loss when a threat is realised.
+- **Exposure** - the extent of loss when a threat is realized.
 - **Likelihood / probability** - how often the event is expected.
 - **Impact** - the consequence, expressed in business terms.
 - **Inherent risk** - before controls.
 - **Residual risk** - after controls. Residual risk must be within appetite or explicitly accepted.
-- **Risk appetite** - how much risk the organisation is willing to take.
+- **Risk appetite** - how much risk the organization is willing to take.
 - **Risk tolerance** - acceptable deviation from appetite.
-- **Risk capacity** - the maximum the organisation could absorb and survive.
+- **Risk capacity** - the maximum the organization could absorb and survive.
 
 You cannot reduce a threat. You reduce vulnerability, and thereby risk. Exam options
 offering "reduce the threat" are usually wrong.
@@ -28,7 +28,7 @@ offering "reduce the threat" are usually wrong.
 ## Risk assessment
 
 **Qualitative analysis** - ratings such as high, medium, and low. Fast, subjective, good
-for prioritisation and for risks that resist quantification such as reputation.
+for prioritization and for risks that resist quantification such as reputation.
 
 **Quantitative analysis** - monetary values.
 
@@ -41,7 +41,7 @@ for prioritisation and for risks that resist quantification such as reputation.
 A control is economically justified when its annual cost is less than the reduction in
 ALE it delivers. This calculation appears on the exam, so be able to run it.
 
-- **Semi-quantitative** - numeric scales without full monetary modelling. A common practical compromise.
+- **Semi-quantitative** - numeric scales without full monetary modeling. A common practical compromise.
 - **Risk register** - the record: risk, owner, rating, treatment, status, and target date.
 
 ## Risk treatment
@@ -59,12 +59,12 @@ legitimate, documented business decision made by the business owner.
 - **Cost-benefit justification** - the control must cost less than the loss it prevents.
 - **Control types by function** - preventive, detective, corrective, deterrent, compensating, recovery.
 - **Control types by nature** - administrative (policy, training), technical (logical), physical.
-- **Defence in depth** - layered controls so no single failure is catastrophic.
+- **Defense in depth** - layered controls so no single failure is catastrophic.
 - **Compensating control** - used when the primary control is impractical, and must address the same risk to a comparable degree.
 
 ## Risk in context
 
-- **Third-party and supply chain risk** - due diligence before contracting, monitoring during, and defined exit. Accountability stays with your organisation.
+- **Third-party and supply chain risk** - due diligence before contracting, monitoring during, and defined exit. Accountability stays with your organization.
 - **Cloud risk** - shaped by the shared responsibility model. Assurance often comes from provider attestations rather than direct audit.
 - **Emerging technology risk** - AI, IoT, and similar introduce risks the existing control set may not address. The manager's job is to assess before adoption, not after.
 - **Business impact analysis (BIA)** - identifies critical processes and impact over time, feeding both risk management and continuity planning.
@@ -79,9 +79,9 @@ legitimate, documented business decision made by the business owner.
 
 ## Integrating risk management
 
-- **Enterprise risk management (ERM)** - information security risk is one category within enterprise risk, and should be reported in the same terms as other risks so it can be compared and prioritised.
+- **Enterprise risk management (ERM)** - information security risk is one category within enterprise risk, and should be reported in the same terms as other risks so it can be compared and prioritized.
 - **Risk ownership** - every risk has a named business owner. Unowned risks are not managed.
-- **Risk-aware culture** - staff who recognise and report risk early.
+- **Risk-aware culture** - staff who recognize and report risk early.
 
 ## Exam pointers
 
