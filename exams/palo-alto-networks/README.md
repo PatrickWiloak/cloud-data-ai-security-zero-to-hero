@@ -64,9 +64,7 @@ For SOC analysts and automation engineers, the Cortex track (XDR → XSIAM → P
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
-| [Palo Alto Networks Certified Network Security Administrator (PCNSA)](pcnsa/) | PCNSA | - | Outline ◇ | - |
-
-◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
+| [Palo Alto Networks Certified Network Security Administrator (PCNSA)](pcnsa/) | PCNSA | - | Ready | 4 |
 
 <!-- END GENERATED: provider-certs -->
 

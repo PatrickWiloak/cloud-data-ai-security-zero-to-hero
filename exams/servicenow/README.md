@@ -85,8 +85,6 @@ The CTA is years away from a typical CSA pass and gates on hands-on architecture
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
-| [ServiceNow Certified System Administrator (CSA)](csa/) | CSA | - | Outline ◇ | - |
-
-◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
+| [ServiceNow Certified System Administrator (CSA)](csa/) | CSA | - | Ready | 6 |
 
 <!-- END GENERATED: provider-certs -->

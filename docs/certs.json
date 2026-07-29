@@ -3957,7 +3957,7 @@
       "name": "Palo Alto Networks Certified Network Security Administrator (PCNSA)",
       "exam_code": "PCNSA",
       "level": "unspecified",
-      "status": "outline",
+      "status": "active",
       "duration": "80 minutes",
       "questions": "60",
       "passing_score": "~70%",
@@ -3967,13 +3967,13 @@
       "format": null,
       "languages": null,
       "path": "exams/palo-alto-networks/pcnsa",
-      "notes_count": 0,
+      "notes_count": 4,
       "files": {
         "README.md": true,
         "fact-sheet.md": true,
         "practice-plan.md": true,
-        "scenarios.md": false,
-        "strategy.md": false
+        "scenarios.md": true,
+        "strategy.md": true
       },
       "last_updated": "2026-05-03",
       "exam_version": null,
@@ -4137,7 +4137,7 @@
       "name": "ServiceNow Certified System Administrator (CSA)",
       "exam_code": "CSA",
       "level": "unspecified",
-      "status": "outline",
+      "status": "active",
       "duration": "90 minutes",
       "questions": null,
       "passing_score": null,
@@ -4147,13 +4147,13 @@
       "format": "60 multi-choice / multi-answer",
       "languages": null,
       "path": "exams/servicenow/csa",
-      "notes_count": 0,
+      "notes_count": 6,
       "files": {
         "README.md": true,
         "fact-sheet.md": true,
         "practice-plan.md": true,
-        "scenarios.md": false,
-        "strategy.md": false
+        "scenarios.md": true,
+        "strategy.md": true
       },
       "last_updated": "2026-05-03",
       "exam_version": null,

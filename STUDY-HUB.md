@@ -188,11 +188,11 @@ What's your starting point?
 | **ISACA** | 2 | CISA, CISM | [exams/isaca/](./exams/isaca/) |
 | **Cloud Security Alliance** | 1 | CCSK v5 | [exams/cloud-security-alliance/](./exams/cloud-security-alliance/) |
 | **Offensive Security** | 1 | OSCP (PEN-200) (1 at outline stage ◇) | [exams/offensive-security/](./exams/offensive-security/) |
-| **Palo Alto Networks** | 1 | PCNSA (1 at outline stage ◇) | [exams/palo-alto-networks/](./exams/palo-alto-networks/) |
+| **Palo Alto Networks** | 1 | PCNSA | [exams/palo-alto-networks/](./exams/palo-alto-networks/) |
 | **Linux Foundation** | 2 | LFCS, LFCA | [exams/linux-foundation/](./exams/linux-foundation/) |
 | **Oracle Cloud (OCI)** | 5 | Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc | [exams/oracle/](./exams/oracle/) |
 | **IBM Cloud** | 5 | Advocate, Developer, Solution Architect, Security, SRE | [exams/ibm/](./exams/ibm/) |
-| **ServiceNow** | 1 | Certified System Administrator (1 at outline stage ◇) | [exams/servicenow/](./exams/servicenow/) |
+| **ServiceNow** | 1 | Certified System Administrator | [exams/servicenow/](./exams/servicenow/) |
 | **VMware** | 1 | VCP-DCV (2V0-21.23) (1 at outline stage ◇) | [exams/vmware/](./exams/vmware/) |
 | **CERTIFICATIONS TOTAL** | **131** | across 26 providers | |
 | **Anthropic Claude (study tracks)** | 4 | Architect Foundations + Advanced, Application Developer, Prompt Engineering Specialist | [exams/anthropic/](./exams/anthropic/) |

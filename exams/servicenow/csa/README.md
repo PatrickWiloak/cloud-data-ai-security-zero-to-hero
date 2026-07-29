@@ -1,9 +1,5 @@
 # ServiceNow Certified System Administrator (CSA)
 
-> **Study-guide status: outline stage.** The README, fact-sheet, and practice plan are
-> written. The topic notes are outlined but not yet drafted - entries marked _(planned)_
-> below do not exist yet. Track progress in [TODO.md](../../../TODO.md).
-
 
 ## Overview
 
@@ -72,14 +68,14 @@ Always confirm the release on your PDI matches what the cert blueprint reference
 |---|---|
 | [fact-sheet.md](fact-sheet.md) | High-yield reference: tables, GlideRecord syntax, ACL rules, update sets |
 | [practice-plan.md](practice-plan.md) | 6-week study plan with PDI labs |
-| scenarios.md _(planned)_ | 12-15 admin scenarios (forms, ACLs, catalog, flows) |
-| strategy.md _(planned)_ | Exam-day strategy, time management, common traps |
-| notes/01-platform-overview.md _(planned)_ | Architecture, instances, releases, navigation, roles |
-| notes/02-lists-forms-tasks.md _(planned)_ | List views, personalization, form layout, task lifecycle, approvals |
-| notes/03-self-service-process-automation.md _(planned)_ | Service Catalog, Service Portal, Knowledge, Flow Designer |
-| notes/04-database-administration.md _(planned)_ | Tables, dictionary, fields, references, dot-walking, relationships |
-| notes/05-configuration-customization.md _(planned)_ | UI policies, business rules, client scripts, script includes, update sets |
-| notes/06-application-reporting-knowledge.md _(planned)_ | ACLs, reports, dashboards, Performance Analytics, Knowledge Management |
+| [scenarios.md](scenarios.md) | 12-15 admin scenarios (forms, ACLs, catalog, flows) |
+| [strategy.md](strategy.md) | Exam-day strategy, time management, common traps |
+| [notes/01-platform-overview.md](notes/01-platform-overview.md) | Architecture, instances, releases, navigation, roles |
+| [notes/02-lists-forms-tasks.md](notes/02-lists-forms-tasks.md) | List views, personalization, form layout, task lifecycle, approvals |
+| [notes/03-self-service-process-automation.md](notes/03-self-service-process-automation.md) | Service Catalog, Service Portal, Knowledge, Flow Designer |
+| [notes/04-database-administration.md](notes/04-database-administration.md) | Tables, dictionary, fields, references, dot-walking, relationships |
+| [notes/05-configuration-customization.md](notes/05-configuration-customization.md) | UI policies, business rules, client scripts, script includes, update sets |
+| [notes/06-application-reporting-knowledge.md](notes/06-application-reporting-knowledge.md) | ACLs, reports, dashboards, Performance Analytics, Knowledge Management |
 
 ---
 

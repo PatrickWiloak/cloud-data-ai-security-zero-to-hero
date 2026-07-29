@@ -185,4 +185,8 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except BrokenPipeError:
+        # Piping into head closes stdout early; that is not an error.
+        sys.exit(0)
