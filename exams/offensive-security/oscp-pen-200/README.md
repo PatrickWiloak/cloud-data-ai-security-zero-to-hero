@@ -1,9 +1,5 @@
 # Offensive Security Certified Professional (OSCP / PEN-200)
 
-> **Study-guide status: outline stage.** The README, fact-sheet, and practice plan are
-> written. The topic notes are outlined but not yet drafted - entries marked _(planned)_
-> below do not exist yet. Track progress in [TODO.md](../../../TODO.md).
-
 
 ## Exam Overview
 
@@ -119,12 +115,12 @@ PEN-200's current syllabus removes buffer overflow and emphasizes practical pene
 ## Study Materials
 
 ### Notes
-- 01 - Information Gathering and Enumeration _(planned)_
-- 02 - Vulnerability Scanning and Web Attacks _(planned)_
-- 03 - Exploitation and Client-Side Attacks _(planned)_
-- 04 - Privilege Escalation (Linux + Windows) _(planned)_
-- 05 - Active Directory Attacks _(planned)_
-- 06 - Pivoting, Tunneling, and Post-Exploitation _(planned)_
+- [01 - Information Gathering and Enumeration](notes/01-information-gathering-enumeration.md)
+- [02 - Vulnerability Scanning and Web Attacks](notes/02-vulnerability-scanning-web-attacks.md)
+- [03 - Exploitation and Client-Side Attacks](notes/03-exploitation-client-side.md)
+- [04 - Privilege Escalation (Linux + Windows)](notes/04-privilege-escalation.md)
+- [05 - Active Directory Attacks](notes/05-active-directory-attacks.md)
+- [06 - Pivoting, Tunneling, and Post-Exploitation](notes/06-pivoting-tunneling-post-exploitation.md)
 
 ### Study Resources
 - [Fact Sheet](fact-sheet.md) - Command cheat sheet, payloads, syntax reference

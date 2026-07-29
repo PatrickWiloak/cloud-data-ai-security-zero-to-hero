@@ -62,9 +62,7 @@ All OffSec material is for **authorized penetration testing only**. The skills t
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
-| [Offensive Security Certified Professional (OSCP / PEN-200)](oscp-pen-200/) | OSCP (course PEN-200) | Professional | Outline ◇ | - |
-
-◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
+| [Offensive Security Certified Professional (OSCP / PEN-200)](oscp-pen-200/) | OSCP (course PEN-200) | Professional | Ready | 6 |
 
 <!-- END GENERATED: provider-certs -->
 

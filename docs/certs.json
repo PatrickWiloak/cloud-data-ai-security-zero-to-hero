@@ -3777,7 +3777,7 @@
       "name": "Offensive Security Certified Professional (OSCP / PEN-200)",
       "exam_code": "OSCP (course PEN-200)",
       "level": "professional",
-      "status": "outline",
+      "status": "active",
       "duration": null,
       "questions": null,
       "passing_score": null,
@@ -3787,7 +3787,7 @@
       "format": "Practical hands-on lab; full report submission",
       "languages": null,
       "path": "exams/offensive-security/oscp-pen-200",
-      "notes_count": 0,
+      "notes_count": 6,
       "files": {
         "README.md": true,
         "fact-sheet.md": true,

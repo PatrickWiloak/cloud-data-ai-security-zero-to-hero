@@ -187,7 +187,7 @@ What's your starting point?
 | **ISC2** | 2 | CISSP, CCSP | [exams/isc2/](./exams/isc2/) |
 | **ISACA** | 2 | CISA, CISM | [exams/isaca/](./exams/isaca/) |
 | **Cloud Security Alliance** | 1 | CCSK v5 | [exams/cloud-security-alliance/](./exams/cloud-security-alliance/) |
-| **Offensive Security** | 1 | OSCP (PEN-200) (1 at outline stage ◇) | [exams/offensive-security/](./exams/offensive-security/) |
+| **Offensive Security** | 1 | OSCP (PEN-200) | [exams/offensive-security/](./exams/offensive-security/) |
 | **Palo Alto Networks** | 1 | PCNSA | [exams/palo-alto-networks/](./exams/palo-alto-networks/) |
 | **Linux Foundation** | 2 | LFCS, LFCA | [exams/linux-foundation/](./exams/linux-foundation/) |
 | **Oracle Cloud (OCI)** | 5 | Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc | [exams/oracle/](./exams/oracle/) |
