@@ -4107,7 +4107,7 @@
       "name": "Salesforce Certified Platform Developer II (PDII)",
       "exam_code": null,
       "level": "unspecified",
-      "status": "outline",
+      "status": "active",
       "duration": "120 minutes",
       "questions": null,
       "passing_score": null,
@@ -4117,13 +4117,13 @@
       "format": "60 multiple-choice / multi-select (proctored, single exam as of 2026)",
       "languages": null,
       "path": "exams/salesforce/platform-developer-2",
-      "notes_count": 0,
+      "notes_count": 6,
       "files": {
         "README.md": true,
         "fact-sheet.md": true,
         "practice-plan.md": true,
         "scenarios.md": true,
-        "strategy.md": false
+        "strategy.md": true
       },
       "last_updated": "2026-05-03",
       "exam_version": null,

@@ -20,10 +20,13 @@ commands in [How the numbers were produced](#how-the-numbers-were-produced) to r
 > navigation, per-provider indexes, flashcard decks, the lab-to-cert map, and the
 > freshness rotation. Section 1 is kept as the record of what was wrong and why.
 >
-> **Still open, all content authoring rather than tooling:** notes for 8 of the 10
-> outline-stage certs (2 done), practice questions for 103 certs, and the Tier 1
-> certifications in [section 3](#3-certifications-we-could-add). These are measured in
-> tens of thousands of words each and are tracked in [TODO.md](../TODO.md).
+> **Update (2026-07-29):** all 10 outline-stage certs now have drafted notes and are
+> active. No cert remains at outline stage. The flashcard corpus grew to 90 decks and
+> 8,484 cards as a result.
+>
+> **Still open, all content authoring rather than tooling:** practice questions for the
+> certs that lack them, and the Tier 1 certifications in
+> [section 3](#3-certifications-we-could-add). Tracked in [TODO.md](../TODO.md).
 
 > **Correction (2026-07-29).** The first draft of this document reported 127 cert
 > directories. That number came from `validate-cert-structure.sh`, which discovered certs
@@ -105,46 +108,47 @@ The content existed and was decent; it was simply undiscoverable from the hub. T
 previously-absent providers are all outline-stage certs, now marked with a diamond in the
 hub table so the status is visible rather than implied.
 
-### 1.4 - The documented visual standard has zero instances (open)
+### 1.4 - The documented visual standard has zero instances (fixed 2026-07-29)
 
-`CLAUDE.md` and `docs/ARCHITECTURE.md` specify PNG diagrams under
-`assets/diagrams/<topic>/<slug>.png`. `assets/diagrams/` contains exactly one file:
-`README.md`. There are zero PNGs. The three PNG references in markdown are all
-documentation examples inside code fences, so nothing renders as a broken image, but the
-standard as written has never once been followed.
+`CLAUDE.md` and `docs/ARCHITECTURE.md` previously specified PNG diagrams as canonical,
+while `assets/diagrams/` held only a `README.md` and 89 files used Mermaid. The documented
+standard had zero instances and the real one was undocumented.
 
-Mermaid is doing the real work: 89 files use fenced mermaid blocks. Two honest options:
+Resolved by promoting Mermaid to the documented default and demoting PNG to the exception
+for diagrams too dense to read inline. Updated `CLAUDE.md`, `docs/ARCHITECTURE.md`,
+`CONTRIBUTING.md`, and `assets/diagrams/README.md`, and added the guidance Mermaid needs
+that PNG does not: no hard-coded colours (light and dark themes), and a caption since
+Mermaid has no alt text.
 
-1. Produce the PNGs and keep the standard as written, or
-2. Promote mermaid to the primary convention, demote PNG to "for diagrams too complex to
-   read inline", and remove the broken example references.
+### 1.5 - Frontmatter clustering and the freshness rotation (addressed 2026-07-29)
 
-Option 2 matches what the repo actually does and costs almost nothing.
+- At the time of the audit, 326 pages shared the `2026-05-03` stamp, so at the 180-day
+  cadence the whole repo would fall due on one day.
+- The two apparent `last-updated: YYYY-MM-DD` placeholders were a false positive: both sit
+  inside fenced `yaml` blocks documenting the convention. The audit scan did not skip code
+  fences.
+- `docs/freshness.md` is rebuilt and now covers all 137 certs (previously 127, sharing the
+  validator's `notes/` blind spot).
 
-### 1.5 - Frontmatter is present on 22% of files, and 326 of them share one date (open)
-
-- 328 of 1,506 markdown files carry `last-updated` frontmatter.
-- 326 of those are stamped `2026-05-03`. At the documented 180-day re-verify cadence,
-  effectively the entire repo goes stale on the same day (2026-10-30).
-- Two files still contain the literal placeholder `last-updated: YYYY-MM-DD`.
-- `docs/freshness.md` had not been regenerated since 2026-05-04. It is now rebuilt and
-  covers all 137 certs (previously 127, since the generator shared the validator's
-  `notes/` blind spot).
-
-The freshness ledger only means something if verification dates are staggered by actual
-review work. Suggest re-verifying in provider-sized batches so dates spread naturally,
-and adding the ledger rebuild to the structure-validate workflow as a committed artifact
-rather than a preview.
+`.github/scripts/check-cert-freshness.py` assigns each provider a review month, so the
+work spreads across the year instead of all falling due at once. The re-verification labour
+itself remains ongoing, one provider batch at a time, which is the intended steady state
+rather than an open defect.
 
 ---
 
 ## 2. Coverage gaps in existing content
 
-### 2.1 - Ten certs have zero notes (2 fixed, 8 open)
+### 2.1 - Ten certs have zero notes (fixed 2026-07-29)
 
-These directories have a README, fact-sheet, and practice-plan, but an empty or absent
-`notes/` directory. Their READMEs link to notes that do not exist, which is the source of
-the 77 broken links in [1.1](#11---383-broken-internal-links-fixed-2026-07-29).
+Ten cert directories had a README, fact-sheet, and practice-plan, but an empty `notes/`
+directory, and their READMEs linked to notes that did not exist. All ten now have drafted
+domain notes (and, where the README promised them, scenarios and strategy pages): CySA+,
+Network+, CCNP ENCOR, CISA, CISM, OSCP, PCNSA, Salesforce PD2, ServiceNow CSA, and VMware
+VCP-DCV. Every one flipped from `outline` to `active` in the index, and the structure
+validator reports zero warnings.
+
+The original table of missing notes is kept below for the record.
 
 | Cert | Missing notes |
 |------|--------------:|

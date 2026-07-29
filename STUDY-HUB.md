@@ -179,7 +179,7 @@ What's your starting point?
 | **GitHub** | 5 | Foundations, Actions, Administration, Advanced Security, Copilot | [exams/github/](./exams/github/) |
 | **Red Hat** | 2 | RHCSA (EX200), OpenShift Administrator (EX280) | [exams/redhat/](./exams/redhat/) |
 | **Cisco** | 2 | CCNA (200-301), CCNP Enterprise ENCOR (350-401) | [exams/cisco/](./exams/cisco/) |
-| **Salesforce** | 3 | Administrator, Platform Developer I, Platform Developer II (1 at outline stage ◇) | [exams/salesforce/](./exams/salesforce/) |
+| **Salesforce** | 3 | Administrator, Platform Developer I, Platform Developer II | [exams/salesforce/](./exams/salesforce/) |
 | **Confluent/Kafka** | 2 | Certified Developer, Certified Administrator | [exams/confluent/](./exams/confluent/) |
 | **MongoDB** | 3 | Associate Developer, DBA, Atlas Administrator | [exams/mongodb/](./exams/mongodb/) |
 | **FinOps Foundation** | 4 | Practitioner, Engineer, Analyst, Professional | [exams/finops/](./exams/finops/) |

@@ -10,8 +10,6 @@ Study guides for Salesforce in this repo. For the full picture across every prov
 |------|------|-------|--------|------:|
 | [Salesforce Certified Administrator](administrator/) | - | - | Ready | 5 |
 | [Salesforce Certified Platform Developer I (PD1)](platform-developer-1/) | - | - | Ready | 5 |
-| [Salesforce Certified Platform Developer II (PDII)](platform-developer-2/) | - | - | Outline ◇ | - |
-
-◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
+| [Salesforce Certified Platform Developer II (PDII)](platform-developer-2/) | - | - | Ready | 6 |
 
 <!-- END GENERATED: provider-certs -->
