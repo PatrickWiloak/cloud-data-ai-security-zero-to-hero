@@ -32,7 +32,19 @@ ISACA maintains some of the most widely recognized credentials for IT audit, gov
 
 ## Certifications in This Repository
 
-- [CISA](cisa/) - Certified Information Systems Auditor
+
+<!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
+
+2 study guides in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+
+| Cert | Code | Level | Status | Notes |
+|------|------|-------|--------|------:|
+| [CISA - Certified Information Systems Auditor](cisa/) | CISA | - | Outline ◇ | - |
+| [CISM - Certified Information Security Manager](cism/) | CISM | - | Outline ◇ | - |
+
+◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
+
+<!-- END GENERATED: provider-certs -->
 
 ## Certification Maintenance
 

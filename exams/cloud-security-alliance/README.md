@@ -28,7 +28,16 @@ CSA operates extensive research working groups that produce freely available gui
 
 ## Certifications in This Repository
 
-- [CCSK v5](ccsk/) - Certificate of Cloud Security Knowledge
+
+<!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
+
+1 study guide in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+
+| Cert | Code | Level | Status | Notes |
+|------|------|-------|--------|------:|
+| [CCSK v5 - Certificate of Cloud Security Knowledge](ccsk/) | - | - | Ready | 8 |
+
+<!-- END GENERATED: provider-certs -->
 
 ## About CCSK
 

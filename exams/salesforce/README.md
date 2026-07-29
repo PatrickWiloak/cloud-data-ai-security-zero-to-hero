@@ -1,0 +1,17 @@
+# Salesforce certifications
+
+Study guides for Salesforce in this repo. For the full picture across every provider, see [STUDY-HUB.md](../../STUDY-HUB.md).
+
+<!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
+
+3 study guides in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+
+| Cert | Code | Level | Status | Notes |
+|------|------|-------|--------|------:|
+| [Salesforce Certified Administrator](administrator/) | - | - | Ready | 5 |
+| [Salesforce Certified Platform Developer I (PD1)](platform-developer-1/) | - | - | Ready | 5 |
+| [Salesforce Certified Platform Developer II (PDII)](platform-developer-2/) | - | - | Outline ◇ | - |
+
+◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
+
+<!-- END GENERATED: provider-certs -->

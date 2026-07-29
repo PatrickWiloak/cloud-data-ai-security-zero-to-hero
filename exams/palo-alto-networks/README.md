@@ -57,13 +57,18 @@ For SOC analysts and automation engineers, the Cortex track (XDR → XSIAM → P
 
 ## Certifications in This Repo
 
-| Cert | Directory | Status |
-|---|---|---|
-| PCNSA | [pcnsa/](pcnsa/) | Available |
 
-More Palo Alto certifications may be added as study tracks are built.
+<!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
----
+1 study guide in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+
+| Cert | Code | Level | Status | Notes |
+|------|------|-------|--------|------:|
+| [Palo Alto Networks Certified Network Security Administrator (PCNSA)](pcnsa/) | PCNSA | - | Outline ◇ | - |
+
+◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
+
+<!-- END GENERATED: provider-certs -->
 
 ## Official Resources
 

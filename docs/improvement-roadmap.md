@@ -67,7 +67,7 @@ is how 383 breaks accumulated unnoticed.
 Now split into two jobs:
 
 - **Internal links (blocking)** - `.github/scripts/check-internal-links.py`. Offline, no
-  network flake, code-fence aware, exits non-zero on any break. Currently checks 2,620
+  network flake, code-fence aware, exits non-zero on any break. Currently checks 2,799
   links.
 - **External URLs (advisory)** - lychee, still `fail: false` with the weekly issue-filing,
   because vendor URL rot is not the contributor's fault.
@@ -162,7 +162,7 @@ AWS and Azure are well served. Nothing exists for NVIDIA (10 certs), HashiCorp b
 FinOps beyond Practitioner (1 of 4), MongoDB, Confluent, GitHub, Oracle, IBM, ISACA,
 Anthropic, or any of the newer CNCF exams.
 
-### 2.3 - Twenty-one of 27 provider directories have no index README
+### 2.3 - Twenty-one of 27 provider directories have no index README (fixed 2026-07-29)
 
 Only `cloud-security-alliance`, `isaca`, `isc2`, `offensive-security`,
 `palo-alto-networks`, and `servicenow` have one. `STUDY-HUB.md` links to
@@ -249,15 +249,24 @@ and [2.1](#21---ten-certs-have-zero-notes) are closed.
 
 ## 4. Structural and experience improvements
 
-### 4.1 - A machine-readable cert index
+### 4.1 - A machine-readable cert index (done 2026-07-29)
 
-Add `docs/certs.json` (or `.yaml`) generated from the fact-sheets: provider, exam code,
-name, level, status (active / retired / anticipated), duration, cost, path, last-updated.
+`docs/certs.json` is generated from the fact-sheets by
+`.github/scripts/build-certs-index.py`: provider, exam code, name, level, status
+(active / outline / retired / anticipated), duration, questions, passing score, cost,
+validity, delivery, notes count, which standard files exist, and last-updated.
 
-This single file would let us generate the STUDY-HUB provider table, the per-provider
-index READMEs, the freshness ledger, and the badge counts - which removes the entire class
-of drift documented in [1.3](#13---navigation-counts-had-drifted-from-reality-fixed-2026-07-29). Generated
-tables cannot go stale the way hand-maintained ones do.
+`.github/scripts/build-provider-indexes.py` generates the STUDY-HUB provider table and
+all 27 per-provider index READMEs from it, and CI fails if either is stale. That removes
+the drift class documented in
+[1.3](#13---navigation-counts-had-drifted-from-reality-fixed-2026-07-29): generated tables
+cannot go stale the way hand-maintained ones did.
+
+Parser fill rates against the 137 fact-sheets: exam code 71%, cost 79%, duration 78%,
+validity 73%, passing score 72%, questions 62%, delivery 49%, format 26%, languages 16%.
+Unparseable fields are `null`, never guessed. The remaining gaps are mostly certs with no
+vendor exam code at all (GCP, Databricks, MongoDB, IBM), so the honest ceiling is below
+100%. Raising the rest is a matter of normalising fact-sheet frontmatter over time.
 
 ### 4.2 - Spaced repetition assets
 
@@ -322,7 +331,8 @@ mapping table in the projects index, turns two good resources into one better on
 
 **Phase 3 - leverage**
 
-11. Build `docs/certs.json` and generate the hub table, provider indexes, and ledger from it.
+11. ~~Build `docs/certs.json` and generate the hub table and provider indexes from it.~~
+    Done 2026-07-29. The freshness ledger still generates independently.
 12. Add practice questions for the highest-traffic uncovered certs (103 lack them).
 13. Add Tier 1 certifications, starting with SC-100/SC-300, the CNCF associates, and the
     Oracle and Google AI exams.

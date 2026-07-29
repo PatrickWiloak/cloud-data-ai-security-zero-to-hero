@@ -18,7 +18,10 @@ This directory holds CI workflows, validation scripts, and contributor templates
 │   ├── markdown-lint.yml
 │   └── structure-validate.yml
 └── scripts/                  # local-runnable validators + helpers
+    ├── build-certs-index.py
     ├── build-freshness-ledger.sh
+    ├── build-provider-indexes.py
+    ├── check-internal-links.py
     ├── check-orphan-links.sh
     ├── glossary-add-anchors.py
     ├── glossary-autolink.py
@@ -35,9 +38,9 @@ GitHub Actions run on PR, push to main, and a weekly schedule. All four are desi
 
 | Workflow | Triggers | What it does | Strict? |
 |---|---|---|---|
-| `link-check.yml` | PR, push, weekly Mondays | Runs lychee against all markdown. Opens an auto-issue on weekly failure. | Yes (PR fails on broken links) |
+| `link-check.yml` | PR, push, weekly Mondays | Two jobs. **Internal** runs `check-internal-links.py` and blocks the merge. **External** runs lychee and opens an auto-issue on weekly failure. | Internal: yes. External: no (vendor URL rot is not a contributor's fault) |
 | `markdown-lint.yml` | PR, push | Runs `markdownlint-cli2` against `.markdownlint.json` config | Yes |
-| `structure-validate.yml` | PR, push | Runs `validate-cert-structure.sh` and `validate-frontmatter.sh` | Yes (fails on missing required files / malformed frontmatter; warns are advisory) |
+| `structure-validate.yml` | PR, push | Runs `validate-cert-structure.sh`, `validate-frontmatter.sh`, and `--check` on both index generators | Yes (fails on missing required files, malformed frontmatter, or stale generated files; warns are advisory) |
 | `cspell.yml` | PR, push to `**/*.md` | Spell-checks against `.cspell.json` | No (currently non-strict; will flip once dictionary is tuned) |
 
 ## Scripts
@@ -47,7 +50,7 @@ All scripts are runnable locally. They print human-readable output and exit non-
 ### Validators (also run in CI)
 
 **`validate-cert-structure.sh`**
-Walks `exams/<provider>/<cert>/` directories. Hard-fails on missing `README.md`. Warns on missing `fact-sheet.md`, `practice-plan.md`, and (for senior-tier certs only) `scenarios.md` + `strategy.md`. Tier classification: senior = path contains `/professional/`, `/specialty/`, `/expert/`, OR matches a curated cert-basename list. Junior tiers don't get scenarios + strategy warnings.
+Walks `exams/<provider>/<cert>/` directories, discovered by the presence of `fact-sheet.md`. Discovery deliberately does not key off a `notes/` subdir: that skipped every cert whose notes were still undrafted, which are the ones most likely to be incomplete. Hard-fails on missing `README.md`. Warns on missing `fact-sheet.md`, `practice-plan.md`, and (for senior-tier certs only) `scenarios.md` + `strategy.md`. Tier classification: senior = path contains `/professional/`, `/specialty/`, `/expert/`, OR matches a curated cert-basename list. Junior tiers don't get scenarios + strategy warnings.
 
 ```bash
 bash .github/scripts/validate-cert-structure.sh
@@ -72,6 +75,34 @@ Lists `.md` files with zero inbound links from other markdown. Useful before ret
 
 ```bash
 bash .github/scripts/check-orphan-links.sh
+```
+
+### Index generators (also run in CI)
+
+**`build-certs-index.py`**
+Parses every `exams/**/fact-sheet.md` into `docs/certs.json`: exam code, level, status, duration, cost, passing score, notes count, and which standard files exist. This file is the source of truth for anything that counts or lists certs. Fields that cannot be parsed are `null` rather than guessed, because a wrong value would propagate into every generated table.
+
+```bash
+python3 .github/scripts/build-certs-index.py            # write docs/certs.json
+python3 .github/scripts/build-certs-index.py --report   # per-field fill rates
+python3 .github/scripts/build-certs-index.py --check    # CI mode: fail if stale
+```
+
+Status is derived: `retired` and `anticipated` from the README banner, `outline` when no notes are drafted, otherwise `active`.
+
+**`build-provider-indexes.py`**
+Generates the per-provider index tables in `exams/<provider>/README.md` and the provider table in `STUDY-HUB.md` from `docs/certs.json`. Only the block between the `<!-- BEGIN GENERATED: ... -->` markers is replaced, so the hand-written editorial content in the six curated provider READMEs survives regeneration. The one-line "Highlights" blurb per provider stays curated in `PROVIDER_HIGHLIGHTS` inside the script.
+
+```bash
+python3 .github/scripts/build-provider-indexes.py
+python3 .github/scripts/build-provider-indexes.py --check
+```
+
+**`check-internal-links.py`**
+Verifies every relative markdown link resolves on disk. Skips fenced code blocks, inline code spans, external schemes, and `<placeholder>` targets. Blocking in CI.
+
+```bash
+python3 .github/scripts/check-internal-links.py
 ```
 
 ### Glossary autolink (mutates files)
@@ -116,7 +147,9 @@ python3 .github/scripts/glossary-upgrade-existing-links.py
 
 | Trigger | What to update |
 |---|---|
-| New cert added | `validate-cert-structure.sh` automatically picks it up; if it's a new senior tier, add to the curated senior-cert list in the script |
+| New cert added | Add `fact-sheet.md`, then run `build-certs-index.py` and `build-provider-indexes.py` so counts and tables regenerate. If it's a new senior tier, add it to the curated senior-cert list in `validate-cert-structure.sh` |
+| New provider added | Add a display name to `PROVIDER_NAMES` and a highlights line to `PROVIDER_HIGHLIGHTS`, then regenerate. CI fails until both generators are re-run |
+| Cert renamed, retired, or its fact-sheet edited | Re-run both generators. `structure-validate.yml` fails with the exact command if you forget |
 | New concept / hands-on / topic page | Add `last-updated` frontmatter; rerun `build-freshness-ledger.sh` |
 | New content shape (matrix / postmortem / playlist / etc.) | Add the file path glob to `validate-frontmatter.sh` and `glossary-autolink.py` |
 | New glossary term | Run `glossary-add-anchors.py` then `glossary-autolink.py` |

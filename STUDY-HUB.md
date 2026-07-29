@@ -162,6 +162,8 @@ What's your starting point?
 
 ## 📋 Certifications by Provider
 
+<!-- BEGIN GENERATED: provider-table - edit .github/scripts/build-provider-indexes.py, not this block -->
+
 | Provider | Count | Highlights | Browse |
 |----------|------:|------------|--------|
 | **AWS** | 18 | CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, Quantum (QPC-C01); 4 retired specialties retained | [exams/aws/](./exams/aws/) |
@@ -174,27 +176,28 @@ What's your starting point?
 | **Snowflake** | 4 | SnowPro Core + 3 Advanced (Architect, Data Eng, Admin) | [exams/snowflake/](./exams/snowflake/) |
 | **GitHub** | 5 | Foundations, Actions, Administration, Advanced Security, Copilot | [exams/github/](./exams/github/) |
 | **Red Hat** | 2 | RHCSA (EX200), OpenShift Administrator (EX280) | [exams/redhat/](./exams/redhat/) |
-| **Cisco** | 2 | CCNA (200-301), CCNP Enterprise ENCOR (350-401) ◇ | [exams/cisco/](./exams/cisco/) |
-| **Salesforce** | 3 | Administrator, Platform Developer I, Platform Developer II ◇ | [exams/salesforce/](./exams/salesforce/) |
+| **Cisco** | 2 | CCNA (200-301), CCNP Enterprise ENCOR (350-401) (1 at outline stage ◇) | [exams/cisco/](./exams/cisco/) |
+| **Salesforce** | 3 | Administrator, Platform Developer I, Platform Developer II (1 at outline stage ◇) | [exams/salesforce/](./exams/salesforce/) |
 | **Confluent/Kafka** | 2 | Certified Developer, Certified Administrator | [exams/confluent/](./exams/confluent/) |
 | **MongoDB** | 3 | Associate Developer, DBA, Atlas Administrator | [exams/mongodb/](./exams/mongodb/) |
 | **FinOps Foundation** | 4 | Practitioner, Engineer, Analyst, Professional | [exams/finops/](./exams/finops/) |
-| **CompTIA** | 4 | Cloud+ (CV0-004), Security+ (SY0-701), Network+ ◇, CySA+ ◇ | [exams/comptia/](./exams/comptia/) |
+| **CompTIA** | 4 | Cloud+ (CV0-004), Security+ (SY0-701), Network+, CySA+ (2 at outline stage ◇) | [exams/comptia/](./exams/comptia/) |
 | **ISC2** | 2 | CISSP, CCSP | [exams/isc2/](./exams/isc2/) |
-| **ISACA** | 2 | CISA ◇, CISM ◇ | [exams/isaca/](./exams/isaca/) |
+| **ISACA** | 2 | CISA, CISM (2 at outline stage ◇) | [exams/isaca/](./exams/isaca/) |
 | **Cloud Security Alliance** | 1 | CCSK v5 | [exams/cloud-security-alliance/](./exams/cloud-security-alliance/) |
-| **Offensive Security** | 1 | OSCP (PEN-200) ◇ | [exams/offensive-security/](./exams/offensive-security/) |
-| **Palo Alto Networks** | 1 | PCNSA ◇ | [exams/palo-alto-networks/](./exams/palo-alto-networks/) |
+| **Offensive Security** | 1 | OSCP (PEN-200) (1 at outline stage ◇) | [exams/offensive-security/](./exams/offensive-security/) |
+| **Palo Alto Networks** | 1 | PCNSA (1 at outline stage ◇) | [exams/palo-alto-networks/](./exams/palo-alto-networks/) |
 | **Linux Foundation** | 2 | LFCS, LFCA | [exams/linux-foundation/](./exams/linux-foundation/) |
 | **Oracle Cloud (OCI)** | 5 | Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc | [exams/oracle/](./exams/oracle/) |
 | **IBM Cloud** | 5 | Advocate, Developer, Solution Architect, Security, SRE | [exams/ibm/](./exams/ibm/) |
-| **ServiceNow** | 1 | Certified System Administrator ◇ | [exams/servicenow/](./exams/servicenow/) |
-| **VMware** | 1 | VCP-DCV (2V0-21.23) ◇ | [exams/vmware/](./exams/vmware/) |
+| **ServiceNow** | 1 | Certified System Administrator (1 at outline stage ◇) | [exams/servicenow/](./exams/servicenow/) |
+| **VMware** | 1 | VCP-DCV (2V0-21.23) (1 at outline stage ◇) | [exams/vmware/](./exams/vmware/) |
 | **CERTIFICATIONS TOTAL** | **133** | across 26 providers | |
 | **Anthropic Claude (study tracks)** | 4 | Architect Foundations + Advanced, Application Developer, Prompt Engineering Specialist | [exams/anthropic/](./exams/anthropic/) |
 
-◇ = outline stage: README, fact-sheet, and practice plan are written; topic notes are
-outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting queue.
+◇ = outline stage: README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting queue.
+
+<!-- END GENERATED: provider-table -->
 
 ---
 

@@ -5,19 +5,27 @@ on:
     branches: [main]
     paths:
       - 'exams/**'
+      - 'docs/certs.json'
+      - 'STUDY-HUB.md'
       - 'learn/**'
       - 'resources/hands-on-projects/**'
       - '.github/scripts/validate-cert-structure.sh'
       - '.github/scripts/validate-frontmatter.sh'
       - '.github/scripts/build-freshness-ledger.sh'
+      - '.github/scripts/build-certs-index.py'
+      - '.github/scripts/build-provider-indexes.py'
   pull_request:
     paths:
       - 'exams/**'
+      - 'docs/certs.json'
+      - 'STUDY-HUB.md'
       - 'learn/**'
       - 'resources/hands-on-projects/**'
       - '.github/scripts/validate-cert-structure.sh'
       - '.github/scripts/validate-frontmatter.sh'
       - '.github/scripts/build-freshness-ledger.sh'
+      - '.github/scripts/build-certs-index.py'
+      - '.github/scripts/build-provider-indexes.py'
   workflow_dispatch:
 
 permissions:
@@ -34,6 +42,15 @@ jobs:
 
       - name: Run frontmatter validator
         run: bash .github/scripts/validate-frontmatter.sh
+
+      # certs.json is the source of truth for every generated count and table.
+      # If a cert was added, renamed, or had its fact-sheet edited without
+      # regenerating, these fail with the command to run.
+      - name: Check cert index is current
+        run: python3 .github/scripts/build-certs-index.py --check
+
+      - name: Check generated navigation is current
+        run: python3 .github/scripts/build-provider-indexes.py --check
 
       - name: Build freshness ledger (preview)
         run: bash .github/scripts/build-freshness-ledger.sh > /tmp/freshness.preview.md && head -40 /tmp/freshness.preview.md

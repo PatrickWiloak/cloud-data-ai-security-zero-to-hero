@@ -33,14 +33,14 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 
 - [ ] Write notes for the 10 outline-stage certs (cisco/ccnp-encor, comptia/cysa-plus, comptia/network-plus, isaca/cisa, isaca/cism, offensive-security/oscp, palo-alto/pcnsa, salesforce/pd2, servicenow/csa, vmware/vcp-dcv). As each lands, restore the real links and drop its `_(planned)_` markers and the outline-stage banner.
 - [ ] Resolve the diagram standard: produce PNGs under `assets/diagrams/` (currently zero exist) or promote mermaid to primary in `CLAUDE.md` and `docs/ARCHITECTURE.md`.
-- [ ] Add index READMEs to the 21 provider directories that lack one.
+- [x] ~~Add index READMEs to the 21 provider directories that lack one~~ ✅ done 2026-07-29 (all 27 now generated from `docs/certs.json`; the 6 hand-written ones kept their editorial content)
 - [ ] Complete `aws/professional/genai-developer-aip-c01` (missing practice-plan, scenarios, strategy) and link it from the hub.
 - [ ] Move `exams/aws/genai` under `foundational/` as the AI Practitioner cert; reconcile `azure/genai` and `gcp/genai` placement.
 - [ ] Replace the 2 remaining `last-updated: YYYY-MM-DD` placeholders.
 
 ### Priority 3 - leverage
 
-- [ ] Build `docs/certs.json` from fact-sheets; generate the hub table, provider indexes, and freshness ledger from it.
+- [x] ~~Build `docs/certs.json` from fact-sheets; generate the hub table and provider indexes from it~~ ✅ done 2026-07-29 (CI fails if either is stale). Freshness ledger still generates independently - fold it in if it drifts.
 - [ ] Add practice questions for uncovered certs (34 of 137 covered today).
 - [ ] Add Tier 1 certifications: SC-100, SC-300, SC-400, PL-300, CNCF associates (OTCA/CGOA/CAPA/CCA/CNPA), Oracle OCI GenAI, Google GenAI Leader, ISC2 CC, an observability cert.
 - [ ] Stagger `last-updated` re-verification by provider batch so 326 files do not all go stale on 2026-10-30.

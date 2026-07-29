@@ -25,8 +25,17 @@ ISC2 certifications are among the most respected in the information security ind
 
 ## Certifications in This Repository
 
-- [CISSP](cissp/) - Certified Information Systems Security Professional
-- [CCSP](ccsp/) - Certified Cloud Security Professional
+
+<!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
+
+2 study guides in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+
+| Cert | Code | Level | Status | Notes |
+|------|------|-------|--------|------:|
+| [CCSP - Certified Cloud Security Professional](ccsp/) | CCSP | Professional | Ready | 6 |
+| [CISSP - Certified Information Systems Security Professional](cissp/) | CISSP | Professional | Ready | 8 |
+
+<!-- END GENERATED: provider-certs -->
 
 ## Certification Maintenance
 

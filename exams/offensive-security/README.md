@@ -55,4 +55,16 @@ All OffSec material is for **authorized penetration testing only**. The skills t
 
 ## Available Study Guides in This Repo
 
-- [OSCP / PEN-200](oscp-pen-200/) - foundational penetration testing cert
+
+<!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
+
+1 study guide in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+
+| Cert | Code | Level | Status | Notes |
+|------|------|-------|--------|------:|
+| [Offensive Security Certified Professional (OSCP / PEN-200)](oscp-pen-200/) | OSCP (course PEN-200) | Professional | Outline ◇ | - |
+
+◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
+
+<!-- END GENERATED: provider-certs -->
+

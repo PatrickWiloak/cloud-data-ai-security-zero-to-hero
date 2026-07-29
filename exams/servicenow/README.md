@@ -76,3 +76,17 @@ The CTA is years away from a typical CSA pass and gates on hands-on architecture
 - **[Personal Developer Instance (PDI)](https://developer.servicenow.com/dev.do)** - free dedicated instance for hands-on practice. Hibernates after inactivity but wakes on login.
 - **[Developer Portal](https://developer.servicenow.com/)** - docs, APIs, sample apps.
 - **[ServiceNow Community](https://www.servicenow.com/community/)** - Q&A, release notes discussion.
+
+## Study guides in this repo
+
+<!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
+
+1 study guide in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+
+| Cert | Code | Level | Status | Notes |
+|------|------|-------|--------|------:|
+| [ServiceNow Certified System Administrator (CSA)](csa/) | CSA | - | Outline ◇ | - |
+
+◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
+
+<!-- END GENERATED: provider-certs -->
