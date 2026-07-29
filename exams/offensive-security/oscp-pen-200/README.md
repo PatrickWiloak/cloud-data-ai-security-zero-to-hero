@@ -1,5 +1,10 @@
 # Offensive Security Certified Professional (OSCP / PEN-200)
 
+> **Study-guide status: outline stage.** The README, fact-sheet, and practice plan are
+> written. The topic notes are outlined but not yet drafted - entries marked _(planned)_
+> below do not exist yet. Track progress in [TODO.md](../../../TODO.md).
+
+
 ## Exam Overview
 
 The Offensive Security Certified Professional (OSCP) is the practical penetration testing certification awarded by [Offensive Security](https://www.offensive-security.com/) upon completion of the **PEN-200: Penetration Testing with Kali Linux** course. It is widely considered the most respected entry-to-mid-level offensive security credential, primarily because its exam is a full 24-hour hands-on hacking lab followed by a 24-hour professional report write-up.
@@ -114,12 +119,12 @@ PEN-200's current syllabus removes buffer overflow and emphasizes practical pene
 ## Study Materials
 
 ### Notes
-- [01 - Information Gathering and Enumeration](notes/01-information-gathering-enumeration.md)
-- [02 - Vulnerability Scanning and Web Attacks](notes/02-vulnerability-scanning-web-attacks.md)
-- [03 - Exploitation and Client-Side Attacks](notes/03-exploitation-client-side.md)
-- [04 - Privilege Escalation (Linux + Windows)](notes/04-privilege-escalation.md)
-- [05 - Active Directory Attacks](notes/05-active-directory-attacks.md)
-- [06 - Pivoting, Tunneling, and Post-Exploitation](notes/06-pivoting-tunneling-post-exploitation.md)
+- 01 - Information Gathering and Enumeration _(planned)_
+- 02 - Vulnerability Scanning and Web Attacks _(planned)_
+- 03 - Exploitation and Client-Side Attacks _(planned)_
+- 04 - Privilege Escalation (Linux + Windows) _(planned)_
+- 05 - Active Directory Attacks _(planned)_
+- 06 - Pivoting, Tunneling, and Post-Exploitation _(planned)_
 
 ### Study Resources
 - [Fact Sheet](fact-sheet.md) - Command cheat sheet, payloads, syntax reference

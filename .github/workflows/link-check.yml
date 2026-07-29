@@ -5,9 +5,11 @@ on:
     branches: [main]
     paths:
       - '**/*.md'
+      - '.github/scripts/check-internal-links.py'
   pull_request:
     paths:
       - '**/*.md'
+      - '.github/scripts/check-internal-links.py'
   schedule:
     - cron: '0 6 * * 1'  # Mondays 06:00 UTC, catches vendor URL drift
   workflow_dispatch:
@@ -17,7 +19,21 @@ permissions:
   issues: write
 
 jobs:
-  lychee:
+  # Internal links point at files in this repo, so a break is always our bug.
+  # This job blocks the merge.
+  internal:
+    name: Internal links (blocking)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check relative markdown links resolve
+        run: python3 .github/scripts/check-internal-links.py
+
+  # External vendor URLs rot for reasons outside a contributor's control, so this
+  # job is advisory. The weekly run files an issue instead of failing a PR.
+  external:
+    name: External URLs (advisory)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -35,6 +51,8 @@ jobs:
             --accept 200,206,403,429
             --exclude-loopback
             --exclude-mail
+            --scheme https
+            --scheme http
             './**/*.md'
           fail: false
           output: ./lychee-report.md

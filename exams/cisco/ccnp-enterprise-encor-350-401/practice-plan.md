@@ -18,7 +18,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 
 ### Reading
 - [ ] [README.md](./README.md), [fact-sheet.md](./fact-sheet.md) skim end to end
-- [ ] [notes/01-architecture.md](./notes/01-architecture.md) deep read
+- [ ] notes/01-architecture.md _(planned)_ deep read
 - [ ] Cisco Validated Design (CVD) docs: Campus LAN and Wireless LAN Design Guide
 
 ### Self-check
@@ -31,7 +31,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 2 - SD-WAN and SD-Access
 
 ### Reading
-- [ ] [notes/01-architecture.md](./notes/01-architecture.md) SD-WAN and SD-Access sections
+- [ ] notes/01-architecture.md _(planned)_ SD-WAN and SD-Access sections
 - [ ] Cisco SD-WAN Design Guide
 - [ ] Cisco SD-Access Solution Design Guide
 
@@ -51,7 +51,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 3 - QoS
 
 ### Reading
-- [ ] [notes/01-architecture.md](./notes/01-architecture.md) QoS section
+- [ ] notes/01-architecture.md _(planned)_ QoS section
 - [ ] Cisco Enterprise QoS SRND
 
 ### Hands-on
@@ -70,7 +70,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 4 - Virtualization
 
 ### Reading
-- [ ] [notes/02-virtualization.md](./notes/02-virtualization.md) full
+- [ ] notes/02-virtualization.md _(planned)_ full
 
 ### Hands-on
 - [ ] Configure VRF-Lite with two VRFs (RED, BLUE), verify traffic isolation
@@ -88,7 +88,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 5 - Layer 2 (STP variants and EtherChannel)
 
 ### Reading
-- [ ] [notes/03-infrastructure.md](./notes/03-infrastructure.md) Layer 2 section
+- [ ] notes/03-infrastructure.md _(planned)_ Layer 2 section
 
 ### Hands-on
 - [ ] Build a 4-switch topology with redundant trunks
@@ -107,7 +107,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 6 - EIGRP
 
 ### Reading
-- [ ] [notes/03-infrastructure.md](./notes/03-infrastructure.md) EIGRP section
+- [ ] notes/03-infrastructure.md _(planned)_ EIGRP section
 
 ### Hands-on
 - [ ] Named-mode EIGRP across 4 routers
@@ -126,7 +126,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 7 - OSPF Multi-Area
 
 ### Reading
-- [ ] [notes/03-infrastructure.md](./notes/03-infrastructure.md) OSPF section
+- [ ] notes/03-infrastructure.md _(planned)_ OSPF section
 - [ ] Memorize LSA types and area types
 
 ### Hands-on
@@ -146,7 +146,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 8 - BGP
 
 ### Reading
-- [ ] [notes/03-infrastructure.md](./notes/03-infrastructure.md) BGP section
+- [ ] notes/03-infrastructure.md _(planned)_ BGP section
 - [ ] Memorize best-path attribute order
 
 ### Hands-on
@@ -166,7 +166,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 9 - Wireless (Architecture + RF)
 
 ### Reading
-- [ ] [notes/03-infrastructure.md](./notes/03-infrastructure.md) Wireless section
+- [ ] notes/03-infrastructure.md _(planned)_ Wireless section
 
 ### Hands-on (DevNet Sandbox or Catalyst 9800-CL on CML)
 - [ ] Configure WLC with 2 SSIDs (open + WPA2-Enterprise via RADIUS)
@@ -186,7 +186,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 10 - IP Services (FHRP, NTP, NAT, Multicast)
 
 ### Reading
-- [ ] [notes/03-infrastructure.md](./notes/03-infrastructure.md) IP Services section
+- [ ] notes/03-infrastructure.md _(planned)_ IP Services section
 
 ### Hands-on
 - [ ] HSRPv2 with priority + preempt + interface tracking
@@ -206,7 +206,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 11 - Network Assurance
 
 ### Reading
-- [ ] [notes/04-network-assurance.md](./notes/04-network-assurance.md) full
+- [ ] notes/04-network-assurance.md _(planned)_ full
 
 ### Hands-on
 - [ ] Conditional debug: `debug ip ospf hello`, then constrain with `debug condition interface gi0/0`
@@ -226,7 +226,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 12 - Security
 
 ### Reading
-- [ ] [notes/05-security.md](./notes/05-security.md) full
+- [ ] notes/05-security.md _(planned)_ full
 
 ### Hands-on
 - [ ] AAA with TACACS+ (use `tac_plus` on Linux or DevNet) + local fallback
@@ -248,7 +248,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 13 - Automation, Part 1 (Python + REST)
 
 ### Reading
-- [ ] [notes/06-automation.md](./notes/06-automation.md) JSON/YAML/XML, REST, Python sections
+- [ ] notes/06-automation.md _(planned)_ JSON/YAML/XML, REST, Python sections
 
 ### Hands-on
 - [ ] Read 5 different Python scripts using `requests`; explain each line
@@ -267,7 +267,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 ## Week 14 - Automation, Part 2 (NETCONF / RESTCONF / Ansible / DNA Center)
 
 ### Reading
-- [ ] [notes/06-automation.md](./notes/06-automation.md) NETCONF, YANG, Ansible, DNA Center sections
+- [ ] notes/06-automation.md _(planned)_ NETCONF, YANG, Ansible, DNA Center sections
 
 ### Hands-on
 - [ ] Enable `netconf-yang` and `restconf` on a CSR1000v

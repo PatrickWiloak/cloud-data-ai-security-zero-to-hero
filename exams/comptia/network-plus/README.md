@@ -1,5 +1,10 @@
 # CompTIA Network+ (N10-009)
 
+> **Study-guide status: outline stage.** The README, fact-sheet, and practice plan are
+> written. The topic notes are outlined but not yet drafted - entries marked _(planned)_
+> below do not exist yet. Track progress in [TODO.md](../../../TODO.md).
+
+
 ## Overview
 
 The CompTIA Network+ (N10-009) certification validates the core skills required to design, configure, manage, and troubleshoot wired and wireless networks. It is a vendor-neutral cert recognized as the industry standard for entry-level networking professionals and is approved by the US Department of Defense to meet directive 8140 / 8570.01-M baseline requirements.
@@ -50,17 +55,17 @@ The CompTIA 7-step troubleshooting methodology, command-line tools (ping, tracer
 ## Study Materials
 
 ### Notes
-- [01 - Networking Concepts](notes/01-networking-concepts.md) - OSI model, ports/protocols, IP addressing, subnetting, services, topologies
-- [02 - Network Implementation](notes/02-network-implementation.md) - Routing, switching, VLANs, STP, wireless standards/security
-- [03 - Network Operations](notes/03-network-operations.md) - Documentation, monitoring, DR/BCP, organizational documents
-- [04 - Network Security](notes/04-network-security.md) - Threats, hardening, security devices, authentication, physical security
-- [05 - Network Troubleshooting](notes/05-network-troubleshooting.md) - Methodology, CLI tools, hardware tools, common issue patterns
+- 01 - Networking Concepts _(planned)_ - OSI model, ports/protocols, IP addressing, subnetting, services, topologies
+- 02 - Network Implementation _(planned)_ - Routing, switching, VLANs, STP, wireless standards/security
+- 03 - Network Operations _(planned)_ - Documentation, monitoring, DR/BCP, organizational documents
+- 04 - Network Security _(planned)_ - Threats, hardening, security devices, authentication, physical security
+- 05 - Network Troubleshooting _(planned)_ - Methodology, CLI tools, hardware tools, common issue patterns
 
 ### Study Resources
 - [Fact Sheet](fact-sheet.md) - Port numbers, subnetting tables, cable specs, command reference
 - [Practice Plan](practice-plan.md) - Structured 6-week study schedule
-- [Scenarios](scenarios.md) - Troubleshooting and lab scenarios
-- [Strategy](strategy.md) - Exam-day strategy and PBQ approach
+- Scenarios _(planned)_ - Troubleshooting and lab scenarios
+- Strategy _(planned)_ - Exam-day strategy and PBQ approach
 
 ## Recommended Study Time
 
@@ -88,9 +93,9 @@ Spend at least 15-20 hours in a lab. Subnetting and troubleshooting questions ar
 ## Companion Materials
 
 - **[CompTIA Security+ (SY0-701)](../security-plus/README.md)** - Direct follow-on cert. Network security overlaps heavily; many candidates take Net+ then Sec+ within the same year.
-- **[AWS Advanced Networking - Specialty (ANS-C01)](../../aws/specialty/advanced-networking/README.md)** - Cloud networking deep dive. Network+ subnetting, BGP, and VPN concepts are direct prerequisites in spirit.
-- **[Cisco CCNA (200-301)](../../cisco/ccna/README.md)** - Vendor-specific deeper dive into routing/switching. CCNA covers everything in Network+ plus Cisco IOS configuration. Many people study them in parallel.
-- **[GCP Professional Cloud Network Engineer](../../gcp/professional/cloud-network-engineer/README.md)** - GCP analogue to AWS ANS. Useful if your stack is on Google Cloud.
+- **[AWS Advanced Networking - Specialty (ANS-C01)](../../aws/specialty/advanced-networking-ans-c01/README.md)** - Cloud networking deep dive. Network+ subnetting, BGP, and VPN concepts are direct prerequisites in spirit.
+- **[Cisco CCNA (200-301)](../../cisco/ccna-200-301/README.md)** - Vendor-specific deeper dive into routing/switching. CCNA covers everything in Network+ plus Cisco IOS configuration. Many people study them in parallel.
+- **[GCP Professional Cloud Network Engineer](../../gcp/cloud-network-engineer/README.md)** - GCP analogue to AWS ANS. Useful if your stack is on Google Cloud.
 
 ## Exam-Day Tips
 

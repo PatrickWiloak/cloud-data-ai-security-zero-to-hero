@@ -177,7 +177,7 @@ AWS Solutions Architect - Professional (SAP-C02)
 - Cloud architecture principles
 
 **Study Resources:**
-- [Exam Notes](/exams/aws/foundational/cloud-practitioner-clf-c02/README.md)
+- [Exam Notes](../exams/aws/foundational/cloud-practitioner-clf-c02/README.md)
 - AWS Skill Builder (free digital training)
 - AWS Whitepapers (especially Cloud Adoption Framework)
 - AWS Certified Cloud Practitioner Official Study Guide
@@ -242,35 +242,35 @@ AWS Solutions Architect - Professional (SAP-C02)
 **Core Services to Master:**
 
 **Compute:**
-- [EC2](/exams/aws/shared/services/compute/ec2.md) - Virtual machines and instance types
-- [Lambda](/exams/aws/shared/services/compute/lambda.md) - Serverless compute
-- [ECS/EKS](/exams/aws/shared/services/compute/eks.md) - Container orchestration
-- [Elastic Beanstalk](/exams/aws/shared/services/compute/elastic-beanstalk.md) - PaaS offering
+- [EC2](../exams/aws/shared/services/compute/ec2.md) - Virtual machines and instance types
+- [Lambda](../exams/aws/shared/services/compute/lambda.md) - Serverless compute
+- [ECS/EKS](../exams/aws/shared/services/compute/eks.md) - Container orchestration
+- [Elastic Beanstalk](../exams/aws/shared/services/compute/elastic-beanstalk.md) - PaaS offering
 
 **Storage:**
-- [S3](/exams/aws/shared/services/storage/s3.md) - Object storage and lifecycle policies
-- [EBS](/exams/aws/shared/services/storage/ebs.md) - Block storage for EC2
-- [EFS](/exams/aws/shared/services/storage/efs.md) - Managed file system
-- [Storage Gateway](/exams/aws/shared/services/storage/storage-gateway.md) - Hybrid storage
+- [S3](../exams/aws/shared/services/storage/s3.md) - Object storage and lifecycle policies
+- [EBS](../exams/aws/shared/services/storage/ebs.md) - Block storage for EC2
+- [EFS](../exams/aws/shared/services/storage/efs.md) - Managed file system
+- [Storage Gateway](../exams/aws/shared/services/storage/storage-gateway.md) - Hybrid storage
 
 **Database:**
-- [RDS](/exams/aws/shared/services/database/rds.md) - Managed relational databases
-- [DynamoDB](/exams/aws/shared/services/database/dynamodb.md) - NoSQL database
-- [Aurora](/exams/aws/shared/services/database/aurora.md) - High-performance managed DB
-- [ElastiCache](/exams/aws/shared/services/database/elasticache.md) - In-memory caching
+- [RDS](../exams/aws/shared/services/database/rds.md) - Managed relational databases
+- [DynamoDB](../exams/aws/shared/services/database/dynamodb.md) - NoSQL database
+- [Aurora](../exams/aws/shared/services/database/aurora.md) - High-performance managed DB
+- [ElastiCache](../exams/aws/shared/services/database/elasticache.md) - In-memory caching
 
 **Networking:**
-- [VPC](/exams/aws/shared/services/networking/vpc.md) - Virtual private cloud
-- [Route 53](/exams/aws/shared/services/networking/route53.md) - DNS and traffic routing
-- [CloudFront](/exams/aws/shared/services/networking/cloudfront.md) - CDN
-- [ELB](/exams/aws/shared/services/networking/elb.md) - Load balancing
-- [API Gateway](/exams/aws/shared/services/networking/api-gateway.md) - API management
+- [VPC](../exams/aws/shared/services/networking/vpc.md) - Virtual private cloud
+- [Route 53](../exams/aws/shared/services/networking/route53.md) - DNS and traffic routing
+- [CloudFront](../exams/aws/shared/services/networking/cloudfront.md) - CDN
+- [ELB](../exams/aws/shared/services/networking/elb.md) - Load balancing
+- [API Gateway](../exams/aws/shared/services/networking/api-gateway.md) - API management
 
 **Security & Identity:**
-- [IAM](/exams/aws/shared/services/security-identity/iam.md) - Identity and access management
-- [KMS](/exams/aws/shared/services/security-identity/kms.md) - Key management
-- [Cognito](/exams/aws/shared/services/security-identity/cognito.md) - User authentication
-- [Secrets Manager](/exams/aws/shared/services/security-identity/secrets-manager.md) - Credential management
+- [IAM](../exams/aws/shared/services/security-identity/iam.md) - Identity and access management
+- [KMS](../exams/aws/shared/services/security-identity/kms.md) - Key management
+- [Cognito](../exams/aws/shared/services/security-identity/cognito.md) - User authentication
+- [Secrets Manager](../exams/aws/shared/services/security-identity/secrets-manager.md) - Credential management
 
 **Skills Gained:**
 - Design scalable, available, and fault-tolerant architectures
@@ -291,8 +291,8 @@ AWS Solutions Architect - Professional (SAP-C02)
 - Configure IAM roles and policies
 
 **Study Resources:**
-- [Exam Notes](/exams/aws/associate/solutions-architect-saa-c03/README.md)
-- [Practice Plan](/exams/aws/associate/solutions-architect-saa-c03/practice-plan.md)
+- [Exam Notes](../exams/aws/associate/solutions-architect-saa-c03/README.md)
+- [Practice Plan](../exams/aws/associate/solutions-architect-saa-c03/practice-plan.md)
 - AWS Solutions Architect Associate Official Study Guide
 - A Cloud Guru or Udemy courses (Stephane Maarek recommended)
 - AWS Well-Architected Framework whitepaper
@@ -406,7 +406,7 @@ AWS Solutions Architect - Professional (SAP-C02)
 - Cost optimization for enterprise workloads
 
 **Study Resources:**
-- [Exam Notes](/exams/aws/professional/solutions-architect-pro-sap-c02/README.md)
+- [Exam Notes](../exams/aws/professional/solutions-architect-pro-sap-c02/README.md)
 - AWS Solutions Architect Professional Official Study Guide
 - Adrian Cantrill's SAP-C02 course (highly detailed)
 - AWS Architecture Center case studies
@@ -433,7 +433,7 @@ After achieving professional certification, consider specialties aligned with yo
 **Study Time**: 8-12 weeks (15-20 hours/week)
 **Prerequisites**: Associate-level security knowledge, 2+ years AWS security experience
 **Best For**: Security architects, security engineers, compliance specialists
-**Resources**: [Exam Notes](/exams/aws/specialty/security-scs-c02/README.md)
+**Resources**: [Exam Notes](../exams/aws/specialty/security-scs-c02/README.md)
 **Salary Impact**: $140,000-$190,000
 
 #### AWS Certified Machine Learning Engineer - Associate (MLA-C01)
@@ -444,7 +444,7 @@ After achieving professional certification, consider specialties aligned with yo
 **Study Time**: 8-12 weeks (15-20 hours/week)
 **Prerequisites**: 1+ year hands-on SageMaker experience
 **Best For**: ML engineers, applied scientists, data engineers moving into ML
-**Resources**: [Exam Notes](/exams/aws/associate/ml-engineer-mla-c01/README.md)
+**Resources**: [Exam Notes](../exams/aws/associate/ml-engineer-mla-c01/README.md)
 **Salary Impact**: $145,000-$200,000
 
 #### AWS Certified Advanced Networking - Specialty
@@ -525,8 +525,8 @@ Azure Solutions Architect Expert (AZ-305)
 - Fundamental security and compliance concepts
 
 **Study Resources:**
-- [Exam Notes](/exams/azure/az-900/README.md)
-- [Practice Plan](/exams/azure/az-900/practice-plan.md)
+- [Exam Notes](../exams/azure/az-900/README.md)
+- [Practice Plan](../exams/azure/az-900/practice-plan.md)
 - Microsoft Learn free training modules
 - Azure Fundamentals learning path
 
@@ -594,8 +594,8 @@ Azure Solutions Architect Expert (AZ-305)
 - Manage Azure identities and governance
 
 **Study Resources:**
-- [Exam Notes](/exams/azure/az-104/README.md)
-- [Practice Plan](/exams/azure/az-104/practice-plan.md)
+- [Exam Notes](../exams/azure/az-104/README.md)
+- [Practice Plan](../exams/azure/az-104/practice-plan.md)
 - Microsoft Learn AZ-104 learning path
 - Hands-on labs in Azure portal
 
@@ -663,25 +663,25 @@ Azure Solutions Architect Expert (AZ-305)
 - Azure Container Instances
 
 **Networking:**
-- [Azure Virtual Networks](/exams/azure/az-305/notes/networking.md)
+- [Azure Virtual Networks](../exams/azure/az-305/notes/networking.md)
 - Azure Load Balancer and Application Gateway
 - Azure Front Door and Traffic Manager
 - Azure ExpressRoute and VPN Gateway
 
 **Storage:**
-- [Azure Storage Services](/exams/azure/az-305/notes/storage.md)
+- [Azure Storage Services](../exams/azure/az-305/notes/storage.md)
 - Azure Blob Storage (Hot, Cool, Archive tiers)
 - Azure Files and NetApp Files
 - Azure Disk Storage
 
 **Databases:**
-- [Azure Database Services](/exams/azure/az-305/notes/databases.md)
+- [Azure Database Services](../exams/azure/az-305/notes/databases.md)
 - Azure SQL Database and Managed Instance
 - Azure Cosmos DB
 - Azure Database for PostgreSQL/MySQL
 
 **Security:**
-- [Azure Security and IAM](/exams/azure/az-305/notes/security-iam.md)
+- [Azure Security and IAM](../exams/azure/az-305/notes/security-iam.md)
 - Microsoft Entra ID (Azure AD)
 - Azure Key Vault
 - Azure Security Center and Sentinel
@@ -704,7 +704,7 @@ Azure Solutions Architect Expert (AZ-305)
 - Azure landing zones implementation
 
 **Study Resources:**
-- [Exam Notes - Compute & Containers](/exams/azure/az-305/notes/compute-containers.md)
+- [Exam Notes - Compute & Containers](../exams/azure/az-305/notes/compute-containers.md)
 - Microsoft Learn AZ-305 learning path
 - Microsoft Azure Architect Design official study guide
 - John Savill's Azure Master Class (YouTube)
@@ -726,7 +726,7 @@ Azure Solutions Architect Expert (AZ-305)
 **Focus**: Security controls, identity management, security operations
 **Study Time**: 8-12 weeks (12-18 hours/week)
 **Prerequisites**: AZ-104 or equivalent experience
-**Resources**: [Exam Notes](/exams/azure/az-500/README.md)
+**Resources**: [Exam Notes](../exams/azure/az-500/README.md)
 **Salary Impact**: $130,000-$180,000
 
 #### Microsoft Certified: Azure DevOps Engineer Expert (AZ-400)
@@ -734,7 +734,7 @@ Azure Solutions Architect Expert (AZ-305)
 **Focus**: DevOps practices, CI/CD, infrastructure as code
 **Study Time**: 8-12 weeks (15-20 hours/week)
 **Prerequisites**: AZ-104 or AZ-204 required
-**Resources**: [Exam Notes](/exams/azure/az-400/README.md)
+**Resources**: [Exam Notes](../exams/azure/az-400/README.md)
 **Salary Impact**: $125,000-$175,000
 
 ---
@@ -789,8 +789,8 @@ Professional Cloud Architect
 - Basic GCP terminology
 
 **Study Resources:**
-- [Exam Notes](/exams/gcp/cloud-digital-leader/README.md)
-- [Practice Plan](/exams/gcp/cloud-digital-leader/practice-plan.md)
+- [Exam Notes](../exams/gcp/cloud-digital-leader/README.md)
+- [Practice Plan](../exams/gcp/cloud-digital-leader/practice-plan.md)
 - Google Cloud Skills Boost
 
 **Career Impact:**
@@ -855,8 +855,8 @@ Professional Cloud Architect
 - Use gcloud CLI effectively
 
 **Study Resources:**
-- [Exam Notes](/exams/gcp/cloud-engineer/README.md)
-- [Practice Plan](/exams/gcp/cloud-engineer/practice-plan.md)
+- [Exam Notes](../exams/gcp/cloud-engineer/README.md)
+- [Practice Plan](../exams/gcp/cloud-engineer/practice-plan.md)
 - Google Cloud Skills Boost learning path
 - Hands-on labs in GCP Console
 
@@ -931,7 +931,7 @@ Professional Cloud Architect
 **Storage & Databases:**
 - Cloud Storage (Standard, Nearline, Coldline, Archive)
 - Cloud SQL and Cloud Spanner
-- [Bigtable, Firestore, Datastore](/exams/gcp/cloud-architect/notes/databases.md)
+- [Bigtable, Firestore, Datastore](../exams/gcp/cloud-architect/notes/databases.md)
 - Memorystore (Redis/Memcached)
 
 **Networking:**
@@ -942,11 +942,11 @@ Professional Cloud Architect
 
 **Data & Analytics:**
 - BigQuery
-- [Dataflow, Pub/Sub, Dataproc](/exams/gcp/cloud-architect/notes/integration-streaming.md)
+- [Dataflow, Pub/Sub, Dataproc](../exams/gcp/cloud-architect/notes/integration-streaming.md)
 - Cloud Composer (Airflow)
 
 **Security:**
-- [Cloud IAM](/exams/gcp/cloud-architect/notes/security-iam.md)
+- [Cloud IAM](../exams/gcp/cloud-architect/notes/security-iam.md)
 - Cloud KMS
 - Security Command Center
 - VPC Service Controls
@@ -961,7 +961,7 @@ Professional Cloud Architect
 - Architect Kubernetes-native applications
 
 **Study Resources:**
-- [Exam Notes](/exams/gcp/cloud-architect/README.md)
+- [Exam Notes](../exams/gcp/cloud-architect/README.md)
 - Google Cloud Architecture Framework
 - GCP case studies (especially exam case studies)
 - Coursera GCP Architect specialization
@@ -1077,9 +1077,9 @@ Professional Cloud Architect
 **Salary Range**: $150,000-$220,000
 
 **Resources:**
-- [AWS GenAI Certification](/exams/aws/genai/README.md)
-- [Azure AI Certification](/exams/azure/genai/README.md)
-- [GCP GenAI Certification](/exams/gcp/genai/README.md)
+- [AWS GenAI Certification](../exams/aws/genai/README.md)
+- [Azure AI Certification](../exams/azure/genai/README.md)
+- [GCP GenAI Certification](../exams/gcp/genai/README.md)
 
 ### DevOps Architecture Specialization
 

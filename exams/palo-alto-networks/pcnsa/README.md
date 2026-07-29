@@ -1,5 +1,10 @@
 # Palo Alto Networks Certified Network Security Administrator (PCNSA)
 
+> **Study-guide status: outline stage.** The README, fact-sheet, and practice plan are
+> written. The topic notes are outlined but not yet drafted - entries marked _(planned)_
+> below do not exist yet. Track progress in [TODO.md](../../../TODO.md).
+
+
 ## Overview
 
 The PCNSA validates day-to-day administrator skill on Palo Alto Networks next-generation firewalls (NGFW) running PAN-OS 11.x. It covers NGFW configuration, network connectivity, policy authoring, and the basics of the Palo Alto Networks portfolio. It is the first role-based certification in the Strata (network security) track and assumes you can operate the GUI, CLI, and API of a single firewall.
@@ -66,13 +71,13 @@ Security policy rules with rule types intrazone, interzone, universal (default f
 | File | Description |
 |---|---|
 | [fact-sheet.md](fact-sheet.md) | Quick reference - App-ID/User-ID/Content-ID, NAT types, CLI cheat sheet, security profile reference |
-| [notes/01-portfolio-architecture.md](notes/01-portfolio-architecture.md) | Strata/Prisma/Cortex, SP3 architecture, Zero Trust |
-| [notes/02-manage-configure-ngfw.md](notes/02-manage-configure-ngfw.md) | PAN-OS admin, Panorama, dynamic updates, HA, licensing |
-| [notes/03-connect-network-components.md](notes/03-connect-network-components.md) | Interfaces, zones, VRs, NAT, routing, DHCP |
-| [notes/04-security-policies.md](notes/04-security-policies.md) | Policy rules, App-ID, User-ID, security profiles, log forwarding |
+| notes/01-portfolio-architecture.md _(planned)_ | Strata/Prisma/Cortex, SP3 architecture, Zero Trust |
+| notes/02-manage-configure-ngfw.md _(planned)_ | PAN-OS admin, Panorama, dynamic updates, HA, licensing |
+| notes/03-connect-network-components.md _(planned)_ | Interfaces, zones, VRs, NAT, routing, DHCP |
+| notes/04-security-policies.md _(planned)_ | Policy rules, App-ID, User-ID, security profiles, log forwarding |
 | [practice-plan.md](practice-plan.md) | 8-week study plan |
-| [scenarios.md](scenarios.md) | 14 firewall configuration and troubleshooting scenarios |
-| [strategy.md](strategy.md) | Exam-day strategy and common pitfalls |
+| scenarios.md _(planned)_ | 14 firewall configuration and troubleshooting scenarios |
+| strategy.md _(planned)_ | Exam-day strategy and common pitfalls |
 
 ---
 
@@ -105,7 +110,7 @@ GUI is at `https://<mgt-ip>` (default `192.168.1.1`, admin/admin). CLI access vi
 
 - **[CompTIA Security+](../../comptia/security-plus/)** - foundational security concepts that map directly to Palo Alto features (zero trust, defense in depth, IDS/IPS)
 - **[Cisco CCNA 200-301](../../cisco/ccna-200-301/)** - networking fundamentals required to operate any firewall (subnetting, routing, VLANs, NAT)
-- **[AWS Security Specialty](../../aws/specialty/security-specialty/)** - cloud security parallels to Prisma Cloud and VM-Series in AWS
+- **[AWS Security Specialty](../../aws/specialty/security-scs-c02/)** - cloud security parallels to Prisma Cloud and VM-Series in AWS
 - **[Cloud Security Alliance CCSK](../../cloud-security-alliance/ccsk/)** - vendor-neutral cloud security knowledge that complements Prisma certifications
 
 ---

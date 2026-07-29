@@ -623,11 +623,11 @@ Cost: $298
    - Terminology translation
 
 2. **Leverage Service Comparison Guides:**
-   - [Compute Service Comparison](/resources/service-comparison-compute.md)
-   - [Storage Service Comparison](/resources/service-comparison-storage.md)
-   - [Database Service Comparison](/resources/service-comparison-databases.md)
-   - [Networking Service Comparison](/resources/service-comparison-networking.md)
-   - [AI/ML Service Comparison](/resources/service-comparison-ai-ml.md)
+   - [Compute Service Comparison](service-comparison-compute.md)
+   - [Storage Service Comparison](service-comparison-storage.md)
+   - [Database Service Comparison](service-comparison-databases.md)
+   - [Networking Service Comparison](service-comparison-networking.md)
+   - [AI/ML Service Comparison](service-comparison-ai-ml.md)
 
 3. **Build Cross-Platform Projects:**
    - Deploy same application on all clouds
@@ -1199,9 +1199,9 @@ Good luck on your certification journey!
 
 ## Related Resources
 
-- [Compute Service Comparison](/resources/service-comparison-compute.md)
-- [Storage Service Comparison](/resources/service-comparison-storage.md)
-- [Database Service Comparison](/resources/service-comparison-databases.md)
-- [Networking Service Comparison](/resources/service-comparison-networking.md)
-- [AI/ML Service Comparison](/resources/service-comparison-ai-ml.md)
+- [Compute Service Comparison](service-comparison-compute.md)
+- [Storage Service Comparison](service-comparison-storage.md)
+- [Database Service Comparison](service-comparison-databases.md)
+- [Networking Service Comparison](service-comparison-networking.md)
+- [AI/ML Service Comparison](service-comparison-ai-ml.md)
 

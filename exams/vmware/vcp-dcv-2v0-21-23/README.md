@@ -1,5 +1,10 @@
 # VMware Certified Professional - Data Center Virtualization 2024 (VCP-DCV, 2V0-21.23)
 
+> **Study-guide status: outline stage.** The README, fact-sheet, and practice plan are
+> written. The topic notes are outlined but not yet drafted - entries marked _(planned)_
+> below do not exist yet. Track progress in [TODO.md](../../../TODO.md).
+
+
 ## Overview
 
 The VCP-DCV certification validates skills in installing, configuring, managing, and troubleshooting a VMware vSphere 8 environment. It is the flagship VMware infrastructure certification and the de facto standard for virtualization and private-cloud admins.
@@ -85,12 +90,12 @@ VM lifecycle (power, snapshot, clone, template, content library). Permissions an
 | File | Description |
 |---|---|
 | [fact-sheet.md](fact-sheet.md) | vSphere 8 maximums, esxcli/PowerCLI cheat sheet, license tiers |
-| [notes/01-architecture-technologies.md](notes/01-architecture-technologies.md) | Section 1 - virtualization, licensing, editions, HCL |
-| [notes/02-vmware-solution.md](notes/02-vmware-solution.md) | Section 2 - vCenter, ESXi, vDS, vSAN, vMotion, HA, DRS, FT |
-| [notes/03-installation-configuration.md](notes/03-installation-configuration.md) | Section 4 - ESXi install, VCSA, networking, storage, VM creation |
-| [notes/04-performance-optimization-upgrades.md](notes/04-performance-optimization-upgrades.md) | Section 5 - resource pools, DRS, vLCM, performance tuning |
-| [notes/05-troubleshooting-repairing.md](notes/05-troubleshooting-repairing.md) | Section 6 - logs, esxtop, common failures |
-| [notes/06-administrative-operational-tasks.md](notes/06-administrative-operational-tasks.md) | Section 7 - VMs, snapshots, content library, RBAC, tags |
+| notes/01-architecture-technologies.md _(planned)_ | Section 1 - virtualization, licensing, editions, HCL |
+| notes/02-vmware-solution.md _(planned)_ | Section 2 - vCenter, ESXi, vDS, vSAN, vMotion, HA, DRS, FT |
+| notes/03-installation-configuration.md _(planned)_ | Section 4 - ESXi install, VCSA, networking, storage, VM creation |
+| notes/04-performance-optimization-upgrades.md _(planned)_ | Section 5 - resource pools, DRS, vLCM, performance tuning |
+| notes/05-troubleshooting-repairing.md _(planned)_ | Section 6 - logs, esxtop, common failures |
+| notes/06-administrative-operational-tasks.md _(planned)_ | Section 7 - VMs, snapshots, content library, RBAC, tags |
 | [practice-plan.md](practice-plan.md) | 8-week structured study schedule |
 | [scenarios.md](scenarios.md) | 15 vSphere admin and troubleshooting scenarios |
 | [strategy.md](strategy.md) | Exam-day tactics and time management |
@@ -122,8 +127,8 @@ You cannot pass VCP-DCV without hands-on time. Options ranked from cheapest to m
 
 ## Companion Materials in This Repo
 
-- **[AWS Solutions Architect Associate](../../aws/associate/solutions-architect-associate/)** - VMware Cloud on AWS context, hybrid migration patterns
-- **[Azure Administrator AZ-104](../../azure/administrator-az-104/)** - Azure VMware Solution as the hyperscale equivalent
+- **[AWS Solutions Architect Associate](../../aws/associate/solutions-architect-saa-c03/)** - VMware Cloud on AWS context, hybrid migration patterns
+- **[Azure Administrator AZ-104](../../azure/az-104/)** - Azure VMware Solution as the hyperscale equivalent
 - **[Kubernetes CKA](../../kubernetes/cka/)** - vSphere with Tanzu (TKG) is the Kubernetes side of vSphere
 - **[HashiCorp Terraform Associate](../../hashicorp/terraform-associate/)** - Terraform vSphere provider for IaC of vSphere environments
 - **[Cisco CCNA](../../cisco/ccna-200-301/)** - vSwitch / vDS networking concepts overlap with physical networking

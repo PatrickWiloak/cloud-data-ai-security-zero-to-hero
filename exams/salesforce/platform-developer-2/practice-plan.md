@@ -20,8 +20,8 @@ You **must** ship at least 3-5 non-trivial Apex / LWC / integration projects dur
 
 ## Week 1 - Foundations + Data Modeling
 
-- [ ] Read [notes/01-fundamentals.md](./notes/01-fundamentals.md)
-- [ ] Read [notes/02-data-modeling.md](./notes/02-data-modeling.md)
+- [ ] Read notes/01-fundamentals.md _(planned)_
+- [ ] Read notes/02-data-modeling.md _(planned)_
 - [ ] Trailhead: "Data Modeling" + "Build a Data Model on Salesforce"
 - [ ] Lab: Build a 3-object schema (master-detail, lookup, junction). Add roll-up summary, formula, validation rule.
 - [ ] Lab: Create a junction object for a many-to-many relationship between two custom objects.
@@ -29,7 +29,7 @@ You **must** ship at least 3-5 non-trivial Apex / LWC / integration projects dur
 
 ## Week 2 - Apex Triggers and Handler Patterns
 
-- [ ] Read [notes/03-process-automation-logic-integration.md](./notes/03-process-automation-logic-integration.md) (sections 1-3)
+- [ ] Read notes/03-process-automation-logic-integration.md _(planned)_ (sections 1-3)
 - [ ] Trailhead: "Apex Triggers" + "Apex Trigger Patterns"
 - [ ] Lab: One-trigger-per-object dispatcher with handler class.
 - [ ] Lab: Recursion guard using static class flag, tested with a self-referencing update.
@@ -38,7 +38,7 @@ You **must** ship at least 3-5 non-trivial Apex / LWC / integration projects dur
 
 ## Week 3 - Async Apex deep dive
 
-- [ ] Read [notes/03-process-automation-logic-integration.md](./notes/03-process-automation-logic-integration.md) (async sections)
+- [ ] Read notes/03-process-automation-logic-integration.md _(planned)_ (async sections)
 - [ ] Trailhead: "Asynchronous Apex" + "Apex Integration Services"
 - [ ] Lab: Write a `@future(callout=true)` and verify governor limits in debug log.
 - [ ] Lab: Queueable that chains itself for paginated processing (with `!Test.isRunningTest()` guard).
@@ -48,7 +48,7 @@ You **must** ship at least 3-5 non-trivial Apex / LWC / integration projects dur
 
 ## Week 4 - Integrations: REST/SOAP, Named Credentials, Platform Events
 
-- [ ] Read [notes/03-process-automation-logic-integration.md](./notes/03-process-automation-logic-integration.md) (integration sections)
+- [ ] Read notes/03-process-automation-logic-integration.md _(planned)_ (integration sections)
 - [ ] Trailhead: "Apex Integration Services" + "Platform Events Basics"
 - [ ] Lab: Build an Apex REST endpoint (`@RestResource`) supporting GET / POST / PATCH.
 - [ ] Lab: Configure a Named Credential (use `httpbin.org` or similar test endpoint) and call from a Queueable with `Database.AllowsCallouts`.
@@ -59,7 +59,7 @@ You **must** ship at least 3-5 non-trivial Apex / LWC / integration projects dur
 
 ## Week 5 - Lightning Web Components advanced
 
-- [ ] Read [notes/04-user-interface.md](./notes/04-user-interface.md)
+- [ ] Read notes/04-user-interface.md _(planned)_
 - [ ] Trailhead: "Lightning Web Components Specialist" + "Build a Conference Management App"
 - [ ] Lab: Parent + child LWC; child fires custom event with `bubbles: true, composed: true`.
 - [ ] Lab: LWC with `@wire` to `@AuraEnabled(cacheable=true)`; verify reactivity with `$propName` syntax.
@@ -70,7 +70,7 @@ You **must** ship at least 3-5 non-trivial Apex / LWC / integration projects dur
 
 ## Week 6 - Visualforce and Aura (legacy coverage)
 
-- [ ] Read [notes/04-user-interface.md](./notes/04-user-interface.md) (legacy sections)
+- [ ] Read notes/04-user-interface.md _(planned)_ (legacy sections)
 - [ ] Trailhead: "Visualforce Mobile" + "Aura Components Basics"
 - [ ] Lab: Visualforce page with custom controller and `actionFunction`.
 - [ ] Lab: Aura component embedding an LWC child.
@@ -78,7 +78,7 @@ You **must** ship at least 3-5 non-trivial Apex / LWC / integration projects dur
 
 ## Week 7 - Testing: Stub API, mocks, dependency injection
 
-- [ ] Read [notes/05-testing-debugging-deployment.md](./notes/05-testing-debugging-deployment.md) (testing sections)
+- [ ] Read notes/05-testing-debugging-deployment.md _(planned)_ (testing sections)
 - [ ] Trailhead: "Apex Testing" + "Apex Mocks Framework" reference
 - [ ] Lab: Refactor a service to take an interface dependency; mock the dependency in a test.
 - [ ] Lab: Use `Test.createStub` + `StubProvider` to mock a concrete class without an interface.
@@ -90,8 +90,8 @@ You **must** ship at least 3-5 non-trivial Apex / LWC / integration projects dur
 
 ## Week 8 - Debugging, performance, governor limits
 
-- [ ] Read [notes/06-performance.md](./notes/06-performance.md)
-- [ ] Read [notes/05-testing-debugging-deployment.md](./notes/05-testing-debugging-deployment.md) (debug + deploy sections)
+- [ ] Read notes/06-performance.md _(planned)_
+- [ ] Read notes/05-testing-debugging-deployment.md _(planned)_ (debug + deploy sections)
 - [ ] Trailhead: "Performance Profiling for Apex" + "Apex Performance Best Practices"
 - [ ] Lab: Use Developer Console -> Query Plan to optimize a non-selective SOQL.
 - [ ] Lab: Add `Limits.getQueries()` / `Limits.getCpuTime()` checkpoints in a long-running flow.
@@ -101,7 +101,7 @@ You **must** ship at least 3-5 non-trivial Apex / LWC / integration projects dur
 
 ## Week 9 - Deployment, packaging, SFDX
 
-- [ ] Read [notes/05-testing-debugging-deployment.md](./notes/05-testing-debugging-deployment.md) (deployment sections)
+- [ ] Read notes/05-testing-debugging-deployment.md _(planned)_ (deployment sections)
 - [ ] Trailhead: "Application Lifecycle Management" + "Unlocked Packages for Customers"
 - [ ] Lab: Convert your codebase into a 2GP unlocked package (`sf package create`, `sf package version create`).
 - [ ] Lab: Install the package in a fresh scratch org; verify metadata deployed.
@@ -116,7 +116,7 @@ You **must** ship at least 3-5 non-trivial Apex / LWC / integration projects dur
 - [ ] Practice exams: Focus On Force PDII (~3 attempts), Salesforce Ben PDII set, Trailhead practice
 - [ ] Score 80%+ on practice exams two days in a row
 - [ ] Re-read weak-domain notes
-- [ ] Review [strategy.md](./strategy.md) the day before the exam
+- [ ] Review strategy.md _(planned)_ the day before the exam
 
 ---
 

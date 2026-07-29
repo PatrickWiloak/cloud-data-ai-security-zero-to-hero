@@ -12,7 +12,9 @@
 #     network engineer, security engineer, K8s CKS, ISC2 CISSP/CCSP, ISACA CISM/CISA,
 #     advanced/expert codes, etc.)
 #
-# A "cert directory" is any directory under exams/<provider>/ that contains a notes/ subdir.
+# A "cert directory" is any directory under exams/<provider>/ that contains a fact-sheet.md.
+# Discovery used to key off a notes/ subdir, which silently skipped every cert whose notes
+# had not been written yet - exactly the dirs most likely to be incomplete.
 
 set -uo pipefail
 
@@ -69,8 +71,8 @@ warn_count=0
 checked=0
 senior_count=0
 
-# A cert dir contains a notes/ subdirectory.
-mapfile -t cert_dirs < <(find exams -type d -name notes | sed 's|/notes$||' | sort)
+# A cert dir contains a fact-sheet.md.
+mapfile -t cert_dirs < <(find exams -type f -name fact-sheet.md | sed 's|/fact-sheet.md$||' | sort)
 
 echo "Validating ${#cert_dirs[@]} cert directories (tier-aware)..."
 echo ""

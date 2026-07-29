@@ -1,5 +1,10 @@
 # Salesforce Certified Platform Developer II (PDII)
 
+> **Study-guide status: outline stage.** The README, fact-sheet, and practice plan are
+> written. The topic notes are outlined but not yet drafted - entries marked _(planned)_
+> below do not exist yet. Track progress in [TODO.md](../../../TODO.md).
+
+
 ## Overview
 
 The Platform Developer II (PDII) credential validates advanced programmatic skills on the Salesforce platform. Candidates demonstrate mastery of **Apex** (advanced async patterns, Stub API, dynamic Apex, design patterns), **integrations** (REST/SOAP, Platform Events, Change Data Capture, Named Credentials, External Services), **Lightning Web Components** (events, reactivity, performance), **testing** (mocks, dependency injection), and **deployment** (SFDX, 2GP packaging, Metadata API).
@@ -48,13 +53,13 @@ The exam emphasizes **architectural decision-making** under governor-limit const
 | [fact-sheet.md](fact-sheet.md) | High-yield reference: governor limits, async patterns, LWC lifecycle, test patterns |
 | [practice-plan.md](practice-plan.md) | 10-week study plan with hands-on labs |
 | [scenarios.md](scenarios.md) | 15 exam-style architecture/design scenarios with reasoning |
-| [strategy.md](strategy.md) | Exam tactics, time budgeting, format notes |
-| [notes/01-fundamentals.md](notes/01-fundamentals.md) | MVC, multi-tenant, declarative vs programmatic |
-| [notes/02-data-modeling.md](notes/02-data-modeling.md) | Relationships, schema design, LDV, skinny tables, indexing |
-| [notes/03-process-automation-logic-integration.md](notes/03-process-automation-logic-integration.md) | Apex async, SOQL/SOSL, REST/SOAP, Platform Events, CDC, Named Credentials |
-| [notes/04-user-interface.md](notes/04-user-interface.md) | LWC deep dive, Aura, Visualforce, events, LMS, LDS |
-| [notes/05-testing-debugging-deployment.md](notes/05-testing-debugging-deployment.md) | Test classes, Stub API, mocks, debug logs, SFDX, 2GP packaging |
-| [notes/06-performance.md](notes/06-performance.md) | Governor limits, bulkification, query optimization, transaction control |
+| strategy.md _(planned)_ | Exam tactics, time budgeting, format notes |
+| notes/01-fundamentals.md _(planned)_ | MVC, multi-tenant, declarative vs programmatic |
+| notes/02-data-modeling.md _(planned)_ | Relationships, schema design, LDV, skinny tables, indexing |
+| notes/03-process-automation-logic-integration.md _(planned)_ | Apex async, SOQL/SOSL, REST/SOAP, Platform Events, CDC, Named Credentials |
+| notes/04-user-interface.md _(planned)_ | LWC deep dive, Aura, Visualforce, events, LMS, LDS |
+| notes/05-testing-debugging-deployment.md _(planned)_ | Test classes, Stub API, mocks, debug logs, SFDX, 2GP packaging |
+| notes/06-performance.md _(planned)_ | Governor limits, bulkification, query optimization, transaction control |
 
 ---
 

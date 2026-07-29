@@ -15,17 +15,24 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 
 ### Priority 1 - correctness
 
-- [ ] Fix `build-freshness-ledger.sh` path bug (lines 49, 83 emit root-relative paths from `docs/`), then regenerate `docs/freshness.md`. Clears 191 broken links.
-- [ ] Rewrite 87 absolute `/exams/...` links as relative, mostly in `resources/certification-roadmap-*.md`.
-- [ ] Repoint or remove 28 links to the old directory layout (`cisco/ccna/`, `aws/specialty/security-specialty/`, `axelos/itil-4-foundation/`).
-- [ ] Update `STUDY-HUB.md` provider table: add ISACA, Offensive Security, Palo Alto, ServiceNow, VMware; correct CompTIA (4), Cisco (2), Salesforce (3).
-- [ ] Update cert/provider badge counts in `README.md` and `STUDY-HUB.md` from 122/22 to 127/27.
-- [ ] Split `link-check.yml` into a blocking internal-link job and a non-blocking external-URL job.
+- [x] ~~Fix `build-freshness-ledger.sh` path bug, then regenerate `docs/freshness.md`~~ ✅ done 2026-07-29 (cleared 191 broken links)
+- [x] ~~Rewrite 87 absolute `/exams/...` links as relative~~ ✅ done 2026-07-29
+- [x] ~~Repoint or remove 28 links to the old directory layout~~ ✅ done 2026-07-29
+- [x] ~~Update `STUDY-HUB.md` provider table~~ ✅ done 2026-07-29 (added ISACA, Offensive Security, Palo Alto, ServiceNow, VMware; corrected AWS 18, CompTIA 4, Cisco 2, Salesforce 3)
+- [x] ~~Update cert/provider badge counts~~ ✅ done 2026-07-29 (133 certs / 26 providers, not 127/27 - see note below)
+- [x] ~~Split `link-check.yml` into a blocking internal-link job and an advisory external-URL job~~ ✅ done 2026-07-29
+- [x] ~~Fix cert discovery in `validate-cert-structure.sh` and `build-freshness-ledger.sh`~~ ✅ done 2026-07-29
+
+> **Count correction.** The gap analysis first reported 127 certs because both scripts
+> discovered cert dirs by looking for a `notes/` subdir, which skipped the 10 certs whose
+> notes were never drafted. Counting by `fact-sheet.md` gives 137 cert dirs: 133
+> certifications across 26 providers, plus 4 Anthropic study tracks. Both scripts now use
+> `fact-sheet.md`, so the validator checks all 137 instead of 127.
 
 ### Priority 2 - content substance
 
-- [ ] Write notes for the 10 skeleton certs (cisco/ccnp-encor, comptia/cysa-plus, comptia/network-plus, isaca/cisa, isaca/cism, offensive-security/oscp, palo-alto/pcnsa, salesforce/pd2, servicenow/csa, vmware/vcp-dcv). Also clears 77 broken links.
-- [ ] Resolve the diagram standard: produce PNGs under `assets/diagrams/` or promote mermaid to primary and remove the broken PNG example in `docs/ARCHITECTURE.md:206`.
+- [ ] Write notes for the 10 outline-stage certs (cisco/ccnp-encor, comptia/cysa-plus, comptia/network-plus, isaca/cisa, isaca/cism, offensive-security/oscp, palo-alto/pcnsa, salesforce/pd2, servicenow/csa, vmware/vcp-dcv). As each lands, restore the real links and drop its `_(planned)_` markers and the outline-stage banner.
+- [ ] Resolve the diagram standard: produce PNGs under `assets/diagrams/` (currently zero exist) or promote mermaid to primary in `CLAUDE.md` and `docs/ARCHITECTURE.md`.
 - [ ] Add index READMEs to the 21 provider directories that lack one.
 - [ ] Complete `aws/professional/genai-developer-aip-c01` (missing practice-plan, scenarios, strategy) and link it from the hub.
 - [ ] Move `exams/aws/genai` under `foundational/` as the AI Practitioner cert; reconcile `azure/genai` and `gcp/genai` placement.
@@ -34,7 +41,7 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 ### Priority 3 - leverage
 
 - [ ] Build `docs/certs.json` from fact-sheets; generate the hub table, provider indexes, and freshness ledger from it.
-- [ ] Add practice questions for uncovered certs (34 of 127 covered today).
+- [ ] Add practice questions for uncovered certs (34 of 137 covered today).
 - [ ] Add Tier 1 certifications: SC-100, SC-300, SC-400, PL-300, CNCF associates (OTCA/CGOA/CAPA/CCA/CNPA), Oracle OCI GenAI, Google GenAI Leader, ISC2 CC, an observability cert.
 - [ ] Stagger `last-updated` re-verification by provider batch so 326 files do not all go stale on 2026-10-30.
 

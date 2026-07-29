@@ -1,12 +1,12 @@
 # 📚 Study Hub - Cloud + AI Learning Hub
 
-> **Your navigation hub for the whole repo: 122+ certifications across 22 providers, plus the [Learn](./learn/) pillar for non-cert students - bite-size concepts, beginner on-ramp, and structured cloud + AI paths.**
+> **Your navigation hub for the whole repo: 133 certifications across 26 providers, plus the [Learn](./learn/) pillar for non-cert students - bite-size concepts, beginner on-ramp, and structured cloud + AI paths.**
 
 <div align="center">
 
-![Total Certifications](https://img.shields.io/badge/Certifications-122+-blue.svg)
+![Total Certifications](https://img.shields.io/badge/Certifications-133-blue.svg)
 ![Documentation Links](https://img.shields.io/badge/Docs%20Links-12000+-green.svg)
-![Providers](https://img.shields.io/badge/Providers-22-orange.svg)
+![Providers](https://img.shields.io/badge/Providers-26-orange.svg)
 ![Study Tracks](https://img.shields.io/badge/Study%20Tracks-12-purple.svg)
 
 **Welcome. Whether you're new to all this or chasing your fifth cert, this is the entry point.**
@@ -164,7 +164,7 @@ What's your starting point?
 
 | Provider | Count | Highlights | Browse |
 |----------|------:|------------|--------|
-| **AWS** | 17 | CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, Quantum (QPC-C01); 4 retired specialties retained | [exams/aws/](./exams/aws/) |
+| **AWS** | 18 | CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, Quantum (QPC-C01); 4 retired specialties retained | [exams/aws/](./exams/aws/) |
 | **Azure** | 23 | AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-200, PL-100/200, MS-900 | [exams/azure/](./exams/azure/) |
 | **GCP** | 12 | Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI | [exams/gcp/](./exams/gcp/) |
 | **Kubernetes/CNCF** | 7 | KCNA, KCSA, CKA, CKAD, CKS, PCA (Prometheus), ICA (Istio) | [exams/kubernetes/](./exams/kubernetes/) |
@@ -174,19 +174,27 @@ What's your starting point?
 | **Snowflake** | 4 | SnowPro Core + 3 Advanced (Architect, Data Eng, Admin) | [exams/snowflake/](./exams/snowflake/) |
 | **GitHub** | 5 | Foundations, Actions, Administration, Advanced Security, Copilot | [exams/github/](./exams/github/) |
 | **Red Hat** | 2 | RHCSA (EX200), OpenShift Administrator (EX280) | [exams/redhat/](./exams/redhat/) |
-| **Cisco** | 1 | CCNA (200-301) | [exams/cisco/](./exams/cisco/) |
-| **Salesforce** | 2 | Administrator, Platform Developer I (PD1) | [exams/salesforce/](./exams/salesforce/) |
+| **Cisco** | 2 | CCNA (200-301), CCNP Enterprise ENCOR (350-401) ◇ | [exams/cisco/](./exams/cisco/) |
+| **Salesforce** | 3 | Administrator, Platform Developer I, Platform Developer II ◇ | [exams/salesforce/](./exams/salesforce/) |
 | **Confluent/Kafka** | 2 | Certified Developer, Certified Administrator | [exams/confluent/](./exams/confluent/) |
 | **MongoDB** | 3 | Associate Developer, DBA, Atlas Administrator | [exams/mongodb/](./exams/mongodb/) |
 | **FinOps Foundation** | 4 | Practitioner, Engineer, Analyst, Professional | [exams/finops/](./exams/finops/) |
-| **CompTIA** | 2 | Cloud+ (CV0-004), Security+ (SY0-701) | [exams/comptia/](./exams/comptia/) |
+| **CompTIA** | 4 | Cloud+ (CV0-004), Security+ (SY0-701), Network+ ◇, CySA+ ◇ | [exams/comptia/](./exams/comptia/) |
 | **ISC2** | 2 | CISSP, CCSP | [exams/isc2/](./exams/isc2/) |
+| **ISACA** | 2 | CISA ◇, CISM ◇ | [exams/isaca/](./exams/isaca/) |
 | **Cloud Security Alliance** | 1 | CCSK v5 | [exams/cloud-security-alliance/](./exams/cloud-security-alliance/) |
+| **Offensive Security** | 1 | OSCP (PEN-200) ◇ | [exams/offensive-security/](./exams/offensive-security/) |
+| **Palo Alto Networks** | 1 | PCNSA ◇ | [exams/palo-alto-networks/](./exams/palo-alto-networks/) |
 | **Linux Foundation** | 2 | LFCS, LFCA | [exams/linux-foundation/](./exams/linux-foundation/) |
 | **Oracle Cloud (OCI)** | 5 | Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc | [exams/oracle/](./exams/oracle/) |
 | **IBM Cloud** | 5 | Advocate, Developer, Solution Architect, Security, SRE | [exams/ibm/](./exams/ibm/) |
-| **CERTIFICATIONS TOTAL** | **122** | | |
+| **ServiceNow** | 1 | Certified System Administrator ◇ | [exams/servicenow/](./exams/servicenow/) |
+| **VMware** | 1 | VCP-DCV (2V0-21.23) ◇ | [exams/vmware/](./exams/vmware/) |
+| **CERTIFICATIONS TOTAL** | **133** | across 26 providers | |
 | **Anthropic Claude (study tracks)** | 4 | Architect Foundations + Advanced, Application Developer, Prompt Engineering Specialist | [exams/anthropic/](./exams/anthropic/) |
+
+◇ = outline stage: README, fact-sheet, and practice plan are written; topic notes are
+outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting queue.
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-07-28
+last-updated: 2026-07-29
 difficulty: n/a
 reading-time: 20 min
 ---
@@ -8,10 +8,22 @@ reading-time: 20 min
 
 A repo-wide gap analysis: what is broken, what is missing, and what would raise the
 quality bar. Findings are measured against the repo as of 2026-07-28 (1,506 markdown
-files, ~2.6M words, 127 cert directories across 27 providers).
+files, ~2.6M words, 137 cert directories across 27 providers: 133 certifications plus
+4 Anthropic self-directed study tracks).
 
 Every number below was produced by scanning the tree, not estimated. Re-run the
 commands in [How the numbers were produced](#how-the-numbers-were-produced) to refresh.
+
+> **Status: Phase 1 complete (2026-07-29).** All 383 broken internal links are fixed,
+> counts are corrected, and internal link checking now blocks a merge. Section 1 is kept
+> as the record of what was wrong and why. Phases 2 to 4 are open.
+
+> **Correction (2026-07-29).** The first draft of this document reported 127 cert
+> directories. That number came from `validate-cert-structure.sh`, which discovered certs
+> by looking for a `notes/` subdirectory and therefore skipped the 10 certs whose notes
+> were never written. Counting by `fact-sheet.md` gives 137. Both scripts now discover
+> certs the same way. The draft also claimed `docs/ARCHITECTURE.md:206` rendered as a
+> broken image; it is inside a fenced code block and renders as a code sample.
 
 **Contents**
 
@@ -29,43 +41,50 @@ commands in [How the numbers were produced](#how-the-numbers-were-produced) to r
 These are defects, not missing features. They make the repo look less trustworthy than
 the content actually is.
 
-### 1.1 - 383 broken internal links
+### 1.1 - 383 broken internal links (fixed 2026-07-29)
 
-A scan of every relative markdown link found 383 targets that do not exist on disk.
-They fall into four fixable buckets:
+A scan of every relative markdown link found 383 targets that did not exist on disk.
+They fell into four buckets:
 
-| Count | Bucket | Root cause | Fix |
-|------:|--------|------------|-----|
-| 191 | `docs/freshness.md` rows | Generator emits repo-root-relative paths from a file that lives in `docs/`, so `exams/aws/...` resolves to `docs/exams/aws/...` | One-line fix in `.github/scripts/build-freshness-ledger.sh`: prefix emitted paths with `../` (lines 49 and 83) |
-| 87 | Absolute paths like `/exams/aws/shared/services/compute/ec2.md` | Leading slash resolves to the GitHub domain root, not the repo root. Concentrated in `resources/certification-roadmap-*.md` | Rewrite as relative paths (`../exams/...`) |
-| 77 | Links to `notes/NN-topic.md` files that were never written | Skeleton certs ship a README and practice-plan that promise notes | Write the notes (see [2.1](#21---ten-certs-have-zero-notes)) or drop the links until they exist |
-| 28 | Stale paths from an older directory layout | E.g. `../../cisco/ccna/README.md` (actual: `ccna-200-301`), `../../aws/specialty/security-specialty/` (actual: `security-scs-c02`), `../../axelos/itil-4-foundation/` (provider does not exist) | Repoint or remove |
+| Count | Bucket | Root cause | Resolution |
+|------:|--------|------------|------------|
+| 191 | `docs/freshness.md` rows | Generator emitted repo-root-relative paths from a file that lives in `docs/`, so `exams/aws/...` resolved to `docs/exams/aws/...` | Fixed in `.github/scripts/build-freshness-ledger.sh`; emitted paths are now prefixed with `../` and the ledger was regenerated |
+| 87 | Absolute paths like `/exams/aws/shared/services/compute/ec2.md` | Leading slash resolves to the GitHub domain root, not the repo root. Concentrated in `resources/certification-roadmap-*.md` | Rewritten as relative paths; every rewritten target was verified to exist |
+| 77 | Links to `notes/NN-topic.md` files that were never written | Skeleton certs shipped a README and practice-plan promising notes | Delinked and marked `_(planned)_`, preserving the outline. Phase 2 restores real links as notes are drafted |
+| 28 | Stale paths from an older directory layout | E.g. `../../cisco/ccna/README.md` (actual: `ccna-200-301`), `../../aws/specialty/security-specialty/` (actual: `security-scs-c02`), `../../axelos/itil-4-foundation/` (provider does not exist) | Repointed; the ITIL 4 reference was unlinked and marked as not yet in the repo |
 
-Roughly 6 more are intentional illustrative snippets in `CLAUDE.md`, `CONTRIBUTING.md`,
-and `assets/diagrams/README.md`. Those are fine.
+The 19 remaining unresolved-looking targets are all inside fenced code blocks or inline
+code spans: documentation examples in `CLAUDE.md`, `CONTRIBUTING.md`, `docs/ARCHITECTURE.md`,
+and `assets/diagrams/README.md`, plus regex and Python snippets inside cert notes. The
+checker in [1.2](#12---ci-could-not-catch-any-of-this-fixed-2026-07-29) skips code, so these do not register.
 
-### 1.2 - CI cannot catch any of this
+### 1.2 - CI could not catch any of this (fixed 2026-07-29)
 
-`link-check.yml` runs lychee with `fail: false`, so a broken-link report is uploaded as
-an artifact and the job stays green. Nothing enforces internal link integrity on a PR.
+`link-check.yml` ran lychee with `fail: false`, so a broken-link report was uploaded as an
+artifact and the job stayed green. Nothing enforced internal link integrity on a PR, which
+is how 383 breaks accumulated unnoticed.
 
-Recommended: split into two jobs.
+Now split into two jobs:
 
-- **Internal links** - fast, offline, no network flake, `fail: true`. This is the one
-  that should block a merge.
-- **External vendor URLs** - keep `fail: false` plus the existing weekly issue-filing,
+- **Internal links (blocking)** - `.github/scripts/check-internal-links.py`. Offline, no
+  network flake, code-fence aware, exits non-zero on any break. Currently checks 2,620
+  links.
+- **External URLs (advisory)** - lychee, still `fail: false` with the weekly issue-filing,
   because vendor URL rot is not the contributor's fault.
 
-### 1.3 - Navigation counts have drifted from reality
+### 1.3 - Navigation counts had drifted from reality (fixed 2026-07-29)
 
-`STUDY-HUB.md` and `README.md` both advertise "122+ certifications across 22 providers".
-Actual: **127 cert directories across 27 provider directories**.
+`STUDY-HUB.md` and `README.md` both advertised "122+ certifications across 22 providers".
+Actual: **137 cert directories across 27 provider directories** - 133 certifications plus
+the 4 Anthropic study tracks, spanning 26 certification providers.
 
-The provider table in `STUDY-HUB.md` (around line 165) is missing five providers entirely
-and undercounts three:
+The provider table in `STUDY-HUB.md` was missing five providers entirely and undercounted
+three. All eight rows are now correct, the five missing providers were added, and the
+badges and prose counts in both files were updated.
 
-| Provider | Table says | Actually present | Note |
+| Provider | Table said | Actually present | Note |
 |----------|-----------:|-----------------:|------|
+| AWS | 17 | 18 | The AI Practitioner dir was not counted |
 | CompTIA | 2 | 4 | Network+ and CySA+ missing from the table |
 | Cisco | 1 | 2 | CCNP Enterprise ENCOR missing from the table |
 | Salesforce | 2 | 3 | Platform Developer II missing from the table |
@@ -75,16 +94,17 @@ and undercounts three:
 | ServiceNow | absent | 1 | CSA |
 | VMware | absent | 1 | VCP-DCV |
 
-Content exists and is decent; it is simply undiscoverable from the hub. This is the
-cheapest high-impact fix in the repo.
+The content existed and was decent; it was simply undiscoverable from the hub. The five
+previously-absent providers are all outline-stage certs, now marked with a diamond in the
+hub table so the status is visible rather than implied.
 
-### 1.4 - The documented visual standard has zero instances
+### 1.4 - The documented visual standard has zero instances (open)
 
 `CLAUDE.md` and `docs/ARCHITECTURE.md` specify PNG diagrams under
 `assets/diagrams/<topic>/<slug>.png`. `assets/diagrams/` contains exactly one file:
-`README.md`. There are zero PNGs, and the three PNG references that exist in markdown are
-all documentation examples pointing at files that were never created (including
-`docs/ARCHITECTURE.md:206`, which renders as a broken image).
+`README.md`. There are zero PNGs. The three PNG references in markdown are all
+documentation examples inside code fences, so nothing renders as a broken image, but the
+standard as written has never once been followed.
 
 Mermaid is doing the real work: 89 files use fenced mermaid blocks. Two honest options:
 
@@ -94,13 +114,15 @@ Mermaid is doing the real work: 89 files use fenced mermaid blocks. Two honest o
 
 Option 2 matches what the repo actually does and costs almost nothing.
 
-### 1.5 - Frontmatter is present on 22% of files, and 326 of them share one date
+### 1.5 - Frontmatter is present on 22% of files, and 326 of them share one date (open)
 
 - 328 of 1,506 markdown files carry `last-updated` frontmatter.
 - 326 of those are stamped `2026-05-03`. At the documented 180-day re-verify cadence,
   effectively the entire repo goes stale on the same day (2026-10-30).
 - Two files still contain the literal placeholder `last-updated: YYYY-MM-DD`.
-- `docs/freshness.md` was last built 2026-05-04 and has not been regenerated since.
+- `docs/freshness.md` had not been regenerated since 2026-05-04. It is now rebuilt and
+  covers all 137 certs (previously 127, since the generator shared the validator's
+  `notes/` blind spot).
 
 The freshness ledger only means something if verification dates are staggered by actual
 review work. Suggest re-verifying in provider-sized batches so dates spread naturally,
@@ -115,7 +137,7 @@ rather than a preview.
 
 These directories have a README, fact-sheet, and practice-plan, but an empty or absent
 `notes/` directory. Their READMEs link to notes that do not exist, which is the source of
-the 77 broken links in [1.1](#11---383-broken-internal-links).
+the 77 broken links in [1.1](#11---383-broken-internal-links-fixed-2026-07-29).
 
 | Cert | Missing notes |
 |------|--------------:|
@@ -133,10 +155,10 @@ the 77 broken links in [1.1](#11---383-broken-internal-links).
 A cert with no notes is a stub advertised as a study guide. Either fill them or mark them
 "skeleton" in the hub so expectations match reality.
 
-### 2.2 - Practice questions cover 34 of 127 certs
+### 2.2 - Practice questions cover 34 of 137 certs
 
-`resources/practice-questions/` has 34 files (plus a template). AWS and Azure are well
-served. Nothing exists for NVIDIA (10 certs), HashiCorp beyond Terraform Associate (1 of 7),
+`resources/practice-questions/` has 34 files (plus a template), covering 34 of 137 certs.
+AWS and Azure are well served. Nothing exists for NVIDIA (10 certs), HashiCorp beyond Terraform Associate (1 of 7),
 FinOps beyond Practitioner (1 of 4), MongoDB, Confluent, GitHub, Oracle, IBM, ISACA,
 Anthropic, or any of the newer CNCF exams.
 
@@ -218,9 +240,9 @@ before building a page** - especially the newer AI and CNCF exams.
 
 ### A note on scope
 
-At 127 certs the marginal value of cert number 128 is lower than the marginal value of
-finishing the ten skeleton certs and adding practice questions to the 93 certs that lack
-them. Recommend capping new-cert work at Tier 1 until [section 1](#1-correctness-gaps-fix-first)
+At 137 cert directories the marginal value of the next one is lower than the marginal value of
+finishing the ten outline-stage certs and adding practice questions to the 103 certs that
+lack them. Recommend capping new-cert work at Tier 1 until [section 1](#1-correctness-gaps-fix-first)
 and [2.1](#21---ten-certs-have-zero-notes) are closed.
 
 ---
@@ -234,7 +256,7 @@ name, level, status (active / retired / anticipated), duration, cost, path, last
 
 This single file would let us generate the STUDY-HUB provider table, the per-provider
 index READMEs, the freshness ledger, and the badge counts - which removes the entire class
-of drift documented in [1.3](#13---navigation-counts-have-drifted-from-reality). Generated
+of drift documented in [1.3](#13---navigation-counts-had-drifted-from-reality-fixed-2026-07-29). Generated
 tables cannot go stale the way hand-maintained ones do.
 
 ### 4.2 - Spaced repetition assets
@@ -278,50 +300,57 @@ mapping table in the projects index, turns two good resources into one better on
 
 ## 5. Suggested sequencing
 
-**Phase 1 - credibility (small, mechanical, high impact)**
+**Phase 1 - credibility (done 2026-07-29)**
 
-1. Fix the `build-freshness-ledger.sh` path bug and regenerate `docs/freshness.md` (191 links).
-2. Rewrite the 87 absolute `/exams/...` links in the roadmap files as relative.
-3. Repoint or remove the 28 stale-layout links.
-4. Update the `STUDY-HUB.md` provider table and both badge counts to 127 / 27.
-5. Make internal link checking a blocking CI job.
+1. ~~Fix the `build-freshness-ledger.sh` path bug and regenerate `docs/freshness.md`.~~ Done.
+2. ~~Rewrite the 87 absolute `/exams/...` links as relative.~~ Done.
+3. ~~Repoint or remove the 28 stale-layout links.~~ Done.
+4. ~~Update the `STUDY-HUB.md` provider table and both badge counts.~~ Done: 133 certs / 26
+   providers, five providers added, outline-stage certs marked.
+5. ~~Make internal link checking a blocking CI job.~~ Done.
+6. ~~Fix cert discovery in both scripts.~~ Done: they now key off `fact-sheet.md` rather
+   than a `notes/` subdir, so outline-stage certs are validated instead of skipped.
 
 **Phase 2 - substance**
 
-6. Write notes for the ten skeleton certs, which also clears 77 broken links.
-7. Resolve the diagram standard: either produce PNGs or promote mermaid and remove the
-   broken example references.
-8. Add per-provider index READMEs (21 missing).
+7. Write notes for the ten outline-stage certs. Restore the real links and drop the
+   `_(planned)_` markers as each set lands.
+8. Resolve the diagram standard: either produce PNGs or promote mermaid and adjust
+   `CLAUDE.md` plus `docs/ARCHITECTURE.md` to match reality.
+9. Add per-provider index READMEs (21 missing).
+10. Complete `aws/professional/genai-developer-aip-c01`, the one remaining structure warning.
 
 **Phase 3 - leverage**
 
-9. Build `docs/certs.json` and generate the hub table, provider indexes, and ledger from it.
-10. Add practice questions for the highest-traffic uncovered certs.
-11. Add Tier 1 certifications, starting with SC-100/SC-300, the CNCF associates, and the
+11. Build `docs/certs.json` and generate the hub table, provider indexes, and ledger from it.
+12. Add practice questions for the highest-traffic uncovered certs (103 lack them).
+13. Add Tier 1 certifications, starting with SC-100/SC-300, the CNCF associates, and the
     Oracle and Google AI exams.
 
 **Phase 4 - differentiation**
 
-12. Flashcard exports.
-13. Lab-to-cert mapping.
-14. Exam-version tracking with automated revision warnings.
+14. Flashcard exports.
+15. Lab-to-cert mapping.
+16. Exam-version tracking with automated revision warnings.
 
 ---
 
 ## How the numbers were produced
 
 ```bash
-# Cert directories and providers
-find exams -mindepth 2 -type d -name notes | wc -l     # 127 cert dirs
-ls -d exams/*/ | wc -l                                  # 27 providers
+# Cert directories and providers. Count by fact-sheet.md, not by notes/ - a cert whose
+# notes are not yet drafted is still a cert directory.
+find exams -type f -name fact-sheet.md | wc -l          # 137 cert dirs
+ls -d exams/*/ | wc -l                                   # 27 provider dirs
 
-# Structure and frontmatter validators
+# Structure, frontmatter, and internal links
 bash .github/scripts/validate-cert-structure.sh
 bash .github/scripts/validate-frontmatter.sh
+python3 .github/scripts/check-internal-links.py
 
-# Certs with no notes
-for d in $(find exams -mindepth 2 -type d -name notes); do
-  [ "$(find "$d" -name '*.md' | wc -l)" -eq 0 ] && echo "$d"
+# Certs with no notes drafted
+for d in $(find exams -type f -name fact-sheet.md | sed 's|/fact-sheet.md$||'); do
+  [ "$(find "$d/notes" -name '*.md' 2>/dev/null | wc -l)" -eq 0 ] && echo "$d"
 done
 
 # Frontmatter coverage
@@ -333,6 +362,7 @@ grep -rl '```mermaid' --include='*.md' . | wc -l
 find assets -name '*.png' | wc -l
 ```
 
-Broken internal links were counted by walking every `.md` file, extracting relative
-markdown link targets (excluding `http:`, `https:`, `mailto:`, and pure anchors), and
-testing each resolved path with `os.path.exists`.
+Broken internal links are counted by `check-internal-links.py`, which walks every `.md`
+file, blanks fenced code blocks and inline code spans, extracts relative markdown link
+targets (excluding `http:`, `https:`, `mailto:`, `tel:`, and pure anchors), and tests each
+resolved path with `os.path.exists`.

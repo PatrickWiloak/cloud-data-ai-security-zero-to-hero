@@ -202,7 +202,7 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 - AWS Cloud Practitioner (CLF-C02)
 - Time: 40-60 hours study
 - Cost: $100 exam fee
-- Link: [/exams/aws/foundational/cloud-practitioner-clf-c02/](/exams/aws/foundational/cloud-practitioner-clf-c02/)
+- Link: [/exams/aws/foundational/cloud-practitioner-clf-c02/](../exams/aws/foundational/cloud-practitioner-clf-c02)
 
 **Skills Learned:**
 - Cloud concepts and AWS value proposition
@@ -216,7 +216,7 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 *Step 1: Solutions Architect Associate (SAA-C03)*
 - Time: 80-120 hours study
 - Cost: $150 exam fee
-- Link: [/exams/aws/associate/solutions-architect-saa-c03/](/exams/aws/associate/solutions-architect-saa-c03/)
+- Link: [/exams/aws/associate/solutions-architect-saa-c03/](../exams/aws/associate/solutions-architect-saa-c03)
 
 **Skills Learned:**
 - Designing resilient architectures
@@ -262,11 +262,11 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 - Security and compliance automation
 
 **Phase 4: Specializations (Optional, 2-4 months each)**
-- Security Specialty (SCS-C02) - [/exams/aws/specialty/security-scs-c02/](/exams/aws/specialty/security-scs-c02/)
-- Advanced Networking Specialty (ANS-C01) - [/exams/aws/specialty/advanced-networking-ans-c01/](/exams/aws/specialty/advanced-networking-ans-c01/)
-- Machine Learning Engineer Associate (MLA-C01) - [/exams/aws/associate/ml-engineer-mla-c01/](/exams/aws/associate/ml-engineer-mla-c01/) (replaces retired MLS-C01)
-- Data Engineer Associate (DEA-C01) - [/exams/aws/associate/data-engineer-dea-c01/](/exams/aws/associate/data-engineer-dea-c01/) (replaces retired DAS-C01 and DBS-C01)
-- SAP on AWS (PAS-C01) - [/exams/aws/specialty/sap-on-aws-pas-c01/](/exams/aws/specialty/sap-on-aws-pas-c01/)
+- Security Specialty (SCS-C02) - [/exams/aws/specialty/security-scs-c02/](../exams/aws/specialty/security-scs-c02)
+- Advanced Networking Specialty (ANS-C01) - [/exams/aws/specialty/advanced-networking-ans-c01/](../exams/aws/specialty/advanced-networking-ans-c01)
+- Machine Learning Engineer Associate (MLA-C01) - [/exams/aws/associate/ml-engineer-mla-c01/](../exams/aws/associate/ml-engineer-mla-c01) (replaces retired MLS-C01)
+- Data Engineer Associate (DEA-C01) - [/exams/aws/associate/data-engineer-dea-c01/](../exams/aws/associate/data-engineer-dea-c01) (replaces retired DAS-C01 and DBS-C01)
+- SAP on AWS (PAS-C01) - [/exams/aws/specialty/sap-on-aws-pas-c01/](../exams/aws/specialty/sap-on-aws-pas-c01)
 
 ---
 
@@ -281,7 +281,7 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 *Azure Fundamentals (AZ-900)*
 - Time: 40-60 hours study
 - Cost: $99 exam fee
-- Link: [/exams/azure/az-900/](/exams/azure/az-900/)
+- Link: [/exams/azure/az-900/](../exams/azure/az-900)
 
 **Skills Learned:**
 - Cloud concepts and Azure services
@@ -291,16 +291,16 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 - Azure pricing and support
 
 *Optional Parallel Fundamentals:*
-- AI Fundamentals (AI-900) - [/exams/azure/ai-900/](/exams/azure/ai-900/)
-- Data Fundamentals (DP-900) - [/exams/azure/dp-900/](/exams/azure/dp-900/)
-- Security Fundamentals (SC-900) - [/exams/azure/sc-900/](/exams/azure/sc-900/)
+- AI Fundamentals (AI-900) - [/exams/azure/ai-900/](../exams/azure/ai-900)
+- Data Fundamentals (DP-900) - [/exams/azure/dp-900/](../exams/azure/dp-900)
+- Security Fundamentals (SC-900) - [/exams/azure/sc-900/](../exams/azure/sc-900)
 
 **Phase 2: Associate/Expert Level (5-7 months)**
 
 *Step 1: Administrator Associate (AZ-104)*
 - Time: 80-120 hours study
 - Cost: $165 exam fee
-- Link: [/exams/azure/az-104/](/exams/azure/az-104/)
+- Link: [/exams/azure/az-104/](../exams/azure/az-104)
 
 **Skills Learned:**
 - Managing Azure identities and governance
@@ -312,7 +312,7 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 *Step 2: Solutions Architect Expert (AZ-305)*
 - Time: 100-140 hours study
 - Cost: $165 exam fee
-- Link: [/exams/azure/az-305/](/exams/azure/az-305/)
+- Link: [/exams/azure/az-305/](../exams/azure/az-305)
 - Prerequisites: AZ-104 recommended
 
 **Skills Learned:**
@@ -327,7 +327,7 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 *DevOps Engineer Expert (AZ-400)*
 - Time: 100-140 hours study
 - Cost: $165 exam fee
-- Link: [/exams/azure/az-400/](/exams/azure/az-400/)
+- Link: [/exams/azure/az-400/](../exams/azure/az-400)
 
 **Skills Learned:**
 - Development for enterprise DevOps
@@ -339,7 +339,7 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 *Security Engineer Associate (AZ-500)*
 - Time: 80-120 hours study
 - Cost: $165 exam fee
-- Link: [/exams/azure/az-500/](/exams/azure/az-500/)
+- Link: [/exams/azure/az-500/](../exams/azure/az-500)
 
 **Skills Learned:**
 - Managing identity and access
@@ -348,9 +348,9 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 - Data and applications security
 
 **Phase 4: Additional Specializations**
-- Developer Associate (AZ-204) - [/exams/azure/az-204/](/exams/azure/az-204/)
-- Data Engineer Associate (DP-203) - [/exams/azure/dp-203/](/exams/azure/dp-203/)
-- AI Engineer Associate (AI-102) - [/exams/azure/ai-102/](/exams/azure/ai-102/)
+- Developer Associate (AZ-204) - [/exams/azure/az-204/](../exams/azure/az-204)
+- Data Engineer Associate (DP-203) - [/exams/azure/dp-203/](../exams/azure/dp-203)
+- AI Engineer Associate (AI-102) - [/exams/azure/ai-102/](../exams/azure/ai-102)
 
 ---
 
@@ -365,7 +365,7 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 *Cloud Digital Leader*
 - Time: 40-60 hours study
 - Cost: $99 exam fee
-- Link: [/exams/gcp/cloud-digital-leader/](/exams/gcp/cloud-digital-leader/)
+- Link: [/exams/gcp/cloud-digital-leader/](../exams/gcp/cloud-digital-leader)
 
 **Skills Learned:**
 - Digital transformation with Google Cloud
@@ -378,7 +378,7 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 *Associate Cloud Engineer*
 - Time: 80-120 hours study
 - Cost: $125 exam fee
-- Link: [/exams/gcp/cloud-engineer/](/exams/gcp/cloud-engineer/)
+- Link: [/exams/gcp/cloud-engineer/](../exams/gcp/cloud-engineer)
 
 **Skills Learned:**
 - Setting up cloud environments
@@ -392,7 +392,7 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 *Professional Cloud Architect*
 - Time: 120-160 hours study
 - Cost: $200 exam fee
-- Link: [/exams/gcp/cloud-architect/](/exams/gcp/cloud-architect/)
+- Link: [/exams/gcp/cloud-architect/](../exams/gcp/cloud-architect)
 
 **Skills Learned:**
 - Designing and planning cloud solutions
@@ -405,7 +405,7 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 *Professional Cloud DevOps Engineer*
 - Time: 100-140 hours study
 - Cost: $200 exam fee
-- Link: [/exams/gcp/cloud-devops-engineer/](/exams/gcp/cloud-devops-engineer/)
+- Link: [/exams/gcp/cloud-devops-engineer/](../exams/gcp/cloud-devops-engineer)
 
 **Skills Learned:**
 - Bootstrapping CI/CD pipelines
@@ -415,12 +415,12 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 - Optimizing service performance
 
 **Phase 4: Specializations (Optional)**
-- Professional Cloud Network Engineer - [/exams/gcp/cloud-network-engineer/](/exams/gcp/cloud-network-engineer/)
-- Professional Cloud Security Engineer - [/exams/gcp/cloud-security-engineer/](/exams/gcp/cloud-security-engineer/)
-- Professional Data Engineer - [/exams/gcp/data-engineer/](/exams/gcp/data-engineer/)
-- Professional Cloud Developer - [/exams/gcp/cloud-developer/](/exams/gcp/cloud-developer/)
-- Professional Cloud Database Engineer - [/exams/gcp/cloud-database-engineer/](/exams/gcp/cloud-database-engineer/)
-- Professional Machine Learning Engineer - [/exams/gcp/machine-learning-engineer/](/exams/gcp/machine-learning-engineer/)
+- Professional Cloud Network Engineer - [/exams/gcp/cloud-network-engineer/](../exams/gcp/cloud-network-engineer)
+- Professional Cloud Security Engineer - [/exams/gcp/cloud-security-engineer/](../exams/gcp/cloud-security-engineer)
+- Professional Data Engineer - [/exams/gcp/data-engineer/](../exams/gcp/data-engineer)
+- Professional Cloud Developer - [/exams/gcp/cloud-developer/](../exams/gcp/cloud-developer)
+- Professional Cloud Database Engineer - [/exams/gcp/cloud-database-engineer/](../exams/gcp/cloud-database-engineer)
+- Professional Machine Learning Engineer - [/exams/gcp/machine-learning-engineer/](../exams/gcp/machine-learning-engineer)
 
 ---
 

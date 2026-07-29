@@ -1,5 +1,10 @@
 # CISA - Certified Information Systems Auditor
 
+> **Study-guide status: outline stage.** The README, fact-sheet, and practice plan are
+> written. The topic notes are outlined but not yet drafted - entries marked _(planned)_
+> below do not exist yet. Track progress in [TODO.md](../../../TODO.md).
+
+
 ## Exam Overview
 
 The Certified Information Systems Auditor (CISA) is ISACA's flagship audit credential and the global gold standard for professionals who audit, control, monitor, and assess an organization's information technology and business systems. CISA has been issued since 1978 and is widely required for IT audit, IS assurance, and IT compliance roles across Big 4 firms, internal audit functions, financial services, healthcare, regulated industries, and government.
@@ -97,11 +102,11 @@ CISA is accredited under ANSI/ISO/IEC Standard 17024 and is approved for US Depa
 ## Study Materials
 
 ### Notes
-- [01 - Information System Auditing Process](notes/01-information-system-auditing-process.md)
-- [02 - Governance and Management of IT](notes/02-governance-management-of-it.md)
-- [03 - IS Acquisition, Development, and Implementation](notes/03-information-systems-acquisition-development-implementation.md)
-- [04 - IS Operations and Business Resilience](notes/04-information-systems-operations-business-resilience.md)
-- [05 - Protection of Information Assets](notes/05-protection-of-information-assets.md)
+- 01 - Information System Auditing Process _(planned)_
+- 02 - Governance and Management of IT _(planned)_
+- 03 - IS Acquisition, Development, and Implementation _(planned)_
+- 04 - IS Operations and Business Resilience _(planned)_
+- 05 - Protection of Information Assets _(planned)_
 
 ### Study Resources
 - [Fact Sheet](fact-sheet.md) - Quick reference (frameworks, formulas, audit terminology)

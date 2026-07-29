@@ -46,7 +46,9 @@ render_table() {
         return
     fi
     printf '%s\n' "${rows[@]}" | sort | while IFS='|' read -r _ name verified path; do
-        echo "| $name | $verified | [$path]($path) |"
+        # Link targets are prefixed with ../ because this ledger renders at docs/freshness.md,
+        # while $path is relative to the repo root.
+        echo "| $name | $verified | [$path](../$path) |"
     done
 }
 
@@ -63,7 +65,9 @@ echo "## Certifications"
 echo ""
 echo "| Cert | Last verified | Path |"
 echo "|------|---------------|------|"
-mapfile -t cert_dirs < <(find exams -type d -name notes | sed 's|/notes$||' | sort)
+# Discover certs by fact-sheet.md, not by a notes/ subdir: certs whose notes are still
+# outlined but undrafted must appear in the ledger too.
+mapfile -t cert_dirs < <(find exams -type f -name fact-sheet.md | sed 's|/fact-sheet.md$||' | sort)
 rows=()
 for dir in "${cert_dirs[@]}"; do
     fact_sheet="$dir/fact-sheet.md"
@@ -80,7 +84,7 @@ for dir in "${cert_dirs[@]}"; do
     fi
 done
 printf '%s\n' "${rows[@]}" | sort | while IFS='|' read -r _ name verified path; do
-    echo "| $name | $verified | [$path]($path/) |"
+    echo "| $name | $verified | [$path](../$path/) |"
 done
 echo ""
 

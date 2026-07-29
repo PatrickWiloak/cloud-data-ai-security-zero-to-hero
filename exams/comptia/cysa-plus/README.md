@@ -1,5 +1,10 @@
 # CompTIA CySA+ (CS0-003)
 
+> **Study-guide status: outline stage.** The README, fact-sheet, and practice plan are
+> written. The topic notes are outlined but not yet drafted - entries marked _(planned)_
+> below do not exist yet. Track progress in [TODO.md](../../../TODO.md).
+
+
 ## Exam Overview
 
 The CompTIA Cybersecurity Analyst (CySA+) CS0-003 certification validates the ability to detect, prevent, and respond to cybersecurity threats by performing data analysis, threat hunting, vulnerability management, and incident response. It bridges Security+ and CASP+/PenTest+, focusing on the analyst-level "blue team" defensive role inside a security operations center (SOC).
@@ -79,10 +84,10 @@ The CompTIA Cybersecurity Analyst (CySA+) CS0-003 certification validates the ab
 ## Study Materials
 
 ### Notes
-- [01 - Security Operations](notes/01-security-operations.md) - Logs, IoCs, threat intel, MITRE ATT&CK, hunting
-- [02 - Vulnerability Management](notes/02-vulnerability-management.md) - Scanning, CVSS, prioritization, remediation
-- [03 - Incident Response](notes/03-incident-response.md) - NIST 800-61, evidence handling, forensics
-- [04 - Reporting and Communication](notes/04-reporting-communication.md) - Reports, metrics, stakeholders
+- 01 - Security Operations _(planned)_ - Logs, IoCs, threat intel, MITRE ATT&CK, hunting
+- 02 - Vulnerability Management _(planned)_ - Scanning, CVSS, prioritization, remediation
+- 03 - Incident Response _(planned)_ - NIST 800-61, evidence handling, forensics
+- 04 - Reporting and Communication _(planned)_ - Reports, metrics, stakeholders
 
 ### Study Resources
 - [Fact Sheet](fact-sheet.md) - SIEM queries, Sigma rules, Snort/Suricata, MITRE ATT&CK, log cheatsheets
