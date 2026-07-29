@@ -9,10 +9,8 @@ Study guides for CompTIA in this repo. For the full picture across every provide
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
 | [CompTIA Cloud+ (CV0-004)](cloud-plus/) | CV0-004 | - | Ready | 5 |
-| [CompTIA CySA+ (CS0-003)](cysa-plus/) | CS0-003 | - | Outline ◇ | - |
-| [CompTIA Network+ (N10-009)](network-plus/) | N10-009 | - | Outline ◇ | - |
+| [CompTIA CySA+ (CS0-003)](cysa-plus/) | CS0-003 | - | Ready | 4 |
+| [CompTIA Network+ (N10-009)](network-plus/) | N10-009 | - | Ready | 5 |
 | [CompTIA Security+ (SY0-701)](security-plus/) | SY0-701 | - | Ready | 5 |
-
-◇ **Outline** - README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted.
 
 <!-- END GENERATED: provider-certs -->

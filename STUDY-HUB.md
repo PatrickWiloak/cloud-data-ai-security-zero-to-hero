@@ -183,7 +183,7 @@ What's your starting point?
 | **Confluent/Kafka** | 2 | Certified Developer, Certified Administrator | [exams/confluent/](./exams/confluent/) |
 | **MongoDB** | 3 | Associate Developer, DBA, Atlas Administrator | [exams/mongodb/](./exams/mongodb/) |
 | **FinOps Foundation** | 4 | Practitioner, Engineer, Analyst, Professional | [exams/finops/](./exams/finops/) |
-| **CompTIA** | 4 | Cloud+ (CV0-004), Security+ (SY0-701), Network+, CySA+ (2 at outline stage ◇) | [exams/comptia/](./exams/comptia/) |
+| **CompTIA** | 4 | Cloud+ (CV0-004), Security+ (SY0-701), Network+, CySA+ | [exams/comptia/](./exams/comptia/) |
 | **ISC2** | 2 | CISSP, CCSP | [exams/isc2/](./exams/isc2/) |
 | **ISACA** | 2 | CISA, CISM (2 at outline stage ◇) | [exams/isaca/](./exams/isaca/) |
 | **Cloud Security Alliance** | 1 | CCSK v5 | [exams/cloud-security-alliance/](./exams/cloud-security-alliance/) |

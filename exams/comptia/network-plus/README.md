@@ -1,9 +1,5 @@
 # CompTIA Network+ (N10-009)
 
-> **Study-guide status: outline stage.** The README, fact-sheet, and practice plan are
-> written. The topic notes are outlined but not yet drafted - entries marked _(planned)_
-> below do not exist yet. Track progress in [TODO.md](../../../TODO.md).
-
 
 ## Overview
 
@@ -55,11 +51,11 @@ The CompTIA 7-step troubleshooting methodology, command-line tools (ping, tracer
 ## Study Materials
 
 ### Notes
-- 01 - Networking Concepts _(planned)_ - OSI model, ports/protocols, IP addressing, subnetting, services, topologies
-- 02 - Network Implementation _(planned)_ - Routing, switching, VLANs, STP, wireless standards/security
-- 03 - Network Operations _(planned)_ - Documentation, monitoring, DR/BCP, organizational documents
-- 04 - Network Security _(planned)_ - Threats, hardening, security devices, authentication, physical security
-- 05 - Network Troubleshooting _(planned)_ - Methodology, CLI tools, hardware tools, common issue patterns
+- [01 - Networking Concepts](notes/01-networking-concepts.md) - OSI model, ports/protocols, IP addressing, subnetting, services, topologies
+- [02 - Network Implementation](notes/02-network-implementation.md) - Routing, switching, VLANs, STP, wireless standards/security
+- [03 - Network Operations](notes/03-network-operations.md) - Documentation, monitoring, DR/BCP, organizational documents
+- [04 - Network Security](notes/04-network-security.md) - Threats, hardening, security devices, authentication, physical security
+- [05 - Network Troubleshooting](notes/05-network-troubleshooting.md) - Methodology, CLI tools, hardware tools, common issue patterns
 
 ### Study Resources
 - [Fact Sheet](fact-sheet.md) - Port numbers, subnetting tables, cable specs, command reference

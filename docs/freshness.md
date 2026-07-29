@@ -207,6 +207,7 @@ Each row shows when a page was last verified against its source of truth.
 | set-up-eval-harness | 2026-05-03 | [resources/hands-on-projects/set-up-eval-harness.md](../resources/hands-on-projects/set-up-eval-harness.md) |
 | setup-monitoring-stack | 2026-05-03 | [resources/hands-on-projects/setup-monitoring-stack.md](../resources/hands-on-projects/setup-monitoring-stack.md) |
 | terraform-infrastructure | 2026-05-03 | [resources/hands-on-projects/terraform-infrastructure.md](../resources/hands-on-projects/terraform-infrastructure.md) |
+| labs-by-cert | 2026-07-29 | [resources/hands-on-projects/labs-by-cert.md](../resources/hands-on-projects/labs-by-cert.md) |
 
 ## Top-level learn pages
 
