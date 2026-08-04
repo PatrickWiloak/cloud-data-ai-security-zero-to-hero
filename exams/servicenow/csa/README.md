@@ -102,7 +102,7 @@ You **cannot** pass this cert without a live instance to click through. Most exa
 
 ## Companion Materials
 
-- **ITIL 4 Foundation** _(not yet in this repo)_ - the IT service management framework ServiceNow's ITSM products implement. Conceptual companion to CSA. *(planned)*
+- **ITIL 4 Foundation** _(not yet in this repo)_ - the IT service management framework ServiceNow's ITSM products implement. Conceptual companion to CSA. _(planned)_
 - **[Salesforce Administrator](../../salesforce/administrator/)** - parallel "platform admin" cert on a different platform. Same shape: declarative config, role-based access, automation, reporting.
 - **[AWS Service Catalog](https://aws.amazon.com/servicecatalog/)** - conceptual parallel for "self-service catalog" thinking. AWS Service Catalog provisions infrastructure; ServiceNow Service Catalog provisions any approved request type (HR, IT, facilities).
 

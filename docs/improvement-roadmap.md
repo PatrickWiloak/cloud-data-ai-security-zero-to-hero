@@ -28,6 +28,8 @@ commands in [How the numbers were produced](#how-the-numbers-were-produced) to r
 > certs that lack them, and the Tier 1 certifications in
 > [section 3](#3-certifications-we-could-add). Tracked in [TODO.md](../TODO.md).
 
+<!-- -->
+
 > **Correction (2026-07-29).** The first draft of this document reported 127 cert
 > directories. That number came from `validate-cert-structure.sh`, which discovered certs
 > by looking for a `notes/` subdirectory and therefore skipped the 10 certs whose notes
