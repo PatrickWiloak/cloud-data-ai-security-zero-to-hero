@@ -288,5 +288,5 @@ D. A photograph of the badge reader
 - [CISA cert page](../../exams/isaca/cisa/) - notes, practice plan, strategy
 - [CISM practice questions](./isaca-cism.md) - the management counterpart
 - [CCSP practice questions](./isc2-ccsp.md) - cloud security at professional level
-- [SOC 2 guide](../soc2.md) - the service auditor report auditors rely on
+- [SOC 2 guide](../compliance-guides/soc2.md) - the service auditor report auditors rely on
 - **[📖 ISACA CISA](https://www.isaca.org/credentialing/cisa)** - official exam content outline

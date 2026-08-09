@@ -168,7 +168,7 @@ D. Autoscaling handles everything
 
 **Correct: B**
 
-**Why:** Autoscaling handles variation within a provisioned envelope; it does not handle quota limits, licence ceilings, or a dependency that cannot scale. Knowing the real breaking point, from testing rather than extrapolation, is what makes the plan credible.
+**Why:** Autoscaling handles variation within a provisioned envelope; it does not handle quota limits, license ceilings, or a dependency that cannot scale. Knowing the real breaking point, from testing rather than extrapolation, is what makes the plan credible.
 </details>
 
 ---

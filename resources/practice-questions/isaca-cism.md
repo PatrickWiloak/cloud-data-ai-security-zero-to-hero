@@ -288,5 +288,5 @@ D. By the security team alone
 - [CISM cert page](../../exams/isaca/cism/) - notes, practice plan, strategy
 - [CISA practice questions](./isaca-cisa.md) - the audit counterpart
 - [CISSP practice questions](./isc2-cissp.md) - the broader security professional exam
-- [SOC 2 guide](../soc2.md) - a control framework managers are held to
+- [SOC 2 guide](../compliance-guides/soc2.md) - a control framework managers are held to
 - **[📖 ISACA CISM](https://www.isaca.org/credentialing/cism)** - official exam content outline

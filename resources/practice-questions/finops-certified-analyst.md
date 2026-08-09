@@ -222,7 +222,7 @@ D. Buy commitments for them
 
 **Correct: B**
 
-**Why:** Non-production often runs at roughly a quarter of the hours it is billed for. It is also the safest place to start a FinOps programme, because the blast radius of getting it wrong is a developer waiting for an environment rather than a customer outage.
+**Why:** Non-production often runs at roughly a quarter of the hours it is billed for. It is also the safest place to start a FinOps program, because the blast radius of getting it wrong is a developer waiting for an environment rather than a customer outage.
 </details>
 
 ---
@@ -232,7 +232,7 @@ D. Buy commitments for them
 
 A. A pricing model
 B. An open specification for a common cost and usage data format across providers
-C. A discount programme
+C. A discount program
 D. A tagging standard
 
 <details>

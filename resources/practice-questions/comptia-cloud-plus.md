@@ -188,7 +188,7 @@ D. Rely entirely on autoscaling
 
 **Correct: B**
 
-**Why:** Autoscaling handles variation within a provisioned envelope but not quota ceilings, licence limits, or a dependency that cannot scale. Knowing the measured breaking point, rather than the extrapolated one, is what makes the plan credible.
+**Why:** Autoscaling handles variation within a provisioned envelope but not quota ceilings, license limits, or a dependency that cannot scale. Knowing the measured breaking point, rather than the extrapolated one, is what makes the plan credible.
 </details>
 
 ---

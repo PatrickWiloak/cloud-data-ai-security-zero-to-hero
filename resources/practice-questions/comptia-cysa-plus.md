@@ -26,7 +26,7 @@ D. Oldest first
 
 **Correct: B**
 
-**Why:** A critical CVSS on an isolated internal test box outranks nothing. Environmental and temporal CVSS metrics exist for exactly this adjustment, and known-exploited catalogues turn "theoretically severe" into "actively used", which is the strongest prioritization signal available.
+**Why:** A critical CVSS on an isolated internal test box outranks nothing. Environmental and temporal CVSS metrics exist for exactly this adjustment, and known-exploited catalogs turn "theoretically severe" into "actively used", which is the strongest prioritization signal available.
 </details>
 
 ---
@@ -44,7 +44,7 @@ D. Disable the scanner
 
 **Correct: B**
 
-**Why:** Validation is the analyst's core job, because untuned scanner output erodes trust in the whole programme. Note the counterpart: a false negative is more dangerous and is why scanning is layered with configuration review and penetration testing.
+**Why:** Validation is the analyst's core job, because untuned scanner output erodes trust in the whole program. Note the counterpart: a false negative is more dangerous and is why scanning is layered with configuration review and penetration testing.
 </details>
 
 ---
