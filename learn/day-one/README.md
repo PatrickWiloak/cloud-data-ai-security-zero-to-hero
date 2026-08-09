@@ -8,7 +8,7 @@
 
 ## What this section is
 
-Eight pages, in order. Each is a 5-15 minute read. By the end, you'll know enough to follow conversations and tutorials that currently feel like another language.
+Eleven pages, in order. Each is a 5-15 minute read. By the end, you'll know enough to follow conversations and tutorials that currently feel like another language.
 
 This isn't cloud or AI yet. This is the bedrock under both. Skip this and the rest of the repo will feel harder than it should.
 
@@ -27,6 +27,9 @@ This isn't cloud or AI yet. This is the bedrock under both. Skip this and the re
 6. **[Package managers](./package-managers.md)** - apt / brew / npm / pip - what they share. (5 min)
 7. **[Networking troubleshooting](./networking-troubleshooting.md)** - dig, ping, traceroute, curl - the diagnostic ladder. (5 min)
 8. **[What is an API call?](./what-is-an-api-call.md)** - method + URL + headers + body, status codes. (5 min)
+9. **[File permissions](./file-permissions.md)** - what `rw-r--r--` means, and why not to run `chmod 777`. (8 min)
+10. **[JSON and YAML](./json-and-yaml.md)** - the two formats every config file uses, and their gotchas. (7 min)
+11. **[Reading error messages](./reading-error-messages.md)** - extracting the answer that is usually already in the error. (7 min)
 
 After these you have enough vocabulary to start [Cloud from Scratch](../cloud-from-scratch.md) or [AI from Scratch](../ai-from-scratch.md) without getting blocked every other paragraph.
 

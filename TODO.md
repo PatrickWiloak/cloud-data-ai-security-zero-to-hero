@@ -51,8 +51,8 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 ### Priority 3 - leverage
 
 - [x] ~~Build `docs/certs.json` from fact-sheets; generate the hub table and provider indexes from it~~ ✅ done 2026-07-29 (CI fails if either is stale). Freshness ledger still generates independently - fold it in if it drifts.
-- [ ] Add practice questions for uncovered certs. 34 of 137 covered; 103 have none. Use [the template](./resources/practice-questions/template.md). Highest value first: the certs that already have complete notes but no question bank.
-- [ ] Add Tier 1 certifications: SC-100, SC-300, SC-400, PL-300, CNCF associates (OTCA/CGOA/CAPA/CCA/CNPA), Oracle OCI GenAI, Google GenAI Leader, ISC2 CC, an observability cert.
+- [ ] Add practice questions for uncovered certs. 47 of 150 covered; 103 have none. Use [the template](./resources/practice-questions/template.md). Highest value first: the certs that already have complete notes but no question bank. Next batch by volume: NVIDIA (10 certs, 0 banks), GitHub (5), IBM (5), Anthropic (4), CompTIA (4), MongoDB (3), Salesforce (3).
+- [x] ~~Add Tier 1 certifications~~ ✅ done 2026-08-09. All 13 added: SC-100, SC-300, **SC-401** (SC-400 is retired and was replaced by SC-401 - the roadmap entry was out of date), PL-300, the five CNCF associates (OTCA/CGOA/CAPA/CCA/CNPA), ISC2 CC, Oracle OCI AI Foundations + OCI GenAI Professional, Google Generative AI Leader. 137 → 150 cert directories, each with README, fact-sheet, practice-plan, scenarios, strategy, domain notes, a practice question bank, and a generated flashcard deck.
 - [x] ~~Stagger `last-updated` re-verification by provider batch~~ ✅ done 2026-07-29 - `check-cert-freshness.py` assigns each provider a review month and reports what is due. The rotation exists; the re-verification work itself is ongoing (12 certs due in month 7).
 
 ### Priority 4 - differentiation
@@ -62,3 +62,68 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 - [x] ~~Add `status:` and `exam-version:` frontmatter plus a revision-warning script~~ ✅ done 2026-07-29 - `status` is derived in `certs.json` rather than hand-declared (no drift). `exam-version:`/`exam-retires:` are optional frontmatter, seeded on the 4 retired AWS certs; `check-cert-freshness.py` warns ahead of a known retirement.
 - [x] ~~Wire `check-orphan-links.sh` into CI~~ ✅ done 2026-07-29 - runs advisory (never blocking, since orphan detection is heuristic). Orphans are currently 0.
 - [x] ~~Prune `.claude/settings.json`~~ ✅ done 2026-07-29
+
+---
+
+## Completed 2026-08-09 - content gap expansion
+
+A repo-wide gap analysis found four holes. All four are now closed. Counts below
+are measured, not estimated.
+
+### AI security and governance (new)
+
+The repo is named `cloud-data-ai-security-zero-to-hero` and had no dedicated AI
+security material: "OWASP LLM Top 10" appeared in exactly one file, "model supply
+chain" in zero, and `resources/compliance-guides/` covered FedRAMP, GDPR, HIPAA,
+PCI-DSS and SOC 2 with nothing AI-specific.
+
+- [x] `resources/ai-security/` - OWASP LLM Top 10, prompt injection defense, agent
+      and tool security, model supply chain, LLM red teaming, plus an index
+- [x] `resources/compliance-guides/` - EU AI Act, NIST AI RMF, ISO/IEC 42001
+- [x] `learn/concepts/` - prompt injection explained, AI threat modeling
+- [x] `topics/ai-security.md` cross-pillar hub
+
+### Tier 1 certifications (13 added)
+
+- [x] Microsoft: SC-100, SC-300, SC-401, PL-300
+- [x] CNCF: OTCA, CGOA, CAPA, CCA, CNPA
+- [x] ISC2 CC - the free, no-prerequisite entry point the "zero to hero" framing
+      implied but the repo did not have (the security path started at Security+)
+- [x] Oracle: OCI AI Foundations, OCI Generative AI Professional - Oracle had five
+      certs here and zero AI ones
+- [x] Google: Generative AI Leader
+- [x] OTCA also closes the "no observability certification anywhere in exams/" gap,
+      and CCA is the only cert in the repo teaching eBPF
+
+### Learn pillar
+
+Was 54k words against 2.17M in `exams/`.
+
+- [x] 8 new concept pages: caching, SQL vs NoSQL, load balancing, secrets
+      management, autoscaling, deployment strategies, cloud cost basics, GPUs for AI
+- [x] 3 new day-one pages: file permissions, JSON and YAML, reading error messages
+- [x] `topics/platform-engineering.md` hub
+- [x] Concepts index gained a Data and Databases section; 34 → 46 concept pages
+
+### Practice questions
+
+- [x] 13 new banks, one per new cert. Coverage 34/137 → 47/150
+
+### Housekeeping
+
+- [x] All generated indexes rebuilt: `docs/certs.json`, 27 provider indexes,
+      STUDY-HUB table, flashcards (90 → 103 decks, 9,545 cards), lab map, freshness
+- [x] Hand-maintained counts corrected in README, STUDY-HUB, CLAUDE.md, learn/README
+- [x] `.cspell.json` extended with 100+ legitimate technical terms
+- [x] Validators at zero: structure 0 failures / 0 warnings, 4,053 internal links
+      0 broken, frontmatter 0 failures, orphans 0
+
+### Known follow-ups
+
+- Practice question banks for the 103 certs that still have none
+- 47 certs remain below the 15-card flashcard threshold; raising them means writing
+  more `- **Term** - definition` lines in their notes
+- `markdownlint` MD060 (table-column-style) fires across the whole repo, including
+  files untouched by this work. It is a newer rule than the pinned CI action, so it
+  is version drift rather than a content defect. Decide whether to disable it in
+  `.markdownlint.json` or reformat every table
