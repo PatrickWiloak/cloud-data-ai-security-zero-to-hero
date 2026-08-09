@@ -38,6 +38,10 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | [IAM explained](./iam-explained.md) | "Roles vs policies vs federation" is fuzzy |
 | [Serverless explained](./serverless-explained.md) | You keep hearing "serverless" without a clear definition |
 | [CDN explained](./cdn-explained.md) | You see CloudFront/CloudFlare/Akamai and wonder what they do |
+| [Caching explained](./caching-explained.md) | You want to know why caches are fast and why they lie |
+| [Load balancing explained](./load-balancing-explained.md) | "Layer 4 vs layer 7" keeps coming up and you want specifics |
+| [Autoscaling explained](./autoscaling-explained.md) | You want capacity to follow demand without an outage |
+| [Cloud cost basics](./cloud-cost-basics.md) | The bill went up and nobody decided to spend more |
 
 ## ☸️ Containers and Orchestration
 
@@ -56,6 +60,15 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | [Idempotency explained](./idempotency-explained.md) | You're worried about retries doing things twice |
 | [Eventual consistency](./eventual-consistency.md) | A read returned stale data and you want to know why |
 | [Queues vs streams](./queues-vs-streams.md) | You can't pick between SQS and Kinesis |
+| [Deployment strategies](./deployment-strategies.md) | Rolling, blue-green, canary: which and when |
+
+## 🗄️ Data and Databases
+
+| Topic | Read when... |
+|-------|--------------|
+| [SQL vs NoSQL](./sql-vs-nosql.md) | You're choosing a database and the options blur together |
+| [Eventual consistency](./eventual-consistency.md) | A read returned stale data and you want to know why |
+| [Caching explained](./caching-explained.md) | You want to know why caches are fast and why they lie |
 
 ## 🌐 Networking and Security
 
@@ -63,6 +76,7 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 |-------|--------------|
 | [DNS explained](./dns-explained.md) | You want to understand how the internet finds things |
 | [TLS and HTTPS](./tls-and-https.md) | You want to know what the lock icon actually means |
+| [Secrets management](./secrets-management.md) | You need credentials in an app without leaving copies everywhere |
 
 ## 🤖 AI / Machine Learning - foundations
 
@@ -98,6 +112,7 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | [AI threat modeling](./ai-threat-modeling.md) | You're designing an AI feature and want to find the risk early |
 | [Inference servers](./inference-servers.md) | You're considering self-hosting an open-weights model |
 | [Quantization and distillation](./quantization-and-distillation.md) | You want a smaller, faster model |
+| [GPUs for AI](./gpus-for-ai.md) | You want to know what VRAM, FLOPS, and bandwidth actually decide |
 
 ---
 

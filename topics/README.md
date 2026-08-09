@@ -24,6 +24,7 @@ If you want everything the repo has on a given subject - the plain-English expla
 - **[Serverless](./serverless.md)** - functions, container-based serverless, event-driven, scale-to-zero
 - **[FinOps](./finops.md)** - cloud cost accountability, optimization, the FinOps cert family
 - **[Kubernetes](./kubernetes.md)** - K8s primitives, distributions, security, operations, certs
+- **[Platform engineering](./platform-engineering.md)** - internal platforms as products, golden paths, self-service, IDPs
 
 ## Pattern per topic page
 
@@ -40,4 +41,4 @@ Use these pages as a starting jumppoint. They're aggregators, not source-of-trut
 
 ## Don't see a topic you want?
 
-The topics here cover the densest cross-pillar threads. Other subjects (edge computing, data engineering, DevOps / CI-CD) have their own home in [resources/](../resources/) but don't yet have a topic index. Contributions welcome - see [CONTRIBUTING.md](../CONTRIBUTING.md).
+The topics here cover the densest cross-pillar threads. Other subjects (edge computing, data engineering) have their own home in [resources/](../resources/) but don't yet have a topic index. Contributions welcome - see [CONTRIBUTING.md](../CONTRIBUTING.md).
