@@ -238,8 +238,6 @@ D. Neither party
 <details>
 <summary>Answer</summary>
 
-<!-- -->
-
 **Correct: B**
 
 **Why:** Data and identity remain the customer's responsibility across every service model, which is consistent across all cloud providers. What changes with Autonomous Database or another managed service is who patches the software layer.

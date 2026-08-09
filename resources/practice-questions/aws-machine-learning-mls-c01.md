@@ -222,8 +222,6 @@ D. Model size
 <details>
 <summary>Answer</summary>
 
-<!-- -->
-
 **Correct: A**
 
 **Why:** SHAP attributes a prediction to its input features in a locally accurate way, which is what "why did this application get declined" requires. Aggregate performance metrics describe the model overall and say nothing about an individual decision.
