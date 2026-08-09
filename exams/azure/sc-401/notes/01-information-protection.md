@@ -75,7 +75,7 @@ For an existing estate, the answer is a service-side auto-labeling policy run in
 ## Discovery beyond Microsoft 365
 
 - **Purview Information Protection scanner** discovers and labels files on on-premises file shares and SharePoint Server.
-- **Purview data map** scans Azure data sources, on-premises databases, and other clouds, applying classification to catalogued assets.
+- **Purview data map** scans Azure data sources, on-premises databases, and other clouds, applying classification to cataloged assets.
 - **DSPM (Data Security Posture Management)** reports where sensitive data lives, how it is protected, and where the gaps are.
 - **DSPM for AI** narrows that to AI interactions: which sensitive data types Copilot and other AI applications touch, which users generate risky prompts, and whether policies cover them.
 
@@ -88,7 +88,7 @@ For an existing estate, the answer is a service-side auto-labeling policy run in
 - **Document fingerprinting** - classification based on the structure of a known form or template
 - **Trainable classifier** - a machine-learned classifier identifying categories of content that cannot be expressed as a pattern
 - **Confidence level** - how much corroborating evidence a sensitive information type requires before declaring a match
-- **Sensitivity label** - a Purview classification that can apply encryption, content marking, and access restriction travelling with the content
+- **Sensitivity label** - a Purview classification that can apply encryption, content marking, and access restriction traveling with the content
 - **Label policy** - the policy that publishes labels to users and sets defaults, mandatory labeling, and downgrade justification
 - **Label priority** - the ordering that determines which label wins when more than one could apply
 - **Client-side auto-labeling** - label application in Office apps as the user works with a document

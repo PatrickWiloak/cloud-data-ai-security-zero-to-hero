@@ -1,10 +1,10 @@
 # 📚 Study Hub - Cloud + AI Learning Hub
 
-> **Your navigation hub for the whole repo: 131 certifications across 26 providers, plus the [Learn](./learn/) pillar for non-cert students - bite-size concepts, beginner on-ramp, and structured cloud + AI paths.**
+> **Your navigation hub for the whole repo: 144 certifications across 26 providers, plus the [Learn](./learn/) pillar for non-cert students - bite-size concepts, beginner on-ramp, and structured cloud + AI paths.**
 
 <div align="center">
 
-![Total Certifications](https://img.shields.io/badge/Certifications-131-blue.svg)
+![Total Certifications](https://img.shields.io/badge/Certifications-144-blue.svg)
 ![Documentation Links](https://img.shields.io/badge/Docs%20Links-12000+-green.svg)
 ![Providers](https://img.shields.io/badge/Providers-26-orange.svg)
 ![Career Roadmaps](https://img.shields.io/badge/Career%20Roadmaps-11-purple.svg)
@@ -57,7 +57,7 @@
 The **[Learn](./learn/)** pillar is for everyone who wants to understand cloud and AI without an exam date:
 
 - **[Day One](./learn/day-one/)** - terminal, git, HTTP, servers. Strict beginner on-ramp.
-- **[Concepts](./learn/concepts/)** - 22+ bite-size pages (5-10 min each) on cloud + AI primitives.
+- **[Concepts](./learn/concepts/)** - 46 bite-size pages (5-10 min each) on cloud + AI primitives.
 - **[Cloud from Scratch](./learn/cloud-from-scratch.md)** + **[AI from Scratch](./learn/ai-from-scratch.md)** - structured 8-phase paths.
 - **[Glossary](./learn/glossary.md)** - 200+ terms in plain English.
 - **[YouTube curation](./learn/youtube.md)** - filtered videos worth your time.
@@ -169,9 +169,9 @@ What's your starting point?
 | Provider | Certs | Highlights | Browse |
 |----------|------:|------------|--------|
 | **AWS** | 18 | CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, Quantum (QPC-C01); 4 retired specialties retained | [exams/aws/](./exams/aws/) |
-| **Azure** | 22 | AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-200, PL-100/200, MS-900 (+1 study track) | [exams/azure/](./exams/azure/) |
-| **GCP** | 11 | Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI (+1 study track) | [exams/gcp/](./exams/gcp/) |
-| **Kubernetes/CNCF** | 7 | KCNA, KCSA, CKA, CKAD, CKS, PCA (Prometheus), ICA (Istio) | [exams/kubernetes/](./exams/kubernetes/) |
+| **Azure** | 26 | AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-200, PL-100/200, MS-900 (+1 study track) | [exams/azure/](./exams/azure/) |
+| **GCP** | 12 | Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI (+1 study track) | [exams/gcp/](./exams/gcp/) |
+| **Kubernetes/CNCF** | 12 | KCNA, KCSA, CKA, CKAD, CKS, PCA (Prometheus), ICA (Istio) | [exams/kubernetes/](./exams/kubernetes/) |
 | **NVIDIA** | 10 | AI Infra & Ops, GenAI/LLM, Multimodal, Agentic AI, Networking, OpenUSD | [exams/nvidia/](./exams/nvidia/) |
 | **HashiCorp** | 7 | Terraform Assoc + Pro, Vault, Consul, Packer, Boundary, Nomad | [exams/hashicorp/](./exams/hashicorp/) |
 | **Databricks** | 6 | Data Engineer (A/P), ML (A/P), GenAI Engineer, Lakehouse Admin | [exams/databricks/](./exams/databricks/) |
@@ -184,17 +184,17 @@ What's your starting point?
 | **MongoDB** | 3 | Associate Developer, DBA, Atlas Administrator | [exams/mongodb/](./exams/mongodb/) |
 | **FinOps Foundation** | 4 | Practitioner, Engineer, Analyst, Professional | [exams/finops/](./exams/finops/) |
 | **CompTIA** | 4 | Cloud+ (CV0-004), Security+ (SY0-701), Network+, CySA+ | [exams/comptia/](./exams/comptia/) |
-| **ISC2** | 2 | CISSP, CCSP | [exams/isc2/](./exams/isc2/) |
+| **ISC2** | 3 | CISSP, CCSP | [exams/isc2/](./exams/isc2/) |
 | **ISACA** | 2 | CISA, CISM | [exams/isaca/](./exams/isaca/) |
 | **Cloud Security Alliance** | 1 | CCSK v5 | [exams/cloud-security-alliance/](./exams/cloud-security-alliance/) |
 | **Offensive Security** | 1 | OSCP (PEN-200) | [exams/offensive-security/](./exams/offensive-security/) |
 | **Palo Alto Networks** | 1 | PCNSA | [exams/palo-alto-networks/](./exams/palo-alto-networks/) |
 | **Linux Foundation** | 2 | LFCS, LFCA | [exams/linux-foundation/](./exams/linux-foundation/) |
-| **Oracle Cloud (OCI)** | 5 | Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc | [exams/oracle/](./exams/oracle/) |
+| **Oracle Cloud (OCI)** | 7 | Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc | [exams/oracle/](./exams/oracle/) |
 | **IBM Cloud** | 5 | Advocate, Developer, Solution Architect, Security, SRE | [exams/ibm/](./exams/ibm/) |
 | **ServiceNow** | 1 | Certified System Administrator | [exams/servicenow/](./exams/servicenow/) |
 | **VMware** | 1 | VCP-DCV (2V0-21.23) | [exams/vmware/](./exams/vmware/) |
-| **CERTIFICATIONS TOTAL** | **131** | across 26 providers | |
+| **CERTIFICATIONS TOTAL** | **144** | across 26 providers | |
 | **Anthropic Claude (study tracks)** | 4 | Architect Foundations + Advanced, Application Developer, Prompt Engineering Specialist | [exams/anthropic/](./exams/anthropic/) |
 
 The Certs column counts real exams. This repo also carries 6 self-directed study tracks (the Anthropic Claude tracks plus the Azure and GCP GenAI tracks), which are study guides spanning several exams or none, not certifications in their own right.

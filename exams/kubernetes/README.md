@@ -4,13 +4,18 @@ Study guides for Kubernetes/CNCF in this repo. For the full picture across every
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-7 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+12 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
+| [Certified Argo Project Associate (CAPA)](capa/) | CAPA | Associate | Ready | 4 |
+| [Certified GitOps Associate (CGOA)](cgoa/) | CGOA | Associate | Ready | 4 |
+| [Cilium Certified Associate (CCA)](cca/) | CCA | Associate | Ready | 4 |
+| [Cloud Native Platform Engineering Associate (CNPA)](cnpa/) | CNPA | Associate | Ready | 4 |
 | [Istio Certified Associate (ICA)](ica/) | ICA | Associate | Ready | 6 |
 | [Kubernetes and Cloud Native Associate (KCNA)](kcna/) | KCNA | Associate | Ready | 4 |
 | [Kubernetes and Cloud Native Security Associate (KCSA)](kcsa/) | KCSA | Associate | Ready | 5 |
+| [OpenTelemetry Certified Associate (OTCA)](otca/) | OTCA | Associate | Ready | 4 |
 | [Prometheus Certified Associate (PCA)](pca/) | PCA | Associate | Ready | 5 |
 | [Certified Kubernetes Security Specialist (CKS)](cks/) | CKS | Specialty | Ready | 6 |
 | [Certified Kubernetes Administrator (CKA)](cka/) | CKA | - | Ready | 7 |

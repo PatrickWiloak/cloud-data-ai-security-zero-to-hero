@@ -17,7 +17,7 @@ You want to understand cloud and AI, but:
 - You'd rather learn the **why** before drilling into vendor-specific details
 - You're a developer, founder, PM, analyst, or curious technologist
 
-If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.md)** - 131 certs across 26 providers, fully indexed.
+If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.md)** - 144 certs across 26 providers, fully indexed.
 
 ---
 
@@ -27,7 +27,7 @@ If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.m
 - **[Day One](./day-one/)** - terminal, git, HTTP, servers. The pages assume nothing. If you've never opened a terminal, start here.
 
 ### 💡 Bite-size concept pages
-- **[Concepts](./concepts/)** - 22+ topic pages, 5-10 min each. Cloud primitives (VPC, K8s, serverless), DevOps (CI/CD, Terraform), networking (DNS, TLS), and AI (LLMs, RAG, agents, transformers, embeddings, prompt engineering, evals).
+- **[Concepts](./concepts/)** - 46 topic pages, 5-10 min each. Cloud primitives (VPC, K8s, serverless), DevOps (CI/CD, Terraform), networking (DNS, TLS), and AI (LLMs, RAG, agents, transformers, embeddings, prompt engineering, evals).
 
 ### 🛤️ Structured learning paths
 - **[Cloud from Scratch](./cloud-from-scratch.md)** - 8-phase path from "what is cloud?" to designing real systems

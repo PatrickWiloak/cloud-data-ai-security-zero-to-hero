@@ -1,7 +1,7 @@
 # Cloud + AI Learning Resource - Project Instructions
 
 ## Overview
-A learning resource for cloud and AI - concepts, hands-on builds, deep references, and certification prep. Covers 131 certifications across 26 providers (AWS, Azure, GCP, Kubernetes/CNCF, NVIDIA, HashiCorp, Databricks, Snowflake, GitHub, Red Hat, Cisco, Salesforce, Confluent/Kafka, MongoDB, FinOps, CompTIA, ISC2, ISACA, Cloud Security Alliance, Offensive Security, Palo Alto Networks, Linux Foundation, Oracle, IBM, ServiceNow, VMware) plus 6 self-directed study tracks (4 Anthropic Claude, plus Azure and GCP GenAI). Counts are generated from `docs/certs.json`, not maintained by hand. Certifications are one pillar; the repo also serves non-cert learners.
+A learning resource for cloud and AI - concepts, hands-on builds, deep references, and certification prep. Covers 144 certifications across 26 providers (AWS, Azure, GCP, Kubernetes/CNCF, NVIDIA, HashiCorp, Databricks, Snowflake, GitHub, Red Hat, Cisco, Salesforce, Confluent/Kafka, MongoDB, FinOps, CompTIA, ISC2, ISACA, Cloud Security Alliance, Offensive Security, Palo Alto Networks, Linux Foundation, Oracle, IBM, ServiceNow, VMware) plus 6 self-directed study tracks (4 Anthropic Claude, plus Azure and GCP GenAI). Counts are generated from `docs/certs.json`, not maintained by hand. Certifications are one pillar; the repo also serves non-cert learners.
 
 ## Structure
 ```

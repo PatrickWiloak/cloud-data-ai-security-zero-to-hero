@@ -6,7 +6,7 @@ reading-time: 5 min
 
 # Google Cloud Generative AI Leader
 
-Google's business-level generative AI certification. No prerequisites, no coding, no console work: it tests whether you can reason about generative AI as a business capability, name what Google Cloud offers, and run an adoption programme responsibly.
+Google's business-level generative AI certification. No prerequisites, no coding, no console work: it tests whether you can reason about generative AI as a business capability, name what Google Cloud offers, and run an adoption program responsibly.
 
 Every other AI certification in this repo is aimed at people who **build**. This one is aimed at people who decide **whether to build**, which is a genuinely different and underserved audience.
 

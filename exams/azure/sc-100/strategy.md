@@ -31,7 +31,7 @@ Build a table on your scratch pad on first read:
 
 | Requirement | Constraint | Existing estate |
 |---|---|---|
-| Protect on-prem servers | Must use existing licences | Windows Server 2019, no Arc |
+| Protect on-prem servers | Must use existing licenses | Windows Server 2019, no Arc |
 | Detect identity attacks | Least admin effort | Entra ID P2 already owned |
 
 Then answer each question against the table rather than re-reading. Case study questions are usually independent, so one misread requirement does not have to cost you several marks.
@@ -69,7 +69,7 @@ Focus on the boundaries:
 
 ## Phase 4: Integration (week 7-8)
 
-Practise whole-architecture questions. Take a scenario and design the answer before reading options. If your design matches one of the options, you understand the material. If it does not, work out whether the option is better or whether you missed a constraint.
+Practice whole-architecture questions. Take a scenario and design the answer before reading options. If your design matches one of the options, you understand the material. If it does not, work out whether the option is better or whether you missed a constraint.
 
 ## Common traps
 

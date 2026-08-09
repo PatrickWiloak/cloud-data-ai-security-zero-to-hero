@@ -79,7 +79,7 @@ Questions worth asking before committing:
 - Is it governed: classified, access-controlled, with an owner?
 - If we ground on it, will retrieval respect existing permissions?
 
-An organization with poor data governance will find that generative AI **surfaces** the problem rather than solving it. An assistant honours existing permissions, so pre-existing oversharing becomes visible exposure on day one.
+An organization with poor data governance will find that generative AI **surfaces** the problem rather than solving it. An assistant honors existing permissions, so pre-existing oversharing becomes visible exposure on day one.
 
 ---
 
@@ -151,7 +151,7 @@ Define before building, evaluate after:
 - **Operational metrics**: latency, availability, cost per request
 - **Adoption metrics**: active users, proportion of eligible work handled
 
-Then iterate. Generative AI systems degrade quietly as data, models, and usage change, so evaluation is an ongoing programme rather than a launch gate.
+Then iterate. Generative AI systems degrade quietly as data, models, and usage change, so evaluation is an ongoing program rather than a launch gate.
 
 ---
 

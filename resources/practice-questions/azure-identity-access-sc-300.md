@@ -1,6 +1,6 @@
 # Microsoft Identity and Access Administrator (SC-300) - Practice Questions
 
-15 questions for SC-300 prep. Watch for the licence tier stated in each scenario: it decides several of these outright.
+15 questions for SC-300 prep. Watch for the license tier stated in each scenario: it decides several of these outright.
 
 > **Cert page:** [exams/azure/sc-300/](../../exams/azure/sc-300/)
 
@@ -169,7 +169,7 @@ D. Helpdesk Administrator
 ---
 
 ### Question 10
-**Scenario:** A tenant has Entra ID P1 only. Which requirement cannot be met without a licence upgrade?
+**Scenario:** A tenant has Entra ID P1 only. Which requirement cannot be met without a license upgrade?
 
 A. Conditional Access requiring MFA
 B. Self-service password reset with writeback
@@ -181,7 +181,7 @@ D. Application Proxy for an on-premises web app
 
 **Correct: C**
 
-**Why:** Sign-in risk and user risk conditions come from Entra ID Protection, which requires P2. Conditional Access itself, SSPR with writeback, and Application Proxy are all P1 capabilities. Licence tier is the single most common decider on this exam.
+**Why:** Sign-in risk and user risk conditions come from Entra ID Protection, which requires P2. Conditional Access itself, SSPR with writeback, and Application Proxy are all P1 capabilities. License tier is the single most common decider on this exam.
 </details>
 
 ---
@@ -279,7 +279,7 @@ D. A lifecycle workflow triggered on the review end date
 ## Scoring guide
 
 - **13-15 correct (85%+):** Ready. Spend remaining time in a trial tenant building Conditional Access policies.
-- **10-12 correct (65-80%):** Review the licence boundary table and the feature-boundary table in the [strategy notes](../../exams/azure/sc-300/strategy.md).
+- **10-12 correct (65-80%):** Review the license boundary table and the feature-boundary table in the [strategy notes](../../exams/azure/sc-300/strategy.md).
 - **Below 10:** Work through the domain notes, then build the labs listed in the [practice plan](../../exams/azure/sc-300/practice-plan.md).
 
-Two habits carry this exam: read the licence tier first, and know precisely which of Conditional Access, PIM, entitlement management, and access reviews solves the stated problem.
+Two habits carry this exam: read the license tier first, and know precisely which of Conditional Access, PIM, entitlement management, and access reviews solves the stated problem.

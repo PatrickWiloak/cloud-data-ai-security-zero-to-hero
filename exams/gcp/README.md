@@ -4,11 +4,12 @@ Study guides for GCP in this repo. For the full picture across every provider, s
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-11 certifications and 1 self-directed study track in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+12 certifications and 1 self-directed study track in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
 | [Google Cloud Digital Leader Certification](cloud-digital-leader/) | - | Foundational | Ready | 5 |
+| [Google Cloud Generative AI Leader](generative-ai-leader/) | - | Foundational | Ready | 4 |
 | [Google Cloud Associate Cloud Engineer Certification](cloud-engineer/) | Associate Cloud Engineer | Associate | Ready | 10 |
 | [Google Cloud Professional Cloud Architect Certification](cloud-architect/) | Professional Cloud Architect | Professional | Ready | 10 |
 | [Google Cloud Professional Cloud Developer Certification](cloud-developer/) | - | Professional | Ready | 3 |

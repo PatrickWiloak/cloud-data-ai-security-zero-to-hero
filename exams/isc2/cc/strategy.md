@@ -39,7 +39,7 @@ Plus **deterrent** (discourages: a warning sign, visible cameras) and **compensa
 The **ISC2 Code of Ethics** canons are directly testable, including their **order**, because the code states that they are to be applied in order of precedence:
 
 1. Protect society, the common good, necessary public trust and confidence, and the infrastructure
-2. Act honourably, honestly, justly, responsibly, and legally
+2. Act honorably, honestly, justly, responsibly, and legally
 3. Provide diligent and competent service to principals
 4. Advance and protect the profession
 

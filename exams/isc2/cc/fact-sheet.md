@@ -24,7 +24,7 @@ reading-time: 10 min
 
 **[📖 ISC2 Certified in Cybersecurity](https://www.isc2.org/certifications/cc)** - exam outline, registration, and the free training offer
 **[📖 ISC2 CC exam outline](https://www.isc2.org/certifications/cc/cc-certification-exam-outline)** - the authoritative domain breakdown
-**[📖 ISC2 One Million Certified in Cybersecurity](https://www.isc2.org/landing/1mcc)** - the free training and exam programme
+**[📖 ISC2 One Million Certified in Cybersecurity](https://www.isc2.org/landing/1mcc)** - the free training and exam program
 
 ## Why this exam is in this repo
 
@@ -116,7 +116,7 @@ The smallest domain.
 |---|---|---|
 | **CC** | None | Entry |
 | **SSCP** | 1 year | Practitioner |
-| **[CCSP](../ccsp/)** | 5 years, including cloud | Cloud specializt |
+| **[CCSP](../ccsp/)** | 5 years, including cloud | Cloud specialist |
 | **[CISSP](../cissp/)** | 5 years across 2 domains | Senior |
 
 CC has no experience requirement, which is what makes it the true starting point. CISSP requires five years, so passing the exam earlier makes you an Associate of ISC2 until you accumulate it.

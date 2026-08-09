@@ -108,7 +108,7 @@ Key principles: collect only what is needed, use it only for the stated purpose,
 The four canons, in **order of precedence**, which is itself testable:
 
 1. Protect society, the common good, necessary public trust and confidence, and the infrastructure
-2. Act honourably, honestly, justly, responsibly, and legally
+2. Act honorably, honestly, justly, responsibly, and legally
 3. Provide diligent and competent service to principals
 4. Advance and protect the profession
 

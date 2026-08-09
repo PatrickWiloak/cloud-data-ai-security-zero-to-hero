@@ -137,7 +137,7 @@ Identifying the layer usually resolves the question. "Without machine learning e
 - **Select AI** - the capability translating natural language questions into SQL against the database
 - **OCI Data Science** - the platform for building, training, deploying, and monitoring custom models
 - **Model catalog** - the versioned store for models with metadata and provenance in OCI Data Science
-- **Model deployment** - serving a catalogued model as a scalable HTTP endpoint
+- **Model deployment** - serving a cataloged model as a scalable HTTP endpoint
 - **AI Quick Actions** - OCI Data Science capability for deploying and fine-tuning foundation models without custom serving code
 - **OCI Data Labeling** - the service for creating labeled datasets for supervised training
 - **Bare metal GPU shape** - a compute shape providing direct access to GPUs without virtualization overhead

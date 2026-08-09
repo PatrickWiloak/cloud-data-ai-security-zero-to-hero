@@ -280,4 +280,4 @@ D. It cannot; the workflow must query S3 itself
 
 - **13-15 correct (85%+):** Ready. 75% is the pass mark.
 - **10-12 correct (65-80%):** Check whether your misses cluster in Argo Workflows, which is the largest domain and the one most candidates under-study.
-- **Below 10:** Work the [scenarios](../../exams/kubernetes/capa/scenarios.md) and practise reading Workflow and Application YAML and saying what it does.
+- **Below 10:** Work the [scenarios](../../exams/kubernetes/capa/scenarios.md) and practice reading Workflow and Application YAML and saying what it does.

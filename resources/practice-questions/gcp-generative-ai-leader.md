@@ -100,7 +100,7 @@ D. Gemma
 **Scenario:** A leadership team asks how to decide which generative AI use cases to pursue first.
 
 A. Start with the most technically interesting
-B. Prioritize by business value against feasibility, favouring high-value, high-feasibility quick wins with demonstration value
+B. Prioritize by business value against feasibility, favoring high-value, high-feasibility quick wins with demonstration value
 C. Start with the largest department
 D. Pursue all candidate use cases in parallel
 

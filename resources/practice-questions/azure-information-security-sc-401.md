@@ -7,7 +7,7 @@
 ---
 
 ### Question 1
-**Scenario:** Contracts must remain unreadable to anyone outside the matter team even if emailed to a personal address or copied to a USB drive. Partners must be able to open them offline while travelling.
+**Scenario:** Contracts must remain unreadable to anyone outside the matter team even if emailed to a personal address or copied to a USB drive. Partners must be able to open them offline while traveling.
 
 A. A DLP policy blocking egress of documents in the contracts library
 B. A sensitivity label with encryption granting permissions to the matter team, with offline access configured, published through a label policy

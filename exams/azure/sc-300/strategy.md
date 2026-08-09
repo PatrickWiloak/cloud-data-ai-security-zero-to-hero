@@ -22,7 +22,7 @@ reading-time: 6 min
 
 **3. Least privilege.** When a question asks which role to assign, the answer is the narrowest built-in role that covers the task. Global Administrator is almost never correct. Learn the common ones: User Administrator, Groups Administrator, Authentication Administrator, Privileged Authentication Administrator, Application Administrator, Cloud Application Administrator, Conditional Access Administrator, Security Reader.
 
-The distinction between **Authentication Administrator** and **Privileged Authentication Administrator** is a favourite: the former cannot reset credentials for users holding privileged roles, the latter can.
+The distinction between **Authentication Administrator** and **Privileged Authentication Administrator** is a favorite: the former cannot reset credentials for users holding privileged roles, the latter can.
 
 ## Phase 1: Directory objects (week 1-2)
 
@@ -31,7 +31,7 @@ Get comfortable with the object model: users, groups, devices, service principal
 Focus on:
 - Dynamic membership rule syntax and its limits (no nested group rules, attribute availability)
 - Administrative units as the delegation boundary
-- Group-based licensing and what happens when licences run out
+- Group-based licensing and what happens when licenses run out
 - Guest user default permissions and how to restrict them
 
 ## Phase 2: Authentication (week 3)

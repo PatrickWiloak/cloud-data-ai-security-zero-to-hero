@@ -90,7 +90,7 @@ It also fills a career-path gap. Not everyone entering data work starts as an en
 - Drillthrough, drilldown, tooltips, and report page tooltips
 - Bookmarks, selection pane, and buttons for navigation
 - Custom and AppSource visuals, and organizational visual governance
-- Accessibility: alt text, tab order, colour contrast, and report readability
+- Accessibility: alt text, tab order, color contrast, and report readability
 - Mobile layouts
 - AI visuals: key influencers, decomposition tree, smart narrative, Q&A, anomaly detection
 - Quick measures and the quick measure suggestions experience

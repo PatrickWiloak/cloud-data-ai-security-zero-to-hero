@@ -147,7 +147,7 @@ Full detail in **[Model supply chain security](./model-supply-chain.md)**.
 **What helps**
 - Model output is untrusted input to whatever comes next. Full stop.
 - Validate against a schema and reject on mismatch rather than coercing.
-- Parameterise queries; never interpolate model text into SQL, shell, or a template.
+- Parameterize queries; never interpolate model text into SQL, shell, or a template.
 - Encode on output; never render model markdown as unsanitized HTML.
 - Allowlist destinations for any URL the model produces.
 - Run generated code in a sandbox with no network and no credentials.

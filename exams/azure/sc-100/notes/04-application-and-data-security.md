@@ -123,7 +123,7 @@ For engineering depth beyond the exam, see the repo's [AI security](../../../../
 
 - **Managed identity** - an Entra ID identity Azure manages for a resource, removing stored credentials from application code
 - **Workload identity federation** - trust configuration letting external workloads such as GitHub Actions obtain Entra tokens without a stored secret
-- **Sensitivity label** - a Purview classification that applies protection travelling with the file, including encryption and access restriction
+- **Sensitivity label** - a Purview classification that applies protection traveling with the file, including encryption and access restriction
 - **Auto-labeling** - Purview policy applying sensitivity labels automatically based on classifiers rather than user action
 - **Data loss prevention** - policy that inspects activity and blocks or warns when classified data crosses a defined boundary
 - **DSPM for AI** - Purview capability giving visibility into sensitive data touched by AI interactions

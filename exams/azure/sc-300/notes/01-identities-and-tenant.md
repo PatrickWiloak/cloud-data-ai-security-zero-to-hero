@@ -49,7 +49,7 @@ Source of authority matters: a user created in the cloud is editable in Entra ID
 
 Constraints worth knowing: a group is either assigned or dynamic, never both; a dynamic group cannot have a rule based on membership of another group; evaluation is not instantaneous; and synced groups cannot be made dynamic in the cloud.
 
-**Group-based licensing** assigns licences by group membership, with reconciliation when a user joins or leaves. If licences run out, new members enter an error state rather than silently going unlicensed.
+**Group-based licensing** assigns licenses by group membership, with reconciliation when a user joins or leaves. If licenses run out, new members enter an error state rather than silently going unlicensed.
 
 ---
 
@@ -128,7 +128,7 @@ Guest default permissions should be set to the most restrictive option unless a 
 - **Administrative unit** - a directory container that scopes a role assignment to a subset of users, groups, or devices
 - **Restricted management administrative unit** - an administrative unit whose members cannot be modified even by tenant-level administrators
 - **Dynamic group** - a group whose membership is computed from an attribute rule rather than assigned manually
-- **Group-based licensing** - assigning product licences through group membership with automatic reconciliation
+- **Group-based licensing** - assigning product licenses through group membership with automatic reconciliation
 - **Entra Connect Sync** - the full-featured server-based directory synchronization engine supporting writeback and transformation
 - **Entra Cloud Sync** - the lightweight cloud-managed synchronization agent supporting multiple disconnected forests
 - **Password writeback** - the capability that pushes a cloud password change back to on-premises Active Directory

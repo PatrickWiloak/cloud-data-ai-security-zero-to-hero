@@ -80,11 +80,11 @@ Q&A quality depends on the model: table and column names, synonyms defined in th
 
 ## Accessibility
 
-Reliably tested. A report should be usable without relying on colour or a mouse.
+Reliably tested. A report should be usable without relying on color or a mouse.
 
 - **Alt text** on every meaningful visual
 - **Tab order** set in the Selection pane so keyboard navigation is logical
-- **Colour contrast** sufficient, and never the only means of conveying meaning
+- **Color contrast** sufficient, and never the only means of conveying meaning
 - Themes with accessible palettes
 - Avoid excessive visuals per page; each is another stop for a screen reader
 - Titles and labels that read as sentences

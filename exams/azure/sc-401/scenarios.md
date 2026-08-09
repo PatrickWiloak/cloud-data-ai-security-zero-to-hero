@@ -10,11 +10,11 @@ reading-time: 11 min
 
 ## Scenario 1: Protection that survives leaving the tenant
 
-**Scenario**: A law firm's contracts must remain unreadable to anyone outside the matter team, even if a document is emailed to a personal address or copied to a USB drive. Partners must be able to open them offline while travelling.
+**Scenario**: A law firm's contracts must remain unreadable to anyone outside the matter team, even if a document is emailed to a personal address or copied to a USB drive. Partners must be able to open them offline while traveling.
 
 **Solution Pattern**:
 - **Sensitivity label with encryption**, granting permissions to the matter team security group
-- Configure **offline access** for an appropriate number of days so travelling partners are not blocked
+- Configure **offline access** for an appropriate number of days so traveling partners are not blocked
 - Publish through a **label policy** scoped to the relevant users, with mandatory labeling for the contracts library
 - Add a **DLP policy** as a second layer to warn or block on egress, but recognize it is not what satisfies the core requirement
 

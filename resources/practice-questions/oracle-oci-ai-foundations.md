@@ -217,7 +217,7 @@ D. To reduce memory use
 
 **Correct: B**
 
-**Why:** The validation set is used to tune hyperparameters, so performance on it is optimiztically biased. The test set is used once, at the end, to estimate real-world performance.
+**Why:** The validation set is used to tune hyperparameters, so performance on it is optimistically biased. The test set is used once, at the end, to estimate real-world performance.
 </details>
 
 ---

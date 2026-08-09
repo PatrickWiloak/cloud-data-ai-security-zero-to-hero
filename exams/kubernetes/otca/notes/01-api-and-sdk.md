@@ -148,7 +148,7 @@ Providers own the pipeline: `TracerProvider`, `MeterProvider`, `LoggerProvider`.
 - **Span link** - a reference from one span to another without a causal parent-child relationship
 - **Context propagation** - carrying trace context across process boundaries so spans join into one trace
 - **traceparent** - the W3C Trace Context header carrying version, trace ID, span ID, and flags
-- **Baggage** - propagated key-value pairs travelling alongside trace context, not a security boundary
+- **Baggage** - propagated key-value pairs traveling alongside trace context, not a security boundary
 - **Counter** - a synchronous monotonic instrument for totals that only increase
 - **Up-down counter** - a synchronous instrument for values that increase and decrease
 - **Histogram** - an instrument recording a distribution so percentiles can be computed

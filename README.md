@@ -27,7 +27,7 @@ If you need custom software built, [get in touch](https://noblerworks.com/).
 >
 > 🎥 [@patrickwiloak](https://youtube.com/@patrickwiloak) | 💼 [LinkedIn](https://www.linkedin.com/in/patricklukewilson/)
 
-![Certifications](https://img.shields.io/badge/Certifications-131-blue.svg)
+![Certifications](https://img.shields.io/badge/Certifications-144-blue.svg)
 ![Documentation Links](https://img.shields.io/badge/Documentation%20Links-12000+-green.svg)
 ![Providers](https://img.shields.io/badge/Providers-26-orange.svg)
 ![Free to Use](https://img.shields.io/badge/Free%20to%20Use-Educational-green.svg)
@@ -40,7 +40,7 @@ If you need custom software built, [get in touch](https://noblerworks.com/).
 |---|---|---|---|
 | 🎓 | **Learn** | Plain-English concepts, beginner on-ramp, structured paths. No exam scaffolding. | [learn/](./learn/) |
 | 🛠️ | **Build** | Hands-on projects, architecture patterns, CLI cheat sheets. Practitioner reference. | [resources/hands-on-projects/](./resources/hands-on-projects/) |
-| 🎯 | **Certify** | 131 cert study guides across 26 providers, plus 6 self-directed study tracks. Fact sheets, practice plans, scenarios. | [STUDY-HUB.md](./STUDY-HUB.md) |
+| 🎯 | **Certify** | 144 cert study guides across 26 providers, plus 6 self-directed study tracks. Fact sheets, practice plans, scenarios. | [STUDY-HUB.md](./STUDY-HUB.md) |
 | 📚 | **Reference** | Cross-cloud service comparisons, career roadmaps, compliance and FinOps guides. | [resources/](./resources/) |
 
 Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certify together by subject (LLMs, IAM, networking, K8s, observability, security, databases).
@@ -60,7 +60,7 @@ Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certi
 | 🔍 Compare AWS vs Azure vs GCP for a service | **[Service comparisons](./resources/)** |
 | 🎯 Pick the right certification | **[Study Hub decision tree](./STUDY-HUB.md#-decision-tree-find-your-cert)** |
 | 🚀 Follow a career path | **[Roadmaps](#certification-roadmaps)** |
-| 📚 Browse all 131 cert guides | **[STUDY-HUB.md](./STUDY-HUB.md)** |
+| 📚 Browse all 144 cert guides | **[STUDY-HUB.md](./STUDY-HUB.md)** |
 
 ---
 
@@ -81,7 +81,7 @@ A complete cloud + AI learning resource. Whether you're starting fresh, building
 - ✅ **[Day One on-ramp](./learn/day-one/)** - terminal, git, HTTP, servers
 - ✅ **[37 concept pages](./learn/concepts/)** - LLMs, RAG, MCP, agents, tool use, multimodal, quantization, VPCs, K8s, IAM, observability, idempotency
 - ✅ **[Cloud from Scratch](./learn/cloud-from-scratch.md)** + **[AI from Scratch](./learn/ai-from-scratch.md)** - structured 8-phase paths
-- ✅ **131 certification study guides** across 26 providers, 12,000+ embedded vendor doc links
+- ✅ **144 certification study guides** across 26 providers, 12,000+ embedded vendor doc links
 - ✅ **[8 cross-pillar topic indexes](./topics/)** - LLMs, IAM, networking, K8s, observability, security, databases (find everything by topic, not provider)
 - ✅ **16 cross-cloud service comparisons** (12 cloud + 4 AI: vector DBs, GenAI platforms, agent frameworks, LLM observability)
 - ✅ **9 CLI cheat sheets** (AWS, Azure, GCP, kubectl, Terraform, Docker, Helm, GitHub CLI, multi-cloud)
@@ -210,7 +210,7 @@ Career-focused learning paths:
 
 1. **Documentation-rich** - 12,000+ embedded vendor doc links, format `**[📖 Title](URL)** - description`
 2. **Multi-cloud + AI-native** - 26 providers, cross-cloud comparisons, AI-side comparisons (vector DBs, GenAI platforms)
-3. **Comprehensive + structured** - consistent format across all 131 certs (README → fact-sheet → notes → practice-plan → scenarios → strategy)
+3. **Comprehensive + structured** - consistent format across all 144 certs (README → fact-sheet → notes → practice-plan → scenarios → strategy)
 4. **Practical + hands-on** - 15 guided builds with inline code, free-tier guides
 5. **Exam-focused** - exam tips, common scenarios, time management strategies
 
@@ -242,7 +242,7 @@ Career-focused learning paths:
 
 ## 📊 Repository Statistics
 
-- **Certifications:** 131 (plus 6 self-directed study tracks)
+- **Certifications:** 144 (plus 6 self-directed study tracks)
 - **Documentation links:** 12,000+
 - **Providers:** 22
 - **Concept pages:** 37 (cloud + AI primitives)
@@ -271,7 +271,7 @@ cloud-data-ai-security-zero-to-hero/
 │   ├── ai-from-scratch.md
 │   ├── cloud-from-scratch.md
 │   └── glossary.md
-├── exams/                # 131 certs across 26 providers, plus 6 study tracks
+├── exams/                # 144 certs across 26 providers, plus 6 study tracks
 ├── resources/            # comparisons, cheat sheets, roadmaps, guides, projects
 ├── topics/               # cross-pillar topic indexes
 ├── assets/diagrams/      # PNG diagrams, for the few too dense for inline Mermaid

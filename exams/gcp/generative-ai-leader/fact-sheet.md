@@ -28,7 +28,7 @@ reading-time: 9 min
 
 ## What kind of certification this is
 
-Unusual for Google Cloud: it is aimed at **business-level professionals**, explicitly including people with no hands-on technical experience. It tests whether you can reason about where generative AI creates value, what Google Cloud offers, how output quality is improved, and how to run an adoption programme responsibly.
+Unusual for Google Cloud: it is aimed at **business-level professionals**, explicitly including people with no hands-on technical experience. It tests whether you can reason about where generative AI creates value, what Google Cloud offers, how output quality is improved, and how to run an adoption program responsibly.
 
 There is no console work, no code, and no architecture diagramming. What it does expect is precision about concepts and familiarity with Google's product names.
 
@@ -39,7 +39,7 @@ The repo carried twelve GCP certifications and neither of the two newest ones. M
 ## Target Audience
 
 - Business and technology leaders evaluating generative AI adoption
-- Product managers, programme managers, and analysts
+- Product managers, program managers, and analysts
 - Consultants and pre-sales roles
 - Engineers who want the strategic framing rather than more implementation depth
 - Anyone wanting a low-cost, low-barrier AI credential

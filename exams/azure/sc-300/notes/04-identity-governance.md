@@ -49,7 +49,7 @@ Configuration to know:
 
 Automates joiner, mover, and leaver tasks against attribute triggers such as employee hire date or leave date.
 
-Tasks include sending a welcome email, generating a Temporary Access Pass, adding to or removing from groups and access packages, disabling the account, removing all licences, and deleting the user.
+Tasks include sending a welcome email, generating a Temporary Access Pass, adding to or removing from groups and access packages, disabling the account, removing all licenses, and deleting the user.
 
 Requires Entra ID Governance licensing. The typical exam use is "automatically disable the account and remove all access on the employee's last day, without manual intervention".
 

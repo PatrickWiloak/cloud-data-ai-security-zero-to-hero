@@ -24,9 +24,19 @@ commands in [How the numbers were produced](#how-the-numbers-were-produced) to r
 > active. No cert remains at outline stage. The flashcard corpus grew to 90 decks and
 > 8,484 cards as a result.
 >
-> **Still open, all content authoring rather than tooling:** practice questions for the
-> certs that lack them, and the Tier 1 certifications in
-> [section 3](#3-certifications-we-could-add). Tracked in [TODO.md](../TODO.md).
+> **Update (2026-08-09).** Section 3's Tier 1 list is now closed: all 13 certifications
+> have been added (137 → 150 cert directories), each with a full file set and a practice
+> question bank. One correction to that list: **SC-400 is retired and was replaced by
+> SC-401** (Information Security Administrator), so SC-401 was built instead.
+>
+> The same pass closed two gaps this document did not name. The repo had **no AI security
+> material** despite the name: "OWASP LLM Top 10" appeared in one file and "model supply
+> chain" in zero, and the compliance guides covered no AI regime. `resources/ai-security/`
+> and three AI governance guides now exist. And the **learn pillar** was 54k words against
+> 2.17M in `exams/`; it gained 11 pages and a topic hub.
+>
+> **Still open:** practice questions for the 103 certs that still lack them. Tracked in
+> [TODO.md](../TODO.md).
 
 <!-- -->
 

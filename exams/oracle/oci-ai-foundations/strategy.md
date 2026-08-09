@@ -29,7 +29,7 @@ The pairs that recur:
 
 ## The distinctions worth getting exactly right
 
-**Precision versus recall.** Precision asks: of the things I flagged, how many were right? Recall asks: of the things I should have found, how many did I find? Fraud detection usually favours recall (missing fraud is worse than a false alarm); spam filtering usually favours precision (blocking real mail is worse than letting spam through). **Accuracy misleads on imbalanced data**: a model that always predicts "not fraud" on a dataset that is 99.9% legitimate scores 99.9% accuracy and is useless.
+**Precision versus recall.** Precision asks: of the things I flagged, how many were right? Recall asks: of the things I should have found, how many did I find? Fraud detection usually favors recall (missing fraud is worse than a false alarm); spam filtering usually favors precision (blocking real mail is worse than letting spam through). **Accuracy misleads on imbalanced data**: a model that always predicts "not fraud" on a dataset that is 99.9% legitimate scores 99.9% accuracy and is useless.
 
 **Overfitting versus underfitting.** Overfitting means the model memorized the training data and performs badly on new data: high training accuracy, low test accuracy. Underfitting means it never learned the pattern: poor on both. Overfitting is addressed with more data, regularization, simpler models, or early stopping.
 

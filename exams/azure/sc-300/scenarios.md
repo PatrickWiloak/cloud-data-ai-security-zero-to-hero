@@ -63,7 +63,7 @@ Identity design problems in exam shape. Read the constraint carefully; several o
 - Switching to cloud-only accounts (a migration project, not a fix)
 - Reconfiguring the authentication methods policy (governs which methods can be used, not writeback)
 
-**Key Takeaway**: For synced users, SSPR without password writeback changes only the cloud password. This is a favourite exam question because the symptom looks like an SSPR configuration problem.
+**Key Takeaway**: For synced users, SSPR without password writeback changes only the cloud password. This is a favorite exam question because the symptom looks like an SSPR configuration problem.
 
 ---
 

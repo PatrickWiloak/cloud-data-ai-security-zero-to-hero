@@ -71,7 +71,7 @@ Team Topologies vocabulary the white paper uses:
 - **Stream-aligned team** - delivers value for a business stream; the platform's user
 - **Platform team** - provides internal services that reduce stream-aligned teams' cognitive load
 - **Enabling team** - helps other teams build capability, temporarily
-- **Complicated subsystem team** - owns something requiring deep specializt knowledge
+- **Complicated subsystem team** - owns something requiring deep specialist knowledge
 
 ---
 

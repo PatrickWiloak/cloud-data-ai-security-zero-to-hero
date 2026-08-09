@@ -136,7 +136,7 @@ reading-time: 10 min
 - Publish an **app** with **audiences**, one per department, each seeing the relevant pages
 - Consumers get the app, not workspace access, so authoring changes do not appear until the app is republished
 - **Row-level security** for row-level restrictions within a shared page
-- Licence check: consumers need Power BI Pro, or the content must sit on Premium Per User or a Fabric capacity where free users can consume
+- License check: consumers need Power BI Pro, or the content must sit on Premium Per User or a Fabric capacity where free users can consume
 
 **Common Distractors**:
 - Sharing the report directly with 3,000 users (unmanageable, and edits are immediately visible)

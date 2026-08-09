@@ -63,7 +63,7 @@ If you use Argo CD, focus on the parts people skip:
 - Multiple-select questions state how many answers to select.
 - 75% to pass, so roughly 45 of 60.
 - One free retake is included.
-- Expect YAML snippets to read, not to write. Practise reading a Workflow or Application manifest and saying what it does.
+- Expect YAML snippets to read, not to write. Practice reading a Workflow or Application manifest and saying what it does.
 
 ## Related
 

@@ -50,7 +50,7 @@ Six weeks at 6-8 hours per week. Every week is built around Power BI Desktop, wh
 - [ ] Variables for readability and to avoid repeated evaluation
 - [ ] Calculation groups
 - [ ] **Build**: five measures of increasing complexity, each rewritten with variables
-- [ ] Practise reading a measure and predicting its result before running it
+- [ ] Practice reading a measure and predicting its result before running it
 
 ## Week 5: Visualization and analysis
 

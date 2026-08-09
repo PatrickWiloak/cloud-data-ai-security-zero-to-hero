@@ -38,7 +38,7 @@ Understand **context** before functions.
 - **Filter context** comes from visuals, slicers, filters, and relationships. It knows which rows are visible.
 - **CALCULATE** is the function that modifies filter context, and it is behind almost every non-trivial measure.
 
-Practise reading a measure and stating what filter context it evaluates in. That skill answers most DAX questions directly.
+Practice reading a measure and stating what filter context it evaluates in. That skill answers most DAX questions directly.
 
 Calculated column versus measure: a calculated column is computed at refresh and stored in the model, consuming memory and fixed at row level. A measure is computed at query time in the current filter context. If a value must respond to slicers, it must be a measure.
 
@@ -48,7 +48,7 @@ Two lines of questions:
 - **Which visual** answers a stated business question. Learn the standard mapping: trend over time is a line chart, part-to-whole is limited, comparison across categories is a bar chart, correlation is a scatter, contribution analysis is key influencers or decomposition tree.
 - **How interactivity is configured**: drillthrough needs a target page with the right field; bookmarks capture state including the selection pane; report page tooltips need the page size set to tooltip.
 
-Accessibility appears reliably: alt text, tab order, and not relying on colour alone.
+Accessibility appears reliably: alt text, tab order, and not relying on color alone.
 
 ## Phase 5: Manage (week 6)
 
@@ -61,7 +61,7 @@ Workspace roles are directly testable. Learn what each can do:
 | **Contributor** | Create and edit content, schedule refresh; cannot publish an app |
 | **Viewer** | View and interact only; RLS applies to viewers |
 
-Row-level security applies to Viewers. Members and Contributors bypass it in the workspace, which is a favourite exam point: RLS must be tested by a real viewer or through the app, not by the author.
+Row-level security applies to Viewers. Members and Contributors bypass it in the workspace, which is a favorite exam point: RLS must be tested by a real viewer or through the app, not by the author.
 
 ## Common traps
 

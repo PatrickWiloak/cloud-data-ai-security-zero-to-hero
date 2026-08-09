@@ -51,7 +51,7 @@ The policy structure is consistent; the differences are per location.
 - **Endpoint DLP** requires device onboarding, and its controls are device-specific: unallowed apps and browsers, removable storage, network share, print, clipboard.
 - **Simulation and test mode** first, then policy tips, then enforce. An exam answer that enforces a broad DLP policy immediately is usually wrong.
 - **Overrides with business justification** are how you keep a policy usable; the incident report is how you keep it auditable.
-- **Adaptive Protection** raises DLP strictness automatically for users with an elevated insider risk level. This is the link between Domains 2 and 3 and is a favourite question.
+- **Adaptive Protection** raises DLP strictness automatically for users with an elevated insider risk level. This is the link between Domains 2 and 3 and is a favorite question.
 
 ## Phase 4: Risk and investigation (week 5-6)
 

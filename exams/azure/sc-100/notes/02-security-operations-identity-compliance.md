@@ -16,7 +16,7 @@ The largest domain. Identity design and SOC design, plus the compliance capabili
 
 ### Tenant design
 
-One tenant is the default. Multiple tenants appear after acquisitions or where regulatory separation is mandatory. Multi-tenant estates are operationally expensive, so exam answers usually favour **Azure Lighthouse** for cross-tenant management and **B2B collaboration** for cross-tenant access over tenant consolidation projects.
+One tenant is the default. Multiple tenants appear after acquisitions or where regulatory separation is mandatory. Multi-tenant estates are operationally expensive, so exam answers usually favor **Azure Lighthouse** for cross-tenant management and **B2B collaboration** for cross-tenant access over tenant consolidation projects.
 
 External identity options:
 

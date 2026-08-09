@@ -98,7 +98,7 @@ For **regression**: mean absolute error (MAE), mean squared error (MSE), root me
 | **Decision tree** | Supervised | Classification and regression, highly interpretable |
 | **Random forest** | Supervised | Many trees combined, more accurate and less prone to overfitting |
 | **Support vector machine** | Supervised | Classification with a clear margin between classes |
-| **k-nearest neighbours** | Supervised | Classification by similarity to nearby examples |
+| **k-nearest neighbors** | Supervised | Classification by similarity to nearby examples |
 | **k-means** | Unsupervised | Clustering into k groups |
 | **PCA** | Unsupervised | Dimensionality reduction |
 

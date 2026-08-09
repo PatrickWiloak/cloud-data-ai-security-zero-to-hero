@@ -22,6 +22,8 @@ reading-time: 12 min
 
 > **Replaces SC-400.** SC-401 (Information Security Administrator) superseded SC-400 (Information Protection and Compliance Administrator). The scope shifted toward data security operations and now includes Microsoft Purview DSPM for AI and protections for Copilot data access. If you find SC-400 study material, treat the Purview fundamentals as still valid and the domain structure and AI content as out of date.
 
+<!-- -->
+
 > **Verify before booking.** Confirm the current outline and price on the official pages below.
 
 **[📖 SC-401 certification page](https://learn.microsoft.com/en-us/credentials/certifications/information-security-administrator/)** - registration and renewal

@@ -41,7 +41,7 @@ Publishing an app separates what consumers see from what authors are working on.
 
 ## Licensing
 
-| Licence | Gives |
+| License | Gives |
 |---|---|
 | **Free** | Personal use in My Workspace; can consume content hosted on Premium or Fabric capacity |
 | **Pro** | Publish and share, consume shared content in shared capacity |
