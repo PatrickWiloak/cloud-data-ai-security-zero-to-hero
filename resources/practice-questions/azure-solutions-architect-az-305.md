@@ -10,6 +10,8 @@
 | Design business continuity solutions | 10-15% | 5 |
 | Design infrastructure solutions | 25-30% | 15 |
 
+> **Cert page:** [exams/azure/az-305/](../../exams/azure/az-305/)
+
 ---
 
 ## Domain 1: Design Identity, Governance, and Monitoring Solutions (Questions 1-11)

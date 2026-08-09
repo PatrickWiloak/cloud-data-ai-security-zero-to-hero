@@ -11,6 +11,8 @@
 | Prepare and use data for analysis | 15% | 6 |
 | Maintain and automate data workloads | 18% | 7 |
 
+> **Cert page:** [exams/gcp/data-engineer/](../../exams/gcp/data-engineer/)
+
 ---
 
 ## Domain 1: Design Data Processing Systems (Questions 1-9)

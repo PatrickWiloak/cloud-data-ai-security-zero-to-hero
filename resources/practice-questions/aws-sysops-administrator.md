@@ -10,6 +10,8 @@
 - Domain 5: Networking and Content Delivery (18%) - 7 questions
 - Domain 6: Cost and Performance Optimization (12%) - 5 questions
 
+> **Cert page:** [exams/aws/associate/sysops-administrator-soa-c02/](../../exams/aws/associate/sysops-administrator-soa-c02/)
+
 ---
 
 ## Domain 1: Monitoring, Logging, and Remediation (20%)

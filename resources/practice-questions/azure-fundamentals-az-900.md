@@ -7,6 +7,8 @@
 - Describe Azure architecture and services (35-40%) - 15 questions
 - Describe Azure management and governance (30-35%) - 14 questions
 
+> **Cert page:** [exams/azure/az-900/](../../exams/azure/az-900/)
+
 ---
 
 ## Describe Cloud Concepts (25-30%)

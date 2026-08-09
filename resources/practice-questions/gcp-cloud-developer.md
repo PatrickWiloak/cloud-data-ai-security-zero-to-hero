@@ -11,6 +11,8 @@
 | Integrating Google Cloud services | 22% | 9 |
 | Managing deployed applications | 14% | 6 |
 
+> **Cert page:** [exams/gcp/cloud-developer/](../../exams/gcp/cloud-developer/)
+
 ---
 
 ## Domain 1: Designing Highly Scalable, Available, and Reliable Cloud-Native Applications (Questions 1-10)

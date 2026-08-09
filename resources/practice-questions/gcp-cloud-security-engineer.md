@@ -11,6 +11,8 @@
 | Ensuring compliance | 14% | 6 |
 | Securing data | 18% | 7 |
 
+> **Cert page:** [exams/gcp/cloud-security-engineer/](../../exams/gcp/cloud-security-engineer/)
+
 ---
 
 ## Domain 1: Configuring Access Within a Cloud Solution Environment (Questions 1-10)

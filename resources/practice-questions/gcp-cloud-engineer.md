@@ -9,6 +9,8 @@
 - Ensuring successful operation of a cloud solution (20%) - 8 questions
 - Configuring access and security (20%) - 8 questions
 
+> **Cert page:** [exams/gcp/cloud-engineer/](../../exams/gcp/cloud-engineer/)
+
 ---
 
 ## Setting Up a Cloud Solution Environment (17.5%)

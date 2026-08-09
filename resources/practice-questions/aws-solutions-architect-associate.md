@@ -8,6 +8,8 @@
 - Domain 3: Design High-Performing Architectures (24%) - 10 questions
 - Domain 4: Design Cost-Optimized Architectures (20%) - 8 questions
 
+> **Cert page:** [exams/aws/associate/solutions-architect-saa-c03/](../../exams/aws/associate/solutions-architect-saa-c03/)
+
 ---
 
 ## Domain 1: Design Secure Architectures (30%)

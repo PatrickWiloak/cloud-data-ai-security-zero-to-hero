@@ -11,6 +11,8 @@
 | Implement and manage virtual networking | 15-20% | 7 |
 | Monitor and maintain Azure resources | 10-15% | 8 |
 
+> **Cert page:** [exams/azure/az-104/](../../exams/azure/az-104/)
+
 ---
 
 ## Domain 1: Manage Azure Identities and Governance (Questions 1-9)

@@ -11,6 +11,8 @@
 | Google Cloud Security and Operations | 21% | 8 |
 | Scaling with Google Cloud Operations | 16% | 7 |
 
+> **Cert page:** [exams/gcp/cloud-digital-leader/](../../exams/gcp/cloud-digital-leader/)
+
 ---
 
 ## Domain 1: Digital Transformation with Google Cloud (Questions 1-7)

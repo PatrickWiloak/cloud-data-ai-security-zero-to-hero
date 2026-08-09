@@ -10,6 +10,8 @@
 | Continuous Improvement for Existing Solutions | 25% | 10 |
 | Accelerate Workload Migration and Modernization | 20% | 8 |
 
+> **Cert page:** [exams/aws/professional/solutions-architect-pro-sap-c02/](../../exams/aws/professional/solutions-architect-pro-sap-c02/)
+
 ---
 
 ## Domain 1: Design Solutions for Organizational Complexity (Questions 1-10)

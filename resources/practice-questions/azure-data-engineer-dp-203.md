@@ -9,6 +9,8 @@
 | Develop data processing | 40-45% | 17 |
 | Secure, monitor, and optimize data storage and data processing | 30-35% | 16 |
 
+> **Cert page:** [exams/azure/dp-203/](../../exams/azure/dp-203/)
+
 ---
 
 ## Domain 1: Design and Implement Data Storage (Questions 1-7)

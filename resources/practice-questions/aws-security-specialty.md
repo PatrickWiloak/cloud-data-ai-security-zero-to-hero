@@ -12,6 +12,8 @@
 | Data Protection | 18% | 7 |
 | Management and Security Governance | 14% | 6 |
 
+> **Cert page:** [exams/aws/specialty/security-scs-c02/](../../exams/aws/specialty/security-scs-c02/)
+
 ---
 
 ## Domain 1: Threat Detection and Incident Response (Questions 1-6)

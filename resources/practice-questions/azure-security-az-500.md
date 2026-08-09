@@ -10,6 +10,8 @@
 | Secure Compute, Storage, and Databases | 20-25% | 9 |
 | Manage Security Operations | 25-30% | 11 |
 
+> **Cert page:** [exams/azure/az-500/](../../exams/azure/az-500/)
+
 ---
 
 ## Domain 1: Manage Identity and Access (Questions 1-11)
