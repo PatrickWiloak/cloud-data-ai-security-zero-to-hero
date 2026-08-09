@@ -94,6 +94,8 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 |-------|--------------|
 | [Evals for LLMs](./evals-for-llms.md) | You're shipping LLM features and wondering how to test them |
 | [Guardrails and safety](./guardrails-and-safety.md) | You're worried about prompt injection or unsafe output |
+| [Prompt injection explained](./prompt-injection-explained.md) | You want to know why prompt injection has no clean fix |
+| [AI threat modeling](./ai-threat-modeling.md) | You're designing an AI feature and want to find the risk early |
 | [Inference servers](./inference-servers.md) | You're considering self-hosting an open-weights model |
 | [Quantization and distillation](./quantization-and-distillation.md) | You want a smaller, faster model |
 
