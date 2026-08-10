@@ -178,6 +178,7 @@ Career-focused learning paths:
 [AI engineer in 30 min](./resources/playlist-ai-engineer-30min.md) | [Cloud security in 1 hour](./resources/playlist-cloud-security-1hour.md) | [Data engineer in 1 hour](./resources/playlist-data-engineer-1hour.md) | [SRE in 1 hour](./resources/playlist-sre-1hour.md)
 
 ### **Practice & Strategy**
+- [📝 Practice Question Banks](./resources/practice-questions/) - scenario questions with explained answers, one bank per certification (150 of 150)
 - [🎯 Practice Resources Guide](./resources/practice-resources.md)
 - [💰 Free Tier Guides](./resources/free-tier-guide.md)
 - [📝 Study Tips & Strategies](./resources/study-strategies.md)

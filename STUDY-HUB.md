@@ -270,6 +270,7 @@ First-cert path with no cloud background:
 - **Interview Prep:** SA, DevOps, Cloud Engineer, Data Engineer, Security, SRE - [resources/interview-prep/](./resources/interview-prep/)
 
 ### Practice & Strategy
+- [Practice Question Banks](./resources/practice-questions/) - scenario questions with explained answers, one bank per certification (150 of 150)
 - [Practice Resources Guide](./resources/practice-resources.md)
 - [Free Tier Guides](./resources/free-tier-guide.md)
 - [Study Strategies](./resources/study-strategies.md)
