@@ -12,6 +12,8 @@
 | Manage implementation | 11% | 4 |
 | Ensure solution and operations reliability | 14% | 6 |
 
+> **Cert page:** [exams/gcp/cloud-architect/](../../exams/gcp/cloud-architect/)
+
 ---
 
 ## Domain 1: Design and Plan a Cloud Solution Architecture (Questions 1-10)

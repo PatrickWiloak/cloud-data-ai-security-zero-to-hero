@@ -11,6 +11,8 @@
 | Implementing service monitoring strategies | 22% | 9 |
 | Optimizing service performance | 12% | 5 |
 
+> **Cert page:** [exams/gcp/cloud-devops-engineer/](../../exams/gcp/cloud-devops-engineer/)
+
 ---
 
 ## Domain 1: Bootstrapping a Google Cloud Organization (Questions 1-4)

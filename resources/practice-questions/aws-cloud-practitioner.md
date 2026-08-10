@@ -8,6 +8,8 @@
 - Domain 3: Cloud Technology and Services (34%) - 12 questions
 - Domain 4: Billing, Pricing, and Support (12%) - 8 questions
 
+> **Cert page:** [exams/aws/foundational/cloud-practitioner-clf-c02/](../../exams/aws/foundational/cloud-practitioner-clf-c02/)
+
 ---
 
 ## Domain 1: Cloud Concepts (24%)

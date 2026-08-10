@@ -8,6 +8,8 @@
 - Domain 3: Deployment (24%) - 10 questions
 - Domain 4: Troubleshooting and Optimization (18%) - 7 questions
 
+> **Cert page:** [exams/aws/associate/developer-dva-c02/](../../exams/aws/associate/developer-dva-c02/)
+
 ---
 
 ## Domain 1: Development with AWS Services (32%)

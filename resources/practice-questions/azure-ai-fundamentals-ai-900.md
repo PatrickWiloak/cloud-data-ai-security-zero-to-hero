@@ -11,6 +11,8 @@
 | Describe features of Natural Language Processing workloads on Azure | 15-20% | 7 |
 | Describe features of generative AI workloads on Azure | 15-20% | 10 |
 
+> **Cert page:** [exams/azure/ai-900/](../../exams/azure/ai-900/)
+
 ---
 
 ## Domain 1: Describe Artificial Intelligence Workloads and Considerations (Questions 1-7)

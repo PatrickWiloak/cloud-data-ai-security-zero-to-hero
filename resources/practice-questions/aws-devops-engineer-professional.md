@@ -12,6 +12,8 @@
 | Incident and Event Response | 14% | 6 |
 | Security and Compliance | 17% | 6 |
 
+> **Cert page:** [exams/aws/professional/devops-engineer-pro-dop-c02/](../../exams/aws/professional/devops-engineer-pro-dop-c02/)
+
 ---
 
 ## Domain 1: SDLC Automation (Questions 1-9)

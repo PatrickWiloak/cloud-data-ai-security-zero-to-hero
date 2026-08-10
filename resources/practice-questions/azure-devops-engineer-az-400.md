@@ -11,6 +11,8 @@
 | Develop a security and compliance plan | 10-15% | 5 |
 | Implement an instrumentation strategy | 10-15% | 6 |
 
+> **Cert page:** [exams/azure/az-400/](../../exams/azure/az-400/)
+
 ---
 
 ## Domain 1: Configure Processes and Communications (Questions 1-5)

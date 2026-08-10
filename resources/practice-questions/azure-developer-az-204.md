@@ -11,6 +11,8 @@
 | Monitor, troubleshoot, and optimize | 15-20% | 7 |
 | Connect to and consume Azure services | 15-20% | 6 |
 
+> **Cert page:** [exams/azure/az-204/](../../exams/azure/az-204/)
+
 ---
 
 ## Domain 1: Develop Azure Compute Solutions (Questions 1-11)
