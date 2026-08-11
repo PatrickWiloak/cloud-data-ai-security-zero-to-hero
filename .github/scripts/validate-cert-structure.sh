@@ -56,7 +56,7 @@ classify_tier() {
         |genai-llms-professional|agentic-ai-professional \
         |ai-infrastructure-professional|ai-operations-professional \
         |accelerated-data-science-professional \
-        |claude-certified-architect-advanced) echo "senior"; return ;;
+        |claude-certified-architect-professional) echo "senior"; return ;;
         # FinOps Professional
         certified-professional) echo "senior"; return ;;
         # VMware VCP-DCV is professional

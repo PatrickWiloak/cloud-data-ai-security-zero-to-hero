@@ -17,7 +17,7 @@ You want to understand cloud and AI, but:
 - You'd rather learn the **why** before drilling into vendor-specific details
 - You're a developer, founder, PM, analyst, or curious technologist
 
-If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.md)** - 144 certs across 26 providers, fully indexed.
+If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.md)** - 148 certs across 27 providers, fully indexed.
 
 ---
 

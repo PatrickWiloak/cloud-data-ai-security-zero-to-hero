@@ -72,7 +72,7 @@ flowchart LR
 - [Red Hat RHCSA (EX200)](../exams/redhat/rhcsa-ex200/)
 
 **LLM observability** appears in:
-- [Anthropic Application Developer track](../exams/anthropic/claude-application-developer/)
+- [Anthropic Claude Developer Foundations cert](../exams/anthropic/claude-certified-developer-foundations/)
 - [NVIDIA AI Operations Professional](../exams/nvidia/ai-operations-professional/)
 
 ---

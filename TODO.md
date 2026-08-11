@@ -127,3 +127,44 @@ Was 54k words against 2.17M in `exams/`.
   files untouched by this work. It is a newer rule than the pinned CI action, so it
   is version drift rather than a content defect. Decide whether to disable it in
   `.markdownlint.json` or reformat every table
+
+---
+
+## Completed 2026-08-11 - Anthropic certification program refresh
+
+Anthropic launched an official certification program in 2026 (Architect Foundations
+in March; Associate, Developer, and Architect Professional in July). The four repo
+"study tracks" predated it. This pass aligned the repo with the real program.
+
+- [x] Renamed `claude-certified-architect-advanced` → `claude-certified-architect-professional`
+      and `claude-application-developer` → `claude-certified-developer-foundations`
+      (git mv, practice banks renamed too, all inbound links repointed)
+- [x] Retargeted all three existing technical tracks to the official exams with
+      verified blueprints: CCAR-F ($125, 60q), CCAR-P ($175, 63q, 7 domains),
+      CCDV-F ($125, 53q, 8 domains) - real domain weights, Pearson VUE delivery,
+      Partner Academy registration, 12-month validity, retake policy
+- [x] New cert dir `claude-certified-associate-foundations` (CCAO-F, $99, 60q,
+      7 domains): full skeleton + 7 notes + 15-question bank, 2,335 lines
+- [x] 5 new notes filling blueprint gaps: governance/safety/risk and stakeholder
+      lifecycle (CCAR-P); model selection, agents/workflows, security+Claude
+      Code+evals (CCDV-F)
+- [x] Prompt Engineering Specialist stays a study track (no official prompt exam);
+      banner updated to say so
+- [x] Provider promoted from "Anthropic Claude (study tracks)" to a certification
+      provider in both generator scripts; STUDY-HUB table now lists it with the
+      cloud/AI providers
+- [x] All indexes regenerated: certs.json (148 certs / 27 providers / 3 tracks),
+      27 provider indexes, STUDY-HUB table, lab map, freshness ledger, flashcards
+      (105 decks, 9,660 cards)
+- [x] Hand-maintained counts corrected in README, STUDY-HUB, CLAUDE.md,
+      docs/ARCHITECTURE.md
+- [x] Validators at zero: structure 0/0, 4,832 internal links 0 broken
+
+### Known follow-ups
+
+- Exam facts came from the official Pearson VUE page plus secondary 2026 guides;
+  domain weights for CCAO-F and CCAR-P could not be confirmed against the official
+  exam guides (Partner Academy login required). Verify when Partner Network access
+  is available and stamp `docs/freshness.md`.
+- `docs/improvement-roadmap.md` (2026-07-28 snapshot) still describes 4 Anthropic
+  study tracks; left as a dated historical analysis.

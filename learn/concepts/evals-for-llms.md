@@ -165,5 +165,5 @@ But: vibes alone don't scale, don't catch regressions, don't survive team change
 - **[Prompt engineering](./prompt-engineering.md)** - the thing you're evaluating
 - **[RAG explained](./rag-explained.md)** - the case where eval setup is non-trivial
 - **[AI agents explained](./agents-explained.md)** - even harder eval setup
-- **[Anthropic Certified Architect Advanced track](../../exams/anthropic/claude-certified-architect-advanced/)** - production AI systems including evaluation
+- **[Anthropic Claude Certified Architect - Professional cert](../../exams/anthropic/claude-certified-architect-professional/)** - production AI systems including evaluation
 - **[Architecture pattern: AI/ML pipeline](../../resources/architecture-patterns/ai-ml-pipeline.md)** - where evals fit in production

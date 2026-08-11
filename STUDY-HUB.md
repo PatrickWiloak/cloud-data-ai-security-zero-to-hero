@@ -1,12 +1,12 @@
 # 📚 Study Hub - Cloud + AI Learning Hub
 
-> **Your navigation hub for the whole repo: 144 certifications across 26 providers, plus the [Learn](./learn/) pillar for non-cert students - bite-size concepts, beginner on-ramp, and structured cloud + AI paths.**
+> **Your navigation hub for the whole repo: 148 certifications across 27 providers, plus the [Learn](./learn/) pillar for non-cert students - bite-size concepts, beginner on-ramp, and structured cloud + AI paths.**
 
 <div align="center">
 
-![Total Certifications](https://img.shields.io/badge/Certifications-144-blue.svg)
+![Total Certifications](https://img.shields.io/badge/Certifications-148-blue.svg)
 ![Documentation Links](https://img.shields.io/badge/Docs%20Links-12000+-green.svg)
-![Providers](https://img.shields.io/badge/Providers-26-orange.svg)
+![Providers](https://img.shields.io/badge/Providers-27-orange.svg)
 ![Career Roadmaps](https://img.shields.io/badge/Career%20Roadmaps-11-purple.svg)
 
 **Welcome. Whether you're new to all this or chasing your fifth cert, this is the entry point.**
@@ -90,7 +90,7 @@ What's your starting point?
    ├─ Kubernetes          → KCNA → CKA → CKAD → CKS → ICA (Istio) | OpenShift EX280
    ├─ Terraform/IaC       → Terraform Associate → Terraform Authoring & Operations Pro
    ├─ AI/ML platform      → AWS MLA-C01 | Azure AI-102 | NVIDIA AI Infra Pro
-   ├─ Generative AI       → AWS AI Practitioner | Azure GenAI | NVIDIA GenAI/LLM | Anthropic study tracks
+   ├─ Generative AI       → AWS AI Practitioner | Azure GenAI | NVIDIA GenAI/LLM | Anthropic Claude certs
    ├─ Networking          → CCNA → CCNP | AWS Adv Networking | GCP Cloud Network Engineer
    ├─ Linux / Platform    → LFCS | RHCSA → RHCE / OpenShift EX280
    ├─ Security specialty  → CISSP | CCSP | CCSK v5 | Security+ | SC-200
@@ -133,7 +133,7 @@ What's your starting point?
 2. AWS MLA-C01 *or* Azure AI-102 *or* GCP ML Engineer
 3. Databricks ML Associate → Professional
 4. NVIDIA AI Infrastructure & Operations Associate → Professional
-5. Generative AI: NVIDIA GenAI/LLM, plus the Anthropic Claude self-directed study tracks (Architect Foundations → Advanced, Application Developer, Prompt Engineering Specialist)
+5. Generative AI: NVIDIA GenAI/LLM, plus the Anthropic Claude certifications (Associate, Developer, Architect Foundations → Professional)
 
 ### Kubernetes Track <a id="kubernetes-track"></a>
 1. KCNA (Kubernetes and Cloud Native Associate)
@@ -173,6 +173,7 @@ What's your starting point?
 | **GCP** | 12 | Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI (+1 study track) | [exams/gcp/](./exams/gcp/) |
 | **Kubernetes/CNCF** | 12 | KCNA, KCSA, CKA, CKAD, CKS, PCA (Prometheus), ICA (Istio) | [exams/kubernetes/](./exams/kubernetes/) |
 | **NVIDIA** | 10 | AI Infra & Ops, GenAI/LLM, Multimodal, Agentic AI, Networking, OpenUSD | [exams/nvidia/](./exams/nvidia/) |
+| **Anthropic Claude** | 4 | Associate (CCAO-F), Developer (CCDV-F), Architect Foundations (CCAR-F) + Professional (CCAR-P) (+1 study track) | [exams/anthropic/](./exams/anthropic/) |
 | **HashiCorp** | 7 | Terraform Assoc + Pro, Vault, Consul, Packer, Boundary, Nomad | [exams/hashicorp/](./exams/hashicorp/) |
 | **Databricks** | 6 | Data Engineer (A/P), ML (A/P), GenAI Engineer, Lakehouse Admin | [exams/databricks/](./exams/databricks/) |
 | **Snowflake** | 4 | SnowPro Core + 3 Advanced (Architect, Data Eng, Admin) | [exams/snowflake/](./exams/snowflake/) |
@@ -194,10 +195,9 @@ What's your starting point?
 | **IBM Cloud** | 5 | Advocate, Developer, Solution Architect, Security, SRE | [exams/ibm/](./exams/ibm/) |
 | **ServiceNow** | 1 | Certified System Administrator | [exams/servicenow/](./exams/servicenow/) |
 | **VMware** | 1 | VCP-DCV (2V0-21.23) | [exams/vmware/](./exams/vmware/) |
-| **CERTIFICATIONS TOTAL** | **144** | across 26 providers | |
-| **Anthropic Claude (study tracks)** | 4 | Architect Foundations + Advanced, Application Developer, Prompt Engineering Specialist | [exams/anthropic/](./exams/anthropic/) |
+| **CERTIFICATIONS TOTAL** | **148** | across 27 providers | |
 
-The Certs column counts real exams. This repo also carries 6 self-directed study tracks (the Anthropic Claude tracks plus the Azure and GCP GenAI tracks), which are study guides spanning several exams or none, not certifications in their own right.
+The Certs column counts real exams. This repo also carries 3 self-directed study tracks (the Anthropic prompt engineering track plus the Azure and GCP GenAI tracks), which are study guides spanning several exams or none, not certifications in their own right.
 
 ◇ = outline stage: README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting queue.
 
@@ -270,7 +270,7 @@ First-cert path with no cloud background:
 - **Interview Prep:** SA, DevOps, Cloud Engineer, Data Engineer, Security, SRE - [resources/interview-prep/](./resources/interview-prep/)
 
 ### Practice & Strategy
-- [Practice Question Banks](./resources/practice-questions/) - scenario questions with explained answers, one bank per certification (150 of 150)
+- [Practice Question Banks](./resources/practice-questions/) - scenario questions with explained answers, one bank per certification (151 of 151)
 - [Practice Resources Guide](./resources/practice-resources.md)
 - [Free Tier Guides](./resources/free-tier-guide.md)
 - [Study Strategies](./resources/study-strategies.md)

@@ -130,4 +130,4 @@ Servers evolve. A server you wrote six months ago against an early MCP spec may 
 - **[Agentic loops](./agentic-loops.md)** - what you build with MCP servers
 - **[Agent frameworks comparison](../../resources/service-comparison-agent-frameworks.md)** - clients that consume MCP servers
 - **[Build a Claude agent with MCP](../../resources/hands-on-projects/build-claude-agent-with-mcp.md)** - hands-on
-- **[Anthropic Architect tracks](../../exams/anthropic/claude-certified-architect-foundations/)** - cert-style coverage
+- **[Anthropic Claude Architect certs](../../exams/anthropic/claude-certified-architect-foundations/)** - cert-style coverage

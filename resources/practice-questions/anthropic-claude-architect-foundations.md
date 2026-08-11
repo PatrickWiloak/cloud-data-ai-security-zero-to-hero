@@ -1,13 +1,13 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-08-11
 difficulty: intermediate
 ---
 
-# Claude Architect Foundations (Self-Directed Track) - Practice Questions
+# Claude Certified Architect - Foundations (CCAR-F) - Practice Questions
 
-15 questions for the Claude Architect Foundations track, weighted toward agentic architecture (27%), Claude Code configuration (20%), prompt engineering and structured output (20%), tool design and MCP (18%), and context and reliability (15%).
+15 questions for the Claude Certified Architect - Foundations (CCAR-F) exam, weighted toward agentic architecture (27%), Claude Code configuration (20%), prompt engineering and structured output (20%), tool design and MCP (18%), and context and reliability (15%).
 
-This is a self-directed study track rather than an Anthropic exam. Verify API details against the current documentation.
+These are original practice questions, not vendor exam questions. Verify API details against the current documentation.
 
 > **Cert page:** [exams/anthropic/claude-certified-architect-foundations/](../../exams/anthropic/claude-certified-architect-foundations/)
 
@@ -286,7 +286,7 @@ D. Log the calls and review later
 ## Where to go deeper
 
 - [Claude Architect Foundations track page](../../exams/anthropic/claude-certified-architect-foundations/) - notes, practice plan, strategy
-- [Claude Architect Advanced practice questions](./anthropic-claude-architect-advanced.md) - the next level
+- [Claude Certified Architect - Professional practice questions](./anthropic-claude-architect-professional.md) - the next level
 - [Agentic loops](../../learn/concepts/agentic-loops.md) - the loop in plain English
 - [MCP explained](../../learn/concepts/mcp-explained.md) - the protocol
 - **[📖 Claude agents and tools documentation](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview)** - primary source

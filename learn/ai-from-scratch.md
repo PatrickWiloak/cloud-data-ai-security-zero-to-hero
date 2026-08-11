@@ -16,7 +16,7 @@ last-updated: 2026-05-03
 - You want to build with LLMs, not train them from scratch
 - You don't have the math background for a deep ML course - and don't need it for most AI work today
 
-If you do want certifications, the **[NVIDIA tracks](../exams/nvidia/)** and **[Anthropic tracks](../exams/anthropic/)** are the most relevant, plus the cloud-provider AI/ML certs.
+If you do want certifications, the **[NVIDIA tracks](../exams/nvidia/)** and **[Anthropic Claude certifications](../exams/anthropic/)** are the most relevant, plus the cloud-provider AI/ML certs.
 
 ---
 
@@ -72,7 +72,7 @@ Pick one prompt. Run it against three models on a side-by-side service like Open
 
 **Pointer**
 - Glossary entries: LLM, Token, Tokenizer, Context window, Temperature, Sampling
-- [Anthropic Claude study tracks](../exams/anthropic/)
+- [Anthropic Claude certification guides](../exams/anthropic/)
 
 You should now be able to read a model's pricing page and translate "$3 / 1M input tokens" into "what does my use case actually cost?"
 
@@ -95,7 +95,7 @@ Take a prompt you wrote casually. Rewrite it with: a clear role, the actual task
 
 **Pointer**
 - Anthropic's [Prompt Engineering documentation](https://docs.anthropic.com/claude/docs/prompt-engineering)
-- [Anthropic Prompt Engineering Specialist study track](../exams/anthropic/)
+- [Anthropic Prompt Engineering Specialist study track](../exams/anthropic/claude-prompt-engineering-specialist/)
 - Glossary: Prompt, System prompt, Chain-of-thought, Structured output, Prompt injection
 
 You should now be able to look at a flaky prompt and fix it.
@@ -119,7 +119,7 @@ Build a 30-line script that takes a file, summarizes it with Claude or GPT, and 
 
 **Pointer**
 - [Anthropic SDK docs](https://docs.anthropic.com/claude/reference)
-- [Anthropic App Developer track](../exams/anthropic/)
+- [Anthropic Claude Developer Foundations cert](../exams/anthropic/claude-certified-developer-foundations/)
 - Glossary: Inference cost, Prompt caching, Streaming
 
 You should now be comfortable building a basic LLM-powered script.
@@ -186,7 +186,7 @@ Give an LLM two tools (e.g., `search_web` and `read_file`). Ask it to research a
 
 **Pointer**
 - [MCP documentation](https://modelcontextprotocol.io/)
-- [Anthropic Architect Foundations track](../exams/anthropic/)
+- [Anthropic Claude Architect Foundations cert](../exams/anthropic/claude-certified-architect-foundations/)
 - Glossary: Agent, Tool use, MCP, Hallucination
 
 You should now be able to architect (and cost-estimate) a basic agent system.
@@ -234,7 +234,7 @@ The first month of an LLM feature: hype. Months 2-12: bills, regressions, prompt
 Take any LLM script you've built. Add a wrapper that logs: prompt, response, tokens in/out, cost, latency. Now you can debug. Now you can optimize. Now you're operating.
 
 **Pointer**
-- [Anthropic Architect Advanced track](../exams/anthropic/)
+- [Anthropic Claude Architect Professional cert](../exams/anthropic/claude-certified-architect-professional/)
 - [NVIDIA AI Operations](../exams/nvidia/)
 - Glossary: Inference cost, Prompt caching, Eval, Observability
 
@@ -244,7 +244,7 @@ You should now be able to ship LLM features and keep them working.
 
 ## Where to go after this
 
-- **Want certs?** [NVIDIA AI tracks](../exams/nvidia/), [Anthropic tracks](../exams/anthropic/), or your cloud provider's AI/ML cert.
+- **Want certs?** [NVIDIA AI tracks](../exams/nvidia/), [Anthropic Claude certs](../exams/anthropic/), or your cloud provider's AI/ML cert.
 - **Want depth on one stack?** Pick Anthropic, OpenAI, or open-weights (Llama / Qwen / DeepSeek) and ship something real.
 - **Want to go lower-level?** Andrej Karpathy's "[Let's build GPT](https://www.youtube.com/watch?v=kCc8FmEb1nY)" video, or fast.ai's deep learning course.
 - **Want to combine cloud + AI?** [Cloud from Scratch](./cloud-from-scratch.md), then build a deployed RAG app on AWS / Azure / GCP.

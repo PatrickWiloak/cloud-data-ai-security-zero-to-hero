@@ -1,10 +1,10 @@
 Question,Answer,Tags
-How long is the Claude Architect Foundations - Self-Directed Study Track exam?,120 minutes,exam-logistics
-How many questions are on the Claude Architect Foundations - Self-Directed Study Track exam?,60 scenario-based MCQs,exam-logistics
-What is the passing score for Claude Architect Foundations - Self-Directed Study Track?,720 / 1000,exam-logistics
-What does the Claude Architect Foundations - Self-Directed Study Track exam cost?,Included with Claude Partner Network (standalone available),exam-logistics
-How long is Claude Architect Foundations - Self-Directed Study Track valid for?,2 years,exam-logistics
-How is the Claude Architect Foundations - Self-Directed Study Track exam delivered?,ProctorFree (online proctored),exam-logistics
+How long is the Claude Certified Architect - Foundations (CCAR-F) exam?,120 minutes,exam-logistics
+How many questions are on the Claude Certified Architect - Foundations (CCAR-F) exam?,"60 multiple-choice and multiple-response, scenario-based",exam-logistics
+What is the passing score for Claude Certified Architect - Foundations (CCAR-F)?,720 / 1000,exam-logistics
+What does the Claude Certified Architect - Foundations (CCAR-F) exam cost?,$125 USD,exam-logistics
+How long is Claude Certified Architect - Foundations (CCAR-F) valid for?,"12 months, free non-proctored on-time renewal",exam-logistics
+How is the Claude Certified Architect - Foundations (CCAR-F) exam delivered?,Pearson VUE (online proctored or test center),exam-logistics
 Autonomy (agentic architecture),Claude decides which tools to call and in what order,"notes,agentic-architecture"
 Iteration (agentic architecture),Multiple rounds of tool calls and reasoning,"notes,agentic-architecture"
 Goal-directed behavior (agentic architecture),Claude works toward completing a defined objective,"notes,agentic-architecture"

@@ -177,4 +177,4 @@ flowchart TD
 - **Topic**: [LLMs and GenAI](../topics/llms-and-genai.md), [Observability](../topics/observability.md)
 - **Related comparisons**: [Observability and monitoring](./service-comparison-observability-monitoring.md), [GenAI platforms](./service-comparison-genai-platforms.md), [Agent frameworks](./service-comparison-agent-frameworks.md)
 - **Build**: [Set up an eval harness](./hands-on-projects/set-up-eval-harness.md)
-- **Certs**: [NVIDIA AI Operations Professional](../exams/nvidia/ai-operations-professional/), [Anthropic Application Developer](../exams/anthropic/claude-application-developer/)
+- **Certs**: [NVIDIA AI Operations Professional](../exams/nvidia/ai-operations-professional/), [Anthropic Claude Developer Foundations](../exams/anthropic/claude-certified-developer-foundations/)

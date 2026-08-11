@@ -6,7 +6,7 @@ last-updated: 2026-07-29
 
 Which [hands-on projects](./README.md) back up which certification. Doing the lab is worth more than re-reading the notes: most of these exams test whether you have actually built the thing.
 
-46 of 150 cert guides have a matching lab. The rest have no lab yet - that is a gap, not a judgement about the cert. Labs are mapped by hand in each project's `certs:` frontmatter.
+46 of 151 cert guides have a matching lab. The rest have no lab yet - that is a gap, not a judgement about the cert. Labs are mapped by hand in each project's `certs:` frontmatter.
 
 <!-- BEGIN GENERATED: labs-by-cert - run .github/scripts/build-lab-map.py -->
 
@@ -108,12 +108,12 @@ Which [hands-on projects](./README.md) back up which certification. Doing the la
 |------|------|
 | [CCSK v5 - Certificate of Cloud Security Knowledge](../../exams/cloud-security-alliance/ccsk/) | [Hands-On Project: Implement Zero Trust Security](./implement-zero-trust.md) |
 
-### Anthropic Claude (study tracks)
+### Anthropic Claude
 
 | Cert | Labs |
 |------|------|
-| [Claude Application Developer - Self-Directed Study Track (CAD)](../../exams/anthropic/claude-application-developer/) | [Build a Claude agent with MCP](./build-claude-agent-with-mcp.md) |
-| [Claude Architect Foundations - Self-Directed Study Track (CCA-F)](../../exams/anthropic/claude-certified-architect-foundations/) | [Build a RAG pipeline](./build-rag-pipeline.md) |
+| [Claude Certified Architect - Foundations (CCAR-F)](../../exams/anthropic/claude-certified-architect-foundations/) | [Build a RAG pipeline](./build-rag-pipeline.md) |
+| [Claude Certified Developer - Foundations (CCDV-F)](../../exams/anthropic/claude-certified-developer-foundations/) | [Build a Claude agent with MCP](./build-claude-agent-with-mcp.md) |
 | [Claude Prompt Engineering Specialist - Self-Directed Study Track (CPES)](../../exams/anthropic/claude-prompt-engineering-specialist/) | [Set up an eval harness](./set-up-eval-harness.md) |
 
 <!-- END GENERATED: labs-by-cert -->

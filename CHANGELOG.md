@@ -6,6 +6,30 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-08-11] - Anthropic Claude certification program: 4 official certs covered, Anthropic becomes the 27th certification provider
+
+Anthropic launched an official Claude certification program in 2026 (Architect - Foundations in March, then Associate, Developer, and Architect - Professional in July, all via Pearson VUE). This repo previously carried 4 fictional self-directed Anthropic "study tracks"; this pass replaces them with real coverage of the actual program. Repo totals move from 144 certifications / 26 providers / 6 study tracks to **148 certifications / 27 providers / 3 study tracks** (151 cert directories).
+
+### Added
+
+- **`exams/anthropic/claude-certified-associate-foundations/`** - complete new guide for the Claude Certified Associate - Foundations exam (CCAO-F, $99, 60 questions): README, fact-sheet, 7 domain notes, practice-plan, 10 scenarios, strategy, plus a 15-question practice bank at `resources/practice-questions/anthropic-claude-associate-foundations.md`.
+- **Blueprint-gap notes** - CCAR-P gains `notes/08-governance-safety-and-risk-management.md` and `notes/09-stakeholder-communication-and-lifecycle-management.md`; CCDV-F gains `notes/08-model-selection-and-optimization.md`, `notes/09-agents-and-workflows.md`, and `notes/10-security-safety-claude-code-and-evals.md`.
+
+### Changed
+
+- **`claude-certified-architect-advanced/` renamed to `claude-certified-architect-professional/`** and retargeted to the real CCAR-P exam ($175, 63 questions, 7 official domains); its practice bank renamed and updated to match.
+- **`claude-application-developer/` renamed to `claude-certified-developer-foundations/`** and retargeted to the real CCDV-F exam ($125, 53 questions, 8 official domains); its practice bank renamed and updated to match.
+- **`claude-certified-architect-foundations/`** converted from a study track to the real CCAR-F exam guide (launched March 12, 2026; $125, 60 questions, 5 official domains) with corrected code, delivery, validity, and cost.
+- **All four guides** now carry official domain blueprints with weights, Pearson VUE delivery, 720/1000 passing score, 12-month validity with free on-time renewal, retake policy, and Anthropic Partner Academy registration steps.
+- **Anthropic promoted to a certification provider** in `build-certs-index.py` / `build-provider-indexes.py` (previously a "(study tracks)" pseudo-provider appended after the totals row). The Claude Prompt Engineering Specialist track remains the sole Anthropic study track, since the program has no prompt engineering exam.
+- **Counts regenerated everywhere** - `docs/certs.json`, all 27 provider indexes, STUDY-HUB provider table, freshness ledger, lab map, flashcards (now 105 decks / 9,660 cards), README and STUDY-HUB badges and stats.
+
+### Notes
+
+- CCAO-F and CCAR-P domain weights are sourced from Pearson VUE plus secondary exam guides; official exam guide PDFs sit behind the Anthropic Partner Academy login. Flagged in `TODO.md` for verification.
+
+---
+
 ## [2026-07-29] - Gap-analysis pass: fixed 383 broken links, generated cert index + navigation, drafted notes for all 10 outline-stage certs, added flashcards / lab map / freshness rotation
 
 A full pass against the repo-wide gap analysis in [docs/improvement-roadmap.md](./docs/improvement-roadmap.md). Twelve commits, all on `main`. Ended with 0 broken internal links (3,133 checked), 0 structure-validator warnings, and 0 orphaned pages.

@@ -69,7 +69,7 @@ FIELDS = {
 }
 
 PROVIDER_NAMES = {
-    "anthropic": "Anthropic Claude (study tracks)",
+    "anthropic": "Anthropic Claude",
     "aws": "AWS",
     "azure": "Azure",
     "cisco": "Cisco",

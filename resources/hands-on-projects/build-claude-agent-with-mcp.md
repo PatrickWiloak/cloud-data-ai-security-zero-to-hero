@@ -3,7 +3,7 @@ last-updated: 2026-05-03
 difficulty: intermediate
 reading-time: 18 min
 certs:
-  - anthropic/claude-application-developer
+  - anthropic/claude-certified-developer-foundations
   - aws/professional/genai-developer-aip-c01
   - nvidia/agentic-ai-professional
 ---
@@ -282,4 +282,4 @@ You know it worked when:
 - **Concepts**: [Agentic loops](../../learn/concepts/agentic-loops.md), [MCP explained](../../learn/concepts/mcp-explained.md), [Tool use](../../learn/concepts/tool-use-and-function-calling.md), [Structured outputs](../../learn/concepts/structured-outputs.md)
 - **Topic**: [LLMs and GenAI](../../topics/llms-and-genai.md)
 - **Comparisons**: [Agent frameworks](../service-comparison-agent-frameworks.md), [GenAI platforms](../service-comparison-genai-platforms.md)
-- **Anthropic study tracks**: [Architect Foundations](../../exams/anthropic/claude-certified-architect-foundations/), [Application Developer](../../exams/anthropic/claude-application-developer/)
+- **Anthropic certs**: [Architect Foundations](../../exams/anthropic/claude-certified-architect-foundations/), [Developer Foundations](../../exams/anthropic/claude-certified-developer-foundations/)

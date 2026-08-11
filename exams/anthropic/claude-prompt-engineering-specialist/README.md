@@ -1,10 +1,10 @@
 # Claude Prompt Engineering Specialist - Self-Directed Study Track
 
-> ℹ️ **Study track, not an official certification.** Anthropic does not currently run an official certification program. This is a self-directed proficiency track for engineers focused on the craft of prompt design.
+> ℹ️ **Study track, not an official certification.** Anthropic runs four official Claude certifications ([Associate](../claude-certified-associate-foundations/), [Developer](../claude-certified-developer-foundations/), [Architect Foundations](../claude-certified-architect-foundations/), [Architect Professional](../claude-certified-architect-professional/)), but none of them is a dedicated prompt engineering exam. This remains a self-directed proficiency track for engineers focused on the craft of prompt design, and it doubles as depth work for the prompting domains on all four official exams.
 
 ## Track Overview
 
-This track covers the ability to design, evaluate, and iterate prompts that produce reliable, high-quality outputs from Claude models. Where the Architect tracks focus on system design and the Application Developer track on API mechanics, this Specialist track focuses on the craft of the prompt itself: clarity, structure, examples, reasoning elicitation, evaluation, and prompt-engineering patterns at production scale.
+This track covers the ability to design, evaluate, and iterate prompts that produce reliable, high-quality outputs from Claude models. Where the Architect certifications focus on system design and the Developer certification on API mechanics, this Specialist track focuses on the craft of the prompt itself: clarity, structure, examples, reasoning elicitation, evaluation, and prompt-engineering patterns at production scale.
 
 Material is grounded in Anthropic's published prompt engineering guide and related cookbook recipes.
 
@@ -136,5 +136,5 @@ The fastest way to internalize this material is to ship one prompt-driven featur
 ## Companion Tracks
 
 - [Foundations](../claude-certified-architect-foundations/) - architectural fundamentals
-- [Application Developer](../claude-application-developer/) - production API/SDK depth
-- [Architect Advanced](../claude-certified-architect-advanced/) - multi-agent systems, RAG at scale
+- [Developer Foundations](../claude-certified-developer-foundations/) - production API/SDK depth
+- [Architect Professional](../claude-certified-architect-professional/) - multi-agent systems, RAG at scale

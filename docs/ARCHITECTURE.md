@@ -88,7 +88,7 @@ exams/<provider>/<cert>/
 
 **Senior tier** (gets scenarios.md + strategy.md as recommended):
 - Path contains `/professional/`, `/specialty/`, or `/expert/` (AWS, etc.)
-- Curated cert basenames: GCP professional certs (cloud-architect, data-engineer, machine-learning-engineer, cloud-network/security/devops/database engineer, workspace-administrator), Azure expert/specialty (az-305, az-400, az-500, az-700, az-800, sc-100, sc-200), Kubernetes pro/specialty (cks, pca, ica), security senior certs (cissp, ccsp, cism, cisa, oscp), Cisco ccnp/ccie, HashiCorp/Databricks/Snowflake "professional"/"advanced" basenames, FinOps Certified Professional, VMware VCP, Anthropic claude-certified-architect-advanced, CompTIA cysa-plus / pentest-plus / casp-plus.
+- Curated cert basenames: GCP professional certs (cloud-architect, data-engineer, machine-learning-engineer, cloud-network/security/devops/database engineer, workspace-administrator), Azure expert/specialty (az-305, az-400, az-500, az-700, az-800, sc-100, sc-200), Kubernetes pro/specialty (cks, pca, ica), security senior certs (cissp, ccsp, cism, cisa, oscp), Cisco ccnp/ccie, HashiCorp/Databricks/Snowflake "professional"/"advanced" basenames, FinOps Certified Professional, VMware VCP, Anthropic claude-certified-architect-professional, CompTIA cysa-plus / pentest-plus / casp-plus.
 
 **Junior tier** (everything else - foundational and associate-grade certs).
 
@@ -276,7 +276,7 @@ The canonical retired-banner pattern is in [exams/aws/specialty/data-analytics-d
 
 ## How aspirational / non-cert study tracks are handled
 
-Some dirs in `exams/` cover topics that aren't tied to a specific certification (e.g., Anthropic Claude before it had an official cert program, AWS Quantum before formal exam announcement, cross-cert GenAI study tracks). These get a clear disclaimer:
+Some dirs in `exams/` cover topics that aren't tied to a specific certification (e.g., the Anthropic Prompt Engineering Specialist track, AWS Quantum before formal exam announcement, cross-cert GenAI study tracks). These get a clear disclaimer:
 
 ```markdown
 > ℹ️ **Study track, not an official certification.** [Vendor] does not currently run a discrete certification for this material. Use this as a self-directed proficiency track.
@@ -290,16 +290,16 @@ The README and STUDY-HUB call these out as "study tracks" separately from certif
 
 The README, STUDY-HUB, and CLAUDE.md all claim specific counts:
 
-- 117+ certifications
-- 4 study tracks
-- 21 providers
+- 148 certifications
+- 3 study tracks
+- 27 providers
 
 When you add or remove a cert, update **all three** docs to keep counts consistent. The provider table in STUDY-HUB is the canonical source - everything else should match it.
 
 For verification:
 
 ```bash
-# Count cert dirs (excluding Anthropic study tracks):
+# Count cert dirs (excluding study tracks):
 find exams -mindepth 2 -maxdepth 4 -type d ! -name notes ! -name shared ! -name foundational ! -name associate ! -name professional ! -name specialty ! -name genai ! -name services ! -name cheat-sheets ! -name compute ! -name database ! -name networking ! -name storage ! -name security-identity | wc -l
 
 # Or per-provider:

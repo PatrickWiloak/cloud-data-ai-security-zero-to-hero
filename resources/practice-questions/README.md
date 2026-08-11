@@ -6,7 +6,7 @@ last-updated: 2026-08-09
 
 Scenario-based practice question banks, one per certification. Every bank follows the house format: a short scenario, four options, and a collapsible answer with a "why" that also explains the distractors. See [template.md](./template.md) for the format and [CONTRIBUTING.md](../../CONTRIBUTING.md) for how to add one.
 
-**Coverage: 150 of 150 certifications.** Counts and this index are derived from `docs/certs.json`; do not edit the tables by hand expecting them to stick, regenerate instead.
+**Coverage: 151 of 151 cert directories.** Counts and this index are derived from `docs/certs.json`; do not edit the tables by hand expecting them to stick, regenerate instead.
 
 > These banks are original scenario questions for study. They contain no verbatim vendor exam content.
 
@@ -158,11 +158,12 @@ Scenario-based practice question banks, one per certification. Every bank follow
 - [IBM Cloud Site Reliability Engineer (SRE)](./ibm-cloud-site-reliability-engineer.md)
 - [IBM Certified Solution Architect - Cloud Architect v6](./ibm-cloud-solution-architect.md)
 
-### Anthropic (4)
+### Anthropic (5)
 
-- [Claude Application Developer - Self-Directed Study Track](./anthropic-claude-application-developer.md)
-- [Claude Architect Advanced - Self-Directed Study Track](./anthropic-claude-architect-advanced.md)
-- [Claude Architect Foundations - Self-Directed Study Track](./anthropic-claude-architect-foundations.md)
+- [Claude Certified Associate - Foundations (CCAO-F)](./anthropic-claude-associate-foundations.md)
+- [Claude Certified Developer - Foundations (CCDV-F)](./anthropic-claude-developer-foundations.md)
+- [Claude Certified Architect - Foundations (CCAR-F)](./anthropic-claude-architect-foundations.md)
+- [Claude Certified Architect - Professional (CCAR-P)](./anthropic-claude-architect-professional.md)
 - [Claude Prompt Engineering Specialist - Self-Directed Study Track](./anthropic-claude-prompt-engineering-specialist.md)
 
 ### CompTIA (4)

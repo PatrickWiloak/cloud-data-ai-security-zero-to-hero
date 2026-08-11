@@ -68,7 +68,7 @@ PROVIDER_HIGHLIGHTS = {
     "ibm": "Advocate, Developer, Solution Architect, Security, SRE",
     "servicenow": "Certified System Administrator",
     "vmware": "VCP-DCV (2V0-21.23)",
-    "anthropic": "Architect Foundations + Advanced, Application Developer, Prompt Engineering Specialist",
+    "anthropic": "Associate (CCAO-F), Developer (CCDV-F), Architect Foundations (CCAR-F) + Professional (CCAR-P)",
 }
 
 # Headings the six hand-written READMEs already use for their repo-guide section.
@@ -185,13 +185,13 @@ def build_hub_table(index):
         certs_by_provider.setdefault(cert["provider"], []).append(cert)
 
     ordered = [p for p in [
-        "aws", "azure", "gcp", "kubernetes", "nvidia", "hashicorp", "databricks",
-        "snowflake", "github", "redhat", "cisco", "salesforce", "confluent", "mongodb",
-        "finops", "comptia", "isc2", "isaca", "cloud-security-alliance",
-        "offensive-security", "palo-alto-networks", "linux-foundation", "oracle",
-        "ibm", "servicenow", "vmware",
+        "aws", "azure", "gcp", "kubernetes", "nvidia", "anthropic", "hashicorp",
+        "databricks", "snowflake", "github", "redhat", "cisco", "salesforce",
+        "confluent", "mongodb", "finops", "comptia", "isc2", "isaca",
+        "cloud-security-alliance", "offensive-security", "palo-alto-networks",
+        "linux-foundation", "oracle", "ibm", "servicenow", "vmware",
     ] if p in providers]
-    missing = [p for p in providers if p not in ordered and p != "anthropic"]
+    missing = [p for p in providers if p not in ordered]
     ordered += sorted(missing)
 
     rows = ["| Provider | Certs | Highlights | Browse |", "|----------|------:|------------|--------|"]
@@ -216,17 +216,11 @@ def build_hub_table(index):
         f"| **CERTIFICATIONS TOTAL** | **{totals['certifications']}** "
         f"| across {totals['certification_providers']} providers | |"
     )
-    if "anthropic" in providers:
-        entry = providers["anthropic"]
-        rows.append(
-            f"| **{entry['name']}** | {entry['directories']} | {PROVIDER_HIGHLIGHTS['anthropic']} "
-            f"| [{entry['path']}](./{entry['path']}) |"
-        )
     legend_text = (
         f"\n\nThe Certs column counts real exams. This repo also carries "
-        f"{totals['study_tracks']} self-directed study tracks (the Anthropic Claude tracks "
-        f"plus the Azure and GCP GenAI tracks), which are study guides spanning several "
-        f"exams or none, not certifications in their own right."
+        f"{totals['study_tracks']} self-directed study tracks (the Anthropic prompt "
+        f"engineering track plus the Azure and GCP GenAI tracks), which are study guides "
+        f"spanning several exams or none, not certifications in their own right."
         "\n\n◇ = outline stage: README, fact-sheet, and practice plan are written; topic "
         "notes are outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting "
         "queue."

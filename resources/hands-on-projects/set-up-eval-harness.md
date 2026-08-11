@@ -312,4 +312,4 @@ You know it works when:
 - **Concepts**: [Evals for LLMs](../../learn/concepts/evals-for-llms.md), [Structured outputs](../../learn/concepts/structured-outputs.md), [Guardrails and safety](../../learn/concepts/guardrails-and-safety.md)
 - **Topic**: [LLMs and GenAI](../../topics/llms-and-genai.md), [Observability](../../topics/observability.md)
 - **Comparisons**: [LLM observability](../service-comparison-llm-observability.md)
-- **Certs**: [Anthropic Application Developer](../../exams/anthropic/claude-application-developer/), [NVIDIA AI Operations Professional](../../exams/nvidia/ai-operations-professional/)
+- **Certs**: [Anthropic Claude Developer Foundations](../../exams/anthropic/claude-certified-developer-foundations/), [NVIDIA AI Operations Professional](../../exams/nvidia/ai-operations-professional/)

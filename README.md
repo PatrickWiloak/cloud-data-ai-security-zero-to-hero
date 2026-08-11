@@ -27,9 +27,9 @@ If you need custom software built, [get in touch](https://noblerworks.com/).
 >
 > 🎥 [@patrickwiloak](https://youtube.com/@patrickwiloak) | 💼 [LinkedIn](https://www.linkedin.com/in/patricklukewilson/)
 
-![Certifications](https://img.shields.io/badge/Certifications-144-blue.svg)
+![Certifications](https://img.shields.io/badge/Certifications-148-blue.svg)
 ![Documentation Links](https://img.shields.io/badge/Documentation%20Links-12000+-green.svg)
-![Providers](https://img.shields.io/badge/Providers-26-orange.svg)
+![Providers](https://img.shields.io/badge/Providers-27-orange.svg)
 ![Free to Use](https://img.shields.io/badge/Free%20to%20Use-Educational-green.svg)
 
 ---
@@ -40,7 +40,7 @@ If you need custom software built, [get in touch](https://noblerworks.com/).
 |---|---|---|---|
 | 🎓 | **Learn** | Plain-English concepts, beginner on-ramp, structured paths. No exam scaffolding. | [learn/](./learn/) |
 | 🛠️ | **Build** | Hands-on projects, architecture patterns, CLI cheat sheets. Practitioner reference. | [resources/hands-on-projects/](./resources/hands-on-projects/) |
-| 🎯 | **Certify** | 144 cert study guides across 26 providers, plus 6 self-directed study tracks. Fact sheets, practice plans, scenarios. | [STUDY-HUB.md](./STUDY-HUB.md) |
+| 🎯 | **Certify** | 148 cert study guides across 27 providers, plus 3 self-directed study tracks. Fact sheets, practice plans, scenarios. | [STUDY-HUB.md](./STUDY-HUB.md) |
 | 📚 | **Reference** | Cross-cloud service comparisons, career roadmaps, compliance and FinOps guides. | [resources/](./resources/) |
 
 Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certify together by subject (LLMs, IAM, networking, K8s, observability, security, databases).
@@ -60,7 +60,7 @@ Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certi
 | 🔍 Compare AWS vs Azure vs GCP for a service | **[Service comparisons](./resources/)** |
 | 🎯 Pick the right certification | **[Study Hub decision tree](./STUDY-HUB.md#-decision-tree-find-your-cert)** |
 | 🚀 Follow a career path | **[Roadmaps](#certification-roadmaps)** |
-| 📚 Browse all 144 cert guides | **[STUDY-HUB.md](./STUDY-HUB.md)** |
+| 📚 Browse all 148 cert guides | **[STUDY-HUB.md](./STUDY-HUB.md)** |
 
 ---
 
@@ -68,6 +68,7 @@ Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certi
 
 See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
+- **2026-08-11** - Anthropic's official Claude certification program (launched March-July 2026) fully covered: new Claude Certified Associate - Foundations (CCAO-F) guide, existing guides retargeted to the real CCDV-F, CCAR-F, and CCAR-P exams with official domain blueprints, pricing, and Pearson VUE logistics. Anthropic promoted from study-track pseudo-provider to the 27th certification provider; repo now at 148 certs.
 - **2026-07-29** - Gap-analysis pass: notes drafted for the last 10 outline-stage certs (CySA+, Network+, CCNP ENCOR, CISA, CISM, OSCP, PCNSA, Salesforce PD2, ServiceNow CSA, VMware VCP-DCV); generated cert index (`docs/certs.json`) driving the provider tables and 27 provider index pages; per-cert Anki flashcards; lab-to-cert map; freshness rotation; fixed 383 broken internal links and made internal link-checking a blocking CI gate.
 - **2026-05-03** - Cloud + AI scope expansion: `learn/` pillar, AI concept pages, `topics/` cross-pillar index, AI service comparisons (vector DBs, GenAI platforms, agent frameworks, LLM observability), AI hands-on builds (RAG, MCP agents, vLLM, evals, LoRA), CI link/lint/structure checks, freshness ledger.
 - **2026-04-27** - Provider expansion: AWS DEA-C01, Red Hat (RHCSA, OpenShift), Cisco CCNA, Azure DP-700/AZ-700/MS-900, Salesforce Admin/PD1.
@@ -81,7 +82,7 @@ A complete cloud + AI learning resource. Whether you're starting fresh, building
 - ✅ **[Day One on-ramp](./learn/day-one/)** - terminal, git, HTTP, servers
 - ✅ **[37 concept pages](./learn/concepts/)** - LLMs, RAG, MCP, agents, tool use, multimodal, quantization, VPCs, K8s, IAM, observability, idempotency
 - ✅ **[Cloud from Scratch](./learn/cloud-from-scratch.md)** + **[AI from Scratch](./learn/ai-from-scratch.md)** - structured 8-phase paths
-- ✅ **144 certification study guides** across 26 providers, 12,000+ embedded vendor doc links
+- ✅ **148 certification study guides** across 27 providers, 12,000+ embedded vendor doc links
 - ✅ **[8 cross-pillar topic indexes](./topics/)** - LLMs, IAM, networking, K8s, observability, security, databases (find everything by topic, not provider)
 - ✅ **16 cross-cloud service comparisons** (12 cloud + 4 AI: vector DBs, GenAI platforms, agent frameworks, LLM observability)
 - ✅ **9 CLI cheat sheets** (AWS, Azure, GCP, kubectl, Terraform, Docker, Helm, GitHub CLI, multi-cloud)
@@ -122,7 +123,7 @@ Full per-provider breakdown lives in **[STUDY-HUB.md](./STUDY-HUB.md)**. Quick l
 | 🐧 [Linux Foundation](./exams/linux-foundation/) | 2 | LFCS, LFCA |
 | ☁️ [Oracle Cloud](./exams/oracle/) | 5 | Foundations, Architect, Developer, Operations |
 | ☁️ [IBM Cloud](./exams/ibm/) | 5 | Advocate, Developer, Architect, Security, SRE |
-| 🤖 [Anthropic Claude](./exams/anthropic/) | 4 | Self-directed study tracks |
+| 🤖 [Anthropic Claude](./exams/anthropic/) | 4 | Associate, Developer, Architect Foundations + Professional |
 
 **[→ Full per-provider breakdown in STUDY-HUB.md](./STUDY-HUB.md#-certifications-by-provider)**
 
@@ -178,7 +179,7 @@ Career-focused learning paths:
 [AI engineer in 30 min](./resources/playlist-ai-engineer-30min.md) | [Cloud security in 1 hour](./resources/playlist-cloud-security-1hour.md) | [Data engineer in 1 hour](./resources/playlist-data-engineer-1hour.md) | [SRE in 1 hour](./resources/playlist-sre-1hour.md)
 
 ### **Practice & Strategy**
-- [📝 Practice Question Banks](./resources/practice-questions/) - scenario questions with explained answers, one bank per certification (150 of 150)
+- [📝 Practice Question Banks](./resources/practice-questions/) - scenario questions with explained answers, one bank per certification (151 of 151)
 - [🎯 Practice Resources Guide](./resources/practice-resources.md)
 - [💰 Free Tier Guides](./resources/free-tier-guide.md)
 - [📝 Study Tips & Strategies](./resources/study-strategies.md)
@@ -210,8 +211,8 @@ Career-focused learning paths:
 ## 📈 What Makes These Materials Special?
 
 1. **Documentation-rich** - 12,000+ embedded vendor doc links, format `**[📖 Title](URL)** - description`
-2. **Multi-cloud + AI-native** - 26 providers, cross-cloud comparisons, AI-side comparisons (vector DBs, GenAI platforms)
-3. **Comprehensive + structured** - consistent format across all 144 certs (README → fact-sheet → notes → practice-plan → scenarios → strategy)
+2. **Multi-cloud + AI-native** - 27 providers, cross-cloud comparisons, AI-side comparisons (vector DBs, GenAI platforms)
+3. **Comprehensive + structured** - consistent format across all 148 certs (README → fact-sheet → notes → practice-plan → scenarios → strategy)
 4. **Practical + hands-on** - 15 guided builds with inline code, free-tier guides
 5. **Exam-focused** - exam tips, common scenarios, time management strategies
 
@@ -243,9 +244,9 @@ Career-focused learning paths:
 
 ## 📊 Repository Statistics
 
-- **Certifications:** 144 (plus 6 self-directed study tracks)
+- **Certifications:** 148 (plus 3 self-directed study tracks)
 - **Documentation links:** 12,000+
-- **Providers:** 22
+- **Providers:** 27
 - **Concept pages:** 37 (cloud + AI primitives)
 - **Service comparisons:** 16 (12 cloud + 4 AI)
 - **CLI cheat sheets:** 9
@@ -272,7 +273,7 @@ cloud-data-ai-security-zero-to-hero/
 │   ├── ai-from-scratch.md
 │   ├── cloud-from-scratch.md
 │   └── glossary.md
-├── exams/                # 144 certs across 26 providers, plus 6 study tracks
+├── exams/                # 148 certs across 27 providers, plus 3 study tracks
 ├── resources/            # comparisons, cheat sheets, roadmaps, guides, projects
 ├── topics/               # cross-pillar topic indexes
 ├── assets/diagrams/      # PNG diagrams, for the few too dense for inline Mermaid

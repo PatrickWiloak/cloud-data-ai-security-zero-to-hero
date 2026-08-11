@@ -1,23 +1,25 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-08-11
 ---
 
-# CCA-F - Fact Sheet
+# CCAR-F - Fact Sheet
 
 ## Quick Reference
 
 | Detail | Info |
 |---|---|
-| Exam Code | CCA-F |
+| Exam Code | CCAR-F |
 | Full Name | Claude Certified Architect - Foundations |
 | Provider | Anthropic |
 | Duration | 120 minutes |
-| Questions | 60 scenario-based MCQs |
+| Questions | 60 multiple-choice and multiple-response, scenario-based |
 | Passing Score | 720 / 1000 |
-| Cost | Included with Claude Partner Network (standalone available) |
-| Delivery | ProctorFree (online proctored) |
-| Validity | 2 years |
+| Cost | $125 USD |
+| Delivery | Pearson VUE (online proctored or test center) |
+| Validity | 12 months, free non-proctored on-time renewal |
 | Launched | March 12, 2026 |
+
+Registration is through the [Anthropic Partner Academy](https://anthropic-partners.skilljar.com/page/partner-certifications) and requires free [Claude Partner Network](https://claude.com/partners) membership. Retakes: 14-day wait after attempt 1, 30 days after attempt 2, 90 days after attempt 3, maximum 4 attempts in a rolling 12 months.
 
 ---
 

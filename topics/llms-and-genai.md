@@ -85,8 +85,8 @@ Certs and study tracks that cover LLMs and GenAI:
 
 **Vendor study tracks (no formal exam)**
 - [Anthropic Claude Architect Foundations](../exams/anthropic/claude-certified-architect-foundations/)
-- [Anthropic Claude Architect Advanced](../exams/anthropic/claude-certified-architect-advanced/)
-- [Anthropic Claude Application Developer](../exams/anthropic/claude-application-developer/)
+- [Anthropic Claude Architect Professional](../exams/anthropic/claude-certified-architect-professional/)
+- [Anthropic Claude Developer Foundations](../exams/anthropic/claude-certified-developer-foundations/)
 - [Anthropic Claude Prompt Engineering Specialist](../exams/anthropic/claude-prompt-engineering-specialist/)
 
 **Foundational**
