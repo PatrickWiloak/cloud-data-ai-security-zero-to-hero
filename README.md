@@ -17,13 +17,19 @@ If you need custom software built, [get in touch](https://noblerworks.com/).
 
 ---
 
+<a href="https://gitgood.dev"><img src="./assets/brand/gitgood-banner.png" alt="gitGood.dev - practice questions, coding challenges, system design and cloud certification practice exams for engineers, data, security, DevOps and product technologists" width="420"></a>
+
 ### 🚀 Like what you see? We built a whole platform for this.
 
-**[gitGood](https://gitgood.dev) is our flagship training platform for engineers and architects - train for the role, not just the interview.**
+**[gitGood.dev](https://gitgood.dev) is our flagship tech training platform - train for the role, not just the interview.**
+
+**Built for every kind of technologist**, not just engineers: 21 role-targeted learning paths spanning backend, frontend, full-stack and mobile development, SRE and DevOps, platform engineering, cloud and solutions architecture, security engineering, machine learning and AI engineering, data science, data analytics, data engineering, QA and SDET, engineering management, product management, TPM, and new grads breaking into tech.
 
 This repo gives you the material. gitGood gives you the reps, and tells you whether you actually know it.
 
-1,000+ practice questions · coding challenges with detailed explanations · AI mock interviews · cloud certification deep dives · AI resume reviews · salary negotiation coaching · live job-market pulse
+**Cloud certification practice exams** - 13 banks and 608 original scenario-style questions (never brain dumps), with per-domain scoring and a timed exam simulator: AWS Cloud Practitioner CLF-C02, Solutions Architect Associate SAA-C03 and Developer Associate DVA-C02; Azure AZ-900, AZ-104, AZ-305 and AI-900; Google Cloud Digital Leader and Associate Cloud Engineer; Kubernetes CKA and CKAD; CompTIA Security+; HashiCorp Terraform Associate.
+
+**Everything else** - 1,950+ practice questions across 34 categories · coding challenges with real sandboxed execution in JavaScript, Python and TypeScript · a 45-problem SQL playground · 32 system design walkthroughs including LLM inference and RAG · behavioral and STAR interview prep · curated interview packs for 39 companies · AI mock interviews · AI resume reviews · salary negotiation coaching · a live tech job-market pulse and job board.
 
 [![Start 10 days free](https://img.shields.io/badge/Start%2010%20Days%20Free-000000?style=for-the-badge&logo=rocket&logoColor=white)](https://gitgood.dev)
 
