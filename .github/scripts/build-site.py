@@ -146,6 +146,43 @@ RESOURCE_GROUPS: list[tuple[str, str]] = [
     (r"^(exam-day-checklist|study-strategies|practice-resources|budget-study-plan|recommended-courses)", "resources/exam-prep"),
 ]
 
+# Sidebar icons.
+#
+# A 2,000-entry navigation where every row has identical weight is a wall of
+# text. Sections and providers get an emoji so the tree can be scanned rather
+# than read; individual pages deliberately do not, or the column goes back to
+# being noise. The leading emoji a page's own H1 may carry is still stripped in
+# title_of() for the same reason.
+#
+# Provider emoji are imported, not restated. build-provider-indexes.py already
+# curates one per provider for the README and STUDY-HUB tables, and two hand-kept
+# copies of the same mapping is how a provider ends up with a cloud in one place
+# and a shield in another.
+TAB_EMOJI = {
+    "Learn": "🎓", "Build": "🛠️", "Certify": "🎯",
+    "Reference": "📚", "Topics": "🗺️", "About": "ℹ️",
+}
+
+
+def _load_provider_emoji() -> dict[str, str]:
+    """PROVIDER_EMOJI from build-provider-indexes.py, which is not importable by
+    name because of the hyphens. Falls back to no icons rather than failing the
+    build - a sidebar without emoji is a cosmetic loss, not a broken site."""
+    import importlib.util
+
+    src = Path(__file__).resolve().parent / "build-provider-indexes.py"
+    try:
+        spec = importlib.util.spec_from_file_location("_provider_indexes", src)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return dict(module.PROVIDER_EMOJI)
+    except Exception as exc:  # noqa: BLE001 - never fail the build over an icon
+        print(f"  note: provider emoji unavailable ({exc}); sidebar icons skipped")
+        return {}
+
+
+PROVIDER_EMOJI = _load_provider_emoji()
+
 # Human labels for the virtual groups and for directories whose basename does not
 # make a good title.
 GROUP_LABELS = {
@@ -596,6 +633,12 @@ def title_of(path: Path) -> str:
 
 
 def label_for_dir(rel_posix: str, basename: str) -> str:
+    label = _label_for_dir(rel_posix, basename)
+    emoji = PROVIDER_EMOJI.get(rel_posix.removeprefix("exams/")) if rel_posix.startswith("exams/") else None
+    return f"{emoji} {label}" if emoji else label
+
+
+def _label_for_dir(rel_posix: str, basename: str) -> str:
     if rel_posix in GROUP_LABELS:
         return GROUP_LABELS[rel_posix]
     if rel_posix in _cert_labels:
@@ -703,7 +746,8 @@ def build_nav() -> list:
             elif path.is_file() and path.suffix == ".md":
                 section.append({title_of(path): member})
         if section:
-            nav.append({tab_name: section})
+            emoji = TAB_EMOJI.get(tab_name)
+            nav.append({f"{emoji} {tab_name}" if emoji else tab_name: section})
     return nav
 
 

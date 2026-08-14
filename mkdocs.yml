@@ -39,6 +39,11 @@ theme:
   custom_dir: .github/site-overrides
   icon:
     repo: fontawesome/brands/github
+    # Material's stock mark is a book, which says "documentation" and nothing
+    # about this site. A rocket reads as ascent, which is the distinctive half
+    # of "Zero to Hero", and stays legible as a silhouette at 24px - where the
+    # four-emoji lockup from the README would turn to mush.
+    logo: material/rocket-launch-outline
   features:
     # Deliberately NOT navigation.tabs. With tabs, the left sidebar shows only the
     # active tab's subtree, so Home - a root page with no children - rendered an

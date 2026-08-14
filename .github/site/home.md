@@ -43,7 +43,7 @@
 
 </div>
 
-## Four ways in
+## 🧭 Four ways in
 
 <div class="grid cards" markdown>
 
@@ -81,7 +81,7 @@
 
 </div>
 
-## Jump to what you need
+## 🎯 Jump to what you need
 
 <div class="home-links" markdown>
 
@@ -100,7 +100,7 @@
 
 </div>
 
-## Certifications by provider
+## 📚 Certifications by provider
 
 <div class="provider-grid" markdown>
 
@@ -110,11 +110,11 @@
 
 [Full per-provider breakdown](STUDY-HUB.md#-certifications-by-provider){ .md-button }
 
-## What's new
+## 📰 What's new
 
 {{whats_new}}
 
-## Who made this
+## 👤 Who made this
 
 Built by **[Patrick Wiloak](https://patrickwiloak.com)** - ex-AWS Solutions Architect, 10 years in tech, 60 certifications and accreditations, 18x multi-cloud certified.
 [YouTube](https://youtube.com/@patrickwiloak) · [LinkedIn](https://www.linkedin.com/in/patricklukewilson/) · [Blog](https://patrickwiloak.com/blog/aws-certification-study-framework-how-to-prepare-pass-certifications) · [Source on GitHub](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero)
@@ -131,7 +131,7 @@ We build custom software and products at **[Nobler Works](https://noblerworks.co
 
     10 days free, then $5/month or $40/year. The free tier needs no card.
 
-## Fine print
+## ⚖️ Fine print
 
 Free for educational use with attribution. Every technical claim links to the vendor's own documentation - {{doc_links}} links across the site.
 
