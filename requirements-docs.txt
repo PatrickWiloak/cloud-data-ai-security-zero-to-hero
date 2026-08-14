@@ -1,0 +1,27 @@
+# Documentation site toolchain.
+#
+# Fully pinned, including transitive packages that affect rendering, so a local
+# build and a CI build produce identical output.
+#
+# Install:  python3 -m venv .venv-docs && .venv-docs/bin/pip install -r requirements-docs.txt
+# Build:    .venv-docs/bin/python .github/scripts/build-site.py --strict
+# Preview:  .venv-docs/bin/python .github/scripts/build-site.py --serve
+#
+# Two pins are load-bearing rather than merely tidy:
+#
+#   pymdown-extensions >= 11 with Pygments 2.20. Under pymdown-extensions 10.x,
+#   Pygments 2.20 raises `AttributeError: 'NoneType' object has no attribute
+#   'replace'` on any indented code block, which aborts the build.
+#
+#   mkdocs-material 9.x. The Material team has said MkDocs 2.0 removes the
+#   plugin system and rewrites theming with no migration path, so an unpinned
+#   upgrade would break this build outright. Bump deliberately, rebuild with
+#   --strict, and check the rendered diff.
+
+mkdocs==1.6.1
+mkdocs-material==9.7.7
+mkdocs-material-extensions==1.3.1
+mkdocs-minify-plugin==0.8.0
+pymdown-extensions==11.0.1
+Pygments==2.20.0
+Markdown==3.10.3

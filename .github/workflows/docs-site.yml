@@ -1,0 +1,78 @@
+name: Docs site
+
+# Builds the MkDocs Material site and publishes it to GitHub Pages.
+#
+# The build job is a blocking gate on every pull request: it runs with --strict,
+# so a broken relative link, a link to an anchor that does not exist, or a page
+# that no navigation entry reaches will fail the check rather than ship a broken
+# page. Deployment only happens on main.
+#
+# One-time repo setup: Settings > Pages > Build and deployment > Source must be
+# set to "GitHub Actions". Until that is done, the deploy job fails while the
+# build job still passes.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Never let two deploys race. Queue rather than cancel, so a merge to main is
+# not dropped by a later one that starts before it finishes publishing.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-docs.txt
+
+      - name: Install toolchain
+        run: pip install -r requirements-docs.txt
+
+      # build-site.py stages the markdown tree, generates the nav from
+      # docs/certs.json, and fails on any page it cannot reach from the nav.
+      # --strict then turns every MkDocs link and anchor warning into an error.
+      - name: Build
+        run: python3 .github/scripts/build-site.py --strict
+
+      - name: Report size
+        run: |
+          echo "### Site build" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Pages: $(find site -name '*.html' | wc -l)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Size: $(du -sh site | cut -f1)" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload Pages artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    name: Deploy to Pages
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

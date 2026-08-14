@@ -151,6 +151,78 @@ Each consolidates official docs, lab platforms, practice exams, video courses, c
 
 The `.templates/` dir is a hidden directory (leading dot) by convention - it's not user-facing study material but contains reusable building blocks.
 
+On the published site these three pages appear under Reference as "Provider Resource Lists", staged as `provider-resources/`. MkDocs skips dot-directories, and a root directory literally named `templates` is reserved by MkDocs and silently dropped from the build, so the site build renames the directory and rewrites the ~144 inbound links. See [The published site](#the-published-site).
+
+---
+
+## The published site
+
+The repo is published as a MkDocs Material site at
+**[patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)**.
+
+The guiding constraint: **the markdown tree is the source of truth and does not
+bend to the site generator.** Reading the repo on GitHub stays a first-class
+experience, so the site is adapted to the tree at build time rather than the
+tree being restructured for MkDocs. There is no second copy of any page.
+
+### How a build works
+
+`.github/scripts/build-site.py` does four things, in order:
+
+1. **Stage.** Copies the content tree into `.site-src/`, mirroring the repo
+   layout so relative links and `edit_uri` keep working. `.templates/` is
+   renamed to `provider-resources/` on the way in.
+2. **Fill gaps.** Generates a landing page for any directory that holds markdown
+   but no `README.md`. The repo uses directory-style links (`](../notes/)`)
+   about 1,200 times; GitHub renders those as a directory listing, and the site
+   needs a real page at that URL.
+3. **Rewrite links.** Fence-aware pass that points directory links at the
+   directory's `README.md`, redirects the renamed `.templates/` paths, and sends
+   links aimed at repo tooling (`.github/...`) to GitHub rather than dropping
+   them.
+4. **Generate the nav.** Built from the staged tree, with section labels from
+   `docs/certs.json` and page labels from each page's H1. Cert levels sort by
+   exam progression (foundational, associate, professional, specialty, expert)
+   and the files inside a cert dir sort in study order.
+
+The result is appended to `mkdocs.yml` as `mkdocs.generated.yml` and built from
+there. `mkdocs.yml` holds the hand-maintained configuration and deliberately has
+no `nav` key.
+
+### What is generated, and what is not
+
+| Path | Tracked? | Notes |
+|------|----------|-------|
+| `mkdocs.yml` | Yes | Hand-maintained. Theme, extensions, validation. No `nav`. |
+| `.github/scripts/build-site.py` | Yes | The generator. Edit this, not the output. |
+| `.github/site/extra.css` | Yes | Site-only styling. Kept out of `assets/`, which is the diagram store. |
+| `requirements-docs.txt` | Yes | Fully pinned, including transitive packages that affect rendering. |
+| `.site-src/` | No | Staged markdown tree. |
+| `mkdocs.generated.yml` | No | `mkdocs.yml` + generated nav. |
+| `site/` | No | Rendered HTML, ~240 MB across ~2,000 pages. |
+
+### Conventions the site depends on
+
+- **A directory that holds markdown should have a `README.md`.** One is
+  generated if missing, but a hand-written index reads better.
+- **Heading anchors match GitHub.** The `toc` extension is configured with
+  `pymdownx.slugs.slugify(case="lower")`, which reproduces GitHub's algorithm
+  exactly, including the double hyphen in `#security--identity` and the leading
+  hyphen an emoji heading produces. A missing-anchor error from the build means
+  the link is broken on GitHub too.
+- **A new top-level directory needs a `TABS` entry** in `build-site.py`. The
+  build fails rather than silently dropping its pages from the navigation.
+- **Code fences must be balanced.** An unclosed fence swallows everything up to
+  the next one, on GitHub and on the site alike. A `--strict` build surfaces
+  this as missing anchors on the affected page.
+
+### Versions are pinned for a reason
+
+Two pins in `requirements-docs.txt` are load-bearing. `pymdown-extensions` must
+be 11+ against Pygments 2.20, or any indented code block aborts the build. And
+`mkdocs-material` is held at 9.x because MkDocs 2.0 removes the plugin system
+and rewrites theming with no migration path.
+
 ---
 
 ## Docs and link conventions

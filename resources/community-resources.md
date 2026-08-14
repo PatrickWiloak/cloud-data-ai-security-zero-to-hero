@@ -4,17 +4,17 @@ Connect with fellow learners, get your questions answered, and stay motivated on
 
 ## 📚 Table of Contents
 
-- [Reddit Communities](#reddit-communities)
-- [Discord Servers](#discord-servers)
-- [Slack Workspaces](#slack-workspaces)
-- [LinkedIn Groups](#linkedin-groups)
-- [YouTube Channels](#youtube-channels)
-- [Podcasts](#podcasts)
-- [Twitter/X Communities](#twitterx-communities)
-- [Study Groups](#study-groups)
-- [Meetups and Events](#meetups-and-events)
-- [Blogs and Newsletters](#blogs-and-newsletters)
-- [Official Communities](#official-communities)
+- [Reddit Communities](#-reddit-communities)
+- [Discord Servers](#-discord-servers)
+- [Slack Workspaces](#-slack-workspaces)
+- [LinkedIn Groups](#-linkedin-groups)
+- [YouTube Channels](#-youtube-channels)
+- [Podcasts](#-podcasts)
+- [Twitter/X Communities](#-twitterx-communities)
+- [Study Groups](#-study-groups)
+- [Meetups and Events](#-meetups-and-events)
+- [Blogs and Newsletters](#-blogs-and-newsletters)
+- [Official Communities](#-official-communities)
 
 ---
 

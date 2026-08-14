@@ -1,0 +1,120 @@
+/* Site-only styling. Nothing here affects how the markdown reads on GitHub.
+   Loaded via `extra_css` in mkdocs.yml and staged by build-site.py. */
+
+/* ------------------------------------------------------------------ */
+/* Layout                                                              */
+/* ------------------------------------------------------------------ */
+
+/* The reference pages lean on wide comparison tables (AWS vs Azure vs GCP,
+   exam domain weightings). Material's default 61rem content column truncates
+   them into a scrollbar on desktop, so give the content area more room. */
+.md-grid {
+  max-width: 78rem;
+}
+
+/* Wide tables scroll inside their own container rather than pushing the page
+   sideways. Material wraps tables already; this makes the affordance visible. */
+.md-typeset__table {
+  min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+  display: table;
+  font-size: 0.72rem;
+}
+
+.md-typeset table:not([class]) th {
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------ */
+/* Practice question answer reveals                                    */
+/* ------------------------------------------------------------------ */
+
+/* The 154 practice banks use raw <details><summary>Answer</summary> blocks.
+   pymdownx.details styles fenced admonition-style details, but not these, so
+   they render as an unstyled disclosure triangle. Give them the same treatment
+   as a success admonition: obvious, but not shouting the answer. */
+.md-typeset details:not([class]) {
+  border: none;
+  border-left: 0.2rem solid var(--md-typeset-a-color);
+  border-radius: 0.1rem;
+  background-color: var(--md-code-bg-color);
+  box-shadow: none;
+  margin: 1em 0;
+  padding: 0;
+  font-size: 0.75rem;
+}
+
+.md-typeset details:not([class]) > summary {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.5rem 0.8rem 0.5rem 2rem;
+  list-style: none;
+}
+
+.md-typeset details:not([class]) > summary::-webkit-details-marker {
+  display: none;
+}
+
+.md-typeset details:not([class]) > summary::before {
+  background-color: var(--md-typeset-a-color);
+  content: "";
+  height: 1rem;
+  left: 0.6rem;
+  position: absolute;
+  width: 1rem;
+  -webkit-mask-image: var(--md-details-icon);
+  mask-image: var(--md-details-icon);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transition: transform 0.25s;
+}
+
+.md-typeset details:not([class])[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.md-typeset details:not([class]) > *:not(summary) {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Diagrams                                                            */
+/* ------------------------------------------------------------------ */
+
+/* Mermaid diagrams are the documented default for this repo. Centre them and
+   let them use the full content width. */
+.md-typeset .mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 1.2em 0;
+}
+
+/* PNG diagrams are the exception, used only when a diagram is too dense to read
+   inline. Keep them from overflowing on mobile. */
+.md-typeset img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------------------------------ */
+/* Navigation                                                          */
+/* ------------------------------------------------------------------ */
+
+/* The Certify tab nests four levels deep (provider > level > cert > page).
+   Tighten the indent so the deepest entries stay readable in the sidebar. */
+.md-nav__item .md-nav__item .md-nav__item .md-nav__link {
+  font-size: 0.68rem;
+}
+
+/* The repo's own badge row at the top of the README is decorative; keep it from
+   dominating the landing page. */
+.md-typeset h1 + p img[src*="img.shields.io"] {
+  vertical-align: middle;
+}

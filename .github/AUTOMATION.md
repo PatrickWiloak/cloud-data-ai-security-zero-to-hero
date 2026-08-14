@@ -12,14 +12,18 @@ This directory holds CI workflows, validation scripts, and contributor templates
 │   ├── bug_report.md
 │   ├── cert_request.md
 │   └── content_suggestion.md
+├── site/                     # site-only styling (not repo content)
+│   └── extra.css
 ├── workflows/                # GitHub Actions CI gates
 │   ├── cspell.yml
+│   ├── docs-site.yml
 │   ├── link-check.yml
 │   ├── markdown-lint.yml
 │   └── structure-validate.yml
 └── scripts/                  # local-runnable validators + helpers
     ├── build-certs-index.py
     ├── build-flashcards.py
+    ├── build-site.py
     ├── build-freshness-ledger.sh
     ├── build-lab-map.py
     ├── build-provider-indexes.py
@@ -45,6 +49,9 @@ GitHub Actions run on PR, push to main, and a weekly schedule. All four are desi
 | `markdown-lint.yml` | PR, push | Runs `markdownlint-cli2` against `.markdownlint.json` config | Yes |
 | `structure-validate.yml` | PR, push | Runs `validate-cert-structure.sh`, `validate-frontmatter.sh`, and `--check` on both index generators | Yes (fails on missing required files, malformed frontmatter, or stale generated files; warns are advisory) |
 | `cspell.yml` | PR, push to `**/*.md` | Spell-checks against `.cspell.json` | No (currently non-strict; will flip once dictionary is tuned) |
+| `docs-site.yml` | PR, push to main, manual | Builds the published site with `build-site.py --strict`. Deploys to GitHub Pages on push to main. | Yes (fails on a broken relative link, a missing heading anchor, or a page no nav entry reaches) |
+
+> **One-time setup for deployment.** Settings > Pages > Build and deployment > Source must be set to **GitHub Actions**. Until then the build job passes and the deploy job fails.
 
 ## Scripts
 
@@ -125,6 +132,25 @@ Advisory. Reports which cert guides are due for re-verification, using a per-pro
 python3 .github/scripts/check-cert-freshness.py --due     # just this month's batch
 python3 .github/scripts/check-cert-freshness.py --month 3 # preview another month
 ```
+
+### Site build (also runs in CI)
+
+**`build-site.py`**
+Builds the published MkDocs Material site from the markdown tree without restructuring it. Stages the content into `.site-src/`, generates a landing page for any directory holding markdown but no `README.md`, rewrites directory-style links (`](../notes/)`) to point at that directory's `README.md`, and generates the entire navigation from the staged tree using `docs/certs.json` for cert and provider labels.
+
+Fails if any staged page is unreachable from the navigation, which is what stops a new top-level directory from silently vanishing from the site. `--strict` additionally turns every MkDocs link and anchor warning into an error.
+
+Requires the pinned toolchain in `requirements-docs.txt`. Writes `.site-src/`, `mkdocs.generated.yml`, and `site/`, all gitignored.
+
+```bash
+python3 -m venv .venv-docs
+.venv-docs/bin/pip install -r requirements-docs.txt
+
+.venv-docs/bin/python .github/scripts/build-site.py --serve    # live preview
+.venv-docs/bin/python .github/scripts/build-site.py --strict   # what CI runs
+```
+
+Configuration lives in the root `mkdocs.yml`, which deliberately has no `nav` key. See [docs/ARCHITECTURE.md](../docs/ARCHITECTURE.md#the-published-site) for the design and its conventions.
 
 ### Glossary autolink (mutates files)
 

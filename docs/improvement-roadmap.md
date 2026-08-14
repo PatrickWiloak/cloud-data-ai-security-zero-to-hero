@@ -275,7 +275,7 @@ before building a page** - especially the newer AI and CNCF exams.
 At 137 cert directories the marginal value of the next one is lower than the marginal value of
 finishing the ten outline-stage certs and adding practice questions to the 103 certs that
 lack them. Recommend capping new-cert work at Tier 1 until [section 1](#1-correctness-gaps-fix-first)
-and [2.1](#21---ten-certs-have-zero-notes) are closed.
+and [2.1](#21---ten-certs-have-zero-notes-fixed-2026-07-29) are closed.
 
 ---
 

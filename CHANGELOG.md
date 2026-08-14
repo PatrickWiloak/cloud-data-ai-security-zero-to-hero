@@ -6,6 +6,36 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-08-14] - Published as a searchable website on GitHub Pages
+
+The repo's 2.6M words were only navigable through GitHub's file listing, with no search. Every page is now also published as a MkDocs Material site at **[patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)** with full-text search, dark mode, and mobile navigation.
+
+The markdown tree is unchanged and remains the source of truth. The site is generated from it at build time rather than the tree being restructured for the generator, so there is no second copy of any page and reading the repo on GitHub is unaffected.
+
+### Added
+
+- **`.github/scripts/build-site.py`** - stages the markdown tree, generates landing pages for directories that lack a `README.md`, rewrites the ~1,200 directory-style links (`](../notes/)`) to resolve as URLs, and generates all 2,032 navigation entries from the tree using `docs/certs.json` for cert and provider labels. Cert levels sort by exam progression; files within a cert sort in study order.
+- **`mkdocs.yml`** - hand-maintained theme and extension config, deliberately without a `nav` key.
+- **`.github/workflows/docs-site.yml`** - builds with `--strict` as a blocking check on every PR; deploys to GitHub Pages on push to `main`.
+- **`requirements-docs.txt`** - fully pinned toolchain.
+- **`.github/site/extra.css`** - site-only styling: wider content column for the comparison tables, and styled answer reveals for the 154 practice question banks.
+
+### Fixed
+
+Three classes of pre-existing defect that the strict site build surfaced. All were broken on GitHub too:
+
+- **An unclosed code fence in `exams/gcp/cloud-architect/notes/compute-containers.md`** silently swallowed ~130 lines, including four headings, rendering them as a code block. A stray duplicate fence in the same file compounded it. A repo-wide scan found no other instance.
+- **14 broken heading anchors** in `resources/community-resources.md` (11), `README.md`, `docs/improvement-roadmap.md`, and one AWS note. Most were links that omitted the leading hyphen an emoji heading produces.
+- **Links into `.templates/`** now resolve on the site; the directory is staged as `provider-resources/` because MkDocs skips dot-directories and reserves a root `templates/`.
+
+### Notes
+
+- **One-time setup:** Settings > Pages > Build and deployment > Source must be set to **GitHub Actions** before the first deploy succeeds.
+- Heading anchors use GitHub's exact slug algorithm (`pymdownx.slugs.slugify(case="lower")`), so `#section-name` behaves identically in both places and the build can validate all ~960 anchor links.
+- The build fails if any page is unreachable from the navigation, so a new top-level directory cannot silently vanish from the site.
+
+---
+
 ## [2026-08-11] - Anthropic Claude certification program: 4 official certs covered, Anthropic becomes the 27th certification provider
 
 Anthropic launched an official Claude certification program in 2026 (Architect - Foundations in March, then Associate, Developer, and Architect - Professional in July, all via Pearson VUE). This repo previously carried 4 fictional self-directed Anthropic "study tracks"; this pass replaces them with real coverage of the actual program. Repo totals move from 144 certifications / 26 providers / 6 study tracks to **148 certifications / 27 providers / 3 study tracks** (151 cert directories).

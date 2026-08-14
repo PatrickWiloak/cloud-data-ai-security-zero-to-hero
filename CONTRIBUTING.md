@@ -181,8 +181,31 @@ Several scripts live under `.github/scripts/`. The validators run in CI on every
 - `markdown-lint.yml` - markdownlint-cli2 against `.markdownlint.json`.
 - `structure-validate.yml` - runs the cert-structure and frontmatter validators.
 - `cspell.yml` - spell-checks markdown changes against `.cspell.json`. Currently non-strict (won't fail builds while the dictionary tunes); will flip to strict once noise is acceptable.
+- `docs-site.yml` - builds the published site with `--strict` on every PR, and deploys to GitHub Pages on push to `main`.
 
 See [.github/AUTOMATION.md](./.github/AUTOMATION.md) for a one-page map of every script and workflow.
+
+## Previewing the documentation site
+
+The repo is published at **[patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)**. The site is generated from the markdown tree by `.github/scripts/build-site.py`, so there is no second copy of any page: write markdown as normal and the site picks it up.
+
+```bash
+python3 -m venv .venv-docs
+.venv-docs/bin/pip install -r requirements-docs.txt
+
+# Live-reload preview on http://127.0.0.1:8000
+.venv-docs/bin/python .github/scripts/build-site.py --serve
+
+# What CI runs. Fails on broken links, bad anchors, or pages missing from the nav.
+.venv-docs/bin/python .github/scripts/build-site.py --strict
+```
+
+A full build takes about two minutes and writes to `site/`. Three paths are generated and gitignored - `.site-src/`, `mkdocs.generated.yml`, and `site/` - so never edit them by hand.
+
+Two things worth knowing when adding content:
+
+- **New pages appear in the nav automatically**, labelled with their H1. A brand-new *top-level directory* is the exception: add it to the `TABS` table in `build-site.py`, or the build fails with the list of pages it could not reach.
+- **Anchor links are checked.** The site uses GitHub's exact heading-slug algorithm, so `#section-name` behaves the same in both places. If the build reports a missing anchor, the link is genuinely broken on GitHub too.
 
 ## Submitting a change
 

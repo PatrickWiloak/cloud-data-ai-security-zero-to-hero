@@ -8,7 +8,7 @@ Three domains in one note, weighted by their exam share: Security and Safety (Do
 
 ---
 
-# Part 1 - Security and Safety (8.1%)
+## Part 1 - Security and Safety (8.1%)
 
 ## API Key Handling
 
@@ -128,7 +128,7 @@ The pattern, not the exact policy, is what the exam tests: a cheap classificatio
 
 ---
 
-# Part 2 - Claude Code (3.1%)
+## Part 2 - Claude Code (3.1%)
 
 Claude Code is Anthropic's agentic coding tool: a terminal-based agent that reads, edits, and runs code in your repository using the tool-use loop from [notes/09](09-agents-and-workflows.md). At 3.1% of the exam, conceptual familiarity is enough; expect a question or two, not a section.
 
@@ -169,7 +169,7 @@ See **[📖 Claude Code documentation](https://docs.anthropic.com/en/docs/claude
 
 ---
 
-# Part 3 - Eval, Testing, and Debugging (2.6%)
+## Part 3 - Eval, Testing, and Debugging (2.6%)
 
 ## Eval-Driven Development
 
