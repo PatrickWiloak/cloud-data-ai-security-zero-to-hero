@@ -230,13 +230,21 @@
   display: none;
 }
 
-/* Left column is site navigation, right column is this page's contents. Label
-   the right one clearly so the two are never read as the same control. */
-.md-nav--secondary .md-nav__title {
-  font-size: 0.65rem;
+/* The page's own contents now sit inside the left sidebar, under the active
+   page. Set them apart from the site tree above so the two are not read as one
+   flat list. */
+.md-nav--secondary > .md-nav__title {
+  font-size: 0.6rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  opacity: 0.75;
+  letter-spacing: 0.07em;
+  opacity: 0.6;
+  padding-top: 0.4rem;
+}
+
+.md-nav--secondary {
+  border-left: 1px solid var(--md-default-fg-color--lightest);
+  margin-left: 0.3rem;
+  padding-left: 0.4rem;
 }
 
 /* Where you are in a 2,000-page tree, legible at a glance. */

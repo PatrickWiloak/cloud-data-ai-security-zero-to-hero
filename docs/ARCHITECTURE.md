@@ -196,10 +196,43 @@ no `nav` key.
 | `mkdocs.yml` | Yes | Hand-maintained. Theme, extensions, validation. No `nav`. |
 | `.github/scripts/build-site.py` | Yes | The generator. Edit this, not the output. |
 | `.github/site/extra.css` | Yes | Site-only styling. Kept out of `assets/`, which is the diagram store. |
+| `.github/site-overrides/` | Yes | Material template overrides. Separate from `.github/site/`, which is copied wholesale into the published site. |
 | `requirements-docs.txt` | Yes | Fully pinned, including transitive packages that affect rendering. |
 | `.site-src/` | No | Staged markdown tree. |
 | `mkdocs.generated.yml` | No | `mkdocs.yml` + generated nav. |
 | `site/` | No | Rendered HTML, ~240 MB across ~2,000 pages. |
+
+### Page layout: one sidebar, on the left
+
+Material renders navigation on the left and the page's table of contents on the
+right. Two settings change that, and both have a trap:
+
+- **`navigation.tabs` is off.** With tabs, the left sidebar shows only the active
+  tab's subtree. Home is a root-level page with no children, so its left column
+  collapsed to a single link while its long table of contents filled the right,
+  and a cert page did the reverse. The sidebar changed shape depending on where
+  you stood. Without tabs, every page gets the same full site tree with the
+  current branch expanded.
+- **`toc.integrate` is on**, so the table of contents folds into that same left
+  sidebar rather than taking a second column. There is no right-hand column on
+  any page.
+
+`toc.integrate` alone is not safe here. Material emits the integrated ToC from
+the `nav_item == page` branch of `partials/nav-item.html`, which only fires for
+leaf pages. A section-index page - the effect of `navigation.indexes` - is
+represented in the nav by its *section*, not by a page item, so it matched no
+branch and rendered no ToC at all. That is every cert landing page plus every
+generated directory index.
+
+`.github/site-overrides/partials/nav-item.html` is a copy of the upstream partial
+with a `toc.integrate` block added to the section-index branch. The addition is
+marked `LOCAL ADDITION` and is the only change; everything else is upstream.
+
+**This couples the repo to Material's template internals.** `requirements-docs.txt`
+already pins `mkdocs-material`, and that pin now matters twice over: after any
+bump, re-copy the upstream partial, re-apply the marked block, and rebuild. A
+`--strict` build will not catch a drifted template, because a missing ToC is not
+an error. Check a cert landing page by eye.
 
 ### Conventions the site depends on
 

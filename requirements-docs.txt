@@ -17,6 +17,12 @@
 #   plugin system and rewrites theming with no migration path, so an unpinned
 #   upgrade would break this build outright. Bump deliberately, rebuild with
 #   --strict, and check the rendered diff.
+#
+#   The Material pin is doubly load-bearing: .github/site-overrides/partials/
+#   nav-item.html is a copy of that version's partial with one marked addition,
+#   so a bump means re-copying it and re-applying the block. A --strict build
+#   will not flag a drifted template - a missing table of contents is not an
+#   error - so check a cert landing page by eye. See docs/ARCHITECTURE.md.
 
 mkdocs==1.6.1
 mkdocs-material==9.7.7

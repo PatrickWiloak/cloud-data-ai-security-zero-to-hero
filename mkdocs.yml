@@ -32,19 +32,19 @@ site_dir: site
 theme:
   name: material
   language: en
+  # Overrides one Material partial so that toc.integrate also works on
+  # section-index pages. See .github/site-overrides/partials/nav-item.html and
+  # docs/ARCHITECTURE.md. Kept out of .github/site/, which build-site.py copies wholesale
+  # into the published site.
+  custom_dir: .github/site-overrides
   icon:
     repo: fontawesome/brands/github
   features:
     # Deliberately NOT navigation.tabs. With tabs, the left sidebar shows only the
     # active tab's subtree, so Home - a root page with no children - rendered an
-    # almost empty left column while its long ToC filled the right, and a cert
-    # page did the reverse. The populated panel appeared to jump sides. Without
-    # tabs the left sidebar is the same full site tree on every page.
-    #
-    # toc.integrate is not the fix either: it nests the ToC under the active
-    # page's nav item, and a section-index page (every cert landing page, plus
-    # the 175 generated directory indexes) has no such item, so those pages lose
-    # their ToC completely.
+    # almost empty left column while a cert page rendered a deep one. The sidebar
+    # changed shape depending on where you were. Without tabs it is the same full
+    # site tree on every page, with the current branch expanded.
     - navigation.sections
     # A directory's README.md becomes the landing page for its nav section
     # instead of a redundant child entry.
@@ -58,6 +58,11 @@ theme:
     # Keep the sidebar scrolled to wherever you are in the tree, and the URL in
     # step with the section being read.
     - navigation.tracking
+    # One sidebar, always on the left: the page's table of contents folds into
+    # the navigation instead of claiming a second column on the right. Upstream
+    # this drops the ToC on section-index pages; the custom_dir override above
+    # restores it.
+    - toc.integrate
     - toc.follow
     - search.suggest
     - search.highlight
