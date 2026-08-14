@@ -115,6 +115,17 @@ link checker:
       colour, and slate's blue-grey dark surfaces are overridden to neutral black.
       Dark mode is true `#000000` as of the same day: the banners are flattened
       PNGs on pure black, so a near-black page drew a rectangle around each one.
+- [x] ~~The themed site still read like a styled README~~ ✅ same day, restyled
+      to the gitGood design language, extracted from gitgood.dev's source: green
+      accent (`#22c55e`) on links/CTAs/hover borders/glow shadows, Geist + Geist
+      Mono, centred staggered hero with accent kickers, card hover = accent
+      border + tinted shadow + 2px lift. Also fixed two dark-mode defects the
+      monochrome pass shipped (black-on-black hero buttons, washed-out h1),
+      hid the header's star/fork repo widget, and stripped leading heading
+      emoji on the site only (`strip_heading_emoji()` in build-site.py pins
+      each original anchor slug, so no inbound anchor link moved; the repo
+      markdown and the sidebar's landmark labels are untouched). See
+      CHANGELOG 2026-08-14.
 - [x] ~~Both sidebars were rendered, and the populated one appeared to switch
       sides between pages~~ ✅ `navigation.tabs` off, so the left sidebar is the
       same full tree everywhere, and `toc.integrate` folds the page contents into

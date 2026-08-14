@@ -563,6 +563,83 @@ def rewrite_links() -> int:
     return changed
 
 
+# Emoji blocks that lead this repo's headings: pictographs, dingbats and misc
+# symbols, flags, plus the variation selector and ZWJ that compose them.
+# Deliberately narrow - box-drawing (U+2500s) and arrows (U+2190s) can carry
+# meaning, so they stay.
+EMOJI_PREFIX_RE = re.compile(
+    "^["
+    "\U0001F000-\U0001FAFF"  # pictographs, emoticons, transport, symbols
+    "\u2600-\u27BF"          # misc symbols + dingbats (warning, cloud, scales, check)
+    "\u2B00-\u2BFF"          # star and friends
+    "\u2139"                  # information source
+    "\u23E9-\u23FA"          # timers and playback
+    "\uFE0F\u200D"           # variation selector-16, zero-width joiner
+    "\U0001F1E6-\U0001F1FF"  # regional indicator pairs (flags)
+    "]+[ \t]+"
+)
+ATX_HEADING_RE = re.compile(r"^(?P<hashes>#{1,6}) +(?P<text>.+?) *$")
+
+
+def strip_heading_emoji() -> int:
+    """Site-only: drop the leading emoji a heading may carry, keeping its anchor.
+
+    On GitHub an emoji-led heading is house style; on the site it reads like a
+    rendered README, so the staged copy loses the prefix. The catch is anchors:
+    the toc slugifier is configured to match GitHub's, where "## 🎯 Quick
+    Navigation" slugs to `#-quick-navigation` (the emoji leaves a leading
+    hyphen), and ~960 inbound links across the tree were written against that.
+    So each stripped heading pins its ORIGINAL slug as an explicit attr_list id
+    - computed with the same pymdownx slugifier mkdocs.yml hands to toc - and
+    no anchor changes. toc de-duplicates explicit ids in document order exactly
+    as it does generated ones, so repeated headings on a page keep today's
+    suffixes too. The sidebar's section and provider landmarks are nav labels,
+    not headings, and are unaffected.
+
+    Headings containing links, attr_lists or raw HTML are left alone: their
+    rendered text (which is what toc slugs) diverges from the source text, so
+    the pinned id could be wrong. None of them lead with emoji today.
+    """
+    from pymdownx.slugs import slugify
+
+    slug = slugify(case="lower")
+    changed = 0
+    for md_path in sorted(STAGE.rglob("*.md")):
+        original = md_path.read_text(encoding="utf-8", errors="replace")
+        out_lines: list[str] = []
+        fence: str | None = None
+        dirty = False
+
+        for line in original.splitlines(keepends=True):
+            m = FENCE_RE.match(line)
+            if fence is not None:
+                if m and m.group("marker")[0] == fence[0] and len(m.group("marker")) >= len(fence):
+                    fence = None
+                out_lines.append(line)
+                continue
+            if m:
+                fence = m.group("marker")
+                out_lines.append(line)
+                continue
+
+            hm = ATX_HEADING_RE.match(line.rstrip("\n"))
+            if hm and "](" not in hm.group("text") and "{" not in hm.group("text") and "<" not in hm.group("text"):
+                text = hm.group("text")
+                stripped = EMOJI_PREFIX_RE.sub("", text)
+                if stripped and stripped != text:
+                    anchor = slug(text, "-")
+                    eol = "\n" if line.endswith("\n") else ""
+                    out_lines.append(f"{hm.group('hashes')} {stripped} {{: #{anchor} }}{eol}")
+                    dirty = True
+                    continue
+            out_lines.append(line)
+
+        if dirty:
+            md_path.write_text("".join(out_lines), encoding="utf-8")
+            changed += 1
+    return changed
+
+
 # --------------------------------------------------------------------------- #
 # Labels
 # --------------------------------------------------------------------------- #
@@ -842,6 +919,9 @@ def main() -> int:
 
     created = generate_missing_indexes()
     print(f"  generated {len(created)} directory index pages")
+
+    de_emojied = strip_heading_emoji()
+    print(f"  stripped leading heading emoji in {de_emojied} pages (anchors pinned)")
 
     rewritten = rewrite_links()
     print(f"  rewrote links in {rewritten} pages")

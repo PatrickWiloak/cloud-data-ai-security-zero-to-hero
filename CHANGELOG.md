@@ -6,6 +6,21 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-08-14] - The site adopts the gitGood design language
+
+The monochrome pass from earlier today still read like a styled README. This pass ports gitGood.dev's actual design system - extracted from its source, not eyeballed - so the two Nobler Works sites share a language: pure-black dark mode plus a single green accent (`#22c55e`; `#15803d` for text on white), Geist and Geist Mono, and gitGood's signature card hover of accent border, accent-tinted shadow, and a 2px lift at 200ms.
+
+### Changed
+
+- **One accent instead of monochrome.** Links, the primary button, active nav entries, provider-chip counts, card icons, kickers, the practice-answer reveal border, focus rings and scrollbar thumbs now carry the accent. Underlines move to hover only, since colour carries the signal again. Cards keep the page-colour background - gitGood cards are not raised surfaces; separation is a 1px hairline until hover.
+- **Fixed two dark-mode defects the monochrome palette shipped.** Material's outlined buttons draw from `--md-primary-fg-color`, which was `#000000` - so on the black landing page two of the three hero buttons were invisible and the primary rendered as bare text. And Material dims `h1` to the secondary text colour, which washed out every page's title; headings are now full-strength and bold (Material defaults them to weight 300).
+- **The hero is centred and staggered** - gitGood's fadeInUp entrance, 0.6s ease-out at 100ms steps, disabled under `prefers-reduced-motion`. The landing page's section headings drop their emoji and gain accent eyebrow kickers instead.
+- **Content-page headings drop their leading emoji on the site only** - `strip_heading_emoji()` in `build-site.py`, a fence-aware transform over the staged copy, so the repo's markdown keeps its house style on GitHub. Anchors cannot move: the repo's ~960 inbound anchor links were written against GitHub's slugs, where the emoji leaves a leading hyphen, so each stripped heading pins its original slug as an explicit attr_list id computed with the same pymdownx slugifier the toc uses. The `[📖 ...]` body-link convention is untouched, and the sidebar's section and provider landmarks are nav labels, not headings, so they stay.
+- **The header's repo widget is hidden.** The truncated slug plus star/fork counts was the most GitHub element on the page. `repo_url` stays for the edit links; the footer still links the repo.
+- **Geist replaces Inter, Geist Mono replaces JetBrains Mono** - gitGood's faces, served from Google Fonts as before.
+
+---
+
 ## [2026-08-14] - Monochrome theme, a single left sidebar, and a gitGood promo
 
 Presentation pass over the newly published site, plus the first promotion of [gitGood.dev](https://gitgood.dev) from this repo.

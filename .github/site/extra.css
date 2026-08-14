@@ -2,37 +2,57 @@
    Loaded via `extra_css` in mkdocs.yml and staged by build-site.py. */
 
 /* ------------------------------------------------------------------ */
-/* Palette - monochrome, Nobler Works house style                      */
+/* Palette - near-black + one accent, the gitGood.dev house language   */
 /* ------------------------------------------------------------------ */
 
 /* mkdocs.yml sets `primary: custom` and `accent: custom`, which makes Material
    skip its built-in colour palettes and emit no colour rules of its own. Every
    value below is therefore the single source of truth for the site's colour.
 
-   Deliberately black and white: no hue anywhere, including Material's slate
-   dark scheme, which ships a blue-grey background by default. Emphasis comes
-   from weight, rule lines, and spacing rather than colour. */
+   The system is ported from gitgood.dev (src/app/globals.css): pure #000000
+   page in dark mode, slate-on-white in light, and a single green accent
+   (#22c55e) carrying links, CTAs, hover borders, and glow shadows. Cards are
+   NOT raised surfaces - they sit on the same black as the page and separate
+   with a 1px border; the signature hover is accent border + accent-tinted
+   shadow + a 2px lift at 200ms. */
+
+:root {
+  --nw-radius:       0.4rem;  /* 8px at Material's 20px root - gitGood rounded-lg */
+  --nw-radius-lg:    0.6rem;  /* 12px - gitGood rounded-xl */
+}
 
 /* ---- Light ---- */
 [data-md-color-scheme="default"] {
+  --nw-accent:            #16a34a;
+  --nw-accent-text:       #15803d;               /* darkened for contrast on white */
+  --nw-accent-dark:       #15803d;
+  --nw-accent-glow:       rgba(34, 197, 94, 0.3);
+  --nw-accent-glow-faint: rgba(34, 197, 94, 0.12);
+  --nw-accent-border:     rgba(22, 163, 74, 0.4);
+  --nw-border:            #e2e8f0;
+  --nw-border-hover:      #cbd5e1;
+  --nw-surface:           #f1f5f9;               /* inputs, kbd - never cards */
+  --nw-btn-2nd-bg:        rgba(15, 23, 42, 0.08);
+  --nw-btn-2nd-bg-hover:  rgba(15, 23, 42, 0.16);
+
   --md-primary-fg-color:          #000000;
   --md-primary-fg-color--light:   #2e2e2e;
   --md-primary-fg-color--dark:    #000000;
   --md-primary-bg-color:          #ffffff;
   --md-primary-bg-color--light:   rgba(255, 255, 255, 0.7);
 
-  --md-accent-fg-color:           #000000;
-  --md-accent-fg-color--transparent: rgba(0, 0, 0, 0.1);
+  --md-accent-fg-color:           var(--nw-accent-dark);
+  --md-accent-fg-color--transparent: rgba(34, 197, 94, 0.1);
   --md-accent-bg-color:           #ffffff;
   --md-accent-bg-color--light:    rgba(255, 255, 255, 0.7);
 
   --md-default-bg-color:          #ffffff;
-  --md-default-fg-color:          rgba(0, 0, 0, 0.87);
-  --md-default-fg-color--light:   rgba(0, 0, 0, 0.6);
-  --md-default-fg-color--lighter: rgba(0, 0, 0, 0.32);
-  --md-default-fg-color--lightest:rgba(0, 0, 0, 0.07);
+  --md-default-fg-color:          #0f172a;
+  --md-default-fg-color--light:   rgba(15, 23, 42, 0.62);
+  --md-default-fg-color--lighter: rgba(15, 23, 42, 0.32);
+  --md-default-fg-color--lightest:rgba(15, 23, 42, 0.07);
 
-  --md-typeset-a-color:           #000000;
+  --md-typeset-a-color:           var(--nw-accent-text);
   --md-code-bg-color:             #f4f4f4;
   --md-code-fg-color:             #1a1a1a;
   --md-footer-bg-color:           #000000;
@@ -45,14 +65,26 @@
      is neutral black rather than its default blue-grey. */
   --md-hue: 0;
 
+  --nw-accent:            #22c55e;
+  --nw-accent-text:       #22c55e;
+  --nw-accent-dark:       #16a34a;
+  --nw-accent-glow:       rgba(34, 197, 94, 0.5);
+  --nw-accent-glow-faint: rgba(34, 197, 94, 0.2);
+  --nw-accent-border:     rgba(34, 197, 94, 0.4);
+  --nw-border:            rgba(255, 255, 255, 0.1);
+  --nw-border-hover:      rgba(255, 255, 255, 0.2);
+  --nw-surface:           #111111;
+  --nw-btn-2nd-bg:        rgba(255, 255, 255, 0.1);
+  --nw-btn-2nd-bg-hover:  rgba(255, 255, 255, 0.2);
+
   --md-primary-fg-color:          #000000;
   --md-primary-fg-color--light:   #2e2e2e;
   --md-primary-fg-color--dark:    #000000;
   --md-primary-bg-color:          #ffffff;
   --md-primary-bg-color--light:   rgba(255, 255, 255, 0.7);
 
-  --md-accent-fg-color:           #ffffff;
-  --md-accent-fg-color--transparent: rgba(255, 255, 255, 0.1);
+  --md-accent-fg-color:           #4ade80;
+  --md-accent-fg-color--transparent: rgba(34, 197, 94, 0.1);
   --md-accent-bg-color:           #000000;
   --md-accent-bg-color--light:    rgba(0, 0, 0, 0.7);
 
@@ -62,18 +94,19 @@
      True #000000, not a near-black: the brand artwork on this site (the Nobler
      Works and gitGood banners) is flattened PNG on pure black, so anything
      lighter frames every banner in a visible rectangle. Matching exactly is
-     what lets the artwork sit on the page instead of on a card. */
+     what lets the artwork sit on the page instead of on a card - and it is
+     also gitGood's own page colour. */
   --md-default-bg-color:          #000000;
   --md-default-bg-color--light:   #0d0d0d;
   --md-default-bg-color--lighter: #1a1a1a;
   --md-default-bg-color--lightest:#262626;
-  --md-default-fg-color:          rgba(255, 255, 255, 0.9);
+  --md-default-fg-color:          rgba(255, 255, 255, 0.92);
   --md-default-fg-color--light:   rgba(255, 255, 255, 0.62);
   --md-default-fg-color--lighter: rgba(255, 255, 255, 0.32);
   --md-default-fg-color--lightest:rgba(255, 255, 255, 0.07);
 
-  --md-typeset-a-color:           #ffffff;
-  --md-code-bg-color:             #1a1a1a;
+  --md-typeset-a-color:           var(--nw-accent-text);
+  --md-code-bg-color:             #111111;
   --md-code-fg-color:             #e6e6e6;
   --md-footer-bg-color:           #000000;
   --md-footer-bg-color--dark:     #000000;
@@ -83,42 +116,110 @@
    edge the two merge into one field and the header stops reading as a bar. */
 [data-md-color-scheme="slate"] .md-header,
 [data-md-color-scheme="slate"] .md-tabs {
-  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  border-bottom: 1px solid var(--nw-border);
 }
 
-/* With links the same colour as body text, colour can no longer carry the
-   signal. Underline them instead, and lift the weight on hover. */
-.md-typeset a {
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-  text-decoration-thickness: 1px;
+/* The truncated repo slug + star/fork widget top-right is the single most
+   GitHub element on the page. Hiding it keeps repo_url (the edit links need
+   it) while the footer social icons carry the GitHub link. */
+.md-header__source {
+  display: none;
 }
 
+/* Links carry the accent, gitGood-style; underline appears on hover for the
+   non-colour signal. Chrome links (nav, header, footer) inherit their own
+   colours from Material and stay plain. */
 .md-typeset a:hover,
 .md-typeset a:focus {
-  text-decoration-thickness: 2px;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
-/* Chrome links - nav, tabs, tables of contents, buttons - are positional, not
-   prose, so they keep the plain treatment. */
-.md-nav a,
-.md-tabs a,
-.md-header a,
-.md-footer a,
-.md-typeset .md-button,
-.md-typeset .headerlink,
-.md-typeset table a {
+/* Accent focus ring, ported from gitGood's global :focus-visible rule. */
+:focus-visible {
+  outline: 2px solid var(--nw-accent);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Typography                                                          */
+/* ------------------------------------------------------------------ */
+
+/* Material dims h1 to --light and sets headings at weight 300. gitGood's
+   headings are bold and full-strength; the light-weight grey h1 was the
+   single biggest "washed out docs site" tell. */
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 2em;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+/* Headings across the repo lead with an emoji - README idiom that reads
+   "GitHub" on a product site. They render as raw unicode text, not twemoji,
+   so CSS cannot hide them; strip_heading_emoji() in build-site.py removes
+   them from the staged copy instead, pinning each original anchor. */
+
+/* kbd, matched to gitGood's ShortcutHints: surface fill, hairline border,
+   mono, no 3D bevel. */
+.md-typeset kbd {
+  background-color: var(--nw-surface);
+  border: 1px solid var(--nw-border);
+  border-radius: 0.2rem;
+  box-shadow: none;
+  color: var(--md-default-fg-color);
+  vertical-align: baseline;
+}
+
+/* ------------------------------------------------------------------ */
+/* Buttons - gitGood primary/secondary pair                            */
+/* ------------------------------------------------------------------ */
+
+/* Secondary: translucent foreground fill, no border (gitGood's ghost
+   button). This also fixes the dark-mode bug where Material's outlined
+   buttons drew black-on-black from --md-primary-fg-color. */
+.md-typeset .md-button {
+  background-color: var(--nw-btn-2nd-bg);
+  border: none;
+  border-radius: var(--nw-radius);
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+  margin: 0 0.4rem 0.5rem 0;
+  padding: 0.5em 1.4em;
+  transition: background-color 150ms, color 150ms, box-shadow 200ms,
+    transform 200ms;
+}
+
+.md-typeset .md-button:hover,
+.md-typeset .md-button:focus {
+  background-color: var(--nw-btn-2nd-bg-hover);
+  color: var(--md-default-fg-color);
   text-decoration: none;
 }
 
-.md-typeset table a:hover {
-  text-decoration: underline;
+/* Primary: accent fill, white text, accent glow shadow that deepens on
+   hover. */
+.md-typeset .md-button--primary {
+  background-color: var(--nw-accent);
+  box-shadow: 0 10px 15px -3px var(--nw-accent-glow-faint);
+  color: #ffffff;
+  font-weight: 700;
 }
 
-/* Section rules do the work colour used to. */
-.md-typeset h2 {
-  border-bottom: 1px solid var(--md-default-fg-color--lightest);
-  padding-bottom: 0.2em;
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus {
+  background-color: var(--nw-accent-dark);
+  box-shadow: 0 10px 15px -3px var(--nw-accent-glow);
+  color: #ffffff;
 }
 
 /* ------------------------------------------------------------------ */
@@ -147,6 +248,30 @@
   white-space: nowrap;
 }
 
+/* Thin accent-tinted scrollbars, ported from gitGood. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--nw-accent-glow-faint) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nw-accent-glow-faint);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nw-accent-glow);
+}
+
 /* ------------------------------------------------------------------ */
 /* Practice question answer reveals                                    */
 /* ------------------------------------------------------------------ */
@@ -154,10 +279,11 @@
 /* The 154 practice banks use raw <details><summary>Answer</summary> blocks.
    pymdownx.details styles fenced admonition-style details, but not these, so
    they render as an unstyled disclosure triangle. Give them the same treatment
-   as a success admonition: obvious, but not shouting the answer. */
+   as a success admonition: obvious, but not shouting the answer. The accent
+   border-left now reads as the site's green. */
 .md-typeset details:not([class]) {
   border: none;
-  border-left: 0.2rem solid var(--md-typeset-a-color);
+  border-left: 0.2rem solid var(--nw-accent);
   border-radius: 0.1rem;
   background-color: var(--md-code-bg-color);
   box-shadow: none;
@@ -180,7 +306,7 @@
 }
 
 .md-typeset details:not([class]) > summary::before {
-  background-color: var(--md-typeset-a-color);
+  background-color: var(--nw-accent);
   content: "";
   height: 1rem;
   left: 0.6rem;
@@ -236,7 +362,8 @@
 /* Page headings in this repo lead with emoji, which pymdownx renders as inline
    SVGs. In prose they are fine; stacked down a sidebar they turn the nav into a
    column of mismatched icons and push the text out of alignment. Drop them from
-   navigation only - the headings themselves keep theirs. */
+   navigation only - the deliberate section and provider landmarks are plain
+   nav labels and are unaffected. */
 .md-nav .twemoji,
 .md-nav__link .twemoji {
   display: none;
@@ -254,13 +381,15 @@
 }
 
 .md-nav--secondary {
-  border-left: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 1px solid var(--nw-border);
   margin-left: 0.3rem;
   padding-left: 0.4rem;
 }
 
-/* Where you are in a 2,000-page tree, legible at a glance. */
+/* Where you are in a 2,000-page tree, legible at a glance - bold plus the
+   accent, gitGood's active-state colour. */
 .md-nav__link--active {
+  color: var(--nw-accent-text);
   font-weight: 700;
 }
 
@@ -292,34 +421,66 @@
    .github/site/home.md. Every rule is scoped to a class that only appears on
    that page, so nothing here reaches the 1,900 content pages. */
 
+/* gitGood's hero is fully centred; the stagger entrance is its fadeInUp with
+   the same 0.6s ease-out and 100ms steps. */
+.md-typeset .home-hero {
+  text-align: center;
+  padding-top: 0.8rem;
+}
+
+@keyframes home-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.md-typeset .home-hero > * {
+  animation: home-fade-up 0.6s ease-out backwards;
+}
+
+.md-typeset .home-hero > *:nth-child(1) { animation-delay: 0.05s; }
+.md-typeset .home-hero > *:nth-child(2) { animation-delay: 0.15s; }
+.md-typeset .home-hero > *:nth-child(3) { animation-delay: 0.25s; }
+.md-typeset .home-hero > *:nth-child(4) { animation-delay: 0.35s; }
+.md-typeset .home-hero > *:nth-child(5) { animation-delay: 0.45s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .home-hero > * {
+    animation: none;
+  }
+}
+
 .md-typeset .home-title {
-  font-size: 2.3rem;
+  font-size: 2.6rem;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.02em;
-  max-width: 20em;
-  margin: 0.4rem 0 0.6rem;
+  max-width: 24em;
+  margin: 0.4rem auto 0.6rem;
 }
 
 .md-typeset .home-intro {
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   line-height: 1.5;
   font-weight: 500;
-  max-width: 40rem;
-  margin-bottom: 0.5rem;
+  max-width: 36rem;
+  margin: 0 auto 0.5rem;
 }
 
 .md-typeset .home-sub {
   color: var(--md-default-fg-color--light);
-  max-width: 40rem;
-  margin-bottom: 1.2rem;
+  max-width: 36rem;
+  margin: 0 auto 1.4rem;
 }
 
-/* Material's buttons are outlined by default. The first one carries the primary
-   action, so invert it; the rest stay quiet. */
-.md-typeset .md-button {
-  margin: 0 0.4rem 0.5rem 0;
-  font-weight: 600;
+.md-typeset .home-hero .md-button {
+  margin: 0 0.25rem 0.5rem;
 }
 
 /* The counts strip. Written as a markdown list so the numbers stay editable in
@@ -327,17 +488,19 @@
 .md-typeset .stat-strip ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0 2.2rem;
   list-style: none;
-  margin: 1.6rem 0 2rem;
+  margin: 1.6rem 0 1rem;
   padding: 0.9rem 0;
-  border-top: 1px solid var(--md-default-fg-color--lightest);
-  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  border-top: 1px solid var(--nw-border);
+  border-bottom: 1px solid var(--nw-border);
 }
 
 .md-typeset .stat-strip li {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0.3rem 0;
   font-size: 0.66rem;
   text-transform: uppercase;
@@ -355,21 +518,46 @@
   color: var(--md-default-fg-color);
 }
 
-/* Material ships .grid.cards; square off the corners to match the rest of the
-   monochrome chrome and make the whole card feel clickable. */
+/* Accent eyebrow above a section heading - gitGood's signature kicker:
+   small, semibold, uppercase, letter-spacing 0.1em. */
+.md-typeset .home-kicker {
+  color: var(--nw-accent-text);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 2.4rem 0 0;
+}
+
+.md-typeset .home-kicker + h2 {
+  margin-top: 0.2em;
+}
+
+/* Material ships .grid.cards. gitGood card recipe: page-colour background,
+   1px hairline border, 12px radius, and the signature hover - accent border,
+   accent-tinted shadow, 2px lift, 200ms. */
 .md-typeset .grid.cards > ul > li {
-  border-radius: 0.1rem;
-  border-color: var(--md-default-fg-color--lightest);
+  background-color: var(--md-default-bg-color);
+  border: 1px solid var(--nw-border);
+  border-radius: var(--nw-radius-lg);
   padding: 1rem 1.1rem;
+  transition: border-color 200ms, box-shadow 200ms, transform 200ms;
 }
 
 .md-typeset .grid.cards > ul > li:hover {
-  border-color: var(--md-default-fg-color--lighter);
-  box-shadow: none;
+  border-color: var(--nw-accent-border);
+  box-shadow: 0 10px 15px -3px var(--nw-accent-glow-faint);
+  transform: translateY(-2px);
 }
 
 .md-typeset .grid.cards > ul > li > hr {
   margin: 0.6rem 0;
+}
+
+/* The Material icon on each card takes the accent, like gitGood's feature
+   icons. */
+.md-typeset .grid.cards .twemoji.lg {
+  color: var(--nw-accent-text);
 }
 
 /* Two columns of one-line links. CSS columns rather than grid so the list stays
@@ -394,8 +582,12 @@
   color: var(--md-default-fg-color);
 }
 
+.md-typeset .home-links li a:hover {
+  color: var(--nw-accent-text);
+}
+
 /* Provider chips: 27 targets that have to stay scannable without turning into a
-   wall of table rows. */
+   wall of table rows. Same hover verbs as the cards, scaled down. */
 .md-typeset .provider-grid ul {
   display: flex;
   flex-wrap: wrap;
@@ -414,26 +606,30 @@
   align-items: center;
   gap: 0.4rem;
   padding: 0.25rem 0.6rem;
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 0.1rem;
+  border: 1px solid var(--nw-border);
+  border-radius: var(--nw-radius);
   font-size: 0.7rem;
+  color: var(--md-default-fg-color);
   text-decoration: none;
+  transition: border-color 200ms, box-shadow 200ms, transform 200ms;
 }
 
 .md-typeset .provider-grid a:hover {
-  border-color: var(--md-default-fg-color--lighter);
-  background-color: var(--md-default-fg-color--lightest);
+  border-color: var(--nw-accent-border);
+  box-shadow: 0 4px 8px -2px var(--nw-accent-glow-faint);
+  text-decoration: none;
+  transform: translateY(-2px);
 }
 
 .md-typeset .provider-grid .n {
   font-variant-numeric: tabular-nums;
   font-weight: 700;
-  color: var(--md-default-fg-color--light);
+  color: var(--nw-accent-text);
 }
 
 @media screen and (max-width: 44.9375em) {
   .md-typeset .home-title {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 
   .md-typeset .home-links ul {

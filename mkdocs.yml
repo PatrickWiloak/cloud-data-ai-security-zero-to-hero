@@ -77,9 +77,10 @@ theme:
     - content.action.edit
     - content.tooltips
   palette:
-    # Monochrome, matching Nobler Works house style. `custom` opts out of
-    # Material's built-in colour palettes entirely; the actual black and white
-    # values are defined in .github/site/extra.css under the scheme selectors.
+    # Near-black plus one green accent, ported from gitgood.dev so the family
+    # of sites shares a language. `custom` opts out of Material's built-in
+    # colour palettes entirely; the actual values are defined in
+    # .github/site/extra.css under the scheme selectors.
     # All three entries need it - this first one is what renders before the
     # palette JS runs, so omitting it here shows Material's default indigo.
     - media: "(prefers-color-scheme)"
@@ -102,9 +103,11 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+  # gitGood's typeface. Both families are served by Google Fonts, which is
+  # where Material loads webfonts from.
   font:
-    text: Inter
-    code: JetBrains Mono
+    text: Geist
+    code: Geist Mono
 
 plugins:
   - search:
