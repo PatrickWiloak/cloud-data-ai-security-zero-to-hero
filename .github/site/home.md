@@ -123,9 +123,11 @@ We build custom software and products at **[Nobler Works](https://noblerworks.co
 
 !!! tip "Want the reps as well as the material?"
 
-    [![gitGood.dev - training platform for software engineers and architects](assets/brand/gitgood-banner.png){ width="420" }](https://gitgood.dev)
+    [![gitGood.dev - practice questions, coding challenges, system design and cloud certification practice exams for engineers, data, security, DevOps and product technologists](assets/brand/gitgood-banner.png){ width="300" }](https://gitgood.dev)
 
-    This site gives you the material. **[gitGood](https://gitgood.dev)** gives you the reps, and tells you whether you actually know it: 1,000+ practice questions, coding challenges with worked explanations, AI mock interviews, certification deep dives, resume review, and a live job-market pulse.
+    This site gives you the material. **[gitGood](https://gitgood.dev)** gives you the reps, and tells you whether you actually know it. Built for every kind of technologist across 21 role-targeted learning paths - engineering, SRE and DevOps, cloud architecture, security, ML and AI, data science, analytics and engineering, QA, product and TPM, and new grads breaking in.
+
+    1,950+ practice questions across 34 categories · certification practice exams for AWS CLF-C02, SAA-C03 and DVA-C02, Azure AZ-900, AZ-104, AZ-305 and AI-900, Google Cloud Digital Leader and Associate Cloud Engineer, Kubernetes CKA and CKAD, CompTIA Security+ and HashiCorp Terraform Associate - original scenario questions, never brain dumps, with per-domain scoring and a timed simulator · coding challenges · SQL playground · system design walkthroughs · AI mock interviews · AI resume reviews · salary coaching · live job-market pulse.
 
     10 days free, then $5/month or $40/year. The free tier needs no card.
 

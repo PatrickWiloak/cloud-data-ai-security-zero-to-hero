@@ -57,11 +57,16 @@
   --md-accent-bg-color--light:    rgba(0, 0, 0, 0.7);
 
   /* Slate derives these from --md-hue; set them outright so no warm cast
-     survives at the low saturation Material uses. */
-  --md-default-bg-color:          #0d0d0d;
-  --md-default-bg-color--light:   #1a1a1a;
-  --md-default-bg-color--lighter: #262626;
-  --md-default-bg-color--lightest:#333333;
+     survives at the low saturation Material uses.
+
+     True #000000, not a near-black: the brand artwork on this site (the Nobler
+     Works and gitGood banners) is flattened PNG on pure black, so anything
+     lighter frames every banner in a visible rectangle. Matching exactly is
+     what lets the artwork sit on the page instead of on a card. */
+  --md-default-bg-color:          #000000;
+  --md-default-bg-color--light:   #0d0d0d;
+  --md-default-bg-color--lighter: #1a1a1a;
+  --md-default-bg-color--lightest:#262626;
   --md-default-fg-color:          rgba(255, 255, 255, 0.9);
   --md-default-fg-color--light:   rgba(255, 255, 255, 0.62);
   --md-default-fg-color--lighter: rgba(255, 255, 255, 0.32);
@@ -72,6 +77,13 @@
   --md-code-fg-color:             #e6e6e6;
   --md-footer-bg-color:           #000000;
   --md-footer-bg-color--dark:     #000000;
+}
+
+/* The header is black and, in dark mode, so is the page behind it. Without an
+   edge the two merge into one field and the header stops reading as a bar. */
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
 }
 
 /* With links the same colour as body text, colour can no longer carry the
