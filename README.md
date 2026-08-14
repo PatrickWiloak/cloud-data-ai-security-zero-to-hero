@@ -15,6 +15,20 @@ If you need custom software built, [get in touch](https://noblerworks.com/).
 [![TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@noblerworks)
 [![Threads](https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white)](https://www.threads.com/@noblerworks)
 
+---
+
+### 🚀 Like what you see? We built a whole platform for this.
+
+**[gitGood](https://gitgood.dev) is our flagship training platform for engineers and architects - train for the role, not just the interview.**
+
+This repo gives you the material. gitGood gives you the reps, and tells you whether you actually know it.
+
+1,000+ practice questions · coding challenges with detailed explanations · AI mock interviews · cloud certification deep dives · AI resume reviews · salary negotiation coaching · live job-market pulse
+
+[![Start 10 days free](https://img.shields.io/badge/Start%2010%20Days%20Free-000000?style=for-the-badge&logo=rocket&logoColor=white)](https://gitgood.dev)
+
+**$5/month** or **$40/year** after the trial. Free tier needs no card: 20 practice questions, the free coding challenges, streaks, achievements, and the job board.
+
 </div>
 
 ---
