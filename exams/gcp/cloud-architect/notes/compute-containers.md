@@ -2366,6 +2366,7 @@ Failover Procedure:
 4. Scale GKE: Increase DR cluster size
 5. Validate: Health checks pass
 6. Total time: 45-60 minutes
+```
 
 Automation:
 ```bash
@@ -2388,7 +2389,6 @@ gcloud dns record-sets transaction add \
   DR_LOAD_BALANCER_IP
 gcloud dns record-sets transaction execute \
   --zone=production-zone
-```
 ```
 
 **Cost:**

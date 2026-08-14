@@ -62,6 +62,58 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 - [x] ~~Add `status:` and `exam-version:` frontmatter plus a revision-warning script~~ ✅ done 2026-07-29 - `status` is derived in `certs.json` rather than hand-declared (no drift). `exam-version:`/`exam-retires:` are optional frontmatter, seeded on the 4 retired AWS certs; `check-cert-freshness.py` warns ahead of a known retirement.
 - [x] ~~Wire `check-orphan-links.sh` into CI~~ ✅ done 2026-07-29 - runs advisory (never blocking, since orphan detection is heuristic). Orphans are currently 0.
 - [x] ~~Prune `.claude/settings.json`~~ ✅ done 2026-07-29
+- [x] ~~Publish the repo as a searchable site~~ ✅ done 2026-08-14 - MkDocs Material on GitHub Pages, generated from the markdown tree by `build-site.py`. See below.
+
+---
+
+## Completed 2026-08-14 - published as a searchable website
+
+The repo's 2.6M words had no search: navigation was GitHub's file listing. Every
+page is now also published at
+[patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/).
+
+The markdown tree is unchanged and stays the source of truth. `build-site.py`
+adapts the tree to MkDocs at build time rather than restructuring the tree for
+MkDocs, so there is no second copy of any page.
+
+- [x] `.github/scripts/build-site.py` - staging, generated directory landing
+      pages, fence-aware link rewriting, and all 2,032 nav entries generated from
+      the tree plus `docs/certs.json`
+- [x] `mkdocs.yml` (hand-maintained, no `nav`), `requirements-docs.txt` (fully
+      pinned), `.github/site/extra.css`
+- [x] `.github/workflows/docs-site.yml` - `--strict` build blocks every PR;
+      deploys to Pages on push to main
+- [x] Docs updated: README, CONTRIBUTING (local preview), `docs/ARCHITECTURE.md`
+      (design + conventions), `.github/AUTOMATION.md`, CHANGELOG
+
+### Defects the strict build surfaced and fixed
+
+All three were broken on GitHub too, and none was catchable by the existing
+link checker:
+
+- [x] An unclosed code fence in `exams/gcp/cloud-architect/notes/compute-containers.md`
+      swallowed ~130 lines including four headings. A stray duplicate fence in the
+      same file compounded it. A repo-wide scan found no other instance.
+- [x] 14 broken heading anchors: `resources/community-resources.md` (11 - its
+      whole table of contents), `README.md`, `docs/improvement-roadmap.md`, and one
+      AWS note. Most omitted the leading hyphen an emoji heading produces.
+- [x] Links into `.templates/` had no working site target; it is staged as
+      `provider-resources/` and the ~144 inbound links are rewritten.
+
+### Known follow-ups
+
+- **Pages must be enabled once**: Settings > Pages > Source > **GitHub Actions**.
+  Until then the build job passes and the deploy job fails.
+- The search index is 28 MB uncompressed. It is lazy-loaded and served gzipped,
+  but if first-search latency becomes a complaint, the options are splitting the
+  index per section or excluding the deepest cert notes from it.
+- `check-internal-links.py` and the site build now overlap but are not
+  redundant: the former checks the source tree offline, the latter checks
+  rendered URLs and heading anchors. Worth folding anchor validation into the
+  standalone checker so the failure is reported without a full site build.
+- No CI check for unbalanced code fences. The site build catches them only
+  indirectly, as missing anchors on the affected page. A direct validator would
+  name the file and line.
 
 ---
 

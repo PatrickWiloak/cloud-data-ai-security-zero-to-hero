@@ -2,7 +2,9 @@
 
 > **Your navigation hub for the whole repo: 148 certifications across 27 providers, plus the [Learn](./learn/) pillar for non-cert students - bite-size concepts, beginner on-ramp, and structured cloud + AI paths.**
 
-<div align="center">
+<!-- markdown="1" lets the documentation site render the markdown inside this
+     centered block. GitHub ignores the attribute, so rendering there is unchanged. -->
+<div align="center" markdown="1">
 
 ![Total Certifications](https://img.shields.io/badge/Certifications-148-blue.svg)
 ![Documentation Links](https://img.shields.io/badge/Docs%20Links-12000+-green.svg)
@@ -319,7 +321,7 @@ See the [budget study plan](./resources/budget-study-plan.md) for detailed cost-
 
 ---
 
-<div align="center">
+<div align="center" markdown="1">
 
 **Ready to start? [Browse the AWS catalog](./exams/aws/) · [Browse Azure](./exams/azure/) · [Browse GCP](./exams/gcp/) · [Browse Kubernetes](./exams/kubernetes/)**
 

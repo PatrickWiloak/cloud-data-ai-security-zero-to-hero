@@ -16,7 +16,7 @@
 - [Bedrock Prompt Management](#bedrock-prompt-management)
 - [Bedrock Prompt Flows](#bedrock-prompt-flows)
 - [Bedrock Model Evaluation](#bedrock-model-evaluation)
-- [Bedrock Data Automation](#bedrock-data-automation)
+- [Bedrock Data Automation](#bedrock-data-automation-bda)
 - [Bedrock Studio + Playground](#bedrock-studio--playground)
 - [Bedrock observability and security](#bedrock-observability-and-security)
 - [Bedrock pricing model](#bedrock-pricing-model)
