@@ -18,7 +18,7 @@ cloud-data-ai-security-zero-to-hero/
 ├── topics/             # Cross-pillar topic indexes (LLMs, IAM, networking, K8s, ...)
 ├── assets/diagrams/    # PNG diagrams (draw.io exports), organized by topic
 ├── docs/               # Repo-level docs (ARCHITECTURE.md, certs.json, freshness.md, tag-taxonomy.md, improvement-roadmap.md)
-├── .github/site/       # Site-only stylesheet (staged to assets/site/ at build)
+├── .github/site/       # Site chrome: extra.css (staged to assets/site/) + home.md (the site's landing page)
 ├── mkdocs.yml          # Site config; nav is generated, not written here
 ├── README.md           # Top-level overview
 ├── STUDY-HUB.md        # Navigation hub
@@ -31,6 +31,7 @@ cloud-data-ai-security-zero-to-hero/
 - Reference documentation for architecture, comparison, troubleshooting (build + reference pillars)
 - Markdown-based knowledge base; `STUDY-HUB.md` is the navigation hub.
 - **Also published as a website**: <https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/>, built by `.github/workflows/docs-site.yml` on push to `main` (live since 2026-08-14). The site is generated from the markdown as-is - **never restructure content or add frontmatter to satisfy the site build.** Site-only fixes go in `.github/scripts/build-site.py`, which transforms a staged copy in `.site-src/` and never touches the repo's markdown. Theme colour lives in `.github/site/extra.css` (monochrome, Nobler Works house style; `mkdocs.yml` sets `primary: custom` so Material's palettes are bypassed).
+- **The site's home page is `.github/site/home.md`, not `README.md`.** A repo front page (banner, badges, repo structure, "star this repo") and a website landing page want different things, so the build renders `home.md` over the staged `README.md`. Editing the README does not change the site's front door - except for the "What's new" bullets, which are extracted from it. Every number on that page is a `{{token}}` filled from `certs.json` and `check-readme-counts.py`; never type a figure into it. See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md#the-home-page-is-not-the-readme).
 - Organized by purpose (learn / certify / reference) and within each, by provider.
 - Each cert dir has: `README.md`, `fact-sheet.md`, `notes/`, `practice-plan.md`, `scenarios.md`, `strategy.md`.
 - Resources include: architecture patterns, service comparisons, CLI cheat sheets, roadmaps, compliance guides, migration guides, interview prep, troubleshooting guides, hands-on projects.
@@ -69,7 +70,7 @@ Backfill is opportunistic. Don't add frontmatter to thousands of files in one PR
 - See [docs/freshness.md](./docs/freshness.md) for the per-cert verification ledger.
 
 ### Counts are checked, not remembered
-Every number advertised in `README.md` and `STUDY-HUB.md` is verified by CI. Cert and provider counts come from `docs/certs.json` via `build-certs-index.py --check`; everything else (concept pages, topic indexes, comparisons, cheat sheets, projects, word count, doc-link floor) is verified by `check-readme-counts.py --check`.
+Every number advertised in `README.md` and `STUDY-HUB.md` is verified by CI. Cert and provider counts come from `docs/certs.json` via `build-certs-index.py --check`. The per-provider tables in both files are **generated** from that index by `build-provider-indexes.py`, between `<!-- BEGIN GENERATED: ... -->` markers - don't hand-edit inside a marked block. Everything else (concept pages, topic indexes, comparisons, cheat sheets, projects, word count, doc-link floor, the Repository Statistics block) is verified by `check-readme-counts.py --check`.
 
 **When you add or remove content, run `python3 .github/scripts/check-readme-counts.py --fix` in the same change.** This exists because the README sat at "37 concept pages" while the tree had 46 and TODO.md had already recorded the change, and because a dated `~2.6M words` snapshot from `docs/improvement-roadmap.md` was restated in three files as a current fact. If you add a new counted claim to the README, add a matching entry to `CLAIMS` in that script - an unchecked number goes stale.
 

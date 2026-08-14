@@ -8,12 +8,16 @@ MkDocs at build time instead of restructuring it:
 1.  Stage every content file into `.site-src/`, mirroring the repo layout so that
     relative links, `edit_uri`, and the on-GitHub reading experience all keep
     working unchanged.
-2.  Generate an index page for any directory that has markdown children but no
+2.  Render `.github/site/home.md` over the staged root `README.md`. A repo front
+    page and a website landing page want different things, and MkDocs treats
+    README.md as the index, so the swap happens in the stage and the repo's own
+    README is left alone.
+3.  Generate an index page for any directory that has markdown children but no
     `README.md`, so that the ~1,200 directory-style links (`](../foo/)`) resolve
     and every nav section has a landing page.
-3.  Generate the whole `nav` from the staged tree, with human-readable labels
+4.  Generate the whole `nav` from the staged tree, with human-readable labels
     pulled from each page's H1 and cert labels pulled from `docs/certs.json`.
-4.  Append that nav to a copy of `mkdocs.yml` and build from the copy.
+5.  Append that nav to a copy of `mkdocs.yml` and build from the copy.
 
 Nothing here is hand-maintained per page: add a markdown file to the repo and it
 appears in the site nav on the next build.
@@ -28,6 +32,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import os
 import re
@@ -43,6 +48,10 @@ STAGE = REPO / ".site-src"
 # is what `extra_css` in mkdocs.yml points at.
 SITE_CHROME = REPO / ".github" / "site"
 SITE_CHROME_DEST = "assets/site"
+# The site's landing page. Rendered over the staged copy of README.md, so the
+# repo keeps a repo front page and the site gets a website one.
+HOME_TEMPLATE = SITE_CHROME / "home.md"
+COUNTS_SCRIPT = Path(__file__).with_name("check-readme-counts.py")
 BASE_CONFIG = REPO / "mkdocs.yml"
 GENERATED_CONFIG = REPO / "mkdocs.generated.yml"
 CERTS_JSON = REPO / "docs" / "certs.json"
@@ -239,7 +248,10 @@ def stage() -> list[str]:
 
     if SITE_CHROME.is_dir():
         for src in sorted(SITE_CHROME.rglob("*")):
-            if not src.is_file():
+            # Assets only. The chrome directory also holds home.md, which is a
+            # template rendered into the stage root, not a page of its own -
+            # staging it would put an orphan copy at assets/site/home.md.
+            if not src.is_file() or src.suffix.lower() not in STATIC_SUFFIXES:
                 continue
             rel = Path(SITE_CHROME_DEST) / src.relative_to(SITE_CHROME)
             dest = STAGE / rel
@@ -247,6 +259,118 @@ def stage() -> list[str]:
             shutil.copy2(src, dest)
             staged.append(rel.as_posix())
     return staged
+
+
+# --------------------------------------------------------------------------- #
+# Landing page
+# --------------------------------------------------------------------------- #
+
+def load_counts() -> dict[str, int]:
+    """Reuse the README count checker's counting code.
+
+    The landing page advertises the same figures the README does. Counting them
+    a second time here is exactly how the two would come to disagree, so import
+    the one implementation CI already runs against the README.
+    """
+    spec = importlib.util.spec_from_file_location("check_readme_counts", COUNTS_SCRIPT)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.gather()
+
+
+def extract_section(text: str, heading_contains: str, *, bullets: int | None = None) -> str:
+    """Pull the body of one `## ...` section out of a markdown page.
+
+    Used for "What's new": the release notes are maintained in the README and
+    the CHANGELOG, and a third hand-maintained copy on the landing page would be
+    the one nobody remembers to update. The heading itself is dropped - the
+    landing page writes its own, without the README's decorative emoji.
+
+    `bullets` truncates to the first N top-level list items. The README lists
+    every batch; a landing page wants the recent ones and a link to the rest.
+    """
+    pattern = re.compile(
+        rf"^##\s+[^\n]*{re.escape(heading_contains)}[^\n]*$\n(?P<body>.*?)(?=^##\s|\Z)",
+        re.MULTILINE | re.DOTALL,
+    )
+    match = pattern.search(text)
+    if not match:
+        return ""
+    # README sections are separated by horizontal rules; the trailing one
+    # belongs to the boundary, not to the section.
+    body = re.sub(r"\n+---\s*$", "", match.group("body").strip())
+
+    if bullets is None:
+        return body
+    kept: list[str] = []
+    seen = 0
+    for line in body.splitlines():
+        if line.startswith("- "):
+            seen += 1
+            if seen > bullets:
+                break
+        kept.append(line)
+    return "\n".join(kept).strip()
+
+
+def provider_chips() -> str:
+    """One list item per certification provider, busiest first."""
+    data = json.loads(CERTS_JSON.read_text(encoding="utf-8"))
+    providers = sorted(
+        (m for m in data.get("providers", {}).values() if m.get("path")),
+        key=lambda m: (-m.get("count", 0), m.get("name", "")),
+    )
+    return "\n".join(
+        f'- [{m["name"]} <span class="n">{m.get("count", 0)}</span>]({m["path"]})'
+        for m in providers
+    )
+
+
+def write_home_page() -> None:
+    """Render the landing page over the staged copy of README.md.
+
+    MkDocs treats a directory's README.md as its index, so replacing the staged
+    copy swaps the site's home page without touching the repo's README, adding
+    a second page, or changing a single link: nothing in the tree links to the
+    root README anyway.
+
+    Runs before index generation and link rewriting, so the landing page's
+    directory links (`](learn/day-one/)`) are resolved by the same pass that
+    handles every other page.
+    """
+    staged_readme = STAGE / "README.md"
+    readme_text = staged_readme.read_text(encoding="utf-8") if staged_readme.is_file() else ""
+
+    counts = load_counts()
+    tokens: dict[str, object] = {
+        "certifications": counts["certifications"],
+        "providers": counts["providers"],
+        "study_tracks": counts["study_tracks"],
+        "concept_pages": counts["concept_pages"],
+        "topic_indexes": counts["topic_indexes"],
+        "service_comparisons": counts["service_comparisons"],
+        "cli_cheat_sheets": counts["cli_cheat_sheets"],
+        "architecture_patterns": counts["architecture_patterns"],
+        "hands_on_projects": counts["hands_on_projects"],
+        "roadmaps": counts["roadmaps"],
+        "interview_prep": counts["interview_prep"],
+        "words": f"{counts['words'] / 1_000_000:.1f}M",
+        # A floor, like the README's, so removing a handful of links never makes
+        # the page overstate itself.
+        "doc_links": f"{counts['doc_links'] // 1000 * 1000:,}+",
+        "provider_chips": provider_chips(),
+        "whats_new": extract_section(readme_text, "What's new", bullets=3),
+    }
+
+    text = HOME_TEMPLATE.read_text(encoding="utf-8")
+    for key, value in tokens.items():
+        text = text.replace("{{" + key + "}}", str(value))
+
+    unfilled = sorted(set(re.findall(r"\{\{(\w+)\}\}", text)))
+    if unfilled:
+        raise KeyError(f"home.md uses tokens nothing fills: {', '.join(unfilled)}")
+
+    staged_readme.write_text(text, encoding="utf-8")
 
 
 def generate_missing_indexes() -> list[str]:
@@ -665,6 +789,12 @@ def main() -> int:
     staged = stage()
     md = sum(1 for p in staged if p.endswith(".md"))
     print(f"  staged {len(staged)} files ({md} markdown, {len(staged) - md} static)")
+
+    if not HOME_TEMPLATE.is_file():
+        print(f"ERROR: missing landing page template {HOME_TEMPLATE.relative_to(REPO)}", file=sys.stderr)
+        return 1
+    write_home_page()
+    print(f"  rendered the landing page from {HOME_TEMPLATE.relative_to(REPO)}")
 
     created = generate_missing_indexes()
     print(f"  generated {len(created)} directory index pages")

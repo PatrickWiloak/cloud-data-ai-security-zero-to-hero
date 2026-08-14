@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate navigation from docs/certs.json.
 
-Two outputs, both derived from the cert index so their counts cannot drift:
+Three outputs, all derived from the cert index so their counts cannot drift:
 
   1. exams/<provider>/README.md - a per-provider index table. Six providers already
      have hand-written READMEs with real editorial content (provider history, full
@@ -10,8 +10,18 @@ Two outputs, both derived from the cert index so their counts cannot drift:
 
   2. The provider table in STUDY-HUB.md, between the same markers.
 
+  3. The "Browse Certifications" table in README.md, likewise.
+
 Counts, codes, levels, and statuses come from the index. The one-line "Highlights"
-blurb per provider is editorial and stays curated below.
+blurb per provider is editorial and stays curated below - one string, used by both
+tables, so the two cannot describe the same provider differently.
+
+The README table was hand-written until 2026-08-14, and by then had gone stale in
+8 of 22 rows with 5 providers missing entirely: Kubernetes/CNCF read 7 against 12
+and Azure 23 against 26, five days after the Tier 1 batch landed. Generating it is
+what stops that recurring. `main()` also refuses to run if a provider has no
+curated highlight or emoji, so a new provider fails CI rather than appearing as a
+blank row.
 
 Run:    python3 .github/scripts/build-provider-indexes.py
         python3 .github/scripts/build-provider-indexes.py --check   # CI: fail if stale
@@ -24,6 +34,7 @@ import sys
 
 INDEX = "docs/certs.json"
 HUB = "STUDY-HUB.md"
+README = "README.md"
 BEGIN = "<!-- BEGIN GENERATED: {} - edit .github/scripts/build-provider-indexes.py, not this block -->"
 END = "<!-- END GENERATED: {} -->"
 
@@ -40,12 +51,14 @@ STATUS_LABEL = {
     "anticipated": "Anticipated",
 }
 
-# Curated, not generated. One line per provider, shown in the STUDY-HUB table.
+# Curated, not generated. One line per provider, shown in both provider tables.
+# A sample of what the provider covers, not an exhaustive list - the Certs column
+# carries the total, and both tables say so underneath.
 PROVIDER_HIGHLIGHTS = {
-    "aws": "CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, Quantum (QPC-C01); 4 retired specialties retained",
-    "azure": "AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-200, PL-100/200, MS-900",
+    "aws": "CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, GenAI Developer (AIP-C01), Quantum (QPC-C01); 4 retired specialties retained",
+    "azure": "AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-100/200/300/401, PL-100/200/300, MS-900",
     "gcp": "Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI",
-    "kubernetes": "KCNA, KCSA, CKA, CKAD, CKS, PCA (Prometheus), ICA (Istio)",
+    "kubernetes": "KCNA, KCSA, CKA, CKAD, CKS, plus Argo (CAPA), Cilium (CCA), GitOps (CGOA), Istio (ICA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA)",
     "nvidia": "AI Infra & Ops, GenAI/LLM, Multimodal, Agentic AI, Networking, OpenUSD",
     "hashicorp": "Terraform Assoc + Pro, Vault, Consul, Packer, Boundary, Nomad",
     "databricks": "Data Engineer (A/P), ML (A/P), GenAI Engineer, Lakehouse Admin",
@@ -57,19 +70,43 @@ PROVIDER_HIGHLIGHTS = {
     "confluent": "Certified Developer, Certified Administrator",
     "mongodb": "Associate Developer, DBA, Atlas Administrator",
     "finops": "Practitioner, Engineer, Analyst, Professional",
-    "comptia": "Cloud+ (CV0-004), Security+ (SY0-701), Network+, CySA+",
-    "isc2": "CISSP, CCSP",
+    "comptia": "Cloud+ (CV0-004), Security+ (SY0-701), Network+ (N10-009), CySA+ (CS0-003)",
+    "isc2": "CISSP, CCSP, CC",
     "isaca": "CISA, CISM",
     "cloud-security-alliance": "CCSK v5",
     "offensive-security": "OSCP (PEN-200)",
     "palo-alto-networks": "PCNSA",
     "linux-foundation": "LFCS, LFCA",
-    "oracle": "Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc",
+    "oracle": "OCI Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc, AI Foundations, GenAI Professional",
     "ibm": "Advocate, Developer, Solution Architect, Security, SRE",
     "servicenow": "Certified System Administrator",
     "vmware": "VCP-DCV (2V0-21.23)",
     "anthropic": "Associate (CCAO-F), Developer (CCDV-F), Architect Foundations (CCAR-F) + Professional (CCAR-P)",
 }
+
+# Also curated. The README table leads each row with an icon; the rest of that
+# file does the same, so a generated table without one would read as a foreign
+# object on the page.
+PROVIDER_EMOJI = {
+    "aws": "☁️", "azure": "☁️", "gcp": "☁️", "kubernetes": "☸️", "nvidia": "🟢",
+    "hashicorp": "🔧", "databricks": "🧱", "snowflake": "❄️", "github": "🐙",
+    "redhat": "🎩", "cisco": "🌐", "salesforce": "☁️", "confluent": "📊",
+    "mongodb": "🍃", "finops": "💰", "comptia": "🔒", "isc2": "🛡️", "isaca": "🛡️",
+    "cloud-security-alliance": "☁️", "offensive-security": "🎯",
+    "palo-alto-networks": "🔥", "linux-foundation": "🐧", "oracle": "☁️",
+    "ibm": "☁️", "servicenow": "🧰", "vmware": "🖥️", "anthropic": "🤖",
+}
+
+# Order both provider tables the same way: cloud first, then platforms, then the
+# security and vendor certifications. A provider missing from this list sorts to
+# the end alphabetically rather than disappearing.
+PROVIDER_ORDER = [
+    "aws", "azure", "gcp", "kubernetes", "nvidia", "anthropic", "hashicorp",
+    "databricks", "snowflake", "github", "redhat", "cisco", "salesforce",
+    "confluent", "mongodb", "finops", "comptia", "isc2", "isaca",
+    "cloud-security-alliance", "offensive-security", "palo-alto-networks",
+    "linux-foundation", "oracle", "ibm", "servicenow", "vmware",
+]
 
 # Headings the six hand-written READMEs already use for their repo-guide section.
 REPO_SECTION = re.compile(
@@ -178,21 +215,45 @@ def build_provider_readme(provider, provider_name, certs, existing):
     return existing.rstrip() + "\n\n## Study guides in this repo\n\n" + block + "\n"
 
 
+def provider_order(providers):
+    ordered = [p for p in PROVIDER_ORDER if p in providers]
+    return ordered + sorted(p for p in providers if p not in ordered)
+
+
+def build_readme_table(index):
+    """The compact provider table on the repo's front page.
+
+    Shorter than the STUDY-HUB one on purpose: this is a directory, not the
+    reference. The provider name is the link, so there is no separate Browse
+    column.
+    """
+    providers = index["providers"]
+    totals = index["totals"]
+    rows = ["| Provider | Certs | Highlights |", "|----------|------:|------------|"]
+    for provider in provider_order(providers):
+        entry = providers[provider]
+        rows.append(
+            f"| {PROVIDER_EMOJI[provider]} [{entry['name']}](./{entry['path']}) "
+            f"| {entry['count']} | {PROVIDER_HIGHLIGHTS[provider]} |"
+        )
+    rows.append(
+        f"| **Total** | **{totals['certifications']}** "
+        f"| across {totals['certification_providers']} providers, plus "
+        f"{totals['study_tracks']} self-directed study tracks |"
+    )
+    return "\n".join(rows) + (
+        "\n\nHighlights are a sample, not the full list - the Certs column is the "
+        "total. Open a provider for everything it covers."
+    )
+
+
 def build_hub_table(index):
     providers = index["providers"]
     certs_by_provider = {}
     for cert in index["certs"]:
         certs_by_provider.setdefault(cert["provider"], []).append(cert)
 
-    ordered = [p for p in [
-        "aws", "azure", "gcp", "kubernetes", "nvidia", "anthropic", "hashicorp",
-        "databricks", "snowflake", "github", "redhat", "cisco", "salesforce",
-        "confluent", "mongodb", "finops", "comptia", "isc2", "isaca",
-        "cloud-security-alliance", "offensive-security", "palo-alto-networks",
-        "linux-foundation", "oracle", "ibm", "servicenow", "vmware",
-    ] if p in providers]
-    missing = [p for p in providers if p not in ordered]
-    ordered += sorted(missing)
+    ordered = provider_order(providers)
 
     rows = ["| Provider | Certs | Highlights | Browse |", "|----------|------:|------------|--------|"]
     for provider in ordered:
@@ -236,6 +297,17 @@ def main():
         return 1
     index = json.load(open(INDEX, encoding="utf-8"))
 
+    # A provider with no curated highlight or icon would render as a blank cell
+    # in both tables. Fail here instead: this is the check that would have caught
+    # ISACA, Offensive Security, Palo Alto Networks, ServiceNow and VMware
+    # missing from the README table for five days.
+    for name, mapping in (("PROVIDER_HIGHLIGHTS", PROVIDER_HIGHLIGHTS), ("PROVIDER_EMOJI", PROVIDER_EMOJI)):
+        missing = sorted(p for p in index["providers"] if p not in mapping)
+        if missing:
+            print(f"{name} has no entry for: {', '.join(missing)}")
+            print(f"Add one line per provider in {os.path.relpath(__file__)}, then re-run.")
+            return 1
+
     by_provider = {}
     for cert in index["certs"]:
         by_provider.setdefault(cert["provider"], []).append(cert)
@@ -255,20 +327,24 @@ def main():
                 fh.write(rendered)
             written += 1
 
-    hub = open(HUB, encoding="utf-8").read()
-    hub_body = build_hub_table(index)
-    spliced = splice(hub, "provider-table", hub_body)
-    if spliced is None:
-        print(f"{HUB} has no 'provider-table' generated markers. Add them around the "
-              f"provider table so it can be regenerated.")
-        return 1
-    if spliced != hub:
-        if check:
-            stale.append(HUB)
-        else:
-            with open(HUB, "w", encoding="utf-8") as fh:
-                fh.write(spliced)
-            written += 1
+    tables = [
+        (HUB, "provider-table", build_hub_table(index)),
+        (README, "readme-provider-table", build_readme_table(index)),
+    ]
+    for path, marker, body in tables:
+        current = open(path, encoding="utf-8").read()
+        spliced = splice(current, marker, body)
+        if spliced is None:
+            print(f"{path} has no '{marker}' generated markers. Add them around the "
+                  f"provider table so it can be regenerated.")
+            return 1
+        if spliced != current:
+            if check:
+                stale.append(path)
+            else:
+                with open(path, "w", encoding="utf-8") as fh:
+                    fh.write(spliced)
+                written += 1
 
     if check:
         if stale:
@@ -278,10 +354,12 @@ def main():
             print("\nRun: python3 .github/scripts/build-certs-index.py && "
                   "python3 .github/scripts/build-provider-indexes.py")
             return 1
-        print(f"Navigation is up to date ({len(by_provider)} provider indexes + {HUB}).")
+        print(f"Navigation is up to date ({len(by_provider)} provider indexes, "
+              f"{HUB} and {README} tables).")
         return 0
 
-    print(f"Wrote {written} file(s): {len(by_provider)} provider indexes checked, {HUB} table refreshed.")
+    print(f"Wrote {written} file(s): {len(by_provider)} provider indexes checked, "
+          f"{HUB} and {README} tables refreshed.")
     return 0
 
 

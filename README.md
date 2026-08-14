@@ -96,6 +96,7 @@ Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certi
 
 See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
+- **2026-08-14** - The site now opens on a landing page of its own rather than on the repo README, and every counted claim in the README is under CI. The per-provider table was stale in 8 of 22 rows and missing 5 providers entirely, five days after the Tier 1 batch added them; the 17 numbers in the statistics block had nothing watching them either. Both are checked by `check-readme-counts.py` now.
 - **2026-08-14** - The whole repo is now a searchable website: [patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/). Full-text search across 3.0M words, dark mode, mobile nav, generated from these same markdown files. The strict build also caught and fixed an unclosed code fence that was swallowing part of a GCP note, plus 14 broken heading anchors.
 - **2026-08-11** - Anthropic's official Claude certification program (launched March-July 2026) fully covered: new Claude Certified Associate - Foundations (CCAO-F) guide, existing guides retargeted to the real CCDV-F, CCAR-F, and CCAR-P exams with official domain blueprints, pricing, and Pearson VUE logistics. Anthropic promoted from study-track pseudo-provider to the 27th certification provider; repo now at 148 certs.
 - **2026-07-29** - Gap-analysis pass: notes drafted for the last 10 outline-stage certs (CySA+, Network+, CCNP ENCOR, CISA, CISM, OSCP, PCNSA, Salesforce PD2, ServiceNow CSA, VMware VCP-DCV); generated cert index (`docs/certs.json`) driving the provider tables and 27 provider index pages; per-cert Anki flashcards; lab-to-cert map; freshness rotation; fixed 383 broken internal links and made internal link-checking a blocking CI gate.
@@ -129,30 +130,42 @@ A complete cloud + AI learning resource. Whether you're starting fresh, building
 
 Full per-provider breakdown lives in **[STUDY-HUB.md](./STUDY-HUB.md)**. Quick links:
 
-| Provider | Count | Browse |
-|----------|------:|--------|
-| ☁️ [AWS](./exams/aws/) | 17 | Foundational, Associate, Professional, Specialty, GenAI |
-| ☁️ [Azure](./exams/azure/) | 23 | Fundamentals, Associate, Expert, Specialty, SecOps |
-| ☁️ [Google Cloud](./exams/gcp/) | 12 | Associate, Professional, GenAI |
-| ☸️ [Kubernetes/CNCF](./exams/kubernetes/) | 7 | KCNA, KCSA, CKA, CKAD, CKS, PCA, ICA |
-| 🟢 [NVIDIA](./exams/nvidia/) | 10 | Associate + Professional (GenAI, AI Infra, Agentic, Multimodal) |
-| 🔧 [HashiCorp](./exams/hashicorp/) | 7 | Terraform, Vault, Consul, Packer, Boundary, Nomad |
-| 🧱 [Databricks](./exams/databricks/) | 6 | Data Engineer, ML, GenAI, Admin |
-| ❄️ [Snowflake](./exams/snowflake/) | 4 | SnowPro Core + 3 Advanced |
-| 🐙 [GitHub](./exams/github/) | 5 | Foundations, Actions, Admin, Adv Security, Copilot |
-| 🎩 [Red Hat](./exams/redhat/) | 2 | RHCSA, OpenShift Administrator |
-| 🌐 [Cisco](./exams/cisco/) | 1 | CCNA 200-301 |
-| ☁️ [Salesforce](./exams/salesforce/) | 2 | Administrator, Platform Developer I |
-| 📊 [Confluent/Kafka](./exams/confluent/) | 2 | Developer, Administrator |
-| 🍃 [MongoDB](./exams/mongodb/) | 3 | Developer, DBA, Atlas Admin |
-| 💰 [FinOps](./exams/finops/) | 4 | Practitioner, Engineer, Analyst, Professional |
-| 🔒 [CompTIA](./exams/comptia/) | 2 | Cloud+, Security+ |
-| 🛡️ [ISC2](./exams/isc2/) | 2 | CISSP, CCSP |
+<!-- BEGIN GENERATED: readme-provider-table - edit .github/scripts/build-provider-indexes.py, not this block -->
+
+| Provider | Certs | Highlights |
+|----------|------:|------------|
+| ☁️ [AWS](./exams/aws/) | 18 | CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, GenAI Developer (AIP-C01), Quantum (QPC-C01); 4 retired specialties retained |
+| ☁️ [Azure](./exams/azure/) | 26 | AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-100/200/300/401, PL-100/200/300, MS-900 |
+| ☁️ [GCP](./exams/gcp/) | 12 | Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI |
+| ☸️ [Kubernetes/CNCF](./exams/kubernetes/) | 12 | KCNA, KCSA, CKA, CKAD, CKS, plus Argo (CAPA), Cilium (CCA), GitOps (CGOA), Istio (ICA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA) |
+| 🟢 [NVIDIA](./exams/nvidia/) | 10 | AI Infra & Ops, GenAI/LLM, Multimodal, Agentic AI, Networking, OpenUSD |
+| 🤖 [Anthropic Claude](./exams/anthropic/) | 4 | Associate (CCAO-F), Developer (CCDV-F), Architect Foundations (CCAR-F) + Professional (CCAR-P) |
+| 🔧 [HashiCorp](./exams/hashicorp/) | 7 | Terraform Assoc + Pro, Vault, Consul, Packer, Boundary, Nomad |
+| 🧱 [Databricks](./exams/databricks/) | 6 | Data Engineer (A/P), ML (A/P), GenAI Engineer, Lakehouse Admin |
+| ❄️ [Snowflake](./exams/snowflake/) | 4 | SnowPro Core + 3 Advanced (Architect, Data Eng, Admin) |
+| 🐙 [GitHub](./exams/github/) | 5 | Foundations, Actions, Administration, Advanced Security, Copilot |
+| 🎩 [Red Hat](./exams/redhat/) | 2 | RHCSA (EX200), OpenShift Administrator (EX280) |
+| 🌐 [Cisco](./exams/cisco/) | 2 | CCNA (200-301), CCNP Enterprise ENCOR (350-401) |
+| ☁️ [Salesforce](./exams/salesforce/) | 3 | Administrator, Platform Developer I, Platform Developer II |
+| 📊 [Confluent/Kafka](./exams/confluent/) | 2 | Certified Developer, Certified Administrator |
+| 🍃 [MongoDB](./exams/mongodb/) | 3 | Associate Developer, DBA, Atlas Administrator |
+| 💰 [FinOps Foundation](./exams/finops/) | 4 | Practitioner, Engineer, Analyst, Professional |
+| 🔒 [CompTIA](./exams/comptia/) | 4 | Cloud+ (CV0-004), Security+ (SY0-701), Network+ (N10-009), CySA+ (CS0-003) |
+| 🛡️ [ISC2](./exams/isc2/) | 3 | CISSP, CCSP, CC |
+| 🛡️ [ISACA](./exams/isaca/) | 2 | CISA, CISM |
 | ☁️ [Cloud Security Alliance](./exams/cloud-security-alliance/) | 1 | CCSK v5 |
+| 🎯 [Offensive Security](./exams/offensive-security/) | 1 | OSCP (PEN-200) |
+| 🔥 [Palo Alto Networks](./exams/palo-alto-networks/) | 1 | PCNSA |
 | 🐧 [Linux Foundation](./exams/linux-foundation/) | 2 | LFCS, LFCA |
-| ☁️ [Oracle Cloud](./exams/oracle/) | 5 | Foundations, Architect, Developer, Operations |
-| ☁️ [IBM Cloud](./exams/ibm/) | 5 | Advocate, Developer, Architect, Security, SRE |
-| 🤖 [Anthropic Claude](./exams/anthropic/) | 4 | Associate, Developer, Architect Foundations + Professional |
+| ☁️ [Oracle Cloud (OCI)](./exams/oracle/) | 7 | OCI Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc, AI Foundations, GenAI Professional |
+| ☁️ [IBM Cloud](./exams/ibm/) | 5 | Advocate, Developer, Solution Architect, Security, SRE |
+| 🧰 [ServiceNow](./exams/servicenow/) | 1 | Certified System Administrator |
+| 🖥️ [VMware](./exams/vmware/) | 1 | VCP-DCV (2V0-21.23) |
+| **Total** | **148** | across 27 providers, plus 3 self-directed study tracks |
+
+Highlights are a sample, not the full list - the Certs column is the total. Open a provider for everything it covers.
+
+<!-- END GENERATED: readme-provider-table -->
 
 **[→ Full per-provider breakdown in STUDY-HUB.md](./STUDY-HUB.md#-certifications-by-provider)**
 
@@ -276,15 +289,15 @@ Career-focused learning paths:
 - **Certifications:** 148 (plus 3 self-directed study tracks)
 - **Documentation links:** 12,000+
 - **Providers:** 27
-- **Concept pages:** 37 (cloud + AI primitives)
+- **Concept pages:** 46 (cloud + AI primitives)
 - **Service comparisons:** 16 (12 cloud + 4 AI)
 - **CLI cheat sheets:** 9
 - **Architecture patterns:** 17
 - **Hands-on projects:** 15 (10 cloud + 5 AI)
-- **Topic indexes:** 8 (cross-pillar)
+- **Topic indexes:** 13 (cross-pillar)
 - **Career roadmaps:** 11
 - **Interview prep guides:** 6
-- **Compliance guides:** 5
+- **Compliance guides:** 8
 - **Migration guides:** 5
 
 ---
@@ -297,7 +310,7 @@ cloud-data-ai-security-zero-to-hero/
 ├── STUDY-HUB.md (full per-provider navigation)
 ├── CHANGELOG.md
 ├── learn/                # plain-English learning content
-│   ├── concepts/         # 37 bite-size concept pages
+│   ├── concepts/         # 46 bite-size concept pages
 │   ├── day-one/          # absolute-beginner on-ramp
 │   ├── ai-from-scratch.md
 │   ├── cloud-from-scratch.md

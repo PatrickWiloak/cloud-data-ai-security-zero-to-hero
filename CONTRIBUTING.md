@@ -202,10 +202,11 @@ python3 -m venv .venv-docs
 
 A full build takes about two minutes and writes to `site/`. Three paths are generated and gitignored - `.site-src/`, `mkdocs.generated.yml`, and `site/` - so never edit them by hand.
 
-Two things worth knowing when adding content:
+Three things worth knowing when adding content:
 
 - **New pages appear in the nav automatically**, labelled with their H1. A brand-new *top-level directory* is the exception: add it to the `TABS` table in `build-site.py`, or the build fails with the list of pages it could not reach.
 - **Anchor links are checked.** The site uses GitHub's exact heading-slug algorithm, so `#section-name` behaves the same in both places. If the build reports a missing anchor, the link is genuinely broken on GitHub too.
+- **The site's home page is `.github/site/home.md`**, not `README.md` - a repo front page and a website landing page want different things. Editing the README changes GitHub's front page, not the site's. The exception is the "What's new" list, which the build lifts from the README so it only has to be written once.
 
 ## Submitting a change
 

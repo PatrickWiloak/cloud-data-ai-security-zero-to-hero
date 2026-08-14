@@ -6,6 +6,31 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-08-14] - The site gets a landing page, and the README's provider table comes back under CI
+
+The published site opened on the repo's `README.md`, because MkDocs treats a directory's README as its index. That is the right front page for GitHub and the wrong one for a website: a visitor arrived at a banner image, five social badges, a count-badge row, a repository-structure tree, and "star this repo" before reaching anything they could read.
+
+### Added
+
+- **`.github/site/home.md`** - a site-only landing page: a hero with three entry points, a counts strip, the four pillars as cards, a two-column "jump to what you need" list, all 27 providers as chips, and the three most recent release notes. `build-site.py` renders it over the staged copy of `README.md`, so the repo's README is untouched, no page is duplicated, and no link changes.
+- **Landing-page styling in `.github/site/extra.css`** - scoped to classes that appear only on that page.
+- **The README's "Browse Certifications" table is now generated**, by `build-provider-indexes.py`, from `docs/certs.json` and between markers - the same treatment the `STUDY-HUB.md` table already had. The "Highlights" blurb is a single curated string per provider, shared by both tables so they cannot describe a provider differently, and the script refuses to run when a provider has no highlight or icon. A new provider now fails CI rather than quietly missing a row.
+- **CLAIMS coverage for the "Repository Statistics" block** and the repository-structure comments - 17 numbers that nothing checked.
+
+### Fixed
+
+- **The README's per-provider table was stale in 8 of 22 rows and missing 5 providers entirely.** Kubernetes/CNCF read 7 against 12, Azure 23 against 26, CompTIA 2 against 4, Oracle 5 against 7, and AWS, Cisco, Salesforce and ISC2 were each one or two low. ISACA, Offensive Security, Palo Alto Networks, ServiceNow and VMware had no row at all, five days after the Tier 1 batch added them. The badge counts were right the whole time, because they are generated - the table was not. It is now.
+- **Four curated "Highlights" lines were describing half a provider**, and were feeding `STUDY-HUB.md` while they did: Kubernetes/CNCF listed 7 of 12 exams, ISC2 omitted CC, Oracle omitted both OCI AI certs, and AWS omitted the GenAI Developer professional. A count that changes without its description changing is the failure mode a generated count column cannot catch on its own.
+- **`Concept pages: 37`** against 46, **`Topic indexes: 8`** against 13, and **`Compliance guides: 5`** against 8, in the statistics block.
+
+### Notes
+
+- No number is typed into `home.md`. Each is a token filled from `certs.json` and from `check-readme-counts.py`'s `gather()`, the same counting code CI runs against the README, so the two pages cannot disagree. The "What's new" bullets are extracted from the README at build time for the same reason.
+- Every counted claim in the README now has exactly one owner: `build-certs-index.py` for the index, `build-provider-indexes.py` for the two provider tables, `check-readme-counts.py` for everything else. The provider-table check that briefly lived in `check-readme-counts.py` was removed when the table became generated - two scripts able to rewrite the same rows is a way to make one of them wrong.
+- Editing `README.md` no longer changes the site's home page. See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md#the-home-page-is-not-the-readme).
+
+---
+
 ## [2026-08-14] - Published as a searchable website on GitHub Pages
 
 The repo's 3.0M words were only navigable through GitHub's file listing, with no search. Every page is now also published as a MkDocs Material site at **[patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)** with full-text search, dark mode, and mobile navigation.

@@ -34,8 +34,8 @@ theme:
   language: en
   # Overrides one Material partial so that toc.integrate also works on
   # section-index pages. See .github/site-overrides/partials/nav-item.html and
-  # docs/ARCHITECTURE.md. Kept out of .github/site/, which build-site.py copies wholesale
-  # into the published site.
+  # docs/ARCHITECTURE.md. Kept out of .github/site/, which holds site chrome
+  # (the stylesheet and the landing-page template) rather than templates.
   custom_dir: .github/site-overrides
   icon:
     repo: fontawesome/brands/github

@@ -122,6 +122,40 @@ link checker:
       and counted the `.site-src/` staged copy a local site build leaves behind,
       reporting 6.1M words against a real 3.0M. It now counts via `git ls-files`,
       so no build artifact can inflate a total.
+- [x] ~~The site's home page was the repo README~~ ✅ `.github/site/home.md` is
+      now rendered over the staged `README.md` by `build-site.py`: hero with
+      three entry points, counts strip, four pillars as cards, a two-column jump
+      list, 27 provider chips, and the three most recent release notes. GitHub
+      keeps its repo front page; the site gets a landing page. No number is typed
+      into it - every figure is a token filled from `certs.json` and
+      `check-readme-counts.py`, and the release notes are extracted from the
+      README, so neither page can drift from the other.
+- [x] ~~The README's per-provider table was stale in 8 of 22 rows and missing 5
+      providers~~ ✅ Kubernetes/CNCF read 7 against 12, Azure 23 against 26,
+      CompTIA 2 against 4, Oracle 5 against 7; ISACA, Offensive Security, Palo
+      Alto Networks, ServiceNow and VMware had no row at all, five days after the
+      Tier 1 batch added them. The table is now **generated** by
+      `build-provider-indexes.py` between markers, like the `STUDY-HUB.md` one,
+      so counts and the row set come from `certs.json`.
+- [x] ~~The table's "Highlights" column was hand-written and unchecked~~ ✅ It is
+      one curated string per provider in `PROVIDER_HIGHLIGHTS`, shared by both
+      tables, and the generator refuses to run if a provider has no highlight or
+      no `PROVIDER_EMOJI` icon - so a new provider fails CI instead of rendering
+      a blank row. Four lines were describing half a provider and were feeding
+      STUDY-HUB while they did: Kubernetes/CNCF listed 7 of 12, ISC2 omitted CC,
+      Oracle omitted both OCI AI certs, AWS omitted GenAI Developer. All fixed,
+      and both tables now say plainly that Highlights is a sample and the Certs
+      column is the total.
+- [x] ~~Two scripts could rewrite the README's provider rows~~ ✅ The stopgap
+      provider-table check in `check-readme-counts.py` was removed once the table
+      became generated. Its `--fix` would have corrected a count *inside* a
+      generated block, leaving the generator reporting the file stale. One table,
+      one owner.
+- [x] ~~The "Repository Statistics" block was outside CLAIMS~~ ✅ It still read
+      37 concept pages against 46, 8 topic indexes against 13, and 5 compliance
+      guides against 8 - the same drift the checker was written to stop, in the
+      one section that is nothing but counts. 17 numbers added to `CLAIMS`,
+      including the three restated in the repository-structure block.
 
 ### Known follow-ups
 
@@ -135,6 +169,12 @@ link checker:
 - No CI check for unbalanced code fences. The site build catches them only
   indirectly, as missing anchors on the affected page. A direct validator would
   name the file and line.
+- `PROVIDER_HIGHLIGHTS` is the last hand-written thing in either provider table.
+  Nothing can check that a sample is a *good* sample, only that it exists - so a
+  provider that gains a cert can still keep a blurb that does not mention it. The
+  blast radius is now one string feeding both tables rather than two that drift
+  apart, and both tables state that Highlights is a sample. Worth a look whenever
+  a provider's count changes.
 
 ---
 

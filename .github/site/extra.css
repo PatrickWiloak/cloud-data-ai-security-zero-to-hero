@@ -271,3 +271,164 @@
 .md-typeset h1 + p img[src*="img.shields.io"] {
   vertical-align: middle;
 }
+
+/* ------------------------------------------------------------------ */
+/* Landing page                                                        */
+/* ------------------------------------------------------------------ */
+
+/* Styles for the site-only home page rendered by build-site.py from
+   .github/site/home.md. Every rule is scoped to a class that only appears on
+   that page, so nothing here reaches the 1,900 content pages. */
+
+.md-typeset .home-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  max-width: 20em;
+  margin: 0.4rem 0 0.6rem;
+}
+
+.md-typeset .home-intro {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 40rem;
+  margin-bottom: 0.5rem;
+}
+
+.md-typeset .home-sub {
+  color: var(--md-default-fg-color--light);
+  max-width: 40rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Material's buttons are outlined by default. The first one carries the primary
+   action, so invert it; the rest stay quiet. */
+.md-typeset .md-button {
+  margin: 0 0.4rem 0.5rem 0;
+  font-weight: 600;
+}
+
+/* The counts strip. Written as a markdown list so the numbers stay editable in
+   home.md; the list markers and stacking are undone here. */
+.md-typeset .stat-strip ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2.2rem;
+  list-style: none;
+  margin: 1.6rem 0 2rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .stat-strip li {
+  display: flex;
+  flex-direction: column;
+  margin: 0.3rem 0;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .stat-strip li strong {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-transform: none;
+  color: var(--md-default-fg-color);
+}
+
+/* Material ships .grid.cards; square off the corners to match the rest of the
+   monochrome chrome and make the whole card feel clickable. */
+.md-typeset .grid.cards > ul > li {
+  border-radius: 0.1rem;
+  border-color: var(--md-default-fg-color--lightest);
+  padding: 1rem 1.1rem;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--md-default-fg-color--lighter);
+  box-shadow: none;
+}
+
+.md-typeset .grid.cards > ul > li > hr {
+  margin: 0.6rem 0;
+}
+
+/* Two columns of one-line links. CSS columns rather than grid so the list stays
+   a plain markdown list in the source. */
+.md-typeset .home-links ul {
+  columns: 2;
+  column-gap: 2.5rem;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.md-typeset .home-links li {
+  break-inside: avoid;
+  margin-bottom: 0.45rem;
+  font-size: 0.74rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .home-links li a {
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+
+/* Provider chips: 27 targets that have to stay scannable without turning into a
+   wall of table rows. */
+.md-typeset .provider-grid ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.md-typeset .provider-grid li {
+  margin: 0;
+}
+
+.md-typeset .provider-grid a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.1rem;
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
+.md-typeset .provider-grid a:hover {
+  border-color: var(--md-default-fg-color--lighter);
+  background-color: var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .provider-grid .n {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--md-default-fg-color--light);
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .home-title {
+    font-size: 1.7rem;
+  }
+
+  .md-typeset .home-links ul {
+    columns: 1;
+  }
+
+  .md-typeset .stat-strip ul {
+    gap: 0 1.4rem;
+  }
+}

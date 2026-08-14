@@ -20,6 +20,16 @@ import re
 import sys
 
 SKIP_DIRS = {".git", "node_modules", ".github/scripts/__pycache__"}
+
+# Build output. Present after a local site build, absent in CI, and a complete
+# second copy of the tree - so walking it double-counts every link and reports a
+# different total depending on whether someone has run the site build.
+SKIP_PATHS = {os.path.join(".", ".site-src"), os.path.join(".", "site")}
+
+# The site's landing page template. Its links are written relative to the stage
+# root, where the build renders it as README.md, not relative to the directory it
+# is stored in. The `--strict` site build validates them there.
+SKIP_FILES = {os.path.join(".", ".github", "site", "home.md")}
 EXTERNAL = re.compile(r"^(https?:|mailto:|tel:|#)")
 LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 FENCE = re.compile(r"^\s*(```|~~~)")
@@ -49,11 +59,16 @@ def main():
     broken = []
     checked = 0
     for root, dirs, files in os.walk("."):
-        dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
+        dirs[:] = [
+            d for d in dirs
+            if d not in SKIP_DIRS and os.path.join(root, d) not in SKIP_PATHS
+        ]
         for name in sorted(files):
             if not name.endswith(".md"):
                 continue
             path = os.path.join(root, name)
+            if path in SKIP_FILES:
+                continue
             with open(path, encoding="utf-8", errors="ignore") as fh:
                 lines = fh.readlines()
             for lineno, text in strip_code(lines):

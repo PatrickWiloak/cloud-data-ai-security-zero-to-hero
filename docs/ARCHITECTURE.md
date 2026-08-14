@@ -167,20 +167,23 @@ tree being restructured for MkDocs. There is no second copy of any page.
 
 ### How a build works
 
-`.github/scripts/build-site.py` does four things, in order:
+`.github/scripts/build-site.py` does five things, in order:
 
 1. **Stage.** Copies the content tree into `.site-src/`, mirroring the repo
    layout so relative links and `edit_uri` keep working. `.templates/` is
    renamed to `provider-resources/` on the way in.
-2. **Fill gaps.** Generates a landing page for any directory that holds markdown
+2. **Render the landing page.** `.github/site/home.md` is written over the staged
+   root `README.md`, which MkDocs serves as the site index. See
+   [The home page is not the README](#the-home-page-is-not-the-readme).
+3. **Fill gaps.** Generates a landing page for any directory that holds markdown
    but no `README.md`. The repo uses directory-style links (`](../notes/)`)
    about 1,200 times; GitHub renders those as a directory listing, and the site
    needs a real page at that URL.
-3. **Rewrite links.** Fence-aware pass that points directory links at the
+4. **Rewrite links.** Fence-aware pass that points directory links at the
    directory's `README.md`, redirects the renamed `.templates/` paths, and sends
    links aimed at repo tooling (`.github/...`) to GitHub rather than dropping
    them.
-4. **Generate the nav.** Built from the staged tree, with section labels from
+5. **Generate the nav.** Built from the staged tree, with section labels from
    `docs/certs.json` and page labels from each page's H1. Cert levels sort by
    exam progression (foundational, associate, professional, specialty, expert)
    and the files inside a cert dir sort in study order.
@@ -196,11 +199,39 @@ no `nav` key.
 | `mkdocs.yml` | Yes | Hand-maintained. Theme, extensions, validation. No `nav`. |
 | `.github/scripts/build-site.py` | Yes | The generator. Edit this, not the output. |
 | `.github/site/extra.css` | Yes | Site-only styling. Kept out of `assets/`, which is the diagram store. |
-| `.github/site-overrides/` | Yes | Material template overrides. Separate from `.github/site/`, which is copied wholesale into the published site. |
+| `.github/site/home.md` | Yes | The site's landing page. Rendered over the staged `README.md`; never published as a page of its own. |
+| `.github/site-overrides/` | Yes | Material template overrides. Separate from `.github/site/`, whose assets are copied into the published site at `assets/site/`. |
 | `requirements-docs.txt` | Yes | Fully pinned, including transitive packages that affect rendering. |
 | `.site-src/` | No | Staged markdown tree. |
 | `mkdocs.generated.yml` | No | `mkdocs.yml` + generated nav. |
 | `site/` | No | Rendered HTML, ~240 MB across ~2,000 pages. |
+
+### The home page is not the README
+
+`README.md` and the site's home page have different jobs, and for the first day
+of the site's life they were the same file. A repo front page opens with a
+banner image, five social badges, a count-badge row, a repository-structure tree,
+"star this repo", and contribution instructions. Read as a website landing page,
+that is a wall of decoration in front of the thing a visitor came for.
+
+So `build-site.py` renders `.github/site/home.md` over the staged copy of
+`README.md`. MkDocs treats a directory's `README.md` as its index, so the swap
+changes the site's front door without touching the repo's README, adding a
+second page, or breaking a link - nothing in the tree links to the root README.
+
+Two rules keep the two pages from disagreeing:
+
+- **No hard-coded numbers in `home.md`.** Every figure is a `{{token}}` filled
+  from `docs/certs.json` and from `check-readme-counts.py`'s `gather()` - the
+  same counting code CI runs against the README. A count on the landing page
+  cannot drift from the tree, because nothing types it.
+- **Release notes are extracted, not copied.** The "What's new" section is
+  lifted from the README at build time, truncated to the three most recent
+  entries. A third hand-maintained copy of the changelog would be the one nobody
+  updates.
+
+The consequence to remember: **editing `README.md` does not change the site's
+home page**, beyond those extracted release notes. Edit `.github/site/home.md`.
 
 ### Page layout: one sidebar, on the left
 
