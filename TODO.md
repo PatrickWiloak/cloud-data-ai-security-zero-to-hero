@@ -68,7 +68,7 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 
 ## Completed 2026-08-14 - published as a searchable website
 
-The repo's 2.6M words had no search: navigation was GitHub's file listing. Every
+The repo's 6.1M words had no search: navigation was GitHub's file listing. Every
 page is now also published at
 [patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/).
 
@@ -100,10 +100,27 @@ link checker:
 - [x] Links into `.templates/` had no working site target; it is staged as
       `provider-resources/` and the ~144 inbound links are rewritten.
 
+### Follow-ups closed 2026-08-14 (same day)
+
+- [x] ~~**Pages must be enabled once**: Settings > Pages > Source > **GitHub
+      Actions**~~ ✅ enabled via `gh api -X POST .../pages -f build_type=workflow`;
+      the previously failing deploy job was re-run and the site is live. Verified
+      200 on the homepage, Study Hub, a deep cert page, a generated directory
+      index, and the staged `provider-resources/`.
+- [x] ~~Theme was Material's default indigo~~ ✅ switched to monochrome (Nobler
+      Works house style). `mkdocs.yml` sets `primary: custom` / `accent: custom`
+      on **all three** palette entries - the auto entry renders before the palette
+      JS runs, so leaving it unset kept showing indigo - and the black/white
+      values live in `.github/site/extra.css`. Links carry underlines instead of
+      colour, and slate's blue-grey dark surfaces are overridden to neutral black.
+- [x] ~~README counts drifted unnoticed~~ ✅ `check-readme-counts.py` added and
+      wired into `structure-validate.yml` as a blocking check. It caught "37
+      concept pages" (actually 46) and the `2.6M words` figure copied out of the
+      dated `improvement-roadmap.md` snapshot when the real count is 6.1M. Run
+      `--fix` when you add content.
+
 ### Known follow-ups
 
-- **Pages must be enabled once**: Settings > Pages > Source > **GitHub Actions**.
-  Until then the build job passes and the deploy job fails.
 - The search index is 28 MB uncompressed. It is lazy-loaded and served gzipped,
   but if first-search latency becomes a complaint, the options are splitting the
   index per section or excluding the deepest cert notes from it.

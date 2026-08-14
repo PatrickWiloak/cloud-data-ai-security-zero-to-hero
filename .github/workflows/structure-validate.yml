@@ -6,9 +6,11 @@ on:
     paths:
       - 'exams/**'
       - 'docs/certs.json'
+      - 'README.md'
       - 'STUDY-HUB.md'
       - 'learn/**'
-      - 'resources/hands-on-projects/**'
+      - 'topics/**'
+      - 'resources/**'
       - '.github/scripts/validate-cert-structure.sh'
       - '.github/scripts/validate-frontmatter.sh'
       - '.github/scripts/build-freshness-ledger.sh'
@@ -16,13 +18,16 @@ on:
       - '.github/scripts/build-provider-indexes.py'
       - '.github/scripts/build-lab-map.py'
       - '.github/scripts/build-flashcards.py'
+      - '.github/scripts/check-readme-counts.py'
   pull_request:
     paths:
       - 'exams/**'
       - 'docs/certs.json'
+      - 'README.md'
       - 'STUDY-HUB.md'
       - 'learn/**'
-      - 'resources/hands-on-projects/**'
+      - 'topics/**'
+      - 'resources/**'
       - '.github/scripts/validate-cert-structure.sh'
       - '.github/scripts/validate-frontmatter.sh'
       - '.github/scripts/build-freshness-ledger.sh'
@@ -30,6 +35,7 @@ on:
       - '.github/scripts/build-provider-indexes.py'
       - '.github/scripts/build-lab-map.py'
       - '.github/scripts/build-flashcards.py'
+      - '.github/scripts/check-readme-counts.py'
   workflow_dispatch:
 
 permissions:
@@ -61,6 +67,13 @@ jobs:
 
       - name: Check flashcard decks are current
         run: python3 .github/scripts/build-flashcards.py --check
+
+      # The README advertises counts that are not derived from certs.json -
+      # concept pages, topic indexes, comparisons, word count. Those drifted
+      # unnoticed (37 vs 46 concept pages) until this check existed.
+      # Fix with: python3 .github/scripts/check-readme-counts.py --fix
+      - name: Check README counts match the tree
+        run: python3 .github/scripts/check-readme-counts.py --check
 
       # Advisory: reports which cert guides are due for re-verification this month.
       - name: Cert freshness rotation (advisory)
