@@ -6,6 +6,29 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-08-14] - Monochrome theme, a single left sidebar, and a gitGood promo
+
+Presentation pass over the newly published site, plus the first promotion of [gitGood.dev](https://gitgood.dev) from this repo.
+
+### Changed
+
+- **Monochrome palette, Nobler Works house style.** `mkdocs.yml` sets `primary: custom` and `accent: custom`, which opts out of Material's built-in colour palettes entirely; the values live in `.github/site/extra.css`. All three palette entries need the setting, not just light and dark - the "auto" entry is what renders before the palette JS runs, so leaving it unset kept serving Material's default indigo regardless of the other two. With links no longer distinguishable by colour, prose links carry underlines that thicken on hover; navigation, tab and table links stay plain.
+- **Dark mode is true `#000000`.** Both banners on the site are flattened PNGs on pure black, so a near-black page (`#0d0d0d`) framed each one in a visible rectangle. The header gains an explicit bottom border, since a black bar on a black page stops reading as a bar.
+- **Navigation is on the left on every page.** `navigation.tabs` is off: with tabs, the left sidebar shows only the active tab's subtree, so Home - a root page with no children - rendered an almost empty left column while a cert page rendered a deep one, and the sidebar changed shape depending on where you stood. It is now the same full site tree everywhere, with the current branch expanded.
+- **The page table of contents folds into that sidebar** (`toc.integrate`), so there is no second column on the right.
+
+### Added
+
+- **`.github/site-overrides/partials/nav-item.html`** - the upstream Material partial with one marked `LOCAL ADDITION`. `toc.integrate` alone is not safe with `navigation.indexes`: Material emits the integrated ToC from the `nav_item == page` branch, which fires for leaf pages only, so a section-index page - every cert landing page plus every generated directory index - matched no branch and rendered no table of contents at all. The override restores it.
+- **A gitGood.dev promo** in the README header and on the landing page, with `assets/brand/gitgood-banner.png`. gitGood ships no marketing banner, only a loading splash carrying a progress bar and an "84%" label; the banner is that splash cropped to the brand lockup, measured rather than eyeballed, and padded to 2.6:1.
+
+### Notes
+
+- The Material pin in `requirements-docs.txt` is now load-bearing twice over. After a version bump, re-copy the overridden partial and re-apply the marked block, then check a cert landing page by eye - a `--strict` build will not flag a drifted template, because a missing table of contents is not an error.
+- Promo copy names 21 role-targeted learning paths and the certification banks by exam code, because the README is also the site's indexed home page and those codes are what people search. The README's role, certification and feature lists sit inside a collapsed `<details>`: the height comes off the visible page, the text stays in the HTML.
+
+---
+
 ## [2026-08-14] - The site gets a landing page, and the README's provider table comes back under CI
 
 The published site opened on the repo's `README.md`, because MkDocs treats a directory's README as its index. That is the right front page for GitHub and the wrong one for a website: a visitor arrived at a banner image, five social badges, a count-badge row, a repository-structure tree, and "star this repo" before reaching anything they could read.

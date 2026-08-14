@@ -113,6 +113,23 @@ link checker:
       JS runs, so leaving it unset kept showing indigo - and the black/white
       values live in `.github/site/extra.css`. Links carry underlines instead of
       colour, and slate's blue-grey dark surfaces are overridden to neutral black.
+      Dark mode is true `#000000` as of the same day: the banners are flattened
+      PNGs on pure black, so a near-black page drew a rectangle around each one.
+- [x] ~~Both sidebars were rendered, and the populated one appeared to switch
+      sides between pages~~ ✅ `navigation.tabs` off, so the left sidebar is the
+      same full tree everywhere, and `toc.integrate` folds the page contents into
+      it so there is no right column. `toc.integrate` alone drops the ToC on
+      every section-index page - Material only emits it for leaf pages - so
+      `.github/site-overrides/partials/nav-item.html` overrides that partial.
+      **This couples the repo to Material's template internals**: after a version
+      bump, re-copy the partial, re-apply the marked block, and check a cert
+      landing page by eye. A `--strict` build will not catch a drifted template.
+- [x] ~~No promotion of gitGood.dev, the flagship product~~ ✅ promo block in the
+      README header and on the landing page, with `assets/brand/gitgood-banner.png`
+      cropped from gitGood's loading splash (it ships no marketing banner, and the
+      splash carries a progress bar and an "84%" label). Copy names 21
+      role-targeted paths and the cert banks by exam code, for search; the long
+      lists sit in a collapsed `<details>` so they cost no visible height.
 - [x] ~~README counts drifted unnoticed~~ ✅ `check-readme-counts.py` added and
       wired into `structure-validate.yml` as a blocking check. It caught "37
       concept pages" (actually 46), "8 topic indexes" (actually 13), and the
