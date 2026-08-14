@@ -2,6 +2,114 @@
    Loaded via `extra_css` in mkdocs.yml and staged by build-site.py. */
 
 /* ------------------------------------------------------------------ */
+/* Palette - monochrome, Nobler Works house style                      */
+/* ------------------------------------------------------------------ */
+
+/* mkdocs.yml sets `primary: custom` and `accent: custom`, which makes Material
+   skip its built-in colour palettes and emit no colour rules of its own. Every
+   value below is therefore the single source of truth for the site's colour.
+
+   Deliberately black and white: no hue anywhere, including Material's slate
+   dark scheme, which ships a blue-grey background by default. Emphasis comes
+   from weight, rule lines, and spacing rather than colour. */
+
+/* ---- Light ---- */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:          #000000;
+  --md-primary-fg-color--light:   #2e2e2e;
+  --md-primary-fg-color--dark:    #000000;
+  --md-primary-bg-color:          #ffffff;
+  --md-primary-bg-color--light:   rgba(255, 255, 255, 0.7);
+
+  --md-accent-fg-color:           #000000;
+  --md-accent-fg-color--transparent: rgba(0, 0, 0, 0.1);
+  --md-accent-bg-color:           #ffffff;
+  --md-accent-bg-color--light:    rgba(255, 255, 255, 0.7);
+
+  --md-default-bg-color:          #ffffff;
+  --md-default-fg-color:          rgba(0, 0, 0, 0.87);
+  --md-default-fg-color--light:   rgba(0, 0, 0, 0.6);
+  --md-default-fg-color--lighter: rgba(0, 0, 0, 0.32);
+  --md-default-fg-color--lightest:rgba(0, 0, 0, 0.07);
+
+  --md-typeset-a-color:           #000000;
+  --md-code-bg-color:             #f4f4f4;
+  --md-code-fg-color:             #1a1a1a;
+  --md-footer-bg-color:           #000000;
+  --md-footer-bg-color--dark:     #000000;
+}
+
+/* ---- Dark ---- */
+[data-md-color-scheme="slate"] {
+  /* Material derives slate's greys from a hue. Zero it out so the dark scheme
+     is neutral black rather than its default blue-grey. */
+  --md-hue: 0;
+
+  --md-primary-fg-color:          #000000;
+  --md-primary-fg-color--light:   #2e2e2e;
+  --md-primary-fg-color--dark:    #000000;
+  --md-primary-bg-color:          #ffffff;
+  --md-primary-bg-color--light:   rgba(255, 255, 255, 0.7);
+
+  --md-accent-fg-color:           #ffffff;
+  --md-accent-fg-color--transparent: rgba(255, 255, 255, 0.1);
+  --md-accent-bg-color:           #000000;
+  --md-accent-bg-color--light:    rgba(0, 0, 0, 0.7);
+
+  /* Slate derives these from --md-hue; set them outright so no warm cast
+     survives at the low saturation Material uses. */
+  --md-default-bg-color:          #0d0d0d;
+  --md-default-bg-color--light:   #1a1a1a;
+  --md-default-bg-color--lighter: #262626;
+  --md-default-bg-color--lightest:#333333;
+  --md-default-fg-color:          rgba(255, 255, 255, 0.9);
+  --md-default-fg-color--light:   rgba(255, 255, 255, 0.62);
+  --md-default-fg-color--lighter: rgba(255, 255, 255, 0.32);
+  --md-default-fg-color--lightest:rgba(255, 255, 255, 0.07);
+
+  --md-typeset-a-color:           #ffffff;
+  --md-code-bg-color:             #1a1a1a;
+  --md-code-fg-color:             #e6e6e6;
+  --md-footer-bg-color:           #000000;
+  --md-footer-bg-color--dark:     #000000;
+}
+
+/* With links the same colour as body text, colour can no longer carry the
+   signal. Underline them instead, and lift the weight on hover. */
+.md-typeset a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+
+.md-typeset a:hover,
+.md-typeset a:focus {
+  text-decoration-thickness: 2px;
+}
+
+/* Chrome links - nav, tabs, tables of contents, buttons - are positional, not
+   prose, so they keep the plain treatment. */
+.md-nav a,
+.md-tabs a,
+.md-header a,
+.md-footer a,
+.md-typeset .md-button,
+.md-typeset .headerlink,
+.md-typeset table a {
+  text-decoration: none;
+}
+
+.md-typeset table a:hover {
+  text-decoration: underline;
+}
+
+/* Section rules do the work colour used to. */
+.md-typeset h2 {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.2em;
+}
+
+/* ------------------------------------------------------------------ */
 /* Layout                                                              */
 /* ------------------------------------------------------------------ */
 

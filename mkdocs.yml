@@ -57,21 +57,28 @@ theme:
     - content.action.edit
     - content.tooltips
   palette:
+    # Monochrome, matching Nobler Works house style. `custom` opts out of
+    # Material's built-in colour palettes entirely; the actual black and white
+    # values are defined in .github/site/extra.css under the scheme selectors.
+    # All three entries need it - this first one is what renders before the
+    # palette JS runs, so omitting it here shows Material's default indigo.
     - media: "(prefers-color-scheme)"
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
