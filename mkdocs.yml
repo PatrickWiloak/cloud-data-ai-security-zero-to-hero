@@ -35,9 +35,16 @@ theme:
   icon:
     repo: fontawesome/brands/github
   features:
-    # Top-level pillars become tabs: Learn, Build, Certify, Reference, Topics.
-    - navigation.tabs
-    - navigation.tabs.sticky
+    # Deliberately NOT navigation.tabs. With tabs, the left sidebar shows only the
+    # active tab's subtree, so Home - a root page with no children - rendered an
+    # almost empty left column while its long ToC filled the right, and a cert
+    # page did the reverse. The populated panel appeared to jump sides. Without
+    # tabs the left sidebar is the same full site tree on every page.
+    #
+    # toc.integrate is not the fix either: it nests the ToC under the active
+    # page's nav item, and a section-index page (every cert landing page, plus
+    # the 175 generated directory indexes) has no such item, so those pages lose
+    # their ToC completely.
     - navigation.sections
     # A directory's README.md becomes the landing page for its nav section
     # instead of a redundant child entry.
@@ -48,6 +55,9 @@ theme:
     - navigation.prune
     - navigation.top
     - navigation.footer
+    # Keep the sidebar scrolled to wherever you are in the tree, and the URL in
+    # step with the section being read.
+    - navigation.tracking
     - toc.follow
     - search.suggest
     - search.highlight

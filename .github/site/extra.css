@@ -221,6 +221,43 @@
   font-size: 0.68rem;
 }
 
+/* Page headings in this repo lead with emoji, which pymdownx renders as inline
+   SVGs. In prose they are fine; stacked down a sidebar they turn the nav into a
+   column of mismatched icons and push the text out of alignment. Drop them from
+   navigation only - the headings themselves keep theirs. */
+.md-nav .twemoji,
+.md-nav__link .twemoji {
+  display: none;
+}
+
+/* Left column is site navigation, right column is this page's contents. Label
+   the right one clearly so the two are never read as the same control. */
+.md-nav--secondary .md-nav__title {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.75;
+}
+
+/* Where you are in a 2,000-page tree, legible at a glance. */
+.md-nav__link--active {
+  font-weight: 700;
+}
+
+/* Top-level sections (Learn, Build, Certify, Reference, Topics) are the spine of
+   the sidebar now that there are no tabs. Give them enough weight to scan. */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link,
+.md-nav--primary .md-nav__item--section > .md-nav__link {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* Breathing room between top-level groups, so a long tree reads as groups
+   rather than one undifferentiated list. */
+.md-nav--primary > .md-nav__list > .md-nav__item--section {
+  margin-top: 1.1rem;
+}
+
 /* The repo's own badge row at the top of the README is decorative; keep it from
    dominating the landing page. */
 .md-typeset h1 + p img[src*="img.shields.io"] {
