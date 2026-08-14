@@ -6,7 +6,9 @@ were 46, and "8 cross-pillar topic indexes" when there were 13. TODO.md had
 recorded the jump to 46 five days earlier - the number was known and the README
 was simply never updated. The same pass copied "~2.6M words" out of
 docs/improvement-roadmap.md, which is an explicitly dated 2026-07-28 snapshot,
-into the README, CHANGELOG and TODO as a current fact. The real figure was 6.1M.
+into the README, CHANGELOG and TODO as a current fact. It had since grown to
+3.0M - a smaller error than the concept-page one, but the same failure: a number
+nothing recomputed, restated as if it were current.
 
 Cert and provider counts were already safe, because build-certs-index.py
 regenerates them from docs/certs.json and CI runs it with --check. Everything
@@ -25,28 +27,36 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import sys
+import subprocess
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 README = REPO / "README.md"
 
 # The word count moves with every content edit, so an exact match would fail CI
-# constantly. This tolerance is wide enough to absorb ordinary editing and far
-# too narrow to let a 2.6M-vs-6.1M error through.
+# constantly. Wide enough to absorb ordinary editing, tight enough that a figure
+# left to rot across a release cycle trips it.
 WORD_TOLERANCE_MILLIONS = 0.2
 
 
-def md_files(*roots: str, recursive: bool = True):
-    """Markdown under the given roots, skipping .git."""
-    for root in roots:
-        base = REPO / root
-        if not base.exists():
-            continue
-        it = base.rglob("*.md") if recursive else base.glob("*.md")
-        for path in it:
-            if ".git" not in path.parts:
-                yield path
+def md_files():
+    """Every markdown file that is actually part of the repo.
+
+    Deliberately `git ls-files` and not a filesystem walk. A local site build
+    leaves a complete staged copy of the tree in .site-src/ (2,034 files), and
+    walking the working directory counts every page twice - which is exactly how
+    this script's first version reported 6.1M words against a real 3.0M. Asking
+    git means no build artifact, vendored directory, or future generated tree
+    can ever inflate a count again.
+    """
+    out = subprocess.run(
+        ["git", "-C", str(REPO), "ls-files", "-z", "*.md"],
+        capture_output=True,
+        check=True,
+    )
+    for name in out.stdout.decode("utf-8").split("\0"):
+        if name:
+            yield REPO / name
 
 
 def count_pages(directory: str, *, exclude: set[str] = frozenset()) -> int:
@@ -63,7 +73,7 @@ def count_glob(pattern: str) -> int:
 
 def total_words() -> int:
     total = 0
-    for path in md_files("."):
+    for path in md_files():
         try:
             total += len(path.read_text(encoding="utf-8", errors="ignore").split())
         except OSError:
@@ -76,7 +86,7 @@ def doc_links() -> int:
     `**[📖 Title](URL)** - description`."""
     pattern = re.compile(r"\*\*\[[^\]]*\]\(https?://[^)]*\)\*\*")
     total = 0
-    for path in md_files("."):
+    for path in md_files():
         try:
             total += len(pattern.findall(path.read_text(encoding="utf-8", errors="ignore")))
         except OSError:

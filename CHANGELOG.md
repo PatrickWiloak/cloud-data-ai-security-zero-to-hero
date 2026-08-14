@@ -8,7 +8,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ## [2026-08-14] - Published as a searchable website on GitHub Pages
 
-The repo's 6.1M words were only navigable through GitHub's file listing, with no search. Every page is now also published as a MkDocs Material site at **[patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)** with full-text search, dark mode, and mobile navigation.
+The repo's 3.0M words were only navigable through GitHub's file listing, with no search. Every page is now also published as a MkDocs Material site at **[patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)** with full-text search, dark mode, and mobile navigation.
 
 The markdown tree is unchanged and remains the source of truth. The site is generated from it at build time rather than the tree being restructured for the generator, so there is no second copy of any page and reading the repo on GitHub is unaffected.
 

@@ -14,8 +14,8 @@ files, ~2.6M words, 137 cert directories across 27 providers: 133 certifications
 > **These are frozen 2026-07-28 figures, not current ones.** They are kept as the
 > baseline the findings below were measured against. Do not quote them anywhere
 > else - the `~2.6M words` figure was copied into the README, CHANGELOG and TODO
-> on 2026-08-14 when the real count was 6.1M. For current numbers run
-> `python3 .github/scripts/check-readme-counts.py`.
+> on 2026-08-14 as a current fact, by which point the tree had grown to 3.0M. For
+> current numbers run `python3 .github/scripts/check-readme-counts.py`.
 
 Every number below was produced by scanning the tree, not estimated. Re-run the
 commands in [How the numbers were produced](#how-the-numbers-were-produced) to refresh.

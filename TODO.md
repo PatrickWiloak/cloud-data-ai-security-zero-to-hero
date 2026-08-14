@@ -68,7 +68,7 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 
 ## Completed 2026-08-14 - published as a searchable website
 
-The repo's 6.1M words had no search: navigation was GitHub's file listing. Every
+The repo's 3.0M words had no search: navigation was GitHub's file listing. Every
 page is now also published at
 [patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/).
 
@@ -115,9 +115,13 @@ link checker:
       colour, and slate's blue-grey dark surfaces are overridden to neutral black.
 - [x] ~~README counts drifted unnoticed~~ ✅ `check-readme-counts.py` added and
       wired into `structure-validate.yml` as a blocking check. It caught "37
-      concept pages" (actually 46) and the `2.6M words` figure copied out of the
-      dated `improvement-roadmap.md` snapshot when the real count is 6.1M. Run
-      `--fix` when you add content.
+      concept pages" (actually 46), "8 topic indexes" (actually 13), and the
+      `2.6M words` figure copied out of the dated `improvement-roadmap.md`
+      snapshot (the tree is at 3.0M). Run `--fix` when you add content.
+      Then it caught a bug in itself: the first version walked the filesystem
+      and counted the `.site-src/` staged copy a local site build leaves behind,
+      reporting 6.1M words against a real 3.0M. It now counts via `git ls-files`,
+      so no build artifact can inflate a total.
 
 ### Known follow-ups
 
