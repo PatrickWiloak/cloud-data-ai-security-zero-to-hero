@@ -360,6 +360,18 @@ Found a typo? Have a suggestion? Want to add content? See **[CONTRIBUTING.md](./
 
 ---
 
+## 📄 License
+
+**Written content: [CC BY 4.0](./LICENSE).** The guides, explanations, exam material and
+documentation are free to share and adapt, including commercially, as long as you credit
+this repository and link the license.
+
+**Code samples: [MIT](./LICENSE-CODE).** The fenced code blocks throughout the content and
+the scripts under `.github/scripts/` are MIT, so you can paste a snippet into your own project
+without carrying an attribution obligation for ten lines of Terraform.
+
+---
+
 ## 🌟 Star This Repo!
 
 If these materials helped you pass a certification or advance your career, please **star this repository** ⭐ to help others discover these resources.

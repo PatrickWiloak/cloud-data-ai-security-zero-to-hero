@@ -6,6 +6,18 @@ Working task list for **cloud-data-ai-security-zero-to-hero**. Read this at the 
 
 ## Open
 
+### 🟠 Discoverability (added 2026-08-31)
+
+- [ ] **Upload the social preview image.** GitHub serves an auto-generated card for this repo, so
+      every share on X/LinkedIn/Slack renders as a generic placeholder. A 1280x640 card is rendered
+      at `/tmp/claude-1000/-home-plw-coding/4ffb6de8-198a-4962-8a8b-1f54e9ab4159/scratchpad/social/cloud-data-ai-security-zero-to-hero-social-1280x640-31AUG2026.png`.
+      Upload via **Settings → General → Social preview** (the GitHub API does not expose this).
+- [ ] **Commit and push the new `LICENSE` (CC BY 4.0) and `LICENSE-CODE` (MIT).** Until they
+      land, GitHub shows this repo as unlicensed - all rights reserved - which is the opposite
+      of the "free to use for educational purposes with attribution" the README already states.
+      Content is CC BY; the ~9,500 embedded code samples and `scripts/` are MIT so a reader can
+      copy a snippet without an attribution obligation.
+
 Backlog derived from the repo-wide gap analysis in
 [docs/improvement-roadmap.md](./docs/improvement-roadmap.md) (2026-07-28). See that
 document for evidence, counts, and reasoning behind each item.
