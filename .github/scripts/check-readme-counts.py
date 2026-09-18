@@ -32,6 +32,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 README = REPO / "README.md"
+LEARN_README = REPO / "learn" / "README.md"
 
 # The word count moves with every content edit, so an exact match would fail CI
 # constantly. Wide enough to absorb ordinary editing, tight enough that a figure
@@ -159,6 +160,22 @@ CLAIMS: list[tuple[str, str, str]] = [
     ("tree study tracks", r"# \d+ certs across \d+ providers, plus (\d+) study tracks", "study_tracks"),
 ]
 
+# The same treatment for learn/README.md, which advertises its own count of
+# concept pages. It was outside this script until 2026-09-17, so adding six data
+# pages left it reading 46 against 52 - a drift of exactly the kind the README
+# claims were locked down to prevent, one directory down.
+LEARN_CLAIMS: list[tuple[str, str, str]] = [
+    ("learn concept pages", r"\*\*\[Concepts\]\(\./concepts/\)\*\* - (\d+) topic pages", "concept_pages"),
+]
+
+# Every file this script owns, and the claims it owns in each. The word count and
+# the doc-link floor are README-only, so they are keyed off the path below.
+GUARDED: list[tuple[Path, list[tuple[str, str, str]]]] = [
+    (README, CLAIMS),
+    (LEARN_README, LEARN_CLAIMS),
+]
+
+
 # Not checked here: the per-provider table under "Browse Certifications". It is
 # generated from docs/certs.json by build-provider-indexes.py, between markers,
 # and verified by that script's --check. Two scripts owning the same table would
@@ -166,15 +183,25 @@ CLAIMS: list[tuple[str, str, str]] = [
 # generated block and leave the generator reporting it stale.
 
 
-def check(text: str, actual: dict[str, int]) -> tuple[list[str], str]:
-    """Return (problems, corrected text)."""
+def check(
+    text: str,
+    actual: dict[str, int],
+    claims: list[tuple[str, str, str]],
+    *,
+    prose_claims: bool = True,
+) -> tuple[list[str], str]:
+    """Return (problems, corrected text).
+
+    `prose_claims` covers the word count and the doc-link floor, which are stated
+    in README.md only. Every other guarded file gets the numeric claims alone.
+    """
     problems: list[str] = []
     fixed = text
 
-    for label, pattern, key in CLAIMS:
+    for label, pattern, key in claims:
         matches = list(re.finditer(pattern, fixed))
         if not matches:
-            problems.append(f"{label}: no README text matched /{pattern}/ - claim removed or reworded?")
+            problems.append(f"{label}: nothing matched /{pattern}/ - claim removed or reworded?")
             continue
         if len(matches) > 1:
             problems.append(f"{label}: matched {len(matches)} times, expected exactly one")
@@ -184,9 +211,12 @@ def check(text: str, actual: dict[str, int]) -> tuple[list[str], str]:
         claimed = int(match.group(1))
         want = actual[key]
         if claimed != want:
-            problems.append(f"{label}: README says {claimed}, tree has {want}")
+            problems.append(f"{label}: file says {claimed}, tree has {want}")
             start, end = match.span(1)
             fixed = fixed[:start] + str(want) + fixed[end:]
+
+    if not prose_claims:
+        return problems, fixed
 
     # Word count, stated as a rounded "N.NM words" figure.
     want_m = actual["words"] / 1_000_000
@@ -225,8 +255,17 @@ def main() -> int:
     args = parser.parse_args()
 
     actual = gather()
-    text = README.read_text(encoding="utf-8")
-    problems, fixed = check(text, actual)
+
+    problems: list[str] = []
+    rewritten: list[str] = []
+    for path, claims in GUARDED:
+        text = path.read_text(encoding="utf-8")
+        found, fixed = check(text, actual, claims, prose_claims=(path == README))
+        rel = path.relative_to(REPO)
+        problems += [f"{rel}: {problem}" for problem in found]
+        if found and args.fix and fixed != text:
+            path.write_text(fixed, encoding="utf-8")
+            rewritten.append(str(rel))
 
     if not problems:
         print(f"README counts are up to date ({actual['certifications']} certs, "
@@ -237,8 +276,8 @@ def main() -> int:
         print(f"  drift: {problem}")
 
     if args.fix:
-        README.write_text(fixed, encoding="utf-8")
-        print(f"\nRewrote README.md. Re-run without --fix to confirm.")
+        print(f"\nRewrote {', '.join(rewritten) if rewritten else 'nothing'}. "
+              "Re-run without --fix to confirm.")
         return 0
 
     print(f"\n{len(problems)} problem(s). Run with --fix to correct the numeric ones.")
