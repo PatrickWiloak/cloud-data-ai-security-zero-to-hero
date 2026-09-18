@@ -25,20 +25,22 @@ jobs:
     name: Internal links (blocking)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Check relative markdown links resolve
         run: python3 .github/scripts/check-internal-links.py
 
-  # External vendor URLs rot for reasons outside a contributor's control, so this
-  # job is advisory. The weekly run files an issue instead of failing a PR.
+  # External vendor URLs rot for reasons outside a contributor's control, so a
+  # broken URL is advisory: it files an issue on the weekly run rather than
+  # failing a PR. lychee failing to *run* is a different thing and blocks.
   external:
     name: External URLs (advisory)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Run lychee
+        id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
@@ -50,23 +52,52 @@ jobs:
             --max-retries 2
             --accept 200,206,403,429
             --exclude-loopback
-            --exclude-mail
             --scheme https
             --scheme http
             './**/*.md'
           fail: false
           output: ./lychee-report.md
 
+      # This guard exists because the job spent its whole life green and empty.
+      # `--exclude-mail` was removed from lychee (it is `--include-mail` now, and
+      # mail is excluded by default), so the binary aborted on argument parsing,
+      # checked zero URLs, and `fail: false` swallowed the exit code into a
+      # success in 0.2 seconds. Seven months of weekly runs reported nothing
+      # wrong with 8,591 unchecked vendor URLs, ~5% of which were dead.
+      #
+      # lychee exit codes: 0 = everything resolved, 2 = ran fine and found
+      # broken links, 1 = lychee itself failed. Only 2 is advisory. Anything
+      # else means the check did not happen, which must be loud.
+      - name: Fail if lychee did not actually run
+        if: always() && steps.lychee.outputs.exit_code != '0' && steps.lychee.outputs.exit_code != '2'
+        run: |
+          echo "::error::lychee exited with '${{ steps.lychee.outputs.exit_code }}', which is neither 0 (clean) nor 2 (broken links found). It did not check any URLs. Fix the invocation - do not treat this as link rot."
+          exit 1
+
+      # Second belt: a report with no summary line means no URLs were walked,
+      # whatever the exit code claimed.
+      - name: Fail if the report counted no links
+        if: always() && steps.lychee.outputs.exit_code == '0'
+        run: |
+          if ! grep -qiE '[0-9]+ Total' lychee-report.md; then
+            echo "::error::lychee reported success but its report has no link total. Zero URLs were checked."
+            cat lychee-report.md
+            exit 1
+          fi
+
       - name: Upload report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: lychee-report
           path: lychee-report.md
 
-      - name: Open issue on weekly run failure
-        if: github.event_name == 'schedule' && failure()
-        uses: peter-evans/create-issue-from-file@v5
+      # Gated on lychee's own exit code, not on job status. The previous version
+      # used `failure()`, which `fail: false` guarantees will never be true, so
+      # this step could not fire even when links were broken.
+      - name: Open issue on weekly run finding broken links
+        if: github.event_name == 'schedule' && steps.lychee.outputs.exit_code == '2'
+        uses: peter-evans/create-issue-from-file@v6
         with:
           title: 'Weekly link check found broken links'
           content-filepath: ./lychee-report.md

@@ -1,0 +1,48 @@
+# Dependency updates.
+#
+# This repo ships no application code, so there are exactly two surfaces that can
+# go stale: the GitHub Actions in .github/workflows/, and the pinned MkDocs
+# toolchain in requirements-docs.txt.
+#
+# Both had. On 2026-09-17 every action in the repo was between two and six major
+# versions behind, with Actions warning on every run that the Node 20 runtime
+# they target is deprecated - and nothing was watching, because there was no
+# dependabot config. The same week, the weekly link check was found to have been
+# silently passing for months after lychee removed a flag the workflow still
+# passed. Version drift in CI is not cosmetic here; it is how the checks stop
+# checking.
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: ci
+    groups:
+      # One PR a month for the routine bumps, rather than five.
+      actions:
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: docs
+    # mkdocs-material is pinned deliberately and twice over: MkDocs 2.0 removes
+    # the plugin system, and .github/site-overrides/ holds copies of two of this
+    # version's templates (partials/nav-item.html, plus main.html extending
+    # base.html). A major bump means re-copying the partial, re-applying its
+    # marked block, and checking a cert landing page and a link preview by eye -
+    # a --strict build catches neither a drifted template nor missing meta tags.
+    # So majors come as a PR to look at deliberately, never an automatic merge.
+    ignore:
+      - dependency-name: mkdocs-material
+        update-types: [version-update:semver-major]
+      - dependency-name: mkdocs
+        update-types: [version-update:semver-major]

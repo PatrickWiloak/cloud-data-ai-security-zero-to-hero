@@ -19,6 +19,7 @@ on:
       - '.github/scripts/build-lab-map.py'
       - '.github/scripts/build-flashcards.py'
       - '.github/scripts/check-readme-counts.py'
+      - '.github/scripts/check-repo-metadata.py'
   pull_request:
     paths:
       - 'exams/**'
@@ -36,6 +37,7 @@ on:
       - '.github/scripts/build-lab-map.py'
       - '.github/scripts/build-flashcards.py'
       - '.github/scripts/check-readme-counts.py'
+      - '.github/scripts/check-repo-metadata.py'
   workflow_dispatch:
 
 permissions:
@@ -45,7 +47,7 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Run structure validator
         run: bash .github/scripts/validate-cert-structure.sh
@@ -74,6 +76,18 @@ jobs:
       # Fix with: python3 .github/scripts/check-readme-counts.py --fix
       - name: Check README counts match the tree
         run: python3 .github/scripts/check-readme-counts.py --check
+
+      # The description GitHub shows in search results and link previews is not a
+      # file, so check-readme-counts.py could never see it. It sat at "122+ certs
+      # across 22 providers, 37 plain-English concepts" while the tree was at
+      # 148 / 27 / 53. Fix with --fix locally: the Actions token deliberately
+      # cannot write repository settings, so CI only notices. Only the things a
+      # command can fix block; the social preview, which has to be uploaded by
+      # hand, prints as a NOTE so this can never be a red build nobody can clear.
+      - name: Check GitHub repository metadata matches the tree
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/check-repo-metadata.py --check
 
       # Advisory: reports which cert guides are due for re-verification this month.
       - name: Cert freshness rotation (advisory)

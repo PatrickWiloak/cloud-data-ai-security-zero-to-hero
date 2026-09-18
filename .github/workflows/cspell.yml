@@ -19,10 +19,10 @@ jobs:
   cspell:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Run cspell
-        uses: streetsidesoftware/cspell-action@v6
+        uses: streetsidesoftware/cspell-action@v9
         with:
           config: .cspell.json
           # Only show errors, suppress info-level "checked X files" output.

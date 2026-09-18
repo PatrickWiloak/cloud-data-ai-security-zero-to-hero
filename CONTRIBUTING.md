@@ -175,9 +175,12 @@ Several scripts live under `.github/scripts/`. The validators run in CI on every
 - `glossary-add-anchors.py` - prepends `<a id="term-slug"></a>` to each bolded term in the glossary so links can target individual terms (not just sections). Idempotent. Run when the glossary gains new terms.
 - `glossary-upgrade-existing-links.py` - upgrades old section-level glossary links to per-term anchors when an anchor is available.
 
+- `check-repo-metadata.py` - checks the GitHub repository description, homepage and topics against the tree. The description is generated from `docs/certs.json`, never typed. `--fix` patches it, and needs admin rights, so it runs locally rather than in CI.
+- `build-social-card.py` - renders `assets/brand/social-preview-1280x640.png`, used both as GitHub's social preview and as the site's Open Graph image. Needs `pillow`.
+
 **CI workflows under `.github/workflows/`:**
 
-- `link-check.yml` - lychee link checker on PR, push, and weekly Mondays. Opens an issue automatically on weekly failure.
+- `link-check.yml` - two jobs. **Internal links** (`check-internal-links.py`) block the merge, because a broken relative link is always our bug. **External vendor URLs** (lychee) are advisory and file an issue on the weekly Monday run, since vendor rot is nobody's fault here. The external job also fails loudly if lychee itself could not run: it spent months passing in 0.2 seconds because it was still passing a flag lychee had removed, so a guard now checks lychee's own exit code and that the report counted a non-zero number of links.
 - `markdown-lint.yml` - markdownlint-cli2 against `.markdownlint.json`.
 - `structure-validate.yml` - runs the cert-structure and frontmatter validators.
 - `cspell.yml` - spell-checks markdown changes against `.cspell.json`. Currently non-strict (won't fail builds while the dictionary tunes); will flip to strict once noise is acceptable.
