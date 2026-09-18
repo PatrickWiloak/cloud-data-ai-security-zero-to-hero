@@ -61,7 +61,7 @@
 - [ ] Learn QLoRA - quantized base model with LoRA adapters
 - [ ] Understand P-tuning - soft prompt optimization
 - [ ] Compare adapter methods and their memory profiles
-- [ ] **Reference:** [NeMo PEFT Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/peft/landing_page.html)
+- [ ] **Reference:** [NeMo PEFT Guide](https://docs.nvidia.com/nemo/automodel/latest)
 
 #### Day 3-4: SFT and RLHF
 - [ ] Study Supervised Fine-Tuning (SFT) data formats and pipelines
@@ -107,7 +107,7 @@
 - [ ] Learn document ingestion - loading, parsing, chunking
 - [ ] Understand embedding model selection and tradeoffs
 - [ ] Explore vector database options (Milvus, FAISS, pgvector)
-- [ ] **Reference:** [NVIDIA RAG Pipeline Guide](https://docs.nvidia.com/ai-enterprise/workflows-generative-ai/latest/rag/index.html)
+- [ ] **Reference:** [NVIDIA RAG Pipeline Guide](https://docs.nvidia.com/rag/latest/index.html)
 
 #### Day 3-4: Retrieval Optimization
 - [ ] Study chunking strategies - fixed-size, semantic, recursive

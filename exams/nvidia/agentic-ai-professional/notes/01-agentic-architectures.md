@@ -1,6 +1,6 @@
 # Agentic AI Architectures
 
-**[📖 NVIDIA Agentic AI Guide](https://developer.nvidia.com/blog/introduction-to-ai-agents/)** - Introduction to AI agent concepts and patterns
+**[📖 NVIDIA Agentic AI Guide](https://www.nvidia.com/en-us/glossary/ai-agents/)** - Introduction to AI agent concepts and patterns
 
 ## Agent Design Patterns
 

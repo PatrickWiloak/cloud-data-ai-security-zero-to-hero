@@ -379,7 +379,7 @@ gcloud logging read "severity>=ERROR" --limit 20 --format="table(timestamp, reso
 
 ## Additional Resources
 
-- [GCP Troubleshooting Documentation](https://cloud.google.com/docs/troubleshooting)
+- [GCP Troubleshooting Documentation](https://docs.cloud.google.com/support/docs)
 - [Google Cloud Status Dashboard](https://status.cloud.google.com/)
 - [GCP Quotas and Limits](https://cloud.google.com/docs/quota)
 - [GCP Error Reporting](https://cloud.google.com/error-reporting/docs)

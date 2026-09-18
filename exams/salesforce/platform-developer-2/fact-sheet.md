@@ -16,7 +16,7 @@ last-updated: 2026-05-03
 **[Apex Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/)**
 **[Apex Reference Guide](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/)**
 **[LWC Developer Guide](https://developer.salesforce.com/docs/component-library/documentation/en/lwc)**
-**[Integration Patterns Guide](https://architect.salesforce.com/decision-guides/integration-patterns)**
+**[Integration Patterns Guide](https://architect.salesforce.com/docs/architect/fundamentals/guide/integration-patterns.html)**
 **[REST API Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/)**
 
 ---

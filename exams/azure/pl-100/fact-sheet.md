@@ -50,11 +50,11 @@ The Microsoft Power Platform App Maker Associate (PL-100) certification validate
 
 **[📖 Power Pages Overview](https://learn.microsoft.com/en-us/power-pages/introduction)** - External-facing websites and portals
 
-**[📖 Mixed App Scenarios](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/embed-model-driven-app-in-teams)** - Combining canvas and model-driven components
+**[📖 Mixed App Scenarios](https://learn.microsoft.com/en-us/power-apps/teams/overview)** - Combining canvas and model-driven components
 
 ### User Experience Design
 
-**[📖 App Design Principles](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/design-apps)** - Create intuitive user interfaces
+**[📖 App Design Principles](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/getting-started)** - Create intuitive user interfaces
 
 **[📖 Accessibility in Power Apps](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/accessible-apps)** - Design for all users
 
@@ -152,7 +152,7 @@ The Microsoft Power Platform App Maker Associate (PL-100) certification validate
 
 **[📖 Data Loss Prevention Policies](https://learn.microsoft.com/en-us/power-platform/admin/wp-data-loss-prevention)** - Control connector usage
 
-**[📖 App Settings and Properties](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/customize-app)** - Configure app metadata
+**[📖 App Settings and Properties](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/getting-started)** - Configure app metadata
 
 ---
 
@@ -220,7 +220,7 @@ The Microsoft Power Platform App Maker Associate (PL-100) certification validate
 
 **[📖 Approval Workflows](https://learn.microsoft.com/en-us/power-automate/get-started-approvals)** - Build approval processes
 
-**[📖 Flow Input and Output Parameters](https://learn.microsoft.com/en-us/power-automate/create-api-app)** - Pass data between apps and flows
+**[📖 Flow Input and Output Parameters](https://learn.microsoft.com/en-us/power-automate/triggers-introduction)** - Pass data between apps and flows
 
 ### Business Process Flows
 
@@ -480,7 +480,7 @@ The Microsoft Power Platform App Maker Associate (PL-100) certification validate
 
 **[📖 Power Apps Community](https://community.powerplatform.com/)** - Forums, samples, and discussions
 
-**[📖 App in a Day Workshop](https://github.com/microsoft/PowerApps-Samples/tree/master/learning-materials/instructor-led-training)** - Hands-on training materials
+**[📖 App in a Day Workshop](https://github.com/microsoft/PowerApps-Samples)** - Hands-on training materials
 
 **[📖 Power Apps Samples](https://github.com/microsoft/PowerApps-Samples)** - Official code samples
 

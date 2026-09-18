@@ -41,7 +41,7 @@ Documents -> Chunking -> Embedding -> Vector Store -> Retrieval -> LLM Generatio
 
 ### 2. Chunking Strategies
 
-**[📖 Chunking](https://docs.databricks.com/en/generative-ai/tutorials/ai-cookbook/quality-iteration/chunking.html)** - Chunking approaches
+**[📖 Chunking](https://docs.databricks.com/aws/en/agents/retrieval-augmented-generation)** - Chunking approaches
 
 | Strategy | How It Works | Pros | Cons |
 |----------|-------------|------|------|
@@ -114,6 +114,6 @@ Documents -> Chunking -> Embedding -> Vector Store -> Retrieval -> LLM Generatio
 |-------|------|
 | RAG Overview | [docs.databricks.com/en/generative-ai/retrieval-augmented-generation.html](https://docs.databricks.com/en/generative-ai/retrieval-augmented-generation.html) |
 | AI Cookbook | [docs.databricks.com/en/generative-ai/tutorials/ai-cookbook/index.html](https://docs.databricks.com/en/generative-ai/tutorials/ai-cookbook/index.html) |
-| Chunking | [docs.databricks.com/en/generative-ai/tutorials/ai-cookbook/quality-iteration/chunking.html](https://docs.databricks.com/en/generative-ai/tutorials/ai-cookbook/quality-iteration/chunking.html) |
+| Chunking | [docs.databricks.com/en/generative-ai/tutorials/ai-cookbook/quality-iteration/chunking.html](https://docs.databricks.com/aws/en/agents/retrieval-augmented-generation) |
 | Vector Search | [docs.databricks.com/en/generative-ai/vector-search.html](https://docs.databricks.com/en/generative-ai/vector-search.html) |
 | Foundation Models | [docs.databricks.com/en/machine-learning/foundation-models/index.html](https://docs.databricks.com/en/machine-learning/foundation-models/index.html) |

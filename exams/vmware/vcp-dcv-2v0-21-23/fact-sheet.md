@@ -12,7 +12,7 @@ last-updated: 2026-05-03
 **Passing Score:** 300 / 500
 **Cost:** $250 USD
 
-**[Official 2V0-21.23 Exam Prep Guide](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/certification/vmw-vcp-dcv-2024-exam-prep-guide.pdf)**
+**[Official 2V0-21.23 Exam Prep Guide](https://www.broadcom.com/support/education/vmware/certification)**
 **[VMware Configuration Maximums Tool](https://configmax.broadcom.com/)** - authoritative source for all maximums
 **[VMware Compatibility Guide](https://compatibilityguide.broadcom.com/)** - HCL
 

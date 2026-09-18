@@ -48,7 +48,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 **[📖 Azure AI Services Virtual Networks](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-virtual-networks)** - Configure VNet and firewall rules for secure access
 
-**[📖 Azure Private Link for AI Services](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-private-link)** - Secure connectivity using private endpoints
+**[📖 Azure Private Link for AI Services](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-virtual-networks)** - Secure connectivity using private endpoints
 
 **[📖 Azure AI Services Managed Identities](https://learn.microsoft.com/en-us/azure/ai-services/authentication#authenticate-with-managed-identities)** - Use managed identities for secure authentication without credentials
 
@@ -56,7 +56,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 **[📖 Monitor Azure AI Services](https://learn.microsoft.com/en-us/azure/ai-services/diagnostic-logging)** - Enable diagnostic logging and monitoring for AI services
 
-**[📖 Azure Monitor for AI Services](https://learn.microsoft.com/en-us/azure/ai-services/monitor-cognitive-services)** - Monitor metrics, logs, and set up alerts
+**[📖 Azure Monitor for AI Services](https://learn.microsoft.com/en-us/azure/ai-services/diagnostic-logging)** - Monitor metrics, logs, and set up alerts
 
 **[📖 Application Insights Integration](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)** - Track AI service usage and performance with Application Insights
 
@@ -66,7 +66,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 **[📖 Responsible AI Principles](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai)** - Microsoft's principles for responsible AI development
 
-**[📖 Transparency Notes for AI Services](https://learn.microsoft.com/en-us/azure/ai-services/transparency-note-overview)** - Transparency documentation for understanding AI capabilities and limitations
+**[📖 Transparency Notes for AI Services](https://learn.microsoft.com/en-us/azure/foundry/responsible-use-of-ai-overview)** - Transparency documentation for understanding AI capabilities and limitations
 
 **[📖 Limited Access Features](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-limited-access)** - Understanding restricted features requiring application approval
 
@@ -148,7 +148,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 **[📖 Video Indexer Upload and Index](https://learn.microsoft.com/en-us/azure/azure-video-indexer/upload-index-videos)** - Upload videos and extract insights automatically
 
-**[📖 Video Insights](https://learn.microsoft.com/en-us/azure/azure-video-indexer/video-indexer-output-json-v2)** - Extract faces, keywords, topics, emotions, brands, and more
+**[📖 Video Insights](https://learn.microsoft.com/en-us/azure/azure-video-indexer/insights-overview)** - Extract faces, keywords, topics, emotions, brands, and more
 
 **[📖 Video Indexer API](https://learn.microsoft.com/en-us/azure/azure-video-indexer/video-indexer-use-apis)** - Programmatic access to video indexing capabilities
 
@@ -196,11 +196,11 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 **[📖 LUIS Entities](https://learn.microsoft.com/en-us/azure/ai-services/luis/concepts/entities)** - Extract data from user utterances using entity types
 
-**[📖 LUIS Patterns](https://learn.microsoft.com/en-us/azure/ai-services/luis/concepts/patterns)** - Use patterns to improve prediction accuracy with fewer examples
+**[📖 LUIS Patterns](https://learn.microsoft.com/en-us/azure/ai-services/language-service/conversational-language-understanding/overview)** - Use patterns to improve prediction accuracy with fewer examples
 
-**[📖 LUIS Features](https://learn.microsoft.com/en-us/azure/ai-services/luis/concepts/features)** - Phrase lists and model features to improve understanding
+**[📖 LUIS Features](https://learn.microsoft.com/en-us/azure/ai-services/language-service/conversational-language-understanding/overview)** - Phrase lists and model features to improve understanding
 
-**[📖 LUIS Best Practices](https://learn.microsoft.com/en-us/azure/ai-services/luis/concepts/best-practices)** - Design effective LUIS apps with quality training data
+**[📖 LUIS Best Practices](https://learn.microsoft.com/en-us/azure/ai-services/language-service/conversational-language-understanding/concepts/best-practices)** - Design effective LUIS apps with quality training data
 
 **[📖 Migrate from LUIS to CLU](https://learn.microsoft.com/en-us/azure/ai-services/language-service/conversational-language-understanding/how-to/migrate-from-luis)** - Migration guide from LUIS to Conversational Language Understanding
 
@@ -348,7 +348,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 **[📖 Azure OpenAI Quotas and Limits](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits)** - Token limits, rate limits, and model availability
 
-**[📖 Azure OpenAI Tokens](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/tokens)** - Understanding token usage and counting
+**[📖 Azure OpenAI Tokens](https://learn.microsoft.com/en-us/agent-framework/journey/llm-fundamentals)** - Understanding token usage and counting
 
 **[📖 Function Calling](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/function-calling)** - Enable models to call external functions and APIs
 
@@ -410,7 +410,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 **[📖 Configure Virtual Networks](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-virtual-networks)** - Secure AI services with VNet integration
 
-**[📖 Private Endpoints](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-private-link)** - Access services over private network connection
+**[📖 Private Endpoints](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-virtual-networks)** - Access services over private network connection
 
 **[📖 Configure Firewalls](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-virtual-networks#configure-network-access)** - Restrict access by IP address ranges
 
@@ -418,7 +418,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 **[📖 Data Encryption at Rest](https://learn.microsoft.com/en-us/azure/ai-services/encryption/cognitive-services-encryption-keys-portal)** - Customer-managed keys for data encryption
 
-**[📖 Data Residency](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-data-residency)** - Control where your data is processed and stored
+**[📖 Data Residency](https://learn.microsoft.com/en-us/azure/ai-services/security-features)** - Control where your data is processed and stored
 
 **[📖 Customer-Managed Keys](https://learn.microsoft.com/en-us/azure/ai-services/encryption/cognitive-services-encryption-keys-portal)** - Use Azure Key Vault for encryption key management
 
@@ -440,7 +440,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 ### Performance Optimization
 
-**[📖 Rate Limits and Throttling](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-apis-throttling)** - Understanding and handling service rate limits
+**[📖 Rate Limits and Throttling](https://learn.microsoft.com/en-us/azure/foundry/openai/quotas-limits)** - Understanding and handling service rate limits
 
 **[📖 Batch Processing](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-batch-analysis)** - Process multiple documents efficiently
 
@@ -448,7 +448,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 ### Cost Optimization
 
-**[📖 Choose Right Pricing Tier](https://learn.microsoft.com/en-us/azure/ai-services/cost-management)** - Select appropriate tier based on usage patterns
+**[📖 Choose Right Pricing Tier](https://learn.microsoft.com/en-us/azure/foundry-classic/how-to/costs-plan-manage)** - Select appropriate tier based on usage patterns
 
 **[📖 Cost Management](https://learn.microsoft.com/en-us/azure/ai-services/plan-manage-costs)** - Monitor and optimize AI services costs
 

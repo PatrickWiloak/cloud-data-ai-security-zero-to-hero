@@ -31,7 +31,7 @@ The **Cloud Digital Leader** certification validates your ability to articulate 
 
 **[📖 Google Cloud Overview](https://cloud.google.com/docs/overview)** - Comprehensive overview of Google Cloud Platform's infrastructure, products, and global presence.
 
-**[📖 Total Cost of Ownership (TCO)](https://cloud.google.com/architecture/framework/cost-optimization/tco)** - Understanding how cloud computing reduces total cost compared to on-premises infrastructure.
+**[📖 Total Cost of Ownership (TCO)](https://docs.cloud.google.com/architecture/framework/cost-optimization)** - Understanding how cloud computing reduces total cost compared to on-premises infrastructure.
 
 **[📖 CapEx vs OpEx](https://cloud.google.com/learn/what-is-capex-vs-opex)** - Shifting from capital expenditure to operational expenditure model in cloud computing.
 
@@ -97,7 +97,7 @@ The **Cloud Digital Leader** certification validates your ability to articulate 
 
 **[📖 Vertex AI Platform](https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform)** - Unified platform for building, deploying, and scaling machine learning models with MLOps.
 
-**[📖 AutoML](https://cloud.google.com/automl/docs)** - Train high-quality custom machine learning models with minimal ML expertise required.
+**[📖 AutoML](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning)** - Train high-quality custom machine learning models with minimal ML expertise required.
 
 **[📖 Vision AI](https://docs.cloud.google.com/vision/docs)** - Derive insights from images with pre-trained or custom machine learning models.
 
@@ -263,7 +263,7 @@ The **Cloud Digital Leader** certification validates your ability to articulate 
 
 **[📖 Exam Guide PDF](https://cloud.google.com/learn/certification/guides/cloud-digital-leader)** - Detailed breakdown of exam sections, topics, and skills assessed.
 
-**[📖 Sample Questions](https://docs.google.com/forms/d/e/1FAIpQLSfEmpMsyY_3wB7TKLyFQ3oKHNhK9sKhMzKHVpAp-h0-kpFPLA/viewform)** - Official practice questions to familiarize yourself with question format and difficulty.
+**[📖 Sample Questions](https://cloud.google.com/learn/certification/cloud-digital-leader)** - Official practice questions to familiarize yourself with question format and difficulty.
 
 **[📖 Cloud Skills Boost Learning Path](https://www.cloudskillsboost.google/paths/9)** - Curated learning path with courses, labs, and skill badges.
 

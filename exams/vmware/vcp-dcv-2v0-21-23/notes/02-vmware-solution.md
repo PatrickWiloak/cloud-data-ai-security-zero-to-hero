@@ -95,6 +95,6 @@ are common.
 
 ## Official documentation
 
-**[📖 vSphere availability](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere.html)** - HA, FT, and DRS reference
-**[📖 vSAN documentation](https://techdocs.broadcom.com/us/en/vmware-cis/vsan.html)** - architecture and policies
-**[📖 vCenter Server installation and setup](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere.html)** - VCSA deployment
+**[📖 vSphere availability](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html)** - HA, FT, and DRS reference
+**[📖 vSAN documentation](https://techdocs.broadcom.com/us/en/vmware-cis/vsan/vsan/8-0.html)** - architecture and policies
+**[📖 vCenter Server installation and setup](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html)** - VCSA deployment

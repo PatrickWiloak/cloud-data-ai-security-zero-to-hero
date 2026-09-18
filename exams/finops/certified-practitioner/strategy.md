@@ -82,14 +82,14 @@
    - Memorize key terminology and definitions
 
 **Resources:**
-- **[📖 FinOps Stories](https://www.finops.org/stories/)** - Real-world case studies
+- **[📖 FinOps Stories](https://www.finops.org/insights/)** - Real-world case studies
 - **[📖 FinOps Community](https://www.finops.org/community/)** - Community discussions
 - **[📖 FinOps Landscape](https://www.finops.org/landscape/)** - Tool ecosystem overview
 
 ## Study Resources
 
 ### Official Resources
-- **[📖 FinOps Certified Practitioner Course](https://learn.finops.org/path/finops-certified-practitioner)** - Official self-paced training
+- **[📖 FinOps Certified Practitioner Course](https://learn.finops.org/)** - Official self-paced training
 - **[📖 FinOps Framework Documentation](https://www.finops.org/framework/)** - Complete framework
 - **[📖 FinOps Foundation YouTube](https://www.youtube.com/@FinOpsFoundation)** - Webinars and talks
 

@@ -13,7 +13,7 @@
 
 ## Question Types
 
-**[📖 Exam Duration and Question Types](https://learn.microsoft.com/en-us/certifications/exam-duration-question-types)** - Understand Microsoft certification exam formats
+**[📖 Exam Duration and Question Types](https://learn.microsoft.com/en-us/credentials/support/exam-duration-exam-experience)** - Understand Microsoft certification exam formats
 
 **Multiple Choice**: One correct answer
 **Multiple Select**: 2+ correct answers  

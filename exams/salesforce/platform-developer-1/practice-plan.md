@@ -11,7 +11,7 @@ You **cannot** pass PD1 without writing Apex by hand. Build at least 5-10 small 
 - [ ] Salesforce Developer Edition org (free, permanent)
 - [ ] Salesforce CLI (`sf`) + VS Code with Salesforce Extensions Pack
 - [ ] [Trailhead PD1 Trailmix](https://trailhead.salesforce.com/users/strailhead/trailmixes/prepare-for-your-salesforce-platform-developer-i-credential)
-- [ ] [Apex Specialist Superbadge](https://trailhead.salesforce.com/content/learn/superbadges/superbadge_apex)
+- [ ] [Apex Specialist Superbadge](https://trailhead.salesforce.com/credentials/platformdeveloperi)
 
 ---
 

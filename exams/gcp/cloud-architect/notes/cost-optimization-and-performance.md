@@ -2437,7 +2437,7 @@ resource "google_compute_reservation" "cpu_reservation" {
 
 ### Performance and Optimization
 - [Cloud Architecture Center](https://cloud.google.com/architecture)
-- [Performance Testing Guide](https://cloud.google.com/architecture/framework/performance-optimization/test-performance)
+- [Performance Testing Guide](https://docs.cloud.google.com/architecture/framework/performance-optimization)
 - [Database Best Practices](https://cloud.google.com/sql/docs/postgres/best-practices)
 - [BigQuery Best Practices](https://cloud.google.com/bigquery/docs/best-practices-performance-overview)
 - [Compute Engine Best Practices](https://cloud.google.com/compute/docs/tutorials)

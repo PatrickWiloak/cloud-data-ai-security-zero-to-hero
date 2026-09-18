@@ -89,7 +89,7 @@
 ### Official GitHub Resources
 - **[Copilot Documentation](https://docs.github.com/en/copilot)** - Complete docs
 - **[Copilot Trust Center](https://resources.github.com/copilot-trust-center/)** - Security and privacy
-- **[Copilot Learning Pathway](https://resources.github.com/learn/pathways/copilot/)** - Curated path
+- **[Copilot Learning Pathway](https://learn.github.com/learning-pathways)** - Curated path
 - **[GitHub Blog - Copilot tag](https://github.blog/tag/github-copilot/)** - New features
 - **[GitHub Skills](https://skills.github.com/)** - Hands-on courses
 

@@ -26,7 +26,7 @@ The **[📖 AZ-400: Designing and Implementing Microsoft DevOps Solutions](https
 
 **[📖 DevOps Overview](https://learn.microsoft.com/en-us/devops/what-is-devops)** - Comprehensive introduction to DevOps principles and practices
 
-**[📖 DevOps Culture](https://learn.microsoft.com/en-us/devops/plan/how-to-build-a-devops-culture)** - Building and fostering DevOps culture in organizations
+**[📖 DevOps Culture](https://learn.microsoft.com/en-us/devops/what-is-devops)** - Building and fostering DevOps culture in organizations
 
 **[📖 Agile Practices](https://learn.microsoft.com/en-us/devops/plan/what-is-agile)** - Agile methodologies and their integration with DevOps
 
@@ -48,7 +48,7 @@ The **[📖 AZ-400: Designing and Implementing Microsoft DevOps Solutions](https
 
 ### Metrics and KPIs
 
-**[📖 DevOps Metrics](https://learn.microsoft.com/en-us/devops/plan/what-are-devops-metrics)** - Key performance indicators for DevOps success
+**[📖 DevOps Metrics](https://learn.microsoft.com/en-us/devops/operate/what-is-monitoring)** - Key performance indicators for DevOps success
 
 **[📖 Azure DevOps Analytics](https://learn.microsoft.com/en-us/azure/devops/report/dashboards/overview)** - Analytics and reporting capabilities
 
@@ -224,7 +224,7 @@ The **[📖 AZ-400: Designing and Implementing Microsoft DevOps Solutions](https
 
 **[📖 Terraform on Azure](https://learn.microsoft.com/en-us/azure/developer/terraform/overview)** - Using Terraform with Azure
 
-**[📖 Terraform in Azure Pipelines](https://learn.microsoft.com/en-us/azure/developer/terraform/deploy-azure-pipelines)** - CI/CD with Terraform
+**[📖 Terraform in Azure Pipelines](https://learn.microsoft.com/en-us/azure/developer/terraform/overview)** - CI/CD with Terraform
 
 **[📖 Terraform Backends](https://learn.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage)** - Remote state in Azure Storage
 
@@ -234,7 +234,7 @@ The **[📖 AZ-400: Designing and Implementing Microsoft DevOps Solutions](https
 
 ### Package Management and Versioning
 
-**[📖 Semantic Versioning](https://learn.microsoft.com/en-us/azure/devops/artifacts/concepts/package-versioning)** - Version management strategies
+**[📖 Semantic Versioning](https://learn.microsoft.com/en-us/azure/devops/artifacts/concepts/best-practices)** - Version management strategies
 
 **[📖 Azure Artifacts Overview](https://learn.microsoft.com/en-us/azure/devops/artifacts/start-using-azure-artifacts)** - Getting started with Azure Artifacts
 
@@ -274,7 +274,7 @@ The **[📖 AZ-400: Designing and Implementing Microsoft DevOps Solutions](https
 
 **[📖 CodeQL](https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql)** - Semantic code analysis engine
 
-**[📖 SonarCloud Integration](https://learn.microsoft.com/en-us/azure/devops/pipelines/ecosystems/sonarcloud)** - Code quality and security analysis
+**[📖 SonarCloud Integration](https://docs.sonarsource.com/sonarqube-cloud/getting-started/azure-devops)** - Code quality and security analysis
 
 **[📖 Dependency Scanning](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review)** - Supply chain security
 

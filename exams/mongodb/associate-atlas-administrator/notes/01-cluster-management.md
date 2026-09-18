@@ -55,7 +55,7 @@
 
 ## Multi-Cloud Deployments
 
-**[📖 Multi-Cloud Clusters](https://www.mongodb.com/docs/atlas/cluster-config/multi-cloud-multi-region/)** - Multi-cloud configuration
+**[📖 Multi-Cloud Clusters](https://www.mongodb.com/docs/atlas/cluster-config/multi-cloud-distribution/)** - Multi-cloud configuration
 
 ### Multi-Region Configuration
 - Deploy replica set members across multiple regions

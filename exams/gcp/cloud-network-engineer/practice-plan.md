@@ -373,7 +373,7 @@ gcloud compute routers add-bgp-peer ROUTER --peer-name=PEER --peer-asn=ASN
 
 ### Official Google Cloud Resources
 - **[Networking Best Practices](https://cloud.google.com/architecture/best-practices-vpc-design)**
-- **[Hybrid Connectivity Patterns](https://cloud.google.com/architecture/hybrid-connectivity)**
+- **[Hybrid Connectivity Patterns](https://docs.cloud.google.com/architecture/hybrid-multicloud-secure-networking-patterns)**
 - **[VPC Documentation](https://cloud.google.com/vpc/docs)**
 - **[Load Balancing Guide](https://cloud.google.com/load-balancing/docs)**
 

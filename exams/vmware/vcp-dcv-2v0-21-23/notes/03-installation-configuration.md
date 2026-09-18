@@ -81,6 +81,6 @@ VMware Tools being installed, which is the trade-off the exam tests.
 
 ## Official documentation
 
-**[📖 vSphere installation and setup](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere.html)** - ESXi and vCenter deployment
-**[📖 vSphere networking](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere.html)** - switches, port groups, policies
+**[📖 vSphere installation and setup](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html)** - ESXi and vCenter deployment
+**[📖 vSphere networking](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html)** - switches, port groups, policies
 **[📖 VMware Compatibility Guide](https://compatibilityguide.broadcom.com/)** - supported hardware

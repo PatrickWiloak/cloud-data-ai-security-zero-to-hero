@@ -467,7 +467,7 @@ exam-retires: 2025-04-15
 - **HIPAA eligible** - Healthcare workloads
 - **PCI DSS** - Payment card data
 - **SOC, ISO, FedRAMP** - Various compliance programs
-- **[📖 SageMaker Compliance](https://aws.amazon.com/sagemaker/compliance/)**
+- **[📖 SageMaker Compliance](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-compliance.html)**
 
 ### Cost Optimization
 
@@ -666,7 +666,7 @@ exam-retires: 2025-04-15
 ## Recommended Resources
 
 ### Official AWS Training
-- **[Exam Readiness: AWS Certified Machine Learning - Specialty](https://explore.skillbuilder.aws/learn/course/external/view/elearning/27/exam-readiness-aws-certified-machine-learning-specialty)** - FREE on AWS Skill Builder
+- **[Exam Readiness: AWS Certified Machine Learning - Specialty](https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/)** - FREE on AWS Skill Builder
 
 ### Practice Exams
 - **AWS Official Practice Exam** - $40 (highly recommended)

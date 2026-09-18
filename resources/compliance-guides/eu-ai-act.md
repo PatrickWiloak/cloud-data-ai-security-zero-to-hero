@@ -170,6 +170,6 @@ No provider makes you compliant. They supply evidence and controls you assemble 
 **[📖 Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)** - full official text with annexes
 **[📖 European Commission: regulatory framework for AI](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)** - guidance, implementing acts, and the GPAI code of practice
 **[📖 EU AI Act Explorer](https://artificialintelligenceact.eu/)** - article browser and compliance checker
-**[📖 AWS EU AI Act guidance](https://aws.amazon.com/compliance/eu-ai-act/)** - shared responsibility view
+**[📖 AWS EU AI Act guidance](https://aws.amazon.com/ai/responsible-ai/)** - shared responsibility view
 **[📖 Microsoft EU AI Act resources](https://www.microsoft.com/en-us/ai/responsible-ai)** - responsible AI standard and transparency notes
 **[📖 Google Cloud responsible AI](https://cloud.google.com/responsible-ai)** - model cards and governance tooling

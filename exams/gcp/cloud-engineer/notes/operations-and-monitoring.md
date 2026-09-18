@@ -103,7 +103,7 @@ This document covers Google Cloud operations, monitoring, and logging services i
 7. **Uptime Checks**: Monitor critical endpoints from multiple locations
 8. **Budget Alerts**: Set up billing alerts to avoid unexpected costs
 
-**[📖 Monitoring Best Practices](https://cloud.google.com/monitoring/docs/best-practices)** - Best practices for monitoring
+**[📖 Monitoring Best Practices](https://docs.cloud.google.com/monitoring/docs/monitoring-overview)** - Best practices for monitoring
 **[📖 SLO Monitoring](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring)** - Service level objective monitoring
 
 ### Cloud Logging Best Practices

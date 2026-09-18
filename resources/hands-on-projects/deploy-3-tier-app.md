@@ -312,4 +312,4 @@ Remove all resources when done to avoid charges:
 
 - [AWS Three-Tier Architecture](https://docs.aws.amazon.com/whitepapers/latest/serverless-multi-tier-architectures-api-gateway-lambda/three-tier-architecture-overview.html)
 - [Azure N-Tier Architecture](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/n-tier)
-- [GCP Three-Tier Web App](https://cloud.google.com/architecture/three-tier-web-app-deployment)
+- [GCP Three-Tier Web App](https://docs.cloud.google.com/architecture/web-serving-overview)

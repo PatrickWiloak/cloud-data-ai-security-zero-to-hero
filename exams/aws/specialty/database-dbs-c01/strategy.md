@@ -40,7 +40,7 @@
 - **[AWS Skill Builder](https://skillbuilder.aws/)** - Official exam prep course
 - **[DBS-C01 Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-database-specialty/AWS-Certified-Database-Specialty_Exam-Guide.pdf)** - Official exam guide
 - **[AWS Database Blog](https://aws.amazon.com/blogs/database/)** - Architecture patterns and best practices
-- **[AWS Well-Architected Database Pillar](https://docs.aws.amazon.com/wellarchitected/latest/database-pillar/welcome.html)** - Design principles
+- **[AWS Well-Architected Database Pillar](https://docs.aws.amazon.com/decision-guides/latest/decision-guides/databases-on-aws-how-to-choose.html)** - Design principles
 
 ### Hands-On Practice
 - Deploy RDS Multi-AZ and test failover

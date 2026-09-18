@@ -101,7 +101,7 @@ This document covers Google Cloud networking and security fundamentals including
 7. **VPC Flow Logs**: Enable for network monitoring and troubleshooting
 8. **Cloud NAT**: Use for secure outbound internet access
 
-**[📖 VPC Best Practices](https://cloud.google.com/vpc/docs/best-practices)** - VPC network design best practices
+**[📖 VPC Best Practices](https://docs.cloud.google.com/architecture/best-practices-vpc-design)** - VPC network design best practices
 **[📖 Shared VPC](https://cloud.google.com/vpc/docs/shared-vpc)** - Centralized network management
 
 ### Firewall Rules Best Practices

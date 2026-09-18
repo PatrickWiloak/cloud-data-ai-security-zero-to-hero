@@ -509,7 +509,7 @@ This domain focuses on selecting cost-effective resources and architectures.
 
 **Official AWS Training:**
 **📖 [AWS Skill Builder](https://skillbuilder.aws/)** - Free AWS training
-**📖 [Exam Prep: Solutions Architect Associate](https://explore.skillbuilder.aws/learn/course/external/view/elearning/125/exam-prep-aws-certified-solutions-architect-associate-saa-c03)** - Official exam prep course
+**📖 [Exam Prep: Solutions Architect Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)** - Official exam prep course
 
 **Popular Courses:**
 - Stephane Maarek's AWS SAA course (Udemy) - Comprehensive

@@ -46,7 +46,7 @@ last-updated: 2026-05-03
 - Code generation (Codey models)
 - Context window: 8,192 tokens
 - **[📖 PaLM API Documentation](https://cloud.google.com/vertex-ai/docs/generative-ai/model-reference/text)** - API reference
-- **[📖 PaLM Best Practices](https://cloud.google.com/vertex-ai/docs/generative-ai/learn/best-practices)** - Optimization guide
+- **[📖 PaLM Best Practices](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/prompts/introduction-prompt-design)** - Optimization guide
 
 **Gemini Models**
 - Gemini Pro: Advanced reasoning and understanding

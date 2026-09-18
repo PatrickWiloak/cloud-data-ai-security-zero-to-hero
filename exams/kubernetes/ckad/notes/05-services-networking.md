@@ -168,7 +168,7 @@ kubectl run test --image=busybox:1.36 --rm -it -- nslookup backend-svc
 
 **[📖 Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)** - Ingress concepts
 **[📖 Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)** - Available controllers
-**[📖 Set up Ingress on Minikube](https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/)** - Practical Ingress tutorial
+**[📖 Set up Ingress on Minikube](https://kubernetes.io/docs/concepts/services-networking/ingress/)** - Practical Ingress tutorial
 
 ### What is Ingress?
 Ingress manages external HTTP/HTTPS access to Services in the cluster. It provides:

@@ -93,6 +93,6 @@ is directly examined.
 
 ## Official documentation
 
-**[📖 vSphere troubleshooting](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere.html)** - diagnostic procedures
-**[📖 ESXi log file locations](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere.html)** - log reference
+**[📖 vSphere troubleshooting](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html)** - diagnostic procedures
+**[📖 ESXi log file locations](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html)** - log reference
 **[📖 Broadcom support knowledge base](https://knowledge.broadcom.com/)** - specific error resolution

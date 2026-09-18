@@ -90,5 +90,5 @@ high-frequency versus interval-limited.
 ## Official documentation
 
 **[📖 ENCOR 350-401 exam topics](https://learningnetwork.cisco.com/s/encor-exam-topics)** - authoritative blueprint
-**[📖 Flexible NetFlow configuration guide](https://www.cisco.com/c/en/us/support/ios-nx-os-software/flexible-netflow/series.html)** - records, monitors, exporters
+**[📖 Flexible NetFlow configuration guide](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/fnetflow/configuration/xe-16/fnf-xe-16-book.html)** - records, monitors, exporters
 **[📖 Model-driven telemetry](https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-xe-17/series.html)** - YANG, NETCONF, gNMI

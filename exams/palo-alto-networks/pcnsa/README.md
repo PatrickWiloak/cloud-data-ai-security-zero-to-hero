@@ -26,7 +26,7 @@ Unlike legacy port-based firewalls, Palo Alto Networks NGFWs classify traffic wi
 | **Prerequisites** | None formally; PCCET or basic networking recommended |
 | **Recommended Course** | EDU-210 Firewall Essentials: Configuration and Management |
 
-**[Official PCNSA page](https://www.paloaltonetworks.com/services/education/certification/pcnsa)**
+**[Official PCNSA page](https://www.paloaltonetworks.com/services/education/certification)**
 **[PAN-OS TechDocs](https://docs.paloaltonetworks.com/pan-os)**
 
 ---

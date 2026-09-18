@@ -18,13 +18,13 @@ last-updated: 2026-05-03
 ## Official Documentation Links
 
 ### Architecture and Design
-- **[📖 OCI Architecture Framework](https://docs.oracle.com/en-us/iaas/Content/cloud-adoption-framework/overview.htm)**
-- **[📖 Well-Architected Framework](https://docs.oracle.com/en-us/iaas/Content/cloud-adoption-framework/well-architected-framework.htm)**
+- **[📖 OCI Architecture Framework](https://docs.oracle.com/en/solutions/oci-best-practices/)**
+- **[📖 Well-Architected Framework](https://docs.oracle.com/en/solutions/oci-best-practices/)**
 - **[📖 Architecture Center](https://docs.oracle.com/solutions/?product=en/cloud/paas/oci)**
 - **[📖 Reference Architectures](https://docs.oracle.com/solutions/?q=&cType=reference-architectures&product=en/cloud/paas/oci)**
 - **[📖 Cloud Adoption Framework](https://docs.oracle.com/en-us/iaas/Content/cloud-adoption-framework/home.htm)**
-- **[📖 Design Patterns](https://docs.oracle.com/en/solutions/design-patterns/)**
-- **[📖 Migration Strategies](https://docs.oracle.com/en-us/iaas/Content/cloud-adoption-framework/migration-strategies.htm)**
+- **[📖 Design Patterns](https://docs.oracle.com/solutions/)**
+- **[📖 Migration Strategies](https://docs.oracle.com/en-us/iaas/Content/cloud-migration/home.htm)**
 
 ### Advanced Networking
 - **[📖 VCN Advanced Topics](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)**
@@ -41,9 +41,9 @@ last-updated: 2026-05-03
 - **[📖 Network Firewall](https://docs.oracle.com/en-us/iaas/Content/network-firewall/overview.htm)**
 
 ### High Availability and Disaster Recovery
-- **[📖 HA and DR Overview](https://docs.oracle.com/en-us/iaas/Content/DisasterRecovery/Concepts/overview.htm)**
+- **[📖 HA and DR Overview](https://docs.oracle.com/en-us/iaas/disaster-recovery/index.html)**
 - **[📖 Full Stack Disaster Recovery](https://docs.oracle.com/en-us/iaas/disaster-recovery/index.html)**
-- **[📖 Multi-Region Architecture](https://docs.oracle.com/en/solutions/multi-region-dr/)**
+- **[📖 Multi-Region Architecture](https://docs.oracle.com/en/solutions/design-dr/)**
 - **[📖 Backup and Recovery](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/blockvolumebackups.htm)**
 - **[📖 Cross-Region Backup](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/copyingvolumebackupcrossregion.htm)**
 - **[📖 Cross-Region Replication](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/volumereplication.htm)**
@@ -52,16 +52,16 @@ last-updated: 2026-05-03
 - **[📖 Autonomous Database Dedicated](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/adbddoverview.htm)**
 - **[📖 Autonomous Container Database](https://docs.oracle.com/en-us/iaas/autonomous-database/doc/autonomous-container-database.html)**
 - **[📖 Exadata Cloud Service](https://docs.oracle.com/en-us/iaas/exadata/index.html)**
-- **[📖 Data Guard Configuration](https://docs.oracle.com/en-us/iaas/Content/Database/Tasks/configuringdataguard.htm)**
-- **[📖 Active Data Guard](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/dg_plus.htm)**
+- **[📖 Data Guard Configuration](https://docs.oracle.com/en/cloud/paas/base-database/data-guard/index.html)**
+- **[📖 Active Data Guard](https://docs.oracle.com/en/cloud/paas/base-database/data-guard/index.html)**
 - **[📖 GoldenGate](https://docs.oracle.com/en/middleware/goldengate/core/19.1/index.html)**
 - **[📖 Database Migration Service](https://docs.oracle.com/en-us/iaas/database-migration/index.html)**
 - **[📖 Zero Downtime Migration](https://www.oracle.com/database/zero-downtime-migration/)**
 
 ### Security and Compliance
 - **[📖 Security Best Practices](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/security_guide.htm)**
-- **[📖 Security Architecture](https://docs.oracle.com/en-us/iaas/Content/Security/Reference/security_architecture.htm)**
-- **[📖 Shared Security Model](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/sharedresponsibility.htm)**
+- **[📖 Security Architecture](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/security_guide.htm)**
+- **[📖 Shared Security Model](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/security_overview.htm)**
 - **[📖 Compliance](https://www.oracle.com/corporate/cloud-compliance/)**
 - **[📖 Cloud Guard Advanced](https://docs.oracle.com/en-us/iaas/cloud-guard/using/index.htm)**
 - **[📖 Security Zones](https://docs.oracle.com/en-us/iaas/security-zone/using/security-zones.htm)**
@@ -82,20 +82,20 @@ last-updated: 2026-05-03
 ### Performance and Optimization
 - **[📖 Performance Tuning Guide](https://docs.oracle.com/en-us/iaas/Content/Compute/References/bestpracticescompute.htm)**
 - **[📖 Block Volume Performance](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/blockvolumeperformance.htm)**
-- **[📖 Network Performance](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/networkingperformance.htm)**
-- **[📖 Database Performance](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/dg_performance.htm)**
+- **[📖 Network Performance](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)**
+- **[📖 Database Performance](https://docs.oracle.com/en-us/iaas/Content/Database/home.htm)**
 - **[📖 Compute Performance](https://docs.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm)**
 
 ### Infrastructure as Code
 - **[📖 Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/home.htm)**
 - **[📖 Terraform OCI Provider](https://registry.terraform.io/providers/oracle/oci/latest/docs)**
-- **[📖 Resource Manager Best Practices](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/bestpractices.htm)**
+- **[📖 Resource Manager Best Practices](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm)**
 - **[📖 Ansible OCI Collection](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/ansible.htm)**
 - **[📖 OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)**
 - **[📖 OCI SDKs](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm)**
 
 ### Observability and Monitoring
-- **[📖 Observability Overview](https://docs.oracle.com/en-us/iaas/Content/Observability/home.htm)**
+- **[📖 Observability Overview](https://docs.oracle.com/en-us/iaas/Content/Monitoring/home.htm)**
 - **[📖 Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)**
 - **[📖 Logging Analytics](https://docs.oracle.com/en-us/iaas/logging-analytics/index.html)**
 - **[📖 Operations Insights](https://docs.oracle.com/en-us/iaas/operations-insights/index.html)**
@@ -113,16 +113,16 @@ last-updated: 2026-05-03
 ### Cost Management and Governance
 - **[📖 Cost Analysis Advanced](https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/costanalysisoverview.htm)**
 - **[📖 Usage Reports](https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/usagereportsoverview.htm)**
-- **[📖 Cost Tracking Tags](https://docs.oracle.com/en-us/iaas/Content/Tagging/Tasks/managingcosts.htm)**
+- **[📖 Cost Tracking Tags](https://docs.oracle.com/en-us/iaas/Content/Tagging/Concepts/taggingoverview.htm)**
 - **[📖 Budgets and Alerts](https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/budgetsoverview.htm)**
 - **[📖 Governance Framework](https://docs.oracle.com/en-us/iaas/Content/cloud-adoption-framework/governance.htm)**
 - **[📖 Quota Management](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm)**
 
 ### Migration and Hybrid
-- **[📖 Cloud Migration Strategies](https://docs.oracle.com/en-us/iaas/Content/cloud-adoption-framework/migration-strategies.htm)**
+- **[📖 Cloud Migration Strategies](https://docs.oracle.com/en-us/iaas/Content/cloud-migration/home.htm)**
 - **[📖 Database Migration](https://docs.oracle.com/en-us/iaas/database-migration/index.html)**
 - **[📖 VMware Solution](https://docs.oracle.com/en-us/iaas/Content/VMware/Concepts/ocvsoverview.htm)**
-- **[📖 Hybrid Cloud Strategy](https://docs.oracle.com/en/solutions/hybrid-cloud-strategy/)**
+- **[📖 Hybrid Cloud Strategy](https://docs.oracle.com/en/solutions/learn-azure-oci-interconnect/)**
 - **[📖 Dedicated Region](https://docs.oracle.com/en-us/iaas/Content/dedicated/dedicated-region/dedicated-region-overview.htm)**
 
 ### Additional Resources
@@ -1512,7 +1512,7 @@ Examples:
 **Community:**
 - **[📖 OCI Cloud Coach YouTube](https://www.youtube.com/c/OCICloudCoach)**
 - **[📖 Oracle Cloud Blog](https://blogs.oracle.com/cloud-infrastructure/)**
-- **[📖 OCI Community Forums](https://community.oracle.com/customerconnect/categories/oci-oracle-cloud-infrastructure)**
+- **[📖 OCI Community Forums](https://community.oracle.com/customerconnect/)**
 
 ---
 

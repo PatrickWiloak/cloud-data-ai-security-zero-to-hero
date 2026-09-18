@@ -138,8 +138,8 @@ This 10-week plan is designed to systematically cover all exam domains with hand
 **👉 [Complete Azure Study Resources Guide](../../../.templates/resources-azure.md)**
 
 ### Quick Links (DP-600 Specific)
-- **[DP-600 Official Exam Page](https://learn.microsoft.com/en-us/certifications/exams/dp-600/)** - Registration and exam details
-- **[Microsoft Learn - DP-600 Learning Path](https://learn.microsoft.com/en-us/certifications/fabric-analytics-engineer-associate/)** - FREE official study path
+- **[DP-600 Official Exam Page](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/)** - Registration and exam details
+- **[Microsoft Learn - DP-600 Learning Path](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/)** - FREE official study path
 - **[Azure Documentation](https://docs.microsoft.com/en-us/azure/)** - Complete Azure documentation
 - **[Azure Free Account](https://azure.microsoft.com/en-us/free/)** - $200 free credit for hands-on practice
 

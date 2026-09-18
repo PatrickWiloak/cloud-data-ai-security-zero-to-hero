@@ -89,6 +89,6 @@ examined.
 
 ## Official documentation
 
-**[📖 vSphere security](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere.html)** - hardening, encryption, lockdown
-**[📖 vSphere VM administration](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere.html)** - VM lifecycle operations
+**[📖 vSphere security](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html)** - hardening, encryption, lockdown
+**[📖 vSphere VM administration](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html)** - VM lifecycle operations
 **[📖 PowerCLI documentation](https://developer.broadcom.com/powercli)** - cmdlet reference

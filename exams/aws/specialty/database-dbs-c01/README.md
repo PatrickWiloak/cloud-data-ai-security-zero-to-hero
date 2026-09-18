@@ -121,7 +121,7 @@ If you currently hold the DBS-C01 certification:
 - **Amazon Neptune**: Graph database for connected data
   - **[📖 Neptune Documentation](https://docs.aws.amazon.com/neptune/)** - Graph database guide
 - **Amazon QLDB**: Ledger database for immutable history
-  - **[📖 QLDB Documentation](https://docs.aws.amazon.com/qldb/)** - Quantum ledger database
+  - **[📖 QLDB Documentation](https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Quantum ledger database
 - **Amazon Timestream**: Time series database
   - **[📖 Timestream Documentation](https://docs.aws.amazon.com/timestream/)** - Time series data management
 - **Amazon MemoryDB for Redis**: Redis-compatible in-memory database

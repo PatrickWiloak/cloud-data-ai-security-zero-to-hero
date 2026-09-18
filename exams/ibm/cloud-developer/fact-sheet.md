@@ -47,7 +47,7 @@ last-updated: 2026-05-03
 **Domain Resources:**
 - **[📖 Cloud Native Development](https://www.ibm.com/cloud/learn/cloud-native)**
 - **[📖 Twelve-Factor App](https://12factor.net/)**
-- **[📖 Microservices Best Practices](https://developer.ibm.com/articles/cl-best-practices-microservices/)**
+- **[📖 Microservices Best Practices](https://www.ibm.com/think/topics/microservices)**
 - **[📖 RESTful API Design](https://developer.ibm.com/articles/ws-restful/)**
 - **[📖 Event-Driven Architecture](https://www.ibm.com/cloud/architecture/architectures/eventDrivenArchitecture)**
 - **[📖 Serverless Computing](https://www.ibm.com/cloud/learn/serverless)**
@@ -128,11 +128,11 @@ last-updated: 2026-05-03
 - **[📖 Speech to Text API](https://cloud.ibm.com/apidocs/speech-to-text)**
 - **[📖 Text to Speech](https://cloud.ibm.com/docs/text-to-speech)**
 - **[📖 Text to Speech API](https://cloud.ibm.com/apidocs/text-to-speech)**
-- **[📖 Language Translator](https://cloud.ibm.com/docs/language-translator)**
+- **[📖 Language Translator](https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wsl.html)**
 - **[📖 Language Translator API](https://cloud.ibm.com/apidocs/language-translator)**
-- **[📖 Visual Recognition](https://cloud.ibm.com/docs/visual-recognition)**
-- **[📖 Machine Learning](https://cloud.ibm.com/docs/machine-learning)**
-- **[📖 Watson Studio](https://cloud.ibm.com/docs/watson-studio)**
+- **[📖 Visual Recognition](https://www.ibm.com/products/maximo/asset-inspection)**
+- **[📖 Machine Learning](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-overview.html)**
+- **[📖 Watson Studio](https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wsl.html)**
 
 ### 5. Integration and Messaging (10%)
 - IBM Event Streams (Kafka)
@@ -147,7 +147,7 @@ last-updated: 2026-05-03
 **Integration Resources:**
 - **[📖 Event Streams Documentation](https://cloud.ibm.com/docs/EventStreams)**
 - **[📖 Event Streams Kafka API](https://cloud.ibm.com/docs/EventStreams?topic=EventStreams-kafka_using)**
-- **[📖 App Connect](https://cloud.ibm.com/docs/appconnect)**
+- **[📖 App Connect](https://www.ibm.com/products/app-connect)**
 - **[📖 API Connect](https://cloud.ibm.com/docs/apiconnect)**
 - **[📖 API Connect Developer Toolkit](https://cloud.ibm.com/docs/apiconnect?topic=apiconnect-toolkit_tutorial_prereqs)**
 - **[📖 MQ on Cloud](https://cloud.ibm.com/docs/mqcloud)**
@@ -177,7 +177,7 @@ last-updated: 2026-05-03
 - **[📖 Key Protect API](https://cloud.ibm.com/apidocs/key-protect)**
 - **[📖 Certificate Manager](https://cloud.ibm.com/docs/secrets-manager)**
 - **[📖 Security Best Practices](https://cloud.ibm.com/docs/overview?topic=overview-security)**
-- **[📖 Secure Coding Guidelines](https://developer.ibm.com/articles/secure-coding-practices/)**
+- **[📖 Secure Coding Guidelines](https://owasp.org/projects/secure-coding-practices-quick-reference-guide)**
 
 ## Core Development Tools and Technologies
 
@@ -191,12 +191,12 @@ last-updated: 2026-05-03
 - **[📖 IBM Cloud Schematics](https://cloud.ibm.com/docs/schematics)**
 
 ### Programming Languages and Frameworks
-- **[📖 Node.js on IBM Cloud](https://cloud.ibm.com/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started-node)**
-- **[📖 Python on IBM Cloud](https://cloud.ibm.com/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started-python)**
-- **[📖 Java on IBM Cloud](https://cloud.ibm.com/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started-java)**
-- **[📖 Go on IBM Cloud](https://cloud.ibm.com/docs/go)**
-- **[📖 Spring Boot Applications](https://developer.ibm.com/articles/spring-on-ibm-cloud/)**
-- **[📖 Express.js Applications](https://developer.ibm.com/tutorials/nodejs-app-on-ibm-cloud/)**
+- **[📖 Node.js on IBM Cloud](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started)**
+- **[📖 Python on IBM Cloud](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started)**
+- **[📖 Java on IBM Cloud](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started)**
+- **[📖 Go on IBM Cloud](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started)**
+- **[📖 Spring Boot Applications](https://developer.ibm.com/languages/java/)**
+- **[📖 Express.js Applications](https://developer.ibm.com/languages/node-js/)**
 
 ### Container Technologies
 - **[📖 Kubernetes Documentation](https://kubernetes.io/docs/)**
@@ -211,7 +211,7 @@ last-updated: 2026-05-03
 - **[📖 Tekton Pipelines](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines)**
 - **[📖 Jenkins Integration](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-jenkins)**
 - **[📖 GitLab Integration](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-gitlab)**
-- **[📖 GitHub Actions with IBM Cloud](https://github.com/IBM/actions)**
+- **[📖 GitHub Actions with IBM Cloud](https://github.com/IBM-Cloud)**
 
 ## Common Development Scenarios
 
@@ -264,7 +264,7 @@ last-updated: 2026-05-03
 **Resources:**
 - **[📖 Code Engine Tutorial](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started)**
 - **[📖 Cloud Functions Tutorial](https://cloud.ibm.com/docs/codeengine)**
-- **[📖 Serverless Patterns](https://developer.ibm.com/patterns/category/serverless/)**
+- **[📖 Serverless Patterns](https://cloud.ibm.com/docs/codeengine)**
 
 ### Scenario 3: AI-Powered Application
 **Challenge:** Integrate AI capabilities into an existing web application.
@@ -287,7 +287,7 @@ last-updated: 2026-05-03
 7. Deploy application to Kubernetes or Code Engine
 
 **Resources:**
-- **[📖 Watson AI Code Patterns](https://developer.ibm.com/patterns/category/artificial-intelligence/)**
+- **[📖 Watson AI Code Patterns](https://developer.ibm.com/technologies/artificial-intelligence/)**
 - **[📖 Build a Chatbot Tutorial](https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-slack-chatbot-database-watson)**
 
 ### Scenario 4: Real-Time Data Processing Pipeline
@@ -312,7 +312,7 @@ last-updated: 2026-05-03
 
 **Resources:**
 - **[📖 Event Streams Tutorial](https://cloud.ibm.com/docs/EventStreams?topic=EventStreams-getting-started)**
-- **[📖 Real-Time Analytics Pattern](https://developer.ibm.com/patterns/category/analytics/)**
+- **[📖 Real-Time Analytics Pattern](https://developer.ibm.com/technologies/analytics/)**
 
 ### Scenario 5: Secure Multi-Tenant SaaS Application
 **Challenge:** Build a secure SaaS application with tenant isolation and authentication.
@@ -460,7 +460,7 @@ assistant.set_service_url(os.environ.get('ASSISTANT_URL'))
 - **Security Testing:** Test for vulnerabilities
 
 **Testing Resources:**
-- **[📖 Testing Cloud Applications](https://developer.ibm.com/articles/testing-cloud-native-applications/)**
+- **[📖 Testing Cloud Applications](https://www.ibm.com/think/topics/software-testing)**
 - **[📖 Kubernetes Testing](https://kubernetes.io/docs/tasks/debug/)**
 
 ### Debugging Tools
@@ -551,7 +551,7 @@ assistant.set_service_url(os.environ.get('ASSISTANT_URL'))
 ### Videos and Courses
 - **[📖 IBM Technology YouTube](https://www.youtube.com/c/IBMTechnology)**
 - **[📖 IBM Cloud Training](https://www.ibm.com/training/cloud)**
-- **[📖 Coursera IBM Courses](https://www.coursera.org/ibm)**
+- **[📖 Coursera IBM Courses](https://www.coursera.org/partners/ibm-skills-network)**
 - **[📖 IBM Skills Network](https://skills.network/)**
 
 ### Community Resources
@@ -617,7 +617,7 @@ ibmcloud plugin install code-engine
 - **[📖 CLI Plugin Reference](https://cloud.ibm.com/docs/cli?topic=cli-plug-ins)**
 
 ### Local Development
-- **[📖 IBM Cloud Local Development](https://cloud.ibm.com/docs/apps?topic=apps-create-deploy-app-cli)**
+- **[📖 IBM Cloud Local Development](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started)**
 - **[📖 Kubernetes Local Development](https://kubernetes.io/docs/tasks/tools/#minikube)**
 - **[📖 Docker Compose for Multi-Container Apps](https://docs.docker.com/compose/)**
 

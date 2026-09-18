@@ -152,7 +152,7 @@ atlas dbusers delete appUser
 
 ## Atlas Organization Structure
 
-**[📖 Atlas Organizations](https://www.mongodb.com/docs/atlas/access/manage-organizations/)** - Organization management
+**[📖 Atlas Organizations](https://www.mongodb.com/docs/atlas/access/orgs-create-view-edit-delete/)** - Organization management
 
 ### Hierarchy
 ```

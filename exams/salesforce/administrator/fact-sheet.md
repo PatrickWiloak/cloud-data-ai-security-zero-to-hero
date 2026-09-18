@@ -15,7 +15,7 @@ last-updated: 2026-05-03
 
 **[📖 Credential page](https://trailhead.salesforce.com/credentials/administrator)**
 **[📖 Exam Guide PDF](https://trailhead.salesforce.com/help?article=Salesforce-Certified-Administrator-Exam-Guide)**
-**[📖 Trailhead Admin Trailmix](https://trailhead.salesforce.com/users/strailhead/trailmixes/administrator-certification-prep)**
+**[📖 Trailhead Admin Trailmix](https://trailhead.salesforce.com/credentials/platformadministrator)**
 
 ---
 

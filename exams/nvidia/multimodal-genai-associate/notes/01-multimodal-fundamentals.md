@@ -1,6 +1,6 @@
 # Multimodal AI Fundamentals
 
-**[📖 NVIDIA Multimodal AI](https://developer.nvidia.com/blog/tag/multimodal/)** - NVIDIA multimodal research and applications
+**[📖 NVIDIA Multimodal AI](https://docs.nvidia.com/nim/vision-language-models/latest/introduction.html)** - NVIDIA multimodal research and applications
 
 ## Modality Types
 

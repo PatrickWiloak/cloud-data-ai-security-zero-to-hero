@@ -35,7 +35,7 @@ last-updated: 2026-05-03
 - Observation: Process result and reason about next step
 - Continues until task is complete or max iterations reached
 - Most popular pattern for general-purpose agents
-- **[📖 NVIDIA Agentic AI Guide](https://developer.nvidia.com/blog/introduction-to-ai-agents/)** - Introduction to agentic AI concepts
+- **[📖 NVIDIA Agentic AI Guide](https://www.nvidia.com/en-us/glossary/ai-agents/)** - Introduction to agentic AI concepts
 
 **Plan-and-Execute**
 - First phase: Generate a complete plan for the task
@@ -156,7 +156,7 @@ last-updated: 2026-05-03
 - Self-correct based on error feedback
 - Ask user for clarification when needed
 - Graceful degradation to simpler approaches
-- **[📖 NeMo Guardrails Actions](https://docs.nvidia.com/nemo/guardrails/latest/user-guides/configuration-guide/index.html)** - Configuring action handling
+- **[📖 NeMo Guardrails Actions](https://docs.nvidia.com/nemo/guardrails/about-nemo-guardrails-library/overview)** - Configuring action handling
 
 ### Custom Tool Development
 - Define clear input/output schemas
@@ -266,7 +266,7 @@ last-updated: 2026-05-03
 - Function calling through tool_choice parameter
 - Streaming responses for real-time interaction
 - Structured output with JSON mode
-- **[📖 NIM API Reference](https://docs.nvidia.com/nim/large-language-models/latest/reference.html)** - Complete API documentation
+- **[📖 NIM API Reference](https://docs.nvidia.com/nim/large-language-models/latest/api-reference.html)** - Complete API documentation
 
 ## Domain 5: Safety, Guardrails, and Production
 

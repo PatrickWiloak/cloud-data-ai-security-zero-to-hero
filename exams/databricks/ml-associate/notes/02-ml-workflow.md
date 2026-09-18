@@ -5,7 +5,7 @@
 This section covers the ML workflow including data preparation, hyperparameter tuning, and model evaluation, representing 29% of the exam. You need to understand data splits, feature engineering, Hyperopt, and evaluation metrics.
 
 **[📖 Hyperopt](https://docs.databricks.com/en/machine-learning/automl-hyperparam-tuning/index.html)** - Distributed tuning
-**[📖 Model Evaluation](https://docs.databricks.com/en/machine-learning/model-evaluation.html)** - Evaluation techniques
+**[📖 Model Evaluation](https://docs.databricks.com/aws/en/mlflow3/genai/eval-monitor/)** - Evaluation techniques
 
 ## Key Topics
 
@@ -181,5 +181,5 @@ print(f"Mean accuracy: {scores.mean():.3f} (+/- {scores.std():.3f})")
 |-------|------|
 | Hyperopt | [docs.databricks.com/en/machine-learning/automl-hyperparam-tuning/index.html](https://docs.databricks.com/en/machine-learning/automl-hyperparam-tuning/index.html) |
 | Hyperopt Concepts | [docs.databricks.com/en/machine-learning/automl-hyperparam-tuning/hyperopt-concepts.html](https://docs.databricks.com/en/machine-learning/automl-hyperparam-tuning/hyperopt-concepts.html) |
-| Model Evaluation | [docs.databricks.com/en/machine-learning/model-evaluation.html](https://docs.databricks.com/en/machine-learning/model-evaluation.html) |
+| Model Evaluation | [docs.databricks.com/en/machine-learning/model-evaluation.html](https://docs.databricks.com/aws/en/mlflow3/genai/eval-monitor/) |
 | Pandas API on Spark | [docs.databricks.com/en/pandas/pandas-on-spark.html](https://docs.databricks.com/en/pandas/pandas-on-spark.html) |

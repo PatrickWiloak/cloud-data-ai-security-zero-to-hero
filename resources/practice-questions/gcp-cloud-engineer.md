@@ -516,7 +516,7 @@ D. Cloud Profiler
 
 **Why:** Query Insights provides query-level performance data including slow queries, query plans, and wait events. Cloud Monitoring shows instance-level metrics. Cloud Trace is for distributed tracing. Cloud Profiler analyzes application code performance.
 
-**Key Concept:** [Cloud SQL Query Insights](https://cloud.google.com/sql/docs/postgres/query-insights-overview)
+**Key Concept:** [Cloud SQL Query Insights](https://docs.cloud.google.com/sql/docs/postgres/using-query-insights)
 </details>
 
 ---
@@ -656,7 +656,7 @@ D. Cloud Shell
 
 **Why:** Cloud Monitoring metrics explorer provides detailed CPU, memory, disk, and network metrics with visualization. Serial console shows boot logs. Instance details show configuration. Cloud Shell is a terminal.
 
-**Key Concept:** [Compute Engine Monitoring](https://cloud.google.com/compute/docs/monitoring)
+**Key Concept:** [Compute Engine Monitoring](https://docs.cloud.google.com/compute/docs/instances/observe-monitor-vms)
 </details>
 
 ---

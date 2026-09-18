@@ -86,7 +86,7 @@ D. Implement optimistic locking with retry logic
 
 **Why:** The Saga pattern handles distributed transactions by breaking them into local transactions with compensating actions for rollback. Cloud Workflows or Cloud Tasks can orchestrate the saga, ensuring that if the credit fails, the debit is reversed. This maintains loose coupling in microservices. Two-phase commit (A) creates tight coupling and doesn't scale. Single database (C) defeats microservices benefits. Optimistic locking (D) doesn't handle cross-service consistency.
 
-**Key Concept:** [Saga Pattern](https://cloud.google.com/architecture/managing-data-consistency-microservices-two-phase-commit)
+**Key Concept:** [Saga Pattern](https://cloud.google.com/learn/what-is-microservices-architecture)
 </details>
 
 ### Question 5

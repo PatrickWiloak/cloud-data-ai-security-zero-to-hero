@@ -180,8 +180,8 @@ The AWS Certified CloudOps Engineer - Associate (SOA-C03) exam validates the abi
 
 **Official AWS Training:**
 - **[AWS Skill Builder](https://skillbuilder.aws/)** - Free AWS training and labs
-- **[CloudOps Learning Plan](https://explore.skillbuilder.aws/learn/learning_plan/view/1994/cloudops-engineer-learning-plan)** - Official study plan
-- **[Exam Prep Course](https://aws.amazon.com/training/classroom/exam-prep-aws-certified-cloudops-engineer-associate-soa-c03/)** - Official exam prep
+- **[CloudOps Learning Plan](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/)** - Official study plan
+- **[Exam Prep Course](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/)** - Official exam prep
 
 **Hands-On Practice:**
 - **[AWS Hands-On Tutorials](https://aws.amazon.com/getting-started/hands-on/)** - Guided tutorials

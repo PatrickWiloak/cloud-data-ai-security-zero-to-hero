@@ -42,9 +42,9 @@ The **[📖 Azure AI Fundamentals certification](https://learn.microsoft.com/en-
 
 ### Understanding Artificial Intelligence
 
-**[📖 What is Artificial Intelligence?](https://learn.microsoft.com/en-us/azure/ai-services/what-is-ai)** - Foundational overview of AI concepts and applications.
+**[📖 What is Artificial Intelligence?](https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/)** - Foundational overview of AI concepts and applications.
 
-**[📖 Introduction to AI](https://learn.microsoft.com/en-us/training/modules/introduction-to-ai/)** - Microsoft Learn module introducing AI fundamentals.
+**[📖 Introduction to AI](https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/)** - Microsoft Learn module introducing AI fundamentals.
 
 ### Common AI Workloads
 
@@ -118,7 +118,7 @@ The **[📖 Azure AI Fundamentals certification](https://learn.microsoft.com/en-
 
 **[📖 Training Models in Azure ML](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-train-model)** - Best practices for training machine learning models.
 
-**[📖 Model Evaluation Metrics](https://learn.microsoft.com/en-us/training/modules/evaluate-model-performance/)** - Understanding accuracy, precision, recall, F1-score, and RMSE.
+**[📖 Model Evaluation Metrics](https://learn.microsoft.com/en-us/training/modules/fundamentals-machine-learning/5-binary-classification)** - Understanding accuracy, precision, recall, F1-score, and RMSE.
 
 **[📖 Feature Engineering](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-configure-auto-features)** - Selecting and transforming features for better model performance.
 
@@ -164,7 +164,7 @@ The **[📖 Azure AI Fundamentals certification](https://learn.microsoft.com/en-
 
 **[📖 Facial Recognition](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-face-recognition)** - Face verification and identification capabilities.
 
-**[📖 Limited Access Features](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/identity-overview)** - Understanding access restrictions for facial recognition features.
+**[📖 Limited Access Features](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/computer-vision/limited-access-identity)** - Understanding access restrictions for facial recognition features.
 
 ### Custom Vision
 
@@ -186,7 +186,7 @@ The **[📖 Azure AI Fundamentals certification](https://learn.microsoft.com/en-
 
 ### Video Analysis
 
-**[📖 Video Analysis Capabilities](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-video-analysis)** - Analyzing video content for insights and metadata.
+**[📖 Video Analysis Capabilities](https://learn.microsoft.com/en-us/azure/azure-video-indexer/video-indexer-overview)** - Analyzing video content for insights and metadata.
 
 ---
 

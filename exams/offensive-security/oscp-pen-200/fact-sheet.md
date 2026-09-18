@@ -84,7 +84,7 @@ The 24-hour report window is **mandatory** and graded. A perfect lab run with a 
 - All commands and tool output (copy/paste, not screenshots of terminals)
 - Cleanup steps
 
-**Use the [OffSec exam report template](https://www.offsec.com/pwk-online/PWKv1-REPORT.docx)** unless you have a strong reason not to.
+**Use the [OffSec exam report template](https://help.offsec.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide)** unless you have a strong reason not to.
 
 ---
 

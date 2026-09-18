@@ -48,13 +48,13 @@ last-updated: 2026-05-03
 - **Power Pages** - Low-code websites and portals
 - **Dataverse** - Unified data storage and management
 
-**[📖 Power Platform Components](https://learn.microsoft.com/en-us/power-platform/admin/get-started)** - Getting started with all Power Platform components.
+**[📖 Power Platform Components](https://learn.microsoft.com/en-us/power-platform/admin/admin-documentation)** - Getting started with all Power Platform components.
 
 ### Business Value & ROI
 
 **[📖 Digital Transformation](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/methodology)** - Adoption methodology for organizational transformation.
 
-**[📖 Citizen Development](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/citizen-development)** - Empowering business users to create solutions.
+**[📖 Citizen Development](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/methodology)** - Empowering business users to create solutions.
 
 **[📖 Center of Excellence (CoE)](https://learn.microsoft.com/en-us/power-platform/guidance/coe/overview)** - Establishing governance and best practices.
 
@@ -168,7 +168,7 @@ last-updated: 2026-05-03
 
 **[📖 Recording Actions](https://learn.microsoft.com/en-us/power-automate/desktop-flows/recording-flow)** - Recording UI interactions for automation.
 
-**[📖 Attended vs Unattended](https://learn.microsoft.com/en-us/power-automate/desktop-flows/run-desktop-flows-console)** - Understanding attended and unattended RPA execution.
+**[📖 Attended vs Unattended](https://learn.microsoft.com/en-us/power-automate/desktop-flows/run-unattended-desktop-flows)** - Understanding attended and unattended RPA execution.
 
 ### Process Advisor
 

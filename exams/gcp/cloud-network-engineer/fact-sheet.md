@@ -101,7 +101,7 @@ last-updated: 2026-05-03
 
 **[📖 Shared VPC Overview](https://cloud.google.com/vpc/docs/shared-vpc)** - Connecting resources from multiple projects to a common VPC network
 
-**[📖 Shared VPC Architecture](https://cloud.google.com/architecture/patterns/shared-vpc-architecture-patterns)** - Design patterns for enterprise multi-project networking
+**[📖 Shared VPC Architecture](https://docs.cloud.google.com/vpc/docs/shared-vpc)** - Design patterns for enterprise multi-project networking
 
 **[📖 Setting up Shared VPC](https://cloud.google.com/vpc/docs/provisioning-shared-vpc)** - Step-by-step configuration of host and service projects
 
@@ -221,7 +221,7 @@ last-updated: 2026-05-03
 
 **[📖 SSL Policies](https://cloud.google.com/load-balancing/docs/ssl-policies-concepts)** - Configuring TLS versions and cipher suites for security compliance
 
-**[📖 Cloud Armor Integration](https://cloud.google.com/load-balancing/docs/https-load-balancer-with-cloud-armor)** - Enabling DDoS protection and WAF rules on HTTP(S) load balancers
+**[📖 Cloud Armor Integration](https://docs.cloud.google.com/armor/docs/configure-security-policies)** - Enabling DDoS protection and WAF rules on HTTP(S) load balancers
 
 **[📖 Identity-Aware Proxy (IAP) with Load Balancing](https://cloud.google.com/iap/docs/load-balancer-howto)** - Adding identity-based access control to load-balanced applications
 
@@ -255,7 +255,7 @@ last-updated: 2026-05-03
 
 **[📖 Custom Request Headers](https://cloud.google.com/load-balancing/docs/custom-headers)** - Adding or modifying HTTP headers at the load balancer
 
-**[📖 Outlier Detection](https://cloud.google.com/load-balancing/docs/outlier-detection)** - Automatically removing unhealthy backends based on error rates
+**[📖 Outlier Detection](https://docs.cloud.google.com/load-balancing/docs/https/traffic-management-global)** - Automatically removing unhealthy backends based on error rates
 
 ---
 
@@ -329,7 +329,7 @@ last-updated: 2026-05-03
 
 **[📖 Bot Management](https://cloud.google.com/armor/docs/bot-management)** - Identifying and blocking malicious bot traffic
 
-**[📖 Preview Mode](https://cloud.google.com/armor/docs/preview-security-policy-rules)** - Testing security rules without enforcing blocks
+**[📖 Preview Mode](https://docs.cloud.google.com/armor/docs/security-policy-overview)** - Testing security rules without enforcing blocks
 
 ### Identity-Aware Proxy
 
@@ -409,11 +409,11 @@ last-updated: 2026-05-03
 
 ### Troubleshooting Tools
 
-**[📖 Troubleshooting VPC Connectivity](https://cloud.google.com/vpc/docs/troubleshooting)** - Common connectivity issues and resolution steps
+**[📖 Troubleshooting VPC Connectivity](https://docs.cloud.google.com/network-intelligence-center/docs/connectivity-tests/concepts/overview)** - Common connectivity issues and resolution steps
 
 **[📖 Testing VPN Connectivity](https://cloud.google.com/network-connectivity/docs/vpn/support/troubleshooting)** - Diagnosing VPN tunnel and routing problems
 
-**[📖 Load Balancer Troubleshooting](https://cloud.google.com/load-balancing/docs/troubleshooting)** - Common load balancer issues and debugging techniques
+**[📖 Load Balancer Troubleshooting](https://docs.cloud.google.com/load-balancing/docs/https/troubleshooting-ext-https-lbs)** - Common load balancer issues and debugging techniques
 
 **[📖 DNS Troubleshooting](https://cloud.google.com/dns/docs/troubleshooting)** - Resolving Cloud DNS configuration and resolution issues
 
@@ -435,7 +435,7 @@ last-updated: 2026-05-03
 
 ### IPv6 Support
 
-**[📖 IPv6 in VPC](https://cloud.google.com/vpc/docs/ipv6)** - Enabling dual-stack IPv4/IPv6 networking
+**[📖 IPv6 in VPC](https://docs.cloud.google.com/vpc/docs/subnets#ipv6-ranges)** - Enabling dual-stack IPv4/IPv6 networking
 
 **[📖 IPv6 Subnet Ranges](https://cloud.google.com/vpc/docs/subnets#ipv6-ranges)** - Configuring IPv6 CIDR blocks for subnets
 
@@ -461,9 +461,9 @@ last-updated: 2026-05-03
 
 **[📖 Traffic Director Overview](https://cloud.google.com/traffic-director/docs/traffic-director-concepts)** - Service mesh traffic management for microservices
 
-**[📖 Traffic Director Architecture](https://cloud.google.com/traffic-director/docs/architecture)** - Control plane for Envoy-based service proxies
+**[📖 Traffic Director Architecture](https://docs.cloud.google.com/service-mesh/docs/overview)** - Control plane for Envoy-based service proxies
 
-**[📖 Traffic Splitting](https://cloud.google.com/traffic-director/docs/traffic-director-load-balancing-with-proxyless-grpc)** - Weighted routing and canary deployments
+**[📖 Traffic Splitting](https://docs.cloud.google.com/service-mesh/docs/overview)** - Weighted routing and canary deployments
 
 ### Network Service Tiers
 

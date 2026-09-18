@@ -18,7 +18,7 @@ last-updated: 2026-05-03
 **Delivery:** Pearson VUE (online proctored or testing center)
 
 **📖 [Official Exam Page](https://education.oracle.com/oracle-cloud-infrastructure-2024-developer-associate/pexam_1Z0-1084-24)** - Registration and official details
-**📖 [Certification Overview](https://www.oracle.com/cloud/iaas/training/developer.html)** - OCI Developer certification path
+**📖 [Certification Overview](https://www.oracle.com/education/certification/)** - OCI Developer certification path
 **📖 [Exam Topics](https://education.oracle.com/cat%C3%A1logo-de-productos-ouexam-pexam_1z0-1084-24/pexam_1Z0-1084-24)** - Detailed exam objectives
 
 ## 🎯 Target Audience
@@ -43,8 +43,8 @@ This certification is designed for:
 - Containers and orchestration concepts
 - DevOps and CI/CD fundamentals
 
-**📖 [Cloud Native Overview](https://docs.oracle.com/en-us/iaas/Content/cloud-native/home.htm)** - OCI cloud-native services overview
-**📖 [Microservices Architecture](https://docs.oracle.com/en-us/iaas/Content/cloud-native/microservices.htm)** - Microservices best practices
+**📖 [Cloud Native Overview](https://www.oracle.com/cloud/cloud-native/)** - OCI cloud-native services overview
+**📖 [Microservices Architecture](https://docs.oracle.com/en/solutions/learn-architect-microservice/)** - Microservices best practices
 **📖 [Container Concepts](https://docs.oracle.com/en-us/iaas/Content/ContEng/Concepts/contengoverview.htm)** - OCI container services overview
 
 ### Domain 2: OCI Developer Services (20%)
@@ -84,7 +84,7 @@ This certification is designed for:
 **📖 [Events Service Overview](https://docs.oracle.com/en-us/iaas/Content/Events/Concepts/eventsoverview.htm)** - Event-driven automation
 **📖 [Creating Event Rules](https://docs.oracle.com/en-us/iaas/Content/Events/Task/managingrules.htm)** - Rule configuration
 **📖 [Event Types](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventsproducers.htm)** - Available event sources
-**📖 [Event Actions](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/actiontypes.htm)** - Action types and configuration
+**📖 [Event Actions](https://docs.oracle.com/en-us/iaas/Content/Events/Concepts/eventsoverview.htm)** - Action types and configuration
 
 #### Notifications Service
 - Creating topics and subscriptions
@@ -107,7 +107,7 @@ This certification is designed for:
 
 **📖 [Functions Overview](https://docs.oracle.com/en-us/iaas/Content/Functions/Concepts/functionsoverview.htm)** - Serverless functions on OCI
 **📖 [Functions Architecture](https://docs.oracle.com/en-us/iaas/Content/Functions/Concepts/functionsoverview.htm)** - How Functions work
-**📖 [Supported Runtimes](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsruntimes.htm)** - Available language runtimes
+**📖 [Supported Runtimes](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/languagessupportedbyfunctions.htm)** - Available language runtimes
 **📖 [Function Context](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionscustomizing.htm)** - Configuration and environment
 
 #### Creating and Deploying Functions
@@ -121,7 +121,7 @@ This certification is designed for:
 **📖 [Creating Applications](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionscreatingapps.htm)** - Application setup
 **📖 [Creating Functions](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionscreatingfunctions.htm)** - Function development
 **📖 [Deploying Functions](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsuploading.htm)** - Deployment process
-**📖 [Fn CLI](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsusingfncli.htm)** - Using the Fn command-line tool
+**📖 [Fn CLI](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsinstallfncli.htm)** - Using the Fn command-line tool
 
 #### Invoking and Managing Functions
 - Invoking functions via OCI CLI, SDK, and HTTP
@@ -134,7 +134,7 @@ This certification is designed for:
 **📖 [Function Logs](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsexportingfunctionlogfiles.htm)** - Viewing logs
 **📖 [Function Metrics](https://docs.oracle.com/en-us/iaas/Content/Functions/Reference/functionsmetrics.htm)** - Monitoring function performance
 **📖 [Troubleshooting](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionstroubleshooting.htm)** - Common issues and solutions
-**📖 [Performance Tuning](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionstuning.htm)** - Optimizing functions
+**📖 [Performance Tuning](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionscustomizing.htm)** - Optimizing functions
 
 #### Function Integration
 - Triggering functions from Events
@@ -143,10 +143,10 @@ This certification is designed for:
 - Function chains and workflows
 - Integration with API Gateway
 
-**📖 [Event-Driven Functions](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsevents.htm)** - Using Events service
+**📖 [Event-Driven Functions](https://docs.oracle.com/en-us/iaas/Content/Functions/Concepts/functionsoverview.htm)** - Using Events service
 **📖 [Resource Principals](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsaccessingociresources.htm)** - Secure service access
-**📖 [SDK Integration](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsusingociservices.htm)** - Using OCI SDKs in functions
-**📖 [API Gateway Integration](https://docs.oracle.com/en-us/iaas/Content/APIGateway/Tasks/apigatewayusingoraclefunctions.htm)** - Exposing functions via API
+**📖 [SDK Integration](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsaccessingociresources.htm)** - Using OCI SDKs in functions
+**📖 [API Gateway Integration](https://docs.oracle.com/en-us/iaas/Content/APIGateway/Tasks/apigatewayusingfunctionsbackend.htm)** - Exposing functions via API
 
 ### Domain 4: Container Engine for Kubernetes (OKE) (15%)
 
@@ -172,7 +172,7 @@ This certification is designed for:
 **📖 [Creating Clusters](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengcreatingclusterusingoke.htm)** - Cluster creation
 **📖 [Node Pools](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengscalingclusters.htm)** - Managing node pools
 **📖 [Cluster Access](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengdownloadkubeconfigfile.htm)** - Configuring kubectl access
-**📖 [Cluster Upgrades](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengupgradingk8sversion.htm)** - Upgrading Kubernetes versions
+**📖 [Cluster Upgrades](https://docs.oracle.com/en-us/iaas/Content/ContEng/Concepts/contengaboutupgradingclusters.htm)** - Upgrading Kubernetes versions
 **📖 [Cluster Autoscaler](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengusingclusterautoscaler.htm)** - Automatic node scaling
 
 #### Deploying Applications to OKE
@@ -186,7 +186,7 @@ This certification is designed for:
 **📖 [Persistent Storage](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengcreatingpersistentvolumeclaim.htm)** - Using OCI volumes
 **📖 [Load Balancers](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengcreatingloadbalancer.htm)** - Service load balancing
 **📖 [Ingress Controllers](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengsettingupingresscontroller.htm)** - NGINX ingress setup
-**📖 [Using Helm](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengusinghelmwithoke.htm)** - Deploying with Helm
+**📖 [Using Helm](https://docs.oracle.com/en-us/iaas/Content/ContEng/home.htm)** - Deploying with Helm
 
 ### Domain 5: Container Registry (OCIR) (10%)
 
@@ -223,7 +223,7 @@ This certification is designed for:
 **📖 [Creating Repositories](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrycreatingarepository.htm)** - Repository creation
 **📖 [Access Policies](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registrypolicyrepoaccess.htm)** - Controlling access
 **📖 [Retention Policies](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrymanagingimageretention.htm)** - Managing image lifecycle
-**📖 [Image Immutability](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registryenablingimageimmutability.htm)** - Preventing tag overwrites
+**📖 [Image Immutability](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryoverview.htm)** - Preventing tag overwrites
 
 ### Domain 6: DevOps Services (15%)
 
@@ -245,7 +245,7 @@ This certification is designed for:
 
 **📖 [Code Repositories](https://docs.oracle.com/en-us/iaas/Content/devops/using/managing_coderepo.htm)** - Git repositories on OCI
 **📖 [Creating Repositories](https://docs.oracle.com/en-us/iaas/Content/devops/using/create_repo.htm)** - Repository setup
-**📖 [Branch Rules](https://docs.oracle.com/en-us/iaas/Content/devops/using/managing_branch_rules.htm)** - Protecting branches
+**📖 [Branch Rules](https://docs.oracle.com/en-us/iaas/Content/devops/using/managing_coderepo.htm)** - Protecting branches
 **📖 [Triggers](https://docs.oracle.com/en-us/iaas/Content/devops/using/trigger_build.htm)** - Automating builds
 
 #### Build Pipelines
@@ -270,9 +270,9 @@ This certification is designed for:
 
 **📖 [Deployment Pipelines](https://docs.oracle.com/en-us/iaas/Content/devops/using/deployment_pipelines.htm)** - CD pipeline creation
 **📖 [Deployment Types](https://docs.oracle.com/en-us/iaas/Content/devops/using/deploy_oke.htm)** - OKE deployments
-**📖 [Blue-Green Deployment](https://docs.oracle.com/en-us/iaas/Content/devops/using/blue_green_strategy.htm)** - Zero-downtime deployments
-**📖 [Canary Deployment](https://docs.oracle.com/en-us/iaas/Content/devops/using/canary_strategy.htm)** - Gradual rollout
-**📖 [Function Deployment](https://docs.oracle.com/en-us/iaas/Content/devops/using/deploy_functions.htm)** - Deploying serverless functions
+**📖 [Blue-Green Deployment](https://docs.oracle.com/en-us/iaas/Content/devops/using/deploy_oke.htm)** - Zero-downtime deployments
+**📖 [Canary Deployment](https://docs.oracle.com/en-us/iaas/Content/devops/using/deploy_oke.htm)** - Gradual rollout
+**📖 [Function Deployment](https://docs.oracle.com/en-us/iaas/Content/devops/using/deploy_function.htm)** - Deploying serverless functions
 
 #### Artifact Registry
 - Storing build artifacts
@@ -322,7 +322,7 @@ This certification is designed for:
 **📖 [APM Overview](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/index.html)** - Application monitoring
 **📖 [APM Domains](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/configure-apm-domain.html)** - Domain configuration
 **📖 [Distributed Tracing](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)** - Request tracing
-**📖 [APM Agents](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/configure-application-performance-monitoring.html)** - Language agents
+**📖 [APM Agents](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/deploy-apm-java-agent.html)** - Language agents
 
 ### Domain 8: Storage and Database Services for Developers (10%)
 
@@ -350,7 +350,7 @@ This certification is designed for:
 **📖 [Provisioning](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/autonomous-provision.html)** - Creating databases
 **📖 [Connecting](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/connect-introduction.html)** - Connection methods
 **📖 [Database Wallets](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/connect-download-wallet.html)** - Secure connections
-**📖 [ORDS](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/application-development-rest.html)** - REST-enabled SQL
+**📖 [ORDS](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/ords-rest.html)** - REST-enabled SQL
 
 #### NoSQL Database
 - Creating tables
@@ -360,8 +360,8 @@ This certification is designed for:
 
 **📖 [NoSQL Database](https://docs.oracle.com/en-us/iaas/nosql-database/index.html)** - NoSQL service
 **📖 [Creating Tables](https://docs.oracle.com/en-us/iaas/nosql-database/doc/creating-tables.html)** - Table creation
-**📖 [Data Operations](https://docs.oracle.com/en-us/iaas/nosql-database/doc/working-data.html)** - CRUD operations
-**📖 [SDK Usage](https://docs.oracle.com/en-us/iaas/nosql-database/doc/using-sdks-and-tools.html)** - Programming with NoSQL
+**📖 [Data Operations](https://docs.oracle.com/en/cloud/paas/nosql-cloud/mtiuc/)** - CRUD operations
+**📖 [SDK Usage](https://docs.oracle.com/en/cloud/paas/nosql-cloud/)** - Programming with NoSQL
 
 #### Streaming Service
 - Creating streams
@@ -399,8 +399,8 @@ This certification is designed for:
 **📖 [Vault Overview](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm)** - Key and secret management
 **📖 [Managing Secrets](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingsecrets.htm)** - Secret operations
 **📖 [Encryption Keys](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingkeys.htm)** - Key management
-**📖 [Using Secrets](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/accessingsecrets.htm)** - Retrieving secrets
-**📖 [Key Rotation](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingkeys_topic-To_rotate_keys.htm)** - Key rotation strategies
+**📖 [Using Secrets](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingsecrets.htm)** - Retrieving secrets
+**📖 [Key Rotation](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingkeys.htm)** - Key rotation strategies
 
 #### Network Security
 - Security lists and network security groups
@@ -424,7 +424,7 @@ This certification is designed for:
 
 **Fn CLI (Functions):**
 **📖 [Fn CLI Setup](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsinstallfncli.htm)** - Installing Fn CLI
-**📖 [Fn Commands](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsusingfncli.htm)** - Function commands
+**📖 [Fn Commands](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsinstallfncli.htm)** - Function commands
 
 **kubectl (Kubernetes):**
 **📖 [kubectl Installation](https://kubernetes.io/docs/tasks/tools/)** - Installing kubectl
@@ -461,7 +461,7 @@ This certification is designed for:
 
 ### Training Courses
 **📖 [Oracle University](https://education.oracle.com/learn/oci/pPillar_640)** - Official OCI training
-**📖 [Cloud Coaching](https://www.oracle.com/goto/cloudcoaching)** - Free expert-led webinars
+**📖 [Cloud Coaching](https://www.oracle.com/education/)** - Free expert-led webinars
 **📖 [Oracle Learning YouTube](https://www.youtube.com/c/OracleCloudInfrastructure)** - Video tutorials
 
 ### Practice and Certification

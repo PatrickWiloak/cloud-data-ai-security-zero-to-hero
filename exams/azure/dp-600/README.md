@@ -119,8 +119,8 @@ The Microsoft Fabric Analytics Engineer Associate certification validates your a
 **👉 [Complete Azure Study Resources Guide](../../../.templates/resources-azure.md)**
 
 ### Quick Links (DP-600 Specific)
-- **[DP-600 Official Exam Page](https://learn.microsoft.com/en-us/certifications/exams/dp-600/)** - Registration and exam details
-- **[Microsoft Learn - DP-600 Learning Path](https://learn.microsoft.com/en-us/certifications/fabric-analytics-engineer-associate/)** - FREE official study path
+- **[DP-600 Official Exam Page](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/)** - Registration and exam details
+- **[Microsoft Learn - DP-600 Learning Path](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/)** - FREE official study path
 - **[Microsoft Fabric Documentation](https://learn.microsoft.com/en-us/fabric/)** - Complete Fabric documentation
 - **[Microsoft Fabric Free Trial](https://learn.microsoft.com/en-us/fabric/get-started/fabric-trial)** - 60-day free trial
 

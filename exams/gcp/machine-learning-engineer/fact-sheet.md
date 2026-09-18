@@ -51,7 +51,7 @@ last-updated: 2026-05-03
 - **Clustering** - Grouping similar data points
 - **Dimensionality Reduction** - PCA, t-SNE, autoencoders
 - **Anomaly Detection** - Outlier identification
-- **[📖 Clustering with AutoML](https://cloud.google.com/vertex-ai/docs/tabular-data/clustering/overview)** - Clustering solutions
+- **[📖 Clustering with AutoML](https://docs.cloud.google.com/bigquery/docs/kmeans-tutorial)** - Clustering solutions
 
 **Other ML Tasks:**
 - **Recommendation Systems** - Collaborative filtering, content-based
@@ -70,14 +70,14 @@ last-updated: 2026-05-03
 - **F1 Score** - Harmonic mean of precision and recall
 - **AUC-ROC** - Area under ROC curve
 - **AUC-PR** - Area under precision-recall curve
-- **[📖 Classification Metrics](https://cloud.google.com/vertex-ai/docs/training/classification-metrics)** - Understanding classification metrics
+- **[📖 Classification Metrics](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/classification-regression/evaluate-model)** - Understanding classification metrics
 
 **Regression Metrics:**
 - **MAE (Mean Absolute Error)** - Average absolute differences
 - **RMSE (Root Mean Squared Error)** - Square root of mean squared errors
 - **R² (R-Squared)** - Proportion of variance explained
 - **MAPE (Mean Absolute Percentage Error)** - Percentage error
-- **[📖 Regression Metrics](https://cloud.google.com/vertex-ai/docs/training/regression-metrics)** - Understanding regression metrics
+- **[📖 Regression Metrics](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/classification-regression/evaluate-model)** - Understanding regression metrics
 
 **Ranking Metrics:**
 - **NDCG (Normalized Discounted Cumulative Gain)** - Ranking quality
@@ -167,7 +167,7 @@ last-updated: 2026-05-03
 - **Image Segmentation** - Pixel-level classification
 - **[📖 AutoML Vision](https://cloud.google.com/vertex-ai/docs/training-overview#image_data)** - Vision capabilities
 - **[📖 Image Classification](https://cloud.google.com/vertex-ai/docs/tutorials/image-classification-automl)** - Classification tutorial
-- **[📖 Object Detection](https://cloud.google.com/vertex-ai/docs/tutorials/object-detection-automl)** - Detection tutorial
+- **[📖 Object Detection](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/image-data/object-detection/train-model)** - Detection tutorial
 - **[📖 Edge Deployment](https://cloud.google.com/vertex-ai/docs/predictions/overview)** - Deploy to edge devices
 
 ### AutoML Natural Language
@@ -260,7 +260,7 @@ last-updated: 2026-05-03
 - AutoML integration for advanced models
 - **[📖 BigQuery ML Overview](https://cloud.google.com/bigquery-ml/docs/introduction)** - BQML introduction
 - **[📖 Creating Models](https://cloud.google.com/bigquery-ml/docs/create-machine-learning-model)** - Model creation
-- **[📖 Model Types](https://cloud.google.com/bigquery-ml/docs/model-types)** - Available algorithms
+- **[📖 Model Types](https://docs.cloud.google.com/bigquery/docs/bqml-introduction)** - Available algorithms
 - **[📖 Hyperparameter Tuning](https://cloud.google.com/bigquery-ml/docs/hp-tuning-overview)** - BQML tuning
 - **[📖 Model Evaluation](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-evaluate)** - Evaluation functions
 - **[📖 Predictions](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-predict)** - Making predictions
@@ -337,7 +337,7 @@ last-updated: 2026-05-03
 - Feature extraction vs fine-tuning
 - **[📖 Transfer Learning Guide](https://www.tensorflow.org/tutorials/images/transfer_learning)** - Transfer learning tutorial
 - **[📖 TensorFlow Hub Integration](https://www.tensorflow.org/hub/tutorials)** - Using pre-trained models
-- **[📖 Fine-tuning Strategies](https://cloud.google.com/vertex-ai/docs/training/transfer-learning)** - Fine-tuning best practices
+- **[📖 Fine-tuning Strategies](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tuning)** - Fine-tuning best practices
 
 ### Training Optimization
 
@@ -421,7 +421,7 @@ last-updated: 2026-05-03
 - **[📖 Vertex Explainable AI](https://cloud.google.com/vertex-ai/docs/explainable-ai/overview)** - Explainability overview
 - **[📖 Feature Attributions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/classification-explanations)** - Attribution methods
 - **[📖 Explanation Methods](https://cloud.google.com/vertex-ai/docs/explainable-ai/configuring-explanations)** - Configuration guide
-- **[📖 What-If Tool](https://cloud.google.com/vertex-ai/docs/explainable-ai/what-if-tool)** - Interactive explanations
+- **[📖 What-If Tool](https://docs.cloud.google.com/vertex-ai/docs/explainable-ai/overview)** - Interactive explanations
 
 ## ML Pipeline Automation and MLOps
 
@@ -466,7 +466,7 @@ last-updated: 2026-05-03
 - **Cloud Composer** - Managed Apache Airflow
 - **Cloud Scheduler** - Cron-based scheduling
 - **[📖 Cloud Composer](https://cloud.google.com/composer/docs)** - Airflow for ML workflows
-- **[📖 Composer for ML](https://cloud.google.com/architecture/orchestrating-ml-workflows-with-cloud-composer)** - ML orchestration patterns
+- **[📖 Composer for ML](https://docs.cloud.google.com/composer/docs/composer-3/composer-overview)** - ML orchestration patterns
 - **[📖 Cloud Scheduler](https://cloud.google.com/scheduler/docs)** - Job scheduling
 
 ### Continuous Training
@@ -487,7 +487,7 @@ last-updated: 2026-05-03
 - **A/B Testing** - Compare model versions
 - **Shadow Mode** - Run new model without serving
 - **[📖 Deployment Strategies](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning#model_deployment)** - Deployment patterns
-- **[📖 Traffic Split](https://cloud.google.com/vertex-ai/docs/predictions/configure-traffic-split)** - Split traffic between models
+- **[📖 Traffic Split](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/deployment)** - Split traffic between models
 - **[📖 Private Endpoints](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/using-private-endpoints)** - Secure deployment
 
 ### Container Management
@@ -545,7 +545,7 @@ last-updated: 2026-05-03
 - Prediction caching
 - Hardware acceleration
 - Edge deployment
-- **[📖 Prediction Performance](https://cloud.google.com/vertex-ai/docs/predictions/performance)** - Performance tuning
+- **[📖 Prediction Performance](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/configure-compute)** - Performance tuning
 - **[📖 GPU Prediction](https://cloud.google.com/vertex-ai/docs/predictions/configure-compute)** - GPU serving
 - **[📖 Batch Prediction](https://cloud.google.com/vertex-ai/docs/predictions/batch-predictions)** - High-throughput inference
 
@@ -557,8 +557,8 @@ last-updated: 2026-05-03
 - Spot VMs for training
 - Model compression
 - Feature Store for feature reuse
-- **[📖 Training Cost Optimization](https://cloud.google.com/vertex-ai/docs/training/training-cost-optimization)** - Training cost reduction
-- **[📖 Prediction Cost Optimization](https://cloud.google.com/vertex-ai/docs/predictions/cost-optimization)** - Serving cost reduction
+- **[📖 Training Cost Optimization](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/configure-compute)** - Training cost reduction
+- **[📖 Prediction Cost Optimization](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions)** - Serving cost reduction
 - **[📖 Preemptible VMs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/use-spot-vms)** - Spot instance training
 
 ### A/B Testing
@@ -567,7 +567,7 @@ last-updated: 2026-05-03
 - Traffic splitting between model versions
 - Statistical significance testing
 - Multi-armed bandit approaches
-- **[📖 Traffic Splitting](https://cloud.google.com/vertex-ai/docs/predictions/configure-traffic-split)** - A/B testing setup
+- **[📖 Traffic Splitting](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/deployment)** - A/B testing setup
 - **[📖 Model Comparison](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/experiments/user-journey/uj-compare-models)** - Compare model versions
 
 ## Responsible AI
@@ -582,7 +582,7 @@ last-updated: 2026-05-03
 - **[📖 Responsible AI](https://cloud.google.com/responsible-ai)** - Google's principles
 - **[📖 Fairness Indicators](https://www.tensorflow.org/responsible_ai/fairness_indicators/guide)** - Bias detection tools
 - **[📖 What-If Tool](https://pair-code.github.io/what-if-tool/)** - Interactive fairness analysis
-- **[📖 Fairness Best Practices](https://cloud.google.com/architecture/ml-fairness)** - Implementing fairness
+- **[📖 Fairness Best Practices](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/evaluation/intro-evaluation-fairness)** - Implementing fairness
 
 ### Explainability
 
@@ -603,7 +603,7 @@ last-updated: 2026-05-03
 - Federated learning
 - Secure multi-party computation
 - Data anonymization and pseudonymization
-- **[📖 Privacy Best Practices](https://cloud.google.com/architecture/privacy-preserving-machine-learning)** - Privacy techniques
+- **[📖 Privacy Best Practices](https://docs.cloud.google.com/architecture/framework/security/meet-regulatory-compliance-and-privacy-needs)** - Privacy techniques
 - **[📖 Data Loss Prevention](https://cloud.google.com/dlp/docs)** - Sensitive data protection
 - **[📖 Confidential Computing](https://cloud.google.com/confidential-computing)** - Encrypted computation
 
@@ -665,7 +665,7 @@ last-updated: 2026-05-03
 - Video Intelligence API for video analysis
 - AutoML Video for custom models
 - **[📖 Video Intelligence API](https://cloud.google.com/video-intelligence/docs)** - Video analysis
-- **[📖 Video Features](https://cloud.google.com/video-intelligence/docs/feature-list)** - Available features
+- **[📖 Video Features](https://docs.cloud.google.com/video-intelligence/docs/features)** - Available features
 
 ### Document AI
 

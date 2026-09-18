@@ -5,7 +5,7 @@
 This section covers implementing RAG applications on Databricks, representing 30% of the exam. You need to master Vector Search, Foundation Model APIs, Mosaic AI Agent Framework, and LangChain integration.
 
 **[📖 Vector Search](https://docs.databricks.com/en/generative-ai/create-query-vector-search.html)** - Vector index management
-**[📖 Agent Framework](https://docs.databricks.com/en/generative-ai/agent-framework/index.html)** - Building AI agents
+**[📖 Agent Framework](https://docs.databricks.com/aws/en/agents/custom-agents/build-agents)** - Building AI agents
 
 ## Key Topics
 
@@ -93,7 +93,7 @@ response = w.serving_endpoints.query(
 
 ### 3. Mosaic AI Agent Framework
 
-**[📖 Agent Framework](https://docs.databricks.com/en/generative-ai/agent-framework/index.html)** - Building agents
+**[📖 Agent Framework](https://docs.databricks.com/aws/en/agents/custom-agents/build-agents)** - Building agents
 **[📖 Agent Deployment](https://docs.databricks.com/en/generative-ai/agent-framework/deploy-agent.html)** - Deploying agents
 
 **Key Concepts:**
@@ -106,7 +106,7 @@ response = w.serving_endpoints.query(
 
 ### 4. LangChain on Databricks
 
-**[📖 LangChain Integration](https://docs.databricks.com/en/generative-ai/agent-framework/langchain.html)** - LangChain on Databricks
+**[📖 LangChain Integration](https://docs.databricks.com/aws/en/agents/custom-agents/author-agent)** - LangChain on Databricks
 
 ```python
 from langchain_community.chat_models import ChatDatabricks
@@ -149,7 +149,7 @@ response = chain.invoke("What is Delta Lake?")
 
 ### 5. MLflow for GenAI
 
-**[📖 MLflow Tracing](https://docs.databricks.com/en/mlflow/llm-tracing.html)** - LLM observability
+**[📖 MLflow Tracing](https://docs.databricks.com/aws/en/mlflow3/genai/tracing/overview)** - LLM observability
 
 ```python
 import mlflow
@@ -186,6 +186,6 @@ with mlflow.start_run():
 | Vector Search | [docs.databricks.com/en/generative-ai/vector-search.html](https://docs.databricks.com/en/generative-ai/vector-search.html) |
 | Create/Query Index | [docs.databricks.com/en/generative-ai/create-query-vector-search.html](https://docs.databricks.com/en/generative-ai/create-query-vector-search.html) |
 | Foundation Models | [docs.databricks.com/en/machine-learning/foundation-models/index.html](https://docs.databricks.com/en/machine-learning/foundation-models/index.html) |
-| Agent Framework | [docs.databricks.com/en/generative-ai/agent-framework/index.html](https://docs.databricks.com/en/generative-ai/agent-framework/index.html) |
-| LangChain | [docs.databricks.com/en/generative-ai/agent-framework/langchain.html](https://docs.databricks.com/en/generative-ai/agent-framework/langchain.html) |
-| MLflow Tracing | [docs.databricks.com/en/mlflow/llm-tracing.html](https://docs.databricks.com/en/mlflow/llm-tracing.html) |
+| Agent Framework | [docs.databricks.com/en/generative-ai/agent-framework/index.html](https://docs.databricks.com/aws/en/agents/custom-agents/build-agents) |
+| LangChain | [docs.databricks.com/en/generative-ai/agent-framework/langchain.html](https://docs.databricks.com/aws/en/agents/custom-agents/author-agent) |
+| MLflow Tracing | [docs.databricks.com/en/mlflow/llm-tracing.html](https://docs.databricks.com/aws/en/mlflow3/genai/tracing/overview) |

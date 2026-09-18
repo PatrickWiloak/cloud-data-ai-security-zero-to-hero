@@ -229,7 +229,7 @@ Slack communities provide professional networking and focused discussions.
   - Certification advice
   - Technical Q&A
   - GDE participation
-- **How to join:** [bit.ly/gcp-slack](https://bit.ly/gcp-slack)
+- **How to join:** [bit.ly/gcp-slack](https://discuss.google.dev/)
 
 ### DevOps and Cloud Slacks
 
@@ -258,7 +258,7 @@ Slack communities provide professional networking and focused discussions.
   - Multi-cloud deployments
   - Terraform Associate cert discussions
   - Best practices
-- **How to join:** [terraform-community-slack.herokuapp.com](https://terraform-community-slack.herokuapp.com/)
+- **How to join:** [terraform-community-slack.herokuapp.com](https://discuss.hashicorp.com/c/terraform-core/27)
 
 ---
 
@@ -784,7 +784,7 @@ Provider-run communities with expert participation.
 **AWS Training and Certification Community**
 - Official forum
 - Exam discussions, study resources
-- **Link:** [aws.amazon.com/training/community](https://aws.amazon.com/training/community/)
+- **Link:** [aws.amazon.com/training/community](https://builder.aws.com/community)
 
 **AWS re:Post**
 - AWS Q&A community (replacement for AWS Forums)

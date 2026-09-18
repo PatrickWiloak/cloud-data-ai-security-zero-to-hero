@@ -3404,12 +3404,12 @@ gcloud ai batch-prediction-jobs create --region=us-central1 --model=MODEL_ID --j
 ### Practice Labs
 - [BigQuery ML Qwiklabs](https://www.cloudskillsboost.google/catalog?keywords=bigquery%20ml) - Hands-on labs
 - [Vertex AI Qwiklabs](https://www.cloudskillsboost.google/catalog?keywords=vertex%20ai) - Practical exercises
-- [Data Engineering Quest](https://www.cloudskillsboost.google/quests/25) - Professional Data Engineer path
+- [Data Engineering Quest](https://www.skills.google/paths/16) - Professional Data Engineer path
 
 ### Exam Preparation
 - [Professional Data Engineer Exam Guide](https://cloud.google.com/certification/data-engineer) - Official exam topics
 - [Sample Questions](https://cloud.google.com/certification/sample-questions/data-engineer) - Practice questions
-- [Certification Forum](https://www.googlecloudcommunity.com/gc/Certification/bd-p/cloud-certification) - Community discussions
+- [Certification Forum](https://discuss.google.dev/) - Community discussions
 
 ---
 

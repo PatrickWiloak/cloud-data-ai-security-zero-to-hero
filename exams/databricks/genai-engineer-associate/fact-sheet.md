@@ -16,7 +16,7 @@ last-updated: 2026-05-03
 
 **[📖 Official Exam Page](https://www.databricks.com/learn/certification/genai-engineer-associate)** - Registration and exam details
 **[📖 Databricks Academy](https://www.databricks.com/learn)** - GenAI learning paths
-**[📖 Generative AI Documentation](https://docs.databricks.com/en/generative-ai/index.html)** - GenAI on Databricks
+**[📖 Generative AI Documentation](https://docs.databricks.com/aws/en/agents)** - GenAI on Databricks
 
 ## Target Audience
 
@@ -50,7 +50,7 @@ This certification is designed for:
 
 ### Chunking Strategies
 
-**[📖 Document Processing](https://docs.databricks.com/en/generative-ai/tutorials/ai-cookbook/quality-iteration/chunking.html)** - Chunking approaches
+**[📖 Document Processing](https://docs.databricks.com/aws/en/agents/retrieval-augmented-generation)** - Chunking approaches
 
 **Key Facts:**
 - Fixed-size chunking: split by character/token count (simple, fast)
@@ -129,7 +129,7 @@ This certification is designed for:
 
 ### Mosaic AI Agent Framework
 
-**[📖 Agent Framework](https://docs.databricks.com/en/generative-ai/agent-framework/index.html)** - Building AI agents
+**[📖 Agent Framework](https://docs.databricks.com/aws/en/agents/custom-agents/build-agents)** - Building AI agents
 **[📖 Agent Deployment](https://docs.databricks.com/en/generative-ai/agent-framework/deploy-agent.html)** - Deploying agents
 
 **Key Facts:**
@@ -144,7 +144,7 @@ This certification is designed for:
 
 ### LangChain on Databricks
 
-**[📖 LangChain Integration](https://docs.databricks.com/en/generative-ai/agent-framework/langchain.html)** - LangChain on Databricks
+**[📖 LangChain Integration](https://docs.databricks.com/aws/en/agents/custom-agents/author-agent)** - LangChain on Databricks
 
 **Key Facts:**
 - LangChain provides building blocks for LLM applications
@@ -157,7 +157,7 @@ This certification is designed for:
 
 ### MLflow for GenAI
 
-**[📖 MLflow Tracing](https://docs.databricks.com/en/mlflow/llm-tracing.html)** - LLM observability
+**[📖 MLflow Tracing](https://docs.databricks.com/aws/en/mlflow3/genai/tracing/overview)** - LLM observability
 **[📖 MLflow GenAI](https://docs.databricks.com/aws/en/mlflow/logged-model)** - Logging GenAI models
 
 **Key Facts:**
@@ -238,7 +238,7 @@ This certification is designed for:
 
 ### Prompt Engineering
 
-**[📖 Prompt Engineering](https://docs.databricks.com/en/generative-ai/prompt-engineering.html)** - Prompt techniques
+**[📖 Prompt Engineering](https://docs.databricks.com/aws/en/large-language-models/ai-playground)** - Prompt techniques
 
 **Key Facts:**
 - System prompt: defines the model's role and behavior

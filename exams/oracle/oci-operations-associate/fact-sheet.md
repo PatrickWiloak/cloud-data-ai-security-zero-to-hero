@@ -73,7 +73,7 @@ This certification is designed for:
 **📖 [Instance Configurations](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/creatinginstanceconfig.htm)** - Configuration templates
 **📖 [Instance Pools](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/creatinginstancepool.htm)** - Pool management
 **📖 [Autoscaling](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm)** - Auto-scaling setup
-**📖 [Pool Metrics](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/monitoringinstancepools.htm)** - Monitoring pools
+**📖 [Pool Metrics](https://docs.oracle.com/en-us/iaas/Content/Compute/References/computemetrics.htm)** - Monitoring pools
 
 #### Custom Images and Snapshots
 - Creating custom images
@@ -84,7 +84,7 @@ This certification is designed for:
 **📖 [Custom Images](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/managingcustomimages.htm)** - Managing images
 **📖 [Image Import/Export](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/imageimportexport.htm)** - Image transfer
 **📖 [Boot Volume Backups](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/backingupabootvolume.htm)** - Backup operations
-**📖 [Cross-Region Copy](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/copyingcustomimages.htm)** - Image replication
+**📖 [Cross-Region Copy](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/imageimportexport.htm)** - Image replication
 
 ### Domain 3: Storage Operations (15%)
 
@@ -179,7 +179,7 @@ This certification is designed for:
 **📖 [Monitoring Overview](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Concepts/monitoringoverview.htm)** - Monitoring service
 **📖 [Service Metrics](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Reference/mql.htm)** - Available metrics
 **📖 [Creating Alarms](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Tasks/create-alarm.htm)** - Alarm setup
-**📖 [Alarm Messages](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Tasks/update-alarm-message.htm)** - Notification configuration
+**📖 [Alarm Messages](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Tasks/managingalarms.htm)** - Notification configuration
 **📖 [Custom Metrics](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Tasks/publishingcustommetrics.htm)** - Publishing metrics
 **📖 [Metrics Query Language](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Reference/mql.htm)** - MQL syntax
 
@@ -195,7 +195,7 @@ This certification is designed for:
 **📖 [Custom Logs](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/custom_logs.htm)** - Application logging
 **📖 [Log Search](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/searchinglogs.htm)** - Searching logs
 **📖 [Log Analytics](https://docs.oracle.com/en-us/iaas/logging-analytics/home.htm)** - Advanced analytics
-**📖 [Log Connectors](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/service_connector_hub.htm)** - Log streaming
+**📖 [Log Connectors](https://docs.oracle.com/en-us/iaas/Content/connector-hub/overview.htm)** - Log streaming
 
 #### Notifications Service
 - Creating topics
@@ -219,8 +219,8 @@ This certification is designed for:
 **📖 [Events Overview](https://docs.oracle.com/en-us/iaas/Content/Events/Concepts/eventsoverview.htm)** - Event service concepts
 **📖 [Event Types](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventsproducers.htm)** - Available events
 **📖 [Creating Rules](https://docs.oracle.com/en-us/iaas/Content/Events/Task/managingrules.htm)** - Rule configuration
-**📖 [Event Patterns](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventtypes.htm)** - Pattern matching
-**📖 [Event Actions](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/actiontypes.htm)** - Action configuration
+**📖 [Event Patterns](https://docs.oracle.com/en-us/iaas/Content/Events/Reference/eventsproducers.htm)** - Pattern matching
+**📖 [Event Actions](https://docs.oracle.com/en-us/iaas/Content/Events/Concepts/eventsoverview.htm)** - Action configuration
 
 ### Domain 6: Database Operations (10%)
 
@@ -234,8 +234,8 @@ This certification is designed for:
 **📖 [DB Systems Overview](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/overview.htm)** - Database service
 **📖 [Provisioning DB Systems](https://docs.oracle.com/en-us/iaas/Content/Database/Tasks/creatingDBsystem.htm)** - Creating databases
 **📖 [Backup and Recovery](https://docs.oracle.com/en-us/iaas/Content/Database/Tasks/backingup.htm)** - Backup operations
-**📖 [Patching](https://docs.oracle.com/en-us/iaas/Content/Database/Tasks/patching.htm)** - Patch management
-**📖 [Database Maintenance](https://docs.oracle.com/en-us/iaas/Content/Database/Tasks/maintenance.htm)** - Maintenance windows
+**📖 [Patching](https://docs.oracle.com/en/cloud/paas/base-database/about/index.html)** - Patch management
+**📖 [Database Maintenance](https://docs.oracle.com/en/cloud/paas/base-database/about/index.html)** - Maintenance windows
 
 #### Autonomous Database Operations
 - Provisioning Autonomous Database
@@ -247,8 +247,8 @@ This certification is designed for:
 **📖 [Autonomous Database](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html)** - ADB overview
 **📖 [Provisioning](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/autonomous-provision.html)** - Creating ADB
 **📖 [Backup and Restore](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/backup-restore.html)** - Backup operations
-**📖 [Scaling](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/autonomous-scale.html)** - Scaling resources
-**📖 [Performance Hub](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/autonomous-performance-hub.html)** - Monitoring performance
+**📖 [Scaling](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-scale.html)** - Scaling resources
+**📖 [Performance Hub](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/monitor-performance-intro.html)** - Monitoring performance
 
 ### Domain 7: Security Operations (15%)
 
@@ -276,7 +276,7 @@ This certification is designed for:
 **📖 [Vault Overview](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm)** - Key management
 **📖 [Creating Vaults](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingvaults.htm)** - Vault management
 **📖 [Managing Keys](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingkeys.htm)** - Key operations
-**📖 [Key Rotation](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingkeys_topic-To_rotate_keys.htm)** - Rotating keys
+**📖 [Key Rotation](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingkeys.htm)** - Rotating keys
 **📖 [Managing Secrets](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingsecrets.htm)** - Secret management
 **📖 [Volume Encryption](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/overview.htm#Encrypti)** - Encrypting storage
 
@@ -289,8 +289,8 @@ This certification is designed for:
 
 **📖 [Cloud Guard Overview](https://docs.oracle.com/en-us/iaas/cloud-guard/home.htm)** - Threat detection
 **📖 [Enabling Cloud Guard](https://docs.oracle.com/en-us/iaas/cloud-guard/using/part-start.htm)** - Setup guide
-**📖 [Detector Recipes](https://docs.oracle.com/en-us/iaas/cloud-guard/using/part-detect.htm)** - Detection configuration
-**📖 [Responder Recipes](https://docs.oracle.com/en-us/iaas/cloud-guard/using/part-respond.htm)** - Automated responses
+**📖 [Detector Recipes](https://docs.oracle.com/en-us/iaas/Content/cloud-guard/using/detect-recipes.htm)** - Detection configuration
+**📖 [Responder Recipes](https://docs.oracle.com/en-us/iaas/Content/cloud-guard/using/respond-recipes.htm)** - Automated responses
 **📖 [Security Zones](https://docs.oracle.com/en-us/iaas/security-zone/home.htm)** - Preventive security
 
 #### Audit Logging
@@ -317,7 +317,7 @@ This certification is designed for:
 **📖 [Creating Budgets](https://docs.oracle.com/en-us/iaas/Content/Billing/Tasks/managingbudgets.htm)** - Budget setup
 **📖 [Cost Analysis](https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/costanalysisoverview.htm)** - Analyzing costs
 **📖 [Usage Reports](https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/usagereportsoverview.htm)** - Usage tracking
-**📖 [Cost Allocation](https://docs.oracle.com/en-us/iaas/Content/Tagging/Tasks/usingcosttracking.htm)** - Tagging for cost
+**📖 [Cost Allocation](https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/costanalysisoverview.htm)** - Tagging for cost
 
 #### Resource Optimization
 - Right-sizing compute instances
@@ -326,8 +326,8 @@ This certification is designed for:
 - Identifying unused resources
 - Reserved capacity
 
-**📖 [Compute Advisor](https://docs.oracle.com/en-us/iaas/Content/Compute/References/optimizingcompute.htm)** - Optimization recommendations
-**📖 [Right Sizing](https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/rightsizing.htm)** - Resource sizing
+**📖 [Compute Advisor](https://docs.oracle.com/en-us/iaas/Content/CloudAdvisor/Concepts/cloudadvisoroverview.htm)** - Optimization recommendations
+**📖 [Right Sizing](https://docs.oracle.com/en-us/iaas/Content/CloudAdvisor/Concepts/cloudadvisoroverview.htm)** - Resource sizing
 **📖 [Reserved Capacity](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/reserve-capacity.htm)** - Capacity reservations
 **📖 [Storage Optimization](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/understandingstoragetiers.htm)** - Storage tiering
 
@@ -355,7 +355,7 @@ This certification is designed for:
 **📖 [DR Architecture](https://docs.oracle.com/solutions/?q=&cType=reference-architectures&sort=date-desc&lang=en&product=Oracle+Cloud+Infrastructure)** - DR patterns
 **📖 [Cross-Region DR](https://docs.oracle.com/en/solutions/design-dr/index.html)** - DR design
 **📖 [Full Stack DR](https://docs.oracle.com/en-us/iaas/disaster-recovery/index.html)** - DR service
-**📖 [DR Switchover](https://docs.oracle.com/en-us/iaas/disaster-recovery/doc/understanding-dr-plans.html)** - Failover procedures
+**📖 [DR Switchover](https://docs.oracle.com/en-us/iaas/disaster-recovery/doc/manage-dr-plans.html)** - Failover procedures
 
 ## 🛠️ Hands-On Skills
 
@@ -387,12 +387,12 @@ This certification is designed for:
 ### Documentation
 **📖 [OCI Documentation](https://docs.oracle.com/en-us/iaas/Content/home.htm)** - Complete documentation
 **📖 [Operations Learning Path](https://mylearn.oracle.com/ou/learning-path/become-an-oci-operations-associate-2024/127300)** - Official training
-**📖 [Best Practices](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/bestpractices.htm)** - OCI best practices
-**📖 [Troubleshooting Guide](https://docs.oracle.com/en-us/iaas/Content/General/Reference/troubleshooting.htm)** - Common issues
+**📖 [Best Practices](https://docs.oracle.com/en/solutions/oci-best-practices/)** - OCI best practices
+**📖 [Troubleshooting Guide](https://docs.oracle.com/en-us/iaas/Content/home.htm)** - Common issues
 
 ### Training
 **📖 [Oracle University](https://education.oracle.com/learn/oci/pPillar_640)** - Official courses
-**📖 [Cloud Coaching](https://www.oracle.com/goto/cloudcoaching)** - Expert webinars
+**📖 [Cloud Coaching](https://www.oracle.com/education/)** - Expert webinars
 **📖 [YouTube Channel](https://www.youtube.com/c/OracleCloudInfrastructure)** - Video tutorials
 
 ### Practice

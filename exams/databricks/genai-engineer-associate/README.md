@@ -138,7 +138,7 @@ The Databricks Certified Generative AI Engineer Associate certification validate
 - **[Exam Guide](https://www.databricks.com/learn/certification/genai-engineer-associate)** - Official exam page
 - **[Vector Search Documentation](https://docs.databricks.com/en/generative-ai/vector-search.html)** - Vector Search guide
 - **[Foundation Model APIs](https://docs.databricks.com/en/machine-learning/foundation-models/index.html)** - Model serving docs
-- **[Mosaic AI Documentation](https://docs.databricks.com/en/generative-ai/agent-framework/index.html)** - Agent framework guide
+- **[Mosaic AI Documentation](https://docs.databricks.com/aws/en/agents/custom-agents/build-agents)** - Agent framework guide
 - **[RAG Tutorial](https://docs.databricks.com/en/generative-ai/tutorials/ai-cookbook/index.html)** - Hands-on RAG guide
 
 ## Tips for Success

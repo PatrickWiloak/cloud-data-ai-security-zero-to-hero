@@ -3283,7 +3283,7 @@ Cloud CDN:
 - [Load Balancing Documentation](https://cloud.google.com/load-balancing/docs)
 - [Cloud CDN Documentation](https://cloud.google.com/cdn/docs)
 - [Cloud Armor Documentation](https://cloud.google.com/armor/docs)
-- [Network Performance Guide](https://cloud.google.com/architecture/best-practices-for-optimizing-network-performance)
+- [Network Performance Guide](https://docs.cloud.google.com/architecture/best-practices-vpc-design)
 - [SSL Certificates Documentation](https://cloud.google.com/load-balancing/docs/ssl-certificates)
 - [Network Intelligence Center](https://cloud.google.com/network-intelligence-center/docs)
 

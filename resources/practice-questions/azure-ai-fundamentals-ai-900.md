@@ -50,7 +50,7 @@ D. Cost reduction
 
 **Why:** Fairness is a core principle of responsible AI. AI systems should not discriminate based on gender, ethnicity, or other factors. In healthcare, this means ensuring the AI performs equally well across different patient populations and doesn't perpetuate existing biases in training data.
 
-**Key Concept:** [Responsible AI Principles](https://docs.microsoft.com/learn/modules/get-started-ai-fundamentals/4-responsible-ai)
+**Key Concept:** [Responsible AI Principles](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai)
 </details>
 
 ### Question 3
@@ -68,7 +68,7 @@ D. Performance
 
 **Why:** Transparency and explainability require that AI systems can explain their decisions in understandable terms. For loan approvals, this means being able to tell applicants why they were rejected - not just "the AI decided" but specific factors like income, credit history, etc.
 
-**Key Concept:** [AI Transparency](https://docs.microsoft.com/learn/modules/get-started-ai-fundamentals/4-responsible-ai)
+**Key Concept:** [AI Transparency](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai)
 </details>
 
 ### Question 4
@@ -86,7 +86,7 @@ D. Privacy
 
 **Why:** Accountability requires that people are responsible for AI system behavior. Human oversight ensures that humans can intervene, override, or stop AI systems. This is especially important for high-stakes decisions where AI should assist rather than replace human judgment.
 
-**Key Concept:** [AI Accountability](https://docs.microsoft.com/learn/modules/get-started-ai-fundamentals/4-responsible-ai)
+**Key Concept:** [AI Accountability](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai)
 </details>
 
 ### Question 5
@@ -104,7 +104,7 @@ D. Cost of implementation
 
 **Why:** Privacy and security are fundamental responsible AI principles. AI systems must handle personal data appropriately, comply with data protection regulations (like GDPR), and ensure data used for training doesn't expose sensitive information. This includes data minimization and secure handling.
 
-**Key Concept:** [AI Privacy](https://docs.microsoft.com/learn/modules/get-started-ai-fundamentals/4-responsible-ai)
+**Key Concept:** [AI Privacy](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai)
 </details>
 
 ### Question 6
@@ -122,7 +122,7 @@ D. Inclusiveness
 
 **Why:** Reliability and safety mean AI systems perform consistently under various conditions and fail gracefully when errors occur. For defect detection, this means understanding and communicating the system's accuracy, having safeguards for missed defects, and not causing safety issues from false positives/negatives.
 
-**Key Concept:** [AI Reliability](https://docs.microsoft.com/learn/modules/get-started-ai-fundamentals/4-responsible-ai)
+**Key Concept:** [AI Reliability](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai)
 </details>
 
 ### Question 7
@@ -140,7 +140,7 @@ D. Transparency
 
 **Why:** Inclusiveness ensures AI systems are designed to engage and empower everyone, regardless of ability, language proficiency, or background. An English-only chatbot that fails for dialects excludes many users. Responsible AI should accommodate diverse users through broader language support and understanding.
 
-**Key Concept:** [AI Inclusiveness](https://docs.microsoft.com/learn/modules/get-started-ai-fundamentals/4-responsible-ai)
+**Key Concept:** [AI Inclusiveness](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai)
 </details>
 
 ---
@@ -234,7 +234,7 @@ D. F1 score
 
 **Why:** Recall (also called sensitivity or true positive rate) measures what percentage of actual positive cases (spam) the model correctly identifies. High accuracy can be misleading when classes are imbalanced. If 95% of emails are not spam, predicting "not spam" always gives 95% accuracy but 0% recall for spam.
 
-**Key Concept:** [Model Metrics](https://docs.microsoft.com/learn/modules/create-classification-model-azure-machine-learning-designer/5-evaluate-model)
+**Key Concept:** [Model Metrics](https://learn.microsoft.com/en-us/training/modules/fundamentals-machine-learning/5-binary-classification)
 </details>
 
 ### Question 13
@@ -306,7 +306,7 @@ D. Insufficient training data
 
 **Why:** Overfitting occurs when a model learns training data too well, including noise and outliers, failing to generalize to new data. Signs include high training accuracy with poor test accuracy. Solutions include more training data, simpler models, regularization, or cross-validation.
 
-**Key Concept:** [Overfitting](https://docs.microsoft.com/learn/modules/evaluate-real-world-machine-learning-models/)
+**Key Concept:** [Overfitting](https://learn.microsoft.com/en-us/azure/machine-learning/concept-manage-ml-pitfalls)
 </details>
 
 ---
@@ -660,7 +660,7 @@ D. Classification error
 
 **Why:** Hallucination occurs when generative AI produces content that sounds plausible but is factually incorrect. The model generates based on patterns, not factual verification. Mitigation strategies include RAG (grounding in data), prompt engineering, temperature reduction, and content filtering.
 
-**Key Concept:** [AI Limitations and Hallucinations](https://docs.microsoft.com/learn/modules/fundamentals-generative-ai/4-language-models)
+**Key Concept:** [AI Limitations and Hallucinations](https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/)
 </details>
 
 ### Question 36

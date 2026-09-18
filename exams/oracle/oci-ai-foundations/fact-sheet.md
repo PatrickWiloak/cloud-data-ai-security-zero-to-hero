@@ -24,7 +24,7 @@ reading-time: 9 min
 
 **[📖 Oracle Cloud Infrastructure AI Foundations Associate](https://education.oracle.com/oracle-cloud-infrastructure-ai-foundations-associate/trackp_OCIAIF)** - exam page and preparation track
 **[📖 Oracle University free AI learning paths](https://mylearn.oracle.com/)** - the official free training
-**[📖 OCI AI services documentation](https://docs.oracle.com/en-us/iaas/Content/ai-services/home.htm)** - product reference
+**[📖 OCI AI services documentation](https://docs.oracle.com/en-us/iaas/Content/services.htm)** - product reference
 
 ## Why this exam is in this repo
 

@@ -240,7 +240,7 @@
 ## Additional Resources
 
 - [AI-102 Exam Page](https://learn.microsoft.com/en-us/certifications/exams/ai-102/)
-- [Azure AI Services SDKs](https://docs.microsoft.com/en-us/azure/cognitive-services/sdk/)
+- [Azure AI Services SDKs](https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/sdk-overview)
 - [Azure AI Samples](https://github.com/Azure-Samples?q=cognitive)
 - [Responsible AI Resources](https://www.microsoft.com/en-us/ai/responsible-ai)
 

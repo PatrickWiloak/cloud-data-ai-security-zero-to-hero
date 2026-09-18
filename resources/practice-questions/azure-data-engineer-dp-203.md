@@ -304,7 +304,7 @@ D. Ignore historical changes
 
 **Why:** Mapping Data Flows have built-in SCD transformation handling Type 1 (overwrite) and Type 2 (history tracking). Alternatively, Delta Lake MERGE with WHEN MATCHED and WHEN NOT MATCHED logic can expire old records (set end date, unset current flag) and insert new versions. This preserves history. Overwrite (A) loses history. Delete/reload (C) is inefficient. Ignoring changes (D) loses valuable temporal data.
 
-**Key Concept:** [SCD in Mapping Data Flows](https://docs.microsoft.com/azure/data-factory/tutorial-data-flow-scd)
+**Key Concept:** [SCD in Mapping Data Flows](https://learn.microsoft.com/en-us/azure/data-factory/concepts-data-flow-overview)
 </details>
 
 ### Question 17
@@ -542,7 +542,7 @@ D. Accept failures and retry
 
 **Why:** Data skew causes some partitions to have disproportionate data. Salting distributes hot keys across partitions by adding random prefix, enabling parallel processing. After initial aggregation, remove salt for final aggregation. This balances work. Uniform memory increase (A) doesn't fix skew. Reduced parallelism (C) worsens the problem. Retries (D) don't address root cause.
 
-**Key Concept:** [Handling Data Skew](https://docs.microsoft.com/azure/databricks/kb/sql/handle-skewed-data)
+**Key Concept:** [Handling Data Skew](https://learn.microsoft.com/en-us/azure/databricks/optimizations/aqe)
 </details>
 
 ### Question 30

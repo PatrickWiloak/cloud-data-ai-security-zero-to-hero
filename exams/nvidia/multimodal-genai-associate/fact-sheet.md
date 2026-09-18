@@ -40,7 +40,7 @@ last-updated: 2026-05-03
 - Examples: LLaVA, GPT-4V, NVIDIA VILA
 - Image encoder + LLM decoder architecture
 - Applications: image captioning, visual Q&A, document understanding
-- **[📖 NVIDIA VILA](https://developer.nvidia.com/blog/tag/multimodal/)** - Vision-language research
+- **[📖 NVIDIA VILA](https://docs.nvidia.com/nim/vision-language-models/latest/introduction.html)** - Vision-language research
 
 **Cross-Modal Alignment:**
 - CLIP (Contrastive Language-Image Pre-training)

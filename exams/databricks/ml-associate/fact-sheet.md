@@ -142,7 +142,7 @@ This certification is designed for:
 
 ### Model Evaluation
 
-**[📖 Model Evaluation](https://docs.databricks.com/en/machine-learning/model-evaluation.html)** - Evaluation techniques
+**[📖 Model Evaluation](https://docs.databricks.com/aws/en/mlflow3/genai/eval-monitor/)** - Evaluation techniques
 
 **Key Facts:**
 - Classification metrics:

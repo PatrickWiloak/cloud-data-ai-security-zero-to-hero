@@ -121,7 +121,7 @@ Engineers are responsible for implementing the technical components of FinOps - 
 - Azure Monitor integration
 
 **[📖 Azure Cost Management API](https://learn.microsoft.com/en-us/rest/api/cost-management/)** - REST API reference
-**[📖 Azure Billing APIs](https://learn.microsoft.com/en-us/azure/cost-management-billing/automate/)** - Automation guide
+**[📖 Azure Billing APIs](https://learn.microsoft.com/en-us/azure/cost-management-billing/automate/automation-overview)** - Automation guide
 
 ### GCP BigQuery Billing Export
 
@@ -285,7 +285,7 @@ Engineers are responsible for implementing the technical components of FinOps - 
 | Vantage | Cost reporting and optimization |
 
 **[📖 FinOps Landscape](https://www.finops.org/landscape/)** - Complete tool ecosystem
-**[📖 FinOps Certified Platforms](https://www.finops.org/members/certified-platforms/)** - Certified platforms
+**[📖 FinOps Certified Platforms](https://www.finops.org/about/members/)** - Certified platforms
 
 ### Event-Driven Cost Management
 

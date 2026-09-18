@@ -2872,4 +2872,4 @@ Use BigQuery when:
 **Training and Certification**:
 - [Professional Cloud Database Engineer Exam Guide](https://cloud.google.com/certification/cloud-database-engineer)
 - [Google Cloud Skills Boost - Database Learning Paths](https://www.cloudskillsboost.google/catalog)
-- [Coursera - Google Cloud Database Engineering](https://www.coursera.org/learn/gcp-databases)
+- [Coursera - Google Cloud Database Engineering](https://www.coursera.org/partners/googlecloud)

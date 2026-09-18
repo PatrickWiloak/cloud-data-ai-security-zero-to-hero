@@ -1709,5 +1709,5 @@ dataset_v2.update(
 
 - [Feature Store Documentation](https://cloud.google.com/vertex-ai/docs/featurestore)
 - [TensorFlow Data Validation](https://www.tensorflow.org/tfx/data_validation)
-- [Dataflow for ML](https://cloud.google.com/architecture/ml-inference-serving-patterns)
+- [Dataflow for ML](https://docs.cloud.google.com/dataflow/docs/machine-learning)
 - [BigQuery for ML](https://cloud.google.com/bigquery/docs/bigqueryml-intro)

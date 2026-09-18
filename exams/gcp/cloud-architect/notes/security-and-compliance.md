@@ -3414,7 +3414,7 @@ gcloud compute security-policies update POLICY_NAME \
 ### Security Architecture Guides
 - [Google Cloud Security Foundations Guide](https://cloud.google.com/architecture/security-foundations)
 - [Enterprise Security Blueprint](https://docs.cloud.google.com/architecture/blueprints/security-foundations)
-- [Zero Trust Architecture](https://cloud.google.com/beyondcorp-enterprise/docs/design-guide)
+- [Zero Trust Architecture](https://docs.cloud.google.com/chrome-enterprise-premium/docs/overview)
 - [Shared Responsibility Model](https://cloud.google.com/architecture/framework/security/shared-responsibility-shared-fate)
 
 ### Professional Cloud Architect Exam

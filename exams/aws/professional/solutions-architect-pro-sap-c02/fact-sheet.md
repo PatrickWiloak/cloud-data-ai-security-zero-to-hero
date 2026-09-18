@@ -102,7 +102,7 @@ last-updated: 2026-05-03
 - **Timestream** - Time-series database
 - **[📖 Amazon Timestream](https://docs.aws.amazon.com/timestream/latest/developerguide/)** - Time-series data
 - **QLDB** - Ledger database, immutable transaction log
-- **[📖 Amazon QLDB](https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Ledger database
+- **[📖 Amazon QLDB](https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Ledger database
 
 **Data & Analytics:**
 - **Kinesis Data Streams** - Real-time, shard-based, 1MB/sec or 1,000 records/sec per shard
@@ -156,7 +156,7 @@ last-updated: 2026-05-03
 - **Systems Manager** - Operational hub, Parameter Store, Session Manager, Patch Manager
 - **[📖 Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/)** - Operations management
 - **OpsWorks** - Chef/Puppet managed configuration
-- **[📖 AWS OpsWorks](https://docs.aws.amazon.com/opsworks/latest/userguide/)** - Configuration management
+- **[📖 AWS OpsWorks](https://aws.amazon.com/blogs/mt/migrate-your-aws-opsworks-stacks-to-aws-systems-manager/)** - Configuration management
 - **Service Catalog** - Governed product catalog
 - **[📖 Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/)** - Governance
 

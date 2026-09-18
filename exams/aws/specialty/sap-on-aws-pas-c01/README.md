@@ -302,13 +302,13 @@ Database Tier: SAP HANA
 **👉 [Complete AWS Study Resources Guide](../../../../.templates/resources-aws.md)**
 
 ### Quick Links (PAS-C01 Specific)
-- **[PAS-C01 Official Exam Page](https://aws.amazon.com/certification/certified-sap-on-aws-specialty/)** - Registration
+- **[PAS-C01 Official Exam Page](https://aws.amazon.com/certification/)** - Registration
 - **[SAP on AWS Documentation](https://docs.aws.amazon.com/sap/)** - Complete guides
 - **[SAP on AWS Blog](https://aws.amazon.com/blogs/awsforsap/)** - Latest updates
 - **[SAP Community on AWS](https://community.sap.com/)** - Community discussions
 
 ### SAP-Specific Resources
-- **SAP on AWS Quick Start**: https://aws.amazon.com/quickstart/architecture/sap/
+- **SAP on AWS Quick Start**: https://docs.aws.amazon.com/launchwizard/latest/userguide/launch-wizard-sap.html
 - **SAP Notes**: 1656250, 2015404, 2456406 (AWS-specific)
 - **AWS Launch Wizard for SAP**: Automated deployment tool
 - **SAP on AWS Architecture Guides**: Best practices and reference architectures

@@ -81,7 +81,7 @@ This certification is designed for:
 
 **[📖 Identity Setup](https://docs.databricks.com/en/admin/users-groups/index.html)** - User management
 **[📖 SCIM Provisioning](https://docs.databricks.com/en/admin/users-groups/scim/index.html)** - Automated user sync
-**[📖 SSO Configuration](https://docs.databricks.com/en/admin/account-settings/single-sign-on/index.html)** - Single sign-on
+**[📖 SSO Configuration](https://docs.databricks.com/aws/en/security/auth/single-sign-on/)** - Single sign-on
 
 **Key Facts:**
 - SCIM (System for Cross-domain Identity Management): sync users/groups from IdP

@@ -89,7 +89,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 Custom Organization Policies](https://cloud.google.com/resource-manager/docs/organization-policy/creating-managing-custom-constraints)** - Creating custom constraints using CEL
 
-**[📖 Organization Policy Best Practices](https://cloud.google.com/resource-manager/docs/organization-policy/best-practices)** - Recommended patterns for policy implementation
+**[📖 Organization Policy Best Practices](https://docs.cloud.google.com/organization-policy/overview)** - Recommended patterns for policy implementation
 
 **Common Organization Policies:**
 - Disable service account key creation
@@ -149,13 +149,13 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 Cloud Identity Free vs Premium](https://cloud.google.com/identity/docs/editions)** - Feature comparison between editions
 
-**[📖 User Lifecycle Management](https://cloud.google.com/identity/docs/how-to/manage-users)** - Managing user accounts
+**[📖 User Lifecycle Management](https://knowledge.workspace.google.com/admin/users/add-an-account-for-a-new-user)** - Managing user accounts
 
 **[📖 Group Management](https://cloud.google.com/identity/docs/groups)** - Creating and managing security groups
 
-**[📖 Security Settings](https://cloud.google.com/identity/docs/concepts/overview-security)** - Configuring identity security features
+**[📖 Security Settings](https://docs.cloud.google.com/identity/docs/overview)** - Configuring identity security features
 
-**[📖 2-Step Verification](https://cloud.google.com/identity/docs/how-to/setup-2sv)** - Enforcing two-factor authentication
+**[📖 2-Step Verification](https://knowledge.workspace.google.com/admin/security/protect-your-business-with-2-step-verification)** - Enforcing two-factor authentication
 
 **[📖 Single Sign-On (SSO)](https://cloud.google.com/architecture/identity/single-sign-on)** - Implementing SAML-based SSO
 
@@ -251,7 +251,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 Key Rings and Keys](https://cloud.google.com/kms/docs/resource-hierarchy)** - Organizing cryptographic keys
 
-**[📖 Key Versions](https://cloud.google.com/kms/docs/key-versions)** - Managing multiple versions of keys
+**[📖 Key Versions](https://docs.cloud.google.com/kms/docs/key-rotation)** - Managing multiple versions of keys
 
 **[📖 Key Rotation](https://cloud.google.com/kms/docs/key-rotation)** - Automatic and manual key rotation strategies
 
@@ -276,7 +276,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 ### 3.2 Data Loss Prevention (DLP)
 
-**[📖 Cloud DLP Overview](https://cloud.google.com/dlp/docs/dlp-overview)** - Discovering and protecting sensitive data
+**[📖 Cloud DLP Overview](https://docs.cloud.google.com/sensitive-data-protection/docs/sensitive-data-protection-overview)** - Discovering and protecting sensitive data
 
 **[📖 InfoTypes](https://cloud.google.com/dlp/docs/infotypes-reference)** - Built-in detectors for sensitive data
 
@@ -301,9 +301,9 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 - Date shifting: Shifting dates by random amounts
 - Crypto-based tokenization: Using cryptographic keys
 
-**[📖 DLP Findings](https://cloud.google.com/dlp/docs/concepts-findings)** - Understanding inspection results
+**[📖 DLP Findings](https://docs.cloud.google.com/sensitive-data-protection/docs/concepts-infotypes)** - Understanding inspection results
 
-**[📖 DLP Best Practices](https://cloud.google.com/dlp/docs/best-practices)** - Optimal configuration and usage patterns
+**[📖 DLP Best Practices](https://docs.cloud.google.com/sensitive-data-protection/docs/sensitive-data-protection-overview)** - Optimal configuration and usage patterns
 
 ### 3.3 Cloud Storage Security
 
@@ -349,7 +349,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 ### 3.5 Database Security
 
-**[📖 Cloud SQL Security](https://cloud.google.com/sql/docs/postgres/security)** - Securing managed relational databases
+**[📖 Cloud SQL Security](https://docs.cloud.google.com/sql/docs/postgres/best-practices)** - Securing managed relational databases
 
 **[📖 Cloud SQL IAM Authentication](https://cloud.google.com/sql/docs/postgres/iam-authentication)** - Passwordless database authentication
 
@@ -357,13 +357,13 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 Cloud SQL Proxy](https://cloud.google.com/sql/docs/postgres/sql-proxy)** - Secure access without whitelisting IPs
 
-**[📖 Cloud Spanner Security](https://cloud.google.com/spanner/docs/security-overview)** - Distributed database security
+**[📖 Cloud Spanner Security](https://docs.cloud.google.com/spanner/docs/iam)** - Distributed database security
 
-**[📖 BigQuery Security](https://cloud.google.com/bigquery/docs/security-overview)** - Data warehouse security controls
+**[📖 BigQuery Security](https://docs.cloud.google.com/bigquery/docs/data-governance)** - Data warehouse security controls
 
 **[📖 BigQuery Column-Level Security](https://cloud.google.com/bigquery/docs/column-level-security)** - Fine-grained access to columns
 
-**[📖 BigQuery Row-Level Security](https://cloud.google.com/bigquery/docs/row-level-security)** - Filtering rows based on user identity
+**[📖 BigQuery Row-Level Security](https://docs.cloud.google.com/bigquery/docs/row-level-security-intro)** - Filtering rows based on user identity
 
 **[📖 Authorized Views](https://cloud.google.com/bigquery/docs/authorized-views)** - Sharing query results without underlying data access
 
@@ -377,11 +377,11 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 SCC Standard vs Premium](https://cloud.google.com/security-command-center/docs/concepts-security-command-center-overview#tiers)** - Feature comparison between tiers
 
-**[📖 SCC Findings](https://cloud.google.com/security-command-center/docs/how-to-view-findings)** - Understanding and managing security findings
+**[📖 SCC Findings](https://docs.cloud.google.com/security-command-center/docs/how-to-use-security-command-center)** - Understanding and managing security findings
 
 **[📖 SCC Sources](https://cloud.google.com/security-command-center/docs/concepts-security-sources)** - Built-in and custom security sources
 
-**[📖 Asset Discovery](https://cloud.google.com/security-command-center/docs/how-to-use-asset-discovery)** - Inventory of cloud resources
+**[📖 Asset Discovery](https://docs.cloud.google.com/asset-inventory/docs/asset-inventory-overview)** - Inventory of cloud resources
 
 **[📖 Security Health Analytics](https://cloud.google.com/security-command-center/docs/concepts-security-health-analytics-overview)** - Automated vulnerability detection
 
@@ -395,9 +395,9 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 SCC Notifications](https://cloud.google.com/security-command-center/docs/how-to-notifications)** - Automating response to findings
 
-**[📖 SCC Export to BigQuery](https://cloud.google.com/security-command-center/docs/export-findings-to-bigquery)** - Analyzing findings at scale
+**[📖 SCC Export to BigQuery](https://docs.cloud.google.com/security-command-center/docs/how-to-analyze-findings-in-big-query)** - Analyzing findings at scale
 
-**[📖 SCC SIEM Integration](https://cloud.google.com/security-command-center/docs/how-to-export-to-splunk)** - Connecting to third-party SIEM tools
+**[📖 SCC SIEM Integration](https://docs.cloud.google.com/security-command-center/docs/how-to-configure-scc-splunk)** - Connecting to third-party SIEM tools
 
 ### 4.2 Cloud Logging and Monitoring
 
@@ -429,17 +429,17 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 ### 4.3 Incident Response
 
-**[📖 Incident Response Guide](https://cloud.google.com/architecture/incident-response)** - Best practices for incident handling
+**[📖 Incident Response Guide](https://docs.cloud.google.com/docs/security/incident-response)** - Best practices for incident handling
 
 **[📖 Chronicle Security Operations](https://cloud.google.com/chronicle/docs/overview)** - Cloud-native SIEM solution
 
-**[📖 Forensic Analysis](https://cloud.google.com/architecture/forensic-analysis-with-disk-snapshots)** - Investigating security incidents
+**[📖 Forensic Analysis](https://docs.cloud.google.com/compute/docs/disks/create-snapshots)** - Investigating security incidents
 
 **[📖 Disk Snapshots for Forensics](https://cloud.google.com/compute/docs/disks/create-snapshots)** - Preserving evidence
 
-**[📖 Memory Forensics](https://cloud.google.com/architecture/analyzing-memory-of-compromised-instance)** - Analyzing compromised instances
+**[📖 Memory Forensics](https://docs.cloud.google.com/docs/security/incident-response)** - Analyzing compromised instances
 
-**[📖 Compromised Instance Response](https://cloud.google.com/compute/docs/security#compromised_instance)** - Steps to isolate and investigate
+**[📖 Compromised Instance Response](https://docs.cloud.google.com/security-command-center/docs/how-to-investigate-threats)** - Steps to isolate and investigate
 
 ### 4.4 Vulnerability Management
 
@@ -453,7 +453,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 Attestations](https://docs.cloud.google.com/binary-authorization/docs/making-attestations)** - Cryptographic verification of build process
 
-**[📖 Artifact Registry Security](https://cloud.google.com/artifact-registry/docs/security)** - Securing container and package repositories
+**[📖 Artifact Registry Security](https://docs.cloud.google.com/artifact-registry/docs/access-control)** - Securing container and package repositories
 
 **[📖 OS Patch Management](https://cloud.google.com/compute/docs/os-patch-management)** - Automated patching for VM instances
 
@@ -493,9 +493,9 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 Assured Workloads Compliance Regimes](https://docs.cloud.google.com/assured-workloads/docs/supported-products)** - Supported regulatory frameworks
 
-**[📖 Sovereign Controls](https://cloud.google.com/assured-workloads/docs/sovereign-controls)** - Data residency and access controls
+**[📖 Sovereign Controls](https://docs.cloud.google.com/assured-workloads/docs/overview)** - Data residency and access controls
 
-**[📖 Workload Monitoring](https://cloud.google.com/assured-workloads/docs/monitor-workloads)** - Tracking compliance violations
+**[📖 Workload Monitoring](https://docs.cloud.google.com/assured-workloads/docs/monitor-folder)** - Tracking compliance violations
 
 ### 5.3 Data Residency and Sovereignty
 
@@ -505,7 +505,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 Organization Policy Resource Locations](https://cloud.google.com/resource-manager/docs/organization-policy/defining-locations)** - Restricting resource deployment locations
 
-**[📖 Data Localization](https://cloud.google.com/architecture/data-localization)** - Meeting geographic data requirements
+**[📖 Data Localization](https://docs.cloud.google.com/assured-workloads/docs/data-residency)** - Meeting geographic data requirements
 
 ### 5.4 Transparency and Control
 
@@ -535,7 +535,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 GKE Security Posture](https://cloud.google.com/kubernetes-engine/docs/concepts/about-security-posture-dashboard)** - Automated security posture management
 
-**[📖 GKE Binary Authorization](https://cloud.google.com/kubernetes-engine/docs/how-to/binary-authorization)** - Enforcing trusted container deployment
+**[📖 GKE Binary Authorization](https://docs.cloud.google.com/binary-authorization/docs/setting-up)** - Enforcing trusted container deployment
 
 ### Security Scanning and Assessment
 
@@ -543,9 +543,9 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 On-Demand Scanning](https://cloud.google.com/container-analysis/docs/on-demand-scanning)** - Scanning arbitrary container images
 
-**[📖 Continuous Validation](https://cloud.google.com/architecture/continuous-validation-gke)** - Ongoing security posture assessment
+**[📖 Continuous Validation](https://docs.cloud.google.com/architecture/framework/operational-excellence)** - Ongoing security posture assessment
 
-**[📖 Risk Manager](https://cloud.google.com/security-command-center/docs/concepts-security-risk-manager-overview)** - Prioritizing security findings
+**[📖 Risk Manager](https://docs.cloud.google.com/security-command-center/docs/security-command-center-overview)** - Prioritizing security findings
 
 ### Legacy Tools (For Reference)
 
@@ -595,7 +595,7 @@ Implement multiple layers of security controls:
 
 ### Separation of Duties
 
-**[📖 Separation of Duties](https://cloud.google.com/iam/docs/separation-of-duties)** - Preventing conflicts of interest
+**[📖 Separation of Duties](https://docs.cloud.google.com/iam/docs/using-iam-securely)** - Preventing conflicts of interest
 
 **Implementation Strategies:**
 - Different teams manage network, security, and applications
@@ -608,7 +608,7 @@ Implement multiple layers of security controls:
 
 **[📖 BeyondCorp Enterprise](https://cloud.google.com/beyondcorp-enterprise)** - Zero trust access platform
 
-**[📖 Zero Trust Architecture](https://cloud.google.com/architecture/zero-trust-architecture)** - Implementation guide
+**[📖 Zero Trust Architecture](https://docs.cloud.google.com/architecture/framework/security/implement-zero-trust)** - Implementation guide
 
 **Zero Trust Principles:**
 - Never trust, always verify

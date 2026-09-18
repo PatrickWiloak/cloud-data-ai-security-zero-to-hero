@@ -56,7 +56,7 @@ This practice plan is preserved for those who earned the DBS-C01 certification a
 - **Amazon Neptune** - Graph database for social networks, knowledge graphs
   - **[📖 Neptune User Guide](https://docs.aws.amazon.com/neptune/latest/userguide/)** - Graph database guide
 - **Amazon QLDB** - Ledger database for immutable audit trails
-  - **[📖 QLDB Developer Guide](https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Ledger database guide
+  - **[📖 QLDB Developer Guide](https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Ledger database guide
 - **Amazon Timestream** - Time series data for IoT and monitoring
   - **[📖 Timestream Developer Guide](https://docs.aws.amazon.com/timestream/latest/developerguide/)** - Time series database
 - **Amazon DocumentDB** - MongoDB-compatible document database

@@ -73,7 +73,7 @@ last-updated: 2026-05-03
 - **[📖 Cloud Run Documentation](https://cloud.google.com/run/docs)** - Complete Cloud Run guide
 - **[📖 Container Requirements](https://cloud.google.com/run/docs/container-contract)** - Container specs
 - **[📖 Auto-scaling](https://cloud.google.com/run/docs/about-instance-autoscaling)** - Scaling behavior
-- **[📖 Service Configuration](https://cloud.google.com/run/docs/configuring/services)** - Service settings
+- **[📖 Service Configuration](https://docs.cloud.google.com/run/docs/deploying)** - Service settings
 - **[📖 Cloud Run Pricing](https://cloud.google.com/run/pricing)** - Cost optimization
 
 **Cloud Functions**

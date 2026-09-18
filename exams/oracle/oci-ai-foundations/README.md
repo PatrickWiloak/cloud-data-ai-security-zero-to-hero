@@ -56,7 +56,7 @@ Schedule in the [practice plan](./practice-plan.md).
 ## Study resources
 
 - **[📖 Oracle University free learning path](https://mylearn.oracle.com/)** - the official course, free
-- **[📖 OCI AI services documentation](https://docs.oracle.com/en-us/iaas/Content/ai-services/home.htm)** - service reference
+- **[📖 OCI AI services documentation](https://docs.oracle.com/en-us/iaas/Content/services.htm)** - service reference
 - **[📖 OCI Generative AI documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/home.htm)** - the generative AI service
 - [AI from scratch](../../../learn/ai-from-scratch.md) - vendor-neutral grounding
 - [Practice questions](../../../resources/practice-questions/oracle-oci-ai-foundations.md) - question bank in this repo

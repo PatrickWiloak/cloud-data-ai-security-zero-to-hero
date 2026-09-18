@@ -4,7 +4,7 @@
 
 Retrieval-Augmented Generation (RAG) combines information retrieval with LLM generation to produce accurate, grounded responses. This document covers the end-to-end RAG pipeline architecture, optimization strategies, and production deployment patterns using NVIDIA tools and frameworks.
 
-**[📖 NVIDIA RAG Pipeline Guide](https://docs.nvidia.com/ai-enterprise/workflows-generative-ai/latest/rag/index.html)** - Building RAG with NVIDIA stack
+**[📖 NVIDIA RAG Pipeline Guide](https://docs.nvidia.com/rag/latest/index.html)** - Building RAG with NVIDIA stack
 **[📖 NVIDIA GenerativeAIExamples](https://github.com/NVIDIA/GenerativeAIExamples)** - Reference RAG implementations
 
 ## Key Topics

@@ -126,11 +126,11 @@ exam-retires: 2024-04-29
 - Quantum Ledger Database
 - Immutable, cryptographically verifiable transaction log
 - Use cases: Compliance, audit trails, supply chain
-- **[📖 QLDB Documentation](https://docs.aws.amazon.com/qldb/)** - Main documentation hub
-- **[📖 QLDB Developer Guide](https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Complete developer guide
-- **[📖 QLDB Journal](https://docs.aws.amazon.com/qldb/latest/developerguide/journal.html)** - Immutable transaction log
-- **[📖 QLDB PartiQL](https://docs.aws.amazon.com/qldb/latest/developerguide/ql-reference.html)** - SQL-compatible query language
-- **[📖 QLDB Verification](https://docs.aws.amazon.com/qldb/latest/developerguide/verification.html)** - Cryptographic verification
+- **[📖 QLDB Documentation](https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Main documentation hub
+- **[📖 QLDB Developer Guide](https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Complete developer guide
+- **[📖 QLDB Journal](https://web.archive.org/web/20250810210701/https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Immutable transaction log
+- **[📖 QLDB PartiQL](https://web.archive.org/web/20250625165707/https://docs.aws.amazon.com/qldb/latest/developerguide/ql-reference.html)** - SQL-compatible query language
+- **[📖 QLDB Verification](https://web.archive.org/web/20250810210701/https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Cryptographic verification
 
 **Amazon MemoryDB for Redis**
 - Redis-compatible in-memory database

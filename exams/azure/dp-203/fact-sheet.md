@@ -74,7 +74,7 @@ last-updated: 2026-05-03
 
 **[📖 Delta Lake Support](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-delta-lake-overview)** - ACID transactions for data lakes
 
-**[📖 Link Feature](https://docs.microsoft.com/azure/synapse-analytics/synapse-link/concept-synapse-link)** - Near real-time analytics over operational data
+**[📖 Link Feature](https://learn.microsoft.com/en-us/azure/cosmos-db/synapse-link)** - Near real-time analytics over operational data
 
 ### Azure Cosmos DB
 
@@ -362,7 +362,7 @@ last-updated: 2026-05-03
 
 ### File Formats
 
-**[📖 Parquet Format](https://parquet.apache.org/documentation/latest/)** - Columnar storage format for analytics
+**[📖 Parquet Format](https://parquet.apache.org/docs/)** - Columnar storage format for analytics
 
 **[📖 Avro Format](https://avro.apache.org/docs/)** - Row-based serialization with schema evolution
 
@@ -438,7 +438,7 @@ last-updated: 2026-05-03
 
 **[📖 Azure Sandbox Environment](https://docs.microsoft.com/learn/support/faq#what-are-microsoft-learn-sandboxes-)** - Practice without Azure subscription
 
-**[📖 Exam Skills Outline](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4MbYT)** - Detailed exam objectives PDF
+**[📖 Exam Skills Outline](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-203)** - Detailed exam objectives PDF
 
 ### Common Exam Scenarios
 

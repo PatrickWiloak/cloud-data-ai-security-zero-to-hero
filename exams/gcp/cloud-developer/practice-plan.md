@@ -393,7 +393,7 @@ gcloud artifacts repositories create REPO --location=LOCATION
 ### Official Google Cloud Resources
 - **[Application Development Best Practices](https://cloud.google.com/architecture/best-practices-for-building-containers)**
 - **[Cloud Build Documentation](https://cloud.google.com/build/docs)**
-- **[Microservices on GCP](https://cloud.google.com/architecture/microservices-architecture-on-gcp)**
+- **[Microservices on GCP](https://cloud.google.com/learn/what-is-microservices-architecture)**
 - **[Serverless Options](https://cloud.google.com/serverless-options)**
 
 ### Recommended Learning Paths

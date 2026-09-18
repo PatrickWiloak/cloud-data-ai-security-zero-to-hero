@@ -99,5 +99,5 @@ often than architecture.
 
 ## Official documentation
 
-**[📖 vSphere documentation](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere.html)** - product reference
+**[📖 vSphere documentation](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html)** - product reference
 **[📖 VCP-DCV certification](https://www.broadcom.com/support/education/vmware/certification)** - exam blueprint and requirements

@@ -248,7 +248,7 @@ Use [subnettingpractice.com](https://subnettingpractice.com/) or Professor Messe
 ## Study Resources
 
 ### Free Resources
-- **[Professor Messer Network+ N10-009](https://www.professormesser.com/network-plus/n10-009/n10-009-video/n10-009-comptia-network-plus-course/)** - Complete free video course
+- **[Professor Messer Network+ N10-009](https://www.professormesser.com/network-plus/n10-009/n10-009-video/n10-009-training-course/)** - Complete free video course
 - **[CompTIA N10-009 Exam Objectives](https://www.comptia.org/certifications/network#examdetails)** - Official scope document
 - **[Cisco Packet Tracer](https://www.netacad.com/cisco-packet-tracer)** - Free network simulator (NetAcad signup)
 - **[GNS3](https://www.gns3.com/)** - Free network emulator with real images

@@ -72,7 +72,7 @@
 ### Agent Framework Resources
 - **[LangChain Agents Documentation](https://python.langchain.com/docs/concepts/agents/)** - Agent patterns and implementation
 - **[LlamaIndex Agents](https://docs.llamaindex.ai/en/stable/)** - Agent modules and tools
-- **[NVIDIA AI Workbench](https://developer.nvidia.com/ai-workbench)** - Development environment
+- **[NVIDIA AI Workbench](https://docs.nvidia.com/ai-workbench/user-guide/latest/overview/introduction.html)** - Development environment
 
 ### Supplementary Learning
 - **[NVIDIA GTC Sessions](https://www.nvidia.com/gtc/)** - Conference talks on agentic AI

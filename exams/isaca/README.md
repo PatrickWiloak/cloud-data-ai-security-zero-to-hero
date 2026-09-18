@@ -65,5 +65,5 @@ ISACA publishes COBIT (Control Objectives for Information and Related Technologi
 - **ISACA Website:** https://www.isaca.org
 - **My ISACA Portal:** https://www.isaca.org/myisaca
 - **COBIT Framework:** https://www.isaca.org/resources/cobit
-- **ITAF (IT Audit Framework):** https://www.isaca.org/resources/itaf
+- **ITAF (IT Audit Framework):** https://www.isaca.org/resources/it-audit
 - **Engage Community:** https://engage.isaca.org

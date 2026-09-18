@@ -1908,7 +1908,7 @@ Rules for backward-compatible changes:
 - [Cloud Pub/Sub](https://cloud.google.com/pubsub/docs)
 - [Eventarc](https://cloud.google.com/eventarc/docs)
 - [Cloud Tasks](https://cloud.google.com/tasks/docs)
-- [Building event-driven systems](https://cloud.google.com/architecture/building-event-driven-systems)
+- [Building event-driven systems](https://docs.cloud.google.com/eventarc/docs/event-driven-architectures)
 
 ### General
 - [CloudEvents Specification](https://cloudevents.io/)

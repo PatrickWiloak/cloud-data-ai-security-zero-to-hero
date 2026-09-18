@@ -57,7 +57,7 @@ last-updated: 2026-05-03
 
 **[📖 Relationship Behavior](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/entity-relationship-behavior)** - Understanding cascading behaviors for referential integrity
 
-**[📖 Connection Roles](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/connection-entities)** - Creating flexible many-to-many relationships using connections
+**[📖 Connection Roles](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/configure-connection-roles)** - Creating flexible many-to-many relationships using connections
 
 ### Business Rules
 
@@ -77,7 +77,7 @@ last-updated: 2026-05-03
 
 **[📖 Export Data from Dataverse](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/import-export-data)** - Exporting data to Excel and other formats
 
-**[📖 Duplicate Detection Rules](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/set-up-duplicate-detection-rules)** - Creating rules to prevent duplicate records
+**[📖 Duplicate Detection Rules](https://learn.microsoft.com/en-us/power-platform/admin/set-up-duplicate-detection-rules-keep-data-clean)** - Creating rules to prevent duplicate records
 
 **[📖 Bulk Delete Jobs](https://learn.microsoft.com/en-us/power-platform/admin/delete-bulk-records)** - Scheduling jobs to clean up old or unwanted records
 
@@ -119,7 +119,7 @@ last-updated: 2026-05-03
 
 **[📖 Form Columns and Sections](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-move-or-delete-fields-on-form)** - Adding, arranging, and configuring form columns
 
-**[📖 Form Tabs and Sections](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/add-move-configure-or-delete-tabs-on-form)** - Organizing forms with tabs and sections
+**[📖 Form Tabs and Sections](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/create-design-forms)** - Organizing forms with tabs and sections
 
 **[📖 Header and Footer Properties](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/form-designer-header-properties)** - Configuring form header and footer elements
 
@@ -165,7 +165,7 @@ last-updated: 2026-05-03
 
 **[📖 Business Process Flow Branching](https://learn.microsoft.com/en-us/power-automate/enhance-business-process-flows-branching)** - Creating conditional branches in processes
 
-**[📖 Business Process Flow Actions](https://learn.microsoft.com/en-us/power-automate/business-process-flows-actions)** - Triggering workflows from process stage changes
+**[📖 Business Process Flow Actions](https://learn.microsoft.com/en-us/power-automate/business-process-flows-overview)** - Triggering workflows from process stage changes
 
 **[📖 Multi-entity Business Process Flows](https://learn.microsoft.com/en-us/power-automate/create-business-process-flow#create-a-business-process-flow)** - Creating processes that span multiple tables
 
@@ -189,7 +189,7 @@ last-updated: 2026-05-03
 
 **[📖 Create Canvas App from Data](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/app-from-sharepoint)** - Generating apps automatically from data sources
 
-**[📖 Canvas App Design Principles](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/design-best-practices)** - Best practices for user experience and performance
+**[📖 Canvas App Design Principles](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-performant-apps-overview)** - Best practices for user experience and performance
 
 **[📖 Responsive Design](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/create-responsive-layout)** - Creating apps that work across devices and screen sizes
 
@@ -257,7 +257,7 @@ last-updated: 2026-05-03
 
 **[📖 Apply to Each Loops](https://learn.microsoft.com/en-us/power-automate/apply-to-each)** - Iterating through arrays and lists
 
-**[📖 Do Until Loops](https://learn.microsoft.com/en-us/power-automate/do-until)** - Repeating actions until a condition is met
+**[📖 Do Until Loops](https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-control-flow-loops)** - Repeating actions until a condition is met
 
 **[📖 Parallel Branch](https://learn.microsoft.com/en-us/power-automate/parallel-modern-approvals)** - Running actions simultaneously
 
@@ -293,7 +293,7 @@ last-updated: 2026-05-03
 
 **[📖 Flow Run History](https://learn.microsoft.com/en-us/power-automate/fix-flow-failures)** - Monitoring and troubleshooting flows
 
-**[📖 Flow Analytics](https://learn.microsoft.com/en-us/power-automate/analytics)** - Viewing flow performance and usage metrics
+**[📖 Flow Analytics](https://learn.microsoft.com/en-us/power-platform/admin/analytics-flow)** - Viewing flow performance and usage metrics
 
 ### Connectors
 
@@ -303,7 +303,7 @@ last-updated: 2026-05-03
 
 **[📖 Custom Connectors](https://learn.microsoft.com/en-us/connectors/custom-connectors/)** - Creating connectors for proprietary APIs
 
-**[📖 HTTP Connector](https://learn.microsoft.com/en-us/power-automate/use-http-request)** - Making REST API calls
+**[📖 HTTP Connector](https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/web)** - Making REST API calls
 
 ---
 
@@ -369,7 +369,7 @@ last-updated: 2026-05-03
 
 **[📖 DLP Connector Classification](https://learn.microsoft.com/en-us/power-platform/admin/dlp-connector-classification)** - Business, Non-business, and Blocked connector groups
 
-**[📖 DLP Impact Analysis](https://learn.microsoft.com/en-us/power-platform/admin/dlp-policy-impact-analysis)** - Understanding policy effects before enforcement
+**[📖 DLP Impact Analysis](https://learn.microsoft.com/en-us/power-platform/admin/wp-data-loss-prevention)** - Understanding policy effects before enforcement
 
 ### Environment Security
 
@@ -409,7 +409,7 @@ last-updated: 2026-05-03
 
 **[📖 Solution Patches](https://learn.microsoft.com/en-us/power-platform/alm/solution-concepts-alm)** - Creating incremental updates to managed solutions
 
-**[📖 Solution Clone](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solution-clone)** - Cloning solutions for new versions
+**[📖 Solution Clone](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/update-solutions)** - Cloning solutions for new versions
 
 ### Environment Variables and Connection References
 
@@ -483,7 +483,7 @@ last-updated: 2026-05-03
 
 **[📖 Power Platform Governance](https://learn.microsoft.com/en-us/power-platform/guidance/adoption/admin-best-practices)** - Establishing governance frameworks
 
-**[📖 Naming Conventions](https://learn.microsoft.com/en-us/power-platform/guidance/coe/naming-conventions)** - Standardizing component names
+**[📖 Naming Conventions](https://learn.microsoft.com/en-us/power-platform/guidance/coe/overview)** - Standardizing component names
 
 ---
 
@@ -503,7 +503,7 @@ last-updated: 2026-05-03
 
 ### Hands-on Practice
 
-**[📖 Power Apps Training Workshops](https://learn.microsoft.com/en-us/power-platform/developer/workshop)** - App in a Day and other workshops
+**[📖 Power Apps Training Workshops](https://learn.microsoft.com/en-us/training/powerplatform/)** - App in a Day and other workshops
 
 **[📖 Power Automate Training](https://learn.microsoft.com/en-us/training/powerplatform/power-automate)** - RPA in a Day workshop materials
 

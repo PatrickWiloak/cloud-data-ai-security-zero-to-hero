@@ -143,7 +143,7 @@ kubectl debug <pod-name> -it --image=busybox
 ```
 
 **[Debug Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/)** - Pod debugging guide
-**[Debug Running Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pods/)** - Live debugging
+**[Debug Running Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/)** - Live debugging
 **[Troubleshoot Applications](https://kubernetes.io/docs/tasks/debug/debug-application/)** - Application debugging overview
 
 ## Cluster Component Troubleshooting

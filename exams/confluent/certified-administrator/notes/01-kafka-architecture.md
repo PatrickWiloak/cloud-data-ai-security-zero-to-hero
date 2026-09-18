@@ -75,7 +75,7 @@ my-topic-0/
 - Manages ISR information (written by controller)
 - Broker registration and liveness detection
 
-**[📖 ZooKeeper Configuration](https://docs.confluent.io/platform/current/installation/configuration/zookeeper-configs.html)** - ZooKeeper settings
+**[📖 ZooKeeper Configuration](https://docs.confluent.io/platform/current/kafka-metadata/kraft.html)** - ZooKeeper settings
 
 ### ZooKeeper Ensemble Configuration
 - Odd number of nodes recommended (3 or 5)

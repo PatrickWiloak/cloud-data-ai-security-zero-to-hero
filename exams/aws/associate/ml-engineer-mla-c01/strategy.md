@@ -50,7 +50,7 @@
 **Official Resources:**
 - **[MLA-C01 Official Exam Page](https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/)** - Registration and details
 - **[AWS Skill Builder](https://skillbuilder.aws/)** - FREE official training and labs
-- **[ML Engineer Learning Plan](https://explore.skillbuilder.aws/learn/learning_plan/view/2191/machine-learning-engineer-learning-plan)** - Official study plan
+- **[ML Engineer Learning Plan](https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/)** - Official study plan
 - **[SageMaker Developer Guide](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html)** - Complete documentation
 - **[SageMaker Examples](https://github.com/aws/amazon-sagemaker-examples)** - GitHub examples
 

@@ -334,7 +334,7 @@ On-premises:
 ## Additional Resources
 
 - [AWS Multi-Cloud Networking](https://docs.aws.amazon.com/whitepapers/latest/hybrid-connectivity/hybrid-connectivity.html)
-- [Azure Multi-Cloud Design](https://learn.microsoft.com/en-us/azure/architecture/guide/multi-cloud/overview)
+- [Azure Multi-Cloud Design](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/hybrid/strategy)
 - [GCP Multi-Cloud Networking](https://cloud.google.com/network-connectivity/docs/how-to/choose-product)
 - [Istio Multi-Cluster Installation](https://istio.io/latest/docs/setup/install/multicluster/)
 - [HashiCorp Consul Multi-Datacenter](https://developer.hashicorp.com/consul/docs/architecture)

@@ -6,26 +6,26 @@ Working task list for **cloud-data-ai-security-zero-to-hero**. Read this at the 
 
 ## Open
 
-### 🔴 Link rot backlog (added 2026-09-17, cut 2026-09-18)
+### 🔴 Link rot backlog (added 2026-09-17, cleared 2026-09-18)
 
 The external link checker had never run (see CHANGELOG 2026-09-17). Sweeps on 2026-09-17/18
-checked every external URL for hard 404s, soft 404s ("not found" pages served as 200) and deep
-links lost to a redirect: **783 dead**. 303 are repaired (449 citations), each replacement fetched
-and title-checked, plus 37 moved links re-pointed (87 citations). **480 remain, cited 574 times**, all
-pages removed with no successor. The list, with the files citing each one, is
+checked every external URL for hard 404s, soft 404s and deep links lost to a redirect: **783 dead,
+all 783 now repaired**, each replacement fetched and title-checked. The old-to-new record is
 [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md).
 
-- [ ] **Decide what to do with the 480 unrepairable links.** Options: leave them listed (current), unlink the
-      text and mark it "(retired by vendor)", or point each at its product's live landing page (a fallback
-      exists for most, listed in the report). Concentrated in GCP Architecture Center (removed articles),
-      Microsoft Learn, Oracle, and retired IBM services.
-- [ ] **Judge by 2026-09-22**: the first repaired weekly link check runs Monday 06:00 UTC. It should open an
-      issue listing broken links. If it passes clean, something is wrong - 480 known-dead links remain.
-- [ ] **Your own blog link is dead.** README footer "Study Guide 2025" ->
-      `patrickwiloak.com/blog/aws-certification-study-framework-how-to-prepare-pass-certifications` now
-      redirects to your homepage. Restore the post or change the link; left untouched because it is your site.
+- [x] ~~Decide what to do with the 480 unrepairable links~~ ✅ done 2026-09-18: each repaired by hand to the
+      closest live page on the same subject; 6 Amazon QLDB links point at pinned Internet Archive snapshots.
+- [x] ~~Your own blog link is dead~~ ✅ done 2026-09-18: the post went with the blog on 2026-09-05. README
+      mentions dropped, site footer now links to patrickwiloak.com.
+- [ ] **Judge by 2026-09-22**: the first repaired weekly link check runs Monday 06:00 UTC. The after-repair run on
+      2026-09-18 counted 895 errors across 21,983 checks before this last batch; expect far fewer. Whatever it still
+      opens an issue for should be rate limits and bot walls (the 62 below), not removed pages. Open the issue and
+      re-check any real 404 in it.
+- [ ] **Spot-check the retired-product replacements (by 2026-10-31).** These links now reach the successor product,
+      but the surrounding notes may still teach the retired one: QLDB (`exams/aws/specialty/database-dbs-c01`),
+      OpsWorks, LUIS (`exams/azure/ai-102`), PaLM and AutoML (GCP ML notes), IBM Watson and Cloud Foundry
+      (`exams/ibm`), AWS Data Analytics and SAP specialty exams. The report lists every replacement.
 - [ ] **Content checks the sweep surfaced** (links fixed, content may be stale):
-  - `exams/azure/ai-102/fact-sheet.md` cites LUIS pages; LUIS is retired (successor: conversational language understanding).
   - Microsoft now lists **AI-901** "Azure AI Fundamentals" alongside AI-900. Check for an AI-900 retirement date and set `exam-retires:` on `exams/azure/ai-900`.
   - The **PCNSA** exam page is gone (404) and Palo Alto now promotes a Network Security Analyst certification. Check whether PCNSA was retired or renamed.
   - 15 citations of retired IBM services now point at the official successors (listed in the report); the surrounding IBM notes may describe the retired products.

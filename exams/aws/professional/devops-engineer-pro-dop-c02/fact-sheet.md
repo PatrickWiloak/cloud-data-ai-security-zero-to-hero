@@ -110,7 +110,7 @@ last-updated: 2026-05-03
   - [📖 Config Documentation](https://docs.aws.amazon.com/config/)
 
 - **OpsWorks** - Chef/Puppet managed configuration
-- **[📖 AWS OpsWorks](https://docs.aws.amazon.com/opsworks/latest/userguide/)** - Configuration management
+- **[📖 AWS OpsWorks](https://aws.amazon.com/blogs/mt/migrate-your-aws-opsworks-stacks-to-aws-systems-manager/)** - Configuration management
 - **AppConfig** - Feature flags and configuration deployment
 - **[📖 AWS AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/)** - Application configuration
 

@@ -111,7 +111,7 @@ docker run -d --gpus all \
 - Notebook-based experimentation
 - Easy transition from development to production
 
-**[📖 NVIDIA AI Workbench](https://developer.nvidia.com/ai-workbench)** - Development environment
+**[📖 NVIDIA AI Workbench](https://docs.nvidia.com/ai-workbench/user-guide/latest/overview/introduction.html)** - Development environment
 
 ## API Reference
 

@@ -55,7 +55,7 @@ Tools are defined using JSON Schema format:
 - `tool_choice: {"type": "function", "function": {"name": "..."}}` - force specific tool
 - No tool call needed for conversational or reasoning-only responses
 
-**[📖 NIM API Reference](https://docs.nvidia.com/nim/large-language-models/latest/reference.html)** - API parameters for function calling
+**[📖 NIM API Reference](https://docs.nvidia.com/nim/large-language-models/latest/api-reference.html)** - API parameters for function calling
 
 ## Tool Orchestration
 
@@ -104,7 +104,7 @@ Tools are defined using JSON Schema format:
 - Periodically test with a single request (half-open state)
 - Prevents cascading failures from broken external services
 
-**[📖 NeMo Guardrails Actions](https://docs.nvidia.com/nemo/guardrails/latest/user-guides/configuration-guide/index.html)** - Configuring action handling and error recovery
+**[📖 NeMo Guardrails Actions](https://docs.nvidia.com/nemo/guardrails/about-nemo-guardrails-library/overview)** - Configuring action handling and error recovery
 
 ## Custom Tool Development
 

@@ -157,8 +157,8 @@ exam-retires: 2025-09-29
 - Chef and Puppet managed configuration
 - Stacks, layers, instances
 - Lifecycle events with recipes
-- **[📖 AWS OpsWorks](https://docs.aws.amazon.com/opsworks/latest/userguide/)** - Configuration management
-- **[📖 OpsWorks Stacks](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks.html)** - Stack configuration
+- **[📖 AWS OpsWorks](https://aws.amazon.com/blogs/mt/migrate-your-aws-opsworks-stacks-to-aws-systems-manager/)** - Configuration management
+- **[📖 OpsWorks Stacks](https://aws.amazon.com/blogs/mt/migrate-your-aws-opsworks-stacks-to-aws-systems-manager/)** - Stack configuration
 
 ### Security & Compliance (16%)
 

@@ -3381,7 +3381,7 @@ gcloud transfer jobs create gs://source-bucket gs://dest-bucket --name=my-transf
 
 ## Additional Resources
 
-- [Data Engineering on GCP](https://cloud.google.com/architecture/data-engineering)
+- [Data Engineering on GCP](https://docs.cloud.google.com/architecture/big-data-analytics)
 - [Dataflow Documentation](https://cloud.google.com/dataflow/docs)
 - [BigQuery Best Practices](https://cloud.google.com/bigquery/docs/best-practices)
 - [Data Migration Guides](https://cloud.google.com/architecture/migration-to-gcp-getting-started)

@@ -2170,7 +2170,7 @@ Key principle: Design for failure, plan compensating actions
 - [EKS Best Practices](https://aws.github.io/aws-eks-best-practices/)
 - [ECS Best Practices](https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/)
 - [AWS App Mesh](https://docs.aws.amazon.com/app-mesh/)
-- [AWS Well-Architected - Microservices](https://docs.aws.amazon.com/wellarchitected/latest/microservices-lens/)
+- [AWS Well-Architected - Microservices](https://docs.aws.amazon.com/whitepapers/latest/microservices-on-aws/microservices-on-aws.html)
 
 ### Azure
 - [AKS Best Practices](https://docs.microsoft.com/azure/aks/best-practices)

@@ -3918,5 +3918,5 @@ def operation_with_backoff():
 - [Pub/Sub Documentation](https://cloud.google.com/pubsub/docs)
 - [Memorystore Best Practices](https://docs.cloud.google.com/memorystore/docs/redis/memory-management-best-practices)
 - [Bigtable Schema Design](https://cloud.google.com/bigtable/docs/schema-design)
-- [Cloud Spanner Best Practices](https://cloud.google.com/spanner/docs/best-practice-list)
+- [Cloud Spanner Best Practices](https://docs.cloud.google.com/spanner/docs/sql-best-practices)
 - [Professional Cloud Developer Exam Guide](https://cloud.google.com/certification/cloud-developer)

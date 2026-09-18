@@ -124,7 +124,7 @@ A knowledge base is a curated collection of markdown-heavy repositories that Cop
 - Runbooks and SOPs
 - Onboarding materials
 
-**[Knowledge Bases](https://docs.github.com/en/enterprise-cloud@latest/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-copilot-knowledge-bases)** - Enterprise docs
+**[Knowledge Bases](https://docs.github.com/en/copilot/concepts/context/spaces)** - Enterprise docs
 
 ## PR Summaries and Code Review (Enterprise)
 

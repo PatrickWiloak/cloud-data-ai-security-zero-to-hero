@@ -131,7 +131,7 @@ last-updated: 2026-05-03
 #### Other Encryption Features
 - **[📖 Dynamic Data Masking](https://learn.microsoft.com/en-us/azure/azure-sql/database/dynamic-data-masking-overview)** - Mask sensitive data from non-privileged users
 - **[📖 Configure Data Masking](https://learn.microsoft.com/en-us/azure/azure-sql/database/dynamic-data-masking-configure-portal)** - Set up masking rules
-- **[📖 Transport Layer Security](https://learn.microsoft.com/en-us/azure/azure-sql/database/connect-query-content)** - TLS encryption for data in transit
+- **[📖 Transport Layer Security](https://learn.microsoft.com/en-us/azure/azure-sql/database/connectivity-settings)** - TLS encryption for data in transit
 
 ### Security Monitoring and Compliance
 
@@ -396,7 +396,7 @@ last-updated: 2026-05-03
 ### Learning and Practice
 - **[📖 Microsoft Learn - DP-300 Path](https://learn.microsoft.com/en-us/training/browse/?roles=database-administrator&products=azure-sql-database)** - Free training modules
 - **[📖 Azure Free Account](https://azure.microsoft.com/en-us/free/)** - $200 credit for 30 days
-- **[📖 DP-300 Sample Questions](https://learn.microsoft.com/en-us/certifications/resources/dp-300-sample-questions)** - Practice questions from Microsoft
+- **[📖 DP-300 Sample Questions](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-300)** - Practice questions from Microsoft
 - **[📖 Azure SQL Workshop](https://github.com/microsoft/sqlworkshops-azuresqlworkshop)** - Hands-on GitHub workshop
 
 ### Community and Support

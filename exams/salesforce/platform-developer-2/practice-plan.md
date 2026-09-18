@@ -12,8 +12,8 @@ You **must** ship at least 3-5 non-trivial Apex / LWC / integration projects dur
 - [ ] Salesforce CLI (`sf`) + VS Code with Salesforce Extensions Pack
 - [ ] Postman or `curl` for testing REST endpoints
 - [ ] [Trailhead PDII Trailmix](https://trailhead.salesforce.com/users/strailhead/trailmixes/prepare-for-your-salesforce-platform-developer-ii-credential)
-- [ ] [Apex Specialist Superbadge](https://trailhead.salesforce.com/content/learn/superbadges/superbadge_apex)
-- [ ] [Advanced Apex Specialist Superbadge](https://trailhead.salesforce.com/content/learn/superbadges/superbadge_advanced_apex_specialist)
+- [ ] [Apex Specialist Superbadge](https://trailhead.salesforce.com/credentials/platformdeveloperi)
+- [ ] [Advanced Apex Specialist Superbadge](https://trailhead.salesforce.com/credentials/platformdeveloperii)
 - [ ] Active PDI credential (PDII is awarded only after PDI is in good standing)
 
 ---

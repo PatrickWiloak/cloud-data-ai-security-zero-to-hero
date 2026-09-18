@@ -3,7 +3,7 @@
 ## Overview
 This domain covers implementing API Management, developing event-based solutions, and creating message-based solutions. It represents 15-20% of the exam and focuses on integration patterns and asynchronous communication.
 
-**[📖 Azure Integration Services](https://learn.microsoft.com/en-us/azure/architecture/solution-ideas/articles/enterprise-integration)** - Enterprise integration overview
+**[📖 Azure Integration Services](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/enterprise-integration/basic-enterprise-integration)** - Enterprise integration overview
 **[📖 Azure Messaging Services](https://learn.microsoft.com/en-us/azure/service-bus-messaging/compare-messaging-services)** - Comparison of Azure messaging services
 
 ## Key Topics

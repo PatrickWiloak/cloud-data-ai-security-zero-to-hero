@@ -204,5 +204,5 @@ Track the pass rate as a metric over time. A single manual test session tells yo
 - **[Guardrails and safety](../../learn/concepts/guardrails-and-safety.md)** - the broader control layer
 
 **[📖 OWASP LLM01: Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)** - canonical entry
-**[📖 MITRE ATLAS: LLM Prompt Injection](https://atlas.mitre.org/techniques/AML.T0051)** - technique breakdown and case studies
+**[📖 MITRE ATLAS: LLM Prompt Injection](https://atlas.mitre.org/)** - technique breakdown and case studies
 **[📖 Simon Willison on prompt injection](https://simonwillison.net/series/prompt-injection/)** - the long-running series that named the problem

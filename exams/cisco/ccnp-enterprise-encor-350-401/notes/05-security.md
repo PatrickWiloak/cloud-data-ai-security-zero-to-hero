@@ -92,4 +92,4 @@ reliably examined.
 
 **[📖 ENCOR 350-401 exam topics](https://learningnetwork.cisco.com/s/encor-exam-topics)** - authoritative blueprint
 **[📖 Cisco IOS security configuration guide](https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-xe-17/series.html)** - AAA, ACLs, CoPP
-**[📖 Catalyst Layer 2 security features](https://www.cisco.com/c/en/us/support/switches/catalyst-9000/series.html)** - DHCP snooping, DAI, port security
+**[📖 Catalyst Layer 2 security features](https://www.cisco.com/c/en/us/support/switches/category.html)** - DHCP snooping, DAI, port security

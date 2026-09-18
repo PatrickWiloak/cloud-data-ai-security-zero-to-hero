@@ -34,7 +34,7 @@ last-updated: 2026-05-03
 - Feed-forward networks with activation functions (GeLU, SwiGLU)
 - Residual connections for gradient flow in deep networks
 - **[📖 Transformer Architecture](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - NeMo GPT training architecture guide
-- **[📖 NVIDIA AI Foundation Models](https://docs.nvidia.com/ai-foundation-models/index.html)** - Pre-trained model catalog and capabilities
+- **[📖 NVIDIA AI Foundation Models](https://build.nvidia.com/models)** - Pre-trained model catalog and capabilities
 
 ### Model Families and Design Choices
 - **GPT-style (decoder-only):** Autoregressive generation, causal attention masks
@@ -88,7 +88,7 @@ last-updated: 2026-05-03
 - **Adapter layers:** Small trainable modules inserted between frozen layers
 - LoRA rank selection - higher rank = more capacity but more parameters
 - Typical LoRA alpha and dropout hyperparameters
-- **[📖 NeMo PEFT Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/peft/landing_page.html)** - PEFT methods in NeMo
+- **[📖 NeMo PEFT Guide](https://docs.nvidia.com/nemo/automodel/latest)** - PEFT methods in NeMo
 
 ### RLHF and Alignment
 - Supervised Fine-Tuning (SFT) as initial alignment step
@@ -142,7 +142,7 @@ last-updated: 2026-05-03
 - **In-flight batching:** Process prefill and generation simultaneously
 - Token-level scheduling for optimal GPU utilization
 - Dynamic batch size based on sequence lengths
-- **[📖 TensorRT-LLM Batching](https://nvidia.github.io/TensorRT-LLM/advanced/batch-manager.html)** - Batch management in TensorRT-LLM
+- **[📖 TensorRT-LLM Batching](https://nvidia.github.io/TensorRT-LLM/features/paged-attention-ifb-scheduler.html)** - Batch management in TensorRT-LLM
 
 ### Performance Optimization
 - **Speculative decoding:** Draft model generates candidates, target model verifies
@@ -170,7 +170,7 @@ last-updated: 2026-05-03
 - **Indexing:** Store embeddings in vector database
 - **Retrieval:** Query vector DB for relevant documents
 - **Generation:** Augment LLM prompt with retrieved context
-- **[📖 NVIDIA RAG Example](https://docs.nvidia.com/ai-enterprise/workflows-generative-ai/latest/rag/index.html)** - RAG pipeline with NVIDIA stack
+- **[📖 NVIDIA RAG Example](https://docs.nvidia.com/rag/latest/index.html)** - RAG pipeline with NVIDIA stack
 - **[📖 NVIDIA Retrieval QA](https://developer.nvidia.com/blog/build-enterprise-retrieval-augmented-generation-apps-with-nvidia-retrieval-qa-embedding-model/)** - Enterprise RAG with NVIDIA
 
 ### Vector Databases and Embeddings
@@ -208,7 +208,7 @@ last-updated: 2026-05-03
 - Auto-scaling with Kubernetes HPA
 - **[📖 NVIDIA NIM Overview](https://docs.nvidia.com/nim/index.html)** - NIM documentation
 - **[📖 NIM Quick Start](https://docs.nvidia.com/nim/large-language-models/latest/getting-started.html)** - Deploy your first NIM
-- **[📖 NIM API Reference](https://docs.nvidia.com/nim/large-language-models/latest/reference.html)** - API documentation
+- **[📖 NIM API Reference](https://docs.nvidia.com/nim/large-language-models/latest/api-reference.html)** - API documentation
 
 ### Model Serving at Scale
 - Load balancing across multiple GPU instances

@@ -4,7 +4,7 @@
 
 This document covers the foundational architecture concepts for large language models, including transformer internals, model families, tokenization strategies, and scaling laws. Understanding these architectural choices is critical for making informed decisions about model selection, training, and deployment.
 
-**[📖 NVIDIA AI Foundation Models](https://docs.nvidia.com/ai-foundation-models/index.html)** - Catalog of NVIDIA pre-trained and fine-tuned models
+**[📖 NVIDIA AI Foundation Models](https://build.nvidia.com/models)** - Catalog of NVIDIA pre-trained and fine-tuned models
 
 ## Key Topics
 
@@ -169,7 +169,7 @@ The transformer architecture is the foundation of all modern LLMs. Key component
 - Visual tokens as prefix to language model
 - Adapter-based fusion of modalities
 
-**[📖 NVIDIA Visual Language Models](https://docs.nvidia.com/nim/nvlm/latest/index.html)** - NVIDIA multi-modal model documentation
+**[📖 NVIDIA Visual Language Models](https://docs.nvidia.com/nim/vision-language-models/latest/introduction.html)** - NVIDIA multi-modal model documentation
 
 ## Exam Focus Areas
 

@@ -302,7 +302,7 @@ This is the smallest domain but still carries significant weight. Storage tasks 
 - Volume Modes: Filesystem (default) or Block
 
 **[Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)** - PV documentation
-**[Configure a Pod to Use a PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/)** - PV tutorial
+**[Configure a Pod to Use a PersistentVolume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)** - PV tutorial
 
 #### 4.2 Persistent Volume Claims
 
@@ -363,7 +363,7 @@ kubectl get events --sort-by=.metadata.creationTimestamp  # Recent events
 
 **[Troubleshoot Applications](https://kubernetes.io/docs/tasks/debug/debug-application/)** - Application debugging guide
 **[Debug Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/)** - Pod debugging
-**[Debug Running Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pods/)** - Live debugging
+**[Debug Running Pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-pods/)** - Live debugging
 **[Get a Shell to a Running Container](https://kubernetes.io/docs/tasks/debug/debug-application/get-shell-running-container/)** - Container shell access
 
 #### 5.2 Cluster Component Troubleshooting

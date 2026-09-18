@@ -291,7 +291,7 @@ aws s3 cp s3://my-unique-bucket-name/test.txt downloaded.txt \
 
 ### Study Materials
 - **Study Notes**: 02-core-services.md (sections 3-4)
-- **IBM Cloud Docs**: [Databases](https://cloud.ibm.com/docs/databases-cli-plugin)
+- **IBM Cloud Docs**: [Databases](https://cloud.ibm.com/docs/cloud-databases)
 - **IBM Cloud Docs**: [VPC Networking](https://cloud.ibm.com/docs/vpc?topic=vpc-about-networking-for-vpc)
 
 ### Hands-On Labs (Week 3)

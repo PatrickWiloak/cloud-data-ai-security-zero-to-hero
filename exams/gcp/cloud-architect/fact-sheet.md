@@ -43,7 +43,7 @@ last-updated: 2026-05-03
 - **[📖 Architecture Center](https://cloud.google.com/architecture)** - Reference architectures and diagrams
 - **[📖 Best Practices](https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations)** - Enterprise design patterns
 - **[📖 Cloud Architecture Patterns](https://cloud.google.com/architecture/framework/system-design)** - System design patterns
-- **[📖 Decision Trees](https://cloud.google.com/architecture/framework/design-decisions)** - Architecture decision guides
+- **[📖 Decision Trees](https://docs.cloud.google.com/architecture/framework)** - Architecture decision guides
 
 ## Compute Services - Architecture Deep Dive
 
@@ -112,7 +112,7 @@ last-updated: 2026-05-03
 - **Standard Environment** - Rapid scaling, sandbox runtime, free tier
 - **Flexible Environment** - Docker containers, SSH access, custom runtimes
 - **[📖 App Engine Architecture](https://cloud.google.com/appengine/docs/the-appengine-environments)** - Environment comparison
-- **[📖 Scaling Types](https://cloud.google.com/appengine/docs/standard/managing-app-versions)** - Automatic, basic, manual scaling
+- **[📖 Scaling Types](https://docs.cloud.google.com/appengine/docs/standard/how-instances-are-managed)** - Automatic, basic, manual scaling
 - **[📖 Traffic Splitting](https://cloud.google.com/appengine/docs/standard/splitting-traffic)** - A/B testing and canary
 - **[📖 Migration to Standard 2nd Gen](https://cloud.google.com/appengine/docs/standard/runtimes)** - Modern runtimes
 
@@ -189,7 +189,7 @@ last-updated: 2026-05-03
 - **[📖 Replication](https://cloud.google.com/spanner/docs/replication)** - Multi-region replication
 - **[📖 Schema Design Best Practices](https://cloud.google.com/spanner/docs/schema-design)** - Performance optimization
 - **[📖 Instance Configurations](https://cloud.google.com/spanner/docs/instance-configurations)** - Regional and multi-regional
-- **[📖 Choosing Between Cloud SQL and Spanner](https://cloud.google.com/architecture/cloud-sql-or-spanner)** - Decision guide
+- **[📖 Choosing Between Cloud SQL and Spanner](https://docs.cloud.google.com/docs/databases)** - Decision guide
 
 ### Firestore and Datastore
 
@@ -213,7 +213,7 @@ last-updated: 2026-05-03
 - **[📖 Schema Design](https://cloud.google.com/bigtable/docs/schema-design)** - Row key design critical
 - **[📖 Replication](https://cloud.google.com/bigtable/docs/replication-overview)** - Multi-cluster replication
 - **[📖 Performance Tuning](https://cloud.google.com/bigtable/docs/performance)** - Optimization guide
-- **[📖 Choosing Between Bigtable and Other Databases](https://cloud.google.com/bigtable/docs/choosing-between-bigtable-and-other-databases)** - Decision tree
+- **[📖 Choosing Between Bigtable and Other Databases](https://docs.cloud.google.com/bigtable/docs/overview)** - Decision tree
 
 ### BigQuery
 
@@ -353,8 +353,8 @@ last-updated: 2026-05-03
 - Threat detection
 - Compliance monitoring
 - **[📖 Security Command Center](https://cloud.google.com/security-command-center/docs)** - Overview
-- **[📖 Asset Discovery](https://cloud.google.com/security-command-center/docs/concepts-asset-discovery)** - Inventory management
-- **[📖 Finding Types](https://cloud.google.com/security-command-center/docs/concepts-finding-types)** - Security findings
+- **[📖 Asset Discovery](https://docs.cloud.google.com/asset-inventory/docs/asset-inventory-overview)** - Inventory management
+- **[📖 Finding Types](https://docs.cloud.google.com/security-command-center/docs/finding-classes)** - Security findings
 
 ### Identity-Aware Proxy (IAP)
 

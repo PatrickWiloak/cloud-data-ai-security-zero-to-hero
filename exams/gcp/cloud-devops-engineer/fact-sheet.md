@@ -53,7 +53,7 @@ last-updated: 2026-05-03
 - **[📖 Cloud Deploy Overview](https://cloud.google.com/deploy/docs/overview)** - Managed continuous delivery service for GKE and Cloud Run
 - **[📖 Delivery Pipelines](https://cloud.google.com/deploy/docs/terminology#delivery_pipeline)** - Define progressive deployment stages and strategies
 - **[📖 Deployment Strategies](https://cloud.google.com/deploy/docs/deployment-strategies/canary)** - Implement canary, blue-green, and progressive deployments
-- **[📖 Rollback Procedures](https://cloud.google.com/deploy/docs/rollback-release)** - Quickly revert to previous stable releases
+- **[📖 Rollback Procedures](https://docs.cloud.google.com/deploy/docs/roll-back)** - Quickly revert to previous stable releases
 - **[📖 Approval Gates](https://cloud.google.com/deploy/docs/promote-release)** - Require manual approval before promoting releases
 - **[📖 Cloud Deploy Automation](https://cloud.google.com/deploy/docs/automation)** - Automate deployment promotion based on criteria
 - **[📖 Skaffold Integration](https://cloud.google.com/deploy/docs/using-skaffold)** - Use Skaffold for rendering and deploying Kubernetes manifests
@@ -77,7 +77,7 @@ last-updated: 2026-05-03
 - **[📖 Cloud Source Repositories](https://cloud.google.com/source-repositories/docs/features)** - Private Git repositories hosted on Google Cloud
 - **[📖 Mirroring Repositories](https://cloud.google.com/source-repositories/docs/mirroring-repositories)** - Automatically mirror GitHub or Bitbucket repositories
 - **[📖 Triggering Builds](https://cloud.google.com/source-repositories/docs/integrating-with-cloud-build)** - Integrate with Cloud Build for automated CI/CD
-- **[📖 Branch Protection](https://cloud.google.com/source-repositories/docs/branch-protection)** - Protect important branches from direct commits
+- **[📖 Branch Protection](https://docs.cloud.google.com/secure-source-manager/docs/overview)** - Protect important branches from direct commits
 
 ### Testing Strategies
 - **[📖 Testing Best Practices](https://cloud.google.com/architecture/devops/devops-tech-test-automation)** - Implement comprehensive automated testing
@@ -151,7 +151,7 @@ last-updated: 2026-05-03
 
 ### GKE Security
 - **[📖 GKE Security Hardening](https://cloud.google.com/kubernetes-engine/docs/how-to/hardening-your-cluster)** - Best practices for securing GKE clusters
-- **[📖 Pod Security Standards](https://cloud.google.com/kubernetes-engine/docs/concepts/pod-security-standards)** - Enforce security policies for pod configurations
+- **[📖 Pod Security Standards](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/podsecurityadmission)** - Enforce security policies for pod configurations
 - **[📖 GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/concepts/sandbox-pods)** - Run untrusted workloads with additional isolation
 - **[📖 Shielded GKE Nodes](https://cloud.google.com/kubernetes-engine/docs/how-to/shielded-gke-nodes)** - Protect nodes against rootkits and bootkits
 - **[📖 Role-Based Access Control (RBAC)](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control)** - Control access to Kubernetes resources
@@ -227,7 +227,7 @@ last-updated: 2026-05-03
 - **[📖 Google Cloud Managed Service for Prometheus](https://cloud.google.com/stackdriver/docs/managed-prometheus)** - Fully managed Prometheus-compatible monitoring
 - **[📖 Prometheus Setup](https://cloud.google.com/stackdriver/docs/managed-prometheus/setup-managed)** - Configure managed Prometheus collection
 - **[📖 PromQL Queries](https://cloud.google.com/stackdriver/docs/managed-prometheus/query)** - Query Prometheus metrics with PromQL
-- **[📖 Recording Rules](https://cloud.google.com/stackdriver/docs/managed-prometheus/recording-rules)** - Precompute frequently used queries
+- **[📖 Recording Rules](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/rules-managed)** - Precompute frequently used queries
 
 ---
 
@@ -241,7 +241,7 @@ last-updated: 2026-05-03
 
 ### Debugging and Troubleshooting
 - **[📖 Troubleshooting GKE](https://cloud.google.com/kubernetes-engine/docs/troubleshooting)** - Common GKE issues and solutions
-- **[📖 Debugging Applications](https://cloud.google.com/kubernetes-engine/docs/how-to/debug-app)** - Debug containerized applications in GKE
+- **[📖 Debugging Applications](https://docs.cloud.google.com/kubernetes-engine/docs/troubleshooting)** - Debug containerized applications in GKE
 - **[📖 Analyzing Logs](https://docs.cloud.google.com/logging/docs/logs-based-metrics)** - Use logs to identify root causes
 - **[📖 Network Troubleshooting](https://docs.cloud.google.com/kubernetes-engine/docs/troubleshoot-networking)** - Diagnose networking issues
 
@@ -249,13 +249,13 @@ last-updated: 2026-05-03
 - **[📖 Disaster Recovery Planning](https://cloud.google.com/architecture/dr-scenarios-planning-guide)** - Plan for disaster recovery scenarios
 - **[📖 Backup Strategies](https://cloud.google.com/architecture/dr-scenarios-for-data)** - Implement backup and restore procedures
 - **[📖 High Availability](https://cloud.google.com/architecture/scalable-and-resilient-apps)** - Design highly available applications
-- **[📖 Multi-Region Deployments](https://cloud.google.com/architecture/deploy-workloads-multiple-regions-services)** - Deploy across regions for resilience
+- **[📖 Multi-Region Deployments](https://docs.cloud.google.com/architecture/deployment-archetypes/multiregional)** - Deploy across regions for resilience
 - **[📖 Recovery Time Objective (RTO)](https://cloud.google.com/architecture/dr-scenarios-planning-guide#recovery_time_objective_rto)** - Define acceptable downtime
 - **[📖 Recovery Point Objective (RPO)](https://cloud.google.com/architecture/dr-scenarios-planning-guide#recovery_point_objective_rpo)** - Define acceptable data loss
 
 ### Chaos Engineering
 - **[📖 Chaos Engineering Principles](https://cloud.google.com/architecture/devops/devops-tech-chaos-engineering)** - Test system resilience through controlled experiments
-- **[📖 Testing for Reliability](https://sre.google/workbook/testing-reliability/)** - Validate reliability through systematic testing
+- **[📖 Testing for Reliability](https://sre.google/sre-book/testing-reliability/)** - Validate reliability through systematic testing
 
 ---
 
@@ -270,9 +270,9 @@ last-updated: 2026-05-03
 
 ### Container Optimization
 - **[📖 Container Best Practices](https://cloud.google.com/architecture/best-practices-for-building-containers)** - Build efficient container images
-- **[📖 Image Optimization](https://cloud.google.com/kubernetes-engine/docs/how-to/optimizing-docker-images)** - Reduce image size and build time
+- **[📖 Image Optimization](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/image-streaming)** - Reduce image size and build time
 - **[📖 Resource Requests and Limits](https://cloud.google.com/kubernetes-engine/docs/concepts/verticalpodautoscaler#requests_and_limits)** - Set appropriate resource constraints
-- **[📖 Pod Startup Optimization](https://cloud.google.com/kubernetes-engine/docs/how-to/fast-pod-autoscaling)** - Reduce pod startup time
+- **[📖 Pod Startup Optimization](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/image-streaming)** - Reduce pod startup time
 
 ### Network Optimization
 - **[📖 Cloud CDN](https://cloud.google.com/cdn/docs/overview)** - Cache content closer to users
@@ -337,7 +337,7 @@ last-updated: 2026-05-03
 
 ### Secret Management
 - **[📖 Secret Manager](https://cloud.google.com/secret-manager/docs)** - Store API keys, passwords, and certificates
-- **[📖 Secret Rotation](https://cloud.google.com/secret-manager/docs/managing-secret-labels)** - Manage secret versions and rotation
+- **[📖 Secret Rotation](https://docs.cloud.google.com/secret-manager/docs/secret-rotation)** - Manage secret versions and rotation
 - **[📖 Accessing Secrets in GKE](https://cloud.google.com/secret-manager/docs/using-other-products#gke)** - Securely inject secrets into pods
 - **[📖 Secret Manager in Cloud Build](https://cloud.google.com/build/docs/securing-builds/use-secrets)** - Use secrets in build processes
 
@@ -380,7 +380,7 @@ last-updated: 2026-05-03
 ### Best Practices Guides
 - **[📖 DevOps Tech Practices](https://cloud.google.com/architecture/devops/devops-tech-trunk-based-development)** - Trunk-based development and other practices
 - **[📖 12-Factor Apps](https://12factor.net/)** - Methodology for building SaaS applications
-- **[📖 Microservices Architecture](https://cloud.google.com/architecture/microservices-architecture-on-google-cloud)** - Design patterns for microservices
+- **[📖 Microservices Architecture](https://cloud.google.com/learn/what-is-microservices-architecture)** - Design patterns for microservices
 
 ---
 
@@ -399,7 +399,7 @@ last-updated: 2026-05-03
 - **[📖 Config Sync](https://cloud.google.com/kubernetes-engine/docs/add-on/config-sync/overview)** - Sync cluster configuration from Git repositories
 - **[📖 Policy Controller](https://cloud.google.com/anthos-config-management/docs/concepts/policy-controller)** - Enforce policies on Kubernetes clusters
 - **[📖 Kustomize Integration](https://cloud.google.com/kubernetes-engine/docs/concepts/kustomize)** - Customize Kubernetes manifests
-- **[📖 Helm Charts](https://cloud.google.com/kubernetes-engine/docs/tutorials/installing-helm)** - Package and deploy Kubernetes applications
+- **[📖 Helm Charts](https://helm.sh/docs/intro/install/)** - Package and deploy Kubernetes applications
 
 ### Database and Data Pipeline DevOps
 - **[📖 Cloud SQL](https://cloud.google.com/sql/docs)** - Managed relational databases (MySQL, PostgreSQL, SQL Server)
@@ -454,9 +454,9 @@ last-updated: 2026-05-03
 
 #### Build Optimization Techniques
 - **[📖 Build Caching](https://cloud.google.com/build/docs/optimize-builds/kaniko-cache)** - Speed up builds with Kaniko caching
-- **[📖 Parallel Builds](https://cloud.google.com/build/docs/configuring-builds/run-parallel-builds)** - Execute build steps concurrently
+- **[📖 Parallel Builds](https://docs.cloud.google.com/build/docs/configuring-builds/configure-build-step-order)** - Execute build steps concurrently
 - **[📖 Build Timeouts](https://cloud.google.com/build/docs/configuring-builds/configure-build-step-order#step-timeouts)** - Set appropriate timeout values
-- **[📖 Docker Layer Caching](https://cloud.google.com/build/docs/optimize-builds/docker-best-practices)** - Optimize Dockerfile for better caching
+- **[📖 Docker Layer Caching](https://docs.cloud.google.com/build/docs/optimize-builds/speeding-up-builds)** - Optimize Dockerfile for better caching
 
 #### Artifact Management
 - **[📖 Artifact Registry Repositories](https://cloud.google.com/artifact-registry/docs/repositories)** - Standard, remote, and virtual repository types
@@ -467,7 +467,7 @@ last-updated: 2026-05-03
 #### Integration with Third-Party Tools
 - **[📖 GitHub Integration](https://cloud.google.com/build/docs/automating-builds/github/build-repos-from-github)** - Connect Cloud Build to GitHub repositories
 - **[📖 GitLab Integration](https://cloud.google.com/build/docs/automating-builds/gitlab/build-repos-from-gitlab)** - Trigger builds from GitLab
-- **[📖 Bitbucket Integration](https://cloud.google.com/build/docs/automating-builds/bitbucket/build-repos-from-bitbucket)** - Connect to Bitbucket repositories
+- **[📖 Bitbucket Integration](https://docs.cloud.google.com/build/docs/automating-builds/bitbucket/connect-repo-bitbucket-cloud)** - Connect to Bitbucket repositories
 - **[📖 Jenkins Integration](https://cloud.google.com/architecture/continuous-delivery-jenkins-kubernetes-engine)** - Integrate Jenkins with Google Cloud
 
 ### Domain 3: Applying SRE Practices (23%)
@@ -493,8 +493,8 @@ last-updated: 2026-05-03
 #### Capacity Planning and Management
 - **[📖 Capacity Planning Process](https://sre.google/sre-book/software-engineering-in-sre/#capacity-planning)** - Forecast resource needs
 - **[📖 Load Testing](https://cloud.google.com/architecture/scalable-and-resilient-apps#test-resilience)** - Validate capacity under load
-- **[📖 Traffic Forecasting](https://sre.google/workbook/capacity-planning/)** - Predict future demand
-- **[📖 Resource Provisioning](https://cloud.google.com/architecture/best-practices-compute-engine-region-selection)** - Right-size resources for workloads
+- **[📖 Traffic Forecasting](https://sre.google/workbook/table-of-contents/)** - Predict future demand
+- **[📖 Resource Provisioning](https://docs.cloud.google.com/docs/geography-and-regions)** - Right-size resources for workloads
 
 ### Domain 4: Service Monitoring Strategies (21%)
 
@@ -514,7 +514,7 @@ last-updated: 2026-05-03
 - **[📖 Trace Sampling](https://cloud.google.com/trace/docs/trace-sampling)** - Balance detail with performance impact
 - **[📖 Trace Context Propagation](https://cloud.google.com/trace/docs/setup)** - Propagate trace context across services
 - **[📖 Analyzing Traces](https://cloud.google.com/trace/docs/finding-traces)** - Identify performance bottlenecks
-- **[📖 Trace Integration](https://cloud.google.com/trace/docs/trace-api)** - Add tracing to custom applications
+- **[📖 Trace Integration](https://docs.cloud.google.com/trace/docs/overview)** - Add tracing to custom applications
 
 #### Log Analysis and Aggregation
 - **[📖 Structured Logging](https://cloud.google.com/logging/docs/structured-logging)** - Log in JSON format for better analysis
@@ -583,7 +583,7 @@ last-updated: 2026-05-03
 8. Simulate an incident and track error budget consumption
 
 **Key Resources**:
-- **[📖 SLO Tutorial](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/tutorials)** - Step-by-step SLO setup
+- **[📖 SLO Tutorial](https://docs.cloud.google.com/stackdriver/docs/solutions/slo-monitoring)** - Step-by-step SLO setup
 
 ### Scenario 3: GKE Production Deployment
 **Objective**: Deploy a production-ready application on GKE

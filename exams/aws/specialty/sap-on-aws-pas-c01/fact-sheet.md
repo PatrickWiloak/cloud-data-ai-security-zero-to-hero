@@ -18,7 +18,7 @@ last-updated: 2026-05-03
 **Language:** Available in English, Japanese, Korean, Simplified Chinese
 **Delivery:** Pearson VUE (online proctored or testing center)
 
-**📖 [Official Exam Page](https://aws.amazon.com/certification/certified-sap-on-aws-specialty/)** - Registration and details
+**📖 [Official Exam Page](https://aws.amazon.com/certification/)** - Registration and details
 **📖 [Exam Guide PDF](https://d1.awsstatic.com/training-and-certification/docs-sap-on-aws-specialty/AWS-Certified-SAP-on-AWS-Specialty_Exam-Guide.pdf)** - Detailed exam objectives
 **📖 [Sample Questions](https://d1.awsstatic.com/training-and-certification/docs-sap-on-aws-specialty/AWS-Certified-SAP-on-AWS-Specialty_Sample-Questions.pdf)** - Official practice questions
 
@@ -144,7 +144,7 @@ Covers SAP deployment, migration, and configuration.
 **📖 [AWS Launch Wizard for SAP](https://docs.aws.amazon.com/launchwizard/latest/userguide/what-is-launch-wizard-sap.html)** - Automated deployment
 **📖 [Launch Wizard Guide](https://docs.aws.amazon.com/launchwizard/latest/userguide/launch-wizard-sap-deploying.html)** - Deployment steps
 **📖 [SAP Cloud Appliance Library](https://cal.sap.com/)** - SAP CAL
-**📖 [CloudFormation for SAP](https://aws.amazon.com/quickstart/architecture/sap/)** - Quick Start templates
+**📖 [CloudFormation for SAP](https://docs.aws.amazon.com/launchwizard/latest/userguide/launch-wizard-sap.html)** - Quick Start templates
 **📖 [SAP Installation Guide](https://docs.aws.amazon.com/sap/latest/general/installation.html)** - Manual installation
 
 #### 2.2 SAP HANA Installation
@@ -439,7 +439,7 @@ Covers security, compliance, and access control.
 
 ### AWS Whitepapers
 **📖 [SAP Workloads on AWS](https://d1.awsstatic.com/whitepapers/sap-on-aws-implementation-and-operations-guide.pdf)** - Implementation guide
-**📖 [SAP HANA Best Practices](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-sap-hana/welcome.html)** - Best practices guide
+**📖 [SAP HANA Best Practices](https://docs.aws.amazon.com/sap/latest/sap-hana/welcome.html)** - Best practices guide
 
 ## 💡 Study Strategy
 
@@ -475,8 +475,8 @@ Covers security, compliance, and access control.
 ### Study Resources
 
 **Official AWS Training:**
-**📖 [AWS Training for SAP](https://aws.amazon.com/training/learn-about/sap/)** - SAP-specific training
-**📖 [SAP on AWS Learning Path](https://explore.skillbuilder.aws/learn/learning_plan/view/1634/sap-learning-plan)** - Official learning path
+**📖 [AWS Training for SAP](https://aws.amazon.com/sap/)** - SAP-specific training
+**📖 [SAP on AWS Learning Path](https://aws.amazon.com/sap/)** - Official learning path
 
 **Hands-On Practice:**
 - Deploy SAP systems using AWS Launch Wizard
@@ -524,7 +524,7 @@ Covers security, compliance, and access control.
 - Close all applications
 - 170 minutes is long - take breaks during review time
 
-**📖 [Exam Prep Resources](https://aws.amazon.com/certification/certified-sap-on-aws-specialty/)** - Official preparation
+**📖 [Exam Prep Resources](https://aws.amazon.com/certification/)** - Official preparation
 
 ## 🚀 After Certification
 

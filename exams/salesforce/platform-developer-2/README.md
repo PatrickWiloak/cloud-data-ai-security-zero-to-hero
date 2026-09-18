@@ -87,8 +87,8 @@ PDII is not a memorization exam. The questions reward people who have shipped Ap
 - **[Salesforce CLI / `sf` binary](https://developer.salesforce.com/tools/sfdxcli)** - source-driven dev
 - **[VS Code with Salesforce Extensions Pack](https://developer.salesforce.com/tools/vscode)** - the IDE
 - **[Trailhead PDII Trailmix](https://trailhead.salesforce.com/users/strailhead/trailmixes/prepare-for-your-salesforce-platform-developer-ii-credential)** - official prep
-- **[Apex Specialist Superbadge](https://trailhead.salesforce.com/content/learn/superbadges/superbadge_apex)** - prerequisite-level
-- **[Advanced Apex Specialist Superbadge](https://trailhead.salesforce.com/content/learn/superbadges/superbadge_advanced_apex_specialist)** - core PDII material
+- **[Apex Specialist Superbadge](https://trailhead.salesforce.com/credentials/platformdeveloperi)** - prerequisite-level
+- **[Advanced Apex Specialist Superbadge](https://trailhead.salesforce.com/credentials/platformdeveloperii)** - core PDII material
 - **[Apex Patterns and Best Practices](https://github.com/SalesforceFoundation/CumulusCI)** - real-world reference codebase
 
 You **cannot** pass PDII without writing real Apex against a real org. Plan to ship at least 3-5 non-trivial integrations / async pipelines during prep.
@@ -99,7 +99,7 @@ You **cannot** pass PDII without writing real Apex against a real org. Plan to s
 
 - **[Platform Developer I](../platform-developer-1/)** - foundational developer cert; PDII assumes mastery
 - **[Salesforce Administrator](../administrator/)** - configuration foundation referenced in declarative-vs-programmatic questions
-- **[Integration Patterns Guide](https://architect.salesforce.com/decision-guides/integration-patterns)** - Salesforce architect reference for the integration domain (35% of PDII)
+- **[Integration Patterns Guide](https://architect.salesforce.com/docs/architect/fundamentals/guide/integration-patterns.html)** - Salesforce architect reference for the integration domain (35% of PDII)
 
 ---
 

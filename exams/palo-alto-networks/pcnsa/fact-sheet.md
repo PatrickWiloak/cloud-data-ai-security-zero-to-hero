@@ -15,7 +15,7 @@ last-updated: 2026-05-03
 **Validity:** 2 years
 **Recommended Course:** EDU-210 Firewall Essentials
 
-**[PCNSA exam page](https://www.paloaltonetworks.com/services/education/certification/pcnsa)**
+**[PCNSA exam page](https://www.paloaltonetworks.com/services/education/certification)**
 **[PAN-OS 11.x admin guide](https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-admin)**
 **[LIVEcommunity](https://live.paloaltonetworks.com/)**
 

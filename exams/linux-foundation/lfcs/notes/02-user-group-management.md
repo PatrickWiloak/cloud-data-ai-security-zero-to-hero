@@ -277,7 +277,7 @@ Defaults    passwd_tries=3         # password attempts before lockout
 
 ## PAM (Pluggable Authentication Modules)
 
-**[📖 Linux PAM Documentation](http://www.linux-pam.org/Linux-PAM-html/)** - PAM configuration guide
+**[📖 Linux PAM Documentation](https://github.com/linux-pam/linux-pam)** - PAM configuration guide
 
 ### PAM Overview
 - Modular authentication framework

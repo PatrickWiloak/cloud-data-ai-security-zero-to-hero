@@ -11,7 +11,7 @@ The SC-900 certification validates foundational knowledge of security, complianc
 **Exam Details:**
 - **[📖 Official SC-900 Exam Page](https://learn.microsoft.com/en-us/certifications/exams/sc-900)** - Complete exam information, registration, and requirements
 - **[📖 SC-900 Study Guide](https://learn.microsoft.com/en-us/certifications/resources/study-guides/sc-900)** - Official Microsoft study guide with exam objectives
-- **[📖 SC-900 Skills Measured](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Myp7)** - Detailed breakdown of exam domains and weightings
+- **[📖 SC-900 Skills Measured](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-900)** - Detailed breakdown of exam domains and weightings
 - **[📖 Microsoft Learn SC-900 Learning Path](https://learn.microsoft.com/en-us/training/paths/describe-concepts-of-security-compliance-identity/)** - Free comprehensive training modules
 
 ---
@@ -309,8 +309,8 @@ Preventing conflicts of interest by restricting communication and collaboration 
 
 Managing personal data and meeting privacy regulations like GDPR.
 
-- **[📖 Privacy Management](https://learn.microsoft.com/en-us/purview/privacy-management)** - Subject rights requests, data minimization, and consent management
-- **[📖 Subject Rights Requests](https://learn.microsoft.com/en-us/purview/privacy-management-subject-rights-requests)** - Automating responses to data subject access requests
+- **[📖 Privacy Management](https://learn.microsoft.com/en-us/purview/purview-privacy)** - Subject rights requests, data minimization, and consent management
+- **[📖 Subject Rights Requests](https://learn.microsoft.com/en-us/compliance/regulatory/gdpr-dsr-azure)** - Automating responses to data subject access requests
 
 ---
 
@@ -321,7 +321,7 @@ Managing personal data and meeting privacy regulations like GDPR.
 Cloud-based endpoint management for mobile devices, desktops, and applications.
 
 - **[📖 Microsoft Intune Overview](https://learn.microsoft.com/en-us/mem/intune/fundamentals/what-is-intune)** - Mobile Device Management (MDM) and Mobile Application Management (MAM)
-- **[📖 Device Enrollment](https://learn.microsoft.com/en-us/mem/intune/enrollment/enrollment-overview)** - Bringing devices under Intune management
+- **[📖 Device Enrollment](https://learn.microsoft.com/en-us/intune/device-enrollment/enroll-devices)** - Bringing devices under Intune management
 - **[📖 Compliance Policies](https://learn.microsoft.com/en-us/mem/intune/protect/device-compliance-get-started)** - Defining security requirements for managed devices
 - **[📖 Configuration Profiles](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profiles)** - Deploying settings and features to devices
 - **[📖 App Protection Policies](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy)** - Protecting corporate data in mobile applications without device enrollment

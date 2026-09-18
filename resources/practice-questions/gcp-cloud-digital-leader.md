@@ -198,7 +198,7 @@ D. Weekly data imports
 
 **Why:** Pub/Sub provides real-time message ingestion at any scale. Dataflow enables stream processing with windowing and analytics. BigQuery supports streaming inserts with real-time query capabilities. Together they enable ingesting, processing, and analyzing data in real-time with sub-second latency.
 
-**Key Concept:** [Real-time Analytics Architecture](https://cloud.google.com/architecture/building-real-time-data-pipelines)
+**Key Concept:** [Real-time Analytics Architecture](https://docs.cloud.google.com/dataflow/docs/concepts/streaming-pipelines)
 </details>
 
 ### Question 11
@@ -306,7 +306,7 @@ D. Spreadsheet tracking
 
 **Why:** Dataplex provides comprehensive data governance: data lineage shows data origins and transformations, data quality rules validate data automatically, and IAM integration manages access. Data Catalog discovers and tags data assets. This enables governance without requiring all data to move to one place.
 
-**Key Concept:** [Dataplex Data Governance](https://cloud.google.com/dataplex/docs/data-governance)
+**Key Concept:** [Dataplex Data Governance](https://docs.cloud.google.com/dataplex/docs/introduction)
 </details>
 
 ---

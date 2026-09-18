@@ -130,7 +130,7 @@ spec:
 ```
 
 **[Persistent Volume Claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)** - PVC documentation
-**[Configure a Pod to Use a PersistentVolume](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/)** - PV/PVC tutorial
+**[Configure a Pod to Use a PersistentVolume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)** - PV/PVC tutorial
 
 ## Storage Classes
 

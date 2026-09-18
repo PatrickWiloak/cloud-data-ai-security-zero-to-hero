@@ -21,7 +21,7 @@ The GitHub Copilot certification validates your ability to use GitHub Copilot ef
 - **[GitHub Copilot Documentation](https://docs.github.com/en/copilot)** - Complete product docs
 - **[GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/)** - Security, privacy, IP
 - **[GitHub Skills](https://skills.github.com/)** - Interactive learning
-- **[Copilot Learning Pathway](https://resources.github.com/learn/pathways/copilot/)** - Structured path
+- **[Copilot Learning Pathway](https://learn.github.com/learning-pathways)** - Structured path
 
 ## Exam Domains
 

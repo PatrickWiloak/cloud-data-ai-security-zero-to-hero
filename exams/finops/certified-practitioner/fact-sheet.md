@@ -16,7 +16,7 @@ last-updated: 2026-05-03
 **Prerequisites:** None
 **Validity:** 2 years
 
-**[📖 FinOps Certified Practitioner](https://learn.finops.org/path/finops-certified-practitioner)** - Official certification page
+**[📖 FinOps Certified Practitioner](https://learn.finops.org/)** - Official certification page
 **[📖 FinOps Framework](https://www.finops.org/framework/)** - Complete FinOps framework documentation
 **[📖 FinOps Foundation](https://www.finops.org/)** - FinOps Foundation homepage
 
@@ -212,7 +212,7 @@ The six principles of FinOps form the foundation of cloud financial management:
 - Development resources running outside business hours
 
 **[📖 Workload Optimization](https://www.finops.org/framework/capabilities/workload-optimization/)** - Right-sizing and resource management
-**[📖 Onboarding Workloads](https://www.finops.org/framework/capabilities/onboarding-workloads/)** - Managing new workloads
+**[📖 Onboarding Workloads](https://www.finops.org/framework/capabilities/)** - Managing new workloads
 
 ### Storage Optimization
 
@@ -274,7 +274,7 @@ The six principles of FinOps form the foundation of cloud financial management:
 - Kubecost (Kubernetes)
 
 **[📖 FinOps Tools and Services](https://www.finops.org/landscape/)** - FinOps tool landscape
-**[📖 FinOps Certified Platforms](https://www.finops.org/members/certified-platforms/)** - Certified FinOps platforms
+**[📖 FinOps Certified Platforms](https://www.finops.org/about/members/)** - Certified FinOps platforms
 
 ## Exam Tips
 

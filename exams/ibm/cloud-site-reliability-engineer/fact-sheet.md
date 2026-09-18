@@ -102,7 +102,7 @@ last-updated: 2026-05-03
 - **[📖 Continuous Delivery](https://cloud.ibm.com/docs/ContinuousDelivery)**
 - **[📖 Toolchains](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)**
 - **[📖 Tekton Pipelines](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-tekton-pipelines)**
-- **[📖 Ansible on IBM Cloud](https://cloud.ibm.com/docs/ansible)**
+- **[📖 Ansible on IBM Cloud](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started)**
 - **[📖 IBM Cloud CLI](https://cloud.ibm.com/docs/cli)**
 - **[📖 GitOps with ArgoCD](https://argo-cd.readthedocs.io/)**
 - **[📖 Runbook Automation](https://www.ibm.com/cloud/architecture/practices/runbook-automation)**
@@ -252,7 +252,7 @@ last-updated: 2026-05-03
 ### Automation and IaC
 - **[📖 Terraform](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform)**
 - **[📖 Schematics](https://cloud.ibm.com/docs/schematics)**
-- **[📖 Ansible](https://cloud.ibm.com/docs/ansible)**
+- **[📖 Ansible](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started)**
 - **[📖 IBM Cloud CLI](https://cloud.ibm.com/docs/cli)**
 
 ### CI/CD and DevOps

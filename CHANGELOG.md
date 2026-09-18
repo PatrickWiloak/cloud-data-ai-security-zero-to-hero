@@ -6,7 +6,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
-## [2026-09-18] - 340 dead links repaired, and three kinds of dead link instead of one
+## [2026-09-18] - All 783 dead links repaired, and three kinds of dead link instead of one
 
 The first real sweep had only counted 404s. This one also catches **soft 404s** (a 200 response on a "page not found" page, which no status-code checker can see, lychee included) and **deep links lost to a redirect** (a URL that now forwards to a homepage, a search page or a login wall). That raised the count from 685 known-dead to **783**.
 
@@ -16,9 +16,12 @@ The first real sweep had only counted 404s. This one also catches **soft 404s** 
 - **37 moved links re-pointed, 87 citations.** Dead hosts with a known new home (`home.pearsonvue.com` to `www.pearsonvue.com`, `spec.modelcontextprotocol.io` to `modelcontextprotocol.io/specification`, Forseti to its archived repo), plus links that only still worked through a redirect: AWS doc indexes, and Vertex AI docs now served as Gemini Enterprise Agent Platform.
 - Where IBM retired a service and names a successor (Log Analysis to Cloud Logs, Cloud Functions to Code Engine, Certificate Manager to Secrets Manager), the citation now points at the successor. The link text still names the old product, and the report lists every such substitution.
 
-### Not fixed, deliberately
+### Then the last 480, by hand
 
-- **480 URLs, 574 citations**, whose pages were removed with no successor: most of Google's Architecture Center articles, retired products (LUIS, PaLM, IBM Watson services, Cloud Foundry, AWS Quick Starts) and restructured Oracle and Microsoft pages. A live landing page exists for most of them, but pointing a specific citation at a generic page would make it look fixed without the page covering what was cited. They are listed in [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md) with the files citing each one, and TODO.md has the decision.
+- **480 URLs whose pages were removed outright, 610 link occurrences.** An earlier pass on the same day had left these listed rather than point a specific citation at a generic landing page. They are now repaired one by one: the link text was read and the closest live page on the same subject chosen, usually the renamed or merged page (Azure OpenAI pages into Microsoft Foundry, Cloud DLP into Sensitive Data Protection, Dataproc into Managed Service for Apache Spark, GCP docs onto `docs.cloud.google.com`, Architecture Center articles into the Well-Architected Framework pillars, LUIS into conversational language understanding, retired exam pages into their successor exams). All 418 distinct targets were fetched and returned 200 with a matching title and no redirect to a homepage.
+- **6 Amazon QLDB links point at pinned Internet Archive snapshots.** QLDB is retired with nothing that covers its journal, verification or PartiQL reference, and AWS now redirects every QLDB page to Aurora. `web.archive.org` is excluded from the weekly check, since a pinned snapshot cannot change.
+- **The author's own blog post is gone** (the blog was removed from patrickwiloak.com on 2026-09-05). Its two README mentions were dropped; the site footer links to the homepage instead.
+- [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md) is now the record of every replacement, old URL to new, so one that looks wrong can be traced.
 
 ---
 

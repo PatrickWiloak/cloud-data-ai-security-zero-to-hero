@@ -1,7 +1,7 @@
 # Usage Optimization and Waste Reduction
 
 **[📖 Workload Optimization](https://www.finops.org/framework/capabilities/workload-optimization/)** - FinOps workload optimization
-**[📖 Onboarding Workloads](https://www.finops.org/framework/capabilities/onboarding-workloads/)** - New workload management
+**[📖 Onboarding Workloads](https://www.finops.org/framework/capabilities/)** - New workload management
 
 ## Usage Optimization Overview
 

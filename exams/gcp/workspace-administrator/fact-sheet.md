@@ -50,7 +50,7 @@ last-updated: 2026-05-03
 - Meeting recordings and live streaming
 - Breakout rooms and polls
 - Integration with Calendar
-- **[📖 Meet Admin Help](https://support.google.com/a/topic/7290350)** - Meeting configuration
+- **[📖 Meet Admin Help](https://support.google.com/meet/)** - Meeting configuration
 - **[📖 Meet Settings](https://support.google.com/a/answer/7303775)** - Security and features
 
 **Google Calendar**
@@ -58,7 +58,7 @@ last-updated: 2026-05-03
 - Working locations and availability
 - Meeting rooms and resource management
 - Out of office and working hours
-- **[📖 Calendar Admin Help](https://support.google.com/a/topic/1034358)** - Calendar management
+- **[📖 Calendar Admin Help](https://knowledge.workspace.google.com/admin/calendar/set-google-calendar-sharing-options)** - Calendar management
 - **[📖 Resource Management](https://support.google.com/a/answer/1686462)** - Meeting rooms
 
 **Google Chat**
@@ -66,7 +66,7 @@ last-updated: 2026-05-03
 - Spaces for team collaboration
 - Bot integration and automation
 - File sharing and search
-- **[📖 Chat Admin Help](https://support.google.com/a/topic/9402251)** - Chat configuration
+- **[📖 Chat Admin Help](https://knowledge.workspace.google.com/admin/chat/allow-users-to-install-chat-apps)** - Chat configuration
 
 ### Productivity Applications
 
@@ -115,7 +115,7 @@ last-updated: 2026-05-03
 - Nested groups
 - Dynamic membership (requires Cloud Identity Premium)
 - External members (allow/block)
-- **[📖 Groups Administration](https://support.google.com/a/topic/9400082)** - Group management
+- **[📖 Groups Administration](https://knowledge.workspace.google.com/admin/groups/get-started-managing-groups-for-an-organization)** - Group management
 - **[📖 Group Settings](https://support.google.com/a/answer/167096)** - Configuration options
 
 **Domain Management**
@@ -132,7 +132,7 @@ last-updated: 2026-05-03
 - Password expiration policies
 - 2-Step Verification (2SV) enforcement
 - Security keys (FIDO U2F/U2F2)
-- **[📖 Password Management](https://support.google.com/a/topic/7555707)** - Password policies
+- **[📖 Password Management](https://knowledge.workspace.google.com/admin/users/enforce-and-monitor-password-requirements-for-users)** - Password policies
 - **[📖 2-Step Verification](https://support.google.com/a/answer/175197)** - 2SV setup
 
 **Single Sign-On (SSO)**
@@ -175,7 +175,7 @@ last-updated: 2026-05-03
 - Policy rules and actions
 - Scan Gmail, Drive, Chat
 - **[📖 DLP Overview](https://support.google.com/a/answer/9646351)** - DLP configuration
-- **[📖 DLP Rules](https://support.google.com/a/answer/7047870)** - Rule creation
+- **[📖 DLP Rules](https://knowledge.workspace.google.com/admin/security/about-dlp)** - Rule creation
 
 **Google Vault**
 - eDiscovery and legal holds
@@ -193,7 +193,7 @@ last-updated: 2026-05-03
 - Trust rules for domains
 - Whitelisting and blacklisting
 - **[📖 Sharing Settings](https://support.google.com/a/answer/60781)** - Drive sharing
-- **[📖 External Sharing](https://support.google.com/a/answer/60262)** - External collaboration
+- **[📖 External Sharing](https://knowledge.workspace.google.com/admin/drive/manage-external-sharing-for-your-organization)** - External collaboration
 
 **Audit and Reporting**
 - Admin audit logs
@@ -201,7 +201,7 @@ last-updated: 2026-05-03
 - Login activity monitoring
 - BigQuery export for advanced analysis
 - **[📖 Audit Logs](https://support.google.com/a/answer/4579579)** - Log access
-- **[📖 Reports](https://support.google.com/a/answer/4579451)** - Report types
+- **[📖 Reports](https://knowledge.workspace.google.com/admin/reports/reports-overview)** - Report types
 - **[📖 BigQuery Export](https://support.google.com/a/answer/7233312)** - Advanced analytics
 
 ### Gmail Administration

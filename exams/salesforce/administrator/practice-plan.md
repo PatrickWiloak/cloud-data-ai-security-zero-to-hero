@@ -10,7 +10,7 @@ You **cannot** pass this cert without hands-on time. Most exam questions are sce
 
 - [ ] Sign up for [Salesforce Developer Edition](https://developer.salesforce.com/signup) - free, permanent dev org
 - [ ] Sign up for [Trailhead](https://trailhead.salesforce.com/) - free training platform with hands-on Trailhead Playgrounds
-- [ ] Bookmark the **["Prepare for Your Salesforce Administrator Credential"](https://trailhead.salesforce.com/users/strailhead/trailmixes/administrator-certification-prep)** Trailmix
+- [ ] Bookmark the **["Prepare for Your Salesforce Administrator Credential"](https://trailhead.salesforce.com/credentials/platformadministrator)** Trailmix
 
 ---
 
@@ -130,7 +130,7 @@ You **cannot** pass this cert without hands-on time. Most exam questions are sce
 - [ ] Work through [scenarios.md](./scenarios.md)
 
 ### Practice exams
-- [ ] [Trailhead Admin Trailmix practice questions](https://trailhead.salesforce.com/users/strailhead/trailmixes/administrator-certification-prep)
+- [ ] [Trailhead Admin Trailmix practice questions](https://trailhead.salesforce.com/credentials/platformadministrator)
 - [ ] FocusOnForce Admin practice exams (paid; widely used)
 - [ ] Salesforce Ben practice questions
 - [ ] [resources/practice-questions/](../../../resources/practice-questions/) - Salesforce Admin questions if added

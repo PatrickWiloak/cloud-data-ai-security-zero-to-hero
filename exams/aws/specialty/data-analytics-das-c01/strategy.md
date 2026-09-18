@@ -37,7 +37,7 @@
 ### Primary Resources
 - **[AWS Skill Builder](https://skillbuilder.aws/)** - Official exam prep course
 - **[AWS Data Analytics Specialty Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-data-analytics-specialty/AWS-Certified-Data-Analytics-Specialty_Exam-Guide.pdf)** - Official exam guide
-- **[AWS Analytics Documentation](https://docs.aws.amazon.com/analytics/)** - Service documentation hub
+- **[AWS Analytics Documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html)** - Service documentation hub
 - **[AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/)** - Architecture patterns and best practices
 
 ### Hands-On Practice

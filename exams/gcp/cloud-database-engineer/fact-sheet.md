@@ -29,7 +29,7 @@ last-updated: 2026-05-03
 
 ### Database Selection Framework
 
-**[📖 Database Selection Guide](https://cloud.google.com/architecture/database-selection-overview)** - Comprehensive database decision guide
+**[📖 Database Selection Guide](https://docs.cloud.google.com/architecture/databases)** - Comprehensive database decision guide
 
 **Key Selection Criteria:**
 1. **Data Model** - Relational, document, key-value, wide-column, time-series
@@ -42,8 +42,8 @@ last-updated: 2026-05-03
 **Essential Resources:**
 - **[📖 Database Services Overview](https://cloud.google.com/products/databases)** - All GCP database offerings
 - **[📖 Choosing Database Services](https://cloud.google.com/blog/topics/developers-practitioners/your-google-cloud-database-options-explained)** - Service comparison
-- **[📖 Database Best Practices](https://cloud.google.com/architecture/best-practices-for-cloud-databases)** - Design guidelines
-- **[📖 Database Migration Guide](https://cloud.google.com/architecture/migrating-mysql-to-cloudsql-concept)** - Migration fundamentals
+- **[📖 Database Best Practices](https://docs.cloud.google.com/architecture/framework/performance-optimization)** - Design guidelines
+- **[📖 Database Migration Guide](https://docs.cloud.google.com/architecture/database-migration-concepts-principles-part-1)** - Migration fundamentals
 
 ## Cloud SQL - Managed Relational Databases
 
@@ -83,7 +83,7 @@ last-updated: 2026-05-03
 - Connection pooling recommended to handle failover
 - Approximately 60-120 seconds RTO
 - Zero RPO (synchronous replication)
-- **[📖 Managing Failover](https://cloud.google.com/sql/docs/mysql/manage-failover)** - Failover operations
+- **[📖 Managing Failover](https://docs.cloud.google.com/sql/docs/mysql/high-availability)** - Failover operations
 
 ### Backup and Recovery
 
@@ -295,14 +295,14 @@ last-updated: 2026-05-03
 - Columnar engine for analytics
 - **[📖 AlloyDB Overview](https://cloud.google.com/alloydb/docs/overview)** - Architecture guide
 - **[📖 AlloyDB Features](https://docs.cloud.google.com/alloydb/docs)** - Feature highlights
-- **[📖 AlloyDB vs Cloud SQL](https://cloud.google.com/alloydb/docs/overview/choose-alloydb)** - Service comparison
+- **[📖 AlloyDB vs Cloud SQL](https://docs.cloud.google.com/alloydb/docs/overview)** - Service comparison
 
 **Cluster Architecture:**
 - Primary instance for read-write operations
 - Read pool instances for read scaling (up to 20)
 - Automated storage scaling (no downtime)
 - Cross-region replication for DR
-- **[📖 Cluster Management](https://cloud.google.com/alloydb/docs/cluster-manage)** - Cluster operations
+- **[📖 Cluster Management](https://docs.cloud.google.com/alloydb/docs/cluster-list)** - Cluster operations
 - **[📖 Read Pool](https://docs.cloud.google.com/alloydb/docs/instance-read-pool-create)** - Read scaling
 
 ### High Availability and Backup
@@ -319,7 +319,7 @@ last-updated: 2026-05-03
 - Asynchronous replication to secondary region
 - Independent read pools in secondary region
 - Promotion capability for DR scenarios
-- **[📖 Cross-Region Replication](https://cloud.google.com/alloydb/docs/cross-region-replication/overview)** - Geo-replication
+- **[📖 Cross-Region Replication](https://docs.cloud.google.com/alloydb/docs/cross-region-replication/about-cross-region-replication)** - Geo-replication
 
 ### Columnar Engine
 
@@ -336,7 +336,7 @@ last-updated: 2026-05-03
 - Database Migration Service for online migration
 - Offline migration with pg_dump/pg_restore
 - Native PostgreSQL replication
-- **[📖 Migrating to AlloyDB](https://cloud.google.com/alloydb/docs/migration/overview)** - Migration strategies
+- **[📖 Migrating to AlloyDB](https://docs.cloud.google.com/alloydb/docs/migration-overview)** - Migration strategies
 - **[📖 Database Migration Service](https://docs.cloud.google.com/database-migration/docs/postgresql-to-alloydb/migration-src-and-dest)** - DMS integration
 
 ## Firestore - NoSQL Document Database
@@ -356,7 +356,7 @@ last-updated: 2026-05-03
 - Subcollections for hierarchical data
 - Document size limit: 1 MB
 - **[📖 Data Model](https://cloud.google.com/firestore/docs/data-model)** - Structure and organization
-- **[📖 Data Types](https://cloud.google.com/firestore/docs/reference/data-types)** - Supported field types
+- **[📖 Data Types](https://docs.cloud.google.com/firestore/native/docs/concepts/data-types)** - Supported field types
 
 ### Native Mode Features
 
@@ -419,7 +419,7 @@ last-updated: 2026-05-03
 - Marketing data (user behavior, clickstream)
 - Graph data
 - **[📖 Bigtable Overview](https://cloud.google.com/bigtable/docs/overview)** - Architecture and use cases
-- **[📖 Storage Model](https://cloud.google.com/bigtable/docs/storage-model)** - Data organization
+- **[📖 Storage Model](https://docs.cloud.google.com/bigtable/docs/overview)** - Data organization
 
 **Key Characteristics:**
 - Petabyte-scale capacity
@@ -483,7 +483,7 @@ last-updated: 2026-05-03
 - Connection pooling and reuse
 - Monitor key metrics: CPU, storage, latency
 - Avoid single row operations when possible
-- **[📖 Bulk Loading](https://cloud.google.com/bigtable/docs/bulk-loading)** - Import optimization
+- **[📖 Bulk Loading](https://docs.cloud.google.com/bigtable/docs/import-export)** - Import optimization
 - **[📖 Optimizing Performance](https://cloud.google.com/bigtable/docs/performance#optimize)** - Tuning guide
 
 ### Backup and Recovery
@@ -495,7 +495,7 @@ last-updated: 2026-05-03
 - Incremental backups
 - Retention policies
 - **[📖 Backups](https://cloud.google.com/bigtable/docs/backups)** - Backup overview
-- **[📖 Disaster Recovery](https://cloud.google.com/bigtable/docs/disaster-recovery-planning)** - DR strategies
+- **[📖 Disaster Recovery](https://docs.cloud.google.com/bigtable/docs/replication-overview)** - DR strategies
 
 ## Memorystore - Managed In-Memory Databases
 
@@ -521,7 +521,7 @@ last-updated: 2026-05-03
 - Real-time analytics
 - Pub/Sub messaging
 - Leaderboards and counters
-- **[📖 Redis Use Cases](https://cloud.google.com/memorystore/docs/redis/use-cases)** - Common patterns
+- **[📖 Redis Use Cases](https://docs.cloud.google.com/memorystore/docs/redis/memorystore-for-redis-overview)** - Common patterns
 
 **Maintenance and Scaling:**
 - Automatic maintenance with minimal disruption
@@ -529,7 +529,7 @@ last-updated: 2026-05-03
 - No horizontal scaling (use sharding at app level)
 - In-place upgrades for versions
 - **[📖 Scaling Instances](https://cloud.google.com/memorystore/docs/redis/scaling-instances)** - Capacity management
-- **[📖 Maintenance](https://cloud.google.com/memorystore/docs/redis/maintenance)** - Maintenance windows
+- **[📖 Maintenance](https://docs.cloud.google.com/memorystore/docs/redis/about-maintenance)** - Maintenance windows
 
 ### Memorystore for Memcached
 
@@ -616,8 +616,8 @@ last-updated: 2026-05-03
 - Plan cutover window
 - Validate data integrity post-migration
 - Performance testing on target
-- **[📖 Migration Best Practices](https://cloud.google.com/architecture/migrating-mysql-to-cloudsql-concept)** - Migration guidelines
-- **[📖 MySQL to Cloud SQL](https://cloud.google.com/architecture/migrating-mysql-to-cloudsql-overview)** - MySQL migration patterns
+- **[📖 Migration Best Practices](https://docs.cloud.google.com/architecture/database-migration-concepts-principles-part-1)** - Migration guidelines
+- **[📖 MySQL to Cloud SQL](https://docs.cloud.google.com/database-migration/docs/mysql/migration-src-and-dest)** - MySQL migration patterns
 
 ## Database Security and Compliance
 
@@ -628,7 +628,7 @@ last-updated: 2026-05-03
 - Custom roles for fine-grained access
 - Service account authentication
 - IAM database authentication (Cloud SQL)
-- **[📖 IAM for Cloud SQL](https://cloud.google.com/sql/docs/mysql/iam)** - IAM integration
+- **[📖 IAM for Cloud SQL](https://docs.cloud.google.com/sql/docs/mysql/iam-authentication)** - IAM integration
 - **[📖 Cloud SQL IAM Roles](https://cloud.google.com/sql/docs/mysql/iam-roles)** - Role definitions
 - **[📖 Database Authentication](https://cloud.google.com/sql/docs/mysql/authentication)** - Auth methods
 
@@ -645,7 +645,7 @@ last-updated: 2026-05-03
 - Customer-Managed Encryption Keys (CMEK) with Cloud KMS
 - Database-level CMEK support
 - Backup encryption
-- **[📖 Cloud SQL Encryption](https://cloud.google.com/sql/docs/mysql/encryption)** - Encryption options
+- **[📖 Cloud SQL Encryption](https://docs.cloud.google.com/sql/docs/mysql/cmek)** - Encryption options
 - **[📖 CMEK for Cloud SQL](https://cloud.google.com/sql/docs/mysql/cmek)** - Customer keys
 - **[📖 Spanner Encryption](https://cloud.google.com/spanner/docs/cmek)** - Spanner CMEK
 
@@ -687,7 +687,7 @@ last-updated: 2026-05-03
 - MySQL Enterprise Audit Plugin
 - PostgreSQL pgAudit extension
 - Query-level logging
-- **[📖 MySQL Audit Plugin](https://cloud.google.com/sql/docs/mysql/pg-audit)** - MySQL auditing
+- **[📖 MySQL Audit Plugin](https://docs.cloud.google.com/sql/docs/mysql/use-db-audit)** - MySQL auditing
 - **[📖 PostgreSQL pgAudit](https://cloud.google.com/sql/docs/postgres/pg-audit)** - PostgreSQL auditing
 
 ### Compliance
@@ -711,7 +711,7 @@ last-updated: 2026-05-03
 - Connection count and errors
 - Replication lag
 - Query performance metrics
-- **[📖 Cloud SQL Monitoring](https://cloud.google.com/sql/docs/mysql/monitoring)** - Metrics and alerts
+- **[📖 Cloud SQL Monitoring](https://docs.cloud.google.com/sql/docs/mysql/use-system-insights)** - Metrics and alerts
 - **[📖 Spanner Monitoring](https://cloud.google.com/spanner/docs/monitoring-cloud)** - Spanner metrics
 - **[📖 Bigtable Monitoring](https://cloud.google.com/bigtable/docs/monitoring-instance)** - Bigtable metrics
 

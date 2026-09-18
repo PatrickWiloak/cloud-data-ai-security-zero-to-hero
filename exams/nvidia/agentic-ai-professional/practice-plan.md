@@ -12,7 +12,7 @@
 - [ ] Learn ReAct pattern - reasoning and acting interleaved
 - [ ] Understand Plan-and-Execute pattern for complex tasks
 - [ ] Study Reflexion pattern for self-improving agents
-- [ ] **Reference:** [NVIDIA Agentic AI Blog](https://developer.nvidia.com/blog/introduction-to-ai-agents/)
+- [ ] **Reference:** [NVIDIA Agentic AI Blog](https://www.nvidia.com/en-us/glossary/ai-agents/)
 
 #### Day 3-4: Memory and State
 - [ ] Study short-term memory (conversation context)

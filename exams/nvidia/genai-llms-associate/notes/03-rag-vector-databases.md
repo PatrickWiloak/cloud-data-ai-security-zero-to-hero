@@ -1,6 +1,6 @@
 # RAG Architecture and Vector Databases
 
-**[📖 NVIDIA NeMo Retriever](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemoretriever/index.html)** - NVIDIA's RAG pipeline components
+**[📖 NVIDIA NeMo Retriever](https://developer.nvidia.com/nemo-retriever)** - NVIDIA's RAG pipeline components
 **[📖 NVIDIA RAG Tutorial](https://developer.nvidia.com/blog/build-enterprise-retrieval-augmented-generation-apps-with-nvidia-retrieval-qa-embedding-model/)** - Building RAG with NVIDIA tools
 
 ## Retrieval-Augmented Generation (RAG) Overview

@@ -37,7 +37,7 @@ last-updated: 2026-05-03
 **Documentation:**
 - **[📖 CompTIA Cloud+ Objectives](https://www.comptia.org/certifications/cloud#examdetails)** - Official exam objectives
 - **[📖 NIST Cloud Computing Definition](https://csrc.nist.gov/publications/detail/sp/800-145/final)** - SP 800-145 cloud definitions
-- **[📖 NIST Cloud Reference Architecture](https://csrc.nist.gov/publications/detail/sp/500-292/final)** - SP 500-292 reference architecture
+- **[📖 NIST Cloud Reference Architecture](https://www.nist.gov/publications/nist-cloud-computing-reference-architecture)** - SP 500-292 reference architecture
 
 ## Cloud Service Models
 

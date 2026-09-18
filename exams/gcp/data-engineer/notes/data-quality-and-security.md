@@ -2944,9 +2944,9 @@ def setup_multi_region_architecture(project_id):
 
 ## Additional Resources
 
-- [Data Governance on GCP](https://cloud.google.com/architecture/data-governance)
+- [Data Governance on GCP](https://docs.cloud.google.com/dataplex/docs/introduction)
 - [DLP Documentation](https://cloud.google.com/dlp/docs)
-- [BigQuery Security Best Practices](https://cloud.google.com/bigquery/docs/best-practices-security)
+- [BigQuery Security Best Practices](https://docs.cloud.google.com/bigquery/docs/data-governance)
 - [VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs)
 - [Dataplex Documentation](https://cloud.google.com/dataplex/docs)
 - [Compliance Resource Center](https://cloud.google.com/compliance)

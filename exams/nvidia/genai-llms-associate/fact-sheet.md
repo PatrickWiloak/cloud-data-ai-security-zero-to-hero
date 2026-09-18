@@ -65,7 +65,7 @@ This domain covers the core architecture, training methodology, and theoretical 
 - Multi-query attention (MQA) - single KV head shared across all query heads
 - Flash Attention - memory-efficient attention computation
 
-**[📖 NVIDIA Megatron-LM](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotron/index.html)** - Large-scale model training
+**[📖 NVIDIA Megatron-LM](https://docs.nvidia.com/megatron-core/developer-guide/latest/index.html)** - Large-scale model training
 **[📖 Flash Attention Paper](https://arxiv.org/abs/2205.14135)** - IO-aware exact attention algorithm
 
 ### 1.3 Tokenization
@@ -190,7 +190,7 @@ This domain covers retrieval-augmented generation architecture and vector databa
 - Enables domain-specific answers without fine-tuning
 - Provides source attribution for generated content
 
-**[📖 NVIDIA NeMo Retriever](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemoretriever/index.html)** - NVIDIA RAG components
+**[📖 NVIDIA NeMo Retriever](https://developer.nvidia.com/nemo-retriever)** - NVIDIA RAG components
 **[📖 NVIDIA RAG Pipeline Tutorial](https://developer.nvidia.com/blog/build-enterprise-retrieval-augmented-generation-apps-with-nvidia-retrieval-qa-embedding-model/)** - Building RAG with NVIDIA tools
 **[📖 NVIDIA AI Blueprints](https://build.nvidia.com/blueprints)** - Reference architectures for RAG
 
@@ -276,8 +276,8 @@ This domain covers methods for adapting pre-trained models to specific tasks and
 - Careful hyperparameter selection (learning rate, epochs, batch size)
 - Validation set for monitoring overfitting
 
-**[📖 NVIDIA NeMo Framework Training](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/index.html)** - LLM training with NeMo
-**[📖 NVIDIA NeMo Customization Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/nemo_framework_custom/index.html)** - Model customization workflows
+**[📖 NVIDIA NeMo Framework Training](https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html)** - LLM training with NeMo
+**[📖 NVIDIA NeMo Customization Guide](https://docs.nvidia.com/nemo/microservices/latest/index.html)** - Model customization workflows
 
 ### 4.2 Parameter-Efficient Fine-Tuning (PEFT)
 
@@ -302,7 +302,7 @@ This domain covers methods for adapting pre-trained models to specific tasks and
 - **Adapter Layers** - inserts small networks between transformer layers
 - **IA3** - scales activations with learned vectors (very few parameters)
 
-**[📖 NVIDIA NeMo PEFT](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/nemo_framework_peft/index.html)** - PEFT with NeMo Framework
+**[📖 NVIDIA NeMo PEFT](https://docs.nvidia.com/nemo/automodel/latest)** - PEFT with NeMo Framework
 **[📖 LoRA Paper](https://arxiv.org/abs/2106.09685)** - Original LoRA research
 **[📖 QLoRA Paper](https://arxiv.org/abs/2305.14314)** - Quantized fine-tuning research
 **[📖 Hugging Face PEFT Library](https://huggingface.co/docs/peft/index)** - PEFT implementation library

@@ -49,7 +49,7 @@ D. Share subscription credentials with the vendor
 
 **Why:** Azure AD B2B collaboration allows inviting external users (guest accounts). PIM eligible assignments can have an end date, ensuring automatic expiration after 30 days. The vendor activates the role when needed and it expires automatically. Guest accounts without PIM (A) don't auto-expire. Service principals (C) are for applications, not human access. Sharing credentials (D) violates security best practices.
 
-**Key Concept:** [Azure AD B2B with PIM](https://docs.microsoft.com/azure/active-directory/external-identities/b2b-quickstart-invite-portal)
+**Key Concept:** [Azure AD B2B with PIM](https://learn.microsoft.com/en-us/entra/external-id/b2b-quickstart-add-guest-users-portal)
 </details>
 
 ### Question 3

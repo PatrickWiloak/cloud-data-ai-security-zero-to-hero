@@ -300,7 +300,7 @@ last-updated: 2026-05-03
 - **[📖 Pipeline Components](https://learn.microsoft.com/en-us/azure/machine-learning/concept-component)** - Component overview
 - **[📖 Pipeline Parameters](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-use-pipeline-parameter)** - Parameterization
 - **[📖 Publish Pipelines](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-deploy-pipelines)** - Pipeline deployment
-- **[📖 Schedule Pipelines](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-schedule-pipeline-job-with-event-grid)** - Scheduling
+- **[📖 Schedule Pipelines](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-schedule-pipeline-job)** - Scheduling
 
 **CI/CD Integration**
 - GitHub Actions: Automate ML workflows
@@ -332,7 +332,7 @@ last-updated: 2026-05-03
 - Access control: RBAC for models
 - **[📖 Model Management](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment)** - Model lifecycle
 - **[📖 Model Catalog](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-manage-models-mlflow)** - Catalog overview
-- **[📖 Model Lineage](https://learn.microsoft.com/en-us/azure/machine-learning/concept-data-lineage)** - Track lineage
+- **[📖 Model Lineage](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment)** - Track lineage
 
 ## Azure ML Python SDK v2
 

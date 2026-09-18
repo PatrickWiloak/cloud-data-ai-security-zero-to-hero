@@ -48,7 +48,7 @@
 **Official Resources:**
 - **[SOA-C03 Official Exam Page](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/)** - Registration and exam details
 - **[AWS Skill Builder](https://skillbuilder.aws/)** - FREE official exam preparation and labs
-- **[CloudOps Learning Plan](https://explore.skillbuilder.aws/learn/learning_plan/view/1994/cloudops-engineer-learning-plan)** - Official study plan
+- **[CloudOps Learning Plan](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/)** - Official study plan
 - **[AWS Documentation](https://docs.aws.amazon.com/)** - Complete service documentation
 - **[AWS Free Tier](https://aws.amazon.com/free/)** - 12 months free + always-free services
 

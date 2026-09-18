@@ -98,5 +98,5 @@ the tunnel.
 ## Official documentation
 
 **[📖 PAN-OS networking](https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-networking-admin)** - interfaces, routing, NAT
-**[📖 NAT configuration examples](https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-admin/networking/nat)** - including U-Turn NAT
+**[📖 NAT configuration examples](https://docs.paloaltonetworks.com/ngfw/networking/nat)** - including U-Turn NAT
 **[📖 GlobalProtect administration](https://docs.paloaltonetworks.com/globalprotect)** - portal and gateway architecture

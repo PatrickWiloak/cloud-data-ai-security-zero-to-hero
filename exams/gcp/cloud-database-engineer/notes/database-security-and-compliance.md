@@ -2828,7 +2828,7 @@ class ZeroTrustDatabaseAccess:
 
 ## Additional Resources
 
-- [Cloud SQL Security Best Practices](https://cloud.google.com/sql/docs/postgres/security)
+- [Cloud SQL Security Best Practices](https://docs.cloud.google.com/sql/docs/postgres/best-practices)
 - [Cloud Spanner IAM Documentation](https://cloud.google.com/spanner/docs/iam)
 - [Firestore Security Rules Guide](https://firebase.google.com/docs/firestore/security/get-started)
 - [Customer-Managed Encryption Keys (CMEK)](https://cloud.google.com/kms/docs/cmek)

@@ -50,7 +50,7 @@ D. Temporarily add developers to admin group
 
 **Why:** Privileged Access Manager enables just-in-time, time-bound access with approval workflows. Access is automatically revoked after the specified duration. All grants are logged for audit. Permanent elevated access (A) violates least privilege. Service account keys (C) lack user attribution and are hard to revoke. Manual group membership (D) is error-prone and may not be revoked.
 
-**Key Concept:** [Privileged Access Manager](https://cloud.google.com/iam/docs/privileged-access-manager)
+**Key Concept:** [Privileged Access Manager](https://docs.cloud.google.com/iam/docs/pam-overview)
 </details>
 
 ### Question 3
@@ -122,7 +122,7 @@ D. Implement network firewall rules only
 
 **Why:** BeyondCorp Enterprise context-aware access defines access levels based on device trust, network location, or other signals. These access levels can be used in IAM conditions to restrict BigQuery access. This implements zero trust - identity alone isn't sufficient. VPC controls (A) restrict network paths, not user context. Trusting all users (C) ignores device security. Firewall rules (D) don't restrict authenticated API access.
 
-**Key Concept:** [Context-Aware Access](https://cloud.google.com/beyondcorp-enterprise/docs/securing-resources-with-access-levels)
+**Key Concept:** [Context-Aware Access](https://docs.cloud.google.com/access-context-manager/docs/overview)
 </details>
 
 ### Question 7
@@ -270,7 +270,7 @@ D. Compliance reporting
 
 **Why:** SCC Premium's Attack Path Simulation identifies paths attackers could take to reach high-value resources. It visualizes how an internet-exposed VM could potentially access BigQuery through IAM relationships, network paths, and service account chains. This enables proactive hardening. Vulnerability scanning (A) finds CVEs, not attack paths. Asset inventory (C) lists resources. Compliance (D) checks configurations.
 
-**Key Concept:** [Attack Path Simulation](https://cloud.google.com/security-command-center/docs/concepts-attack-path-simulation)
+**Key Concept:** [Attack Path Simulation](https://docs.cloud.google.com/security-command-center/docs/attack-exposure-learn)
 </details>
 
 ### Question 15
@@ -436,7 +436,7 @@ D. Trust teams to follow guidelines
 
 **Why:** Organization Policy `constraints/compute.vmExternalIpAccess` can deny all VMs external IPs. VPC routes can direct 0.0.0.0/0 traffic to a firewall appliance (Network Virtual Appliance) or through Cloud NAT for controlled egress. This provides technical enforcement. Documentation (A) and trust (D) aren't enforceable. Log review (C) is reactive.
 
-**Key Concept:** [External IP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/restricting-external-ips)
+**Key Concept:** [External IP Org Policy](https://docs.cloud.google.com/compute/docs/ip-addresses#restrict-ips)
 </details>
 
 ### Question 24

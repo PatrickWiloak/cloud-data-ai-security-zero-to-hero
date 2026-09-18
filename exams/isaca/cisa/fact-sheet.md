@@ -460,7 +460,7 @@ CAATs increase efficiency and enable 100% population testing on large datasets.
 
 - **ISACA CISA page:** https://www.isaca.org/credentialing/cisa
 - **CISA exam content outline:** https://www.isaca.org/credentialing/cisa/cisa-exam-content-outline
-- **ITAF:** https://www.isaca.org/resources/itaf
+- **ITAF:** https://www.isaca.org/resources/it-audit
 - **COBIT 2019:** https://www.isaca.org/resources/cobit
 - **NIST publications:** https://csrc.nist.gov/publications
 - **ISO standards catalog:** https://www.iso.org/standards.html

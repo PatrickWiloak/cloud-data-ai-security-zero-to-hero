@@ -47,7 +47,7 @@ last-updated: 2026-05-03
 - **[📖 OneLake Data Hub](https://learn.microsoft.com/en-us/fabric/get-started/onelake-data-hub)** - Data discovery
 - **[📖 OneLake Shortcuts](https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcuts)** - Data federation
 - **[📖 OneLake Security](https://learn.microsoft.com/en-us/fabric/onelake/onelake-security)** - Access control
-- **[📖 OneLake Integration](https://learn.microsoft.com/en-us/fabric/onelake/onelake-azure-storage)** - Azure Storage integration
+- **[📖 OneLake Integration](https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcuts)** - Azure Storage integration
 
 ## Fabric Workspaces
 
@@ -101,7 +101,7 @@ last-updated: 2026-05-03
 - **[📖 Notebooks Overview](https://learn.microsoft.com/en-us/fabric/data-engineering/how-to-use-notebook)** - Notebook guide
 - **[📖 Spark Compute](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-compute)** - Spark configurations
 - **[📖 Notebook Source Control](https://learn.microsoft.com/en-us/fabric/data-engineering/notebook-source-control-deployment)** - Git integration
-- **[📖 PySpark Reference](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-pyspark-tutorial)** - PySpark tutorial
+- **[📖 PySpark Reference](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-notebook-explore)** - PySpark tutorial
 - **[📖 Delta Lake with Spark](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-and-delta-tables)** - Delta operations
 
 ## Data Warehouse
@@ -144,8 +144,8 @@ last-updated: 2026-05-03
 - Relationship navigation: RELATED, RELATEDTABLE
 - **[📖 DAX Reference](https://learn.microsoft.com/en-us/dax/)** - Complete DAX reference
 - **[📖 CALCULATE Function](https://learn.microsoft.com/en-us/dax/calculate-function-dax)** - Context transition
-- **[📖 Time Intelligence](https://learn.microsoft.com/en-us/power-bi/guidance/dax-time-intelligence-functions)** - Date functions
-- **[📖 DAX Best Practices](https://learn.microsoft.com/en-us/power-bi/guidance/dax-best-practices)** - Performance patterns
+- **[📖 Time Intelligence](https://learn.microsoft.com/en-us/dax/time-intelligence-functions-dax)** - Date functions
+- **[📖 DAX Best Practices](https://learn.microsoft.com/en-us/dax/best-practices/dax-avoid-avoid-filter-as-filter-argument)** - Performance patterns
 - **[📖 Variables in DAX](https://learn.microsoft.com/en-us/dax/var-dax)** - VAR keyword
 
 ## Real-Time Analytics (KQL Database)
@@ -170,7 +170,7 @@ last-updated: 2026-05-03
 - Real-time streaming
 - Row-level security (RLS)
 - Apps and content distribution
-- **[📖 Power BI in Fabric](https://learn.microsoft.com/en-us/fabric/get-started/fabric-power-bi)** - Power BI integration
+- **[📖 Power BI in Fabric](https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview)** - Power BI integration
 - **[📖 Create Reports](https://learn.microsoft.com/en-us/power-bi/create-reports/)** - Report design
 - **[📖 Visualizations](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualizations-overview)** - Visual types
 - **[📖 Row-Level Security](https://learn.microsoft.com/en-us/fabric/security/service-admin-row-level-security)** - RLS implementation
@@ -186,8 +186,8 @@ last-updated: 2026-05-03
 - Model deployment
 - **[📖 Data Science Overview](https://learn.microsoft.com/en-us/fabric/data-science/data-science-overview)** - ML in Fabric
 - **[📖 Train Models](https://learn.microsoft.com/en-us/fabric/data-science/model-training-overview)** - Model training
-- **[📖 MLflow](https://learn.microsoft.com/en-us/fabric/data-science/mlflow-overview)** - Experiment tracking
-- **[📖 Model Registry](https://learn.microsoft.com/en-us/fabric/data-science/model-registry)** - Model management
+- **[📖 MLflow](https://learn.microsoft.com/en-us/fabric/data-science/machine-learning-experiment)** - Experiment tracking
+- **[📖 Model Registry](https://learn.microsoft.com/en-us/fabric/data-science/machine-learning-model)** - Model management
 
 ## Security and Governance
 
@@ -225,7 +225,7 @@ last-updated: 2026-05-03
 - Data mesh with domains
 - ELT over ETL
 - **[📖 Medallion Architecture](https://learn.microsoft.com/en-us/azure/databricks/lakehouse/medallion)** - Layered approach
-- **[📖 Data Pipelines Best Practices](https://learn.microsoft.com/en-us/fabric/data-factory/data-factory-best-practices)** - Design patterns
+- **[📖 Data Pipelines Best Practices](https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-overview)** - Design patterns
 
 ## Migration to Fabric
 

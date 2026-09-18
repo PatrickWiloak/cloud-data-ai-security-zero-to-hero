@@ -23,7 +23,7 @@ last-updated: 2026-05-03
 - **[📖 Exam Homepage](https://www.ibm.com/training/certification/C1000-173)**
 - **[📖 IBM Cloud Security](https://www.ibm.com/cloud/security)**
 - **[📖 IBM Cloud Security Documentation](https://cloud.ibm.com/docs/overview?topic=overview-security)**
-- **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance)**
+- **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/workload-protection)**
 - **[📖 IBM Cloud Architecture - Security](https://www.ibm.com/cloud/architecture/architectures/securityArchitecture)**
 - **[📖 IBM Cloud Compliance](https://www.ibm.com/cloud/compliance)**
 - **[📖 IBM Security Learning](https://www.ibm.com/security/services/education)**
@@ -133,10 +133,10 @@ last-updated: 2026-05-03
 - Security metrics and KPIs
 
 **Monitoring and Compliance Resources:**
-- **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance)**
-- **[📖 Compliance Posture Management](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-posture-management)**
-- **[📖 Compliance Profiles](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-predefined-profiles)**
-- **[📖 Custom Profiles](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-custom-profiles)**
+- **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/workload-protection)**
+- **[📖 Compliance Posture Management](https://cloud.ibm.com/docs/workload-protection)**
+- **[📖 Compliance Profiles](https://cloud.ibm.com/docs/workload-protection)**
+- **[📖 Custom Profiles](https://cloud.ibm.com/docs/workload-protection)**
 - **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 - **[📖 Activity Tracker Events](https://cloud.ibm.com/docs/atracker)**
 - **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
@@ -187,8 +187,8 @@ last-updated: 2026-05-03
 - Backup security and encryption
 
 **Specialized Services Resources:**
-- **[📖 Hyper Protect DBaaS](https://cloud.ibm.com/docs/hyper-protect-dbaas-for-postgresql)**
-- **[📖 Hyper Protect Virtual Servers](https://cloud.ibm.com/docs/hp-virtual-servers)**
+- **[📖 Hyper Protect DBaaS](https://cloud.ibm.com/docs/databases-for-postgresql)**
+- **[📖 Hyper Protect Virtual Servers](https://cloud.ibm.com/docs/vpc?topic=vpc-about-se)**
 - **[📖 Cloud Shell](https://cloud.ibm.com/docs/cloud-shell)**
 - **[📖 Satellite Security](https://cloud.ibm.com/docs/satellite?topic=satellite-service-security)**
 - **[📖 Database Encryption](https://cloud.ibm.com/docs/databases-for-postgresql?topic=databases-for-postgresql-key-protect)**
@@ -201,7 +201,7 @@ last-updated: 2026-05-03
 ### Identity and Access Services
 - **[📖 IBM Cloud IAM](https://cloud.ibm.com/docs/account?topic=account-iamoverview)**
 - **[📖 App ID](https://cloud.ibm.com/docs/appid)**
-- **[📖 Directory Services](https://cloud.ibm.com/docs/directory-sync)**
+- **[📖 Directory Services](https://cloud.ibm.com/docs/account?topic=account-idp-integration)**
 
 ### Encryption and Key Management
 - **[📖 Key Protect](https://cloud.ibm.com/docs/key-protect)**
@@ -216,7 +216,7 @@ last-updated: 2026-05-03
 - **[📖 Cloud Internet Services](https://cloud.ibm.com/docs/cis)**
 
 ### Monitoring and Compliance Services
-- **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance)**
+- **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/workload-protection)**
 - **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 - **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
 - **[📖 Monitoring](https://cloud.ibm.com/docs/monitoring)**
@@ -270,7 +270,7 @@ last-updated: 2026-05-03
 - Security testing in CI/CD
 
 **Resources:**
-- **[📖 Secure Application Development](https://developer.ibm.com/articles/secure-coding-practices/)**
+- **[📖 Secure Application Development](https://owasp.org/projects/secure-coding-practices-quick-reference-guide)**
 
 ## Common Security Scenarios
 
@@ -409,7 +409,7 @@ last-updated: 2026-05-03
 
 **Resources:**
 - **[📖 HIPAA Compliance](https://www.ibm.com/cloud/compliance/hipaa)**
-- **[📖 Compliance Automation](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-posture-management)**
+- **[📖 Compliance Automation](https://cloud.ibm.com/docs/workload-protection)**
 
 ### Scenario 5: API Security
 **Challenge:** Secure public APIs for partner integration.
@@ -513,7 +513,7 @@ last-updated: 2026-05-03
 8. **Documentation:** Maintain security documentation
 
 **Resources:**
-- **[📖 Compliance Best Practices](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-best-practices)**
+- **[📖 Compliance Best Practices](https://cloud.ibm.com/docs/workload-protection)**
 
 ## Security Tools and CLIs
 
@@ -541,7 +541,7 @@ ibmcloud cr vulnerability-assessment
 
 ### Security Scanning Tools
 - **[📖 Vulnerability Advisor](https://cloud.ibm.com/docs/Registry?topic=Registry-va_index)**
-- **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance)**
+- **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/workload-protection)**
 - **[📖 Open Source Scanners (Trivy, Clair)](https://cloud.ibm.com/docs/Registry?topic=Registry-security_container)**
 
 ## Exam Tips and Strategies
@@ -593,11 +593,11 @@ ibmcloud cr vulnerability-assessment
 ### Training and Courses
 - **[📖 IBM Security Training](https://www.ibm.com/security/services/education)**
 - **[📖 IBM Cloud Security Training](https://www.ibm.com/training/cloud)**
-- **[📖 Coursera Security Courses](https://www.coursera.org/ibm)**
+- **[📖 Coursera Security Courses](https://www.coursera.org/partners/ibm-skills-network)**
 
 ### Documentation and Guides
 - **[📖 Security Architecture Center](https://www.ibm.com/cloud/architecture/architectures/securityArchitecture)**
-- **[📖 Security Compliance Guide](https://cloud.ibm.com/docs/security-compliance)**
+- **[📖 Security Compliance Guide](https://cloud.ibm.com/docs/workload-protection)**
 - **[📖 Security Best Practices](https://cloud.ibm.com/docs/overview?topic=overview-security)**
 
 ### Community and Support

@@ -522,8 +522,8 @@ Covers cost management and performance tuning.
 
 **Official AWS Training:**
 **📖 [AWS Skill Builder](https://skillbuilder.aws/)** - Free AWS training
-**📖 [CloudOps Learning Plan](https://explore.skillbuilder.aws/learn/learning_plan/view/1994/cloudops-engineer-learning-plan)** - Official study plan
-**📖 [Exam Prep Course](https://aws.amazon.com/training/classroom/exam-prep-aws-certified-cloudops-engineer-associate-soa-c03/)** - Official exam prep
+**📖 [CloudOps Learning Plan](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/)** - Official study plan
+**📖 [Exam Prep Course](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/)** - Official exam prep
 
 **Hands-On Practice:**
 - Complete AWS hands-on labs

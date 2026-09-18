@@ -4,7 +4,7 @@
 
 This document covers the methods, strategies, and best practices for fine-tuning large language models using NVIDIA tools. Topics include Parameter-Efficient Fine-Tuning (PEFT) methods, supervised fine-tuning, RLHF, data preparation, and distributed training configurations for fine-tuning workflows.
 
-**[📖 NeMo PEFT Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/peft/landing_page.html)** - PEFT methods in NeMo Framework
+**[📖 NeMo PEFT Guide](https://docs.nvidia.com/nemo/automodel/latest)** - PEFT methods in NeMo Framework
 **[📖 NeMo Aligner](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - Alignment training documentation
 
 ## Key Topics
@@ -97,7 +97,7 @@ This document covers the methods, strategies, and best practices for fine-tuning
 - LoRA generally outperforms P-tuning for most tasks
 - P-tuning uses fewer parameters but has lower ceiling
 
-**[📖 NeMo P-Tuning](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/peft/landing_page.html)** - P-tuning documentation in NeMo
+**[📖 NeMo P-Tuning](https://docs.nvidia.com/nemo/automodel/latest)** - P-tuning documentation in NeMo
 
 ### 5. Supervised Fine-Tuning (SFT)
 

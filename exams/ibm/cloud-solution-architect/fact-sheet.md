@@ -26,7 +26,7 @@ last-updated: 2026-05-03
 - **[📖 IBM Cloud Reference Architectures](https://www.ibm.com/cloud/architecture/architectures)**
 - **[📖 IBM Cloud Best Practices](https://cloud.ibm.com/docs/overview?topic=overview-best-practices)**
 - **[📖 IBM Cloud Well-Architected Framework](https://www.ibm.com/cloud/architecture/frameworks)**
-- **[📖 IBM Cloud Garage Method](https://www.ibm.com/cloud/garage)**
+- **[📖 IBM Cloud Garage Method](https://www.ibm.com/garage)**
 - **[📖 IBM Cloud Learning](https://www.ibm.com/training/cloud)**
 - **[📖 Pearson VUE Testing](https://www.pearsonvue.com/us/en/ibm.html)**
 - **[📖 IBM Cloud Certification Hub](https://www.ibm.com/training/cloud/certification)**
@@ -51,7 +51,7 @@ last-updated: 2026-05-03
 - **[📖 Event-Driven Architecture](https://www.ibm.com/cloud/architecture/architectures/eventDrivenArchitecture)**
 - **[📖 Serverless Architecture](https://www.ibm.com/cloud/architecture/architectures/serverlessArchitecture)**
 - **[📖 API-First Design](https://www.ibm.com/cloud/architecture/architectures/apiManagementArchitecture)**
-- **[📖 Domain-Driven Design](https://developer.ibm.com/articles/domain-driven-design/)**
+- **[📖 Domain-Driven Design](https://martinfowler.com/bliki/DomainDrivenDesign.html)**
 - **[📖 Architecture Decision Records](https://www.ibm.com/cloud/architecture/decision-guides)**
 
 ### 2. Infrastructure Architecture (20%)
@@ -126,7 +126,7 @@ last-updated: 2026-05-03
 - **[📖 Key Protect](https://cloud.ibm.com/docs/key-protect)**
 - **[📖 Hyper Protect Crypto Services](https://cloud.ibm.com/docs/hs-crypto)**
 - **[📖 Secrets Manager](https://cloud.ibm.com/docs/secrets-manager)**
-- **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance)**
+- **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/workload-protection)**
 - **[📖 Certificate Manager](https://cloud.ibm.com/docs/secrets-manager)**
 - **[📖 Cloud Internet Services](https://cloud.ibm.com/docs/cis)**
 - **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
@@ -203,23 +203,23 @@ last-updated: 2026-05-03
 - **[📖 File Storage for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-vpc-about)**
 - **[📖 Object Storage](https://cloud.ibm.com/docs/cloud-object-storage)**
 - **[📖 Backup for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-backup-service-about)**
-- **[📖 Mass Data Migration](https://cloud.ibm.com/docs/mass-data-migration)**
+- **[📖 Mass Data Migration](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-migrate)**
 
 ### Database Architecture Options
 - **[📖 Db2 on Cloud](https://cloud.ibm.com/docs/db2-saas)**
-- **[📖 Db2 Warehouse](https://cloud.ibm.com/docs/Db2whc)**
+- **[📖 Db2 Warehouse](https://www.ibm.com/products/db2-warehouse)**
 - **[📖 Cloudant](https://cloud.ibm.com/docs/Cloudant)**
 - **[📖 Databases for PostgreSQL](https://cloud.ibm.com/docs/databases-for-postgresql)**
 - **[📖 Databases for MySQL](https://cloud.ibm.com/docs/databases-for-mysql)**
 - **[📖 Databases for MongoDB](https://cloud.ibm.com/docs/databases-for-mongodb)**
 - **[📖 Databases for Redis](https://cloud.ibm.com/docs/databases-for-redis)**
 - **[📖 Databases for Elasticsearch](https://cloud.ibm.com/docs/databases-for-elasticsearch)**
-- **[📖 Databases for etcd](https://cloud.ibm.com/docs/databases-for-etcd)**
-- **[📖 DataStax](https://cloud.ibm.com/docs/databases-for-cassandra)**
+- **[📖 Databases for etcd](https://cloud.ibm.com/docs/cloud-databases)**
+- **[📖 DataStax](https://cloud.ibm.com/docs/cloud-databases)**
 
 ### Integration and Messaging
 - **[📖 Event Streams (Kafka)](https://cloud.ibm.com/docs/EventStreams)**
-- **[📖 App Connect](https://cloud.ibm.com/docs/appconnect)**
+- **[📖 App Connect](https://www.ibm.com/products/app-connect)**
 - **[📖 API Connect](https://cloud.ibm.com/docs/apiconnect)**
 - **[📖 MQ on Cloud](https://cloud.ibm.com/docs/mqcloud)**
 
@@ -604,13 +604,13 @@ last-updated: 2026-05-03
 
 ### Training and Courses
 - **[📖 IBM Cloud Training Catalog](https://www.ibm.com/training/cloud)**
-- **[📖 Coursera IBM Cloud Courses](https://www.coursera.org/ibm)**
+- **[📖 Coursera IBM Cloud Courses](https://www.coursera.org/partners/ibm-skills-network)**
 - **[📖 IBM Skills Network](https://skills.network/)**
 - **[📖 edX IBM Courses](https://www.edx.org/school/ibm)**
 
 ### Case Studies and Customer Stories
 - **[📖 IBM Cloud Case Studies](https://www.ibm.com/case-studies?contentType=Case%20study)**
-- **[📖 IBM Cloud Success Stories](https://www.ibm.com/cloud/success-stories)**
+- **[📖 IBM Cloud Success Stories](https://www.ibm.com/case-studies)**
 
 ### Community and Support
 - **[📖 IBM Cloud Architecture Forum](https://community.ibm.com/community/user/cloud/communities/community-home?communitykey=c0d06891-e7cc-4ad7-a8f4-c7caa6c71e26)**

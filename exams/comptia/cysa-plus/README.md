@@ -95,7 +95,7 @@ The CompTIA Cybersecurity Analyst (CySA+) CS0-003 certification validates the ab
 
 - **[CompTIA CySA+ Certification Page](https://www.comptia.org/certifications/cybersecurity-analyst)** - Official certification details
 - **[CS0-003 Exam Objectives](https://www.comptia.org/certifications/cybersecurity-analyst#examdetails)** - Complete exam objectives PDF
-- **[CompTIA CertMaster Learn CySA+](https://www.comptia.org/training/certmaster-learn/cybersecurity-analyst)** - Official interactive learning
+- **[CompTIA CertMaster Learn CySA+](https://www.comptia.org/en-us/certifications/cybersecurity-analyst/)** - Official interactive learning
 - **[CompTIA CertMaster Practice CySA+](https://www.comptia.org/en-us/resources/certmaster-training/)** - Official practice questions
 - **[CompTIA CertMaster Labs CySA+](https://www.comptia.org/en-us/resources/certmaster-training/)** - Official hands-on labs
 

@@ -191,7 +191,7 @@ Outputs:          # Values to return after creation
 
 ## AWS OpsWorks
 
-**[AWS OpsWorks](https://docs.aws.amazon.com/opsworks/latest/userguide/welcome.html)** - Configuration management
+**[AWS OpsWorks](https://aws.amazon.com/blogs/mt/migrate-your-aws-opsworks-stacks-to-aws-systems-manager/)** - Configuration management
 
 ### OpsWorks Stacks
 - Uses Chef for configuration management

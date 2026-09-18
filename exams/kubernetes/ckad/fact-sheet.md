@@ -53,7 +53,7 @@ This certification does not focus on cluster administration tasks (that is the C
 - **[📖 Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)** - Containers that run before app containers
 - **[📖 Sidecar Containers](https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/)** - Native sidecar container support
 - **[📖 Container Lifecycle Hooks](https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/)** - PostStart and PreStop hooks
-- **[📖 Container Environment Variables](https://kubernetes.io/docs/concepts/containers/container-environment-variables/)** - Environment variable sources
+- **[📖 Container Environment Variables](https://kubernetes.io/docs/concepts/containers/container-environment/)** - Environment variable sources
 
 **Multi-Container Pod Patterns:**
 - **Sidecar**: Extends the main container (e.g., log shipper, config reloader, proxy). Runs alongside the main container for the entire Pod lifecycle.
@@ -432,7 +432,7 @@ kubectl expose pod mypod --port=80 --target-port=8080 --name=my-service
 
 - **[📖 Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)** - Ingress concepts and configuration
 - **[📖 Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)** - Available controllers
-- **[📖 Set up Ingress on Minikube](https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/)** - Practical Ingress tutorial
+- **[📖 Set up Ingress on Minikube](https://kubernetes.io/docs/concepts/services-networking/ingress/)** - Practical Ingress tutorial
 
 **Ingress Features:**
 - Host-based routing (route by domain name)

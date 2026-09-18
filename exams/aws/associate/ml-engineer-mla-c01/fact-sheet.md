@@ -471,7 +471,7 @@ Covers monitoring, security, and ongoing maintenance.
 
 **Official AWS Training:**
 **📖 [AWS Skill Builder](https://skillbuilder.aws/)** - Free AWS training
-**📖 [ML Engineer Learning Plan](https://explore.skillbuilder.aws/learn/learning_plan/view/2191/machine-learning-engineer-learning-plan)** - Official study plan
+**📖 [ML Engineer Learning Plan](https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/)** - Official study plan
 **📖 [Exam Prep Course](https://aws.amazon.com/training/classroom/exam-prep-aws-certified-machine-learning-engineer-associate-mla-c01/)** - Official exam prep
 
 **Hands-On Practice:**

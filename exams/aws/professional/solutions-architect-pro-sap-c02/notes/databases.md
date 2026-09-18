@@ -1032,7 +1032,7 @@ aws dms start-replication-task \
 - AWS DMS: https://docs.aws.amazon.com/dms/
 - Amazon Neptune: https://docs.aws.amazon.com/neptune/
 - Amazon Timestream: https://docs.aws.amazon.com/timestream/
-- Amazon QLDB: https://docs.aws.amazon.com/qldb/
+- Amazon QLDB: https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/
 
 ### Video Resources
 - AWS re:Invent Database sessions (search "DAT" track)

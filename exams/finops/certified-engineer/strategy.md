@@ -81,7 +81,7 @@
    - Review common exam patterns
 
 **Resources:**
-- **[📖 FinOps Stories](https://www.finops.org/stories/)** - Real-world implementations
+- **[📖 FinOps Stories](https://www.finops.org/insights/)** - Real-world implementations
 - **[📖 FinOps Landscape](https://www.finops.org/landscape/)** - Tool ecosystem
 - **[📖 FinOps Community](https://www.finops.org/community/)** - Community support
 

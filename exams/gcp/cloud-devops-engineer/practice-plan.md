@@ -395,7 +395,7 @@ gcloud projects add-iam-policy-binding PROJECT --member=MEMBER --role=ROLE
 - **[Google SRE Books](https://sre.google/books/)** - Free online SRE resources
 - **[DevOps Best Practices](https://cloud.google.com/architecture/devops)**
 - **[CI/CD on GCP](https://cloud.google.com/docs/ci-cd)**
-- **[Monitoring Best Practices](https://cloud.google.com/monitoring/best-practices)**
+- **[Monitoring Best Practices](https://docs.cloud.google.com/monitoring/docs/monitoring-overview)**
 
 ### Recommended Learning Paths
 - Google Cloud Skills Boost: DevOps Engineer path

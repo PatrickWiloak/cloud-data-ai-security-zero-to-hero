@@ -25,7 +25,7 @@ last-updated: 2026-05-03
 - **[📖 IBM Cloud Learning](https://www.ibm.com/training/cloud)**
 - **[📖 IBM Cloud Blog](https://www.ibm.com/cloud/blog)**
 - **[📖 IBM Cloud Architecture Center](https://www.ibm.com/cloud/architecture)**
-- **[📖 IBM Cloud Garage](https://www.ibm.com/cloud/garage)**
+- **[📖 IBM Cloud Garage](https://www.ibm.com/garage)**
 - **[📖 IBM Developer](https://developer.ibm.com/)**
 - **[📖 IBM Skills Network](https://skills.network/)**
 - **[📖 Pearson VUE Testing](https://www.pearsonvue.com/us/en/ibm.html)**
@@ -83,8 +83,8 @@ last-updated: 2026-05-03
 - **[📖 Databases for MongoDB](https://cloud.ibm.com/docs/databases-for-mongodb)**
 - **[📖 Cloudant](https://cloud.ibm.com/docs/Cloudant)**
 - **[📖 Watson AI](https://cloud.ibm.com/docs/watson)**
-- **[📖 Watson Studio](https://cloud.ibm.com/docs/watson-studio)**
-- **[📖 Machine Learning](https://cloud.ibm.com/docs/machine-learning)**
+- **[📖 Watson Studio](https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wsl.html)**
+- **[📖 Machine Learning](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-overview.html)**
 - **[📖 Event Streams](https://cloud.ibm.com/docs/EventStreams)**
 - **[📖 MQ on Cloud](https://cloud.ibm.com/docs/mqcloud)**
 - **[📖 API Connect](https://cloud.ibm.com/docs/apiconnect)**
@@ -100,7 +100,7 @@ last-updated: 2026-05-03
 - Security best practices
 
 **Security Resources:**
-- **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance)**
+- **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/workload-protection)**
 - **[📖 IAM Concepts](https://cloud.ibm.com/docs/account?topic=account-iamconcepts)**
 - **[📖 IAM Access Policies](https://cloud.ibm.com/docs/account?topic=account-userroles)**
 - **[📖 Data Encryption](https://cloud.ibm.com/docs/overview?topic=overview-security)**
@@ -163,8 +163,8 @@ last-updated: 2026-05-03
 - **[📖 Migration Strategies](https://www.ibm.com/cloud/learn/cloud-migration)**
 - **[📖 Application Modernization](https://www.ibm.com/cloud/application-modernization)**
 - **[📖 VMware Solutions](https://cloud.ibm.com/docs/vmwaresolutions)**
-- **[📖 Mass Data Migration](https://cloud.ibm.com/docs/mass-data-migration)**
-- **[📖 Cloud Transformation](https://www.ibm.com/cloud/garage/practices/overview)**
+- **[📖 Mass Data Migration](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-migrate)**
+- **[📖 Cloud Transformation](https://www.ibm.com/think/topics/digital-transformation)**
 
 ## Core IBM Cloud Services
 
@@ -195,11 +195,11 @@ last-updated: 2026-05-03
 - **[📖 Watson Natural Language Understanding](https://cloud.ibm.com/docs/natural-language-understanding)**
 - **[📖 Watson Speech to Text](https://cloud.ibm.com/docs/speech-to-text)**
 - **[📖 Watson Text to Speech](https://cloud.ibm.com/docs/text-to-speech)**
-- **[📖 Watson Language Translator](https://cloud.ibm.com/docs/language-translator)**
+- **[📖 Watson Language Translator](https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wsl.html)**
 
 ### Integration Services
 - **[📖 IBM Event Streams (Kafka)](https://cloud.ibm.com/docs/EventStreams)**
-- **[📖 IBM App Connect](https://cloud.ibm.com/docs/appconnect)**
+- **[📖 IBM App Connect](https://www.ibm.com/products/app-connect)**
 - **[📖 IBM API Connect](https://cloud.ibm.com/docs/apiconnect)**
 
 ### Developer Tools
@@ -251,7 +251,7 @@ last-updated: 2026-05-03
 - Cloud Internet Services for DNS and CDN
 
 **Resources:**
-- **[📖 Migration Tools](https://cloud.ibm.com/docs/cloud-infrastructure?topic=cloud-infrastructure-compare-infra)**
+- **[📖 Migration Tools](https://cloud.ibm.com/docs/overview?topic=overview-whatis-platform)**
 - **[📖 Hybrid Cloud Architecture](https://www.ibm.com/cloud/architecture/architectures/hybridArchitecture)**
 
 ### Scenario 4: Building AI-Powered Applications
@@ -265,7 +265,7 @@ last-updated: 2026-05-03
 - Object Storage for training data
 
 **Resources:**
-- **[📖 AI Solutions](https://www.ibm.com/cloud/ai)**
+- **[📖 AI Solutions](https://www.ibm.com/solutions/artificial-intelligence)**
 - **[📖 Watson AI Reference Architecture](https://www.ibm.com/cloud/architecture/architectures/cognitiveArchitecture)**
 
 ### Scenario 5: Securing Cloud Resources
@@ -464,11 +464,11 @@ last-updated: 2026-05-03
 
 - **[📖 IBM Cloud Status](https://cloud.ibm.com/status)**
 - **[📖 IBM Cloud Support](https://cloud.ibm.com/unifiedsupport/supportcenter)**
-- **[📖 IBM Cloud Ideas Portal](https://ibm-cloud.ideas.aha.io/)**
+- **[📖 IBM Cloud Ideas Portal](https://ideas.ibm.com/)**
 - **[📖 IBM Cloud on Twitter](https://twitter.com/IBMcloud)**
 - **[📖 IBM Cloud on LinkedIn](https://www.linkedin.com/showcase/ibm-cloud/)**
-- **[📖 IBM Cloud Podcasts](https://www.ibm.com/cloud/podcasts)**
-- **[📖 IBM Cloud Webinars](https://www.ibm.com/cloud/webinars)**
+- **[📖 IBM Cloud Podcasts](https://www.ibm.com/think/podcasts)**
+- **[📖 IBM Cloud Webinars](https://www.ibm.com/events)**
 - **[📖 IBM Cloud Events](https://www.ibm.com/events/)**
 
 ---

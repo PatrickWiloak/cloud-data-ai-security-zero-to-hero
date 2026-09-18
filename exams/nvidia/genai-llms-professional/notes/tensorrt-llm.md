@@ -142,7 +142,7 @@ TensorRT-LLM is NVIDIA's high-performance inference library for large language m
 - Request cancellation for abandoned queries
 - Fairness policies for multi-tenant environments
 
-**[📖 TensorRT-LLM Batch Manager](https://nvidia.github.io/TensorRT-LLM/advanced/batch-manager.html)** - Batching configuration and management
+**[📖 TensorRT-LLM Batch Manager](https://nvidia.github.io/TensorRT-LLM/features/paged-attention-ifb-scheduler.html)** - Batching configuration and management
 
 ### 6. Performance Optimization
 

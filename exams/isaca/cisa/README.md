@@ -142,7 +142,7 @@ You may sit for the exam before meeting the experience requirement. After passin
 
 - **CISA Certification Page:** https://www.isaca.org/credentialing/cisa
 - **CISA Exam Content Outline:** https://www.isaca.org/credentialing/cisa/cisa-exam-content-outline
-- **ITAF (Information Technology Audit Framework):** https://www.isaca.org/resources/itaf
+- **ITAF (Information Technology Audit Framework):** https://www.isaca.org/resources/it-audit
 - **CISA Review Manual (CRM), 28th Edition (current):** ISACA bookstore (the primary text)
 - **CISA Questions, Answers and Explanations (QAE) Database:** ISACA online study tool
 - **Self-paced training:** ISACA Online Review Course

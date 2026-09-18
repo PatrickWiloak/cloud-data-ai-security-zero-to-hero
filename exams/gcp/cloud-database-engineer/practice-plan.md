@@ -374,7 +374,7 @@
 
 ### Official Google Cloud Resources
 - **[Database Migration Guide](https://cloud.google.com/database-migration)**
-- **[Database Best Practices](https://cloud.google.com/architecture/database-best-practices)**
+- **[Database Best Practices](https://docs.cloud.google.com/architecture/framework/performance-optimization)**
 - **[Cloud SQL Documentation](https://cloud.google.com/sql/docs)**
 - **[Cloud Spanner Documentation](https://cloud.google.com/spanner/docs)**
 - **[BigQuery Documentation](https://cloud.google.com/bigquery/docs)**

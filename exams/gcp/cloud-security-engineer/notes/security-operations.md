@@ -3075,7 +3075,7 @@ The exam heavily tests:
 - [Cloud Armor Documentation](https://cloud.google.com/armor/docs)
 - [Binary Authorization Documentation](https://cloud.google.com/binary-authorization/docs)
 - [Chronicle Documentation](https://cloud.google.com/chronicle/docs)
-- [GCP Incident Response Guide](https://cloud.google.com/architecture/incident-response)
+- [GCP Incident Response Guide](https://docs.cloud.google.com/docs/security/incident-response)
 - [Container Security Best Practices](https://cloud.google.com/architecture/best-practices-for-operating-containers)
 - [Security Operations Framework](https://cloud.google.com/architecture/framework/security)
 - [PCI-DSS on GCP](https://cloud.google.com/security/compliance/pci-dss)

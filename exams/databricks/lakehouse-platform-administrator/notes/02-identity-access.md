@@ -100,7 +100,7 @@ Identity and access covers 25% of the exam. This domain focuses on Unity Catalog
 
 ### Single Sign-On (SSO)
 
-**[📖 SSO Configuration](https://docs.databricks.com/en/admin/account-settings/single-sign-on/index.html)** - SSO setup
+**[📖 SSO Configuration](https://docs.databricks.com/aws/en/security/auth/single-sign-on/)** - SSO setup
 
 - SAML 2.0 or OIDC-based SSO
 - Configure at account level (applies to all workspaces)

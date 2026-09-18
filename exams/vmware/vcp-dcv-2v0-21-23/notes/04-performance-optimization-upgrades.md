@@ -99,6 +99,6 @@ guest without drivers.
 
 ## Official documentation
 
-**[📖 vSphere resource management](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere.html)** - shares, reservations, limits, NUMA
-**[📖 vSphere upgrade](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere.html)** - supported upgrade sequence
+**[📖 vSphere resource management](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html)** - shares, reservations, limits, NUMA
+**[📖 vSphere upgrade](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html)** - supported upgrade sequence
 **[📖 VMware product interoperability matrix](https://interopmatrix.broadcom.com/Interoperability)** - version compatibility

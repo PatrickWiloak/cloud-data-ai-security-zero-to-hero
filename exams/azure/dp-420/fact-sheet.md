@@ -88,7 +88,7 @@ last-updated: 2026-05-03
 - **[📖 Modeling Hierarchical Data](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/model-partition-example#v2-introducing-denormalization)** - Techniques for nested and hierarchical data
 
 ### Migration and Modeling Tools
-- **[📖 Data Migration Guide](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/how-to-migrate-data)** - Migrating data to Cosmos DB
+- **[📖 Data Migration Guide](https://learn.microsoft.com/en-us/azure/cosmos-db/migrate)** - Migrating data to Cosmos DB
 - **[📖 Azure Data Factory for Cosmos DB](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-cosmos-db)** - ETL and data migration with ADF
 
 ---
@@ -130,7 +130,7 @@ last-updated: 2026-05-03
 ### Query Language Fundamentals
 - **[📖 SQL Query Getting Started](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/getting-started)** - Introduction to Cosmos DB SQL query syntax
 - **[📖 SQL Query Reference](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/select)** - Complete SQL query language reference
-- **[📖 Query Execution](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/how-to-query-container)** - Executing queries using SDKs and Azure Portal
+- **[📖 Query Execution](https://learn.microsoft.com/en-us/cosmos-db/query/)** - Executing queries using SDKs and Azure Portal
 
 ### Advanced Query Features
 - **[📖 JOIN Operations](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/join)** - Intra-document joins within Cosmos DB
@@ -141,7 +141,7 @@ last-updated: 2026-05-03
 - **[📖 Mathematical Functions](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/mathematical-functions)** - Numeric calculations and operations
 
 ### Query Optimization
-- **[📖 Query Performance Tuning](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/performance-tips)** - Best practices for efficient queries
+- **[📖 Query Performance Tuning](https://learn.microsoft.com/en-us/azure/cosmos-db/performance-tips-query-sdk)** - Best practices for efficient queries
 - **[📖 Understanding Query Metrics](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query-metrics)** - Analyzing RU consumption and execution time
 - **[📖 Parameterized Queries](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/parameterized-queries)** - Using parameters for better performance and security
 - **[📖 Pagination with Continuation Tokens](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/pagination)** - Efficiently handling large result sets
@@ -222,14 +222,14 @@ last-updated: 2026-05-03
 
 ### Performance Best Practices
 - **[📖 Performance Tips for NoSQL API](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/performance-tips)** - General performance optimization strategies
-- **[📖 Query Performance Optimization](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/performance-tips)** - Reducing RU costs in queries
-- **[📖 Bulk Import Performance](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/how-to-use-bulk-executor-overview)** - High-performance data ingestion
+- **[📖 Query Performance Optimization](https://learn.microsoft.com/en-us/azure/cosmos-db/performance-tips-query-sdk)** - Reducing RU costs in queries
+- **[📖 Bulk Import Performance](https://learn.microsoft.com/en-us/azure/cosmos-db/bulk-executor-overview)** - High-performance data ingestion
 - **[📖 SDK Performance Benchmarks](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/performance-tips-dotnet-sdk-v3)** - Understanding SDK performance characteristics
 
 ### Analytical Store and HTAP
 - **[📖 Azure Synapse Link for Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/synapse-link)** - Hybrid transactional and analytical processing
 - **[📖 Analytical Store Overview](https://learn.microsoft.com/en-us/azure/cosmos-db/analytical-store-introduction)** - Column-oriented store for analytics without ETL
-- **[📖 Query Analytical Store with Spark](https://learn.microsoft.com/en-us/azure/cosmos-db/synapse-link-use-cases)** - Big data analytics on operational data
+- **[📖 Query Analytical Store with Spark](https://learn.microsoft.com/en-us/azure/cosmos-db/analytical-store-introduction)** - Big data analytics on operational data
 
 ---
 
@@ -265,7 +265,7 @@ last-updated: 2026-05-03
 - **[📖 Firewall Configuration](https://learn.microsoft.com/en-us/azure/cosmos-db/how-to-configure-firewall)** - IP firewall rules and access restrictions
 - **[📖 Virtual Network Service Endpoints](https://learn.microsoft.com/en-us/azure/cosmos-db/how-to-configure-vnet-service-endpoint)** - Private connectivity from VNets
 - **[📖 Private Endpoints](https://learn.microsoft.com/en-us/azure/cosmos-db/how-to-configure-private-endpoints)** - Azure Private Link integration
-- **[📖 Public Network Access Control](https://learn.microsoft.com/en-us/azure/cosmos-db/how-to-disable-public-access)** - Disabling public internet access
+- **[📖 Public Network Access Control](https://learn.microsoft.com/en-us/azure/cosmos-db/how-to-configure-firewall)** - Disabling public internet access
 
 ### Data Encryption
 - **[📖 Encryption at Rest](https://learn.microsoft.com/en-us/azure/cosmos-db/database-encryption-at-rest)** - Transparent data encryption for stored data
@@ -280,19 +280,19 @@ last-updated: 2026-05-03
 - **[📖 Monitoring Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/monitor-cosmos-db)** - Complete monitoring and observability guide
 - **[📖 Metrics in Azure Monitor](https://learn.microsoft.com/en-us/azure/cosmos-db/monitor-cosmos-db-reference)** - Available metrics and dimensions
 - **[📖 Diagnostic Logs](https://learn.microsoft.com/en-us/azure/cosmos-db/monitor-cosmos-db#diagnostic-settings)** - Configuring diagnostic logging to Log Analytics
-- **[📖 Setting Up Alerts](https://learn.microsoft.com/en-us/azure/cosmos-db/how-to-alert)** - Proactive monitoring with Azure Monitor alerts
+- **[📖 Setting Up Alerts](https://learn.microsoft.com/en-us/azure/cosmos-db/create-alerts)** - Proactive monitoring with Azure Monitor alerts
 
 ### Performance Monitoring
 - **[📖 Query Metrics and Diagnostics](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query-metrics)** - Understanding query execution statistics
 - **[📖 Server-Side Latency Metrics](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/troubleshoot-dotnet-sdk-request-timeout)** - Diagnosing latency issues
 - **[📖 RU Consumption Monitoring](https://learn.microsoft.com/en-us/azure/cosmos-db/monitor-normalized-request-units)** - Tracking normalized RU consumption
-- **[📖 Partition Metrics](https://learn.microsoft.com/en-us/azure/cosmos-db/monitor-partition-storage)** - Storage and throughput distribution analysis
+- **[📖 Partition Metrics](https://learn.microsoft.com/en-us/azure/cosmos-db/monitor-normalized-request-units)** - Storage and throughput distribution analysis
 
 ### Troubleshooting
 - **[📖 Troubleshooting Guide](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/troubleshoot-dotnet-sdk)** - Common issues and resolutions for .NET SDK
 - **[📖 Rate Limiting (429) Errors](https://learn.microsoft.com/en-us/azure/cosmos-db/troubleshoot-request-rate-too-large)** - Understanding and fixing throughput exceeded errors
-- **[📖 Connection Issues](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/troubleshoot-service-unavailable)** - Diagnosing connectivity problems
-- **[📖 Performance Diagnostics](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/performance-diagnostics)** - Using built-in diagnostics tools
+- **[📖 Connection Issues](https://learn.microsoft.com/en-us/azure/cosmos-db/troubleshoot-dotnet-sdk)** - Diagnosing connectivity problems
+- **[📖 Performance Diagnostics](https://learn.microsoft.com/en-us/azure/cosmos-db/troubleshoot-dotnet-sdk-slow-request)** - Using built-in diagnostics tools
 
 ---
 
@@ -318,7 +318,7 @@ last-updated: 2026-05-03
 - **[📖 Azure Functions Integration](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2)** - Serverless triggers, input and output bindings
 - **[📖 Logic Apps Connector](https://learn.microsoft.com/en-us/connectors/documentdb/)** - Workflow automation with Cosmos DB
 - **[📖 Azure Stream Analytics](https://learn.microsoft.com/en-us/azure/stream-analytics/stream-analytics-documentdb-output)** - Real-time streaming data to Cosmos DB
-- **[📖 Event Grid Integration](https://learn.microsoft.com/en-us/azure/event-grid/event-schema-cosmos-db)** - Event-driven architectures with change feed
+- **[📖 Event Grid Integration](https://learn.microsoft.com/en-us/azure/cosmos-db/change-feed)** - Event-driven architectures with change feed
 
 ### Data Integration
 - **[📖 Azure Data Factory](https://learn.microsoft.com/en-us/azure/data-factory/connector-azure-cosmos-db)** - ETL pipelines and data movement
@@ -327,8 +327,8 @@ last-updated: 2026-05-03
 
 ### Migration Tools
 - **[📖 Data Migration Tool](https://learn.microsoft.com/en-us/azure/cosmos-db/import-data)** - Command-line tool for bulk data import
-- **[📖 Azure Cosmos DB Live Migrator](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/how-to-move-data)** - Zero-downtime migration strategies
-- **[📖 Spark Connector for Migration](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/migrate-data-databricks)** - Large-scale data migration using Databricks
+- **[📖 Azure Cosmos DB Live Migrator](https://learn.microsoft.com/en-us/azure/cosmos-db/container-copy)** - Zero-downtime migration strategies
+- **[📖 Spark Connector for Migration](https://learn.microsoft.com/en-us/azure/cosmos-db/tutorial-spark-connector)** - Large-scale data migration using Databricks
 
 ---
 
@@ -346,7 +346,7 @@ last-updated: 2026-05-03
 - **[📖 Audit Logging](https://learn.microsoft.com/en-us/azure/cosmos-db/audit-control-plane-logs)** - Control plane operation logging
 
 ### Development Best Practices
-- **[📖 Design Patterns](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/design-patterns)** - Common architectural patterns catalog
+- **[📖 Design Patterns](https://learn.microsoft.com/en-us/azure/cosmos-db/modeling-data)** - Common architectural patterns catalog
 - **[📖 Testing Strategies](https://learn.microsoft.com/en-us/azure/cosmos-db/local-emulator)** - Using the Cosmos DB emulator for local development
 - **[📖 Cosmos DB Emulator](https://learn.microsoft.com/en-us/azure/cosmos-db/how-to-develop-emulator)** - Development and testing without Azure costs
 - **[📖 DevOps and CI/CD](https://learn.microsoft.com/en-us/azure/cosmos-db/continuous-backup-restore-resource-model)** - Infrastructure as Code with ARM templates

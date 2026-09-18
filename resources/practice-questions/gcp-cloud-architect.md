@@ -51,7 +51,7 @@ D. App Engine standard environment
 
 **Why:** Event-driven architecture handles variable workloads efficiently. Cloud Storage triggers invoke Cloud Functions or Cloud Run when videos are uploaded. Transcoding can use Cloud Run Jobs or Batch for long-running tasks. Firestore stores metadata. Scales to zero when idle and handles peaks automatically. Manual scaling (A) doesn't handle spikes well. Single instance (C) is a bottleneck. App Engine (D) isn't ideal for video processing.
 
-**Key Concept:** [Event-Driven Architecture](https://cloud.google.com/architecture/event-driven-architecture)
+**Key Concept:** [Event-Driven Architecture](https://docs.cloud.google.com/eventarc/docs/overview)
 </details>
 
 ### Question 3
@@ -69,7 +69,7 @@ D. Use Cloud Functions for the entire application
 
 **Why:** Lift and shift to Compute Engine minimizes initial changes while establishing GCP presence. The Strangler Fig pattern allows incremental modernization - extracting microservices over time while the monolith remains functional. Rewriting (A) is risky and time-consuming. Immediate containerization (C) requires significant changes. Functions (D) aren't suitable for monoliths.
 
-**Key Concept:** [Application Modernization](https://cloud.google.com/architecture/application-modernization)
+**Key Concept:** [Application Modernization](https://cloud.google.com/solutions/application-modernization)
 </details>
 
 ### Question 4
@@ -87,7 +87,7 @@ D. Cloud Bigtable for analytics
 
 **Why:** BigQuery provides enterprise data warehouse capabilities for complex analytics. CMEK enables customer-controlled encryption. IAM provides granular access control. Cloud Audit Logs track all data access for compliance. BigQuery can be configured for HIPAA compliance. Default encryption (A) doesn't provide customer control. Bigtable (D) is for operational workloads, not complex analytics.
 
-**Key Concept:** [BigQuery Security](https://cloud.google.com/bigquery/docs/best-practices-security)
+**Key Concept:** [BigQuery Security](https://docs.cloud.google.com/bigquery/docs/data-governance)
 </details>
 
 ### Question 5
@@ -123,7 +123,7 @@ D. Single VM with in-memory data
 
 **Why:** Memorystore (Redis) provides sub-millisecond latency for game state. Firestore offers real-time sync and automatic scaling for player data. Cloud Run or Agones (game server management on GKE) handles WebSocket connections with auto-scaling. Cloud SQL (A) has higher latency. BigQuery (C) is for analytics. Single VM (D) doesn't scale.
 
-**Key Concept:** [Game Architecture](https://cloud.google.com/architecture/gaming)
+**Key Concept:** [Game Architecture](https://cloud.google.com/solutions/games)
 </details>
 
 ### Question 7
@@ -141,7 +141,7 @@ D. Direct writes to BigQuery
 
 **Why:** Pub/Sub provides durable, scalable message ingestion. Dataflow processes streams in real-time with exactly-once semantics - ideal for fraud detection logic. BigQuery stores processed data for batch analytics and reporting. This is the standard streaming architecture on GCP. Batch only (A) has latency. Cloud SQL (C) doesn't handle streaming. Direct BigQuery writes (D) add latency and don't allow real-time processing.
 
-**Key Concept:** [Stream Analytics Architecture](https://cloud.google.com/architecture/stream-analytics)
+**Key Concept:** [Stream Analytics Architecture](https://cloud.google.com/solutions/stream-analytics)
 </details>
 
 ### Question 8
@@ -419,7 +419,7 @@ D. Honor system
 
 **Why:** Cloud DLP (Data Loss Prevention) identifies and de-identifies PII using techniques like masking, tokenization, or generalization. A sanitized dataset can be created for debugging with PII removed. Or use DLP API for on-the-fly redaction. Full access (A) violates privacy requirements. No access (C) blocks debugging. Honor system (D) isn't enforceable.
 
-**Key Concept:** [Cloud DLP](https://cloud.google.com/dlp/docs/overview)
+**Key Concept:** [Cloud DLP](https://docs.cloud.google.com/sensitive-data-protection/docs/sensitive-data-protection-overview)
 </details>
 
 ### Question 23
@@ -719,7 +719,7 @@ D. Never test failure scenarios
 
 **Why:** Chaos Mesh and LitmusChaos provide controlled chaos experiments with safeguards. They can terminate pods, inject network latency, and more. Experiments are time-bounded with abort conditions. Results improve resilience. Production without safeguards (A, C) risks uncontrolled outages. Never testing (D) means unknown failure modes.
 
-**Key Concept:** [Chaos Engineering](https://cloud.google.com/architecture/framework/reliability/testing-resilience)
+**Key Concept:** [Chaos Engineering](https://docs.cloud.google.com/architecture/framework/reliability/perform-testing-for-recovery-from-failures)
 </details>
 
 ### Question 39
@@ -755,7 +755,7 @@ D. Email chains
 
 **Why:** Version-controlled documentation enables collaboration and history. Markdown in Git works with CI/CD. Architecture diagrams visualize systems. Automated runbooks (Cloud Workflows, Terraform) ensure procedures are tested and repeatable. Undocumented (A), paper (C), and email (D) aren't accessible, searchable, or maintainable.
 
-**Key Concept:** [Architecture Documentation](https://cloud.google.com/architecture/framework/system-design/documentation)
+**Key Concept:** [Architecture Documentation](https://docs.cloud.google.com/architecture/framework/operational-excellence)
 </details>
 
 ---

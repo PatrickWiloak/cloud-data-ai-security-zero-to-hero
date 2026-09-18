@@ -71,7 +71,7 @@ This is the most-requested Salesforce cert on job postings and the typical entry
 
 - **[Salesforce Developer Edition](https://developer.salesforce.com/signup)** - free permanent dev org with most features
 - **[Trailhead Playgrounds](https://trailhead.salesforce.com/)** - launch scratch orgs from any module
-- Recommended Trailmix: **["Prepare for Your Salesforce Administrator Credential"](https://trailhead.salesforce.com/users/strailhead/trailmixes/administrator-certification-prep)**
+- Recommended Trailmix: **["Prepare for Your Salesforce Administrator Credential"](https://trailhead.salesforce.com/credentials/platformadministrator)**
 
 You **cannot** pass this cert without hands-on time. Most exam questions are scenario-based and test your judgment on real Salesforce setup.
 

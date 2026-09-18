@@ -139,7 +139,7 @@ Unlike multiple-choice exams, LFCS requires you to perform actual tasks in a liv
 - **[📖 LFCS Certification Page](https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/)** - Official certification details
 - **[📖 LFCS Exam Domains](https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/#domains)** - Detailed exam objectives
 - **[📖 LFCS Candidate Handbook](https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2)** - Exam rules and procedures
-- **[📖 LFCS Exam FAQ](https://docs.linuxfoundation.org/tc-docs/certification/frequently-asked-questions-lfcs)** - Common questions
+- **[📖 LFCS Exam FAQ](https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2)** - Common questions
 - **[📖 Linux Foundation Training](https://training.linuxfoundation.org/)** - Official training courses
 
 ## Practice Environment

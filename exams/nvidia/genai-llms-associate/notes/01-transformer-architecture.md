@@ -40,7 +40,7 @@ Each sub-layer has:
 
 ## Self-Attention Mechanism
 
-**[📖 NVIDIA Megatron-LM](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotron/index.html)** - Large-scale transformer training
+**[📖 NVIDIA Megatron-LM](https://docs.nvidia.com/megatron-core/developer-guide/latest/index.html)** - Large-scale transformer training
 
 ### How Self-Attention Works
 

@@ -53,7 +53,7 @@
 - [ ] Master regression metrics: RMSE, MAE, R-squared
 - [ ] Understand overfitting vs underfitting diagnosis
 - [ ] Practice cross-validation techniques
-- [ ] Read: [Model Evaluation](https://docs.databricks.com/en/machine-learning/model-evaluation.html)
+- [ ] Read: [Model Evaluation](https://docs.databricks.com/aws/en/mlflow3/genai/eval-monitor/)
 
 #### Day 14: Week 2 Review
 - [ ] Compare Hyperopt search strategies (grid, random, Bayesian)

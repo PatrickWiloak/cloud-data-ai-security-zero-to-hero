@@ -27,7 +27,7 @@ VCP-DCV remains relevant in 2026 even after the Broadcom acquisition: the vSpher
 | **Prerequisites** | None formally; VMware Training course required for first-time VCPs |
 
 **[Official VCP-DCV 2024 page](https://www.vmware.com/learning/certification/vcp-dcv.html)**
-**[2V0-21.23 Exam Guide PDF](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/certification/vmw-vcp-dcv-2024-exam-prep-guide.pdf)**
+**[2V0-21.23 Exam Guide PDF](https://www.broadcom.com/support/education/vmware/certification)**
 
 > **Note on training requirement.** VMware (and now Broadcom) requires that first-time VCP candidates complete an authorized training course before being eligible to sit the exam. Existing VCP holders renewing or upgrading do not need it. Authorized courses include "VMware vSphere: Install, Configure, Manage [V8]" (ICM) and "VMware vSphere: Optimize and Scale [V8]". This requirement adds $4,000-5,000 to total certification cost.
 
@@ -117,7 +117,7 @@ You cannot pass VCP-DCV without hands-on time. Options ranked from cheapest to m
 - **VMware Hands-On Labs (HOL)** - free, browser-based, full vSphere environments. Best starting point. [labs.hol.vmware.com](https://labs.hol.vmware.com/)
 - **Nested ESXi on VMware Workstation Pro** - run ESXi as a VM on a Windows/Linux host. Requires 32 GB RAM minimum, 64 GB recommended. Workstation Pro is now free for personal use as of late 2024.
 - **Nested ESXi on a homelab** - dedicated machine (Intel NUC, used Dell R730, mini PC with 64-128 GB RAM). Closest to production feel.
-- **VMUG Advantage subscription** - $200/year, gets you EVALExperience licenses for vSphere 8 Enterprise Plus, vSAN, NSX, Aria, and more. Best value if you plan to lab seriously. [vmug.com/membership/vmug-advantage](https://www.vmug.com/membership/vmug-advantage/)
+- **VMUG Advantage subscription** - $200/year, gets you EVALExperience licenses for vSphere 8 Enterprise Plus, vSAN, NSX, Aria, and more. Best value if you plan to lab seriously. [vmug.com/membership/vmug-advantage](https://vmug.com/memberships)
 
 ---
 

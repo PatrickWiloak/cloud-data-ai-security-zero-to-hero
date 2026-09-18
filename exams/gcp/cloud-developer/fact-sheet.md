@@ -10,7 +10,7 @@ last-updated: 2026-05-03
 
 **[📖 Exam Registration](https://www.webassessor.com/googlecloud/)** - Schedule your certification exam
 
-**[📖 Sample Questions](https://docs.google.com/forms/d/e/1FAIpQLSfEmpGnyQTBLfzKNrT_ZE7gY5rCW94Pfw48clzFw6bUaL7c9Q/viewform)** - Practice questions from Google
+**[📖 Sample Questions](https://cloud.google.com/learn/certification/cloud-developer)** - Practice questions from Google
 
 **[📖 Certification Benefits](https://cloud.google.com/certification/benefits)** - Explore certification program benefits
 
@@ -20,7 +20,7 @@ last-updated: 2026-05-03
 
 ### Microservices Architecture
 
-**[📖 Microservices Architecture](https://cloud.google.com/architecture/microservices-architecture-on-gcp)** - Design patterns for microservices on GCP
+**[📖 Microservices Architecture](https://cloud.google.com/learn/what-is-microservices-architecture)** - Design patterns for microservices on GCP
 
 **[📖 Service Mesh with Anthos](https://cloud.google.com/anthos/service-mesh)** - Managing microservices communication
 
@@ -38,9 +38,9 @@ last-updated: 2026-05-03
 
 **[📖 Scalability Patterns](https://cloud.google.com/architecture/scalable-and-resilient-apps)** - Designing for scale
 
-**[📖 Circuit Breaker Pattern](https://cloud.google.com/architecture/microservices-architecture-on-gcp#circuit_breakers)** - Fault tolerance implementation
+**[📖 Circuit Breaker Pattern](https://cloud.google.com/learn/what-is-microservices-architecture)** - Fault tolerance implementation
 
-**[📖 Strangler Fig Pattern](https://cloud.google.com/architecture/application-modernization-legacy-to-gcp)** - Legacy system migration
+**[📖 Strangler Fig Pattern](https://cloud.google.com/learn/what-is-microservices-architecture)** - Legacy system migration
 
 ## Domain 2: Building and Testing Applications
 
@@ -172,7 +172,7 @@ last-updated: 2026-05-03
 
 **[📖 Cloud Build Private Pools](https://cloud.google.com/build/docs/private-pools/private-pools-overview)** - Private build environments
 
-**[📖 Cloud Build Best Practices](https://cloud.google.com/build/docs/optimize-builds/general-best-practices)** - Optimization strategies
+**[📖 Cloud Build Best Practices](https://docs.cloud.google.com/build/docs/optimize-builds/speeding-up-builds)** - Optimization strategies
 
 ### Cloud Deploy
 
@@ -340,7 +340,7 @@ last-updated: 2026-05-03
 
 **[📖 Target Types](https://cloud.google.com/scheduler/docs/creating#target-types)** - HTTP, Pub/Sub, App Engine
 
-**[📖 Scheduler Best Practices](https://cloud.google.com/scheduler/docs/best-practices)** - Reliability recommendations
+**[📖 Scheduler Best Practices](https://docs.cloud.google.com/scheduler/docs/overview)** - Reliability recommendations
 
 ### Memorystore
 
@@ -400,7 +400,7 @@ last-updated: 2026-05-03
 
 **[📖 Structured Logging](https://cloud.google.com/logging/docs/structured-logging)** - JSON log formatting
 
-**[📖 Logging Best Practices](https://cloud.google.com/logging/docs/best-practices)** - Performance and cost optimization
+**[📖 Logging Best Practices](https://docs.cloud.google.com/logging/docs/overview)** - Performance and cost optimization
 
 **[📖 Log Sampling](https://cloud.google.com/logging/docs/routing/overview#sample-log-entries)** - Reducing log volume
 
@@ -414,7 +414,7 @@ last-updated: 2026-05-03
 
 **[📖 OpenTelemetry Integration](https://docs.cloud.google.com/trace/docs/setup/sample-overview)** - Standards-based tracing
 
-**[📖 Custom Spans](https://cloud.google.com/trace/docs/instrumenting)** - Detailed tracing
+**[📖 Custom Spans](https://docs.cloud.google.com/trace/docs/setup)** - Detailed tracing
 
 ### Cloud Profiler
 
@@ -572,7 +572,7 @@ last-updated: 2026-05-03
 
 **[📖 GitLab Integration](https://cloud.google.com/build/docs/automating-builds/gitlab/build-repos-from-gitlab)** - GitLab-based CI/CD
 
-**[📖 Bitbucket Integration](https://cloud.google.com/build/docs/automating-builds/bitbucket/build-repos-from-bitbucket)** - Bitbucket-based CI/CD
+**[📖 Bitbucket Integration](https://docs.cloud.google.com/build/docs/automating-builds/bitbucket/connect-repo-bitbucket-cloud)** - Bitbucket-based CI/CD
 
 ### Testing Strategies
 
@@ -584,7 +584,7 @@ last-updated: 2026-05-03
 
 **[📖 Load Testing](https://cloud.google.com/architecture/distributed-load-testing-using-gke)** - Performance testing
 
-**[📖 Chaos Engineering](https://cloud.google.com/architecture/chaos-engineering)** - Resilience testing
+**[📖 Chaos Engineering](https://docs.cloud.google.com/architecture/framework/reliability/perform-testing-for-recovery-from-failures)** - Resilience testing
 
 ### Infrastructure as Code
 
@@ -602,7 +602,7 @@ last-updated: 2026-05-03
 
 **[📖 Config Sync](https://cloud.google.com/anthos-config-management/docs/config-sync-overview)** - Git-based configuration management
 
-**[📖 Argo CD on GKE](https://cloud.google.com/architecture/continuous-delivery-with-argocd-and-gke)** - Declarative GitOps
+**[📖 Argo CD on GKE](https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/concepts/gitops-best-practices)** - Declarative GitOps
 
 ## Additional Resources
 

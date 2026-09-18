@@ -49,7 +49,7 @@ This Azure GenAI certification pathway validates your ability to design, impleme
 
 **[📖 Completions API](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/completions)** - Generate text completions for various use cases
 
-**[📖 Understanding Tokens](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/tokens)** - Token counting, pricing calculation, and context window management
+**[📖 Understanding Tokens](https://learn.microsoft.com/en-us/agent-framework/journey/llm-fundamentals)** - Token counting, pricing calculation, and context window management
 
 **[📖 Model Parameters: Temperature and Top-p](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering)** - Control randomness and creativity in model outputs
 
@@ -59,7 +59,7 @@ This Azure GenAI certification pathway validates your ability to design, impleme
 
 **[📖 Image Generation API](https://learn.microsoft.com/en-us/azure/ai-services/openai/dall-e-quickstart)** - Create, edit, and generate variations of images programmatically
 
-**[📖 Image Generation Best Practices](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/dall-e-best-practices)** - Crafting effective image prompts and managing quality
+**[📖 Image Generation Best Practices](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/dall-e)** - Crafting effective image prompts and managing quality
 
 ### Embeddings and Semantic Search
 
@@ -119,7 +119,7 @@ This Azure GenAI certification pathway validates your ability to design, impleme
 
 **[📖 Data Preparation for RAG](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data#data-formats-and-file-types)** - Prepare and format data for grounding
 
-**[📖 RAG with Azure Cognitive Search](https://learn.microsoft.com/en-us/azure/search/search-how-to-index-for-gpt)** - Build semantic search for grounded generation
+**[📖 RAG with Azure Cognitive Search](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)** - Build semantic search for grounded generation
 
 ---
 
@@ -133,7 +133,7 @@ This Azure GenAI certification pathway validates your ability to design, impleme
 
 **[📖 Azure AI Studio Projects](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/create-projects)** - Organize and manage AI development projects
 
-**[📖 Prompt Flow in AI Studio](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/prompt-flow)** - Visual tool for building and testing prompts and flows
+**[📖 Prompt Flow in AI Studio](https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/overview-what-is-prompt-flow)** - Visual tool for building and testing prompts and flows
 
 **[📖 Model Catalog](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/model-catalog)** - Browse and deploy models from the Azure model catalog
 
@@ -147,7 +147,7 @@ This Azure GenAI certification pathway validates your ability to design, impleme
 
 **[📖 Provisioned Throughput Units (PTU)](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/provisioned-throughput)** - Dedicated capacity for predictable performance
 
-**[📖 Global Deployment](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/global-deployments)** - Deploy models across multiple regions for high availability
+**[📖 Global Deployment](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/deployment-types)** - Deploy models across multiple regions for high availability
 
 ### Fine-Tuning and Customization
 
@@ -177,11 +177,11 @@ This Azure GenAI certification pathway validates your ability to design, impleme
 
 ### Responsible AI Practices
 
-**[📖 Responsible AI for Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/responsible-ai)** - Microsoft's principles and practices for responsible AI
+**[📖 Responsible AI for Azure OpenAI](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/overview)** - Microsoft's principles and practices for responsible AI
 
-**[📖 Transparency Notes](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/transparency-note)** - Understanding capabilities, limitations, and appropriate uses
+**[📖 Transparency Notes](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/transparency-note)** - Understanding capabilities, limitations, and appropriate uses
 
-**[📖 Limited Access and Registration](https://learn.microsoft.com/en-us/azure/ai-services/openai/limited-access)** - Features requiring additional approval for responsible deployment
+**[📖 Limited Access and Registration](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/limited-access)** - Features requiring additional approval for responsible deployment
 
 **[📖 Red Teaming for Generative AI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/red-teaming)** - Test systems for vulnerabilities and edge cases
 
@@ -191,7 +191,7 @@ This Azure GenAI certification pathway validates your ability to design, impleme
 
 **[📖 Data Privacy for Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#how-does-azure-openai-use-my-data)** - Data residency, retention, and usage policies
 
-**[📖 Customer Copyright Commitment](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/customer-copyright-commitment)** - Microsoft's copyright indemnification for Azure OpenAI
+**[📖 Customer Copyright Commitment](https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/customer-copyright-commitment)** - Microsoft's copyright indemnification for Azure OpenAI
 
 **[📖 GDPR and Compliance](https://learn.microsoft.com/en-us/azure/ai-services/openai/faq#is-azure-openai-compliant-with-gdpr)** - Data protection and regulatory compliance
 
@@ -235,9 +235,9 @@ This Azure GenAI certification pathway validates your ability to design, impleme
 
 ### Production Best Practices
 
-**[📖 Azure OpenAI Best Practices](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/best-practices)** - Guidelines for production deployments
+**[📖 Azure OpenAI Best Practices](https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/prompt-engineering)** - Guidelines for production deployments
 
-**[📖 Error Handling and Retry Logic](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/retries)** - Implement robust error handling
+**[📖 Error Handling and Retry Logic](https://learn.microsoft.com/en-us/azure/foundry/openai/quotas-limits)** - Implement robust error handling
 
 **[📖 Scaling Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits#how-to-request-increases-to-the-default-quotas-and-limits)** - Request quota increases and plan for scale
 

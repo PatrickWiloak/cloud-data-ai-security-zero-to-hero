@@ -3185,6 +3185,6 @@ Packet Mirroring:
 - [VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs)
 - [Identity-Aware Proxy](https://cloud.google.com/iap/docs)
 - [Packet Mirroring](https://cloud.google.com/vpc/docs/packet-mirroring)
-- [Network Troubleshooting Guide](https://cloud.google.com/architecture/best-practices-for-troubleshooting-networks)
+- [Network Troubleshooting Guide](https://docs.cloud.google.com/network-intelligence-center/docs/connectivity-tests/concepts/overview)
 - [Security Best Practices](https://cloud.google.com/security/best-practices)
 - [Cloud Monitoring for Networks](https://cloud.google.com/monitoring/docs)

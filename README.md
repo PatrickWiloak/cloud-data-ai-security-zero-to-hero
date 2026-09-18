@@ -101,7 +101,7 @@ Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certi
 
 See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
-- **2026-09-18** - 340 dead vendor links repaired (536 citations), every replacement fetched and matched to the page the citation meant. The sweep now also catches soft 404s and deep links that silently redirect to a homepage, which took the dead count to 783. The 480 with no successor page are listed in [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md).
+- **2026-09-18** - Every dead vendor link repaired: 783 URLs, each replacement fetched and matched to the page the citation meant. The sweep now also catches soft 404s and deep links that silently redirect to a homepage. The record of every old-to-new replacement is [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md).
 - **2026-09-17** - Audit pass. The weekly external link check turned out never to have run: it passed lychee a flag lychee had removed, so it checked zero URLs and reported success in 0.2 seconds. Fixed, with a guard that fails the job when lychee cannot run at all. The first real sweep found 701 dead vendor links; the most-cited are repaired and the rest are listed in [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md). Also: seven new data-engineering concept pages and a [data engineering topic index](./topics/data-engineering.md), closing the thinnest of the four subjects in the repo's name; Open Graph cards on every page of the site; and the GitHub repository description, which had drifted to "122+ certs across 22 providers", is now generated from `certs.json` and checked in CI like every other count.
 - **2026-08-14** - The site now opens on a landing page of its own rather than on the repo README, and every counted claim in the README is under CI. The per-provider table was stale in 8 of 22 rows and missing 5 providers entirely, five days after the Tier 1 batch added them; the 17 numbers in the statistics block had nothing watching them either. Both are checked by `check-readme-counts.py` now.
 - **2026-08-14** - The whole repo is now a searchable website: [patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/). Full-text search across 3.0M words, dark mode, mobile nav, generated from these same markdown files. The strict build also caught and fixed an unclosed code fence that was swallowing part of a GCP note, plus 14 broken heading anchors.
@@ -234,7 +234,6 @@ Career-focused learning paths:
 - [📝 Study Tips & Strategies](./resources/study-strategies.md)
 - [✅ Exam Day Checklist](./resources/exam-day-checklist.md)
 - [📅 Freshness Ledger](./docs/freshness.md) - per-page last-verified dates
-- [📖 Complete Study Guide (Blog)](https://patrickwiloak.com/blog/aws-certification-study-framework-how-to-prepare-pass-certifications)
 
 ---
 
@@ -399,7 +398,6 @@ Created and maintained by **[Patrick Wiloak](https://patrickwiloak.com)**
 **18x Multi Cloud Certified** | **60 Certifications & Accreditations** | **Prev @ AWS** | **12x AWS Certified** | **4x GCP** | **2x Azure**
 
 🎥 **[YouTube: @patrickwiloak](https://youtube.com/@patrickwiloak)** - Cloud certification tips and tutorials
-📝 **[Blog: Study Guide 2025](https://patrickwiloak.com/blog/aws-certification-study-framework-how-to-prepare-pass-certifications)** - Proven study strategies
 💼 **[LinkedIn: Patrick Luke Wilson](https://www.linkedin.com/in/patricklukewilson/)** - Let's connect
 🌐 **[Portfolio: patrickwiloak.com](https://patrickwiloak.com)**
 

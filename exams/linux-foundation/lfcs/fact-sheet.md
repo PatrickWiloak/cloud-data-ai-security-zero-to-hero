@@ -163,7 +163,7 @@ visudo                             # safely edit /etc/sudoers
 
 **Documentation:**
 - **[📖 Ubuntu User Management](https://ubuntu.com/server/docs/security-users)** - User administration guide
-- **[📖 Linux PAM Documentation](http://www.linux-pam.org/Linux-PAM-html/)** - PAM configuration guide
+- **[📖 Linux PAM Documentation](https://github.com/linux-pam/linux-pam)** - PAM configuration guide
 
 ## Systemd and Process Management
 

@@ -176,7 +176,7 @@ D. No special requirements
 
 **Why:** CMEK provides customer-controlled encryption keys. VPC Service Controls create security perimeters preventing data exfiltration. Cloud Audit Logs track all data access for compliance auditing. Data Catalog provides data lineage and governance. Default settings (A) may not meet HIPAA requirements. Self-managed (C) is complex.
 
-**Key Concept:** [Data Governance](https://cloud.google.com/architecture/data-governance-on-google-cloud)
+**Key Concept:** [Data Governance](https://cloud.google.com/learn/what-is-data-governance)
 </details>
 
 ---
@@ -198,7 +198,7 @@ D. File transfer
 
 **Why:** Pub/Sub Kafka connector allows Kafka producers to write to Pub/Sub topics without code changes. Alternatively, Confluent Cloud mirrors Kafka topics. Minimal disruption to existing systems. Rewriting (A) requires application changes. Direct BigQuery (C) changes architecture. File transfer (D) isn't streaming.
 
-**Key Concept:** [Pub/Sub Kafka Integration](https://cloud.google.com/pubsub/docs/kafka-migration)
+**Key Concept:** [Pub/Sub Kafka Integration](https://docs.cloud.google.com/managed-service-for-apache-kafka/docs/overview)
 </details>
 
 ### Question 11
@@ -342,7 +342,7 @@ D. Enrich in a separate batch job
 
 **Why:** Side inputs load reference data into memory for fast lookup during stream processing. Periodically refreshed side inputs update the data (e.g., daily) without pipeline restart. No per-record queries needed. BigQuery per-record (A) is slow and expensive. Memory join (C) may not fit 50GB. Batch enrichment (D) isn't real-time.
 
-**Key Concept:** [Side Inputs](https://cloud.google.com/dataflow/docs/concepts/side-inputs)
+**Key Concept:** [Side Inputs](https://beam.apache.org/documentation/programming-guide/#side-inputs)
 </details>
 
 ### Question 19
@@ -472,7 +472,7 @@ D. Firestore
 
 **Why:** For graph workloads, options include: BigQuery with recursive CTEs for simpler graphs, or JanusGraph (graph database) running on Bigtable backend for complex traversals. Spanner also supports graph queries. Bigtable provides the scale for large graphs. SQL joins (A) are inefficient for deep traversals. Firestore (D) isn't optimized for graphs.
 
-**Key Concept:** [Graph Analytics](https://cloud.google.com/architecture/analyzing-social-media-sentiment-using-google-cloud)
+**Key Concept:** [Graph Analytics](https://docs.cloud.google.com/natural-language/docs/analyzing-sentiment)
 </details>
 
 ### Question 26

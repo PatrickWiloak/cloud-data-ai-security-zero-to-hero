@@ -441,7 +441,7 @@ last-updated: 2026-05-03
 - **[📖 AWS Certificate Manager](https://docs.aws.amazon.com/acm/)** - Automatic renewal
 - **Integration** - ALB, NLB, CloudFront, API Gateway
 - **Private CA** - Issue internal certificates
-- **[📖 ACM Private CA](https://docs.aws.amazon.com/acm-pca/)**
+- **[📖 ACM Private CA](https://docs.aws.amazon.com/privateca/latest/userguide/PcaWelcome.html)**
 
 ### Compliance and Governance
 
@@ -690,7 +690,7 @@ last-updated: 2026-05-03
 ## Recommended Resources
 
 ### Official AWS Training
-- **[Advanced Networking - Specialty Exam Prep](https://explore.skillbuilder.aws/learn/course/external/view/elearning/12381/exam-prep-standard-course-aws-certified-advanced-networking-specialty-ans-c01)** - FREE on AWS Skill Builder
+- **[Advanced Networking - Specialty Exam Prep](https://aws.amazon.com/certification/certified-advanced-networking-specialty/)** - FREE on AWS Skill Builder
 
 ### Practice Exams
 - **AWS Official Practice Exam** - $40 (highly recommended)

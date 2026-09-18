@@ -19,12 +19,12 @@ last-updated: 2026-05-03
 
 ### Core Documentation
 - **[📖 OCI Documentation Home](https://docs.oracle.com/en-us/iaas/Content/home.htm)**
-- **[📖 OCI Architecture Framework](https://docs.oracle.com/en-us/iaas/Content/cloud-adoption-framework/overview.htm)**
+- **[📖 OCI Architecture Framework](https://docs.oracle.com/en/solutions/oci-best-practices/)**
 - **[📖 Best Practices Framework](https://docs.oracle.com/en-us/iaas/Content/General/Reference/aqswhitepapers.htm)**
 - **[📖 OCI Architecture Center](https://docs.oracle.com/solutions/?product=en/cloud/paas/oci)**
 - **[📖 Reference Architectures](https://docs.oracle.com/solutions/?q=&cType=reference-architectures&product=en/cloud/paas/oci)**
 - **[📖 Cloud Adoption Framework](https://docs.oracle.com/en-us/iaas/Content/cloud-adoption-framework/home.htm)**
-- **[📖 Well-Architected Framework](https://docs.oracle.com/en-us/iaas/Content/cloud-adoption-framework/well-architected-framework.htm)**
+- **[📖 Well-Architected Framework](https://docs.oracle.com/en/solutions/oci-best-practices/)**
 
 ### Identity and Access Management
 - **[📖 IAM Overview](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/overview.htm)**
@@ -64,7 +64,7 @@ last-updated: 2026-05-03
 - **[📖 Autoscaling](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm)**
 - **[📖 Dedicated VM Hosts](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/dedicatedvmhosts.htm)**
 - **[📖 Instance Metadata](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/gettingmetadata.htm)**
-- **[📖 Cloud-Init](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/cloudconfig.htm)**
+- **[📖 Cloud-Init](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/launchinginstance.htm)**
 - **[📖 Instance Console Connection](https://docs.oracle.com/en-us/iaas/Content/Compute/References/serialconsole.htm)**
 
 ### Storage
@@ -87,7 +87,7 @@ last-updated: 2026-05-03
 - **[📖 Autonomous Database Serverless](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/index.html)**
 - **[📖 Autonomous Database Dedicated](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/adbddoverview.htm)**
 - **[📖 DB Systems](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/overview.htm)**
-- **[📖 Data Guard](https://docs.oracle.com/en-us/iaas/Content/Database/Tasks/configuringdataguard.htm)**
+- **[📖 Data Guard](https://docs.oracle.com/en/cloud/paas/base-database/data-guard/index.html)**
 - **[📖 Database Backup](https://docs.oracle.com/en-us/iaas/Content/Database/Tasks/backingup.htm)**
 - **[📖 MySQL Database Service](https://docs.oracle.com/en-us/iaas/mysql-database/index.html)**
 - **[📖 NoSQL Database](https://docs.oracle.com/en-us/iaas/nosql-database/index.html)**

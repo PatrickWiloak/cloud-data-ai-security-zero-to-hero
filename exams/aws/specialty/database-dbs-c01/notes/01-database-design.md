@@ -201,7 +201,7 @@ Workload-specific database design covers 26% of the DBS-C01 exam - the largest d
 
 ## Amazon QLDB
 
-**[📖 QLDB Developer Guide](https://docs.aws.amazon.com/qldb/latest/developerguide/what-is.html)** - Quantum Ledger Database
+**[📖 QLDB Developer Guide](https://web.archive.org/web/20250103202510/https://docs.aws.amazon.com/qldb/latest/developerguide/what-is.html)** - Quantum Ledger Database
 
 - Immutable, cryptographically verifiable transaction log
 - Append-only journal with SHA-256 hash chain

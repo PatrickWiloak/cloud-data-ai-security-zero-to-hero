@@ -2949,8 +2949,8 @@ gcloud monitoring time-series list
 ### Architecture Guides
 - [VPC Design Best Practices](https://cloud.google.com/architecture/best-practices-vpc-design)
 - [Hybrid and Multi-cloud Architecture](https://cloud.google.com/solutions/hybrid-and-multi-cloud-architecture-patterns)
-- [Network Architecture Patterns](https://cloud.google.com/architecture/networking-patterns)
-- [Hub-and-Spoke Network Architecture](https://cloud.google.com/architecture/hub-and-spoke-network-architecture)
+- [Network Architecture Patterns](https://docs.cloud.google.com/architecture/hybrid-multicloud-secure-networking-patterns)
+- [Hub-and-Spoke Network Architecture](https://docs.cloud.google.com/architecture/deploy-hub-spoke-vpc-network-topology)
 
 ### Exam Preparation
 - [Professional Cloud Network Engineer Exam Guide](https://cloud.google.com/certification/guides/cloud-network-engineer)

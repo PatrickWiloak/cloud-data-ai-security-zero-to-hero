@@ -269,7 +269,7 @@ This domain covers securing the container image supply chain from build to deplo
 - ImagePolicyWebhook admission controller
 - Supply chain attestation with in-toto/SLSA
 
-**[📖 cosign](https://docs.sigstore.dev/cosign/overview/)** - Container image signing tool
+**[📖 cosign](https://docs.sigstore.dev/cosign/signing/overview/)** - Container image signing tool
 **[📖 ImagePolicyWebhook](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#imagepolicywebhook)** - Image policy admission controller
 
 #### 5.3 Static Analysis
@@ -309,7 +309,7 @@ This domain covers detecting threats, analyzing attacks, and maintaining audit t
 
 **[📖 Falco](https://falco.org/docs/)** - Falco runtime security documentation
 **[📖 Falco Rules](https://falco.org/docs/rules/)** - Writing and managing Falco rules
-**[📖 Default Falco Rules](https://falco.org/docs/rules/default-rules/)** - Pre-built detection rules
+**[📖 Default Falco Rules](https://falco.org/docs/reference/rules/default-rules/)** - Pre-built detection rules
 
 #### 6.2 Container Immutability
 

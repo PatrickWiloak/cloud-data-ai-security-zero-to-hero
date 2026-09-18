@@ -136,7 +136,7 @@ The largest domain, covering generative AI concepts and foundation models.
 - **Variational Autoencoders (VAEs)**: Data encoding and generation
 
 **📖 [Large Language Models](https://aws.amazon.com/what-is/large-language-model/)** - LLM overview
-**📖 [Stable Diffusion on AWS](https://aws.amazon.com/blogs/machine-learning/stable-diffusion-is-now-available-in-amazon-sagemaker-jumpstart/)** - Image generation
+**📖 [Stable Diffusion on AWS](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-jumpstart.html)** - Image generation
 
 #### 2.2 Prompt Engineering
 
@@ -360,7 +360,7 @@ Critical domain covering AI ethics, bias, and fairness.
 
 **📖 [AWS Responsible AI](https://aws.amazon.com/machine-learning/responsible-ai/)** - AWS principles
 **📖 [Responsible Use of AI](https://aws.amazon.com/machine-learning/responsible-machine-learning/)** - Best practices
-**📖 [AI Service Cards](https://aws.amazon.com/machine-learning/ai-service-cards/)** - Service transparency
+**📖 [AI Service Cards](https://aws.amazon.com/ai/responsible-ai/resources/)** - Service transparency
 
 #### 4.2 Bias and Fairness
 
@@ -400,7 +400,7 @@ Critical domain covering AI ethics, bias, and fairness.
 - Incident response plans
 - Continuous monitoring
 
-**📖 [AI Governance](https://aws.amazon.com/machine-learning/ml-governance/)** - Governance best practices
+**📖 [AI Governance](https://aws.amazon.com/ai/responsible-ai/)** - Governance best practices
 **📖 [SageMaker Model Cards](https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html)** - Model documentation
 **📖 [SageMaker Model Registry](https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry.html)** - Model versioning
 
@@ -509,8 +509,8 @@ Covers data protection, security, and regulatory compliance.
 
 **Official AWS Training:**
 **📖 [AWS Skill Builder](https://skillbuilder.aws/)** - Free AWS training
-**📖 [AI Practitioner Learning Plan](https://explore.skillbuilder.aws/learn/learning_plan/view/2194/plan)** - Official study plan
-**📖 [Generative AI Learning Plan](https://explore.skillbuilder.aws/learn/public/learning_plan/view/1909/generative-ai-learning-plan-for-decision-makers)** - GenAI fundamentals
+**📖 [AI Practitioner Learning Plan](https://aws.amazon.com/certification/certified-ai-practitioner/)** - Official study plan
+**📖 [Generative AI Learning Plan](https://aws.amazon.com/ai/generative-ai/)** - GenAI fundamentals
 
 **Hands-On Practice:**
 **📖 [Bedrock Playground](https://console.aws.amazon.com/bedrock/)** - Try Bedrock models
@@ -566,7 +566,7 @@ Covers data protection, security, and regulatory compliance.
 
 ### Next Certifications
 **📖 [AWS Certified Machine Learning - Specialty](https://aws.amazon.com/certification/certified-machine-learning-specialty/)** - Technical ML certification
-**📖 [AWS Certified Data Analytics - Specialty](https://aws.amazon.com/certification/certified-data-analytics-specialty/)** - Data and ML pipeline focus
+**📖 [AWS Certified Data Analytics - Specialty](https://aws.amazon.com/certification/certified-data-engineer-associate/)** - Data and ML pipeline focus
 **📖 [AWS Certified Solutions Architect - Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)** - Architecture foundation
 
 ### Continuous Learning
@@ -577,7 +577,7 @@ Covers data protection, security, and regulatory compliance.
 - Build AI projects
 
 **📖 [AWS Machine Learning Blog](https://aws.amazon.com/blogs/machine-learning/)** - Latest updates
-**📖 [AWS AI/ML Newsletter](https://aws.amazon.com/machine-learning/newsletter/)** - Monthly updates
+**📖 [AWS AI/ML Newsletter](https://aws.amazon.com/blogs/machine-learning/)** - Monthly updates
 
 ---
 

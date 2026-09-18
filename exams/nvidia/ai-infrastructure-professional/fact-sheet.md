@@ -77,7 +77,7 @@ last-updated: 2026-05-03
 - Enables efficient all-reduce operations
 - Critical for multi-GPU training within a DGX system
 
-**[📖 NVLink Documentation](https://developer.nvidia.com/nvlink)** - Interconnect specifications
+**[📖 NVLink Documentation](https://www.nvidia.com/en-us/data-center/nvlink/)** - Interconnect specifications
 
 ### Multi-Instance GPU (MIG)
 

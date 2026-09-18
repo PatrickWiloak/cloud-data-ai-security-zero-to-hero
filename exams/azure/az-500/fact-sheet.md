@@ -10,7 +10,7 @@ last-updated: 2026-05-03
 
 **[📖 AZ-500 Study Guide](https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-500)** - Official Microsoft study guide outlining all exam objectives
 
-**[📖 Skills Measured Document](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VC70)** - Detailed PDF of exam domains and skill areas tested
+**[📖 Skills Measured Document](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-500)** - Detailed PDF of exam domains and skill areas tested
 
 **[📖 Azure Security Documentation](https://learn.microsoft.com/en-us/azure/security/)** - Central hub for all Azure security documentation and best practices
 
@@ -155,7 +155,7 @@ last-updated: 2026-05-03
 
 **[📖 Enterprise Applications](https://learn.microsoft.com/en-us/azure/active-directory/manage-apps/what-is-application-management)** - Managing SaaS and custom applications in Azure AD
 
-**[📖 Application Proxy](https://learn.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy)** - Secure remote access to on-premises web applications
+**[📖 Application Proxy](https://learn.microsoft.com/en-us/entra/identity/app-proxy/overview-what-is-app-proxy)** - Secure remote access to on-premises web applications
 
 **[📖 App Registration](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)** - Registering custom applications for Azure AD authentication
 
@@ -165,7 +165,7 @@ last-updated: 2026-05-03
 
 **[📖 User-Assigned Managed Identity](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities)** - Creating and managing user-assigned managed identities
 
-**[📖 System-Assigned Managed Identity](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-configure-managed-identities)** - Enabling system-assigned identities for Azure resources
+**[📖 System-Assigned Managed Identity](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/how-to-configure-managed-identities)** - Enabling system-assigned identities for Azure resources
 
 ---
 
@@ -191,7 +191,7 @@ last-updated: 2026-05-03
 
 **[📖 Azure Firewall Overview](https://learn.microsoft.com/en-us/azure/firewall/overview)** - Managed network security service with built-in high availability
 
-**[📖 Azure Firewall Architecture](https://learn.microsoft.com/en-us/azure/firewall/firewall-architecture)** - Deployment architectures and hub-spoke network designs
+**[📖 Azure Firewall Architecture](https://learn.microsoft.com/en-us/azure/firewall/overview)** - Deployment architectures and hub-spoke network designs
 
 **[📖 Azure Firewall Rules](https://learn.microsoft.com/en-us/azure/firewall/rule-processing)** - NAT, network, and application rule processing logic
 
@@ -303,7 +303,7 @@ last-updated: 2026-05-03
 
 **[📖 Scheduled Query Rules](https://learn.microsoft.com/en-us/azure/sentinel/detect-threats-custom)** - Building custom KQL-based detection rules
 
-**[📖 Anomaly Detection](https://learn.microsoft.com/en-us/azure/sentinel/anomaly-detection)** - Machine learning-based anomaly detection templates
+**[📖 Anomaly Detection](https://learn.microsoft.com/en-us/azure/sentinel/soc-ml-anomalies)** - Machine learning-based anomaly detection templates
 
 **[📖 Threat Intelligence](https://learn.microsoft.com/en-us/azure/sentinel/understand-threat-intelligence)** - Integrating threat intelligence feeds for context enrichment
 

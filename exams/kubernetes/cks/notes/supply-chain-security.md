@@ -1,6 +1,6 @@
 # Supply Chain Security for CKS
 
-**[📖 Kubernetes Security - Supply Chain](https://kubernetes.io/docs/concepts/security/supply-chain-security/)** - Supply chain security overview
+**[📖 Kubernetes Security - Supply Chain](https://kubernetes.io/docs/tasks/administer-cluster/verify-signed-artifacts/)** - Supply chain security overview
 
 ## Image Security Best Practices
 
@@ -224,7 +224,7 @@ spec:
 
 ### cosign (Sigstore)
 
-**[📖 cosign Documentation](https://docs.sigstore.dev/cosign/overview/)** - Container signing with cosign
+**[📖 cosign Documentation](https://docs.sigstore.dev/cosign/signing/overview/)** - Container signing with cosign
 
 ```bash
 # Generate a key pair

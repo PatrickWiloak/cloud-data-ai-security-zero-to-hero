@@ -1,7 +1,7 @@
 # Fine-Tuning and Model Customization
 
-**[📖 NVIDIA NeMo Framework - LLM Training](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/index.html)** - Training LLMs with NeMo
-**[📖 NVIDIA NeMo PEFT Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/nemo_framework_peft/index.html)** - Parameter-efficient fine-tuning
+**[📖 NVIDIA NeMo Framework - LLM Training](https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html)** - Training LLMs with NeMo
+**[📖 NVIDIA NeMo PEFT Guide](https://docs.nvidia.com/nemo/automodel/latest)** - Parameter-efficient fine-tuning
 
 ## Full Fine-Tuning
 
@@ -140,7 +140,7 @@ Full fine-tuning requires storing:
 
 ### Supervised Fine-Tuning (SFT)
 
-**[📖 NVIDIA NeMo Customization](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/nemo_framework_custom/index.html)** - Model customization workflows
+**[📖 NVIDIA NeMo Customization](https://docs.nvidia.com/nemo/microservices/latest/index.html)** - Model customization workflows
 
 - First step in most alignment pipelines
 - Train on high-quality instruction-response pairs

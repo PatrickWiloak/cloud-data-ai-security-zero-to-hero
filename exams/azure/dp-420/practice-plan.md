@@ -241,8 +241,8 @@ This practice plan targets developers who design, implement, and monitor Azure C
 ## Additional Resources
 
 - [DP-420 Exam Page](https://learn.microsoft.com/en-us/certifications/exams/dp-420/)
-- [Cosmos DB Best Practices](https://docs.microsoft.com/en-us/azure/cosmos-db/best-practice/)
-- [Cosmos DB SDKs](https://docs.microsoft.com/en-us/azure/cosmos-db/sdk/)
+- [Cosmos DB Best Practices](https://learn.microsoft.com/en-us/azure/well-architected/service-guides/cosmos-db)
+- [Cosmos DB SDKs](https://learn.microsoft.com/en-us/azure/cosmos-db/sdk-dotnet-v3)
 
 ---
 

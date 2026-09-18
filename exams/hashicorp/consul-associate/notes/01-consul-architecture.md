@@ -196,7 +196,7 @@ DC1 (Primary)                    DC2 (Secondary)
 - Each datacenter can operate independently if WAN link fails
 - Primary datacenter handles global ACL replication (when ACLs enabled)
 
-**[📖 Multi-Datacenter](https://developer.hashicorp.com/consul/tutorials/networking/federation-gossip-wan)** - Federation guide
+**[📖 Multi-Datacenter](https://developer.hashicorp.com/consul/docs/east-west/wan-federation)** - Federation guide
 
 ## Ports Reference
 

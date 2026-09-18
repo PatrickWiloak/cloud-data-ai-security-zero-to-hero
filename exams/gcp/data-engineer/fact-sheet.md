@@ -29,7 +29,7 @@ last-updated: 2026-05-03
 
 ### Data Engineering Framework
 
-**[📖 Data Engineering on Google Cloud](https://cloud.google.com/architecture/data-engineering)** - Complete data engineering guide
+**[📖 Data Engineering on Google Cloud](https://docs.cloud.google.com/architecture/big-data-analytics)** - Complete data engineering guide
 
 **Key Pillars:**
 1. **Data Ingestion** - Batch and streaming data collection
@@ -41,7 +41,7 @@ last-updated: 2026-05-03
 **Essential Resources:**
 - **[📖 Data Lifecycle on Google Cloud](https://cloud.google.com/architecture/data-lifecycle-cloud-platform)** - End-to-end data lifecycle
 - **[📖 Big Data Reference Architectures](https://cloud.google.com/architecture/reference-patterns/overview)** - Common patterns
-- **[📖 Data Analytics Best Practices](https://cloud.google.com/architecture/best-practices-for-data-analytics)** - Analytics guidelines
+- **[📖 Data Analytics Best Practices](https://docs.cloud.google.com/architecture/framework/performance-optimization)** - Analytics guidelines
 - **[📖 Modern Data Architecture](https://cloud.google.com/blog/topics/developers-practitioners/smart-analytics-reference-patterns-part-1)** - Architecture patterns
 
 ## Data Ingestion Services
@@ -68,7 +68,7 @@ last-updated: 2026-05-03
 - **Seek and replay** - Replay messages from specific points
 - **Snapshots** - Capture subscription state for replay
 - **[📖 Exactly-Once Delivery](https://cloud.google.com/pubsub/docs/exactly-once-delivery)** - Deduplication
-- **[📖 Best Practices](https://cloud.google.com/pubsub/docs/best-practices)** - Performance optimization
+- **[📖 Best Practices](https://docs.cloud.google.com/pubsub/docs/publish-best-practices)** - Performance optimization
 
 ### Storage Transfer Service
 
@@ -97,7 +97,7 @@ last-updated: 2026-05-03
 - Visual pipeline designer with drag-and-drop
 - CDAP (Cask Data Application Platform) based
 - **[📖 Cloud Data Fusion](https://cloud.google.com/data-fusion/docs)** - Overview and architecture
-- **[📖 Pipeline Creation](https://cloud.google.com/data-fusion/docs/how-to/create-pipelines)** - Building pipelines
+- **[📖 Pipeline Creation](https://docs.cloud.google.com/data-fusion/docs/create-data-pipeline)** - Building pipelines
 - **[📖 Wrangler](https://docs.cloud.google.com/data-fusion/docs/concepts/wrangler-overview)** - Interactive data preparation
 
 ## Data Processing Services
@@ -144,7 +144,7 @@ last-updated: 2026-05-03
 - Jupyter and Zeppelin notebooks
 - **Serverless Spark** - Fully managed Spark without clusters
 - **[📖 Dataproc Jobs](https://cloud.google.com/dataproc/docs/guides/submit-job)** - Job submission
-- **[📖 Dataproc Hub](https://cloud.google.com/dataproc/docs/concepts/dataproc-hub)** - Notebook-based workflows
+- **[📖 Dataproc Hub](https://docs.cloud.google.com/managed-spark/docs/concepts/components/jupyter)** - Notebook-based workflows
 - **[📖 Serverless Spark](https://cloud.google.com/dataproc-serverless/docs)** - Serverless batch processing
 - **[📖 Metastore](https://cloud.google.com/dataproc-metastore/docs)** - Managed Hive metastore
 
@@ -152,7 +152,7 @@ last-updated: 2026-05-03
 - Preemptible workers for cost optimization
 - Enhanced flexibility mode for reliability
 - Local SSDs for shuffle operations
-- **[📖 Best Practices](https://cloud.google.com/dataproc/docs/concepts/dataproc-best-practices)** - Performance guidelines
+- **[📖 Best Practices](https://docs.cloud.google.com/managed-spark/docs/guides/best-practices)** - Performance guidelines
 
 ### Cloud Composer
 
@@ -249,7 +249,7 @@ last-updated: 2026-05-03
 - Linear scalability with node count
 - Multi-cluster replication for HA and geo-distribution
 - **[📖 Bigtable Overview](https://cloud.google.com/bigtable/docs/overview)** - Architecture and use cases
-- **[📖 Storage Model](https://cloud.google.com/bigtable/docs/storage-model)** - Data organization
+- **[📖 Storage Model](https://docs.cloud.google.com/bigtable/docs/overview)** - Data organization
 - **[📖 Instances and Clusters](https://cloud.google.com/bigtable/docs/instances-clusters-nodes)** - Infrastructure setup
 
 **Schema Design Best Practices:**
@@ -453,7 +453,7 @@ last-updated: 2026-05-03
 - Custom info types for organization-specific data
 - De-identification techniques (masking, tokenization, encryption)
 - Inspection templates and job triggers
-- **[📖 DLP Overview](https://cloud.google.com/dlp/docs/dlp-overview)** - DLP fundamentals
+- **[📖 DLP Overview](https://docs.cloud.google.com/sensitive-data-protection/docs/sensitive-data-protection-overview)** - DLP fundamentals
 - **[📖 Inspecting Data](https://cloud.google.com/dlp/docs/inspecting-storage)** - Data inspection
 - **[📖 De-identification](https://cloud.google.com/dlp/docs/deidentify-sensitive-data)** - Data protection
 - **[📖 InfoTypes](https://cloud.google.com/dlp/docs/infotypes-reference)** - Detectable data types
@@ -490,7 +490,7 @@ last-updated: 2026-05-03
 - Dataprep data quality rules
 - BigQuery data quality checks with SQL
 - Cloud Composer for validation pipelines
-- **[📖 Data Validation Best Practices](https://cloud.google.com/architecture/designing-data-validation-pipelines)** - Validation patterns
+- **[📖 Data Validation Best Practices](https://docs.cloud.google.com/dataplex/docs/auto-data-quality-overview)** - Validation patterns
 
 ## Monitoring and Optimization
 
@@ -536,7 +536,7 @@ last-updated: 2026-05-03
 - Use side inputs for broadcast joins
 - Batch elements with GroupIntoBatches
 - **[📖 Dataflow Best Practices](https://docs.cloud.google.com/dataflow/docs/guides/pipeline-best-practices)** - Pipeline optimization
-- **[📖 Pipeline Performance](https://cloud.google.com/dataflow/docs/guides/pipeline-performance)** - Troubleshooting guide
+- **[📖 Pipeline Performance](https://docs.cloud.google.com/dataflow/docs/guides/troubleshooting-your-pipeline)** - Troubleshooting guide
 
 **Bigtable Optimization:**
 - Design row keys to avoid hotspots
@@ -595,7 +595,7 @@ last-updated: 2026-05-03
 - Pub/Sub with exactly-once delivery
 - Dataflow with Streaming Engine
 - BigQuery streaming inserts or Storage Write API
-- **[📖 Streaming Analytics Reference Architecture](https://cloud.google.com/architecture/streaming-analytics)** - Complete pattern
+- **[📖 Streaming Analytics Reference Architecture](https://cloud.google.com/solutions/stream-analytics)** - Complete pattern
 
 ### Pattern 2: Batch ETL Pipeline
 
@@ -651,7 +651,7 @@ last-updated: 2026-05-03
 - Cloud Interconnect for dedicated connectivity
 - Transfer Service for cross-cloud data movement
 - BigQuery Omni for multi-cloud analytics
-- **[📖 Hybrid Data Processing](https://cloud.google.com/architecture/hybrid-and-multi-cloud-data-processing-patterns)** - Hybrid patterns
+- **[📖 Hybrid Data Processing](https://docs.cloud.google.com/architecture/hybrid-multicloud-patterns-and-practices)** - Hybrid patterns
 
 ## Exam Scenarios and Solutions
 

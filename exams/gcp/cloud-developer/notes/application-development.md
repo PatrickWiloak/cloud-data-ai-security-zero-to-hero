@@ -4298,9 +4298,9 @@ gcloud run services add-iam-policy-binding SERVICE \
 ### Best Practices and Patterns
 - [12-Factor App Methodology](https://12factor.net/)
 - [Google Cloud Architecture Center](https://cloud.google.com/architecture)
-- [Cloud Run Best Practices](https://cloud.google.com/run/docs/best-practices)
+- [Cloud Run Best Practices](https://docs.cloud.google.com/run/docs/tips/general)
 - [Container Image Best Practices](https://cloud.google.com/architecture/best-practices-for-building-containers)
-- [Microservices on GCP](https://cloud.google.com/architecture/microservices-architecture-on-gcp)
+- [Microservices on GCP](https://cloud.google.com/learn/what-is-microservices-architecture)
 
 ### Code Samples and Labs
 - [Google Cloud Code Samples](https://github.com/GoogleCloudPlatform)

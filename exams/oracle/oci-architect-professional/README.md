@@ -415,7 +415,7 @@ The OCI Architect Professional certification validates advanced skills in design
 - **[OCI Architect Professional Learning Path](https://mylearn.oracle.com/ou/learning-path/become-an-oci-architect-professional-2024/136198)** - Official training
 - **[OCI Architecture Center](https://docs.oracle.com/solutions/)** - Enterprise reference architectures
 - **[OCI Documentation](https://docs.oracle.com/en-us/iaas/Content/home.htm)** - Complete service documentation
-- **[Oracle Cloud Migrations](https://docs.oracle.com/en/cloud/paas/cloud-migration/)** - Migration guides
+- **[Oracle Cloud Migrations](https://docs.oracle.com/en-us/iaas/Content/cloud-migration/home.htm)** - Migration guides
 - **[Oracle Cloud Free Tier](https://www.oracle.com/cloud/free/)** + paid resources for advanced features
 
 ### Recommended Materials
