@@ -63,7 +63,7 @@ Registration is through the [Anthropic Partner Academy](https://anthropic-partne
 
 **[Use XML Tags](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags)** - Using XML tags to organize and structure prompts
 
-**[Few-Shot Prompting](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/few-shot-prompting)** - Providing examples to guide Claude's output format and behavior
+**[Few-Shot Prompting](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)** - Providing examples to guide Claude's output format and behavior
 
 **[Prompt Caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)** - Cache static prompt prefixes for up to 90% cost reduction
 
@@ -73,7 +73,7 @@ Registration is through the [Anthropic Partner Academy](https://anthropic-partne
 
 **[Tool Use Guide](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)** - Complete guide to function calling with Claude
 
-**[Tool Use Best Practices](https://docs.anthropic.com/en/docs/build-with-claude/tool-use/best-practices)** - Naming, descriptions, and schema design for tools
+**[Tool Use Best Practices](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)** - Naming, descriptions, and schema design for tools
 
 **[Structured Output via Tool Use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use#json-mode)** - Using tool definitions to extract structured JSON
 
@@ -121,7 +121,7 @@ Registration is through the [Anthropic Partner Academy](https://anthropic-partne
 
 **[MCP Sampling](https://modelcontextprotocol.io/docs/concepts/sampling)** - Server-initiated LLM interactions
 
-**[MCP Specification](https://spec.modelcontextprotocol.io)** - Full protocol specification
+**[MCP Specification](https://modelcontextprotocol.io/specification/latest)** - Full protocol specification
 
 **[MCP Servers Repository](https://github.com/modelcontextprotocol/servers)** - Reference server implementations
 
@@ -147,7 +147,7 @@ Registration is through the [Anthropic Partner Academy](https://anthropic-partne
 
 **[Python SDK](https://github.com/anthropics/anthropic-sdk-python)** - Official Python SDK for the Anthropic API
 
-**[TypeScript SDK](https://github.com/anthropics/anthropic-sdk-node)** - Official TypeScript/Node.js SDK for the Anthropic API
+**[TypeScript SDK](https://github.com/anthropics/anthropic-sdk-typescript)** - Official TypeScript/Node.js SDK for the Anthropic API
 
 ---
 

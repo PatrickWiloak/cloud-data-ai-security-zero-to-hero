@@ -29,7 +29,7 @@
 
 ### Primary Resources
 - **[Databricks Academy](https://www.databricks.com/learn)** - Official training courses
-- **[Databricks Certification Page](https://www.databricks.com/learn/certification/lakehouse-platform-administrator)** - Exam details
+- **[Databricks Certification Page](https://www.databricks.com/learn/training/certification)** - Exam details
 - **[Databricks Documentation](https://docs.databricks.com/en/index.html)** - Full documentation
 - **[Databricks Community Forum](https://community.databricks.com/)** - Discussion and Q&A
 

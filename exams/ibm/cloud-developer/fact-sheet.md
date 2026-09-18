@@ -28,7 +28,7 @@ last-updated: 2026-05-03
 - **[📖 IBM Cloud CLI Reference](https://cloud.ibm.com/docs/cli)**
 - **[📖 IBM Cloud SDK](https://github.com/IBM-Cloud)**
 - **[📖 IBM Cloud Learning](https://www.ibm.com/training/cloud)**
-- **[📖 Pearson VUE Testing](https://home.pearsonvue.com/ibm)**
+- **[📖 Pearson VUE Testing](https://www.pearsonvue.com/us/en/ibm.html)**
 - **[📖 IBM Cloud Certification Hub](https://www.ibm.com/training/cloud/certification)**
 
 ## Exam Domains
@@ -52,7 +52,7 @@ last-updated: 2026-05-03
 - **[📖 Event-Driven Architecture](https://www.ibm.com/cloud/architecture/architectures/eventDrivenArchitecture)**
 - **[📖 Serverless Computing](https://www.ibm.com/cloud/learn/serverless)**
 - **[📖 Container Development](https://developer.ibm.com/technologies/containers/)**
-- **[📖 Application Logging](https://cloud.ibm.com/docs/log-analysis)**
+- **[📖 Application Logging](https://cloud.ibm.com/docs/cloud-logs)**
 
 ### 2. IBM Cloud Platform Services (25%)
 - IBM Cloud Kubernetes Service (IKS)
@@ -69,7 +69,7 @@ last-updated: 2026-05-03
 - **[📖 Kubernetes Service Documentation](https://cloud.ibm.com/docs/containers)**
 - **[📖 OpenShift Documentation](https://cloud.ibm.com/docs/openshift)**
 - **[📖 Code Engine Documentation](https://cloud.ibm.com/docs/codeengine)**
-- **[📖 Cloud Functions Documentation](https://cloud.ibm.com/docs/openwhisk)**
+- **[📖 Cloud Functions Documentation](https://cloud.ibm.com/docs/codeengine)**
 - **[📖 Container Registry](https://cloud.ibm.com/docs/Registry)**
 - **[📖 Continuous Delivery](https://cloud.ibm.com/docs/ContinuousDelivery)**
 - **[📖 Toolchains](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)**
@@ -95,7 +95,7 @@ last-updated: 2026-05-03
 **Database Resources:**
 - **[📖 Cloudant Documentation](https://cloud.ibm.com/docs/Cloudant)**
 - **[📖 Cloudant API Reference](https://cloud.ibm.com/apidocs/cloudant)**
-- **[📖 Db2 on Cloud](https://cloud.ibm.com/docs/Db2onCloud)**
+- **[📖 Db2 on Cloud](https://cloud.ibm.com/docs/db2-saas)**
 - **[📖 Databases for PostgreSQL](https://cloud.ibm.com/docs/databases-for-postgresql)**
 - **[📖 Databases for MongoDB](https://cloud.ibm.com/docs/databases-for-mongodb)**
 - **[📖 Databases for Redis](https://cloud.ibm.com/docs/databases-for-redis)**
@@ -120,7 +120,7 @@ last-updated: 2026-05-03
 - **[📖 Watson Services Overview](https://cloud.ibm.com/docs/watson)**
 - **[📖 Watson Assistant](https://cloud.ibm.com/docs/watson-assistant)**
 - **[📖 Watson Assistant API](https://cloud.ibm.com/apidocs/assistant/assistant-v2)**
-- **[📖 Watson Discovery](https://cloud.ibm.com/docs/discovery)**
+- **[📖 Watson Discovery](https://cloud.ibm.com/docs/discovery-data)**
 - **[📖 Watson Discovery API](https://cloud.ibm.com/apidocs/discovery)**
 - **[📖 Natural Language Understanding](https://cloud.ibm.com/docs/natural-language-understanding)**
 - **[📖 NLU API](https://cloud.ibm.com/apidocs/natural-language-understanding)**
@@ -175,7 +175,7 @@ last-updated: 2026-05-03
 - **[📖 Secrets Manager API](https://cloud.ibm.com/apidocs/secrets-manager)**
 - **[📖 Key Protect](https://cloud.ibm.com/docs/key-protect)**
 - **[📖 Key Protect API](https://cloud.ibm.com/apidocs/key-protect)**
-- **[📖 Certificate Manager](https://cloud.ibm.com/docs/certificate-manager)**
+- **[📖 Certificate Manager](https://cloud.ibm.com/docs/secrets-manager)**
 - **[📖 Security Best Practices](https://cloud.ibm.com/docs/overview?topic=overview-security)**
 - **[📖 Secure Coding Guidelines](https://developer.ibm.com/articles/secure-coding-practices/)**
 
@@ -263,7 +263,7 @@ last-updated: 2026-05-03
 
 **Resources:**
 - **[📖 Code Engine Tutorial](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started)**
-- **[📖 Cloud Functions Tutorial](https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-getting-started)**
+- **[📖 Cloud Functions Tutorial](https://cloud.ibm.com/docs/codeengine)**
 - **[📖 Serverless Patterns](https://developer.ibm.com/patterns/category/serverless/)**
 
 ### Scenario 3: AI-Powered Application
@@ -466,9 +466,9 @@ assistant.set_service_url(os.environ.get('ASSISTANT_URL'))
 ### Debugging Tools
 - **[📖 Cloud Shell Debugging](https://cloud.ibm.com/docs/cloud-shell)**
 - **[📖 Kubernetes Logs](https://cloud.ibm.com/docs/containers?topic=containers-health)**
-- **[📖 Log Analysis](https://cloud.ibm.com/docs/log-analysis)**
+- **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
 - **[📖 Monitoring Dashboards](https://cloud.ibm.com/docs/monitoring)**
-- **[📖 Activity Tracker](https://cloud.ibm.com/docs/activity-tracker)**
+- **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 
 ### Common Debugging Scenarios
 - Container startup failures

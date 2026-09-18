@@ -275,7 +275,7 @@ You know it worked when:
 - Add a confirmation step before destructive tools (none in this demo, but you'd want it)
 - Replace stdio transport with HTTP for a fleet of agents sharing servers
 - Wrap your **[RAG pipeline](./build-rag-pipeline.md)** as an MCP server and let this agent use it
-- Use the [Claude Agent SDK](https://docs.anthropic.com/en/api/agent-sdk-overview) directly instead of rolling the loop yourself - it brings persistence, hooks, and richer permissioning
+- Use the [Claude Agent SDK](https://code.claude.com/docs/en/agent-sdk/overview) directly instead of rolling the loop yourself - it brings persistence, hooks, and richer permissioning
 
 ## Cross-references
 

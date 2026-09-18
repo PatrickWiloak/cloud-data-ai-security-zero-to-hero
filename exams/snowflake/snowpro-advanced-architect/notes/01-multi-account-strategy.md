@@ -87,7 +87,7 @@ SELECT * FROM TABLE(INFORMATION_SCHEMA.DATABASE_REPLICATION_USAGE_HISTORY());
 - Primary group is read-write, secondary groups are read-only
 - Promotion makes a secondary group the new primary
 
-**[📖 Failover Groups](https://docs.snowflake.com/en/user-guide/failover-groups)** - Failover configuration
+**[📖 Failover Groups](https://docs.snowflake.com/en/user-guide/account-replication-replication-groups)** - Failover configuration
 
 ### Client Redirect
 ```sql

@@ -201,7 +201,7 @@ This certification is designed for:
 ### Databricks Jobs
 
 **[📖 Databricks Jobs](https://docs.databricks.com/en/workflows/jobs/create-run-jobs.html)** - Job creation and scheduling
-**[📖 Multi-task Jobs](https://docs.databricks.com/en/workflows/jobs/use-task-values.html)** - Task dependencies
+**[📖 Multi-task Jobs](https://docs.databricks.com/aws/en/jobs/task-values)** - Task dependencies
 
 **Key Facts:**
 - Jobs can run notebooks, Python scripts, JARs, SQL, DLT pipelines

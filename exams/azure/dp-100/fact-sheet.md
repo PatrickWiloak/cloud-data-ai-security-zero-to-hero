@@ -96,7 +96,7 @@ last-updated: 2026-05-03
 - Outlier detection: Statistical and ML-based methods
 - Feature engineering: Create, transform, select features
 - Data normalization: Scaling, standardization, encoding
-- **[📖 Data Preparation](https://learn.microsoft.com/en-us/azure/machine-learning/concept-data-preparation)** - Data prep overview
+- **[📖 Data Preparation](https://learn.microsoft.com/en-us/azure/machine-learning/tutorial-explore-data)** - Data prep overview
 - **[📖 Feature Engineering](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-configure-auto-features)** - Feature transformation
 - **[📖 Handle Missing Data](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-create-data-assets)** - Missing value strategies
 - **[📖 Data Wrangling](https://learn.microsoft.com/en-us/azure/machine-learning/v1/how-to-designer-transform-data)** - Designer transforms
@@ -773,7 +773,7 @@ az ml online-endpoint get-logs --name my-endpoint --deployment blue
 - Know the differences in syntax and approach
 - SDK v2 uses job submission pattern (command, automl)
 - SDK v1 uses ScriptRunConfig and Estimators
-- **[📖 SDK Comparison](https://learn.microsoft.com/en-us/azure/machine-learning/migrate-to-v2-overview)** - Key differences
+- **[📖 SDK Comparison](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-migrate-from-v1)** - Key differences
 
 ### AutoML Configuration
 Know when to use AutoML vs custom training:

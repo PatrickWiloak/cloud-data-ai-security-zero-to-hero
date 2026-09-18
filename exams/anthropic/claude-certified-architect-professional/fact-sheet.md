@@ -70,14 +70,14 @@ Bedrock and Vertex have their own region-scoped IDs. Always check current docume
 - [Citations](https://docs.anthropic.com/en/docs/build-with-claude/citations)
 - [Vision](https://docs.anthropic.com/en/docs/build-with-claude/vision)
 - [PDF Support](https://docs.anthropic.com/en/docs/build-with-claude/pdf-support)
-- [Memory Tool](https://docs.anthropic.com/en/docs/build-with-claude/tool-use/memory-tool)
+- [Memory Tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/memory-tool)
 
 ### Tool Use
 
 - [Tool Use Overview](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
-- [Code Execution Tool](https://docs.anthropic.com/en/docs/build-with-claude/tool-use/code-execution-tool)
+- [Code Execution Tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool)
 - [Computer Use](https://docs.anthropic.com/en/docs/build-with-claude/computer-use)
-- [Bash Tool](https://docs.anthropic.com/en/docs/build-with-claude/tool-use/bash-tool)
+- [Bash Tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/bash-tool)
 - [Text Editor Tool](https://docs.anthropic.com/en/docs/build-with-claude/tool-use/text-editor-tool)
 - [Web Search Tool](https://docs.anthropic.com/en/docs/build-with-claude/tool-use/web-search-tool)
 
@@ -87,7 +87,7 @@ Bedrock and Vertex have their own region-scoped IDs. Always check current docume
 - [Agent SDK Python](https://github.com/anthropics/claude-agent-sdk-python)
 - [Agent SDK TypeScript](https://github.com/anthropics/claude-agent-sdk-typescript)
 - [MCP Introduction](https://modelcontextprotocol.io/introduction)
-- [MCP Specification](https://spec.modelcontextprotocol.io)
+- [MCP Specification](https://modelcontextprotocol.io/specification/latest)
 
 ### Enterprise Deployment and Trust
 

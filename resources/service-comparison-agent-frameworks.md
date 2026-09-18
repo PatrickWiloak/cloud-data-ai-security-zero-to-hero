@@ -41,7 +41,7 @@ Anthropic's official agent framework, in TypeScript and Python. Designed for bui
 
 **Skip when:** you're not on Claude, or you need an agnostic framework that works across many model providers without changes.
 
-**[📖 Claude Agent SDK docs](https://docs.anthropic.com/en/api/agent-sdk-overview)** - SDK overview, MCP, tools
+**[📖 Claude Agent SDK docs](https://code.claude.com/docs/en/agent-sdk/overview)** - SDK overview, MCP, tools
 
 ---
 
@@ -113,7 +113,7 @@ OpenAI's official agent framework. Released 2025. Lightweight, OpenAI-first.
 
 **Skip when:** you want broad provider support (Claude Agent SDK is the analog for Claude; LangGraph is the cross-provider option).
 
-**[📖 OpenAI Agents SDK docs](https://platform.openai.com/docs/agents)** - agents, handoffs
+**[📖 OpenAI Agents SDK docs](https://developers.openai.com/learn/agents)** - agents, handoffs
 
 ---
 

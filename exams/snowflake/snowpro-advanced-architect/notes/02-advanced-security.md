@@ -58,7 +58,7 @@ SELECT * FROM TABLE(INFORMATION_SCHEMA.POLICY_REFERENCES());
 - Requires Business Critical edition or higher
 - Configured through GCP console and Snowflake
 
-**[📖 GCP Private Service Connect](https://docs.snowflake.com/en/user-guide/private-service-connect)** - GCP private connectivity
+**[📖 GCP Private Service Connect](https://docs.snowflake.com/en/user-guide/private-service-connect-google)** - GCP private connectivity
 
 ### Network Security Best Practices
 - Combine network policies with Private Link for defense in depth
@@ -76,7 +76,7 @@ SELECT * FROM TABLE(INFORMATION_SCHEMA.POLICY_REFERENCES());
 - Keys managed by Snowflake's internal key management service
 - Automatic key rotation every 30 days (Snowflake-managed)
 
-**[📖 End-to-End Encryption](https://docs.snowflake.com/en/guides-overview-secure-encryption)** - Encryption details
+**[📖 End-to-End Encryption](https://docs.snowflake.com/en/user-guide/security-encryption-end-to-end)** - Encryption details
 
 ### Encryption in Transit
 - All connections use TLS 1.2 minimum
@@ -99,7 +99,7 @@ Root Key (HSM-protected)
 - Rekeying is transparent and does not impact queries
 - Enterprise edition and above support periodic rekeying
 
-**[📖 Key Rotation](https://docs.snowflake.com/en/guides-overview-secure-encryption-manage)** - Key management
+**[📖 Key Rotation](https://docs.snowflake.com/en/user-guide/security-encryption-manage)** - Key management
 
 ### Tri-Secret Secure
 - Composite master key from Snowflake key + customer-managed key
@@ -108,7 +108,7 @@ Root Key (HSM-protected)
 - Customer can disable their KMS key to immediately cut off access
 - Requires Business Critical edition or higher
 
-**[📖 Tri-Secret Secure](https://docs.snowflake.com/en/guides-overview-secure-encryption-manage)** - Customer-managed keys
+**[📖 Tri-Secret Secure](https://docs.snowflake.com/en/user-guide/security-encryption-manage)** - Customer-managed keys
 
 #### Supported KMS Providers
 | Cloud Provider | KMS Service | Configuration |
@@ -133,7 +133,7 @@ Root Key (HSM-protected)
 - Multiple masking policies can exist but only one per column at a time
 - Masking is transparent to applications - no query changes needed
 
-**[📖 Dynamic Data Masking](https://docs.snowflake.com/en/guides-overview-secure-column-ddm-intro)** - Column masking
+**[📖 Dynamic Data Masking](https://docs.snowflake.com/en/user-guide/security-column-ddm-intro)** - Column masking
 
 ```sql
 -- Create masking policy for email addresses
@@ -161,7 +161,7 @@ SELECT * FROM TABLE(INFORMATION_SCHEMA.POLICY_REFERENCES(
 - Useful for PCI DSS compliance where tokens must be reversible
 - Requires external function and API integration setup
 
-**[📖 External Tokenization](https://docs.snowflake.com/en/guides-overview-secure-column-ext-token)** - Tokenization integration
+**[📖 External Tokenization](https://docs.snowflake.com/en/user-guide/security-column-ext-token-intro)** - Tokenization integration
 
 ### Row Access Policies
 - Row-level security that filters rows at query time
@@ -170,7 +170,7 @@ SELECT * FROM TABLE(INFORMATION_SCHEMA.POLICY_REFERENCES(
 - Can use mapping tables for complex access rules
 - Policies are enforced even for account admins (unless exempted)
 
-**[📖 Row Access Policies](https://docs.snowflake.com/en/guides-overview-secure-row-intro)** - Row-level security
+**[📖 Row Access Policies](https://docs.snowflake.com/en/user-guide/security-row-intro)** - Row-level security
 
 ```sql
 -- Simple role-based row access
@@ -243,7 +243,7 @@ ACCOUNTADMIN
 - Custom roles should be granted to SYSADMIN (not ACCOUNTADMIN)
 - Principle of least privilege: grant minimum required permissions
 
-**[📖 Access Control](https://docs.snowflake.com/en/guides-overview-secure-access-control)** - RBAC documentation
+**[📖 Access Control](https://docs.snowflake.com/en/user-guide/security-access-control-overview)** - RBAC documentation
 
 ### SCIM Provisioning
 - System for Cross-domain Identity Management
@@ -252,7 +252,7 @@ ACCOUNTADMIN
 - Users and roles synchronized automatically
 - Deprovisioned users automatically disabled in Snowflake
 
-**[📖 SCIM](https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-use-scim)** - SCIM integration
+**[📖 SCIM](https://docs.snowflake.com/en/user-guide/scim-intro)** - SCIM integration
 
 ## Compliance and Editions
 
@@ -276,4 +276,4 @@ ACCOUNTADMIN
 - HITRUST CSF
 - ISO 27001
 
-**[📖 Compliance](https://docs.snowflake.com/en/guides-overview-secure-compliance)** - Compliance documentation
+**[📖 Compliance](https://docs.snowflake.com/en/user-guide/intro-compliance)** - Compliance documentation

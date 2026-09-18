@@ -50,13 +50,13 @@ last-updated: 2026-05-03
 - **VPN** - IPSec, up to 1.25 Gbps per tunnel (ECMP for multiple tunnels)
 - **[📖 Site-to-Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/)** - Encrypted hybrid connectivity
 - **Cloud WAN** - Global network management
-- **[📖 Cloud WAN](https://docs.aws.amazon.com/vpc/latest/cloudwan/)** - SD-WAN on AWS
+- **[📖 Cloud WAN](https://docs.aws.amazon.com/network-manager/latest/cloudwan/what-is-cloudwan.html)** - SD-WAN on AWS
 - **PrivateLink** - Private connectivity to services without internet
 - **[📖 AWS PrivateLink](https://docs.aws.amazon.com/vpc/latest/privatelink/)** - VPC endpoint services
 
 **Hybrid Architectures:**
 - **Storage Gateway** - Volume (iSCSI), File (NFS/SMB), Tape (VTL)
-- **[📖 Storage Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/)** - On-premises storage integration
+- **[📖 Storage Gateway](https://docs.aws.amazon.com/storagegateway/)** - On-premises storage integration
 - **DataSync** - Fast data transfer, up to 10 Gbps
 - **[📖 DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/)** - Accelerated data migration
 - **Route 53 Resolver** - Hybrid DNS resolution

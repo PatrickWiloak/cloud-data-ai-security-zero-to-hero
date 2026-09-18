@@ -115,7 +115,7 @@
 - **[GHAS Product Page](https://github.com/features/security)** - Product overview
 - **[CodeQL Site](https://codeql.github.com/)** - CodeQL learning
 - **[GitHub Security Lab](https://securitylab.github.com/)** - Research and CodeQL examples
-- **[GitHub Blog - Security](https://github.blog/category/security/)** - Updates
+- **[GitHub Blog - Security](https://github.blog/security/)** - Updates
 - **[GitHub Skills](https://skills.github.com/)** - Interactive courses
 
 ### Free Learning Resources

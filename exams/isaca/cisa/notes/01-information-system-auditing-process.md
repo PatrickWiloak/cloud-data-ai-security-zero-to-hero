@@ -121,4 +121,4 @@ compliance testing shows controls failing, substantive testing must expand.
 
 **[📖 ISACA CISA exam content outline](https://www.isaca.org/credentialing/cisa)** - authoritative domain list
 **[📖 ITAF: A Professional Practices Framework for IS Audit/Assurance](https://www.isaca.org/resources/itaf)** - the standards themselves
-**[📖 ISACA Code of Professional Ethics](https://www.isaca.org/credentialing/code-of-professional-ethics)** - binding conduct requirements
+**[📖 ISACA Code of Professional Ethics](https://www.isaca.org/code-of-professional-ethics)** - binding conduct requirements

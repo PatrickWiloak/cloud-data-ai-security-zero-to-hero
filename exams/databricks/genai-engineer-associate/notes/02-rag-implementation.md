@@ -58,8 +58,8 @@ results = index.similarity_search(
 
 ### 2. Foundation Model APIs
 
-**[📖 Pay-per-Token](https://docs.databricks.com/en/machine-learning/foundation-models/deploy-ppt-models.html)** - Shared compute
-**[📖 Provisioned Throughput](https://docs.databricks.com/en/machine-learning/foundation-models/deploy-provisioned-throughput-foundation-models.html)** - Dedicated compute
+**[📖 Pay-per-Token](https://docs.databricks.com/aws/en/machine-learning/foundation-model-apis/supported-models)** - Shared compute
+**[📖 Provisioned Throughput](https://docs.databricks.com/aws/en/machine-learning/foundation-model-apis/deploy-prov-throughput-foundation-model-apis)** - Dedicated compute
 
 | Serving Type | Compute | Latency | Cost Model |
 |-------------|---------|---------|------------|

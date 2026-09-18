@@ -75,7 +75,7 @@ Answer these questions without looking at notes:
 ### Documentation Reading
 
 - [ ] Read [Tool Use Guide](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
-- [ ] Read [Tool Use Best Practices](https://docs.anthropic.com/en/docs/build-with-claude/tool-use/best-practices)
+- [ ] Read [Tool Use Best Practices](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)
 - [ ] Read [MCP Introduction](https://modelcontextprotocol.io/introduction)
 - [ ] Read [MCP Core Architecture](https://modelcontextprotocol.io/docs/concepts/architecture)
 - [ ] Read [MCP Tools](https://modelcontextprotocol.io/docs/concepts/tools)

@@ -62,7 +62,7 @@
 
 ### Official Resources
 - **[📖 Kafka Operations](https://kafka.apache.org/documentation/#operations)** - Operations reference
-- **[📖 Confluent Admin Guide](https://docs.confluent.io/platform/current/kafka/index.html)** - Administration guide
+- **[📖 Confluent Admin Guide](https://docs.confluent.io/kafka/operations-tools/index.html)** - Administration guide
 - **[📖 Confluent Training](https://www.confluent.io/training/)** - Official training courses
 - **[📖 Kafka Configuration](https://kafka.apache.org/documentation/#configuration)** - All configuration reference
 

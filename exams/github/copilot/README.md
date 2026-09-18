@@ -17,7 +17,7 @@ The GitHub Copilot certification validates your ability to use GitHub Copilot ef
 - **Retake Policy:** 24-hour wait for first retake, 14 days for subsequent attempts
 
 ### Official Resources
-- **[GitHub Certifications](https://resources.github.com/learn/certifications/)** - Program overview and registration
+- **[GitHub Certifications](https://learn.github.com/certifications)** - Program overview and registration
 - **[GitHub Copilot Documentation](https://docs.github.com/en/copilot)** - Complete product docs
 - **[GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/)** - Security, privacy, IP
 - **[GitHub Skills](https://skills.github.com/)** - Interactive learning

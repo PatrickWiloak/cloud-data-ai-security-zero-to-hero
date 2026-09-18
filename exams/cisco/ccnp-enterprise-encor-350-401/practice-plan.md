@@ -321,7 +321,7 @@ This plan assumes 1.5-2 hours of theory + 1-1.5 hours of hands-on lab per day. A
 - [ ] Review every wrong answer; if a topic is shaky, lab it
 
 ### Schedule the exam
-- [ ] Book through [Pearson VUE](https://home.pearsonvue.com/cisco)
+- [ ] Book through [Pearson VUE](https://www.pearsonvue.com/us/en/cisco.html)
 - [ ] Choose testing center or online proctor (online has stricter rules)
 - [ ] Budget for 120 minutes plus 15 minutes check-in
 

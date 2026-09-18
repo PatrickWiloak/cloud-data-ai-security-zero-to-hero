@@ -67,7 +67,7 @@ CREATE STAGE my_gcs_stage
 
 **[📖 S3 External Stage](https://docs.snowflake.com/en/user-guide/data-load-s3-create-stage)** - S3 stage setup
 **[📖 Azure External Stage](https://docs.snowflake.com/en/user-guide/data-load-azure-create-stage)** - Azure stage setup
-**[📖 GCS External Stage](https://docs.snowflake.com/en/user-guide/data-load-gcs-create-stage)** - GCS stage setup
+**[📖 GCS External Stage](https://docs.snowflake.com/en/user-guide/data-load-gcs-config)** - GCS stage setup
 
 ### Storage Integrations
 

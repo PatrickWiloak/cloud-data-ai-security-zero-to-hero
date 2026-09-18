@@ -767,7 +767,7 @@ ibmcloud fn rule create myRule myTrigger hello
 - Certification Support: https://www.ibm.com/training/certification
 
 **Exam Support**:
-- Pearson VUE: https://home.pearsonvue.com/ibm
+- Pearson VUE: https://www.pearsonvue.com/us/en/ibm.html
 - Technical issues: Contact Pearson VUE support
 - Exam content: Contact IBM Training
 

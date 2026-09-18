@@ -150,7 +150,7 @@ Full fine-tuning requires storing:
 
 ### RLHF (Reinforcement Learning from Human Feedback)
 
-**[📖 NVIDIA NeMo RLHF](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/nemo_framework_rlhf/index.html)** - RLHF with NeMo
+**[📖 NVIDIA NeMo RLHF](https://docs.nvidia.com/nemo/rl/latest/index.html)** - RLHF with NeMo
 **[📖 InstructGPT Paper](https://arxiv.org/abs/2203.02155)** - RLHF methodology
 
 **Pipeline:**

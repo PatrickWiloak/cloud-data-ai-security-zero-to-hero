@@ -45,7 +45,7 @@
    - Use comments, types, and signatures to seed prompts
 
 4. **Phase 2 Resources**
-   - **[Chat Cheat Sheet](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat-in-ides/github-copilot-chat-cheat-sheet)**
+   - **[Chat Cheat Sheet](https://docs.github.com/en/copilot/reference/chat-cheat-sheet)**
    - **[Best Practices](https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot)**
    - **[Prompt Engineering](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)**
 

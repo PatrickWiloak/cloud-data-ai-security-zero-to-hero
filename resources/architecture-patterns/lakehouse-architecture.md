@@ -169,7 +169,7 @@ The lakehouse typically uses a medallion (multi-hop) architecture:
 - **Apache Hudi**: Best for streaming upserts and change data capture (CDC) workloads
 
 **Documentation:**
-- [Delta Lake](https://docs.delta.io/latest/index.html)
+- [Delta Lake](https://docs.delta.io/index.html)
 - [Apache Iceberg](https://iceberg.apache.org/docs/latest/)
 - [Apache Hudi](https://hudi.apache.org/docs/overview)
 

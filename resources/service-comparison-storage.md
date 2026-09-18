@@ -96,7 +96,7 @@ This guide provides a comprehensive comparison of storage services across AWS, G
 - **[📖 GCP Persistent Disks Documentation](https://cloud.google.com/compute/docs/disks)** - Persistent Disks guide
 - **[📖 Azure Managed Disks Documentation](https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview)** - Managed Disks guide
 - **[📖 EBS Volume Types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html)** - AWS volume comparison
-- **[📖 Persistent Disk Types](https://cloud.google.com/compute/docs/disks/disk-types)** - GCP disk comparison
+- **[📖 Persistent Disk Types](https://docs.cloud.google.com/compute/docs/disks)** - GCP disk comparison
 - **[📖 Azure Disk Types](https://learn.microsoft.com/en-us/azure/virtual-machines/disks-types)** - Azure disk comparison
 
 ---
@@ -147,7 +147,7 @@ This guide provides a comprehensive comparison of storage services across AWS, G
 - **[📖 AWS Glacier Documentation](https://docs.aws.amazon.com/glacier/)** - Glacier service guide
 - **[📖 S3 Glacier Storage Classes](https://aws.amazon.com/s3/storage-classes/glacier/)** - Glacier class comparison
 - **[📖 GCP Archive Storage](https://cloud.google.com/storage/docs/storage-classes#archive)** - Archive class details
-- **[📖 Azure Archive Blob](https://learn.microsoft.com/en-us/azure/storage/blobs/archive-blob-rehydration)** - Archive tier guide
+- **[📖 Azure Archive Blob](https://learn.microsoft.com/en-us/azure/storage/blobs/archive-rehydrate-overview)** - Archive tier guide
 
 ---
 

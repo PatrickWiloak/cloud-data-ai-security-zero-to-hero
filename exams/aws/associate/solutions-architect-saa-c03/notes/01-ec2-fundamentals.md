@@ -1,6 +1,6 @@
 # Amazon EC2 Fundamentals for Solutions Architects
 
-**[📖 EC2 User Guide](https://docs.aws.amazon.com/ec2/index.html)** - Complete EC2 documentation and best practices
+**[📖 EC2 User Guide](https://docs.aws.amazon.com/ec2/)** - Complete EC2 documentation and best practices
 
 ## Instance Types and Selection
 

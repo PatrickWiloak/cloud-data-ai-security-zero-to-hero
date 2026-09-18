@@ -1,6 +1,6 @@
 # Multi-Agent Systems
 
-**[📖 NVIDIA Multi-Agent Blog](https://developer.nvidia.com/blog/tag/agents/)** - NVIDIA resources on multi-agent architectures
+**[📖 NVIDIA Multi-Agent Blog](https://developer.nvidia.com/blog/tag/build-ai-agent/)** - NVIDIA resources on multi-agent architectures
 
 ## Multi-Agent Architecture Fundamentals
 

@@ -157,7 +157,7 @@ last-updated: 2026-05-03
 
 **[📖 Choosing Interconnect Options](https://cloud.google.com/network-connectivity/docs/how-to/choose-product)** - Decision tree for selecting VPN, Dedicated, or Partner Interconnect
 
-**[📖 VLAN Attachments](https://cloud.google.com/network-connectivity/docs/interconnect/concepts/vlan-attachments)** - Configuring Layer 2 connections over Interconnect circuits
+**[📖 VLAN Attachments](https://docs.cloud.google.com/network-connectivity/docs/interconnect/concepts/vlan-attachments)** - Configuring Layer 2 connections over Interconnect circuits
 
 **[📖 Interconnect Pricing](https://cloud.google.com/network-connectivity/docs/interconnect/pricing)** - Understanding attachment, egress, and port costs
 
@@ -271,7 +271,7 @@ last-updated: 2026-05-03
 
 **[📖 Cache Keys](https://cloud.google.com/cdn/docs/caching#cache-keys)** - Customizing cache keys based on host, protocol, query string
 
-**[📖 Signed URLs and Signed Cookies](https://cloud.google.com/cdn/docs/using-signed-urls-signed-cookies)** - Controlling access to cached content with time-limited tokens
+**[📖 Signed URLs and Signed Cookies](https://docs.cloud.google.com/cdn/docs/authenticate-content)** - Controlling access to cached content with time-limited tokens
 
 **[📖 Cache Invalidation](https://cloud.google.com/cdn/docs/cache-invalidation-overview)** - Purging cached content before TTL expiration
 
@@ -291,7 +291,7 @@ last-updated: 2026-05-03
 
 **[📖 Port Allocation](https://cloud.google.com/nat/docs/ports-and-addresses)** - Understanding port allocation limits and scaling
 
-**[📖 NAT Logging](https://cloud.google.com/nat/docs/logging-and-monitoring)** - Enabling logs for NAT translation events and troubleshooting
+**[📖 NAT Logging](https://docs.cloud.google.com/nat/docs/monitoring)** - Enabling logs for NAT translation events and troubleshooting
 
 ### Cloud DNS
 
@@ -349,11 +349,11 @@ last-updated: 2026-05-03
 
 **[📖 Service Perimeters](https://cloud.google.com/vpc-service-controls/docs/service-perimeters)** - Defining resource boundaries to prevent data exfiltration
 
-**[📖 Access Levels](https://cloud.google.com/vpc-service-controls/docs/access-levels)** - Defining contextual access criteria for perimeter bridges
+**[📖 Access Levels](https://docs.cloud.google.com/vpc-service-controls/docs/use-access-levels)** - Defining contextual access criteria for perimeter bridges
 
 **[📖 Supported Services](https://cloud.google.com/vpc-service-controls/docs/supported-products)** - List of GCP services that can be protected by perimeters
 
-**[📖 Dry Run Mode](https://cloud.google.com/vpc-service-controls/docs/dry-run)** - Testing perimeter policies without enforcement
+**[📖 Dry Run Mode](https://docs.cloud.google.com/vpc-service-controls/docs/dry-run-mode)** - Testing perimeter policies without enforcement
 
 ### SSL/TLS Security
 
@@ -379,7 +379,7 @@ last-updated: 2026-05-03
 
 ### Network Intelligence Center
 
-**[📖 Network Intelligence Center Overview](https://cloud.google.com/network-intelligence-center/docs/network-intelligence-center-overview)** - Comprehensive network monitoring and troubleshooting platform
+**[📖 Network Intelligence Center Overview](https://docs.cloud.google.com/network-intelligence-center/docs)** - Comprehensive network monitoring and troubleshooting platform
 
 **[📖 Network Topology](https://cloud.google.com/network-intelligence-center/docs/network-topology/concepts/overview)** - Visualizing VPC network architecture and connectivity
 
@@ -403,7 +403,7 @@ last-updated: 2026-05-03
 
 **[📖 Monitoring Network Metrics](https://cloud.google.com/monitoring/api/metrics_gcp)** - Available network metrics for VPC, load balancers, and VPN
 
-**[📖 Network Alerting](https://cloud.google.com/monitoring/alerts/concepts-alerting)** - Creating alerts for network anomalies and threshold violations
+**[📖 Network Alerting](https://docs.cloud.google.com/monitoring/alerts)** - Creating alerts for network anomalies and threshold violations
 
 **[📖 Custom Dashboards](https://cloud.google.com/monitoring/dashboards)** - Building network monitoring dashboards with Cloud Monitoring
 
@@ -704,7 +704,7 @@ gcloud network-management connectivity-tests create TEST_NAME --source-instance=
 
 **[📖 Google Cloud Networking Deep Dive](https://cloud.google.com/blog/topics/developers-practitioners)** - Technical blog posts and tutorials
 
-**[📖 Network Reliability Engineering](https://sre.google/books/building-secure-reliable-systems/)** - Google's approach to network reliability
+**[📖 Network Reliability Engineering](https://sre.google/books/)** - Google's approach to network reliability
 
 **[📖 Cloud OnBoard: Networking](https://cloudonair.withgoogle.com/)** - Free virtual training sessions
 

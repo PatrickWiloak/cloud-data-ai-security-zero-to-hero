@@ -50,7 +50,7 @@ last-updated: 2026-05-03
 - WordPiece - vocabulary-based subword splitting
 - Vocabulary size tradeoffs - larger vocab = shorter sequences but more parameters
 - Special tokens - BOS, EOS, PAD, system/user/assistant tokens for chat
-- **[📖 NeMo Tokenizers](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/batching.html)** - Tokenization in NeMo
+- **[📖 NeMo Tokenizers](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/common/tokenizers.html)** - Tokenization in NeMo
 
 ### Scaling Laws
 - Chinchilla scaling - optimal compute allocation between model size and data
@@ -68,7 +68,7 @@ last-updated: 2026-05-03
 - **Expert Parallelism:** Distribute MoE experts across GPUs
 - **3D Parallelism:** Combine data, tensor, and pipeline parallelism
 - **ZeRO optimization:** Partition optimizer states, gradients, parameters
-- **[📖 NeMo Distributed Training](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/parallelisms.html)** - Parallelism strategies in NeMo
+- **[📖 NeMo Distributed Training](https://docs.nvidia.com/nemo/megatron-bridge/latest/parallelisms.html)** - Parallelism strategies in NeMo
 - **[📖 Megatron Core](https://docs.nvidia.com/megatron-core/developer-guide/latest/index.html)** - Megatron-LM distributed training library
 
 ### NVIDIA NeMo Framework
@@ -179,7 +179,7 @@ last-updated: 2026-05-03
 - Vector similarity search - cosine similarity, dot product, L2 distance
 - Approximate nearest neighbor (ANN) algorithms - HNSW, IVF
 - Integration with Milvus, FAISS, Weaviate, pgvector, Chroma
-- **[📖 NeMo Retriever](https://docs.nvidia.com/nim/nemo-retriever/latest/index.html)** - NVIDIA embedding and retrieval microservices
+- **[📖 NeMo Retriever](https://docs.nvidia.com/nim/nemo-retriever/text-reranking/latest/overview.html)** - NVIDIA embedding and retrieval microservices
 
 ### Chunking and Retrieval Optimization
 - Fixed-size chunking with overlap

@@ -16,8 +16,8 @@ last-updated: 2026-05-03
 **Delivery:** Online proctored
 **Prerequisites:** None
 
-**[📖 Official Exam Page](https://learn.snowflake.com/en/certifications/snowpro-core/)** - Registration and official details
-**[📖 Exam Study Guide](https://learn.snowflake.com/en/certifications/snowpro-core/)** - Domain breakdown and objectives
+**[📖 Official Exam Page](https://learn.snowflake.com/en/certifications/)** - Registration and official details
+**[📖 Exam Study Guide](https://learn.snowflake.com/en/certifications/)** - Domain breakdown and objectives
 **[📖 Snowflake Documentation](https://docs.snowflake.com/)** - Primary reference material
 
 ## Target Audience
@@ -46,7 +46,7 @@ This is the most heavily weighted domain covering Snowflake's unique architectur
 - Immutable micro-partitions - updates create new partitions
 
 **[📖 Micro-Partitions and Data Clustering](https://docs.snowflake.com/en/user-guide/tables-clustering-micropartitions)** - Storage internals
-**[📖 Data Storage Considerations](https://docs.snowflake.com/en/user-guide/data-storage-considerations)** - Storage costs and management
+**[📖 Data Storage Considerations](https://docs.snowflake.com/en/user-guide/tables-storage-considerations)** - Storage costs and management
 
 **Compute Layer (Virtual Warehouses):**
 - Independent compute clusters that process queries
@@ -113,9 +113,9 @@ This is the most heavily weighted domain covering Snowflake's unique architectur
 - **PUBLIC:** Automatically granted to every user. Lowest privilege.
 - **ORGADMIN:** Organization-level management (cross-account).
 
-**[📖 Access Control Overview](https://docs.snowflake.com/en/guides-overview-secure-access-control-overview)** - RBAC fundamentals
-**[📖 System-Defined Roles](https://docs.snowflake.com/en/guides-overview-secure-access-control-overview#system-defined-roles)** - Role descriptions
-**[📖 Access Control Privileges](https://docs.snowflake.com/en/guides-overview-secure-access-control-privileges)** - All available privileges
+**[📖 Access Control Overview](https://docs.snowflake.com/en/user-guide/security-access-control-overview)** - RBAC fundamentals
+**[📖 System-Defined Roles](https://docs.snowflake.com/en/user-guide/security-access-control-overview)** - Role descriptions
+**[📖 Access Control Privileges](https://docs.snowflake.com/en/user-guide/security-access-control-privileges)** - All available privileges
 
 **Best Practices:**
 - Always use SYSADMIN or lower for object creation
@@ -135,7 +135,7 @@ This is the most heavily weighted domain covering Snowflake's unique architectur
 
 **[📖 Authentication](https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-overview)** - Federation and SSO
 **[📖 Key Pair Authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth)** - Service account auth
-**[📖 MFA](https://docs.snowflake.com/en/guides-overview-secure-mfa)** - Multi-factor setup
+**[📖 MFA](https://docs.snowflake.com/en/user-guide/security-mfa)** - Multi-factor setup
 
 ### Network Security
 
@@ -154,8 +154,8 @@ This is the most heavily weighted domain covering Snowflake's unique architectur
 - Periodic key rotation (annual for Snowflake-managed keys)
 - Tri-Secret Secure (customer-managed key + Snowflake key) - Business Critical+
 
-**[📖 Encryption](https://docs.snowflake.com/en/guides-overview-secure-encryption)** - Encryption overview
-**[📖 Tri-Secret Secure](https://docs.snowflake.com/en/guides-overview-secure-encryption-manage)** - Customer-managed keys
+**[📖 Encryption](https://docs.snowflake.com/en/user-guide/security-encryption-end-to-end)** - Encryption overview
+**[📖 Tri-Secret Secure](https://docs.snowflake.com/en/user-guide/security-encryption-manage)** - Customer-managed keys
 
 ## Domain 3: Performance Concepts (15%)
 
@@ -210,7 +210,7 @@ This is the most heavily weighted domain covering Snowflake's unique architectur
 - Leverage semi-structured data optimizations
 
 **[📖 Query Profile](https://docs.snowflake.com/en/user-guide/ui-query-profile)** - Analyzing query performance
-**[📖 Query Optimization](https://docs.snowflake.com/en/user-guide/performance-query)** - Performance tuning
+**[📖 Query Optimization](https://docs.snowflake.com/en/guides-overview-performance)** - Performance tuning
 
 ### Resource Monitors
 

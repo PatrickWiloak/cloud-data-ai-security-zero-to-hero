@@ -98,7 +98,7 @@ last-updated: 2026-05-03
 - CDAP (Cask Data Application Platform) based
 - **[📖 Cloud Data Fusion](https://cloud.google.com/data-fusion/docs)** - Overview and architecture
 - **[📖 Pipeline Creation](https://cloud.google.com/data-fusion/docs/how-to/create-pipelines)** - Building pipelines
-- **[📖 Wrangler](https://cloud.google.com/data-fusion/docs/concepts/wrangler)** - Interactive data preparation
+- **[📖 Wrangler](https://docs.cloud.google.com/data-fusion/docs/concepts/wrangler-overview)** - Interactive data preparation
 
 ## Data Processing Services
 
@@ -110,7 +110,7 @@ last-updated: 2026-05-03
 - Exactly-once processing semantics
 - Late data handling with windowing and triggers
 - Flexible Resource Scheduling (FlexRS) for batch cost savings
-- **[📖 Dataflow Overview](https://cloud.google.com/dataflow/docs/concepts/overview)** - Architecture fundamentals
+- **[📖 Dataflow Overview](https://docs.cloud.google.com/dataflow/docs)** - Architecture fundamentals
 - **[📖 Apache Beam Programming Guide](https://beam.apache.org/documentation/programming-guide/)** - Beam concepts
 - **[📖 Dataflow Templates](https://cloud.google.com/dataflow/docs/concepts/dataflow-templates)** - Pre-built templates
 - **[📖 Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine)** - Streaming optimization
@@ -121,7 +121,7 @@ last-updated: 2026-05-03
 - **Side inputs** - Broadcast data to all workers
 - **State and Timers** - Stateful processing
 - **Splittable DoFn** - Efficiently process large elements
-- **[📖 Dataflow Best Practices](https://cloud.google.com/dataflow/docs/guides/best-practices)** - Performance optimization
+- **[📖 Dataflow Best Practices](https://docs.cloud.google.com/dataflow/docs/guides/pipeline-best-practices)** - Performance optimization
 - **[📖 Dataflow SQL](https://cloud.google.com/dataflow/docs/guides/sql/dataflow-sql-intro)** - SQL-based pipelines
 - **[📖 FlexRS](https://cloud.google.com/dataflow/docs/guides/flexrs)** - Cost-optimized batch processing
 
@@ -260,7 +260,7 @@ last-updated: 2026-05-03
 - Keep column families small
 - **[📖 Schema Design](https://cloud.google.com/bigtable/docs/schema-design)** - Design patterns
 - **[📖 Schema Design for Time-Series](https://cloud.google.com/bigtable/docs/schema-design-time-series)** - Time-series patterns
-- **[📖 Row Key Design](https://cloud.google.com/bigtable/docs/choosing-a-row-key)** - Performance optimization
+- **[📖 Row Key Design](https://docs.cloud.google.com/bigtable/docs/schema-design)** - Performance optimization
 
 **Performance and Scaling:**
 - Autoscaling based on CPU and storage utilization
@@ -332,7 +332,7 @@ last-updated: 2026-05-03
 - Automatic sharding and replication
 - Strong consistency globally
 - SQL support with extensions
-- **[📖 Cloud Spanner Overview](https://cloud.google.com/spanner/docs/overview)** - Architecture concepts
+- **[📖 Cloud Spanner Overview](https://docs.cloud.google.com/spanner/docs)** - Architecture concepts
 - **[📖 Schema Design](https://cloud.google.com/spanner/docs/schema-design)** - Best practices
 - **[📖 Replication](https://cloud.google.com/spanner/docs/replication)** - Multi-region setup
 - **[📖 Query Best Practices](https://cloud.google.com/spanner/docs/sql-best-practices)** - Performance optimization
@@ -535,7 +535,7 @@ last-updated: 2026-05-03
 - Enable Streaming Engine for streaming jobs
 - Use side inputs for broadcast joins
 - Batch elements with GroupIntoBatches
-- **[📖 Dataflow Best Practices](https://cloud.google.com/dataflow/docs/guides/best-practices)** - Pipeline optimization
+- **[📖 Dataflow Best Practices](https://docs.cloud.google.com/dataflow/docs/guides/pipeline-best-practices)** - Pipeline optimization
 - **[📖 Pipeline Performance](https://cloud.google.com/dataflow/docs/guides/pipeline-performance)** - Troubleshooting guide
 
 **Bigtable Optimization:**

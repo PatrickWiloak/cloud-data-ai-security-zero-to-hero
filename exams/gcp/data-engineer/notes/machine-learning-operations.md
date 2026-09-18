@@ -3389,7 +3389,7 @@ gcloud ai batch-prediction-jobs create --region=us-central1 --model=MODEL_ID --j
 
 ### Official Documentation
 - [BigQuery ML Documentation](https://cloud.google.com/bigquery-ml/docs) - Complete BigQuery ML reference
-- [Vertex AI Documentation](https://cloud.google.com/vertex-ai/docs) - Unified ML platform guide
+- [Vertex AI Documentation](https://docs.cloud.google.com/gemini-enterprise-agent-platform) - Unified ML platform guide
 - [ML on GCP Best Practices](https://cloud.google.com/architecture/ml-on-gcp-best-practices) - Architecture patterns
 - [MLOps Maturity Model](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning) - Production ML workflows
 - [BigQuery ML Tutorial](https://cloud.google.com/bigquery-ml/docs/tutorials) - Step-by-step guides

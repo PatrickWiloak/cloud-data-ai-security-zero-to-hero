@@ -1,7 +1,7 @@
 # Service Discovery and Health Checks
 
-**[📖 Service Discovery](https://developer.hashicorp.com/consul/docs/discovery/services)** - Service registration
-**[📖 Health Checks](https://developer.hashicorp.com/consul/docs/discovery/checks)** - Check types
+**[📖 Service Discovery](https://developer.hashicorp.com/consul/docs/register/service/vm)** - Service registration
+**[📖 Health Checks](https://developer.hashicorp.com/consul/docs/register/health-check/vm)** - Check types
 
 ## Overview
 
@@ -98,7 +98,7 @@ dig @127.0.0.1 -p 8600 web.service.dc2.consul
 dig @127.0.0.1 -p 8600 node-1.node.consul
 ```
 
-**[📖 DNS Interface](https://developer.hashicorp.com/consul/docs/discovery/dns)** - DNS documentation
+**[📖 DNS Interface](https://developer.hashicorp.com/consul/docs/discover/dns)** - DNS documentation
 
 ### DNS Behavior
 - Default port: 8600 (configurable)

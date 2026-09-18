@@ -1,6 +1,6 @@
 # Advanced Access Control
 
-**[📖 Access Control Overview](https://docs.snowflake.com/en/guides-overview-secure-access-control-overview)** - RBAC documentation
+**[📖 Access Control Overview](https://docs.snowflake.com/en/user-guide/security-access-control-overview)** - RBAC documentation
 
 ## Overview
 
@@ -101,7 +101,7 @@ GRANT ROLE etl_service_role TO ROLE SYSADMIN;
 - Can be granted to account-level roles
 - Replicated with the database during replication
 
-**[📖 Database Roles](https://docs.snowflake.com/en/guides-overview-secure-access-control-database-roles)** - Database role documentation
+**[📖 Database Roles](https://docs.snowflake.com/en/user-guide/security-access-control-overview)** - Database role documentation
 
 ### Implementation
 ```sql
@@ -191,7 +191,7 @@ SELECT name, ext_authn_duo, mins_to_bypass_mfa
 FROM SNOWFLAKE.ACCOUNT_USAGE.USERS;
 ```
 
-**[📖 MFA](https://docs.snowflake.com/en/guides-overview-secure-mfa)** - Multi-factor authentication
+**[📖 MFA](https://docs.snowflake.com/en/user-guide/security-mfa)** - Multi-factor authentication
 
 ### SAML SSO
 - Federated authentication with identity providers (Okta, Azure AD, ADFS)
@@ -208,7 +208,7 @@ FROM SNOWFLAKE.ACCOUNT_USAGE.USERS;
 - Groups mapped to Snowflake roles
 - Reduces manual user management overhead
 
-**[📖 SCIM](https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-use-scim)** - SCIM integration
+**[📖 SCIM](https://docs.snowflake.com/en/user-guide/scim-intro)** - SCIM integration
 
 ```sql
 -- Create SCIM integration

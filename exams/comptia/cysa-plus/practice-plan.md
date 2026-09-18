@@ -307,7 +307,7 @@ This plan assumes 2-3 hours per day, 5-6 days per week, with hands-on lab practi
 
 ### Paid Resources
 - **[CertMaster Learn for CySA+](https://www.comptia.org/training/certmaster-learn/cybersecurity-analyst)** - Official training
-- **[CertMaster Practice for CySA+](https://www.comptia.org/training/certmaster-practice/cybersecurity-analyst)** - Official practice
+- **[CertMaster Practice for CySA+](https://www.comptia.org/en-us/resources/certmaster-training/)** - Official practice
 - **Jason Dion CySA+ CS0-003** (Udemy) - Video course and 6 practice exams
 - **CompTIA CySA+ Study Guide CS0-003** by Mike Chapple - Sybex book
 

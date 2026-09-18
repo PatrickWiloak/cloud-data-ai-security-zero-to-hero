@@ -61,7 +61,7 @@ Schedule in the [practice plan](./practice-plan.md).
 - **[📖 Generative AI Leader exam guide](https://services.google.com/fh/files/misc/generative_ai_leader_exam_guide_english.pdf)** - study against this
 - **[📖 Official study guide](https://services.google.com/fh/files/misc/generative_ai_leader_study_guide_english.pdf)** - Google's companion
 - **[📖 Generative AI Leader learning path](https://www.cloudskillsboost.google/paths/1951)** - free official training
-- **[📖 Google AI Principles](https://ai.google/responsibility/principles/)** - responsible AI content is directly testable
+- **[📖 Google AI Principles](https://ai.google/principles/)** - responsible AI content is directly testable
 - **[📖 Google Secure AI Framework](https://saif.google/)** - the security framing
 - [Practice questions](../../../resources/practice-questions/gcp-generative-ai-leader.md) - question bank in this repo
 

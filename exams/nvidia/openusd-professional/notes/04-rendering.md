@@ -1,6 +1,6 @@
 # Rendering and Materials
 
-**[📖 USD Rendering](https://openusd.org/release/api/usdShade_page_front.html)** - USD shading documentation
+**[📖 USD Rendering](https://openusd.org/release/wp_usdshade.html)** - USD shading documentation
 
 ## Materials in USD
 

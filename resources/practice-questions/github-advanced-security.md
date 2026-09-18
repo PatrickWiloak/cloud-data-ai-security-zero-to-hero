@@ -287,4 +287,4 @@ D. It is included in all plans
 - [GitHub Actions practice questions](./github-actions.md) - where scanning runs
 - [GitHub Administration practice questions](./github-administration.md) - enterprise rollout
 - [Model supply chain security](../ai-security/model-supply-chain.md) - the same reasoning applied to AI artifacts
-- **[📖 GitHub Certifications](https://resources.github.com/learn/certifications/)** - official exam pages
+- **[📖 GitHub Certifications](https://learn.github.com/certifications)** - official exam pages

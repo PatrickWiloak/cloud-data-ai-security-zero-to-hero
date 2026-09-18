@@ -26,7 +26,7 @@ Retrieval-Augmented Generation (RAG) combines information retrieval with LLM gen
 - Augmentation: Construct prompt with retrieved context
 - Generation: LLM generates response using augmented prompt
 
-**[📖 NeMo Retriever](https://docs.nvidia.com/nim/nemo-retriever/latest/index.html)** - NVIDIA embedding and retrieval microservices
+**[📖 NeMo Retriever](https://docs.nvidia.com/nim/nemo-retriever/text-reranking/latest/overview.html)** - NVIDIA embedding and retrieval microservices
 
 ### 2. Embedding Models
 
@@ -127,7 +127,7 @@ Retrieval-Augmented Generation (RAG) combines information retrieval with LLM gen
 - Post-filter after retrieval for flexibility
 - Combine with vector search for precise results
 
-**[📖 NeMo Retriever Re-ranking](https://docs.nvidia.com/nim/nemo-retriever/latest/index.html)** - Re-ranking models documentation
+**[📖 NeMo Retriever Re-ranking](https://docs.nvidia.com/nim/nemo-retriever/text-reranking/latest/overview.html)** - Re-ranking models documentation
 
 ### 6. Context Window Management
 

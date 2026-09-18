@@ -98,7 +98,7 @@ Claude will see the error and can:
 
 ## Tool Design Best Practices
 
-**[Tool Use Best Practices](https://docs.anthropic.com/en/docs/build-with-claude/tool-use/best-practices)** - Official design guidance
+**[Tool Use Best Practices](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)** - Official design guidance
 
 ### Naming
 
@@ -351,12 +351,12 @@ Use MCP when:
 ## Related Documentation
 
 - **[Tool Use Guide](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)** - API function calling
-- **[Tool Use Best Practices](https://docs.anthropic.com/en/docs/build-with-claude/tool-use/best-practices)** - Design guidance
+- **[Tool Use Best Practices](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools)** - Design guidance
 - **[MCP Introduction](https://modelcontextprotocol.io/introduction)** - Protocol overview
 - **[MCP Architecture](https://modelcontextprotocol.io/docs/concepts/architecture)** - Design principles
 - **[MCP Tools](https://modelcontextprotocol.io/docs/concepts/tools)** - Tool primitives
 - **[MCP Resources](https://modelcontextprotocol.io/docs/concepts/resources)** - Data access
 - **[MCP Prompts](https://modelcontextprotocol.io/docs/concepts/prompts)** - Prompt templates
 - **[MCP Transports](https://modelcontextprotocol.io/docs/concepts/transports)** - Communication methods
-- **[MCP Specification](https://spec.modelcontextprotocol.io)** - Full protocol spec
+- **[MCP Specification](https://modelcontextprotocol.io/specification/latest)** - Full protocol spec
 - **[MCP Servers Repository](https://github.com/modelcontextprotocol/servers)** - Reference implementations

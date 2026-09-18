@@ -47,7 +47,7 @@ terraform {
 - `required_providers` - Specifies provider source and version constraints
 - `backend` - Configures state storage location
 
-**[📖 Terraform Settings](https://developer.hashicorp.com/terraform/language/settings)** - Settings block reference
+**[📖 Terraform Settings](https://developer.hashicorp.com/terraform/language/block/terraform)** - Settings block reference
 
 ## Variables
 

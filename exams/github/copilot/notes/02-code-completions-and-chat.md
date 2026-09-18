@@ -51,7 +51,7 @@ Copilot Chat is the conversational interface to Copilot. It can explain, generat
 - **Repo-aware chat** - When on a repo page, chat can reason about that repo
 - **Issue and PR context** - Chat can answer questions about the current issue or PR
 
-**[Chat in IDEs](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat-in-ides/asking-github-copilot-questions-in-your-ide)** - Chat docs
+**[Chat in IDEs](https://docs.github.com/en/copilot/how-tos/chat-with-copilot/chat-in-ide)** - Chat docs
 
 ## Slash Commands
 

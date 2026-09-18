@@ -36,7 +36,7 @@ space = hp.choice("model_type", [
 ### 2. Distributed Training
 
 **[📖 TorchDistributor](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/)** - PyTorch distributed
-**[📖 DeepSpeed](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/deepspeed.html)** - Large model training
+**[📖 DeepSpeed](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/deepspeed)** - Large model training
 
 **Data Parallelism:**
 - Replicate the full model to each worker
@@ -125,5 +125,5 @@ class StackedModel(mlflow.pyfunc.PythonModel):
 |-------|------|
 | Hyperopt | [docs.databricks.com/en/machine-learning/automl-hyperparam-tuning/index.html](https://docs.databricks.com/en/machine-learning/automl-hyperparam-tuning/index.html) |
 | TorchDistributor | [docs.databricks.com/en/machine-learning/deep-learning/distributed-training/torch-distributor.html](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/) |
-| DeepSpeed | [docs.databricks.com/en/machine-learning/deep-learning/distributed-training/deepspeed.html](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/deepspeed.html) |
-| Horovod | [docs.databricks.com/en/machine-learning/deep-learning/distributed-training/horovod-runner.html](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/horovod-runner.html) |
+| DeepSpeed | [docs.databricks.com/en/machine-learning/deep-learning/distributed-training/deepspeed.html](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/deepspeed) |
+| Horovod | [docs.databricks.com/en/machine-learning/deep-learning/distributed-training/horovod-runner.html](https://docs.databricks.com/aws/en/archive/machine-learning/train-model/horovod-runner) |

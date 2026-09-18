@@ -24,7 +24,7 @@ This cert is the canonical credential for OpenShift platform administrators and 
 | **OpenShift Version** | OpenShift 4.x (current exam reflects 4.14+ features) |
 | **Prerequisites** | RHCSA strongly recommended; experience with Linux containers |
 
-**[📖 Official EX280 page](https://www.redhat.com/en/services/certification/ex280-red-hat-certified-specialist-openshift-administration)**
+**[📖 Official EX280 page](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam)**
 
 ---
 

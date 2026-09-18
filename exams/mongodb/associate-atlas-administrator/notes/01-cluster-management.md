@@ -1,6 +1,6 @@
 # Cluster Management
 
-**[📖 Atlas Cluster Configuration](https://www.mongodb.com/docs/atlas/cluster-config/)** - Cluster setup guide
+**[📖 Atlas Cluster Configuration](https://www.mongodb.com/docs/atlas/create-connect-deployments/)** - Cluster setup guide
 **[📖 Atlas Cluster Tiers](https://www.mongodb.com/docs/atlas/cluster-tier/)** - Tier comparison
 
 ## Cluster Tiers
@@ -26,7 +26,7 @@
 
 ### Dedicated Tiers (M10+)
 
-**[📖 Dedicated Clusters](https://www.mongodb.com/docs/atlas/cluster-config/dedicated-clusters/)** - Dedicated cluster options
+**[📖 Dedicated Clusters](https://www.mongodb.com/docs/atlas/create-connect-deployments/)** - Dedicated cluster options
 
 | Tier | vCPU | RAM | Default Storage | Use Case |
 |------|------|-----|-----------------|----------|

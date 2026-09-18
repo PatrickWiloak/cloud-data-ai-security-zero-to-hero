@@ -128,7 +128,7 @@ The event log captures pipeline execution details and data quality metrics.
 Databricks Jobs allow you to schedule and orchestrate tasks including notebooks, Python scripts, SQL queries, and DLT pipelines.
 
 **[📖 Create and Run Jobs](https://docs.databricks.com/en/workflows/jobs/create-run-jobs.html)** - Job management
-**[📖 Multi-task Jobs](https://docs.databricks.com/en/workflows/jobs/use-task-values.html)** - Task dependencies
+**[📖 Multi-task Jobs](https://docs.databricks.com/aws/en/jobs/task-values)** - Task dependencies
 
 **Task Types:**
 | Task Type | Description |

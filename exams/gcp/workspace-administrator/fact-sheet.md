@@ -184,7 +184,7 @@ last-updated: 2026-05-03
 - Search and export for legal compliance
 - **[📖 Vault Overview](https://support.google.com/vault/answer/2462365)** - Vault admin
 - **[📖 Retention Policies](https://support.google.com/vault/answer/2990828)** - Retention setup
-- **[📖 Legal Holds](https://support.google.com/vault/answer/2473978)** - Hold management
+- **[📖 Legal Holds](https://knowledge.workspace.google.com/vault/holds/get-started-with-holds-in-google-vault)** - Hold management
 - **[📖 Search and Export](https://support.google.com/vault/answer/2474474)** - eDiscovery
 
 **Sharing Settings**

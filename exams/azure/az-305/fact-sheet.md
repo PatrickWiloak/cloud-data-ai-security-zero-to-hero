@@ -633,7 +633,7 @@ last-updated: 2026-05-03
 - Spot VMs (up to 90% savings)
 - Azure Hybrid Benefit (use existing licenses)
 - **[📖 Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/)** - Estimate costs
-- **[📖 Azure Hybrid Benefit](https://learn.microsoft.com/azure/cost-management-billing/manage/azure-hybrid-benefit-windows-server)** - License portability
+- **[📖 Azure Hybrid Benefit](https://learn.microsoft.com/en-us/azure/cost-management-billing/azure-hybrid-benefits/)** - License portability
 
 **Cost Optimization Strategies:**
 - Right-sizing VMs

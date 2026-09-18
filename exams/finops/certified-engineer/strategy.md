@@ -55,7 +55,7 @@
 **Resources:**
 - **[📖 AWS Compute Optimizer API](https://docs.aws.amazon.com/compute-optimizer/latest/APIReference/Welcome.html)** - Right-sizing API
 - **[📖 Spot Best Practices](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-best-practices.html)** - Spot engineering
-- **[📖 OPA Documentation](https://www.openpolicyagent.org/docs/latest/)** - Policy as code
+- **[📖 OPA Documentation](https://www.openpolicyagent.org/docs)** - Policy as code
 - **[📖 Infracost Documentation](https://www.infracost.io/docs/)** - Cost estimation in CI/CD
 
 ### Phase 3: Exam Preparation (Weeks 6-7)

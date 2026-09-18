@@ -33,7 +33,7 @@ last-updated: 2026-05-03
 
 ### What is Microsoft Power Platform?
 
-**[📖 Power Platform Overview](https://learn.microsoft.com/en-us/power-platform/admin/overview)** - Comprehensive introduction to the Power Platform ecosystem and its components.
+**[📖 Power Platform Overview](https://learn.microsoft.com/en-us/power-platform/)** - Comprehensive introduction to the Power Platform ecosystem and its components.
 
 **[📖 Power Platform Architecture](https://learn.microsoft.com/en-us/power-platform/admin/admin-documentation)** - Detailed documentation on platform architecture and administration.
 
@@ -60,7 +60,7 @@ last-updated: 2026-05-03
 
 **[📖 Power Platform Licensing](https://learn.microsoft.com/en-us/power-platform/admin/pricing-billing-skus)** - Understanding licensing models and costs.
 
-**[📖 Security and Governance](https://learn.microsoft.com/en-us/power-platform/admin/security/overview)** - Security architecture and governance framework.
+**[📖 Security and Governance](https://learn.microsoft.com/en-us/power-platform/admin/security/security-overview)** - Security architecture and governance framework.
 
 ---
 
@@ -438,7 +438,7 @@ last-updated: 2026-05-03
 
 ### Best Practices
 
-**[📖 Solution Architecture](https://learn.microsoft.com/en-us/power-platform/guidance/architecture/real-world-architecture)** - Real-world architecture patterns.
+**[📖 Solution Architecture](https://learn.microsoft.com/en-us/power-platform/architecture/reference-architectures)** - Real-world architecture patterns.
 
 **[📖 ALM (Application Lifecycle Management)](https://learn.microsoft.com/en-us/power-platform/alm/)** - Managing solutions across environments.
 
@@ -515,9 +515,9 @@ last-updated: 2026-05-03
 
 **[📖 Power Platform YouTube](https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg)** - Official Microsoft video tutorials.
 
-**[📖 Power Apps Community Forums](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1)** - Community support and discussions.
+**[📖 Power Apps Community Forums](https://community.powerplatform.com/)** - Community support and discussions.
 
-**[📖 Power Automate Community](https://powerusers.microsoft.com/t5/Microsoft-Power-Automate/ct-p/MPACommunity)** - Flow automation community.
+**[📖 Power Automate Community](https://community.powerplatform.com/)** - Flow automation community.
 
 **[📖 Power BI Community](https://community.powerbi.com/)** - BI and analytics discussions.
 

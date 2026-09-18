@@ -69,7 +69,7 @@ This plan assumes 1-2 hours per day of focused study.
 - [ ] Service Health Dashboard, Message Center, Roadmap
 
 ### Practice exams
-- [ ] [Microsoft Learn MS-900 Practice Assessment](https://learn.microsoft.com/credentials/certifications/exams/ms-900/practice/) - free official
+- [ ] [Microsoft Learn MS-900 Practice Assessment](https://learn.microsoft.com/en-us/credentials/certifications/microsoft-365-fundamentals/practice/assessment) - free official
 - [ ] Whizlabs / MeasureUp practice exam
 - [ ] Aim for 80%+ on multiple practice exams
 

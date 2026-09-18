@@ -63,7 +63,7 @@ last-updated: 2026-05-03
 - Agents critique each other's responses
 - Iterate until consensus or maximum rounds
 - Improves accuracy for reasoning tasks
-- **[📖 NVIDIA Multi-Agent Systems](https://developer.nvidia.com/blog/tag/agents/)** - NVIDIA blog posts on agent architectures
+- **[📖 NVIDIA Multi-Agent Systems](https://developer.nvidia.com/blog/tag/build-ai-agent/)** - NVIDIA blog posts on agent architectures
 
 ### Memory Systems
 
@@ -278,7 +278,7 @@ last-updated: 2026-05-03
 - Specify allowed and blocked patterns
 - Natural language-like syntax for rail definitions
 - **[📖 NeMo Guardrails Documentation](https://docs.nvidia.com/nemo/guardrails/latest/index.html)** - Complete guardrails documentation
-- **[📖 Colang Language Reference](https://docs.nvidia.com/nemo/guardrails/latest/user-guides/colang-2/overview.html)** - Colang 2 syntax and features
+- **[📖 Colang Language Reference](https://docs.nvidia.com/nemo/guardrails/configure-guardrails/colang)** - Colang 2 syntax and features
 
 **Guardrail Types**
 - **Input Rails:** Filter and validate user inputs before processing
@@ -315,7 +315,7 @@ last-updated: 2026-05-03
 - Timeout for individual tool calls
 - Circuit breakers for failing external services
 - Graceful degradation when tools are unavailable
-- **[📖 NVIDIA AI Safety](https://developer.nvidia.com/blog/tag/safety/)** - NVIDIA blog posts on AI safety
+- **[📖 NVIDIA AI Safety](https://developer.nvidia.com/blog/category/cybersecurity/)** - NVIDIA blog posts on AI safety
 
 ### Production Deployment
 

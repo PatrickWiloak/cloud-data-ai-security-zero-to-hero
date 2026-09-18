@@ -113,7 +113,7 @@
 - **[GitHub Actions Docs](https://docs.github.com/en/actions)** - Documentation
 - **[Workflow Syntax](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)** - YAML reference
 - **[GitHub Skills](https://skills.github.com/)** - Interactive courses
-- **[GitHub Certifications](https://resources.github.com/learn/certifications/)** - Registration
+- **[GitHub Certifications](https://learn.github.com/certifications)** - Registration
 
 ---
 

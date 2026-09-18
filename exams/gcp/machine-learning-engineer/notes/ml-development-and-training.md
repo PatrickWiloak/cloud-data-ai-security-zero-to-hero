@@ -3244,7 +3244,7 @@ model.fit(...)
 
 ## Additional Resources
 
-- [Vertex AI Documentation](https://cloud.google.com/vertex-ai/docs)
+- [Vertex AI Documentation](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
 - [AutoML Documentation](https://cloud.google.com/automl/docs)
 - [BigQuery ML](https://cloud.google.com/bigquery-ml/docs)
 - [ML Best Practices](https://cloud.google.com/architecture/ml-on-gcp-best-practices)

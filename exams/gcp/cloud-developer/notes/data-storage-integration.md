@@ -3916,7 +3916,7 @@ def operation_with_backoff():
 - [Cloud SQL Best Practices](https://cloud.google.com/sql/docs/postgres/best-practices)
 - [Firestore Data Model](https://firebase.google.com/docs/firestore/data-model)
 - [Pub/Sub Documentation](https://cloud.google.com/pubsub/docs)
-- [Memorystore Best Practices](https://cloud.google.com/memorystore/docs/redis/redis-best-practices)
+- [Memorystore Best Practices](https://docs.cloud.google.com/memorystore/docs/redis/memory-management-best-practices)
 - [Bigtable Schema Design](https://cloud.google.com/bigtable/docs/schema-design)
 - [Cloud Spanner Best Practices](https://cloud.google.com/spanner/docs/best-practice-list)
 - [Professional Cloud Developer Exam Guide](https://cloud.google.com/certification/cloud-developer)

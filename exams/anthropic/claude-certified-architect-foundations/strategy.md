@@ -164,7 +164,7 @@ Consolidate knowledge, practice exam-style questions, and fill any remaining gap
 | **[Anthropic Academy](https://anthropic.skilljar.com)** | Official training - closely aligned with exam |
 | **[Anthropic Docs](https://docs.anthropic.com)** | Primary source of truth for all topics |
 | **[MCP Specification](https://modelcontextprotocol.io)** | Required for Domain 4 |
-| **[Claude Code Docs](https://docs.anthropic.com/en/docs/claude-code)** | Required for Domain 2 |
+| **[Claude Code Docs](https://code.claude.com/docs)** | Required for Domain 2 |
 
 ### Should-Have (Supplementary)
 
@@ -179,7 +179,7 @@ Consolidate knowledge, practice exam-style questions, and fill any remaining gap
 | Resource | Why |
 |---|---|
 | **[Claude API SDK (Python)](https://github.com/anthropics/anthropic-sdk-python)** | SDK source and examples |
-| **[Claude API SDK (TypeScript)](https://github.com/anthropics/anthropic-sdk-node)** | SDK source and examples |
+| **[Claude API SDK (TypeScript)](https://github.com/anthropics/anthropic-sdk-typescript)** | SDK source and examples |
 | **[Claude Code Source](https://github.com/anthropics/claude-code)** | Understanding Claude Code internals |
 
 ---

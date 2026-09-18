@@ -86,7 +86,7 @@ NVIDIA NeMo Framework is an end-to-end platform for building, training, fine-tun
 - 13B model: TP=2, PP=1, DP=4 on 8 GPUs
 - 70B model: TP=8, PP=4, DP=4 on 128 GPUs
 
-**[📖 NeMo Parallelism Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/parallelisms.html)** - Distributed training strategies
+**[📖 NeMo Parallelism Guide](https://docs.nvidia.com/nemo/megatron-bridge/latest/parallelisms.html)** - Distributed training strategies
 **[📖 Megatron Core Documentation](https://docs.nvidia.com/megatron-core/developer-guide/latest/index.html)** - Megatron distributed training library
 
 ### 4. Training Configuration

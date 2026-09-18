@@ -1,6 +1,6 @@
 # Advanced Performance Tuning
 
-**[📖 Performance Optimization](https://docs.snowflake.com/en/user-guide/performance-query)** - Query optimization guide
+**[📖 Performance Optimization](https://docs.snowflake.com/en/guides-overview-performance)** - Query optimization guide
 
 ## Overview
 

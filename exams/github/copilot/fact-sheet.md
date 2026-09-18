@@ -15,7 +15,7 @@ last-updated: 2026-05-03
 **Prerequisites:** None (Git and IDE familiarity recommended)
 **Validity:** 2 years
 
-**[Official Exam Page](https://resources.github.com/learn/certifications/)** - Registration and details
+**[Official Exam Page](https://learn.github.com/certifications)** - Registration and details
 **[GitHub Copilot Documentation](https://docs.github.com/en/copilot)** - Product docs
 **[Copilot Trust Center](https://resources.github.com/copilot-trust-center/)** - Privacy and security
 
@@ -153,7 +153,7 @@ GitHub Copilot is an AI pair programmer that provides code completions, chat-bas
 | `/clear` | Clear chat context |
 | `/help` | List chat commands |
 
-**[Chat Cheat Sheet](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat-in-ides/github-copilot-chat-cheat-sheet)** - Chat reference
+**[Chat Cheat Sheet](https://docs.github.com/en/copilot/reference/chat-cheat-sheet)** - Chat reference
 
 ### Agents and Context Variables
 

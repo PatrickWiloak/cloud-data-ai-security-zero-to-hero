@@ -61,7 +61,7 @@ The DP-900 exam validates foundational knowledge of core data concepts and Azure
 
 **[📖 Database Administrator Role](https://learn.microsoft.com/en-us/azure/architecture/data-guide/technology-choices/data-storage)** - Managing database availability, performance, and security
 
-**[📖 Data Engineer Role](https://learn.microsoft.com/en-us/training/modules/understand-data-engineering-azure/)** - Building and maintaining data pipelines and infrastructure
+**[📖 Data Engineer Role](https://learn.microsoft.com/en-us/training/career-paths/data-engineer)** - Building and maintaining data pipelines and infrastructure
 
 **[📖 Data Analyst Role](https://learn.microsoft.com/en-us/training/modules/data-analytics-microsoft/)** - Analyzing data and creating visualizations for business insights
 
@@ -78,7 +78,7 @@ The DP-900 exam validates foundational knowledge of core data concepts and Azure
 
 **[📖 Azure SQL Database Overview](https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview)** - Fully managed PaaS database engine with built-in intelligence
 
-**[📖 SQL Database Deployment Options](https://learn.microsoft.com/en-us/azure/azure-sql/database/database-deployment-options)** - Single database, elastic pools, and managed instances
+**[📖 SQL Database Deployment Options](https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview)** - Single database, elastic pools, and managed instances
 
 **[📖 SQL Database DTU-Based Model](https://learn.microsoft.com/en-us/azure/azure-sql/database/service-tiers-dtu)** - Database Transaction Units purchasing model
 
@@ -134,7 +134,7 @@ The DP-900 exam validates foundational knowledge of core data concepts and Azure
 
 **[📖 Database Normalization](https://learn.microsoft.com/en-us/office/troubleshoot/access/database-normalization-description)** - Organizing data to reduce redundancy and improve integrity
 
-**[📖 SQL Query Fundamentals](https://learn.microsoft.com/en-us/training/modules/explore-relational-data-azure/)** - SELECT, INSERT, UPDATE, DELETE operations
+**[📖 SQL Query Fundamentals](https://learn.microsoft.com/en-us/training/paths/azure-data-fundamentals-explore-core-data-concepts/)** - SELECT, INSERT, UPDATE, DELETE operations
 
 **[📖 Indexes and Performance](https://learn.microsoft.com/en-us/sql/relational-databases/indexes/indexes)** - Optimizing query performance with proper indexing
 

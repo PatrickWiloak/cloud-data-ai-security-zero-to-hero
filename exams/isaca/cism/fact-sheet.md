@@ -296,7 +296,7 @@ Avoid technical detail at the board level; translate to business outcomes.
 
 - **ISACA CISM page:** https://www.isaca.org/credentialing/cism
 - **CISM Exam Content Outline:** https://www.isaca.org/credentialing/cism/cism-exam-content-outline
-- **ISACA Code of Professional Ethics:** https://www.isaca.org/credentialing/code-of-professional-ethics
+- **ISACA Code of Professional Ethics:** https://www.isaca.org/code-of-professional-ethics
 - **NIST publications:** https://csrc.nist.gov/publications
 - **ISO standards catalog:** https://www.iso.org/standards.html
 

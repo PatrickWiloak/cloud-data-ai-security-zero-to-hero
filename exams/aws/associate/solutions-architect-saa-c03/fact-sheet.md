@@ -412,7 +412,7 @@ This domain focuses on selecting cost-effective resources and architectures.
 - **Storage Gateway**: Hybrid cloud storage
 
 **📖 [AWS Storage Services](https://aws.amazon.com/products/storage/)** - Storage overview
-**📖 [Storage Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/WhatIsStorageGateway.html)** - Hybrid storage
+**📖 [Storage Gateway](https://docs.aws.amazon.com/storagegateway/)** - Hybrid storage
 
 ### Database
 - **RDS**: Managed relational databases

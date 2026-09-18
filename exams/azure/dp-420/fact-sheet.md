@@ -103,7 +103,7 @@ last-updated: 2026-05-03
 
 ### Advanced Partitioning
 - **[📖 Hierarchical Partition Keys](https://learn.microsoft.com/en-us/azure/cosmos-db/hierarchical-partition-keys)** - Multi-level partitioning for improved distribution
-- **[📖 Hot Partition Detection and Mitigation](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/troubleshoot-request-rate-too-large)** - Identifying and fixing hot partition issues
+- **[📖 Hot Partition Detection and Mitigation](https://learn.microsoft.com/en-us/azure/cosmos-db/troubleshoot-request-rate-too-large)** - Identifying and fixing hot partition issues
 - **[📖 Partition Key Strategies by Workload](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/model-partition-example#choosing-a-partition-key)** - Patterns for different application types
 - **[📖 Cross-Partition Queries](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/how-to-query-container#cross-partition-query)** - Understanding and optimizing cross-partition operations
 
@@ -184,8 +184,8 @@ last-updated: 2026-05-03
 ### .NET SDK
 - **[📖 Azure Cosmos DB .NET SDK v3](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/sdk-dotnet-v3)** - Primary SDK for .NET applications
 - **[📖 .NET SDK Best Practices](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/best-practice-dotnet)** - Performance optimization for .NET developers
-- **[📖 Bulk Operations in .NET](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/how-to-use-bulk-executor-dotnet)** - High-throughput batch operations
-- **[📖 Transactional Batch in .NET](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/transactional-batch)** - ACID transactions within a partition
+- **[📖 Bulk Operations in .NET](https://learn.microsoft.com/en-us/azure/cosmos-db/gremlin/bulk-executor-dotnet)** - High-throughput batch operations
+- **[📖 Transactional Batch in .NET](https://learn.microsoft.com/en-us/azure/cosmos-db/transactional-batch)** - ACID transactions within a partition
 
 ### Java SDK
 - **[📖 Azure Cosmos DB Java SDK v4](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/sdk-java-v4)** - Modern async SDK for Java developers
@@ -224,7 +224,7 @@ last-updated: 2026-05-03
 - **[📖 Performance Tips for NoSQL API](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/performance-tips)** - General performance optimization strategies
 - **[📖 Query Performance Optimization](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/query/performance-tips)** - Reducing RU costs in queries
 - **[📖 Bulk Import Performance](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/how-to-use-bulk-executor-overview)** - High-performance data ingestion
-- **[📖 SDK Performance Benchmarks](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/performance-benchmarks-dotnet-v3)** - Understanding SDK performance characteristics
+- **[📖 SDK Performance Benchmarks](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/performance-tips-dotnet-sdk-v3)** - Understanding SDK performance characteristics
 
 ### Analytical Store and HTAP
 - **[📖 Azure Synapse Link for Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/synapse-link)** - Hybrid transactional and analytical processing
@@ -248,7 +248,7 @@ last-updated: 2026-05-03
 
 ### Availability and SLAs
 - **[📖 High Availability in Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/high-availability)** - Understanding 99.999% availability SLA
-- **[📖 SLA for Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/sla)** - Comprehensive service level agreements
+- **[📖 SLA for Azure Cosmos DB](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services)** - Comprehensive service level agreements
 - **[📖 Availability Zones](https://learn.microsoft.com/en-us/azure/cosmos-db/high-availability#availability-zones)** - Zone-redundant deployments
 
 ---
@@ -290,7 +290,7 @@ last-updated: 2026-05-03
 
 ### Troubleshooting
 - **[📖 Troubleshooting Guide](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/troubleshoot-dotnet-sdk)** - Common issues and resolutions for .NET SDK
-- **[📖 Rate Limiting (429) Errors](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/troubleshoot-request-rate-too-large)** - Understanding and fixing throughput exceeded errors
+- **[📖 Rate Limiting (429) Errors](https://learn.microsoft.com/en-us/azure/cosmos-db/troubleshoot-request-rate-too-large)** - Understanding and fixing throughput exceeded errors
 - **[📖 Connection Issues](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/troubleshoot-service-unavailable)** - Diagnosing connectivity problems
 - **[📖 Performance Diagnostics](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/performance-diagnostics)** - Using built-in diagnostics tools
 
@@ -338,7 +338,7 @@ last-updated: 2026-05-03
 - **[📖 Backup Overview](https://learn.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore)** - Automatic continuous backup
 - **[📖 Point-in-Time Restore](https://learn.microsoft.com/en-us/azure/cosmos-db/continuous-backup-restore-introduction)** - Restoring data to any point in time
 - **[📖 Periodic Backup Mode](https://learn.microsoft.com/en-us/azure/cosmos-db/periodic-backup-restore-introduction)** - Traditional scheduled backup approach
-- **[📖 Restore Cosmos DB Account](https://learn.microsoft.com/en-us/azure/cosmos-db/how-to-restore-account-continuous-backup)** - Recovery procedures and best practices
+- **[📖 Restore Cosmos DB Account](https://learn.microsoft.com/en-us/azure/cosmos-db/continuous-backup-restore-introduction)** - Recovery procedures and best practices
 
 ### Compliance and Governance
 - **[📖 Compliance Certifications](https://learn.microsoft.com/en-us/azure/cosmos-db/compliance)** - Industry standards and regulatory compliance

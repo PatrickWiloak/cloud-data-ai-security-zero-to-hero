@@ -498,7 +498,7 @@ Listen while commuting, exercising, or doing chores to maximize learning time.
 - **Frequency:** Bi-weekly
 - **Length:** 30-40 minutes
 - **Focus:** Cloud security practices, compliance
-- **Link:** [cloud.google.com/podcasts/cloud-security-podcast](https://cloud.google.com/podcasts/cloud-security-podcast)
+- **Link:** [cloud.google.com/podcasts/cloud-security-podcast](https://cloud.withgoogle.com/cloudsecurity/podcast/)
 
 ---
 

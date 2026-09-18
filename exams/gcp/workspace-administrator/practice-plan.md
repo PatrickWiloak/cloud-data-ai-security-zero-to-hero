@@ -142,7 +142,7 @@
 - **[Professional Workspace Admin Exam Page](https://cloud.google.com/certification/workspace-administrator)** - Registration
 - **[Google Workspace Admin Help](https://support.google.com/a)** - Official documentation
 - **[Google Cloud Skills Boost](https://www.cloudskillsboost.google/)** - Hands-on labs
-- **[Google Workspace Trial](https://workspace.google.com/business/signup/)** - 14-day free trial
+- **[Google Workspace Trial](https://workspace.google.com/business/)** - 14-day free trial
 
 ### Recommended Resources
 - **Google Workspace Admin Help (FREE)** - Official documentation

@@ -66,7 +66,7 @@
 
 ### Supplementary Resources
 - **[Events Reference](https://docs.github.com/en/actions/reference/events-that-trigger-workflows)** - All trigger events
-- **[Expressions](https://docs.github.com/en/actions/reference/expressions)** - Expression syntax
+- **[Expressions](https://docs.github.com/en/actions/reference/workflows-and-actions/expressions)** - Expression syntax
 - **[Creating Actions](https://docs.github.com/en/actions/creating-actions)** - Custom action development
 - **[Self-Hosted Runners](https://docs.github.com/en/actions/hosting-your-own-runners)** - Runner documentation
 - **[OIDC](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments)** - Security hardening

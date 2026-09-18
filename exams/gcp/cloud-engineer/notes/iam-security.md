@@ -61,7 +61,7 @@
 - Avoid downloading keys
 
 **[📖 Service Accounts](https://cloud.google.com/iam/docs/service-accounts)** - Service account documentation
-**[📖 Service Account Best Practices](https://docs.cloud.google.com/iam/docs/using-iam-securely-service-accounts)** - Security best practices
+**[📖 Service Account Best Practices](https://docs.cloud.google.com/iam/docs/best-practices-service-accounts)** - Security best practices
 
 **Service Account Keys**:
 - JSON or P12 format

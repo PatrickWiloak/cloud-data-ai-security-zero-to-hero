@@ -28,7 +28,7 @@ last-updated: 2026-05-03
 - **[📖 IBM Cloud Compliance](https://www.ibm.com/cloud/compliance)**
 - **[📖 IBM Security Learning](https://www.ibm.com/security/services/education)**
 - **[📖 IBM Cloud Learning](https://www.ibm.com/training/cloud)**
-- **[📖 Pearson VUE Testing](https://home.pearsonvue.com/ibm)**
+- **[📖 Pearson VUE Testing](https://www.pearsonvue.com/us/en/ibm.html)**
 - **[📖 IBM Cloud Certification Hub](https://www.ibm.com/training/cloud/certification)**
 
 ## Exam Domains
@@ -83,10 +83,10 @@ last-updated: 2026-05-03
 - **[📖 HPCS API](https://cloud.ibm.com/apidocs/hs-crypto)**
 - **[📖 Bring Your Own Key](https://cloud.ibm.com/docs/key-protect?topic=key-protect-importing-keys)**
 - **[📖 Keep Your Own Key](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-introduction)**
-- **[📖 Certificate Manager](https://cloud.ibm.com/docs/certificate-manager)**
+- **[📖 Certificate Manager](https://cloud.ibm.com/docs/secrets-manager)**
 - **[📖 Secrets Manager](https://cloud.ibm.com/docs/secrets-manager)**
 - **[📖 Secrets Manager API](https://cloud.ibm.com/apidocs/secrets-manager)**
-- **[📖 SSL/TLS Certificates](https://cloud.ibm.com/docs/certificate-manager?topic=certificate-manager-about-certificate-manager)**
+- **[📖 SSL/TLS Certificates](https://cloud.ibm.com/docs/secrets-manager)**
 - **[📖 Data Classification](https://www.ibm.com/cloud/architecture/architectures/dataClassification)**
 
 ### 3. Network Security (20%)
@@ -137,9 +137,9 @@ last-updated: 2026-05-03
 - **[📖 Compliance Posture Management](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-posture-management)**
 - **[📖 Compliance Profiles](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-predefined-profiles)**
 - **[📖 Custom Profiles](https://cloud.ibm.com/docs/security-compliance?topic=security-compliance-custom-profiles)**
-- **[📖 Activity Tracker](https://cloud.ibm.com/docs/activity-tracker)**
-- **[📖 Activity Tracker Events](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-cloud_services)**
-- **[📖 Log Analysis](https://cloud.ibm.com/docs/log-analysis)**
+- **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
+- **[📖 Activity Tracker Events](https://cloud.ibm.com/docs/atracker)**
+- **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
 - **[📖 Security Monitoring](https://cloud.ibm.com/docs/monitoring)**
 - **[📖 Flow Logs](https://cloud.ibm.com/docs/vpc?topic=vpc-flow-logs)**
 - **[📖 Compliance Programs](https://www.ibm.com/cloud/compliance)**
@@ -147,7 +147,7 @@ last-updated: 2026-05-03
 - **[📖 SOC 2](https://www.ibm.com/cloud/compliance/soc-2)**
 - **[📖 GDPR Compliance](https://www.ibm.com/cloud/compliance/gdpr)**
 - **[📖 HIPAA Compliance](https://www.ibm.com/cloud/compliance/hipaa)**
-- **[📖 PCI DSS](https://www.ibm.com/cloud/compliance/pci-dss)**
+- **[📖 PCI DSS](https://www.ibm.com/products/cloud/compliance/pci)**
 
 ### 5. Application and Container Security (10%)
 - Container image security
@@ -207,7 +207,7 @@ last-updated: 2026-05-03
 - **[📖 Key Protect](https://cloud.ibm.com/docs/key-protect)**
 - **[📖 Hyper Protect Crypto Services](https://cloud.ibm.com/docs/hs-crypto)**
 - **[📖 Secrets Manager](https://cloud.ibm.com/docs/secrets-manager)**
-- **[📖 Certificate Manager](https://cloud.ibm.com/docs/certificate-manager)**
+- **[📖 Certificate Manager](https://cloud.ibm.com/docs/secrets-manager)**
 
 ### Network Security Services
 - **[📖 Security Groups](https://cloud.ibm.com/docs/vpc?topic=vpc-using-security-groups)**
@@ -217,8 +217,8 @@ last-updated: 2026-05-03
 
 ### Monitoring and Compliance Services
 - **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance)**
-- **[📖 Activity Tracker](https://cloud.ibm.com/docs/activity-tracker)**
-- **[📖 Log Analysis](https://cloud.ibm.com/docs/log-analysis)**
+- **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
+- **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
 - **[📖 Monitoring](https://cloud.ibm.com/docs/monitoring)**
 
 ## Security Architecture Patterns
@@ -611,7 +611,7 @@ ibmcloud cr vulnerability-assessment
 - **[📖 SOC 2 Reports](https://www.ibm.com/cloud/compliance/soc-2)**
 - **[📖 GDPR Resources](https://www.ibm.com/cloud/compliance/gdpr)**
 - **[📖 HIPAA Resources](https://www.ibm.com/cloud/compliance/hipaa)**
-- **[📖 PCI DSS](https://www.ibm.com/cloud/compliance/pci-dss)**
+- **[📖 PCI DSS](https://www.ibm.com/products/cloud/compliance/pci)**
 
 ## Important Exam Topics by Priority
 

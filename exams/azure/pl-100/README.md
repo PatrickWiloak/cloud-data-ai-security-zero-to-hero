@@ -132,7 +132,7 @@ The Power Platform App Maker Associate certification validates your ability to d
 - **[PL-100 Official Exam Page](https://learn.microsoft.com/en-us/certifications/exams/pl-100/)** - Registration
 - **[Microsoft Learn - PL-100 Learning Path](https://learn.microsoft.com/en-us/certifications/power-platform-app-maker/)** - FREE study path
 - **[Power Apps Documentation](https://docs.microsoft.com/en-us/powerapps/)** - Complete documentation
-- **[Power Apps Community Plan](https://powerapps.microsoft.com/en-us/communityplan/)** - Free development environment
+- **[Power Apps Community Plan](https://www.microsoft.com/en-us/power-platform/products/power-apps/free)** - Free development environment
 
 ## Prerequisites and Next Steps
 

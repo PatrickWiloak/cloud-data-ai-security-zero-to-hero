@@ -219,7 +219,7 @@ The single biggest factor in passing CCNA is **subnetting fluency** + **simulato
 - [ ] Review every wrong answer
 
 ### Schedule the exam
-- [ ] Book through [Pearson VUE](https://home.pearsonvue.com/cisco)
+- [ ] Book through [Pearson VUE](https://www.pearsonvue.com/us/en/cisco.html)
 - [ ] Choose testing center or online proctor
 - [ ] Budget for 120 minutes plus 15 minutes check-in
 

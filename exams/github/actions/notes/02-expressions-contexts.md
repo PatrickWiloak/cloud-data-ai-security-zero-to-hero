@@ -1,7 +1,7 @@
 # Expressions and Contexts
 
-**[📖 Expressions](https://docs.github.com/en/actions/reference/expressions)** - Expression syntax reference
-**[📖 Contexts](https://docs.github.com/en/actions/reference/contexts)** - Available contexts
+**[📖 Expressions](https://docs.github.com/en/actions/reference/workflows-and-actions/expressions)** - Expression syntax reference
+**[📖 Contexts](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts)** - Available contexts
 
 ## Expression Syntax
 

@@ -114,8 +114,8 @@ This certification is designed for:
 ### Foundation Model APIs
 
 **[📖 Foundation Models](https://docs.databricks.com/en/machine-learning/foundation-models/index.html)** - Model serving overview
-**[📖 Pay-per-Token](https://docs.databricks.com/en/machine-learning/foundation-models/deploy-ppt-models.html)** - Pay-per-token models
-**[📖 Provisioned Throughput](https://docs.databricks.com/en/machine-learning/foundation-models/deploy-provisioned-throughput-foundation-models.html)** - Dedicated capacity
+**[📖 Pay-per-Token](https://docs.databricks.com/aws/en/machine-learning/foundation-model-apis/supported-models)** - Pay-per-token models
+**[📖 Provisioned Throughput](https://docs.databricks.com/aws/en/machine-learning/foundation-model-apis/deploy-prov-throughput-foundation-model-apis)** - Dedicated capacity
 
 **Key Facts:**
 - Pay-per-token: shared compute, pay for tokens used (variable latency)
@@ -158,7 +158,7 @@ This certification is designed for:
 ### MLflow for GenAI
 
 **[📖 MLflow Tracing](https://docs.databricks.com/en/mlflow/llm-tracing.html)** - LLM observability
-**[📖 MLflow GenAI](https://docs.databricks.com/en/mlflow/log-model.html)** - Logging GenAI models
+**[📖 MLflow GenAI](https://docs.databricks.com/aws/en/mlflow/logged-model)** - Logging GenAI models
 
 **Key Facts:**
 - MLflow Tracing: traces LLM calls for debugging and monitoring
@@ -193,7 +193,7 @@ This certification is designed for:
 
 ### Governance for GenAI
 
-**[📖 AI Governance](https://docs.databricks.com/en/generative-ai/governance.html)** - GenAI governance
+**[📖 AI Governance](https://docs.databricks.com/aws/en/ai-gateway/ai-governance)** - GenAI governance
 **[📖 Unity Catalog Models](https://docs.databricks.com/en/mlflow/models-in-uc.html)** - Model governance
 
 **Key Facts:**

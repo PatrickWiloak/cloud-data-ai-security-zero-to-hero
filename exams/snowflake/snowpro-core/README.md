@@ -204,7 +204,7 @@ This domain tests practical Snowflake SQL knowledge:
 ## Official Resources
 
 - **[Snowflake Documentation](https://docs.snowflake.com/)** - Primary study resource
-- **[SnowPro Core Study Guide](https://learn.snowflake.com/en/certifications/snowpro-core/)** - Official exam page
+- **[SnowPro Core Study Guide](https://learn.snowflake.com/en/certifications/)** - Official exam page
 - **[Snowflake University](https://learn.snowflake.com/)** - Free training courses
 - **[Snowflake Community](https://community.snowflake.com/)** - Forums and discussions
 - **[Snowflake Hands-on Essentials](https://learn.snowflake.com/)** - Free guided labs

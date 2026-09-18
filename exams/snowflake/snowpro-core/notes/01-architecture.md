@@ -19,7 +19,7 @@ Snowflake's architecture separates storage, compute, and cloud services into thr
 - Storage is billed monthly based on average compressed data
 
 **[📖 Micro-Partitions](https://docs.snowflake.com/en/user-guide/tables-clustering-micropartitions)** - Partition internals
-**[📖 Data Storage](https://docs.snowflake.com/en/user-guide/data-storage-considerations)** - Storage pricing model
+**[📖 Data Storage](https://docs.snowflake.com/en/user-guide/tables-storage-considerations)** - Storage pricing model
 
 #### Micro-Partition Details
 - Each partition stores 50-500 MB of uncompressed data

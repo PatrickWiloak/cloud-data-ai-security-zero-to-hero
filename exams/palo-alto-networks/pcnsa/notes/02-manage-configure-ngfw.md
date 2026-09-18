@@ -103,5 +103,5 @@ trade-off between visibility and privacy is a legitimate exam theme.
 ## Official documentation
 
 **[📖 PAN-OS Administrator's Guide](https://docs.paloaltonetworks.com/pan-os)** - configuration reference
-**[📖 PAN-OS upgrade guidance](https://docs.paloaltonetworks.com/pan-os/upgrade)** - supported upgrade paths
+**[📖 PAN-OS upgrade guidance](https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-upgrade)** - supported upgrade paths
 **[📖 High availability](https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-admin/high-availability)** - HA modes and link roles

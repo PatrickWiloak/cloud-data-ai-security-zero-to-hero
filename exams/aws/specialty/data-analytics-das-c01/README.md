@@ -70,7 +70,7 @@ If you currently hold the DAS-C01 certification:
 
 ### Official AWS Data Resources
 - **[AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/)** - Latest data services and best practices
-- **[AWS Data Engineer Learning Path](https://aws.amazon.com/training/learning-paths/data-engineer/)** - Recommended courses
+- **[AWS Data Engineer Learning Path](https://aws.amazon.com/training/learn-about/data-analytics/)** - Recommended courses
 - **[AWS Skill Builder](https://skillbuilder.aws/)** - Free and paid data engineering courses
 - **[AWS Data Analytics Documentation](https://docs.aws.amazon.com/)** - Service documentation
 

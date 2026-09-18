@@ -1,7 +1,7 @@
 # Security and Access Control
 
-**[📖 Atlas Security](https://www.mongodb.com/docs/atlas/security/)** - Security documentation
-**[📖 Atlas Access Management](https://www.mongodb.com/docs/atlas/access/)** - Access control guide
+**[📖 Atlas Security](https://www.mongodb.com/docs/atlas/setup-cluster-security/)** - Security documentation
+**[📖 Atlas Access Management](https://www.mongodb.com/docs/atlas/access/manage-org-users/)** - Access control guide
 
 ## Network Security
 

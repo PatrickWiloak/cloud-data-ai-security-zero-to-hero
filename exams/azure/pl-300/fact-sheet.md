@@ -97,7 +97,7 @@ It also fills a career-path gap. Not everyone entering data work starts as an en
 - Analyze in Excel, paginated report basics, and when a paginated report is the right tool
 - Identifying outliers, trends, and correlations from a report
 
-**[📖 Power BI visualizations](https://learn.microsoft.com/en-us/power-bi/visuals/)** - visual types and configuration
+**[📖 Power BI visualizations](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualizations-overview)** - visual types and configuration
 **[📖 Report accessibility](https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-accessibility-creating-reports)** - accessible report design
 
 ### Domain 4: Manage and secure Power BI (15-20%)

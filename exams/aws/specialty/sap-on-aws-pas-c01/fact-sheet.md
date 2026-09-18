@@ -55,8 +55,8 @@ This is the largest domain, covering SAP architecture design on AWS.
 - SAP Web Dispatcher
 - SAP Router and landscape connectivity
 
-**📖 [SAP on AWS Architecture](https://aws.amazon.com/sap/solutions/)** - Reference architectures
-**📖 [SAP HANA on AWS](https://aws.amazon.com/sap/solutions/saphana/)** - HANA deployment
+**📖 [SAP on AWS Architecture](https://aws.amazon.com/sap/)** - Reference architectures
+**📖 [SAP HANA on AWS](https://aws.amazon.com/sap/)** - HANA deployment
 **📖 [SAP NetWeaver on AWS](https://docs.aws.amazon.com/sap/latest/general/arch-guide-architecture-guidelines-and-decisions.html)** - NetWeaver architecture
 **📖 [SAP System Requirements](https://docs.aws.amazon.com/sap/latest/general/system-requirements.html)** - Planning requirements
 

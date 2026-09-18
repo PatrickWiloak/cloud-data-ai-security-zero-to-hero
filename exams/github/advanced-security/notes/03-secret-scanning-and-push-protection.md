@@ -81,7 +81,7 @@ Each bypass is recorded in the audit log.
 - Configured at org level
 - Used in regulated environments where developers should not self-approve
 
-**[Push Protection](https://docs.github.com/en/code-security/secret-scanning/using-advanced-secret-scanning-and-push-protection-features/push-protection-for-repositories-and-organizations)** - Push protection guide
+**[Push Protection](https://docs.github.com/en/code-security/concepts/secret-security/push-protection)** - Push protection guide
 
 ## Alert Lifecycle
 
@@ -109,7 +109,7 @@ Scope: Organization (applies to every repo in the org).
 
 Testing: dry-run against existing repos before enabling push protection for the pattern.
 
-**[Custom Patterns](https://docs.github.com/en/code-security/secret-scanning/using-advanced-secret-scanning-and-push-protection-features/custom-patterns/about-custom-patterns)** - Custom pattern guide
+**[Custom Patterns](https://docs.github.com/en/code-security/concepts/secret-security/custom-patterns)** - Custom pattern guide
 
 ## Non-Provider Patterns
 

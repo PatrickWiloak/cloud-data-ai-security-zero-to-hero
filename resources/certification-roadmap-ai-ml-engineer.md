@@ -296,5 +296,5 @@ Salary ranges are approximate for the US market (2025).
 - Hugging Face Documentation: https://huggingface.co/docs
 - MLflow Documentation: https://mlflow.org/docs/latest/
 - AWS SageMaker: https://docs.aws.amazon.com/sagemaker/
-- Vertex AI: https://cloud.google.com/vertex-ai/docs
+- Vertex AI: https://docs.cloud.google.com/gemini-enterprise-agent-platform
 - Azure ML: https://learn.microsoft.com/en-us/azure/machine-learning/

@@ -124,8 +124,8 @@ This certification is designed for:
 ### Distributed Training
 
 **[📖 TorchDistributor](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/)** - PyTorch distributed
-**[📖 DeepSpeed](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/deepspeed.html)** - Large model training
-**[📖 Horovod](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/horovod-runner.html)** - Horovod integration
+**[📖 DeepSpeed](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/deepspeed)** - Large model training
+**[📖 Horovod](https://docs.databricks.com/aws/en/archive/machine-learning/train-model/horovod-runner)** - Horovod integration
 
 **Key Facts:**
 - Data parallelism: replicate model, split data across workers

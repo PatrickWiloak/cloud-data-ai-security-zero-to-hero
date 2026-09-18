@@ -5,7 +5,7 @@ This domain covers implementing security controls in cloud environments, includi
 
 ## Identity and Access Management (IAM)
 
-**[📖 NIST SP 800-63 - Digital Identity Guidelines](https://csrc.nist.gov/publications/detail/sp/800-63-3/final)** - Comprehensive identity and authentication guidance
+**[📖 NIST SP 800-63 - Digital Identity Guidelines](https://csrc.nist.gov/pubs/sp/800/63/3/final)** - Comprehensive identity and authentication guidance
 
 ### Authentication
 

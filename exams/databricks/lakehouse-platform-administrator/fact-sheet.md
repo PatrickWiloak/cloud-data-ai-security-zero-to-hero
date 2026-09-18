@@ -14,7 +14,7 @@ last-updated: 2026-05-03
 **Delivery:** Online proctored
 **Valid For:** 2 years
 
-**[📖 Official Exam Page](https://www.databricks.com/learn/certification/lakehouse-platform-administrator)** - Registration and exam details
+**[📖 Official Exam Page](https://www.databricks.com/learn/training/certification)** - Registration and exam details
 **[📖 Databricks Academy](https://www.databricks.com/learn)** - Administration learning paths
 **[📖 Administration Guide](https://docs.databricks.com/en/admin/index.html)** - Admin documentation
 
@@ -228,7 +228,7 @@ This certification is designed for:
 ### Network Security
 
 **[📖 Network Security](https://docs.databricks.com/en/security/network/index.html)** - Network configuration
-**[📖 Private Link](https://docs.databricks.com/en/security/network/classic/private-link.html)** - Private connectivity
+**[📖 Private Link](https://docs.databricks.com/aws/en/security/network/classic/privatelink)** - Private connectivity
 **[📖 IP Access Lists](https://docs.databricks.com/en/security/network/front-end/ip-access-list.html)** - IP restrictions
 
 **Key Facts:**

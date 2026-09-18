@@ -129,7 +129,7 @@ If you are still learning the Messages API or the basics of MCP, start with [CCA
 | Files API | https://docs.anthropic.com/en/docs/build-with-claude/files |
 | Tool Use | https://docs.anthropic.com/en/docs/build-with-claude/tool-use |
 | Computer Use | https://docs.anthropic.com/en/docs/build-with-claude/computer-use |
-| Memory Tool | https://docs.anthropic.com/en/docs/build-with-claude/tool-use/memory-tool |
+| Memory Tool | https://platform.claude.com/docs/en/agents-and-tools/tool-use/memory-tool |
 | MCP Spec | https://modelcontextprotocol.io |
 | Claude on Bedrock | https://docs.anthropic.com/en/api/claude-on-amazon-bedrock |
 | Claude on Vertex | https://docs.anthropic.com/en/api/claude-on-vertex-ai |

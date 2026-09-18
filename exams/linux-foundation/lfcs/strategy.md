@@ -56,7 +56,7 @@
 ### Official
 - **[📖 LFCS Certification Page](https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/)** - Exam details
 - **[📖 LFCS Exam Domains](https://training.linuxfoundation.org/certification/linux-foundation-certified-sysadmin-lfcs/#domains)** - Exam objectives
-- **[📖 LFS201 Training Course](https://training.linuxfoundation.org/training/essentials-of-linux-system-administration/)** - Official training
+- **[📖 LFS201 Training Course](https://training.linuxfoundation.org/training/linux-system-administration-essentials-lfs207/)** - Official training
 - **[📖 LFCS Candidate Handbook](https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2)** - Exam rules
 
 ### Practice Environments
@@ -68,7 +68,7 @@
 ### Reference Documentation
 - **[📖 Ubuntu Server Guide](https://ubuntu.com/server/docs)** - Ubuntu server administration
 - **[📖 GNU Coreutils Manual](https://www.gnu.org/software/coreutils/manual/)** - Essential command reference
-- **[📖 systemd Documentation](https://www.freedesktop.org/software/systemd/man/)** - systemd reference
+- **[📖 systemd Documentation](https://www.freedesktop.org/software/systemd/man/latest/)** - systemd reference
 - **[📖 Linux man pages online](https://man7.org/linux/man-pages/)** - Online man pages
 
 ### Books

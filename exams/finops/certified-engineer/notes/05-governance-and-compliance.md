@@ -1,6 +1,6 @@
 # Governance and Compliance
 
-**[📖 FinOps Capabilities - Cloud Policy and Governance](https://www.finops.org/framework/capabilities/cloud-policy-and-governance/)** - Governance capability
+**[📖 FinOps Capabilities - Cloud Policy and Governance](https://www.finops.org/framework/capabilities/governance-policy-risk/)** - Governance capability
 
 ## Overview
 

@@ -287,4 +287,4 @@ D. Cloud cannot use SAML
 - [GitHub Actions practice questions](./github-actions.md) - the Actions domain in depth
 - [GHAS practice questions](./github-advanced-security.md) - the security domain in depth
 - [GitHub Foundations practice questions](./github-foundations.md) - the fundamentals below this
-- **[📖 GitHub Certifications](https://resources.github.com/learn/certifications/)** - official exam pages
+- **[📖 GitHub Certifications](https://learn.github.com/certifications)** - official exam pages

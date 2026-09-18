@@ -73,13 +73,13 @@ last-updated: 2026-05-03
 
 ### Data Management
 
-**[📖 Import Data into Dataverse](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/import-data)** - Using import wizards and tools to load data
+**[📖 Import Data into Dataverse](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/import-export-data)** - Using import wizards and tools to load data
 
-**[📖 Export Data from Dataverse](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/export-data)** - Exporting data to Excel and other formats
+**[📖 Export Data from Dataverse](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/import-export-data)** - Exporting data to Excel and other formats
 
 **[📖 Duplicate Detection Rules](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/set-up-duplicate-detection-rules)** - Creating rules to prevent duplicate records
 
-**[📖 Bulk Delete Jobs](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/delete-bulk-records)** - Scheduling jobs to clean up old or unwanted records
+**[📖 Bulk Delete Jobs](https://learn.microsoft.com/en-us/power-platform/admin/delete-bulk-records)** - Scheduling jobs to clean up old or unwanted records
 
 **[📖 Data Import Wizard](https://learn.microsoft.com/en-us/power-apps/user/import-data)** - Step-by-step guide to importing CSV and Excel files
 
@@ -93,7 +93,7 @@ last-updated: 2026-05-03
 
 **[📖 Change Tracking](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/use-change-tracking-synchronize-data-external-systems)** - Tracking data changes for external synchronization
 
-**[📖 Data Types and Field Properties](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/entity-metadata)** - Understanding metadata and field-level properties
+**[📖 Data Types and Field Properties](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-edit-fields)** - Understanding metadata and field-level properties
 
 ---
 
@@ -149,7 +149,7 @@ last-updated: 2026-05-03
 
 **[📖 Dashboard Overview](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/create-edit-dashboards)** - Building interactive dashboards with multiple visualizations
 
-**[📖 System Dashboards](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/create-edit-system-dashboards)** - Creating organization-wide dashboards
+**[📖 System Dashboards](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/create-edit-dashboards)** - Creating organization-wide dashboards
 
 **[📖 Interactive Dashboards](https://learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/configure-interactive-experience-dashboards)** - Building real-time, filterable dashboards for operations teams
 
@@ -263,15 +263,15 @@ last-updated: 2026-05-03
 
 ### Expressions and Dynamic Content
 
-**[📖 Dynamic Content](https://learn.microsoft.com/en-us/power-automate/use-expressions-in-flow-designer)** - Using outputs from previous actions
+**[📖 Dynamic Content](https://learn.microsoft.com/en-us/power-automate/flows-designer)** - Using outputs from previous actions
 
 **[📖 Expression Functions](https://learn.microsoft.com/en-us/power-automate/use-expressions-in-conditions)** - String, math, date, and logical functions
 
-**[📖 Compose Action](https://learn.microsoft.com/en-us/power-automate/compose-action)** - Building and testing expressions
+**[📖 Compose Action](https://learn.microsoft.com/en-us/power-automate/data-operations)** - Building and testing expressions
 
 **[📖 Variables in Flows](https://learn.microsoft.com/en-us/power-automate/create-variable-store-values)** - Initialize, set, increment, and append to variables
 
-**[📖 Parse JSON](https://learn.microsoft.com/en-us/power-automate/parse-json)** - Working with JSON data structures
+**[📖 Parse JSON](https://learn.microsoft.com/en-us/power-automate/create-flow-solution)** - Working with JSON data structures
 
 ### Approvals and Notifications
 
@@ -287,9 +287,9 @@ last-updated: 2026-05-03
 
 ### Error Handling and Monitoring
 
-**[📖 Error Handling](https://learn.microsoft.com/en-us/power-automate/error-handling)** - Configure run after settings and scope actions
+**[📖 Error Handling](https://learn.microsoft.com/en-us/power-automate/guidance/coding-guidelines/error-handling)** - Configure run after settings and scope actions
 
-**[📖 Scope Actions](https://learn.microsoft.com/en-us/power-automate/error-handling#use-scopes-to-handle-errors)** - Grouping actions for error handling
+**[📖 Scope Actions](https://learn.microsoft.com/en-us/power-automate/guidance/coding-guidelines/error-handling)** - Grouping actions for error handling
 
 **[📖 Flow Run History](https://learn.microsoft.com/en-us/power-automate/fix-flow-failures)** - Monitoring and troubleshooting flows
 
@@ -407,7 +407,7 @@ last-updated: 2026-05-03
 
 **[📖 Import Solutions](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/import-update-export-solutions)** - Deploying solutions to target environments
 
-**[📖 Solution Patches](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/create-solution-patch)** - Creating incremental updates to managed solutions
+**[📖 Solution Patches](https://learn.microsoft.com/en-us/power-platform/alm/solution-concepts-alm)** - Creating incremental updates to managed solutions
 
 **[📖 Solution Clone](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/solution-clone)** - Cloning solutions for new versions
 
@@ -475,7 +475,7 @@ last-updated: 2026-05-03
 
 **[📖 Model-Driven App Performance](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/best-practices/)** - Best practices for model-driven apps
 
-**[📖 Power Automate Performance](https://learn.microsoft.com/en-us/power-automate/guidance/planning/performance-planning)** - Flow optimization strategies
+**[📖 Power Automate Performance](https://learn.microsoft.com/en-us/power-automate/guidance/desktop-flow-coding-guidelines/optimize-flow-performance)** - Flow optimization strategies
 
 ### Governance
 
@@ -497,7 +497,7 @@ last-updated: 2026-05-03
 
 **[📖 Microsoft Learn PL-200 Path](https://learn.microsoft.com/en-us/training/courses/pl-200t00)** - Free official training modules
 
-**[📖 Power Platform Community Plan](https://powerapps.microsoft.com/en-us/communityplan/)** - Free development environment for practice
+**[📖 Power Platform Community Plan](https://www.microsoft.com/en-us/power-platform/products/power-apps/free)** - Free development environment for practice
 
 **[📖 Power Platform Documentation](https://learn.microsoft.com/en-us/power-platform/)** - Complete platform documentation
 
@@ -505,7 +505,7 @@ last-updated: 2026-05-03
 
 **[📖 Power Apps Training Workshops](https://learn.microsoft.com/en-us/power-platform/developer/workshop)** - App in a Day and other workshops
 
-**[📖 Power Automate Training](https://learn.microsoft.com/en-us/power-automate/training/online-workshop)** - RPA in a Day workshop materials
+**[📖 Power Automate Training](https://learn.microsoft.com/en-us/training/powerplatform/power-automate)** - RPA in a Day workshop materials
 
 **[📖 Sample Apps and Flows](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/open-and-run-a-sample-app)** - Pre-built samples for learning
 

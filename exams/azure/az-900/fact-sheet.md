@@ -18,7 +18,7 @@ last-updated: 2026-05-03
 
 Cloud computing is the delivery of computing services over the internet, enabling faster innovation, flexible resources, and economies of scale.
 
-**[📖 What is Cloud Computing](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/what-is-cloud-computing)** - Introduction to cloud computing concepts and benefits
+**[📖 What is Cloud Computing](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-cloud-computing)** - Introduction to cloud computing concepts and benefits
 
 **[📖 Cloud Computing Services](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-cloud-computing/)** - Overview of cloud computing delivery models
 

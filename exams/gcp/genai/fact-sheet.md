@@ -192,7 +192,7 @@ last-updated: 2026-05-03
 - Demographic parity assessment
 - Bias detection in outputs
 - Inclusive dataset curation
-- **[📖 Responsible AI Toolkit](https://cloud.google.com/vertex-ai/docs/responsible-ai/overview)** - Fairness tools
+- **[📖 Responsible AI Toolkit](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/responsible-ai)** - Fairness tools
 
 ### Privacy and Governance
 

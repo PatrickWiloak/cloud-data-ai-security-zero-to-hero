@@ -152,7 +152,7 @@ The Databricks Certified Lakehouse Platform Administrator certification validate
 ## Study Resources
 
 - **[Databricks Academy](https://www.databricks.com/learn)** - Platform administration learning path
-- **[Exam Guide](https://www.databricks.com/learn/certification/lakehouse-platform-administrator)** - Official exam page
+- **[Exam Guide](https://www.databricks.com/learn/training/certification)** - Official exam page
 - **[Administration Guide](https://docs.databricks.com/en/admin/index.html)** - Admin documentation
 - **[Unity Catalog Documentation](https://docs.databricks.com/en/data-governance/unity-catalog/index.html)** - Unity Catalog guide
 - **[Security Guide](https://docs.databricks.com/en/security/index.html)** - Security best practices

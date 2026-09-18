@@ -139,7 +139,7 @@ The Power Platform Functional Consultant Associate certification validates your 
 - **[PL-200 Official Exam Page](https://learn.microsoft.com/en-us/certifications/exams/pl-200/)** - Registration
 - **[Microsoft Learn - PL-200 Learning Path](https://learn.microsoft.com/en-us/certifications/power-platform-functional-consultant-associate/)** - FREE study path
 - **[Power Platform Documentation](https://docs.microsoft.com/en-us/power-platform/)** - Complete documentation
-- **[Power Apps Community Plan](https://powerapps.microsoft.com/en-us/communityplan/)** - Free environment
+- **[Power Apps Community Plan](https://www.microsoft.com/en-us/power-platform/products/power-apps/free)** - Free environment
 
 ## Prerequisites and Next Steps
 

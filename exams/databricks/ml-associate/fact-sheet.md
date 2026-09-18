@@ -211,8 +211,8 @@ This certification is designed for:
 ### Deep Learning on Databricks
 
 **[📖 Deep Learning](https://docs.databricks.com/aws/en/machine-learning/train-model/deep-learning)** - DL overview
-**[📖 TensorFlow on Databricks](https://docs.databricks.com/en/machine-learning/deep-learning/tensorflow.html)** - TF integration
-**[📖 PyTorch on Databricks](https://docs.databricks.com/en/machine-learning/deep-learning/pytorch.html)** - PyTorch integration
+**[📖 TensorFlow on Databricks](https://docs.databricks.com/aws/en/machine-learning/train-model/tensorflow)** - TF integration
+**[📖 PyTorch on Databricks](https://docs.databricks.com/aws/en/machine-learning/train-model/pytorch)** - PyTorch integration
 
 **Key Facts:**
 - Single-node training: run TF/PyTorch on driver node with GPU

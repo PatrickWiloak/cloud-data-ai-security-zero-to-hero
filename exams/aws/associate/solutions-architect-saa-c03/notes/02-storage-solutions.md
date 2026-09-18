@@ -2,7 +2,7 @@
 
 ## Amazon S3 (Simple Storage Service)
 
-**[📖 Amazon S3 Documentation](https://docs.aws.amazon.com/s3/index.html)** - Complete guide to S3 storage and features
+**[📖 Amazon S3 Documentation](https://docs.aws.amazon.com/s3/)** - Complete guide to S3 storage and features
 
 ### Storage Classes
 
@@ -46,7 +46,7 @@
 
 ## Amazon EBS (Elastic Block Store)
 
-**[📖 Amazon EBS Documentation](https://docs.aws.amazon.com/ebs/index.html)** - Block storage for EC2 instances
+**[📖 Amazon EBS Documentation](https://docs.aws.amazon.com/ebs/)** - Block storage for EC2 instances
 
 ### Volume Types
 
@@ -81,7 +81,7 @@
 
 ## Amazon EFS (Elastic File System)
 
-**[📖 Amazon EFS Documentation](https://docs.aws.amazon.com/efs/index.html)** - Scalable, elastic file storage for Linux workloads
+**[📖 Amazon EFS Documentation](https://docs.aws.amazon.com/efs/)** - Scalable, elastic file storage for Linux workloads
 
 ### Features
 - **Network File System (NFS)**: POSIX-compliant, shared storage

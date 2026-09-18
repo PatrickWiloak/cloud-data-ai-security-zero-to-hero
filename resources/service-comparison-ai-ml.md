@@ -35,11 +35,11 @@ This guide provides a comprehensive comparison of AI/ML services across AWS, Goo
 
 **Documentation:**
 - **[📖 AWS SageMaker Documentation](https://docs.aws.amazon.com/sagemaker/)** - Complete SageMaker guide
-- **[📖 GCP Vertex AI Documentation](https://cloud.google.com/vertex-ai/docs)** - Complete Vertex AI guide
+- **[📖 GCP Vertex AI Documentation](https://docs.cloud.google.com/gemini-enterprise-agent-platform)** - Complete Vertex AI guide
 - **[📖 Azure Machine Learning Documentation](https://learn.microsoft.com/en-us/azure/machine-learning/)** - Complete Azure ML guide
 - **[📖 SageMaker Studio Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/studio.html)** - IDE environment
 - **[📖 Vertex AI Workbench Documentation](https://cloud.google.com/vertex-ai/docs/workbench)** - Jupyter notebooks
-- **[📖 Azure ML Studio Documentation](https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning-studio)** - ML workspace
+- **[📖 Azure ML Studio Documentation](https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning)** - ML workspace
 
 ---
 

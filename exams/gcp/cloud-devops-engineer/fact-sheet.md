@@ -70,8 +70,8 @@ last-updated: 2026-05-03
 ### Binary Authorization
 - **[📖 Binary Authorization Overview](https://cloud.google.com/binary-authorization/docs/overview)** - Deploy only trusted container images to GKE
 - **[📖 Policy Configuration](https://cloud.google.com/binary-authorization/docs/configuring-policy-cli)** - Define deployment policies based on attestations
-- **[📖 Attestations](https://cloud.google.com/binary-authorization/docs/creating-attestations-cli)** - Create cryptographic signatures for verified images
-- **[📖 CI/CD Integration](https://cloud.google.com/binary-authorization/docs/creating-attestations-cloud-build)** - Integrate attestations into Cloud Build pipelines
+- **[📖 Attestations](https://docs.cloud.google.com/binary-authorization/docs/making-attestations)** - Create cryptographic signatures for verified images
+- **[📖 CI/CD Integration](https://docs.cloud.google.com/binary-authorization/docs/making-attestations)** - Integrate attestations into Cloud Build pipelines
 
 ### Source Repositories and Version Control
 - **[📖 Cloud Source Repositories](https://cloud.google.com/source-repositories/docs/features)** - Private Git repositories hosted on Google Cloud
@@ -101,14 +101,14 @@ last-updated: 2026-05-03
 - **[📖 SLO Overview](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring)** - Define and monitor service level objectives
 - **[📖 Implementing SLOs](https://sre.google/workbook/implementing-slos/)** - Practical guide to implementing SLOs in your organization
 - **[📖 SLO Best Practices](https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos)** - Understand the relationship between SLIs, SLOs, and SLAs
-- **[📖 Cloud Monitoring SLOs](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/slo-overview)** - Create and manage SLOs in Cloud Monitoring
+- **[📖 Cloud Monitoring SLOs](https://docs.cloud.google.com/stackdriver/docs/solutions/slo-monitoring)** - Create and manage SLOs in Cloud Monitoring
 - **[📖 Alerting on SLO Burn Rate](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/alerting-on-budget-burn-rate)** - Set up alerts based on error budget consumption
 - **[📖 Windows-Based SLOs](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/ui/create-slo#windows-based-slo)** - Define SLOs based on good/total ratio over time windows
 - **[📖 Request-Based SLOs](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/ui/create-slo#request-based-slo)** - Define SLOs based on proportion of successful requests
 
 ### Service Level Indicators (SLIs)
 - **[📖 Choosing SLIs](https://sre.google/workbook/implementing-slos/#choosing-a-specification)** - Select meaningful metrics for service quality
-- **[📖 Common SLI Patterns](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/slo-concepts#sli-patterns)** - Availability, latency, throughput, and quality metrics
+- **[📖 Common SLI Patterns](https://docs.cloud.google.com/stackdriver/docs/solutions/slo-monitoring)** - Availability, latency, throughput, and quality metrics
 - **[📖 Custom SLIs](https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/timeseries-selectors)** - Create custom indicators using Cloud Monitoring metrics
 
 ### Service Level Agreements (SLAs)
@@ -215,7 +215,7 @@ last-updated: 2026-05-03
 - **[📖 Notification Channels](https://cloud.google.com/monitoring/support/notification-options)** - Send alerts via email, SMS, PagerDuty, Slack, etc.
 - **[📖 Alert Strategies](https://cloud.google.com/monitoring/alerts/concepts-indepth)** - Threshold, ratio, and rate-of-change alerts
 - **[📖 Log-Based Alerts](https://cloud.google.com/logging/docs/alerting/log-based-alerts)** - Alert on specific log patterns or events
-- **[📖 Snoozing Alerts](https://cloud.google.com/monitoring/alerts/ui-snooze)** - Temporarily silence alerts during maintenance
+- **[📖 Snoozing Alerts](https://docs.cloud.google.com/monitoring/alerts/snooze)** - Temporarily silence alerts during maintenance
 
 ### Application Performance Monitoring
 - **[📖 Cloud Trace](https://cloud.google.com/trace/docs)** - Distributed tracing for microservices
@@ -242,8 +242,8 @@ last-updated: 2026-05-03
 ### Debugging and Troubleshooting
 - **[📖 Troubleshooting GKE](https://cloud.google.com/kubernetes-engine/docs/troubleshooting)** - Common GKE issues and solutions
 - **[📖 Debugging Applications](https://cloud.google.com/kubernetes-engine/docs/how-to/debug-app)** - Debug containerized applications in GKE
-- **[📖 Analyzing Logs](https://cloud.google.com/logging/docs/view/logs-based-metrics)** - Use logs to identify root causes
-- **[📖 Network Troubleshooting](https://cloud.google.com/kubernetes-engine/docs/troubleshooting/network)** - Diagnose networking issues
+- **[📖 Analyzing Logs](https://docs.cloud.google.com/logging/docs/logs-based-metrics)** - Use logs to identify root causes
+- **[📖 Network Troubleshooting](https://docs.cloud.google.com/kubernetes-engine/docs/troubleshoot-networking)** - Diagnose networking issues
 
 ### Disaster Recovery
 - **[📖 Disaster Recovery Planning](https://cloud.google.com/architecture/dr-scenarios-planning-guide)** - Plan for disaster recovery scenarios
@@ -352,7 +352,7 @@ last-updated: 2026-05-03
 - **[📖 Container Analysis](https://cloud.google.com/container-analysis/docs)** - Scan container images for vulnerabilities
 - **[📖 Web Security Scanner](https://cloud.google.com/security-scanner/docs)** - Identify security vulnerabilities in web applications
 - **[📖 Policy Intelligence](https://cloud.google.com/policy-intelligence/docs/overview)** - Understand and manage IAM policies
-- **[📖 Compliance Reports](https://cloud.google.com/security/compliance)** - Access compliance certifications and reports
+- **[📖 Compliance Reports](https://cloud.google.com/compliance)** - Access compliance certifications and reports
 
 ### Network Security
 - **[📖 Cloud Armor](https://cloud.google.com/armor/docs)** - DDoS protection and WAF
@@ -392,7 +392,7 @@ last-updated: 2026-05-03
 - **[📖 Anthos Service Mesh](https://cloud.google.com/service-mesh/docs/overview)** - Connect and secure services across environments
 - **[📖 GKE on AWS](https://cloud.google.com/anthos/gke/docs/aws)** - Run GKE clusters on Amazon Web Services
 - **[📖 GKE on Azure](https://cloud.google.com/anthos/gke/docs/azure)** - Run GKE clusters on Microsoft Azure
-- **[📖 Attached Clusters](https://cloud.google.com/anthos/multicluster-management/attached/docs/overview)** - Manage third-party Kubernetes clusters from Google Cloud
+- **[📖 Attached Clusters](https://docs.cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/eks/concepts/overview)** - Manage third-party Kubernetes clusters from Google Cloud
 
 ### GitOps and Configuration Management
 - **[📖 GitOps Principles](https://cloud.google.com/kubernetes-engine/docs/tutorials/gitops-cloud-build)** - Implement GitOps workflows on Google Cloud
@@ -411,7 +411,7 @@ last-updated: 2026-05-03
 - **[📖 BigQuery](https://cloud.google.com/bigquery/docs)** - Serverless data warehouse for analytics
 
 ### Machine Learning Operations (MLOps)
-- **[📖 Vertex AI](https://cloud.google.com/vertex-ai/docs)** - Unified ML platform for training and deployment
+- **[📖 Vertex AI](https://docs.cloud.google.com/gemini-enterprise-agent-platform)** - Unified ML platform for training and deployment
 - **[📖 ML Pipelines](https://cloud.google.com/vertex-ai/docs/pipelines/introduction)** - Orchestrate ML workflows
 - **[📖 Model Monitoring](https://cloud.google.com/vertex-ai/docs/model-monitoring/overview)** - Detect skew and drift in ML models
 - **[📖 Feature Store](https://cloud.google.com/vertex-ai/docs/featurestore/overview)** - Centralized repository for ML features
@@ -450,7 +450,7 @@ last-updated: 2026-05-03
 - **[📖 Continuous Integration](https://cloud.google.com/architecture/devops/devops-tech-continuous-integration)** - Merge code changes frequently
 - **[📖 Continuous Delivery](https://cloud.google.com/architecture/devops/devops-tech-continuous-delivery)** - Automate software release process
 - **[📖 Deployment Strategies](https://cloud.google.com/architecture/application-deployment-and-testing-strategies)** - Rolling, blue-green, canary deployments
-- **[📖 Progressive Delivery](https://cloud.google.com/deploy/docs/deployment-strategies/progressive)** - Gradually roll out changes with automated checks
+- **[📖 Progressive Delivery](https://docs.cloud.google.com/deploy/docs/deployment-strategies)** - Gradually roll out changes with automated checks
 
 #### Build Optimization Techniques
 - **[📖 Build Caching](https://cloud.google.com/build/docs/optimize-builds/kaniko-cache)** - Speed up builds with Kaniko caching
@@ -532,7 +532,7 @@ last-updated: 2026-05-03
 
 #### Application Performance Optimization
 - **[📖 Code Profiling](https://cloud.google.com/profiler/docs/concepts-profiling)** - Identify CPU and memory hotspots
-- **[📖 Query Optimization](https://cloud.google.com/sql/docs/mysql/optimize-query-performance)** - Optimize database queries
+- **[📖 Query Optimization](https://docs.cloud.google.com/sql/docs/mysql/admin-api/how-tos/performance)** - Optimize database queries
 - **[📖 Connection Pooling](https://cloud.google.com/sql/docs/mysql/manage-connections)** - Reuse database connections
 - **[📖 Caching Strategies](https://cloud.google.com/cdn/docs/caching)** - Cache frequently accessed data
 

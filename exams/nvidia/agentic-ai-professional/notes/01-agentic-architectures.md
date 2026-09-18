@@ -58,7 +58,7 @@
 - Mathematical problem solving
 - Tasks that benefit from iterative improvement
 
-**[📖 NVIDIA Agent Blueprints](https://developer.nvidia.com/blog/tag/agents/)** - Reference implementations for agent patterns
+**[📖 NVIDIA Agent Blueprints](https://developer.nvidia.com/blog/tag/build-ai-agent/)** - Reference implementations for agent patterns
 
 ### Additional Patterns
 

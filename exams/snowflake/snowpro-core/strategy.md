@@ -79,7 +79,7 @@
 - **[Snowflake YouTube Channel](https://www.youtube.com/snowflake)** - Video tutorials and webinars
 
 ### Practice Tests
-- **[Official SnowPro Core Practice Exam](https://learn.snowflake.com/en/certifications/snowpro-core/)** - From Snowflake
+- **[Official SnowPro Core Practice Exam](https://learn.snowflake.com/en/certifications/)** - From Snowflake
 - Udemy SnowPro Core practice tests (various providers)
 - Medium articles with practice questions
 
@@ -91,7 +91,7 @@
 ### Documentation Priority Reading
 1. [Architecture Overview](https://docs.snowflake.com/en/user-guide/intro-key-concepts) - Must read
 2. [Virtual Warehouses](https://docs.snowflake.com/en/user-guide/warehouses) - Must read
-3. [Access Control](https://docs.snowflake.com/en/guides-overview-secure-access-control-overview) - Must read
+3. [Access Control](https://docs.snowflake.com/en/user-guide/security-access-control-overview) - Must read
 4. [Data Loading](https://docs.snowflake.com/en/user-guide/data-load-overview) - Must read
 5. [Semi-Structured Data](https://docs.snowflake.com/en/user-guide/semistructured-concepts) - Must read
 6. [Time Travel](https://docs.snowflake.com/en/user-guide/data-time-travel) - Must read

@@ -3393,7 +3393,7 @@ gcloud compute security-policies update POLICY_NAME \
 
 ### Official Google Cloud Documentation
 - [Security Best Practices](https://cloud.google.com/security/best-practices)
-- [Compliance Resources](https://cloud.google.com/security/compliance)
+- [Compliance Resources](https://cloud.google.com/compliance)
 - [Cloud Security Command Center](https://cloud.google.com/security-command-center)
 - [VPC Service Controls](https://cloud.google.com/vpc-service-controls)
 - [BeyondCorp Enterprise](https://cloud.google.com/beyondcorp-enterprise)
@@ -3413,7 +3413,7 @@ gcloud compute security-policies update POLICY_NAME \
 
 ### Security Architecture Guides
 - [Google Cloud Security Foundations Guide](https://cloud.google.com/architecture/security-foundations)
-- [Enterprise Security Blueprint](https://cloud.google.com/solutions/blueprints/enterprise-security-blueprint)
+- [Enterprise Security Blueprint](https://docs.cloud.google.com/architecture/blueprints/security-foundations)
 - [Zero Trust Architecture](https://cloud.google.com/beyondcorp-enterprise/docs/design-guide)
 - [Shared Responsibility Model](https://cloud.google.com/architecture/framework/security/shared-responsibility-shared-fate)
 

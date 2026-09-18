@@ -48,7 +48,7 @@ last-updated: 2026-05-03
 
 **[📖 Cloud Functions Overview](https://cloud.google.com/functions/docs/concepts/overview)** - Serverless functions introduction
 
-**[📖 Cloud Functions 1st Gen](https://cloud.google.com/functions/docs/1st-gen/concepts/overview)** - First generation functions
+**[📖 Cloud Functions 1st Gen](https://docs.cloud.google.com/functions/1stgendocs/concepts/overview)** - First generation functions
 
 **[📖 Cloud Functions 2nd Gen](https://cloud.google.com/functions/docs/2nd-gen/overview)** - Latest generation with enhanced features
 
@@ -118,7 +118,7 @@ last-updated: 2026-05-03
 
 **[📖 Cron Jobs](https://cloud.google.com/appengine/docs/standard/python3/scheduling-jobs-with-cron-yaml)** - Scheduled tasks
 
-**[📖 Task Queues](https://cloud.google.com/appengine/docs/standard/python3/taskqueue)** - Asynchronous work queues
+**[📖 Task Queues](https://docs.cloud.google.com/appengine/docs/standard/services/taskqueue)** - Asynchronous work queues
 
 **[📖 App Engine Memcache](https://cloud.google.com/appengine/docs/standard/python/memcache)** - In-memory caching
 
@@ -164,7 +164,7 @@ last-updated: 2026-05-03
 
 **[📖 Cloud Builders](https://cloud.google.com/build/docs/cloud-builders)** - Pre-built builder images
 
-**[📖 Custom Build Steps](https://cloud.google.com/build/docs/configuring-builds/create-custom-build-steps)** - Creating custom builders
+**[📖 Custom Build Steps](https://docs.cloud.google.com/build/docs/configuring-builds/use-community-and-custom-builders)** - Creating custom builders
 
 **[📖 Substituting Variables](https://cloud.google.com/build/docs/configuring-builds/substitute-variable-values)** - Dynamic build configuration
 
@@ -184,7 +184,7 @@ last-updated: 2026-05-03
 
 **[📖 Cloud Deploy Releases](https://cloud.google.com/deploy/docs/terminology#release)** - Release management
 
-**[📖 Deployment Strategies](https://cloud.google.com/deploy/docs/deployment-strategies/standard)** - Standard, canary, and custom strategies
+**[📖 Deployment Strategies](https://docs.cloud.google.com/deploy/docs/deployment-strategies)** - Standard, canary, and custom strategies
 
 **[📖 Canary Deployments](https://cloud.google.com/deploy/docs/deployment-strategies/canary)** - Progressive delivery
 
@@ -252,7 +252,7 @@ last-updated: 2026-05-03
 
 **[📖 Queries and Indexes](https://cloud.google.com/firestore/docs/query-data/queries)** - Querying data
 
-**[📖 Composite Indexes](https://cloud.google.com/firestore/docs/query-data/index-overview)** - Query optimization
+**[📖 Composite Indexes](https://docs.cloud.google.com/firestore/native/docs/standard-indexing)** - Query optimization
 
 **[📖 Transactions](https://cloud.google.com/firestore/docs/manage-data/transactions)** - ACID operations
 
@@ -318,7 +318,7 @@ last-updated: 2026-05-03
 
 **[📖 Cloud Tasks Overview](https://cloud.google.com/tasks/docs)** - Asynchronous task execution
 
-**[📖 Creating Tasks](https://cloud.google.com/tasks/docs/creating-tasks)** - Task creation methods
+**[📖 Creating Tasks](https://docs.cloud.google.com/tasks/docs/creating-http-target-tasks)** - Task creation methods
 
 **[📖 HTTP Target Tasks](https://cloud.google.com/tasks/docs/creating-http-target-tasks)** - HTTP endpoint invocation
 
@@ -412,7 +412,7 @@ last-updated: 2026-05-03
 
 **[📖 Analyzing Trace Data](https://cloud.google.com/trace/docs/trace-overview)** - Performance analysis
 
-**[📖 OpenTelemetry Integration](https://cloud.google.com/trace/docs/setup/opentelemetry)** - Standards-based tracing
+**[📖 OpenTelemetry Integration](https://docs.cloud.google.com/trace/docs/setup/sample-overview)** - Standards-based tracing
 
 **[📖 Custom Spans](https://cloud.google.com/trace/docs/instrumenting)** - Detailed tracing
 
@@ -626,7 +626,7 @@ last-updated: 2026-05-03
 
 **[📖 Solutions Library](https://cloud.google.com/solutions)** - Industry-specific solutions
 
-**[📖 Cloud Architecture Center](https://cloud.google.com/architecture/all-use-cases)** - Comprehensive guides
+**[📖 Cloud Architecture Center](https://docs.cloud.google.com/architecture/)** - Comprehensive guides
 
 ### Cost Optimization
 

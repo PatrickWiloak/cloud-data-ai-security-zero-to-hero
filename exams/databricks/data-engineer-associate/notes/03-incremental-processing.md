@@ -152,7 +152,7 @@ stream_df = (spark.readStream
 
 ### 7. Auto Loader Schema Evolution
 
-**[📖 Schema Evolution](https://docs.databricks.com/en/ingestion/auto-loader/schema-evolution.html)** - Handling schema changes
+**[📖 Schema Evolution](https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/schema)** - Handling schema changes
 
 | Mode | Behavior |
 |------|----------|
@@ -207,4 +207,4 @@ stream_df = (spark.readStream
 | Auto Loader | [docs.databricks.com/en/ingestion/auto-loader/index.html](https://docs.databricks.com/en/ingestion/auto-loader/index.html) |
 | Auto Loader Options | [docs.databricks.com/en/ingestion/auto-loader/options.html](https://docs.databricks.com/en/ingestion/auto-loader/options.html) |
 | Watermarks | [docs.databricks.com/en/structured-streaming/watermarks.html](https://docs.databricks.com/en/structured-streaming/watermarks.html) |
-| Schema Evolution | [docs.databricks.com/en/ingestion/auto-loader/schema-evolution.html](https://docs.databricks.com/en/ingestion/auto-loader/schema-evolution.html) |
+| Schema Evolution | [docs.databricks.com/en/ingestion/auto-loader/schema-evolution.html](https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/schema) |

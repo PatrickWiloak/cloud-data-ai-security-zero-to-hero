@@ -79,8 +79,8 @@
 ### Official GitHub Resources
 - **[GitHub Skills](https://skills.github.com/)** - Free interactive courses (the best starting point)
 - **[GitHub Docs](https://docs.github.com)** - Complete documentation
-- **[GitHub Learning Pathways](https://resources.github.com/learn/pathways/)** - Structured learning paths
-- **[GitHub Certifications](https://resources.github.com/learn/certifications/)** - Certification program details
+- **[GitHub Learning Pathways](https://learn.github.com/learning-pathways)** - Structured learning paths
+- **[GitHub Certifications](https://learn.github.com/certifications)** - Certification program details
 - **[GitHub YouTube Channel](https://www.youtube.com/github)** - Video tutorials and demos
 - **[GitHub Blog](https://github.blog/)** - Latest features and updates
 

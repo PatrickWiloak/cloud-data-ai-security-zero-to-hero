@@ -28,7 +28,7 @@ last-updated: 2026-05-03
 - **[📖 IBM Cloud Garage](https://www.ibm.com/cloud/garage)**
 - **[📖 IBM Developer](https://developer.ibm.com/)**
 - **[📖 IBM Skills Network](https://skills.network/)**
-- **[📖 Pearson VUE Testing](https://home.pearsonvue.com/ibm)**
+- **[📖 Pearson VUE Testing](https://www.pearsonvue.com/us/en/ibm.html)**
 - **[📖 IBM Cloud Certification Hub](https://www.ibm.com/training/cloud/certification)**
 
 ## Exam Domains
@@ -78,7 +78,7 @@ last-updated: 2026-05-03
 - **[📖 VPC Infrastructure](https://cloud.ibm.com/docs/vpc)**
 - **[📖 Load Balancers](https://cloud.ibm.com/docs/vpc?topic=vpc-nlb-vs-elb)**
 - **[📖 DNS Services](https://cloud.ibm.com/docs/dns-svcs)**
-- **[📖 Db2 on Cloud](https://cloud.ibm.com/docs/Db2onCloud)**
+- **[📖 Db2 on Cloud](https://cloud.ibm.com/docs/db2-saas)**
 - **[📖 Databases for PostgreSQL](https://cloud.ibm.com/docs/databases-for-postgresql)**
 - **[📖 Databases for MongoDB](https://cloud.ibm.com/docs/databases-for-mongodb)**
 - **[📖 Cloudant](https://cloud.ibm.com/docs/Cloudant)**
@@ -106,7 +106,7 @@ last-updated: 2026-05-03
 - **[📖 Data Encryption](https://cloud.ibm.com/docs/overview?topic=overview-security)**
 - **[📖 Security Groups](https://cloud.ibm.com/docs/vpc?topic=vpc-using-security-groups)**
 - **[📖 Network ACLs](https://cloud.ibm.com/docs/vpc?topic=vpc-using-acls)**
-- **[📖 Certificate Manager](https://cloud.ibm.com/docs/certificate-manager)**
+- **[📖 Certificate Manager](https://cloud.ibm.com/docs/secrets-manager)**
 - **[📖 Key Protect](https://cloud.ibm.com/docs/key-protect)**
 - **[📖 Hyper Protect Crypto Services](https://cloud.ibm.com/docs/hs-crypto)**
 - **[📖 Secrets Manager](https://cloud.ibm.com/docs/secrets-manager)**
@@ -127,11 +127,11 @@ last-updated: 2026-05-03
 - **[📖 Disaster Recovery](https://cloud.ibm.com/docs/overview?topic=overview-dr)**
 - **[📖 Regions and Data Centers](https://cloud.ibm.com/docs/overview?topic=overview-locations)**
 - **[📖 Multi-Zone Regions](https://cloud.ibm.com/docs/overview?topic=overview-ha#mzr)**
-- **[📖 Backup Services](https://cloud.ibm.com/docs/cloud-backup)**
+- **[📖 Backup Services](https://cloud.ibm.com/docs/backup-recovery)**
 - **[📖 Auto Scale](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-auto-scale-instance-group)**
 - **[📖 Monitoring](https://cloud.ibm.com/docs/monitoring)**
-- **[📖 Log Analysis](https://cloud.ibm.com/docs/log-analysis)**
-- **[📖 Activity Tracker](https://cloud.ibm.com/docs/activity-tracker)**
+- **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
+- **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 
 ### 5. Cost Management and Optimization (10%)
 - IBM Cloud pricing models
@@ -142,13 +142,13 @@ last-updated: 2026-05-03
 - Spending notifications and alerts
 
 **Cost Management Resources:**
-- **[📖 Billing and Usage](https://cloud.ibm.com/docs/billing-usage)**
+- **[📖 Billing and Usage](https://cloud.ibm.com/docs/account?topic=account-costs)**
 - **[📖 Pricing](https://www.ibm.com/cloud/pricing)**
-- **[📖 Cost Estimator](https://cloud.ibm.com/estimator/review)**
-- **[📖 Managing Costs](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-cost)**
+- **[📖 Cost Estimator](https://cloud.ibm.com/estimator)**
+- **[📖 Managing Costs](https://cloud.ibm.com/docs/account?topic=account-costs)**
 - **[📖 Resource Tagging](https://cloud.ibm.com/docs/account?topic=account-tag)**
-- **[📖 Spending Notifications](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-spending)**
-- **[📖 Usage Reports](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-viewingusage)**
+- **[📖 Spending Notifications](https://cloud.ibm.com/docs/account?topic=account-costs)**
+- **[📖 Usage Reports](https://cloud.ibm.com/docs/account?topic=account-costs)**
 
 ### 6. Migration and Modernization (10%)
 - Cloud migration strategies (rehost, replatform, refactor)
@@ -159,7 +159,7 @@ last-updated: 2026-05-03
 - Cloud transformation best practices
 
 **Migration Resources:**
-- **[📖 Cloud Migration](https://www.ibm.com/cloud/migration)**
+- **[📖 Cloud Migration](https://www.ibm.com/consulting/cloud-migration)**
 - **[📖 Migration Strategies](https://www.ibm.com/cloud/learn/cloud-migration)**
 - **[📖 Application Modernization](https://www.ibm.com/cloud/application-modernization)**
 - **[📖 VMware Solutions](https://cloud.ibm.com/docs/vmwaresolutions)**
@@ -173,7 +173,7 @@ last-updated: 2026-05-03
 - **[📖 IBM Cloud Kubernetes Service (IKS)](https://cloud.ibm.com/docs/containers)**
 - **[📖 Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/docs/openshift)**
 - **[📖 IBM Cloud Code Engine](https://cloud.ibm.com/docs/codeengine)**
-- **[📖 IBM Cloud Functions](https://cloud.ibm.com/docs/openwhisk)**
+- **[📖 IBM Cloud Functions](https://cloud.ibm.com/docs/codeengine)**
 - **[📖 Bare Metal Servers](https://cloud.ibm.com/docs/bare-metal)**
 
 ### Storage Services
@@ -182,7 +182,7 @@ last-updated: 2026-05-03
 - **[📖 File Storage for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-vpc-about)**
 
 ### Database Services
-- **[📖 IBM Db2 on Cloud](https://cloud.ibm.com/docs/Db2onCloud)**
+- **[📖 IBM Db2 on Cloud](https://cloud.ibm.com/docs/db2-saas)**
 - **[📖 IBM Cloudant](https://cloud.ibm.com/docs/Cloudant)**
 - **[📖 Databases for PostgreSQL](https://cloud.ibm.com/docs/databases-for-postgresql)**
 - **[📖 Databases for MySQL](https://cloud.ibm.com/docs/databases-for-mysql)**
@@ -191,7 +191,7 @@ last-updated: 2026-05-03
 
 ### AI and Data Services
 - **[📖 Watson Assistant](https://cloud.ibm.com/docs/watson-assistant)**
-- **[📖 Watson Discovery](https://cloud.ibm.com/docs/discovery)**
+- **[📖 Watson Discovery](https://cloud.ibm.com/docs/discovery-data)**
 - **[📖 Watson Natural Language Understanding](https://cloud.ibm.com/docs/natural-language-understanding)**
 - **[📖 Watson Speech to Text](https://cloud.ibm.com/docs/speech-to-text)**
 - **[📖 Watson Text to Speech](https://cloud.ibm.com/docs/text-to-speech)**

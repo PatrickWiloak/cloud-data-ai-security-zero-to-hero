@@ -159,7 +159,7 @@ Identity and access covers 25% of the exam. This domain focuses on Unity Catalog
 
 ### Entitlements
 
-**[📖 Manage Entitlements](https://docs.databricks.com/en/admin/users-groups/manage-users.html)** - Feature access
+**[📖 Manage Entitlements](https://docs.databricks.com/aws/en/admin/users-groups/users)** - Feature access
 
 - **Workspace access**: Allow user to log into workspace
 - **Databricks SQL access**: Allow access to SQL features and warehouses

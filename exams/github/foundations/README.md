@@ -17,7 +17,7 @@ The GitHub Foundations certification validates your understanding of the foundat
 - **Retake Policy:** 24-hour wait for first retake, 14 days for subsequent
 
 ### Official Resources
-- **[Official Exam Page](https://resources.github.com/learn/certifications/)** - Registration and exam details
+- **[Official Exam Page](https://learn.github.com/certifications)** - Registration and exam details
 - **[GitHub Foundations Study Guide](https://assets.ctfassets.net/wfutmusr1t3h/1kmMx7AwI4qH8yIZgOmQlP/4e60030cc6c76688698652e830ea2a48/github-foundations-exam-study-guide.pdf)** - Official study guide PDF
 - **[GitHub Skills](https://skills.github.com/)** - Interactive learning paths
 - **[GitHub Docs](https://docs.github.com)** - Complete platform documentation
@@ -200,7 +200,7 @@ Focuses on the open source community, InnerSource, and GitHub's community featur
 - **[GitHub Skills](https://skills.github.com/)** - Free interactive courses
 - **[GitHub Docs](https://docs.github.com)** - Official documentation
 - **[Git Documentation](https://git-scm.com/doc)** - Git reference
-- **[GitHub Learning Pathways](https://resources.github.com/learn/pathways/)** - Structured learning
+- **[GitHub Learning Pathways](https://learn.github.com/learning-pathways)** - Structured learning
 - **[GitHub YouTube Channel](https://www.youtube.com/github)** - Video tutorials
 
 ### Tips for Success

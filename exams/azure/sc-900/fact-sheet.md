@@ -41,7 +41,7 @@ Zero Trust is a security framework that assumes breach and verifies each request
 A layered security approach that provides multiple levels of protection to prevent and detect security breaches.
 
 - **[📖 Defense in Depth Strategy](https://learn.microsoft.com/en-us/training/modules/describe-security-concepts-methodologies/4-describe-defense-depth)** - Multi-layered security approach from physical to application layers
-- **[📖 Azure Defense in Depth](https://learn.microsoft.com/en-us/azure/architecture/framework/security/design-defense-in-depth)** - Implementing layered security in Azure environments
+- **[📖 Azure Defense in Depth](https://learn.microsoft.com/en-us/azure/well-architected/security/)** - Implementing layered security in Azure environments
 - **[📖 Security Layers Explained](https://learn.microsoft.com/en-us/azure/security/fundamentals/overview)** - Physical, identity, perimeter, network, compute, application, and data layers
 
 ### Encryption and Hashing
@@ -59,7 +59,7 @@ Understanding regulatory requirements, standards, and governance frameworks rele
 
 - **[📖 Microsoft Compliance Offerings](https://learn.microsoft.com/en-us/compliance/regulatory/offering-home)** - Comprehensive list of compliance certifications and attestations
 - **[📖 Azure Compliance Documentation](https://learn.microsoft.com/en-us/azure/compliance/)** - Industry-specific and regional compliance resources
-- **[📖 Data Residency in Azure](https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-data-residency)** - Understanding where data is stored and processed
+- **[📖 Data Residency in Azure](https://azure.microsoft.com/en-us/explore/global-infrastructure/data-residency)** - Understanding where data is stored and processed
 
 ---
 
@@ -151,7 +151,7 @@ Unified security management and advanced threat protection for hybrid and multi-
 Enterprise endpoint security platform for preventing, detecting, investigating, and responding to advanced threats.
 
 - **[📖 Defender for Endpoint Overview](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint)** - Next-generation endpoint protection, detection, and response
-- **[📖 Threat and Vulnerability Management](https://learn.microsoft.com/en-us/defender-endpoint/next-gen-threat-and-vuln-mgt)** - Continuous vulnerability discovery, prioritization, and remediation
+- **[📖 Threat and Vulnerability Management](https://learn.microsoft.com/en-us/defender-vulnerability-management/defender-vulnerability-management)** - Continuous vulnerability discovery, prioritization, and remediation
 - **[📖 Attack Surface Reduction](https://learn.microsoft.com/en-us/defender-endpoint/overview-attack-surface-reduction)** - Rules and policies to reduce organizational exposure
 - **[📖 Next-Generation Protection](https://learn.microsoft.com/en-us/defender-endpoint/next-generation-protection)** - Real-time antivirus and anti-malware protection
 - **[📖 Endpoint Detection and Response](https://learn.microsoft.com/en-us/defender-endpoint/overview-endpoint-detection-response)** - Advanced threat detection and automated investigation
@@ -253,7 +253,7 @@ Preventing accidental or intentional sharing of sensitive information outside th
 - **[📖 Data Loss Prevention Overview](https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp)** - Protecting sensitive data across devices, services, and on-premises locations
 - **[📖 DLP Policies](https://learn.microsoft.com/en-us/purview/dlp-policy-reference)** - Creating rules to detect and protect sensitive information
 - **[📖 Endpoint DLP](https://learn.microsoft.com/en-us/purview/endpoint-dlp-learn-about)** - Monitoring and protecting sensitive data on Windows and macOS devices
-- **[📖 DLP Alerts and Reports](https://learn.microsoft.com/en-us/purview/dlp-alerts-dashboard-learn-about)** - Investigating and responding to data loss prevention incidents
+- **[📖 DLP Alerts and Reports](https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp)** - Investigating and responding to data loss prevention incidents
 
 ### Retention and Records Management
 
@@ -269,7 +269,7 @@ Ensuring data is retained according to business and regulatory requirements whil
 Identifying, preserving, and collecting electronic information for legal and investigative purposes.
 
 - **[📖 eDiscovery Solutions](https://learn.microsoft.com/en-us/purview/ediscovery)** - Content search, eDiscovery Standard, and eDiscovery Premium capabilities
-- **[📖 Content Search](https://learn.microsoft.com/en-us/purview/search-for-content)** - Searching mailboxes, SharePoint sites, and Teams locations
+- **[📖 Content Search](https://learn.microsoft.com/en-us/purview/edisc)** - Searching mailboxes, SharePoint sites, and Teams locations
 - **[📖 eDiscovery Cases](https://learn.microsoft.com/en-us/purview/ediscovery-standard-get-started)** - Managing legal holds, searches, and exports for investigations
 - **[📖 Audit Logging](https://learn.microsoft.com/en-us/purview/audit-solutions-overview)** - Recording user and administrator activities across Microsoft 365
 - **[📖 Advanced Audit](https://learn.microsoft.com/en-us/purview/audit-premium)** - Extended retention, forensically relevant events, and higher bandwidth access
@@ -294,7 +294,7 @@ Monitoring organizational communications for policy violations and regulatory co
 Simplified compliance management with actionable insights and improvement actions.
 
 - **[📖 Compliance Manager Overview](https://learn.microsoft.com/en-us/purview/compliance-manager)** - Centralized tool for managing compliance across regulations and standards
-- **[📖 Compliance Score](https://learn.microsoft.com/en-us/purview/compliance-score)** - Risk-based score measuring progress in completing recommended actions
+- **[📖 Compliance Score](https://learn.microsoft.com/en-us/purview/compliance-manager)** - Risk-based score measuring progress in completing recommended actions
 - **[📖 Compliance Assessments](https://learn.microsoft.com/en-us/purview/compliance-manager-assessments)** - Pre-built and custom templates for regulatory frameworks
 - **[📖 Improvement Actions](https://learn.microsoft.com/en-us/purview/compliance-manager-improvement-actions)** - Technical and non-technical recommendations for compliance improvement
 - **[📖 Compliance Manager Templates](https://learn.microsoft.com/en-us/purview/compliance-manager-templates-list)** - GDPR, ISO 27001, NIST, HIPAA, and other regulatory templates

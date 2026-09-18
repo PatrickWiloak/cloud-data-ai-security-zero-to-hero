@@ -35,7 +35,7 @@ This certification is designed for:
 **No coding experience required** - Focus is on concepts, business applications, and AWS AI services.
 
 **📖 [AWS AI/ML Learning Path](https://aws.amazon.com/training/learning-paths/machine-learning/)** - Official learning path
-**📖 [Getting Started with AI on AWS](https://aws.amazon.com/ai/getting-started/)** - AI overview
+**📖 [Getting Started with AI on AWS](https://aws.amazon.com/ai/)** - AI overview
 
 ## 📚 Exam Domains
 
@@ -149,7 +149,7 @@ The largest domain, covering generative AI concepts and foundation models.
 
 **📖 [Prompt Engineering Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-engineering-guidelines.html)** - Bedrock prompting
 **📖 [Prompt Engineering Best Practices](https://aws.amazon.com/what-is/prompt-engineering/)** - Prompting techniques
-**📖 [Anthropic Claude Prompting](https://docs.anthropic.com/claude/docs/introduction-to-prompt-design)** - Claude-specific guidance
+**📖 [Anthropic Claude Prompting](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview)** - Claude-specific guidance
 
 **Prompt Optimization:**
 - Clear and specific instructions
@@ -212,7 +212,7 @@ The highest-weighted domain, covering Amazon Bedrock and model selection.
 - No infrastructure management
 
 **📖 [Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html)** - Service overview
-**📖 [Bedrock Features](https://aws.amazon.com/bedrock/features/)** - Key capabilities
+**📖 [Bedrock Features](https://aws.amazon.com/bedrock/)** - Key capabilities
 **📖 [Bedrock Pricing](https://aws.amazon.com/bedrock/pricing/)** - Cost structure
 **📖 [Getting Started with Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/getting-started.html)** - Quick start
 
@@ -440,7 +440,7 @@ Covers data protection, security, and regulatory compliance.
 - GDPR, CCPA compliance
 - PII handling and redaction
 
-**📖 [Bedrock Privacy](https://aws.amazon.com/bedrock/data-privacy/)** - Privacy commitments
+**📖 [Bedrock Privacy](https://aws.amazon.com/bedrock/security-compliance/)** - Privacy commitments
 **📖 [Compliance Programs](https://aws.amazon.com/compliance/programs/)** - AWS compliance
 
 #### 5.2 Identity and Access Management
@@ -478,7 +478,7 @@ Covers data protection, security, and regulatory compliance.
 - FedRAMP (coming soon)
 
 **📖 [AWS Compliance](https://aws.amazon.com/compliance/)** - Compliance overview
-**📖 [Bedrock Compliance](https://aws.amazon.com/bedrock/compliance/)** - Service compliance
+**📖 [Bedrock Compliance](https://aws.amazon.com/bedrock/security-compliance/)** - Service compliance
 
 ## 💡 Study Strategy
 

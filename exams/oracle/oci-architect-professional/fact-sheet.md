@@ -31,7 +31,7 @@ last-updated: 2026-05-03
 - **[📖 Transit Routing](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/transitrouting.htm)**
 - **[📖 Hub-and-Spoke Topology](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/transitroutingoracleservices.htm)**
 - **[📖 FastConnect](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/fastconnect.htm)**
-- **[📖 FastConnect Redundancy](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/fastconnectredundancy.htm)**
+- **[📖 FastConnect Redundancy](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/fastconnect.htm)**
 - **[📖 Site-to-Site VPN](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingIPsec.htm)**
 - **[📖 VPN Redundancy](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/overviewIPsec.htm)**
 - **[📖 DNS Private Views](https://docs.oracle.com/en-us/iaas/Content/DNS/Tasks/privatedns.htm)**
@@ -68,10 +68,10 @@ last-updated: 2026-05-03
 - **[📖 Maximum Security Architecture](https://www.oracle.com/security/cloud-security/)**
 - **[📖 Vault Advanced Features](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/home.htm)**
 - **[📖 Certificate Service](https://docs.oracle.com/en-us/iaas/Content/certificates/overview.htm)**
-- **[📖 Private Certificate Authority](https://docs.oracle.com/en-us/iaas/Content/certificates/private-ca-overview.htm)**
+- **[📖 Private Certificate Authority](https://docs.oracle.com/en-us/iaas/Content/certificates/overview.htm)**
 
 ### Advanced Compute and Containers
-- **[📖 OKE Architecture](https://docs.oracle.com/en-us/iaas/Content/ContEng/Concepts/contengoverviewabout.htm)**
+- **[📖 OKE Architecture](https://docs.oracle.com/en-us/iaas/Content/ContEng/Concepts/contengoverview.htm)**
 - **[📖 OKE Advanced Networking](https://docs.oracle.com/en-us/iaas/Content/ContEng/Concepts/contengnetworkconfig.htm)**
 - **[📖 OKE Virtual Nodes](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengworkingwithvirtualnodes.htm)**
 - **[📖 Container Instances](https://docs.oracle.com/en-us/iaas/Content/container-instances/home.htm)**
@@ -123,7 +123,7 @@ last-updated: 2026-05-03
 - **[📖 Database Migration](https://docs.oracle.com/en-us/iaas/database-migration/index.html)**
 - **[📖 VMware Solution](https://docs.oracle.com/en-us/iaas/Content/VMware/Concepts/ocvsoverview.htm)**
 - **[📖 Hybrid Cloud Strategy](https://docs.oracle.com/en/solutions/hybrid-cloud-strategy/)**
-- **[📖 Dedicated Region](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/dedicatedregion.htm)**
+- **[📖 Dedicated Region](https://docs.oracle.com/en-us/iaas/Content/dedicated/dedicated-region/dedicated-region-overview.htm)**
 
 ### Additional Resources
 - **[📖 Whitepapers](https://www.oracle.com/cloud/architecture-and-regions/)**

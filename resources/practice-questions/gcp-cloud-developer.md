@@ -678,7 +678,7 @@ D. Never change the API
 
 **Why:** API versioning (v1, v2) allows evolution while maintaining old versions. Automated contract testing detects breaking changes - Protolock for gRPC protobuf schemas, OpenAPI diff for REST APIs. These can be integrated into CI to fail builds with breaking changes. No documentation (A) makes compatibility impossible to track. Any changes (C) breaks clients. Never changing (D) prevents improvement.
 
-**Key Concept:** [API Versioning Best Practices](https://cloud.google.com/apis/design/versioning)
+**Key Concept:** [API Versioning Best Practices](https://google.aip.dev/185)
 </details>
 
 ### Question 37
@@ -750,5 +750,5 @@ D. Ignore SLOs and deploy whenever
 
 **Why:** Cloud Monitoring SLOs define service level objectives based on metrics (availability, latency). Error budgets are automatically calculated. Burn rate alerts notify when error budget is being consumed too quickly (e.g., 10x normal rate). This enables informed trade-offs between feature velocity and reliability. Spreadsheets (A) can't alert. Uptime only (C) misses other SLI types. Ignoring SLOs (D) risks reliability.
 
-**Key Concept:** [Cloud Monitoring SLOs](https://cloud.google.com/monitoring/sli-slo-concepts)
+**Key Concept:** [Cloud Monitoring SLOs](https://docs.cloud.google.com/stackdriver/docs/solutions/slo-monitoring)
 </details>

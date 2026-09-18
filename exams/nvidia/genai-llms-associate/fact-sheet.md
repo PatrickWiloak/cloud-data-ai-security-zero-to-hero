@@ -192,7 +192,7 @@ This domain covers retrieval-augmented generation architecture and vector databa
 
 **[📖 NVIDIA NeMo Retriever](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemoretriever/index.html)** - NVIDIA RAG components
 **[📖 NVIDIA RAG Pipeline Tutorial](https://developer.nvidia.com/blog/build-enterprise-retrieval-augmented-generation-apps-with-nvidia-retrieval-qa-embedding-model/)** - Building RAG with NVIDIA tools
-**[📖 NVIDIA AI Blueprints](https://www.nvidia.com/en-us/ai/blueprints/)** - Reference architectures for RAG
+**[📖 NVIDIA AI Blueprints](https://build.nvidia.com/blueprints)** - Reference architectures for RAG
 
 ### 3.2 Embedding Models
 
@@ -326,7 +326,7 @@ This domain covers methods for adapting pre-trained models to specific tasks and
 - More stable training than RLHF
 - Growing in popularity due to simplicity
 
-**[📖 NVIDIA NeMo Alignment](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/nemo_framework_rlhf/index.html)** - RLHF/DPO with NeMo
+**[📖 NVIDIA NeMo Alignment](https://docs.nvidia.com/nemo/rl/latest/index.html)** - RLHF/DPO with NeMo
 **[📖 InstructGPT Paper](https://arxiv.org/abs/2203.02155)** - RLHF alignment methodology
 
 ### 4.4 Training Data Best Practices
@@ -440,7 +440,7 @@ This domain covers responsible development and deployment of generative AI syste
 - Debiasing techniques during and after training
 - Regular auditing of model outputs
 
-**[📖 NVIDIA AI Responsibility](https://www.nvidia.com/en-us/ai/responsible-ai/)** - NVIDIA's responsible AI practices
+**[📖 NVIDIA AI Responsibility](https://www.nvidia.com/en-us/ai-trust-center/trustworthy-ai/)** - NVIDIA's responsible AI practices
 **[📖 NVIDIA Trustworthy AI](https://developer.nvidia.com/blog/tag/trustworthy-ai/)** - Blog posts on AI ethics
 
 ### 6.2 NeMo Guardrails

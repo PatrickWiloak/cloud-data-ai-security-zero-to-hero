@@ -15,7 +15,7 @@ last-updated: 2026-05-03
 **Prerequisites:** None
 **Validity:** 3 years
 
-**[Official Exam Page](https://resources.github.com/learn/certifications/)** - Registration and details
+**[Official Exam Page](https://learn.github.com/certifications)** - Registration and details
 **[GitHub Foundations Study Guide](https://assets.ctfassets.net/wfutmusr1t3h/1kmMx7AwI4qH8yIZgOmQlP/4e60030cc6c76688698652e830ea2a48/github-foundations-exam-study-guide.pdf)** - Official study guide
 **[GitHub Skills](https://skills.github.com/)** - Interactive learning paths
 

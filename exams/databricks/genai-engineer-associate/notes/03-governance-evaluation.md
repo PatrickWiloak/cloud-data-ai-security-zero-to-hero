@@ -5,7 +5,7 @@
 This section covers governance and evaluation for GenAI applications, representing 20% of the exam. You need to understand RAG evaluation metrics, LLM-as-judge patterns, guardrails, and GenAI governance.
 
 **[📖 Agent Evaluation](https://docs.databricks.com/en/generative-ai/agent-evaluation/index.html)** - Evaluation framework
-**[📖 AI Governance](https://docs.databricks.com/en/generative-ai/governance.html)** - GenAI governance
+**[📖 AI Governance](https://docs.databricks.com/aws/en/ai-gateway/ai-governance)** - GenAI governance
 
 ## Key Topics
 
@@ -108,7 +108,7 @@ results = mlflow.evaluate(
 
 ### 6. GenAI Governance
 
-**[📖 AI Governance](https://docs.databricks.com/en/generative-ai/governance.html)** - Governance patterns
+**[📖 AI Governance](https://docs.databricks.com/aws/en/ai-gateway/ai-governance)** - Governance patterns
 
 **Key Concepts:**
 - Unity Catalog governs models, data, and feature assets
@@ -144,4 +144,4 @@ results = mlflow.evaluate(
 |-------|------|
 | Agent Evaluation | [docs.databricks.com/en/generative-ai/agent-evaluation/index.html](https://docs.databricks.com/en/generative-ai/agent-evaluation/index.html) |
 | MLflow Evaluate | [mlflow.org/docs/latest/llms/llm-evaluate/index.html](https://mlflow.org/docs/latest/llms/llm-evaluate/index.html) |
-| AI Governance | [docs.databricks.com/en/generative-ai/governance.html](https://docs.databricks.com/en/generative-ai/governance.html) |
+| AI Governance | [docs.databricks.com/en/generative-ai/governance.html](https://docs.databricks.com/aws/en/ai-gateway/ai-governance) |

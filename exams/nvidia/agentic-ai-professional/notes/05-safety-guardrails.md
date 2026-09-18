@@ -35,7 +35,7 @@ define bot refuse harmful request
 - **Actions** - Custom Python functions invoked by guardrails
 - **Variables** - Store and reference conversation state
 
-**[📖 Colang 2 Reference](https://docs.nvidia.com/nemo/guardrails/latest/user-guides/colang-2/overview.html)** - Colang 2 syntax and features
+**[📖 Colang 2 Reference](https://docs.nvidia.com/nemo/guardrails/configure-guardrails/colang)** - Colang 2 syntax and features
 
 ## Guardrail Types
 
@@ -108,7 +108,7 @@ define bot refuse harmful request
 - Encoding tricks (base64, rot13, character substitution)
 - Multi-turn gradual escalation
 
-**[📖 NVIDIA AI Safety](https://developer.nvidia.com/blog/tag/safety/)** - Blog posts on AI safety techniques
+**[📖 NVIDIA AI Safety](https://developer.nvidia.com/blog/category/cybersecurity/)** - Blog posts on AI safety techniques
 
 ### Cascading Failure Prevention
 

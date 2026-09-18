@@ -33,7 +33,7 @@ D. BigQuery with regional datasets
 
 **Why:** Cloud Spanner provides a globally distributed, strongly consistent relational database with automatic failover. It supports horizontal scaling and maintains strong consistency across regions using TrueTime. Cloud SQL read replicas (A) are asynchronous and don't provide strong consistency across regions. Firestore (C) is NoSQL. BigQuery (D) is for analytics, not transactional workloads.
 
-**Key Concept:** [Cloud Spanner](https://cloud.google.com/spanner/docs/overview)
+**Key Concept:** [Cloud Spanner](https://docs.cloud.google.com/spanner/docs)
 </details>
 
 ### Question 2
@@ -329,7 +329,7 @@ D. No encryption
 
 **Why:** CMEK in Cloud KMS provides customer-controlled keys for Cloud Storage encryption. Automatic key rotation can be configured (annual or custom). Cloud Audit Logs track all key usage. Default encryption (A) uses Google-managed keys. Client-side (C) is additional, not replacement. No encryption (D) violates requirements.
 
-**Key Concept:** [Cloud KMS](https://cloud.google.com/kms/docs/overview)
+**Key Concept:** [Cloud KMS](https://docs.cloud.google.com/kms/docs)
 </details>
 
 ### Question 18
@@ -567,7 +567,7 @@ D. Alert on every error
 
 **Why:** Cloud Monitoring supports defining SLOs with SLIs (availability, latency). Burn rate alerts notify when error budget is being consumed too quickly. Dashboards show remaining error budget for decision-making. This is Google's SRE approach. Spreadsheets (A) aren't automated. No SLOs (C) lacks reliability targets. Every-error alerts (D) cause alert fatigue.
 
-**Key Concept:** [Cloud Monitoring SLOs](https://cloud.google.com/monitoring/slo)
+**Key Concept:** [Cloud Monitoring SLOs](https://docs.cloud.google.com/stackdriver/docs/solutions/slo-monitoring)
 </details>
 
 ---
@@ -589,7 +589,7 @@ D. Migrate everything at once
 
 **Why:** Migration Center (formerly part of Migrate for Compute Engine) provides agentless discovery of VM configurations, automatic dependency mapping to identify migration groups, and TCO analysis to estimate GCP costs. Creates a migration plan. Manual inventory (A) is time-consuming and error-prone. Big-bang migration (D) is risky.
 
-**Key Concept:** [Migration Center](https://cloud.google.com/migration-center/docs/overview)
+**Key Concept:** [Migration Center](https://docs.cloud.google.com/migration-center/docs)
 </details>
 
 ### Question 32

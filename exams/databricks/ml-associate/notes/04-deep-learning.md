@@ -11,8 +11,8 @@ This section covers deep learning on Databricks, representing 13% of the exam. Y
 
 ### 1. Deep Learning on Databricks
 
-**[📖 TensorFlow on Databricks](https://docs.databricks.com/en/machine-learning/deep-learning/tensorflow.html)** - TF integration
-**[📖 PyTorch on Databricks](https://docs.databricks.com/en/machine-learning/deep-learning/pytorch.html)** - PyTorch integration
+**[📖 TensorFlow on Databricks](https://docs.databricks.com/aws/en/machine-learning/train-model/tensorflow)** - TF integration
+**[📖 PyTorch on Databricks](https://docs.databricks.com/aws/en/machine-learning/train-model/pytorch)** - PyTorch integration
 
 **Key Concepts:**
 - Use GPU-enabled ML Runtime for deep learning workloads
@@ -84,7 +84,7 @@ model = tf.keras.Sequential([
 ### 4. Distributed Deep Learning
 
 **[📖 TorchDistributor](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/)** - PyTorch distribution
-**[📖 Horovod](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/horovod-runner.html)** - Horovod integration
+**[📖 Horovod](https://docs.databricks.com/aws/en/archive/machine-learning/train-model/horovod-runner)** - Horovod integration
 
 **Distributed Training Approaches:**
 | Approach | Description | Use Case |
@@ -164,7 +164,7 @@ with mlflow.start_run():
 | Topic | Link |
 |-------|------|
 | Deep Learning | [docs.databricks.com/en/machine-learning/deep-learning/index.html](https://docs.databricks.com/aws/en/machine-learning/train-model/deep-learning) |
-| TensorFlow | [docs.databricks.com/en/machine-learning/deep-learning/tensorflow.html](https://docs.databricks.com/en/machine-learning/deep-learning/tensorflow.html) |
-| PyTorch | [docs.databricks.com/en/machine-learning/deep-learning/pytorch.html](https://docs.databricks.com/en/machine-learning/deep-learning/pytorch.html) |
+| TensorFlow | [docs.databricks.com/en/machine-learning/deep-learning/tensorflow.html](https://docs.databricks.com/aws/en/machine-learning/train-model/tensorflow) |
+| PyTorch | [docs.databricks.com/en/machine-learning/deep-learning/pytorch.html](https://docs.databricks.com/aws/en/machine-learning/train-model/pytorch) |
 | Distributed Training | [docs.databricks.com/en/machine-learning/deep-learning/distributed-training/index.html](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/) |
 | TorchDistributor | [docs.databricks.com/en/machine-learning/deep-learning/distributed-training/torch-distributor.html](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/) |

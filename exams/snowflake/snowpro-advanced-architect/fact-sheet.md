@@ -40,7 +40,7 @@ last-updated: 2026-05-03
 - Failover groups enable automated failover for business continuity
 - Primary and secondary (read-only) database replicas
 - **[📖 Replication](https://docs.snowflake.com/en/user-guide/account-replication-intro)** - Replication overview
-- **[📖 Failover Groups](https://docs.snowflake.com/en/user-guide/failover-groups)** - Failover configuration
+- **[📖 Failover Groups](https://docs.snowflake.com/en/user-guide/account-replication-replication-groups)** - Failover configuration
 
 ### Data Sharing
 | Sharing Method | Use Case | Data Movement |
@@ -69,7 +69,7 @@ last-updated: 2026-05-03
 | Internal Stages | Private storage access | Stage with private connectivity |
 
 - **[📖 Network Policies](https://docs.snowflake.com/en/user-guide/network-policies)** - IP-based access control
-- **[📖 Private Connectivity](https://docs.snowflake.com/en/user-guide/private-connectivity)** - Private Link setup
+- **[📖 Private Connectivity](https://docs.snowflake.com/en/user-guide/private-connectivity-inbound)** - Private Link setup
 
 ### Encryption
 - All data encrypted at rest (AES-256) and in transit (TLS 1.2)
@@ -77,8 +77,8 @@ last-updated: 2026-05-03
 - Tri-Secret Secure: composite master key from Snowflake key + customer key
 - Customer-managed keys via cloud provider KMS (AWS KMS, Azure Key Vault, GCP KMS)
 - Periodic rekeying of encrypted data with new keys
-- **[📖 Encryption](https://docs.snowflake.com/en/guides-overview-secure-encryption)** - Encryption details
-- **[📖 Tri-Secret Secure](https://docs.snowflake.com/en/guides-overview-secure-encryption-manage)** - Customer-managed keys
+- **[📖 Encryption](https://docs.snowflake.com/en/user-guide/security-encryption-end-to-end)** - Encryption details
+- **[📖 Tri-Secret Secure](https://docs.snowflake.com/en/user-guide/security-encryption-manage)** - Customer-managed keys
 
 ### Data Governance
 ```sql
@@ -101,8 +101,8 @@ CREATE TAG sensitivity ALLOWED_VALUES 'PII', 'CONFIDENTIAL', 'PUBLIC';
 ALTER TABLE customers SET TAG sensitivity = 'PII';
 ```
 
-- **[📖 Dynamic Data Masking](https://docs.snowflake.com/en/guides-overview-secure-column-ddm-intro)** - Column masking
-- **[📖 Row Access Policies](https://docs.snowflake.com/en/guides-overview-secure-row-intro)** - Row-level security
+- **[📖 Dynamic Data Masking](https://docs.snowflake.com/en/user-guide/security-column-ddm-intro)** - Column masking
+- **[📖 Row Access Policies](https://docs.snowflake.com/en/user-guide/security-row-intro)** - Row-level security
 - **[📖 Object Tagging](https://docs.snowflake.com/en/user-guide/object-tagging)** - Tag-based governance
 
 ## Architecture Deep Dive

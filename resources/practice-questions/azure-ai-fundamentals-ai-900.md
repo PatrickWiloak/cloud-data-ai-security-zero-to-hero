@@ -32,7 +32,7 @@ D. AI cannot be used for business problems
 
 **Why:** AI excels at tasks that involve learning patterns from data: predicting outcomes (sales forecasting), classifying items (spam detection), recognizing patterns (anomaly detection), and automating cognitive tasks (understanding language, analyzing images). Understanding appropriate use cases is fundamental to AI implementation.
 
-**Key Concept:** [What is AI?](https://docs.microsoft.com/learn/modules/get-started-ai-fundamentals/2-understand-ai)
+**Key Concept:** [What is AI?](https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/1-introduction)
 </details>
 
 ### Question 2

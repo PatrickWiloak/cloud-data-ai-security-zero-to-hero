@@ -15,7 +15,7 @@ last-updated: 2026-05-03
 **Delivery:** Online proctored
 **Prerequisites:** None (GitHub Foundations recommended)
 
-**[📖 GitHub Certifications](https://resources.github.com/learn/certifications/)** - Registration and exam details
+**[📖 GitHub Certifications](https://learn.github.com/certifications)** - Registration and exam details
 **[📖 GitHub Actions Documentation](https://docs.github.com/en/actions)** - Complete Actions documentation
 **[📖 Workflow Syntax](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)** - YAML syntax reference
 
@@ -86,8 +86,8 @@ jobs:
 - `always()` - Always true (run regardless of status)
 - `cancelled()` - True if workflow was cancelled
 
-**[📖 Expressions](https://docs.github.com/en/actions/reference/expressions)** - Expression syntax
-**[📖 Contexts](https://docs.github.com/en/actions/reference/contexts)** - Available contexts
+**[📖 Expressions](https://docs.github.com/en/actions/reference/workflows-and-actions/expressions)** - Expression syntax
+**[📖 Contexts](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts)** - Available contexts
 
 #### 1.4 Matrix Strategy
 ```yaml

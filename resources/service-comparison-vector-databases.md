@@ -61,7 +61,7 @@ Schema-driven vector DB, OSS (BSD-3) with a managed cloud option (Weaviate Cloud
 
 **Skip Weaviate when:** you don't need a schema and prefer Pinecone's "throw vectors at a black box" simplicity.
 
-**[📖 Weaviate documentation](https://weaviate.io/developers/weaviate)** - schema, modules, hybrid search
+**[📖 Weaviate documentation](https://docs.weaviate.io/weaviate)** - schema, modules, hybrid search
 
 ---
 

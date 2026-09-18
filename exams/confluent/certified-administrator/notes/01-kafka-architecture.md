@@ -37,7 +37,7 @@
 - `socket.receive.buffer.bytes` (default: 102400) - Socket receive buffer
 - `socket.request.max.bytes` (default: 104857600 / 100 MB) - Maximum request size
 
-**[📖 Hardware Recommendations](https://docs.confluent.io/platform/current/installation/operating-systems.html)** - OS and hardware guidelines
+**[📖 Hardware Recommendations](https://docs.confluent.io/platform/current/installation/system-requirements.html)** - OS and hardware guidelines
 
 ### Log Segment Structure
 

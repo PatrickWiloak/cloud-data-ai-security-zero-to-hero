@@ -2949,6 +2949,6 @@ def setup_multi_region_architecture(project_id):
 - [BigQuery Security Best Practices](https://cloud.google.com/bigquery/docs/best-practices-security)
 - [VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs)
 - [Dataplex Documentation](https://cloud.google.com/dataplex/docs)
-- [Compliance Resource Center](https://cloud.google.com/security/compliance)
+- [Compliance Resource Center](https://cloud.google.com/compliance)
 - [Data Catalog](https://cloud.google.com/data-catalog/docs)
 - [Cloud Audit Logs](https://cloud.google.com/logging/docs/audit)

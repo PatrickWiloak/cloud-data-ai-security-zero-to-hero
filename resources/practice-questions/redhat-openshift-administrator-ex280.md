@@ -287,4 +287,4 @@ D. Increase the node size
 - [CKA practice questions](./kubernetes-cka.md) - the upstream Kubernetes counterpart
 - [CKAD practice questions](./kubernetes-ckad.md) - the developer-focused sibling
 - [Kubernetes in 10 minutes](../../learn/concepts/kubernetes-in-10-minutes.md) - plain-English foundation
-- **[📖 Red Hat EX280](https://www.redhat.com/en/services/certification/ex280)** - official exam objectives
+- **[📖 Red Hat EX280](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam)** - official exam objectives

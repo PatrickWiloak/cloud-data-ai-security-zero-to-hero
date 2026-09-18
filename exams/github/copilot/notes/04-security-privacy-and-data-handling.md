@@ -135,7 +135,7 @@ Events are visible in the organization audit log for Business and Enterprise.
 - Screen reader support in supported IDEs
 - Chat history can be exported for note-taking
 
-**[Copilot Accessibility](https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-the-cli)** - Accessibility docs
+**[Copilot Accessibility](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/configure-copilot-cli)** - Accessibility docs
 
 ## Compliance and Region Considerations
 

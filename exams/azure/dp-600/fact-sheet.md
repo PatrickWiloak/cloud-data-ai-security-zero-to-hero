@@ -32,7 +32,7 @@ last-updated: 2026-05-03
 - Single capacity-based pricing model
 - **[📖 Microsoft Fabric Documentation](https://learn.microsoft.com/en-us/fabric/)** - Complete Fabric guide
 - **[📖 Fabric Get Started](https://learn.microsoft.com/en-us/fabric/get-started/microsoft-fabric-overview)** - Platform overview
-- **[📖 Fabric Architecture](https://learn.microsoft.com/en-us/fabric/get-started/fabric-architecture)** - Technical architecture
+- **[📖 Fabric Architecture](https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview)** - Technical architecture
 - **[📖 Fabric Licensing](https://learn.microsoft.com/en-us/fabric/enterprise/licenses)** - Capacity and licensing
 
 ## OneLake
@@ -71,8 +71,8 @@ last-updated: 2026-05-03
 - **[📖 Lakehouse Overview](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-overview)** - Lakehouse concepts
 - **[📖 Create Lakehouse](https://learn.microsoft.com/en-us/fabric/data-engineering/create-lakehouse)** - Setup guide
 - **[📖 Lakehouse SQL Endpoint](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-sql-analytics-endpoint)** - SQL analytics
-- **[📖 Tables in Lakehouse](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-tables)** - Table management
-- **[📖 Lakehouse Files](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-files)** - File management
+- **[📖 Tables in Lakehouse](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-and-delta-tables)** - Table management
+- **[📖 Lakehouse Files](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-overview)** - File management
 - **[📖 V-Order Optimization](https://learn.microsoft.com/en-us/fabric/data-engineering/delta-optimization-and-v-order)** - Performance optimization
 
 ## Data Factory in Fabric
@@ -102,7 +102,7 @@ last-updated: 2026-05-03
 - **[📖 Spark Compute](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-compute)** - Spark configurations
 - **[📖 Notebook Source Control](https://learn.microsoft.com/en-us/fabric/data-engineering/notebook-source-control-deployment)** - Git integration
 - **[📖 PySpark Reference](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-pyspark-tutorial)** - PySpark tutorial
-- **[📖 Delta Lake with Spark](https://learn.microsoft.com/en-us/fabric/data-engineering/delta-lake-overview)** - Delta operations
+- **[📖 Delta Lake with Spark](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-and-delta-tables)** - Delta operations
 
 ## Data Warehouse
 
@@ -160,7 +160,7 @@ last-updated: 2026-05-03
 - **[📖 KQL Query Language](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/)** - Query syntax
 - **[📖 Data Ingestion](https://learn.microsoft.com/en-us/fabric/real-time-analytics/event-streams/overview)** - Eventstreams
 - **[📖 KQL Queryset](https://learn.microsoft.com/en-us/fabric/real-time-analytics/kusto-query-set)** - Query management
-- **[📖 Real-Time Dashboards](https://learn.microsoft.com/en-us/fabric/real-time-analytics/dashboard-real-time-create)** - Dashboard creation
+- **[📖 Real-Time Dashboards](https://learn.microsoft.com/en-us/fabric/real-time-intelligence/dashboard-real-time-create)** - Dashboard creation
 
 ## Power BI Integration
 
@@ -172,7 +172,7 @@ last-updated: 2026-05-03
 - Apps and content distribution
 - **[📖 Power BI in Fabric](https://learn.microsoft.com/en-us/fabric/get-started/fabric-power-bi)** - Power BI integration
 - **[📖 Create Reports](https://learn.microsoft.com/en-us/power-bi/create-reports/)** - Report design
-- **[📖 Visualizations](https://learn.microsoft.com/en-us/power-bi/visuals/)** - Visual types
+- **[📖 Visualizations](https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualizations-overview)** - Visual types
 - **[📖 Row-Level Security](https://learn.microsoft.com/en-us/fabric/security/service-admin-row-level-security)** - RLS implementation
 - **[📖 Paginated Reports](https://learn.microsoft.com/en-us/power-bi/paginated-reports/)** - Report Builder
 - **[📖 Power BI Apps](https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-create-distribute-apps)** - App deployment
@@ -185,7 +185,7 @@ last-updated: 2026-05-03
 - Model training and tracking
 - Model deployment
 - **[📖 Data Science Overview](https://learn.microsoft.com/en-us/fabric/data-science/data-science-overview)** - ML in Fabric
-- **[📖 Train Models](https://learn.microsoft.com/en-us/fabric/data-science/train-models)** - Model training
+- **[📖 Train Models](https://learn.microsoft.com/en-us/fabric/data-science/model-training-overview)** - Model training
 - **[📖 MLflow](https://learn.microsoft.com/en-us/fabric/data-science/mlflow-overview)** - Experiment tracking
 - **[📖 Model Registry](https://learn.microsoft.com/en-us/fabric/data-science/model-registry)** - Model management
 
@@ -201,7 +201,7 @@ last-updated: 2026-05-03
 - **[📖 Workspace Permissions](https://learn.microsoft.com/en-us/fabric/get-started/roles-workspaces)** - Access control
 - **[📖 Data Loss Prevention](https://learn.microsoft.com/en-us/fabric/governance/information-protection)** - Data protection
 - **[📖 Endorsement](https://learn.microsoft.com/en-us/fabric/governance/endorsement-overview)** - Content certification
-- **[📖 Sensitivity Labels](https://learn.microsoft.com/en-us/fabric/governance/sensitivity-labels)** - Data classification
+- **[📖 Sensitivity Labels](https://learn.microsoft.com/en-us/fabric/enterprise/powerbi/service-security-sensitivity-label-overview)** - Data classification
 
 ## Monitoring and Optimization
 
@@ -234,8 +234,8 @@ last-updated: 2026-05-03
 - Azure Synapse to Fabric
 - Azure Data Factory to Fabric Data Factory
 - On-premises data sources
-- **[📖 Migrate to Fabric](https://learn.microsoft.com/en-us/fabric/get-started/migrate-to-fabric)** - Migration guide
-- **[📖 Synapse Migration](https://learn.microsoft.com/en-us/fabric/data-warehouse/migration-synapse-dedicated-sql-pool)** - Synapse to Fabric
+- **[📖 Migrate to Fabric](https://learn.microsoft.com/en-us/fabric/fundamentals/migration)** - Migration guide
+- **[📖 Synapse Migration](https://learn.microsoft.com/en-us/fabric/data-warehouse/migration-synapse-dedicated-sql-pool-warehouse)** - Synapse to Fabric
 
 ## Common Scenarios
 

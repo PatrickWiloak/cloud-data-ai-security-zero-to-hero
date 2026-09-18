@@ -1,7 +1,7 @@
 # Cluster Operations
 
 **[📖 Kafka Operations](https://kafka.apache.org/documentation/#operations)** - Official operations guide
-**[📖 Confluent Operations](https://docs.confluent.io/platform/current/kafka/index.html)** - Confluent operations reference
+**[📖 Confluent Operations](https://docs.confluent.io/kafka/operations-tools/index.html)** - Confluent operations reference
 
 ## Topic Management
 

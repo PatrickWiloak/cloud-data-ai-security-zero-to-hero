@@ -28,7 +28,7 @@ last-updated: 2026-05-03
 - **[📖 IBM Cloud Well-Architected Framework](https://www.ibm.com/cloud/architecture/frameworks)**
 - **[📖 IBM Cloud Garage Method](https://www.ibm.com/cloud/garage)**
 - **[📖 IBM Cloud Learning](https://www.ibm.com/training/cloud)**
-- **[📖 Pearson VUE Testing](https://home.pearsonvue.com/ibm)**
+- **[📖 Pearson VUE Testing](https://www.pearsonvue.com/us/en/ibm.html)**
 - **[📖 IBM Cloud Certification Hub](https://www.ibm.com/training/cloud/certification)**
 
 ## Exam Domains
@@ -96,7 +96,7 @@ last-updated: 2026-05-03
 - **[📖 Kubernetes Service](https://cloud.ibm.com/docs/containers)**
 - **[📖 OpenShift on IBM Cloud](https://cloud.ibm.com/docs/openshift)**
 - **[📖 Code Engine](https://cloud.ibm.com/docs/codeengine)**
-- **[📖 Cloud Functions](https://cloud.ibm.com/docs/openwhisk)**
+- **[📖 Cloud Functions](https://cloud.ibm.com/docs/codeengine)**
 - **[📖 Database Services](https://cloud.ibm.com/docs/overview?topic=overview-database)**
 - **[📖 Data Architecture](https://www.ibm.com/cloud/architecture/architectures/dataArchitecture)**
 - **[📖 Caching Strategies](https://cloud.ibm.com/docs/databases-for-redis)**
@@ -127,9 +127,9 @@ last-updated: 2026-05-03
 - **[📖 Hyper Protect Crypto Services](https://cloud.ibm.com/docs/hs-crypto)**
 - **[📖 Secrets Manager](https://cloud.ibm.com/docs/secrets-manager)**
 - **[📖 Security and Compliance Center](https://cloud.ibm.com/docs/security-compliance)**
-- **[📖 Certificate Manager](https://cloud.ibm.com/docs/certificate-manager)**
+- **[📖 Certificate Manager](https://cloud.ibm.com/docs/secrets-manager)**
 - **[📖 Cloud Internet Services](https://cloud.ibm.com/docs/cis)**
-- **[📖 Activity Tracker](https://cloud.ibm.com/docs/activity-tracker)**
+- **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 
 ### 5. High Availability and Disaster Recovery (10%)
 - Multi-zone region (MZR) architecture
@@ -147,7 +147,7 @@ last-updated: 2026-05-03
 - **[📖 High Availability Overview](https://cloud.ibm.com/docs/overview?topic=overview-ha)**
 - **[📖 Disaster Recovery Overview](https://cloud.ibm.com/docs/overview?topic=overview-dr)**
 - **[📖 Regions and Zones](https://cloud.ibm.com/docs/overview?topic=overview-locations)**
-- **[📖 Backup Services](https://cloud.ibm.com/docs/cloud-backup)**
+- **[📖 Backup Services](https://cloud.ibm.com/docs/backup-recovery)**
 - **[📖 Veeam Backup](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-veeam_considerations)**
 - **[📖 Database Backup Strategies](https://cloud.ibm.com/docs/databases-for-postgresql?topic=databases-for-postgresql-dashboard-backups)**
 
@@ -169,7 +169,7 @@ last-updated: 2026-05-03
 - **[📖 CDN with Cloud Internet Services](https://cloud.ibm.com/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis)**
 - **[📖 Caching Best Practices](https://cloud.ibm.com/docs/databases-for-redis)**
 - **[📖 Monitoring](https://cloud.ibm.com/docs/monitoring)**
-- **[📖 Log Analysis](https://cloud.ibm.com/docs/log-analysis)**
+- **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
 
 ## Core Architecture Components
 
@@ -195,7 +195,7 @@ last-updated: 2026-05-03
 - **[📖 OpenShift](https://cloud.ibm.com/docs/openshift)**
 - **[📖 Satellite](https://cloud.ibm.com/docs/satellite)**
 - **[📖 Code Engine](https://cloud.ibm.com/docs/codeengine)**
-- **[📖 Cloud Functions](https://cloud.ibm.com/docs/openwhisk)**
+- **[📖 Cloud Functions](https://cloud.ibm.com/docs/codeengine)**
 - **[📖 VMware Solutions](https://cloud.ibm.com/docs/vmwaresolutions)**
 
 ### Storage Architecture Options
@@ -206,7 +206,7 @@ last-updated: 2026-05-03
 - **[📖 Mass Data Migration](https://cloud.ibm.com/docs/mass-data-migration)**
 
 ### Database Architecture Options
-- **[📖 Db2 on Cloud](https://cloud.ibm.com/docs/Db2onCloud)**
+- **[📖 Db2 on Cloud](https://cloud.ibm.com/docs/db2-saas)**
 - **[📖 Db2 Warehouse](https://cloud.ibm.com/docs/Db2whc)**
 - **[📖 Cloudant](https://cloud.ibm.com/docs/Cloudant)**
 - **[📖 Databases for PostgreSQL](https://cloud.ibm.com/docs/databases-for-postgresql)**
@@ -232,8 +232,8 @@ last-updated: 2026-05-03
 
 ### Observability Services
 - **[📖 Monitoring](https://cloud.ibm.com/docs/monitoring)**
-- **[📖 Log Analysis](https://cloud.ibm.com/docs/log-analysis)**
-- **[📖 Activity Tracker](https://cloud.ibm.com/docs/activity-tracker)**
+- **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
+- **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 
 ## Architecture Scenarios and Solutions
 
@@ -497,7 +497,7 @@ last-updated: 2026-05-03
 - Monitor performance metrics
 
 ### Cost Optimization Best Practices
-- **[📖 Cost Optimization Guide](https://cloud.ibm.com/docs/billing-usage?topic=billing-usage-cost)**
+- **[📖 Cost Optimization Guide](https://cloud.ibm.com/docs/account?topic=account-costs)**
 - Right-size resources based on actual usage
 - Use reserved capacity for predictable workloads
 - Implement auto-scaling to match demand
@@ -609,7 +609,7 @@ last-updated: 2026-05-03
 - **[📖 edX IBM Courses](https://www.edx.org/school/ibm)**
 
 ### Case Studies and Customer Stories
-- **[📖 IBM Cloud Case Studies](https://www.ibm.com/case-studies/search?contentType=Case%20study)**
+- **[📖 IBM Cloud Case Studies](https://www.ibm.com/case-studies?contentType=Case%20study)**
 - **[📖 IBM Cloud Success Stories](https://www.ibm.com/cloud/success-stories)**
 
 ### Community and Support

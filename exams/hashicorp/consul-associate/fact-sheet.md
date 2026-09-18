@@ -99,7 +99,7 @@ consul services register web.json
 consul services deregister -id=web
 ```
 
-- **[📖 Service Registration](https://developer.hashicorp.com/consul/docs/discovery/services)** - Registration guide
+- **[📖 Service Registration](https://developer.hashicorp.com/consul/docs/register/service/vm)** - Registration guide
 
 ### DNS Discovery
 ```bash
@@ -120,7 +120,7 @@ dig @127.0.0.1 -p 8600 web.service.consul SRV
 - Format: `<service>.service[.datacenter].consul`
 - Tag-based: `<tag>.<service>.service.consul`
 - Only returns healthy instances by default
-- **[📖 DNS Interface](https://developer.hashicorp.com/consul/docs/discovery/dns)** - DNS discovery
+- **[📖 DNS Interface](https://developer.hashicorp.com/consul/docs/discover/dns)** - DNS discovery
 
 ### Health Checks
 | Type | Mechanism | Configuration |
@@ -132,7 +132,7 @@ dig @127.0.0.1 -p 8600 web.service.consul SRV
 | gRPC | gRPC health check protocol | `grpc`, `interval` |
 | Docker | Execute in container | `docker_container_id`, `args` |
 
-- **[📖 Health Checks](https://developer.hashicorp.com/consul/docs/discovery/checks)** - Check types
+- **[📖 Health Checks](https://developer.hashicorp.com/consul/docs/register/health-check/vm)** - Check types
 
 ## Key/Value Store
 

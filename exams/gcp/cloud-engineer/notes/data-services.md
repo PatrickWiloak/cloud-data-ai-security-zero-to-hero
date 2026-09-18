@@ -370,7 +370,7 @@ gcloud sql instances patch my-instance \
 - Automatic sharding and replication
 - 99.999% availability SLA for multi-region
 
-**[📖 Cloud Spanner Overview](https://cloud.google.com/spanner/docs/overview)** - Global relational database
+**[📖 Cloud Spanner Overview](https://docs.cloud.google.com/spanner/docs)** - Global relational database
 **[📖 Spanner Schema Design](https://cloud.google.com/spanner/docs/schema-design)** - Schema and data model best practices
 
 ### Instance Configuration

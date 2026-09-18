@@ -61,7 +61,7 @@ Identity and access management covers 20% of the exam. This domain focuses on SA
 
 ## SCIM Provisioning
 
-**[📖 SCIM](https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management/using-saml-for-enterprise-iam/configuring-user-provisioning-with-scim-for-your-enterprise)** - Automated provisioning
+**[📖 SCIM](https://docs.github.com/en/enterprise-cloud@latest/admin/managing-iam/provisioning-user-accounts-with-scim/configuring-scim-provisioning-for-users)** - Automated provisioning
 
 ### What SCIM Does
 

@@ -79,7 +79,7 @@ The MongoDB Associate Atlas Administrator exam validates the ability to manage a
 - **[📖 MongoDB Atlas Documentation](https://www.mongodb.com/docs/atlas/)** - Complete Atlas documentation
 - **[📖 MongoDB University](https://learn.mongodb.com/)** - Free Atlas administration courses
 - **[📖 Atlas Getting Started](https://www.mongodb.com/docs/atlas/getting-started/)** - Atlas quickstart guide
-- **[📖 Atlas Security](https://www.mongodb.com/docs/atlas/security/)** - Atlas security documentation
+- **[📖 Atlas Security](https://www.mongodb.com/docs/atlas/setup-cluster-security/)** - Atlas security documentation
 
 ### Study Guide Files
 | Resource | Description |

@@ -67,7 +67,7 @@ The **Cloud Digital Leader** certification validates your ability to articulate 
 
 **[📖 Cloud SQL](https://cloud.google.com/sql/docs/introduction)** - Fully managed relational database service for MySQL, PostgreSQL, and SQL Server workloads.
 
-**[📖 Cloud Spanner](https://cloud.google.com/spanner/docs/overview)** - Globally distributed, horizontally scalable relational database with unlimited scale and 99.999% availability.
+**[📖 Cloud Spanner](https://docs.cloud.google.com/spanner/docs)** - Globally distributed, horizontally scalable relational database with unlimited scale and 99.999% availability.
 
 **[📖 Firestore](https://cloud.google.com/firestore/docs/overview)** - NoSQL document database optimized for mobile and web applications with real-time synchronization.
 
@@ -83,7 +83,7 @@ The **Cloud Digital Leader** certification validates your ability to articulate 
 
 **[📖 Looker](https://cloud.google.com/looker/docs/intro)** - Business intelligence platform for exploring, analyzing, and sharing real-time business analytics.
 
-**[📖 Looker Studio (Data Studio)](https://support.google.com/looker-studio/answer/6283323)** - Free tool for transforming data into customizable, interactive dashboards and reports.
+**[📖 Looker Studio (Data Studio)](https://docs.cloud.google.com/data-studio)** - Free tool for transforming data into customizable, interactive dashboards and reports.
 
 **[📖 Dataflow](https://cloud.google.com/dataflow/docs/overview)** - Unified stream and batch data processing service based on Apache Beam.
 
@@ -99,7 +99,7 @@ The **Cloud Digital Leader** certification validates your ability to articulate 
 
 **[📖 AutoML](https://cloud.google.com/automl/docs)** - Train high-quality custom machine learning models with minimal ML expertise required.
 
-**[📖 Vision AI](https://cloud.google.com/vision/docs/overview)** - Derive insights from images with pre-trained or custom machine learning models.
+**[📖 Vision AI](https://docs.cloud.google.com/vision/docs)** - Derive insights from images with pre-trained or custom machine learning models.
 
 **[📖 Natural Language AI](https://cloud.google.com/natural-language/docs/basics)** - Extract insights from unstructured text using Google's machine learning technology.
 
@@ -111,7 +111,7 @@ The **Cloud Digital Leader** certification validates your ability to articulate 
 
 **[📖 Document AI](https://cloud.google.com/document-ai/docs/overview)** - Extract structured data from documents, emails, invoices, and forms using machine learning.
 
-**[📖 Contact Center AI](https://cloud.google.com/solutions/contact-center)** - AI-powered virtual agents and insights for transforming customer service operations.
+**[📖 Contact Center AI](https://cloud.google.com/gemini-enterprise-cx)** - AI-powered virtual agents and insights for transforming customer service operations.
 
 **[📖 Recommendations AI](https://cloud.google.com/recommendations/docs/overview)** - Deliver highly personalized product recommendations to users at scale.
 
@@ -171,7 +171,7 @@ The **Cloud Digital Leader** certification validates your ability to articulate 
 
 ### Security Fundamentals
 
-**[📖 Security Overview](https://cloud.google.com/security/overview)** - How Google Cloud protects data with multiple layers of security built into infrastructure, services, and operations.
+**[📖 Security Overview](https://cloud.google.com/security)** - How Google Cloud protects data with multiple layers of security built into infrastructure, services, and operations.
 
 **[📖 Shared Responsibility Model](https://cloud.google.com/architecture/framework/security/shared-responsibility-shared-fate)** - Understanding which security responsibilities belong to Google versus the customer.
 
@@ -181,7 +181,7 @@ The **Cloud Digital Leader** certification validates your ability to articulate 
 
 **[📖 Cloud Identity](https://cloud.google.com/identity/docs/overview)** - Identity-as-a-Service (IDaaS) for managing users, devices, and access to applications.
 
-**[📖 Cloud Key Management Service (KMS)](https://cloud.google.com/kms/docs/overview)** - Manage cryptographic keys for encrypting data and controlling access to sensitive information.
+**[📖 Cloud Key Management Service (KMS)](https://docs.cloud.google.com/kms/docs)** - Manage cryptographic keys for encrypting data and controlling access to sensitive information.
 
 **[📖 Security Command Center](https://cloud.google.com/security-command-center/docs/concepts-security-command-center-overview)** - Centralized vulnerability and threat reporting service for Google Cloud resources.
 
@@ -189,7 +189,7 @@ The **Cloud Digital Leader** certification validates your ability to articulate 
 
 ### Compliance and Governance
 
-**[📖 Compliance Offerings](https://cloud.google.com/security/compliance)** - Google Cloud's compliance certifications including HIPAA, PCI-DSS, SOC 2/3, ISO 27001, and more.
+**[📖 Compliance Offerings](https://cloud.google.com/compliance)** - Google Cloud's compliance certifications including HIPAA, PCI-DSS, SOC 2/3, ISO 27001, and more.
 
 **[📖 Resource Hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy)** - Organizational structure using organizations, folders, and projects for managing resources.
 
@@ -203,7 +203,7 @@ The **Cloud Digital Leader** certification validates your ability to articulate 
 
 **[📖 Cloud Logging](https://cloud.google.com/logging/docs/overview)** - Store, search, analyze, monitor, and alert on log data and events from Google Cloud and AWS.
 
-**[📖 Error Reporting](https://cloud.google.com/error-reporting/docs/overview)** - Aggregate and display errors from cloud services in a centralized interface.
+**[📖 Error Reporting](https://docs.cloud.google.com/error-reporting/docs)** - Aggregate and display errors from cloud services in a centralized interface.
 
 **[📖 Cloud Trace](https://cloud.google.com/trace/docs/overview)** - Distributed tracing system to understand application latency and performance bottlenecks.
 

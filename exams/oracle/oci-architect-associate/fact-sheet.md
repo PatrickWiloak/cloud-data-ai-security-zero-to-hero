@@ -74,7 +74,7 @@ last-updated: 2026-05-03
 - **[📖 Volume Cloning](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/cloningavolume.htm)**
 - **[📖 Boot Volume Backup](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/bootvolumebackups.htm)**
 - **[📖 Object Storage Overview](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm)**
-- **[📖 Object Storage Tiers](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/managingstoragetiers.htm)**
+- **[📖 Object Storage Tiers](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/understandingstoragetiers.htm)**
 - **[📖 Object Lifecycle Management](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usinglifecyclepolicies.htm)**
 - **[📖 Pre-Authenticated Requests](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)**
 - **[📖 File Storage Overview](https://docs.oracle.com/en-us/iaas/Content/File/Concepts/filestorageoverview.htm)**
@@ -84,7 +84,7 @@ last-updated: 2026-05-03
 ### Database
 - **[📖 Database Overview](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/databaseoverview.htm)**
 - **[📖 Autonomous Database](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/adboverview.htm)**
-- **[📖 Autonomous Database Serverless](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/adbsoverview.htm)**
+- **[📖 Autonomous Database Serverless](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/index.html)**
 - **[📖 Autonomous Database Dedicated](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/adbddoverview.htm)**
 - **[📖 DB Systems](https://docs.oracle.com/en-us/iaas/Content/Database/Concepts/overview.htm)**
 - **[📖 Data Guard](https://docs.oracle.com/en-us/iaas/Content/Database/Tasks/configuringdataguard.htm)**

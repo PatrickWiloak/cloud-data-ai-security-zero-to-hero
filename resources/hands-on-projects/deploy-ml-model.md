@@ -423,6 +423,6 @@ gcloud ai model-monitoring-jobs create \
 
 - [AWS SageMaker Developer Guide](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html)
 - [Azure Machine Learning Documentation](https://learn.microsoft.com/en-us/azure/machine-learning/)
-- [GCP Vertex AI Documentation](https://cloud.google.com/vertex-ai/docs)
+- [GCP Vertex AI Documentation](https://docs.cloud.google.com/gemini-enterprise-agent-platform)
 - [MLflow Documentation](https://mlflow.org/docs/latest/index.html)
 - [scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)

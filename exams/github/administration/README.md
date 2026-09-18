@@ -76,7 +76,7 @@ The GitHub Administration certification validates your ability to manage and adm
 ### Key Documentation
 - **[📖 SAML SSO](https://docs.github.com/en/organizations/managing-saml-single-sign-on-for-your-organization)** - SSO configuration
 - **[📖 SCIM](https://docs.github.com/en/organizations/managing-saml-single-sign-on-for-your-organization/about-scim-for-organizations)** - User provisioning
-- **[📖 Branch Protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-a-branch-protection-rule)** - Branch rules
+- **[📖 Branch Protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)** - Branch rules
 - **[📖 Audit Log](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization)** - Audit logging
 
 ---

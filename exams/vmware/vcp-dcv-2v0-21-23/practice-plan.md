@@ -227,8 +227,8 @@ This plan assumes 1.5-2 hours of study per day plus 30-60 minutes of hands-on la
 ### Free
 - **[VMware Hands-On Labs](https://labs.hol.vmware.com/)** - free browser-based vSphere environments
 - **[VMware Configuration Maximums Tool](https://configmax.broadcom.com/)** - authoritative maximums
-- **[VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php)** - HCL
-- **[VMware Docs - vSphere 8](https://docs.vmware.com/en/VMware-vSphere/index.html)** - official docs
+- **[VMware Compatibility Guide](https://compatibilityguide.broadcom.com/)** - HCL
+- **[VMware Docs - vSphere 8](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0.html)** - official docs
 - **William Lam's blog** ([williamlam.com](https://williamlam.com/)) - automation, nested ESXi tips
 - **Yellow Bricks** ([yellow-bricks.com](https://www.yellow-bricks.com/)) - Duncan Epping (HA/DRS book author)
 

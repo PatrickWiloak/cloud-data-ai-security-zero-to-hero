@@ -193,7 +193,7 @@
 ## Practice Resources
 
 ### Official
-- **[📖 LFCS Training Course (LFS201)](https://training.linuxfoundation.org/training/essentials-of-linux-system-administration/)** - Official course
+- **[📖 LFCS Training Course (LFS201)](https://training.linuxfoundation.org/training/linux-system-administration-essentials-lfs207/)** - Official course
 - **[📖 Linux Foundation Exam Simulator](https://killer.sh/)** - killer.sh practice environment
 
 ### Community

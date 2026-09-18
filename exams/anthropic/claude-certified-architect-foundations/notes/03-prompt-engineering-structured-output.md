@@ -109,7 +109,7 @@ The document to analyze or process.
 
 ## Few-Shot and Many-Shot Prompting
 
-**[Few-Shot Prompting](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/few-shot-prompting)** - Example-based prompting
+**[Few-Shot Prompting](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)** - Example-based prompting
 
 ### Few-Shot Prompting
 
@@ -320,7 +320,7 @@ For creative writing and brainstorming, higher temperatures (0.7-1.0) work well.
 - **[System Prompts](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts)** - System prompt design
 - **[Chain of Thought](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/chain-of-thought)** - Reasoning techniques
 - **[Use XML Tags](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags)** - XML organization
-- **[Few-Shot Prompting](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/few-shot-prompting)** - Example-based prompting
+- **[Few-Shot Prompting](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)** - Example-based prompting
 - **[Tool Use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)** - Structured extraction via tools
 - **[Prompt Caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)** - Cost optimization
 - **[Vision](https://docs.anthropic.com/en/docs/build-with-claude/vision)** - Image processing

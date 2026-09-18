@@ -114,7 +114,7 @@ query = (stream_df.writeStream
 
 ### 6. Streaming Deduplication
 
-**[📖 Deduplication](https://docs.databricks.com/en/structured-streaming/stateful-processing.html)** - Streaming dedup
+**[📖 Deduplication](https://docs.databricks.com/aws/en/structured-streaming/stateful-streaming)** - Streaming dedup
 
 ```python
 # Deduplicate within watermark window
@@ -135,7 +135,7 @@ deduped = stream_df.dropDuplicates(["event_id"])
 ### 7. Advanced Auto Loader
 
 **[📖 Auto Loader Options](https://docs.databricks.com/en/ingestion/auto-loader/options.html)** - Full configuration
-**[📖 Schema Evolution](https://docs.databricks.com/en/ingestion/auto-loader/schema-evolution.html)** - Schema handling
+**[📖 Schema Evolution](https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/schema)** - Schema handling
 
 **File Notification Mode:**
 ```python
@@ -190,4 +190,4 @@ query = (stream_df.writeStream
 | Stream-Stream Joins | [docs.databricks.com/en/structured-streaming/joining-streams.html](https://docs.databricks.com/aws/en/structured-streaming/) |
 | Watermarks | [docs.databricks.com/en/structured-streaming/watermarks.html](https://docs.databricks.com/en/structured-streaming/watermarks.html) |
 | Auto Loader Options | [docs.databricks.com/en/ingestion/auto-loader/options.html](https://docs.databricks.com/en/ingestion/auto-loader/options.html) |
-| Schema Evolution | [docs.databricks.com/en/ingestion/auto-loader/schema-evolution.html](https://docs.databricks.com/en/ingestion/auto-loader/schema-evolution.html) |
+| Schema Evolution | [docs.databricks.com/en/ingestion/auto-loader/schema-evolution.html](https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/schema) |

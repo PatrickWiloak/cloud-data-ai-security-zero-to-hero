@@ -1,6 +1,6 @@
 # Performance Concepts
 
-**[📖 Performance Optimization](https://docs.snowflake.com/en/user-guide/performance)** - Performance tuning overview
+**[📖 Performance Optimization](https://docs.snowflake.com/en/guides-overview-performance)** - Performance tuning overview
 
 ## Caching Mechanisms
 

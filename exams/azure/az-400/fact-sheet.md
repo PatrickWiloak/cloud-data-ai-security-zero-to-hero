@@ -32,7 +32,7 @@ The **[📖 AZ-400: Designing and Implementing Microsoft DevOps Solutions](https
 
 **[📖 Azure Boards Overview](https://learn.microsoft.com/en-us/azure/devops/boards/get-started/what-is-azure-boards)** - Work tracking and agile project management
 
-**[📖 Kanban Best Practices](https://learn.microsoft.com/en-us/azure/devops/boards/best-practices-kanban)** - Implementing Kanban boards effectively
+**[📖 Kanban Best Practices](https://learn.microsoft.com/en-us/azure/devops/boards/boards/kanban-overview)** - Implementing Kanban boards effectively
 
 **[📖 Scrum in Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/boards/sprints/scrum-overview)** - Scrum framework implementation
 
@@ -342,7 +342,7 @@ The **[📖 AZ-400: Designing and Implementing Microsoft DevOps Solutions](https
 
 **[📖 Container Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-overview)** - AKS and container monitoring
 
-**[📖 Prometheus Integration](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/prometheus-metrics-overview)** - Prometheus metrics in Azure Monitor
+**[📖 Prometheus Integration](https://learn.microsoft.com/en-us/azure/azure-monitor/metrics/prometheus-metrics-overview)** - Prometheus metrics in Azure Monitor
 
 **[📖 Grafana Integration](https://learn.microsoft.com/en-us/azure/managed-grafana/overview)** - Azure Managed Grafana
 
@@ -372,7 +372,7 @@ The **[📖 AZ-400: Designing and Implementing Microsoft DevOps Solutions](https
 
 **[📖 Migrate to Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/migrate/migration-overview)** - Migration planning and tools
 
-**[📖 GitHub to Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/repos/git/import-from-github)** - Repository migration
+**[📖 GitHub to Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/repos/git/import-git-repository)** - Repository migration
 
 **[📖 Jenkins to Azure Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/migrate/from-jenkins)** - CI/CD migration guide
 

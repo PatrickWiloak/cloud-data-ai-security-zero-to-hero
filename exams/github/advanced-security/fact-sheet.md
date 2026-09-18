@@ -15,7 +15,7 @@ last-updated: 2026-05-03
 **Prerequisites:** None (hands-on GHAS experience recommended)
 **Validity:** 2 years
 
-**[Official Exam Page](https://resources.github.com/learn/certifications/)** - Registration
+**[Official Exam Page](https://learn.github.com/certifications)** - Registration
 **[GHAS Docs](https://docs.github.com/en/code-security)** - Product documentation
 **[GHAS Product Page](https://github.com/features/security)** - Overview
 
@@ -170,7 +170,7 @@ When blocked, the developer can:
 
 Bypasses are auditable. Delegated bypass lets reviewers grant bypass instead of the developer.
 
-**[Push Protection](https://docs.github.com/en/code-security/secret-scanning/using-advanced-secret-scanning-and-push-protection-features/push-protection-for-repositories-and-organizations)** - Guide
+**[Push Protection](https://docs.github.com/en/code-security/concepts/secret-security/push-protection)** - Guide
 
 ### Validity Checks
 

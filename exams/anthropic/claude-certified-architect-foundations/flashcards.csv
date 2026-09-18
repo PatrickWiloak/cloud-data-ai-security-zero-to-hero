@@ -49,7 +49,6 @@ Cloud-hosted service (tool design mcp integration),Use streamable HTTP,"notes,to
 Resources (tool design mcp integration),Read-only data access. The model requests data by URI.,"notes,tool-design-mcp-integration"
 Tools (tool design mcp integration),Executable functions with parameters. The model calls a function.,"notes,tool-design-mcp-integration"
 TypeScript (tool design mcp integration),@modelcontextprotocol/sdk,"notes,tool-design-mcp-integration"
-MCP Specification (tool design mcp integration),Full protocol spec,"notes,tool-design-mcp-integration"
 Cost (context reliability),Thinking tokens add to the total cost of each request,"notes,context-reliability"
 Latency (context reliability),Extended thinking takes additional time before the response,"notes,context-reliability"
 Quality (context reliability),Generally improves quality for complex tasks,"notes,context-reliability"

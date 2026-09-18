@@ -194,7 +194,7 @@ D. Weekly batch synchronization
 
 **Why:** SCIM (System for Cross-domain Identity Management) automates user provisioning and deprovisioning. When a user is deactivated in Okta, Cloud Identity is immediately updated, revoking Google Cloud access. This ensures no orphaned access. Manual processes (A) are slow and error-prone. Separate accounts (C) require duplicate management. Weekly sync (D) leaves access active too long after termination.
 
-**Key Concept:** [Cloud Identity Provisioning](https://cloud.google.com/architecture/identity/federating-gcp-with-okta)
+**Key Concept:** [Cloud Identity Provisioning](https://docs.cloud.google.com/architecture/identity/okta-provisioning-and-single-sign-on)
 </details>
 
 ---
@@ -324,7 +324,7 @@ D. Annual penetration tests
 
 **Why:** GKE Security Posture provides continuous vulnerability scanning of container images. Findings appear in Security Command Center for unified security view. This covers both Artifact Registry images and running workloads. Manual inspection (A) doesn't scale. Network scanning (C) doesn't find container CVEs. Annual tests (D) miss vulnerabilities between tests.
 
-**Key Concept:** [GKE Security Posture](https://cloud.google.com/kubernetes-engine/docs/concepts/security-posture)
+**Key Concept:** [GKE Security Posture](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-security-posture-dashboard)
 </details>
 
 ### Question 18
@@ -566,7 +566,7 @@ D. Point-in-time assessment only
 
 **Why:** Google's SOC 2 Type II report covers Google's infrastructure controls. Organization's Security Command Center compliance reports show resource compliance against standards over time. Audit logs demonstrate continuous monitoring and control operation. Screenshots (A) and point-in-time (D) don't show continuity. Verbal assurance (C) isn't auditable evidence.
 
-**Key Concept:** [Google Cloud Compliance](https://cloud.google.com/security/compliance)
+**Key Concept:** [Google Cloud Compliance](https://cloud.google.com/compliance)
 </details>
 
 ### Question 31

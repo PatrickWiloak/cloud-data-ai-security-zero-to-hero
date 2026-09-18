@@ -324,7 +324,7 @@ D. Bulk executor
 
 **Why:** Transactional batch operations in Cosmos DB are atomic within a single partition key. All operations succeed or all fail with no partial updates. Individual updates (A) aren't atomic. Stored procedures (C) also require same partition but are more complex. Bulk executor (D) is for high-throughput, not transactions.
 
-**Key Concept:** [Transactional Batch](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/transactional-batch)
+**Key Concept:** [Transactional Batch](https://learn.microsoft.com/en-us/azure/cosmos-db/transactional-batch)
 </details>
 
 ### Question 18

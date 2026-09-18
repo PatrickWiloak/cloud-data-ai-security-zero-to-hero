@@ -17,7 +17,7 @@ The GitHub Advanced Security (GHAS) certification validates the ability to confi
 - **Retake Policy:** 24-hour wait for first retake, 14 days thereafter
 
 ### Official Resources
-- **[GitHub Certifications](https://resources.github.com/learn/certifications/)** - Program overview
+- **[GitHub Certifications](https://learn.github.com/certifications)** - Program overview
 - **[Code Security Docs](https://docs.github.com/en/code-security)** - Complete GHAS documentation
 - **[GitHub Advanced Security](https://github.com/features/security)** - Product page
 - **[CodeQL Documentation](https://codeql.github.com/)** - CodeQL resources

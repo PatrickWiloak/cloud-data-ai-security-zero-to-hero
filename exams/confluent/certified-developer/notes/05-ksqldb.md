@@ -167,7 +167,7 @@ CREATE STREAM enriched_orders AS
 
 ## Aggregations
 
-**[📖 Aggregation Functions](https://docs.confluent.io/platform/current/ksqldb/reference/aggregate-functions.html)** - Available aggregate functions
+**[📖 Aggregation Functions](https://docs.confluent.io/platform/current/ksqldb/developer-guide/ksqldb-reference/aggregate-functions.html)** - Available aggregate functions
 
 ### Simple Aggregation
 ```sql
@@ -228,7 +228,7 @@ CREATE TABLE session_counts AS
 
 ## Joins
 
-**[📖 ksqlDB Joins](https://docs.confluent.io/platform/current/ksqldb/reference/sql/joins.html)** - Join types and syntax
+**[📖 ksqlDB Joins](https://docs.confluent.io/platform/current/ksqldb/developer-guide/joins/index.html)** - Join types and syntax
 
 ### Stream-Stream Join
 ```sql
@@ -318,7 +318,7 @@ SELECT * FROM customer_spending WHERE total_spent > 1000;
 
 ## ksqlDB REST API
 
-**[📖 REST API](https://docs.confluent.io/platform/current/ksqldb/developer-guide/api.html)** - ksqlDB REST API reference
+**[📖 REST API](https://docs.confluent.io/platform/current/ksqldb/developer-guide/ksqldb-rest-api/index.html)** - ksqlDB REST API reference
 
 ### Key Endpoints
 

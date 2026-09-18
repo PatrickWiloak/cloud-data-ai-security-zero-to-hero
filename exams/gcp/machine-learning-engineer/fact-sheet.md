@@ -44,8 +44,8 @@ last-updated: 2026-05-03
 **Supervised Learning:**
 - **Classification** - Binary, multi-class, multi-label
 - **Regression** - Continuous value prediction
-- **[📖 Classification Models](https://cloud.google.com/vertex-ai/docs/training/classification)** - Classification on Vertex AI
-- **[📖 Regression Models](https://cloud.google.com/vertex-ai/docs/training/regression)** - Regression on Vertex AI
+- **[📖 Classification Models](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/classification-regression/train-model)** - Classification on Vertex AI
+- **[📖 Regression Models](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/classification-regression/train-model)** - Regression on Vertex AI
 
 **Unsupervised Learning:**
 - **Clustering** - Grouping similar data points
@@ -131,7 +131,7 @@ last-updated: 2026-05-03
 - **[📖 Deploy Models](https://cloud.google.com/vertex-ai/docs/predictions/deploy-model-console)** - Model deployment guide
 - **[📖 Online Prediction](https://cloud.google.com/vertex-ai/docs/predictions/get-online-predictions)** - Real-time serving
 - **[📖 Batch Prediction](https://cloud.google.com/vertex-ai/docs/predictions/batch-predictions)** - Batch inference
-- **[📖 Private Endpoints](https://cloud.google.com/vertex-ai/docs/predictions/use-private-endpoint)** - VPC-based serving
+- **[📖 Private Endpoints](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/using-private-endpoints)** - VPC-based serving
 - **[📖 Model Monitoring](https://cloud.google.com/vertex-ai/docs/model-monitoring/overview)** - Production model monitoring
 
 ### Vertex AI Model Monitoring
@@ -140,9 +140,9 @@ last-updated: 2026-05-03
 - **Training-Serving Skew Detection** - Distribution drift from training
 - **Prediction Drift Detection** - Changes in prediction distribution
 - **Feature Attribution** - Input feature importance
-- **[📖 Model Monitoring Setup](https://cloud.google.com/vertex-ai/docs/model-monitoring/model-monitoring)** - Monitoring configuration
-- **[📖 Skew Detection](https://cloud.google.com/vertex-ai/docs/model-monitoring/skew-detection)** - Training-serving skew
-- **[📖 Drift Detection](https://cloud.google.com/vertex-ai/docs/model-monitoring/drift-detection)** - Prediction drift monitoring
+- **[📖 Model Monitoring Setup](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/model-monitoring/set-up-model-monitoring)** - Monitoring configuration
+- **[📖 Skew Detection](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/model-monitoring/using-model-monitoring)** - Training-serving skew
+- **[📖 Drift Detection](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/model-monitoring/using-model-monitoring)** - Prediction drift monitoring
 - **[📖 Alerting](https://cloud.google.com/vertex-ai/docs/model-monitoring/using-model-monitoring#alerts)** - Monitoring alerts setup
 
 ## AutoML
@@ -231,7 +231,7 @@ last-updated: 2026-05-03
 - Interaction features
 - Time-based features (day of week, hour, seasonality)
 - Domain-specific feature engineering
-- **[📖 Feature Engineering Best Practices](https://developers.google.com/machine-learning/crash-course/representation)** - Feature representation
+- **[📖 Feature Engineering Best Practices](https://developers.google.com/machine-learning/crash-course/numerical-data)** - Feature representation
 - **[📖 Feature Crosses](https://developers.google.com/machine-learning/crash-course/feature-crosses/video-lecture)** - Combining features
 
 **Feature Selection:**
@@ -324,7 +324,7 @@ last-updated: 2026-05-03
 - **Recurrent Neural Networks (RNNs)** - Sequential data
 - **Long Short-Term Memory (LSTM)** - Long sequences
 - **Transformers** - NLP and beyond
-- **[📖 Neural Network Guide](https://developers.google.com/machine-learning/crash-course/introduction-to-neural-networks)** - NN fundamentals
+- **[📖 Neural Network Guide](https://developers.google.com/machine-learning/crash-course/neural-networks)** - NN fundamentals
 - **[📖 CNN Architectures](https://www.tensorflow.org/tutorials/images/cnn)** - CNN tutorial
 - **[📖 RNN Guide](https://www.tensorflow.org/guide/keras/rnn)** - RNN with Keras
 - **[📖 Transformer Models](https://www.tensorflow.org/text/tutorials/transformer)** - Transformer tutorial
@@ -396,7 +396,7 @@ last-updated: 2026-05-03
 - K-fold cross-validation
 - Stratified K-fold
 - Time series cross-validation
-- **[📖 Model Evaluation](https://cloud.google.com/vertex-ai/docs/training/evaluating-models)** - Evaluation strategies
+- **[📖 Model Evaluation](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/evaluation/introduction)** - Evaluation strategies
 - **[📖 What-If Tool](https://pair-code.github.io/what-if-tool/)** - Interactive evaluation
 - **[📖 TensorBoard Integration](https://cloud.google.com/vertex-ai/docs/experiments/tensorboard-overview)** - Visualization
 
@@ -419,7 +419,7 @@ last-updated: 2026-05-03
 - LIME (Local Interpretable Model-agnostic Explanations)
 - Integrated Gradients
 - **[📖 Vertex Explainable AI](https://cloud.google.com/vertex-ai/docs/explainable-ai/overview)** - Explainability overview
-- **[📖 Feature Attributions](https://cloud.google.com/vertex-ai/docs/explainable-ai/feature-attributions)** - Attribution methods
+- **[📖 Feature Attributions](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/tabular-data/classification-explanations)** - Attribution methods
 - **[📖 Explanation Methods](https://cloud.google.com/vertex-ai/docs/explainable-ai/configuring-explanations)** - Configuration guide
 - **[📖 What-If Tool](https://cloud.google.com/vertex-ai/docs/explainable-ai/what-if-tool)** - Interactive explanations
 
@@ -456,7 +456,7 @@ last-updated: 2026-05-03
 - Canary deployments
 - Shadow mode deployment
 - **[📖 Model Registry](https://cloud.google.com/vertex-ai/docs/model-registry/introduction)** - Version management
-- **[📖 Model Versioning](https://cloud.google.com/vertex-ai/docs/model-registry/model-versions)** - Version control
+- **[📖 Model Versioning](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/model-registry/versioning)** - Version control
 - **[📖 Model Aliases](https://cloud.google.com/vertex-ai/docs/model-registry/model-alias)** - Version aliases
 
 ### Workflow Orchestration
@@ -488,7 +488,7 @@ last-updated: 2026-05-03
 - **Shadow Mode** - Run new model without serving
 - **[📖 Deployment Strategies](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning#model_deployment)** - Deployment patterns
 - **[📖 Traffic Split](https://cloud.google.com/vertex-ai/docs/predictions/configure-traffic-split)** - Split traffic between models
-- **[📖 Private Endpoints](https://cloud.google.com/vertex-ai/docs/predictions/use-private-endpoint)** - Secure deployment
+- **[📖 Private Endpoints](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/using-private-endpoints)** - Secure deployment
 
 ### Container Management
 
@@ -513,7 +513,7 @@ last-updated: 2026-05-03
 - **[📖 Vertex AI Model Monitoring](https://cloud.google.com/vertex-ai/docs/model-monitoring/overview)** - Monitoring overview
 - **[📖 Monitoring Configuration](https://cloud.google.com/vertex-ai/docs/model-monitoring/using-model-monitoring)** - Setup guide
 - **[📖 Monitoring Alerts](https://cloud.google.com/vertex-ai/docs/model-monitoring/using-model-monitoring#alerts)** - Alert configuration
-- **[📖 Cloud Logging Integration](https://cloud.google.com/vertex-ai/docs/predictions/online-predictions-logging)** - Prediction logging
+- **[📖 Cloud Logging Integration](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/online-prediction-logging)** - Prediction logging
 
 ### Data Drift Detection
 
@@ -521,8 +521,8 @@ last-updated: 2026-05-03
 - **Covariate Shift** - Input distribution changes
 - **Concept Drift** - Relationship between X and Y changes
 - **Label Drift** - Output distribution changes
-- **[📖 Drift Detection](https://cloud.google.com/vertex-ai/docs/model-monitoring/drift-detection)** - Drift monitoring
-- **[📖 Skew Detection](https://cloud.google.com/vertex-ai/docs/model-monitoring/skew-detection)** - Training-serving skew
+- **[📖 Drift Detection](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/model-monitoring/using-model-monitoring)** - Drift monitoring
+- **[📖 Skew Detection](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/model-monitoring/using-model-monitoring)** - Training-serving skew
 - **[📖 Statistical Distance](https://cloud.google.com/vertex-ai/docs/model-monitoring/using-model-monitoring#distance-type)** - Distance metrics
 
 ### Model Performance Optimization
@@ -559,7 +559,7 @@ last-updated: 2026-05-03
 - Feature Store for feature reuse
 - **[📖 Training Cost Optimization](https://cloud.google.com/vertex-ai/docs/training/training-cost-optimization)** - Training cost reduction
 - **[📖 Prediction Cost Optimization](https://cloud.google.com/vertex-ai/docs/predictions/cost-optimization)** - Serving cost reduction
-- **[📖 Preemptible VMs](https://cloud.google.com/vertex-ai/docs/training/using-preemptible-vms)** - Spot instance training
+- **[📖 Preemptible VMs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/use-spot-vms)** - Spot instance training
 
 ### A/B Testing
 
@@ -568,7 +568,7 @@ last-updated: 2026-05-03
 - Statistical significance testing
 - Multi-armed bandit approaches
 - **[📖 Traffic Splitting](https://cloud.google.com/vertex-ai/docs/predictions/configure-traffic-split)** - A/B testing setup
-- **[📖 Model Comparison](https://cloud.google.com/vertex-ai/docs/model-registry/compare-models)** - Compare model versions
+- **[📖 Model Comparison](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/experiments/user-journey/uj-compare-models)** - Compare model versions
 
 ## Responsible AI
 
@@ -686,7 +686,7 @@ last-updated: 2026-05-03
 - Store predictions in BigQuery
 - **[📖 BigQuery ML](https://cloud.google.com/bigquery-ml/docs)** - BQML overview
 - **[📖 Vertex AI and BigQuery](https://cloud.google.com/vertex-ai/docs/beginner/bqml)** - Integration guide
-- **[📖 Export to BigQuery](https://cloud.google.com/vertex-ai/docs/predictions/batch-predict-bq)** - Batch predictions to BQ
+- **[📖 Export to BigQuery](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/batch-inference/new-job-from-bigquery)** - Batch predictions to BQ
 
 ### Cloud Storage Integration
 
@@ -733,7 +733,7 @@ last-updated: 2026-05-03
 - Service accounts for training/serving
 - Workload Identity for GKE
 - **[📖 Vertex AI IAM](https://cloud.google.com/vertex-ai/docs/general/access-control)** - Access control
-- **[📖 IAM Roles](https://cloud.google.com/vertex-ai/docs/general/iam-roles)** - Available roles
+- **[📖 IAM Roles](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/general/access-control)** - Available roles
 - **[📖 Service Accounts](https://cloud.google.com/vertex-ai/docs/general/custom-service-account)** - Custom service accounts
 
 ### VPC and Networking
@@ -743,7 +743,7 @@ last-updated: 2026-05-03
 - Private endpoints for serving
 - VPC Service Controls
 - **[📖 VPC Peering](https://cloud.google.com/vertex-ai/docs/general/vpc-peering)** - Private connectivity
-- **[📖 Private Endpoints](https://cloud.google.com/vertex-ai/docs/predictions/use-private-endpoint)** - Secure serving
+- **[📖 Private Endpoints](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/using-private-endpoints)** - Secure serving
 - **[📖 VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs)** - Data perimeter
 
 ### Encryption

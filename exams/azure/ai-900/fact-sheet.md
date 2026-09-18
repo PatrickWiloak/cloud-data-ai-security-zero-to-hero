@@ -136,7 +136,7 @@ The **[📖 Azure AI Fundamentals certification](https://learn.microsoft.com/en-
 
 **[📖 Azure AI Vision Overview](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview)** - Comprehensive image and video analysis service.
 
-**[📖 Computer Vision Features](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-vision-features)** - Complete list of available vision capabilities.
+**[📖 Computer Vision Features](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview)** - Complete list of available vision capabilities.
 
 ### Image Analysis
 
@@ -250,7 +250,7 @@ The **[📖 Azure AI Fundamentals certification](https://learn.microsoft.com/en-
 
 ### Azure AI Bot Service
 
-**[📖 Azure Bot Service Overview](https://learn.microsoft.com/en-us/azure/bot-service/bot-service-overview)** - Building intelligent conversational bots.
+**[📖 Azure Bot Service Overview](https://learn.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0)** - Building intelligent conversational bots.
 
 **[📖 Bot Framework](https://learn.microsoft.com/en-us/azure/bot-service/bot-service-overview-readme)** - SDK and tools for bot development.
 
@@ -346,7 +346,7 @@ The **[📖 Azure AI Fundamentals certification](https://learn.microsoft.com/en-
 
 **[📖 Microsoft Learn AI-900 Path](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/)** - Complete learning path with hands-on modules.
 
-**[📖 AI-900 Practice Assessment](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/practice/assessment?assessment-type=practice&assessmentId=26)** - Official practice test to assess readiness.
+**[📖 AI-900 Practice Assessment](https://learn.microsoft.com/en-us/credentials/certifications/practice-assessments-for-microsoft-certifications)** - Official practice test to assess readiness.
 
 **[📖 Microsoft Exam Sandbox](https://aka.ms/examdemo)** - Interactive demo of exam interface and question types.
 

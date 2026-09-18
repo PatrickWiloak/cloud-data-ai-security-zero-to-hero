@@ -243,7 +243,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 ### 3.1 Cloud Key Management Service (Cloud KMS)
 
-**[📖 Cloud KMS Overview](https://cloud.google.com/kms/docs/overview)** - Cryptographic key management service
+**[📖 Cloud KMS Overview](https://docs.cloud.google.com/kms/docs)** - Cryptographic key management service
 
 **[📖 Encryption at Rest](https://cloud.google.com/docs/security/encryption/default-encryption)** - Google's default encryption implementation
 
@@ -445,13 +445,13 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 Binary Authorization](https://cloud.google.com/binary-authorization/docs/overview)** - Deploy-time security controls for containers
 
-**[📖 Binary Authorization Policies](https://cloud.google.com/binary-authorization/docs/creating-policy)** - Enforcing attestation requirements
+**[📖 Binary Authorization Policies](https://docs.cloud.google.com/binary-authorization/docs/configure-policy-gke)** - Enforcing attestation requirements
 
 **[📖 Container Analysis](https://cloud.google.com/container-analysis/docs/container-analysis)** - Metadata storage for container images
 
 **[📖 Vulnerability Scanning](https://cloud.google.com/container-analysis/docs/vulnerability-scanning)** - Automated container vulnerability detection
 
-**[📖 Attestations](https://cloud.google.com/binary-authorization/docs/creating-attestations)** - Cryptographic verification of build process
+**[📖 Attestations](https://docs.cloud.google.com/binary-authorization/docs/making-attestations)** - Cryptographic verification of build process
 
 **[📖 Artifact Registry Security](https://cloud.google.com/artifact-registry/docs/security)** - Securing container and package repositories
 
@@ -469,7 +469,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 ### 5.1 Compliance and Certifications
 
-**[📖 Compliance Resource Center](https://cloud.google.com/security/compliance)** - Overview of Google Cloud certifications
+**[📖 Compliance Resource Center](https://cloud.google.com/compliance)** - Overview of Google Cloud certifications
 
 **[📖 ISO/IEC 27001](https://cloud.google.com/security/compliance/iso-27001)** - Information security management certification
 
@@ -491,7 +491,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 Assured Workloads Overview](https://cloud.google.com/assured-workloads/docs/overview)** - Compliance-focused environments
 
-**[📖 Assured Workloads Compliance Regimes](https://cloud.google.com/assured-workloads/docs/compliance-regimes)** - Supported regulatory frameworks
+**[📖 Assured Workloads Compliance Regimes](https://docs.cloud.google.com/assured-workloads/docs/supported-products)** - Supported regulatory frameworks
 
 **[📖 Sovereign Controls](https://cloud.google.com/assured-workloads/docs/sovereign-controls)** - Data residency and access controls
 
@@ -499,7 +499,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 ### 5.3 Data Residency and Sovereignty
 
-**[📖 Data Residency](https://cloud.google.com/architecture/framework/security/data-residency-sovereignty-compliance)** - Controlling where data is stored
+**[📖 Data Residency](https://docs.cloud.google.com/architecture/framework/security/meet-regulatory-compliance-and-privacy-needs)** - Controlling where data is stored
 
 **[📖 Resource Locations](https://cloud.google.com/about/locations)** - Available regions and zones
 
@@ -549,7 +549,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 ### Legacy Tools (For Reference)
 
-**[📖 Forseti Security](https://forsetisecurity.org/)** - Open-source security toolkit (now deprecated)
+**[📖 Forseti Security](https://github.com/forseti-security/forseti-security)** - Open-source security toolkit (now deprecated)
 
 **Note:** Forseti Security has been deprecated in favor of Security Command Center and native Google Cloud security services. While it may still appear in legacy documentation, focus on Security Command Center for exam preparation.
 

@@ -279,7 +279,7 @@ flowchart TB
 - Cross-region failover in seconds
 
 **Documentation:**
-- [Cloud Spanner](https://cloud.google.com/spanner/docs/overview)
+- [Cloud Spanner](https://docs.cloud.google.com/spanner/docs)
 - [Cloud Load Balancing](https://cloud.google.com/load-balancing/docs/load-balancing-overview)
 - [Cloud DNS](https://cloud.google.com/dns/docs/overview)
 - [Cloud CDN](https://cloud.google.com/cdn/docs/overview)

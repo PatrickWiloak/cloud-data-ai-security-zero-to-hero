@@ -373,7 +373,7 @@
 ## Study Resources
 
 ### Official Google Cloud Resources
-- **[Database Migration Guide](https://cloud.google.com/solutions/database-migration)**
+- **[Database Migration Guide](https://cloud.google.com/database-migration)**
 - **[Database Best Practices](https://cloud.google.com/architecture/database-best-practices)**
 - **[Cloud SQL Documentation](https://cloud.google.com/sql/docs)**
 - **[Cloud Spanner Documentation](https://cloud.google.com/spanner/docs)**

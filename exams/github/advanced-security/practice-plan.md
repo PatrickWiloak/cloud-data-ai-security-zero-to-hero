@@ -96,7 +96,7 @@
 - [ ] Attempt to push a commit with a detected secret; observe the block
 - [ ] Bypass with each reason and review the audit log
 - [ ] Configure delegated bypass at org level
-- [ ] Read: [Push Protection](https://docs.github.com/en/code-security/secret-scanning/using-advanced-secret-scanning-and-push-protection-features/push-protection-for-repositories-and-organizations)
+- [ ] Read: [Push Protection](https://docs.github.com/en/code-security/concepts/secret-security/push-protection)
 
 #### Day 26-27: Dependabot and Dependency Review
 - [ ] Create a `.github/dependabot.yml` with npm and github-actions ecosystems

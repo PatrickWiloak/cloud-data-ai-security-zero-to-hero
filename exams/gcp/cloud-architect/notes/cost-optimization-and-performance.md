@@ -2417,7 +2417,7 @@ resource "google_compute_reservation" "cpu_reservation" {
 ## Additional Resources
 
 ### Official Google Cloud Documentation
-- [Cost Optimization Best Practices](https://cloud.google.com/architecture/best-practices-for-cost-optimization)
+- [Cost Optimization Best Practices](https://docs.cloud.google.com/architecture/framework/cost-optimization)
 - [GCP Pricing Calculator](https://cloud.google.com/products/calculator)
 - [Performance Optimization Guide](https://cloud.google.com/architecture/framework/performance-optimization)
 - [Billing Documentation](https://cloud.google.com/billing/docs)

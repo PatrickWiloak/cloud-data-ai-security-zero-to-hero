@@ -14,7 +14,7 @@ last-updated: 2026-05-03
 **Validity:** 3 years
 **Open documentation:** `oc explain`, web console, cluster resources
 
-**[📖 Official EX280 page](https://www.redhat.com/en/services/certification/ex280-red-hat-certified-specialist-openshift-administration)**
+**[📖 Official EX280 page](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam)**
 **[📖 OpenShift 4.14 Documentation](https://docs.openshift.com/container-platform/4.14/welcome/index.html)**
 **[📖 Latest OpenShift Docs](https://docs.openshift.com/)**
 

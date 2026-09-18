@@ -355,7 +355,7 @@
 - [Kubernetes Service Documentation](https://cloud.ibm.com/docs/containers)
 - [Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/docs/openshift)
 - [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring)
-- [IBM Cloud Logs](https://cloud.ibm.com/docs/log-analysis)
+- [IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs)
 
 ### Training Courses
 - IBM Cloud Kubernetes Service Training

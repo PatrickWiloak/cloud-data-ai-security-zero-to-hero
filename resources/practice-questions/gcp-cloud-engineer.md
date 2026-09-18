@@ -698,7 +698,7 @@ D. VPC Service Controls
 
 **Why:** Cloud Asset Inventory can track service account key age, and monitoring alerts can notify when keys exceed 90 days. There's no organization policy for key rotation. IAM conditions control access timing. VPC Service Controls protect data.
 
-**Key Concept:** [Service Account Key Management](https://docs.cloud.google.com/iam/docs/using-iam-securely-for-managing-service-account-keys)
+**Key Concept:** [Service Account Key Management](https://docs.cloud.google.com/iam/docs/best-practices-for-managing-service-account-keys)
 </details>
 
 ---
@@ -778,7 +778,7 @@ D. Create a new service account
 
 **Why:** Immediately disable or delete the compromised key to prevent unauthorized access. Deleting the repo doesn't revoke the key. Revoking user access doesn't address the leaked key. Creating new SA doesn't disable the compromised key.
 
-**Key Concept:** [Compromised Credentials](https://docs.cloud.google.com/iam/docs/using-iam-securely-for-managing-service-account-keys#compromised)
+**Key Concept:** [Compromised Credentials](https://docs.cloud.google.com/iam/docs/best-practices-for-managing-service-account-keys)
 </details>
 
 ---

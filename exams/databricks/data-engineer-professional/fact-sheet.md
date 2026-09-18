@@ -102,7 +102,7 @@ This certification is designed for:
 ### Advanced Auto Loader
 
 **[📖 Auto Loader Options](https://docs.databricks.com/en/ingestion/auto-loader/options.html)** - Full configuration
-**[📖 Schema Evolution](https://docs.databricks.com/en/ingestion/auto-loader/schema-evolution.html)** - Handling schema changes
+**[📖 Schema Evolution](https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/schema)** - Handling schema changes
 
 **Key Facts:**
 - File notification mode uses cloud events (SQS, Event Grid, Pub/Sub)

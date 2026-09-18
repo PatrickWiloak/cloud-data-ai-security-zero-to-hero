@@ -97,7 +97,7 @@ last-updated: 2026-05-03
 
 **Documentation:**
 - **[📖 NIST Access Control Guide](https://csrc.nist.gov/publications/detail/sp/800-162/final)** - SP 800-162 ABAC guide
-- **[📖 NIST Identity Management](https://csrc.nist.gov/publications/detail/sp/800-63-3/final)** - SP 800-63 digital identity guidelines
+- **[📖 NIST Identity Management](https://csrc.nist.gov/pubs/sp/800/63/3/final)** - SP 800-63 digital identity guidelines
 
 ## Encryption and Data Security
 

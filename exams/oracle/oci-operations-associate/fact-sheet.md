@@ -61,7 +61,7 @@ This certification is designed for:
 **📖 [Compute Overview](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/computeoverview.htm)** - Compute service concepts
 **📖 [Creating Instances](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/launchinginstance.htm)** - Instance creation
 **📖 [Instance Shapes](https://docs.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm)** - Available shapes
-**📖 [Managing Instances](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/managinginstances.htm)** - Lifecycle operations
+**📖 [Managing Instances](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/instances.htm)** - Lifecycle operations
 **📖 [Boot Volumes](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/bootvolumes.htm)** - Boot volume management
 
 #### Instance Configurations and Pools
@@ -124,7 +124,7 @@ This certification is designed for:
 
 **📖 [File Storage Overview](https://docs.oracle.com/en-us/iaas/Content/File/Concepts/filestorageoverview.htm)** - File storage concepts
 **📖 [Creating File Systems](https://docs.oracle.com/en-us/iaas/Content/File/Tasks/creatingfilesystems.htm)** - File system creation
-**📖 [Mount Targets](https://docs.oracle.com/en-us/iaas/Content/File/Tasks/creatingmounttargets.htm)** - Mounting file systems
+**📖 [Mount Targets](https://docs.oracle.com/en-us/iaas/Content/File/Tasks/creatingfilesystems.htm)** - Mounting file systems
 **📖 [File System Snapshots](https://docs.oracle.com/en-us/iaas/Content/File/Tasks/managingsnapshots.htm)** - Snapshot management
 
 ### Domain 4: Network Operations (15%)
@@ -137,9 +137,9 @@ This certification is designed for:
 - Service gateway and DRG
 
 **📖 [VCN Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm)** - Networking concepts
-**📖 [Creating VCNs](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/create-vcn.htm)** - VCN creation
-**📖 [Subnets](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/create-subnet.htm)** - Subnet configuration
-**📖 [Gateways](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/create-igw.htm)** - Gateway setup
+**📖 [Creating VCNs](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm)** - VCN creation
+**📖 [Subnets](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm)** - Subnet configuration
+**📖 [Gateways](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingIGs.htm)** - Gateway setup
 **📖 [Route Tables](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingroutetables.htm)** - Routing configuration
 **📖 [DRG](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingDRGs.htm)** - Dynamic routing gateway
 
@@ -152,7 +152,7 @@ This certification is designed for:
 **📖 [Security Lists](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/securitylists.htm)** - Subnet-level security
 **📖 [Network Security Groups](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/networksecuritygroups.htm)** - Resource-level security
 **📖 [Security Rules](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/securityrules.htm)** - Rule configuration
-**📖 [NSG Best Practices](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/networksecuritygroups_topic-NSG_best_practices.htm)** - Security best practices
+**📖 [NSG Best Practices](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/networksecuritygroups.htm)** - Security best practices
 
 #### Load Balancers
 - Creating load balancers
@@ -193,7 +193,7 @@ This certification is designed for:
 **📖 [Logging Overview](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/loggingoverview.htm)** - Logging concepts
 **📖 [Service Logs](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/service_logs.htm)** - OCI service logs
 **📖 [Custom Logs](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/custom_logs.htm)** - Application logging
-**📖 [Log Search](https://docs.oracle.com/en-us/iaas/Content/Logging/Tasks/search_logs.htm)** - Searching logs
+**📖 [Log Search](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/searchinglogs.htm)** - Searching logs
 **📖 [Log Analytics](https://docs.oracle.com/en-us/iaas/logging-analytics/home.htm)** - Advanced analytics
 **📖 [Log Connectors](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/service_connector_hub.htm)** - Log streaming
 
@@ -300,7 +300,7 @@ This certification is designed for:
 - Compliance reporting
 
 **📖 [Audit Overview](https://docs.oracle.com/en-us/iaas/Content/Audit/Concepts/auditoverview.htm)** - Audit logging
-**📖 [Audit Events](https://docs.oracle.com/en-us/iaas/Content/Audit/Reference/auditlogentries.htm)** - Event types
+**📖 [Audit Events](https://docs.oracle.com/en-us/iaas/Content/Audit/Reference/logeventreference.htm)** - Event types
 **📖 [Viewing Logs](https://docs.oracle.com/en-us/iaas/Content/Audit/Tasks/viewinglogevents.htm)** - Log access
 **📖 [Retention](https://docs.oracle.com/en-us/iaas/Content/Audit/Concepts/auditoverview.htm#retention)** - Log retention policy
 
@@ -342,7 +342,7 @@ This certification is designed for:
 
 **📖 [Backup Overview](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/blockvolumebackups.htm)** - Backup concepts
 **📖 [Volume Backup Policies](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/schedulingvolumebackups.htm)** - Automated backups
-**📖 [Cross-Region Backup](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/copyingvolumebackup.htm)** - Backup replication
+**📖 [Cross-Region Backup](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/copy-bv-backup.htm)** - Backup replication
 **📖 [DB Backup](https://docs.oracle.com/en-us/iaas/Content/Database/Tasks/backingup.htm)** - Database backups
 **📖 [Object Replication](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usingreplication.htm)** - Object replication
 
@@ -398,7 +398,7 @@ This certification is designed for:
 ### Practice
 **📖 [Practice Exams](https://learn.oracle.com/ols/learning-path/become-an-oci-operations-associate-2024/127300/127304)** - Official practice
 **📖 [Certification FAQ](https://education.oracle.com/oracle-certification-faq)** - Common questions
-**📖 [Pearson VUE](https://home.pearsonvue.com/oracle)** - Schedule exam
+**📖 [Pearson VUE](https://www.pearsonvue.com/us/en/oracle.html)** - Schedule exam
 
 ## 💡 Study Strategy
 

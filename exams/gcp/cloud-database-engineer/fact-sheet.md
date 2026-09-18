@@ -122,7 +122,7 @@ last-updated: 2026-05-03
 - Cloud SQL to external servers
 - Useful for migration and hybrid scenarios
 - **[📖 Replicating from External Server](https://cloud.google.com/sql/docs/mysql/replication/configure-external-replica)** - External to Cloud SQL
-- **[📖 Replicating to External Server](https://cloud.google.com/sql/docs/mysql/replication/configure-external-source)** - Cloud SQL to external
+- **[📖 Replicating to External Server](https://docs.cloud.google.com/sql/docs/mysql/replication/external-server)** - Cloud SQL to external
 
 ### Connection Management
 
@@ -187,7 +187,7 @@ last-updated: 2026-05-03
 - ACID transactions across continents
 - 99.999% availability SLA (multi-region)
 - Automatic sharding and replication
-- **[📖 Cloud Spanner Overview](https://cloud.google.com/spanner/docs/overview)** - Architecture fundamentals
+- **[📖 Cloud Spanner Overview](https://docs.cloud.google.com/spanner/docs)** - Architecture fundamentals
 - **[📖 Spanner Concepts](https://cloud.google.com/spanner/docs/whitepapers/life-of-reads-and-writes)** - Distributed architecture
 - **[📖 TrueTime and External Consistency](https://cloud.google.com/spanner/docs/true-time-external-consistency)** - Consistency model
 
@@ -251,7 +251,7 @@ last-updated: 2026-05-03
 - Autoscaling available
 - Regional capacity: 1000 QPS per node
 - **[📖 Nodes and Processing Units](https://cloud.google.com/spanner/docs/compute-capacity)** - Capacity planning
-- **[📖 Autoscaling](https://cloud.google.com/spanner/docs/autoscaling)** - Automatic scaling
+- **[📖 Autoscaling](https://docs.cloud.google.com/spanner/docs/autoscaling-overview)** - Automatic scaling
 
 **Performance Best Practices:**
 - Batch reads and writes
@@ -281,7 +281,7 @@ last-updated: 2026-05-03
 - Integration with Dataflow
 - Use cases: Auditing, replication, analytics
 - **[📖 Change Streams](https://cloud.google.com/spanner/docs/change-streams)** - CDC architecture
-- **[📖 Querying Change Streams](https://cloud.google.com/spanner/docs/change-streams/query)** - Stream queries
+- **[📖 Querying Change Streams](https://docs.cloud.google.com/spanner/docs/change-streams)** - Stream queries
 
 ## AlloyDB for PostgreSQL
 
@@ -294,7 +294,7 @@ last-updated: 2026-05-03
 - Separation of compute and storage
 - Columnar engine for analytics
 - **[📖 AlloyDB Overview](https://cloud.google.com/alloydb/docs/overview)** - Architecture guide
-- **[📖 AlloyDB Features](https://cloud.google.com/alloydb/docs/overview/features)** - Feature highlights
+- **[📖 AlloyDB Features](https://docs.cloud.google.com/alloydb/docs)** - Feature highlights
 - **[📖 AlloyDB vs Cloud SQL](https://cloud.google.com/alloydb/docs/overview/choose-alloydb)** - Service comparison
 
 **Cluster Architecture:**
@@ -303,7 +303,7 @@ last-updated: 2026-05-03
 - Automated storage scaling (no downtime)
 - Cross-region replication for DR
 - **[📖 Cluster Management](https://cloud.google.com/alloydb/docs/cluster-manage)** - Cluster operations
-- **[📖 Read Pool](https://cloud.google.com/alloydb/docs/read-pool-overview)** - Read scaling
+- **[📖 Read Pool](https://docs.cloud.google.com/alloydb/docs/instance-read-pool-create)** - Read scaling
 
 ### High Availability and Backup
 
@@ -312,7 +312,7 @@ last-updated: 2026-05-03
 - Automatic failover (typically 60 seconds or less)
 - Continuous backup to Cloud Storage
 - Point-in-time recovery
-- **[📖 High Availability](https://cloud.google.com/alloydb/docs/overview/high-availability)** - HA architecture
+- **[📖 High Availability](https://docs.cloud.google.com/alloydb/docs/high-availability)** - HA architecture
 - **[📖 Backup and Recovery](https://cloud.google.com/alloydb/docs/backup/overview)** - Backup options
 
 **Cross-Region Replication:**
@@ -328,7 +328,7 @@ last-updated: 2026-05-03
 - No schema changes required
 - Transparently accelerates analytical queries
 - Works alongside traditional row-based storage
-- **[📖 Columnar Engine](https://cloud.google.com/alloydb/docs/columnar-engine/overview)** - Analytics optimization
+- **[📖 Columnar Engine](https://docs.cloud.google.com/alloydb/docs/columnar-engine/about)** - Analytics optimization
 
 ### Migration to AlloyDB
 
@@ -337,7 +337,7 @@ last-updated: 2026-05-03
 - Offline migration with pg_dump/pg_restore
 - Native PostgreSQL replication
 - **[📖 Migrating to AlloyDB](https://cloud.google.com/alloydb/docs/migration/overview)** - Migration strategies
-- **[📖 Database Migration Service](https://cloud.google.com/database-migration/docs/alloydb)** - DMS integration
+- **[📖 Database Migration Service](https://docs.cloud.google.com/database-migration/docs/postgresql-to-alloydb/migration-src-and-dest)** - DMS integration
 
 ## Firestore - NoSQL Document Database
 
@@ -375,7 +375,7 @@ last-updated: 2026-05-03
 - Pagination with cursors
 - **[📖 Queries](https://cloud.google.com/firestore/docs/query-data/queries)** - Query syntax
 - **[📖 Indexes](https://cloud.google.com/firestore/docs/query-data/indexing)** - Index management
-- **[📖 Query Limitations](https://cloud.google.com/firestore/docs/query-data/query-limitations)** - Query constraints
+- **[📖 Query Limitations](https://docs.cloud.google.com/firestore/native/docs/query-data/queries)** - Query constraints
 
 ### Transactions and Batches
 
@@ -559,7 +559,7 @@ last-updated: 2026-05-03
 - SQL Server
 - AlloyDB for PostgreSQL
 - **[📖 Database Migration Service Overview](https://cloud.google.com/database-migration/docs/overview)** - Service introduction
-- **[📖 Supported Databases](https://cloud.google.com/database-migration/docs/reference/supported-databases)** - Source and target matrix
+- **[📖 Supported Databases](https://docs.cloud.google.com/database-migration/docs/supported-databases)** - Source and target matrix
 
 **Migration Types:**
 - Continuous migration (minimal downtime)
@@ -597,7 +597,7 @@ last-updated: 2026-05-03
 - Direct migration from PostgreSQL to AlloyDB
 - Handles version compatibility
 - Optimizations for AlloyDB features
-- **[📖 Migrating to AlloyDB](https://cloud.google.com/database-migration/docs/alloydb)** - AlloyDB migration
+- **[📖 Migrating to AlloyDB](https://docs.cloud.google.com/database-migration/docs/postgresql-to-alloydb/migration-src-and-dest)** - AlloyDB migration
 
 ### Oracle Migration
 
@@ -606,7 +606,7 @@ last-updated: 2026-05-03
 - Schema conversion tools
 - Data type mapping
 - **[📖 Oracle Migration](https://cloud.google.com/database-migration/docs/oracle-to-postgresql)** - Oracle to PostgreSQL
-- **[📖 Schema Conversion](https://cloud.google.com/database-migration/docs/oracle-to-postgresql/schema-conversion)** - Schema translation
+- **[📖 Schema Conversion](https://docs.cloud.google.com/database-migration/docs/oracle-to-postgresql/work-with-conversion-workspaces)** - Schema translation
 
 ### Migration Best Practices
 
@@ -664,7 +664,7 @@ last-updated: 2026-05-03
 - Private Service Connect
 - VPC Service Controls for data perimeter
 - **[📖 Private IP](https://cloud.google.com/sql/docs/mysql/private-ip)** - Private connectivity
-- **[📖 VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs/service-list)** - Perimeter security
+- **[📖 VPC Service Controls](https://docs.cloud.google.com/vpc-service-controls/docs)** - Perimeter security
 
 **Authorized Networks:**
 - IP allowlisting for public IP instances
@@ -698,7 +698,7 @@ last-updated: 2026-05-03
 - PCI-DSS
 - HIPAA
 - FedRAMP
-- **[📖 Compliance Resource Center](https://cloud.google.com/security/compliance)** - All certifications
+- **[📖 Compliance Resource Center](https://cloud.google.com/compliance)** - All certifications
 - **[📖 Data Residency](https://cloud.google.com/security/compliance/data-residency)** - Location controls
 
 ## Monitoring and Operations

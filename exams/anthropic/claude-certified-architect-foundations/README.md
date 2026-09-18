@@ -145,7 +145,7 @@ Managing Claude's context window effectively, implementing reliability patterns,
 | Anthropic Academy | https://anthropic.skilljar.com | Free public Claude courses |
 | Anthropic Docs | https://docs.anthropic.com | Primary documentation |
 | MCP Specification | https://modelcontextprotocol.io | MCP protocol details |
-| Claude Code Docs | https://docs.anthropic.com/en/docs/claude-code | CLI and IDE docs |
+| Claude Code Docs | https://code.claude.com/docs | CLI and IDE docs |
 | Anthropic Cookbook | https://github.com/anthropics/anthropic-cookbook | Code examples |
 | Pearson VUE | https://www.pearsonvue.com/us/en/anthropic.html | Scheduling and retake policy |
 

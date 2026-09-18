@@ -418,7 +418,7 @@ D. Cloud Storage
 
 **Why:** Memorystore Redis provides sub-millisecond latency, handles millions of operations per second, and supports TTL on keys natively. Keys automatically expire after the specified duration. Perfect for session data. Cloud SQL (A) doesn't scale to millions per second. BigQuery (C) has higher latency. Cloud Storage (D) isn't a key-value store.
 
-**Key Concept:** [Cloud Memorystore](https://cloud.google.com/memorystore/docs/redis/overview)
+**Key Concept:** [Cloud Memorystore](https://docs.cloud.google.com/memorystore/docs/redis/memorystore-for-redis-overview)
 </details>
 
 ### Question 23
@@ -490,7 +490,7 @@ D. README files
 
 **Why:** Data Catalog provides a centralized metadata management service. It automatically catalogs BigQuery datasets and supports custom entries for other sources. Tags enable classification (PII, sensitivity levels). Search enables data discovery. Integration with DLP for automatic classification. Spreadsheets (A) don't scale or integrate.
 
-**Key Concept:** [Data Catalog](https://cloud.google.com/data-catalog/docs/overview)
+**Key Concept:** [Data Catalog](https://docs.cloud.google.com/data-catalog/docs)
 </details>
 
 ### Question 27
@@ -602,7 +602,7 @@ D. Pre-built reports only
 
 **Why:** BI Engine accelerates queries for interactive analytics. Looker provides a semantic layer for business-friendly exploration. Gemini in BigQuery (Duet AI) enables natural language queries - users describe what they want in plain English. SQL training (A) is time-consuming. Spreadsheets (C) and fixed reports (D) limit exploration.
 
-**Key Concept:** [BigQuery Natural Language](https://cloud.google.com/bigquery/docs/generate-sql)
+**Key Concept:** [BigQuery Natural Language](https://docs.cloud.google.com/bigquery/docs/gemini-overview)
 </details>
 
 ### Question 33

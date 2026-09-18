@@ -173,14 +173,14 @@ last-updated: 2026-05-03
   - Detailed monitoring: 1-minute intervals (paid)
   - Custom metrics: High-resolution up to 1-second intervals
   - Metric math for calculations
-  - [📖 CloudWatch Metrics Documentation](https://docs.aws.amazon.com/cloudwatch/latest/monitoring/)
+  - [📖 CloudWatch Metrics Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html)
 
 - **CloudWatch Logs** - Centralized log management
   - Log groups, log streams, retention policies
   - Log Insights: SQL-like query language
   - Metric filters: Extract metrics from logs
   - Subscription filters: Stream to Lambda, Kinesis, Firehose
-  - [📖 CloudWatch Logs Documentation](https://docs.aws.amazon.com/cloudwatch/latest/logs/)
+  - [📖 CloudWatch Logs Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html)
 
 - **CloudWatch Alarms** - Automated responses to metric thresholds
   - Actions: SNS notifications, Auto Scaling, EC2 actions, Systems Manager
@@ -644,7 +644,7 @@ Monitoring: CloudWatch Logs + X-Ray tracing
 - [📖 CodeBuild User Guide](https://docs.aws.amazon.com/codebuild/latest/userguide/)
 - [📖 CodeDeploy User Guide](https://docs.aws.amazon.com/codedeploy/latest/userguide/)
 - [📖 Systems Manager User Guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/)
-- [📖 CloudWatch User Guide](https://docs.aws.amazon.com/cloudwatch/index.html)
+- [📖 CloudWatch User Guide](https://docs.aws.amazon.com/cloudwatch/)
 - [📖 AWS Config Developer Guide](https://docs.aws.amazon.com/config/latest/developerguide/)
 
 ### Hands-on Resources

@@ -362,4 +362,4 @@ gcloud logging read "protoPayload.serviceName=\"iam.googleapis.com\""
 - [Cloud KMS](https://cloud.google.com/kms/docs)
 - [DLP Documentation](https://cloud.google.com/dlp/docs)
 - [Security Command Center](https://cloud.google.com/security-command-center/docs)
-- [Compliance Resources](https://cloud.google.com/security/compliance)
+- [Compliance Resources](https://cloud.google.com/compliance)

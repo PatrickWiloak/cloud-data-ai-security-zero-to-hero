@@ -15,7 +15,7 @@ last-updated: 2026-05-03
 **Delivery:** Online proctored
 **Prerequisites:** None (GitHub Foundations recommended)
 
-**[📖 GitHub Certifications](https://resources.github.com/learn/certifications/)** - Registration and exam details
+**[📖 GitHub Certifications](https://learn.github.com/certifications)** - Registration and exam details
 **[📖 GitHub Enterprise Cloud Docs](https://docs.github.com/en/enterprise-cloud@latest)** - Enterprise documentation
 
 ## Exam Domains
@@ -84,7 +84,7 @@ last-updated: 2026-05-03
 - Combine base role (read, triage, write, maintain, admin) with additional permissions
 - Organization-level feature
 
-**[📖 Branch Protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-a-branch-protection-rule)** - Branch rules
+**[📖 Branch Protection](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)** - Branch rules
 **[📖 Repository Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets)** - Rulesets
 
 ### Domain 4: Manage GitHub Actions (20%)

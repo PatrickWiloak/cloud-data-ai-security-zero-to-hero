@@ -36,7 +36,7 @@
 
 ### Quick Links
 - **[GitHub Enterprise Cloud Docs](https://docs.github.com/en/enterprise-cloud@latest)** - Enterprise documentation
-- **[GitHub Certifications](https://resources.github.com/learn/certifications/)** - Registration
+- **[GitHub Certifications](https://learn.github.com/certifications)** - Registration
 - **[GitHub Skills](https://skills.github.com/)** - Interactive learning
 
 ---

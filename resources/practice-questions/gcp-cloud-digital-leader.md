@@ -68,7 +68,7 @@ D. Compliance is the customer's sole responsibility
 
 **Why:** Google Cloud provides data residency controls to keep data in specific regions. Compliance certifications (HIPAA BAA, FedRAMP, SOC, ISO) demonstrate adherence to standards. Assured Workloads provides additional controls for highly regulated industries. This shared responsibility model helps customers meet compliance requirements.
 
-**Key Concept:** [Google Cloud Compliance](https://cloud.google.com/security/compliance)
+**Key Concept:** [Google Cloud Compliance](https://cloud.google.com/compliance)
 </details>
 
 ### Question 4
@@ -548,7 +548,7 @@ D. Automatic compliance without effort
 
 **Why:** Google Cloud maintains compliance certifications (SOC 1/2/3, ISO 27001, PCI DSS, HIPAA, FedRAMP). Compliance reports are available through compliance documentation. Shared responsibility means Google secures infrastructure while customers secure their data and configurations. Assured Workloads provides additional controls for regulated industries.
 
-**Key Concept:** [Google Cloud Compliance](https://cloud.google.com/security/compliance)
+**Key Concept:** [Google Cloud Compliance](https://cloud.google.com/compliance)
 </details>
 
 ### Question 30

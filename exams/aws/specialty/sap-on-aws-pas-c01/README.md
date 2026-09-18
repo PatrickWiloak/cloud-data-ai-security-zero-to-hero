@@ -304,7 +304,7 @@ Database Tier: SAP HANA
 ### Quick Links (PAS-C01 Specific)
 - **[PAS-C01 Official Exam Page](https://aws.amazon.com/certification/certified-sap-on-aws-specialty/)** - Registration
 - **[SAP on AWS Documentation](https://docs.aws.amazon.com/sap/)** - Complete guides
-- **[SAP on AWS Blog](https://aws.amazon.com/sap/blog/)** - Latest updates
+- **[SAP on AWS Blog](https://aws.amazon.com/blogs/awsforsap/)** - Latest updates
 - **[SAP Community on AWS](https://community.sap.com/)** - Community discussions
 
 ### SAP-Specific Resources

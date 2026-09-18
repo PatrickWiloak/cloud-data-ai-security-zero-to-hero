@@ -43,7 +43,7 @@
 - [ ] Learn tensor parallelism (Megatron-style column/row splits)
 - [ ] Understand pipeline parallelism and micro-batching
 - [ ] Study 3D parallelism combinations
-- [ ] **Reference:** [NeMo Parallelism Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/parallelisms.html)
+- [ ] **Reference:** [NeMo Parallelism Guide](https://docs.nvidia.com/nemo/megatron-bridge/latest/parallelisms.html)
 
 #### Day 5-7: Training Best Practices
 - [ ] Study mixed precision training - BF16, FP16, loss scaling
@@ -114,7 +114,7 @@
 - [ ] Learn hybrid search - dense vector + sparse keyword
 - [ ] Understand re-ranking with cross-encoder models
 - [ ] Practice query expansion and reformulation
-- [ ] **Reference:** [NeMo Retriever](https://docs.nvidia.com/nim/nemo-retriever/latest/index.html)
+- [ ] **Reference:** [NeMo Retriever](https://docs.nvidia.com/nim/nemo-retriever/text-reranking/latest/overview.html)
 
 #### Day 5-7: RAG Evaluation and Production
 - [ ] Study retrieval metrics - precision, recall, MRR, NDCG

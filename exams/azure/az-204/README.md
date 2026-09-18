@@ -264,7 +264,7 @@ For detailed information on courses, practice tests, hands-on labs, communities,
 - **[AZ-204 Official Exam Page](https://learn.microsoft.com/en-us/certifications/exams/az-204/)** - Registration and exam details
 - **[Microsoft Learn - AZ-204 Learning Path](https://learn.microsoft.com/en-us/certifications/azure-developer/)** - FREE official study path
 - **[Azure Developer Documentation](https://docs.microsoft.com/en-us/azure/developer/)** - Developer guides
-- **[Azure SDK Documentation](https://docs.microsoft.com/en-us/azure/developer/sdk/)** - SDK references
+- **[Azure SDK Documentation](https://learn.microsoft.com/en-us/azure/developer/)** - SDK references
 - **[Azure Code Samples](https://docs.microsoft.com/en-us/samples/browse/?products=azure)** - Example code
 - **[Azure Functions Documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)** - Functions reference
 - **[Azure Free Account](https://azure.microsoft.com/en-us/free/)** - $200 free credit for hands-on practice

@@ -105,7 +105,7 @@
 - [ ] Implement complex dialog rails
 - [ ] Build retrieval rails for RAG-based agents
 - [ ] Create custom action handlers
-- [ ] **Reference:** [Colang 2 Overview](https://docs.nvidia.com/nemo/guardrails/latest/user-guides/colang-2/overview.html)
+- [ ] **Reference:** [Colang 2 Overview](https://docs.nvidia.com/nemo/guardrails/configure-guardrails/colang)
 
 #### Day 3-4: Agent Safety Patterns
 - [ ] Implement tool call validation and sandboxing

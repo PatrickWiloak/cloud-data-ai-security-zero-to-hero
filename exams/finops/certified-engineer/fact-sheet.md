@@ -258,7 +258,7 @@ Engineers are responsible for implementing the technical components of FinOps - 
 - Require encryption on all storage
 - Enforce tag requirements
 
-**[📖 OPA Documentation](https://www.openpolicyagent.org/docs/latest/)** - Open Policy Agent
+**[📖 OPA Documentation](https://www.openpolicyagent.org/docs)** - Open Policy Agent
 **[📖 Sentinel Documentation](https://docs.hashicorp.com/sentinel)** - HashiCorp Sentinel
 
 ### FinOps Tool Ecosystem

@@ -146,7 +146,7 @@ The SnowPro Advanced - Architect Certification validates expertise in designing 
 - **[Snowflake Documentation](https://docs.snowflake.com/en/)** - Complete documentation
 - **[Architecture Overview](https://docs.snowflake.com/en/user-guide/intro-key-concepts)** - Core architecture concepts
 - **[Security Guide](https://docs.snowflake.com/en/guides-overview-secure)** - Security documentation
-- **[Performance Optimization](https://docs.snowflake.com/en/user-guide/performance-query)** - Query optimization guide
+- **[Performance Optimization](https://docs.snowflake.com/en/guides-overview-performance)** - Query optimization guide
 
 ### Recommended Preparation
 - Snowflake official Advanced Architect study guide

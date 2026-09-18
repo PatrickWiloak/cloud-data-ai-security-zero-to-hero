@@ -144,7 +144,7 @@ last-updated: 2026-05-03
 #### Auditing and Compliance
 - **[📖 SQL Auditing](https://learn.microsoft.com/en-us/azure/azure-sql/database/auditing-overview)** - Track database events and write audit logs
 - **[📖 Configure Auditing](https://learn.microsoft.com/en-us/azure/azure-sql/database/auditing-setup)** - Set up server and database auditing
-- **[📖 Audit Log Destinations](https://learn.microsoft.com/en-us/azure/azure-sql/database/auditing-write-to-storage)** - Write to Storage, Log Analytics, Event Hub
+- **[📖 Audit Log Destinations](https://learn.microsoft.com/en-us/azure/azure-sql/database/auditing-overview)** - Write to Storage, Log Analytics, Event Hub
 - **[📖 Ledger for SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/ledger-overview)** - Tamper-evident ledger capabilities
 - **[📖 Information Protection](https://learn.microsoft.com/en-us/azure/azure-sql/database/data-discovery-and-classification-overview)** - Data discovery and classification
 
@@ -179,7 +179,7 @@ last-updated: 2026-05-03
 - **[📖 Live Query Statistics](https://learn.microsoft.com/en-us/sql/relational-databases/performance/live-query-statistics)** - Real-time query execution monitoring
 - **[📖 SQL Server Profiler](https://learn.microsoft.com/en-us/sql/tools/sql-server-profiler/sql-server-profiler)** - Legacy trace and profiling tool
 - **[📖 Extended Events](https://learn.microsoft.com/en-us/azure/azure-sql/database/xevent-db-diff-from-svr)** - Lightweight event tracing system
-- **[📖 Database Watcher](https://learn.microsoft.com/en-us/azure/azure-sql/database/database-watcher-overview)** - Real-time monitoring and analytics
+- **[📖 Database Watcher](https://learn.microsoft.com/en-us/azure/azure-sql/database-watcher-overview?view=azuresql)** - Real-time monitoring and analytics
 
 ### Dynamic Management Views (DMVs)
 
@@ -193,7 +193,7 @@ last-updated: 2026-05-03
 ### Wait Statistics and Blocking
 - **[📖 Wait Statistics](https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql)** - Identify performance bottlenecks with wait types
 - **[📖 Blocking Monitoring](https://learn.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)** - Track locks and blocking chains
-- **[📖 Deadlock Detection](https://learn.microsoft.com/en-us/sql/relational-databases/sql-trace/deadlock-graph-event-class)** - Analyze and resolve deadlocks
+- **[📖 Deadlock Detection](https://learn.microsoft.com/en-us/sql/relational-databases/event-classes/deadlock-graph-event-class?view=sql-server-ver17)** - Analyze and resolve deadlocks
 - **[📖 Intelligent Query Processing](https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing)** - Automatic performance enhancements
 
 ---
@@ -218,7 +218,7 @@ last-updated: 2026-05-03
 ### Query Optimization
 
 #### Query Tuning Techniques
-- **[📖 Query Tuning](https://learn.microsoft.com/en-us/sql/relational-databases/performance/query-tuning)** - Query performance tuning guide
+- **[📖 Query Tuning](https://learn.microsoft.com/en-us/sql/relational-databases/performance/performance-monitoring-and-tuning-tools)** - Query performance tuning guide
 - **[📖 Parameter Sniffing](https://learn.microsoft.com/en-us/sql/relational-databases/query-processing-architecture-guide#parameter-sensitivity)** - Understand and handle parameter sniffing
 - **[📖 Plan Guides](https://learn.microsoft.com/en-us/sql/relational-databases/performance/plan-guides)** - Force query plans without code changes
 - **[📖 Statistics Management](https://learn.microsoft.com/en-us/sql/relational-databases/statistics/statistics)** - Optimize query optimizer statistics
@@ -257,7 +257,7 @@ last-updated: 2026-05-03
 - **[📖 High Availability Overview](https://learn.microsoft.com/en-us/azure/azure-sql/database/high-availability-sla)** - Azure SQL HA architecture and SLA
 - **[📖 Business Critical Availability](https://learn.microsoft.com/en-us/azure/azure-sql/database/high-availability-sla#business-critical-service-tier-zone-redundant-availability)** - Always On availability groups in Business Critical
 - **[📖 Zone Redundancy](https://learn.microsoft.com/en-us/azure/azure-sql/database/high-availability-sla#zone-redundant-availability)** - Deploy across availability zones
-- **[📖 SLA Details](https://www.azure.com/support/legal/sla/azure-sql-database/)** - Service level agreements
+- **[📖 SLA Details](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services)** - Service level agreements
 
 #### Active Geo-Replication
 - **[📖 Active Geo-Replication](https://learn.microsoft.com/en-us/azure/azure-sql/database/active-geo-replication-overview)** - Asynchronous replication to multiple regions

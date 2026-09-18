@@ -287,4 +287,4 @@ D. Prompting does not matter
 - [GitHub Foundations practice questions](./github-foundations.md) - the platform fundamentals
 - [Prompt engineering](../../learn/concepts/prompt-engineering.md) - the general skill
 - [AI security topic index](../../topics/ai-security.md) - responsible use in a wider frame
-- **[📖 GitHub Certifications](https://resources.github.com/learn/certifications/)** - official exam pages
+- **[📖 GitHub Certifications](https://learn.github.com/certifications)** - official exam pages

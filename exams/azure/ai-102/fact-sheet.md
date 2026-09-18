@@ -84,9 +84,9 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 **[📖 Analyze Images API](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/call-analyze-image)** - Analyze visual features in images including objects, tags, and descriptions
 
-**[📖 Computer Vision Image Tagging](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-tag-images)** - Automatic image tagging with thousands of recognizable objects
+**[📖 Computer Vision Image Tagging](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-tag-images-40)** - Automatic image tagging with thousands of recognizable objects
 
-**[📖 Image Descriptions and Captions](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-describe-images)** - Generate human-readable descriptions of image content
+**[📖 Image Descriptions and Captions](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-describe-images-40)** - Generate human-readable descriptions of image content
 
 **[📖 Object Detection](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-object-detection)** - Detect and locate objects within images with bounding boxes
 
@@ -242,7 +242,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 ### Azure Bot Service
 
-**[📖 Azure Bot Service Overview](https://learn.microsoft.com/en-us/azure/bot-service/bot-service-overview)** - Build, test, and deploy intelligent bots
+**[📖 Azure Bot Service Overview](https://learn.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0)** - Build, test, and deploy intelligent bots
 
 **[📖 Bot Framework SDK](https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics)** - Core concepts for building conversational bots
 
@@ -404,7 +404,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 **[📖 Managed Identity for AI Services](https://learn.microsoft.com/en-us/azure/ai-services/authentication#authenticate-with-managed-identities)** - Eliminate credentials using managed identities
 
-**[📖 Role-Based Access Control (RBAC)](https://learn.microsoft.com/en-us/azure/ai-services/role-based-access-control)** - Control access using Azure RBAC roles
+**[📖 Role-Based Access Control (RBAC)](https://learn.microsoft.com/en-us/azure/foundry/concepts/rbac-foundry)** - Control access using Azure RBAC roles
 
 ### Network Security
 
@@ -442,7 +442,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 **[📖 Rate Limits and Throttling](https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-apis-throttling)** - Understanding and handling service rate limits
 
-**[📖 Batch Processing](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-batch)** - Process multiple documents efficiently
+**[📖 Batch Processing](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-batch-analysis)** - Process multiple documents efficiently
 
 **[📖 Async Operations](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/call-read-api)** - Use asynchronous APIs for long-running operations
 
@@ -894,7 +894,7 @@ The AI-102 certification validates your ability to design and implement Azure AI
 
 **[📖 Azure Updates](https://azure.microsoft.com/en-us/updates/?category=ai-machine-learning)** - Latest announcements and feature releases
 
-**[📖 Azure Blog](https://azure.microsoft.com/en-us/blog/topics/artificial-intelligence/)** - Technical articles and case studies
+**[📖 Azure Blog](https://azure.microsoft.com/en-us/blog/)** - Technical articles and case studies
 
 ### Tools and Utilities
 

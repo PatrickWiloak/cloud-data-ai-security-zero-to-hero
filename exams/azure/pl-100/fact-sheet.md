@@ -34,11 +34,11 @@ The Microsoft Power Platform App Maker Associate (PL-100) certification validate
 
 **[📖 Power Apps Planning Guide](https://learn.microsoft.com/en-us/power-apps/guidance/planning/introduction)** - Strategic planning for Power Apps solutions
 
-**[📖 App Design Best Practices](https://learn.microsoft.com/en-us/power-apps/guidance/planning/app-design-process)** - User-centered design approach
+**[📖 App Design Best Practices](https://learn.microsoft.com/en-us/power-apps/guidance/coding-guidelines/app-design-guidelines)** - User-centered design approach
 
 **[📖 Data Modeling in Power Apps](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-intro)** - Design effective data structures
 
-**[📖 Security Planning](https://learn.microsoft.com/en-us/power-platform/admin/security/overview)** - Plan security and access control
+**[📖 Security Planning](https://learn.microsoft.com/en-us/power-platform/admin/security/security-overview)** - Plan security and access control
 
 ### App Type Selection
 
@@ -478,7 +478,7 @@ The Microsoft Power Platform App Maker Associate (PL-100) certification validate
 
 ### Hands-On Resources
 
-**[📖 Power Apps Community](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1)** - Forums, samples, and discussions
+**[📖 Power Apps Community](https://community.powerplatform.com/)** - Forums, samples, and discussions
 
 **[📖 App in a Day Workshop](https://github.com/microsoft/PowerApps-Samples/tree/master/learning-materials/instructor-led-training)** - Hands-on training materials
 

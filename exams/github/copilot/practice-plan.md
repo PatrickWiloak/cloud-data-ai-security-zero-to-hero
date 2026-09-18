@@ -42,7 +42,7 @@
 - [ ] Use every slash command: `/explain`, `/fix`, `/tests`, `/doc`, `/new`, `/clear`
 - [ ] Use agents: `@workspace`, `@vscode`, `@terminal`, `@github`
 - [ ] Attach files and selections with `#file`, `#selection`, `#codebase`
-- [ ] Read: [Chat Cheat Sheet](https://docs.github.com/en/copilot/using-github-copilot/copilot-chat-in-ides/github-copilot-chat-cheat-sheet)
+- [ ] Read: [Chat Cheat Sheet](https://docs.github.com/en/copilot/reference/chat-cheat-sheet)
 
 #### Day 12-13: Other Surfaces
 - [ ] Try Copilot Chat on github.com (repo-level and general)

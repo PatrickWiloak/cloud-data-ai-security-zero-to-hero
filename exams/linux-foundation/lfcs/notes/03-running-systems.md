@@ -5,7 +5,7 @@ This domain covers systemd service management, process management, boot process,
 
 ## Systemd
 
-**[📖 systemd Documentation](https://www.freedesktop.org/software/systemd/man/)** - Complete systemd reference
+**[📖 systemd Documentation](https://www.freedesktop.org/software/systemd/man/latest/)** - Complete systemd reference
 
 ### Core Concepts
 - **systemd** - Init system and service manager (PID 1)

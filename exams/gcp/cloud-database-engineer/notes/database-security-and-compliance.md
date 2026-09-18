@@ -2834,6 +2834,6 @@ class ZeroTrustDatabaseAccess:
 - [Customer-Managed Encryption Keys (CMEK)](https://cloud.google.com/kms/docs/cmek)
 - [VPC Service Controls](https://cloud.google.com/vpc-service-controls/docs)
 - [Cloud DLP Documentation](https://cloud.google.com/dlp/docs)
-- [GCP Compliance Resource Center](https://cloud.google.com/security/compliance)
+- [GCP Compliance Resource Center](https://cloud.google.com/compliance)
 - [Professional Cloud Database Engineer Exam Guide](https://cloud.google.com/certification/cloud-database-engineer)
 - [Database Security Whitepapers](https://cloud.google.com/security/encryption-at-rest)

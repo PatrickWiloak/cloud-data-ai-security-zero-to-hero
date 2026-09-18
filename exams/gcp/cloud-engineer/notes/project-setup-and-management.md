@@ -325,4 +325,4 @@ export CLOUDSDK_CORE_FORMAT=json
 - [gcloud CLI Documentation](https://cloud.google.com/sdk/gcloud)
 - [Organization Policies](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
 - [Resource Hierarchy Best Practices](https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations)
-- [Cost Optimization](https://cloud.google.com/architecture/best-practices-for-cost-optimization)
+- [Cost Optimization](https://docs.cloud.google.com/architecture/framework/cost-optimization)

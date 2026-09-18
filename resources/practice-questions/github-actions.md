@@ -287,4 +287,4 @@ D. Fewer jobs
 - [GitHub Administration practice questions](./github-administration.md) - the enterprise exam
 - [GHAS practice questions](./github-advanced-security.md) - security scanning in the pipeline
 - [CI/CD explained](../../learn/concepts/cicd-explained.md) - pipelines in plain English
-- **[📖 GitHub Certifications](https://resources.github.com/learn/certifications/)** - official exam pages
+- **[📖 GitHub Certifications](https://learn.github.com/certifications)** - official exam pages

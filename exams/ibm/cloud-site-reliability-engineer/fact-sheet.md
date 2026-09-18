@@ -27,7 +27,7 @@ last-updated: 2026-05-03
 - **[📖 IBM Cloud Architecture](https://www.ibm.com/cloud/architecture)**
 - **[📖 IBM Cloud Learning](https://www.ibm.com/training/cloud)**
 - **[📖 DevOps on IBM Cloud](https://www.ibm.com/cloud/devops)**
-- **[📖 Pearson VUE Testing](https://home.pearsonvue.com/ibm)**
+- **[📖 Pearson VUE Testing](https://www.pearsonvue.com/us/en/ibm.html)**
 - **[📖 IBM Cloud Certification Hub](https://www.ibm.com/training/cloud/certification)**
 
 ## Exam Domains
@@ -49,9 +49,9 @@ last-updated: 2026-05-03
 **Monitoring Resources:**
 - **[📖 IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring)**
 - **[📖 Monitoring with Sysdig](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started)**
-- **[📖 Log Analysis](https://cloud.ibm.com/docs/log-analysis)**
-- **[📖 Log Analysis with LogDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-getting-started)**
-- **[📖 Activity Tracker](https://cloud.ibm.com/docs/activity-tracker)**
+- **[📖 Log Analysis](https://cloud.ibm.com/docs/cloud-logs)**
+- **[📖 Log Analysis with LogDNA](https://cloud.ibm.com/docs/cloud-logs)**
+- **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 - **[📖 Flow Logs for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-flow-logs)**
 - **[📖 Prometheus on Kubernetes](https://cloud.ibm.com/docs/containers?topic=containers-health)**
 - **[📖 SLI and SLO Guide](https://sre.google/sre-book/service-level-objectives/)**
@@ -76,7 +76,7 @@ last-updated: 2026-05-03
 - **[📖 PagerDuty Integration](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-pagerduty)**
 - **[📖 Slack Integration](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-slack)**
 - **[📖 Event Notifications](https://cloud.ibm.com/docs/event-notifications)**
-- **[📖 Activity Tracker for Auditing](https://cloud.ibm.com/docs/activity-tracker)**
+- **[📖 Activity Tracker for Auditing](https://cloud.ibm.com/docs/atracker)**
 - **[📖 Postmortem Culture](https://sre.google/sre-book/postmortem-culture/)**
 - **[📖 Managing Incidents](https://sre.google/sre-book/managing-incidents/)**
 - **[📖 Chaos Engineering](https://principlesofchaos.org/)**
@@ -128,7 +128,7 @@ last-updated: 2026-05-03
 - **[📖 Auto-Scaling](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-auto-scale-instance-group)**
 - **[📖 Kubernetes HA](https://cloud.ibm.com/docs/containers?topic=containers-ha)**
 - **[📖 Database HA](https://cloud.ibm.com/docs/databases-for-postgresql?topic=databases-for-postgresql-high-availability)**
-- **[📖 Backup Services](https://cloud.ibm.com/docs/cloud-backup)**
+- **[📖 Backup Services](https://cloud.ibm.com/docs/backup-recovery)**
 - **[📖 Reliability Patterns](https://sre.google/sre-book/addressing-cascading-failures/)**
 
 ### 5. Performance and Capacity Management (10%)
@@ -245,8 +245,8 @@ last-updated: 2026-05-03
 
 ### Monitoring and Observability
 - **[📖 IBM Cloud Monitoring (Sysdig)](https://cloud.ibm.com/docs/monitoring)**
-- **[📖 IBM Cloud Log Analysis (LogDNA)](https://cloud.ibm.com/docs/log-analysis)**
-- **[📖 Activity Tracker](https://cloud.ibm.com/docs/activity-tracker)**
+- **[📖 IBM Cloud Log Analysis (LogDNA)](https://cloud.ibm.com/docs/cloud-logs)**
+- **[📖 Activity Tracker](https://cloud.ibm.com/docs/atracker)**
 - **[📖 Event Notifications](https://cloud.ibm.com/docs/event-notifications)**
 
 ### Automation and IaC
@@ -442,7 +442,7 @@ last-updated: 2026-05-03
 
 **Resources:**
 - **[📖 Disaster Recovery Planning](https://cloud.ibm.com/docs/overview?topic=overview-dr)**
-- **[📖 Backup Strategies](https://cloud.ibm.com/docs/cloud-backup)**
+- **[📖 Backup Strategies](https://cloud.ibm.com/docs/backup-recovery)**
 
 ## SRE Best Practices
 
@@ -567,7 +567,7 @@ last-updated: 2026-05-03
 ### Books and Publications
 - **[📖 Google SRE Book](https://sre.google/sre-book/table-of-contents/)**
 - **[📖 Google SRE Workbook](https://sre.google/workbook/table-of-contents/)**
-- **[📖 Google Building Secure & Reliable Systems](https://sre.google/books/building-secure-reliable-systems/)**
+- **[📖 Google Building Secure & Reliable Systems](https://sre.google/books/)**
 
 ### Training and Courses
 - **[📖 IBM Cloud Training](https://www.ibm.com/training/cloud)**

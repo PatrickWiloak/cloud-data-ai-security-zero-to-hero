@@ -97,7 +97,7 @@ This certification is designed for:
 - IP access list for API keys
 - Used with Atlas CLI and Admin API
 
-**[📖 Atlas Security](https://www.mongodb.com/docs/atlas/security/)** - Security documentation
+**[📖 Atlas Security](https://www.mongodb.com/docs/atlas/setup-cluster-security/)** - Security documentation
 
 ### Domain 3: Data Management (20%)
 

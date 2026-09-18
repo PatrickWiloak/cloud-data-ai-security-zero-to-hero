@@ -344,7 +344,7 @@ exam-retires: 2025-09-29
 ## Essential Documentation
 
 ### Core Resources
-- [📖 SysOps Administrator Learning Path](https://aws.amazon.com/training/learn-about/sysops/)
+- [📖 SysOps Administrator Learning Path](https://aws.amazon.com/training/learn-about/operations/)
 - [📖 AWS Systems Manager User Guide](https://docs.aws.amazon.com/systems-manager/)
 - [📖 Monitoring Best Practices](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring_best_practices.html)
 - [📖 Well-Architected Operational Excellence Pillar](https://docs.aws.amazon.com/wellarchitected/latest/operational-excellence-pillar/welcome.html)

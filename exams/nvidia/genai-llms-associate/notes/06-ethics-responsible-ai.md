@@ -1,6 +1,6 @@
 # Ethics and Responsible AI
 
-**[📖 NVIDIA Responsible AI](https://www.nvidia.com/en-us/ai/responsible-ai/)** - NVIDIA's responsible AI practices
+**[📖 NVIDIA Responsible AI](https://www.nvidia.com/en-us/ai-trust-center/trustworthy-ai/)** - NVIDIA's responsible AI practices
 **[📖 NVIDIA NeMo Guardrails](https://docs.nvidia.com/nemo/guardrails/index.html)** - Safety toolkit for LLM applications
 
 ## Bias in Large Language Models

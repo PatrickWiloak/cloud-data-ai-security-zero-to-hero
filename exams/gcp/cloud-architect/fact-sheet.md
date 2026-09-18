@@ -185,7 +185,7 @@ last-updated: 2026-05-03
 - Horizontally scalable, strongly consistent
 - Global transactions with 99.999% availability SLA
 - Multi-region configurations for HA and low latency
-- **[📖 Cloud Spanner Overview](https://cloud.google.com/spanner/docs/overview)** - Architecture concepts
+- **[📖 Cloud Spanner Overview](https://docs.cloud.google.com/spanner/docs)** - Architecture concepts
 - **[📖 Replication](https://cloud.google.com/spanner/docs/replication)** - Multi-region replication
 - **[📖 Schema Design Best Practices](https://cloud.google.com/spanner/docs/schema-design)** - Performance optimization
 - **[📖 Instance Configurations](https://cloud.google.com/spanner/docs/instance-configurations)** - Regional and multi-regional
@@ -295,7 +295,7 @@ last-updated: 2026-05-03
 - **Cloud Interconnect** - Dedicated physical connections
   - **Dedicated** - 10 or 100 Gbps direct connection
   - **Partner** - 50 Mbps to 50 Gbps via partner
-- **[📖 Hybrid Connectivity Overview](https://cloud.google.com/network-connectivity/docs/concepts/overview)** - Options comparison
+- **[📖 Hybrid Connectivity Overview](https://docs.cloud.google.com/network-connectivity/docs/concepts)** - Options comparison
 - **[📖 Cloud VPN](https://cloud.google.com/network-connectivity/docs/vpn/concepts/overview)** - VPN architecture
 - **[📖 HA VPN](https://cloud.google.com/network-connectivity/docs/vpn/concepts/overview#ha-vpn)** - High availability VPN
 - **[📖 Cloud Interconnect](https://cloud.google.com/network-connectivity/docs/interconnect/concepts/overview)** - Dedicated connectivity
@@ -320,7 +320,7 @@ last-updated: 2026-05-03
 - **[📖 Custom Roles](https://cloud.google.com/iam/docs/creating-custom-roles)** - Role creation
 - **[📖 IAM Conditions](https://cloud.google.com/iam/docs/conditions-overview)** - Conditional access
 - **[📖 IAM Best Practices](https://docs.cloud.google.com/iam/docs/using-iam-securely)** - Security guidelines
-- **[📖 Policy Intelligence](https://cloud.google.com/iam/docs/policy-intelligence-overview)** - Policy analysis tools
+- **[📖 Policy Intelligence](https://docs.cloud.google.com/policy-intelligence/docs)** - Policy analysis tools
 
 ### Service Accounts
 
@@ -329,7 +329,7 @@ last-updated: 2026-05-03
 - User-managed service accounts (recommended)
 - Short-lived credentials via Workload Identity Federation
 - **[📖 Service Accounts](https://cloud.google.com/iam/docs/service-accounts)** - Complete guide
-- **[📖 Best Practices](https://docs.cloud.google.com/iam/docs/using-iam-securely-for-using-service-accounts)** - Security patterns
+- **[📖 Best Practices](https://docs.cloud.google.com/iam/docs/best-practices-service-accounts)** - Security patterns
 - **[📖 Workload Identity](https://cloud.google.com/iam/docs/workload-identity-federation)** - External identity federation
 - **[📖 Service Account Impersonation](https://cloud.google.com/iam/docs/impersonating-service-accounts)** - Delegation patterns
 
@@ -509,7 +509,7 @@ Organization
 - ISO 27001, SOC 2/3, PCI-DSS, HIPAA, GDPR
 - Regional data residency controls
 - Compliance reports and certifications
-- **[📖 Compliance Offerings](https://cloud.google.com/security/compliance)** - Certifications and reports
+- **[📖 Compliance Offerings](https://cloud.google.com/compliance)** - Certifications and reports
 - **[📖 Data Residency](https://cloud.google.com/terms/data-residency)** - Location controls
 
 ## Common Architecture Patterns
@@ -619,7 +619,7 @@ Organization
 - **Vertex AI** - Unified ML platform
 - Training with custom or pre-built containers
 - Model deployment and serving
-- **[📖 Vertex AI](https://cloud.google.com/vertex-ai/docs)** - ML platform
+- **[📖 Vertex AI](https://docs.cloud.google.com/gemini-enterprise-agent-platform)** - ML platform
 - **[📖 AutoML](https://cloud.google.com/vertex-ai/docs/beginner/beginners-guide)** - No-code ML
 
 ### Pre-Trained APIs

@@ -220,7 +220,7 @@ at now + 5 minutes                # one-time scheduled task
 ```
 
 **Documentation:**
-- **[📖 systemd Documentation](https://www.freedesktop.org/software/systemd/man/)** - Complete systemd reference
+- **[📖 systemd Documentation](https://www.freedesktop.org/software/systemd/man/latest/)** - Complete systemd reference
 - **[📖 Crontab Guru](https://crontab.guru/)** - Cron expression helper
 
 ## Networking
@@ -324,7 +324,7 @@ free -h                           # show memory and swap
 ```
 
 **Documentation:**
-- **[📖 Ubuntu Storage Guide](https://ubuntu.com/server/docs/device-mapper-multipath-introduction)** - Storage administration
+- **[📖 Ubuntu Storage Guide](https://ubuntu.com/server/docs/how-to/data-and-storage/)** - Storage administration
 - **[📖 LVM Documentation](https://sourceware.org/lvm2/)** - Logical Volume Manager reference
 
 ## Service Configuration

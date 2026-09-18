@@ -1228,7 +1228,7 @@ ibmcloud secrets-manager secret-delete \
 ### Study Materials
 - **Study Notes**: All sections (review)
 - **IBM Cloud Docs**: [Monitoring](https://cloud.ibm.com/docs/monitoring)
-- **IBM Cloud Docs**: [Logging](https://cloud.ibm.com/docs/log-analysis)
+- **IBM Cloud Docs**: [Logging](https://cloud.ibm.com/docs/cloud-logs)
 
 ### Hands-On Labs (Week 8)
 
