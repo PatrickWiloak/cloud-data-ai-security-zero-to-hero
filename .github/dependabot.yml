@@ -15,6 +15,7 @@ version: 2
 
 updates:
   - package-ecosystem: github-actions
+    rebase-strategy: disabled  # 2026-09-18: every auto-rebase re-ran full PR CI on metered Actions minutes
     directory: /
     schedule:
       interval: monthly
@@ -28,6 +29,7 @@ updates:
         update-types: [minor, patch]
 
   - package-ecosystem: pip
+    rebase-strategy: disabled  # 2026-09-18: every auto-rebase re-ran full PR CI on metered Actions minutes
     directory: /
     schedule:
       interval: monthly
