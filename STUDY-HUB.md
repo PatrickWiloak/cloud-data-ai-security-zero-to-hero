@@ -13,6 +13,8 @@
 
 **Welcome. Whether you're new to all this or chasing your fifth cert, this is the entry point.**
 
+**[Browse it as a searchable site](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)** - full-text search across every page, which is faster than this index once you know what you are looking for.
+
 </div>
 
 ---
