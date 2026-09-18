@@ -27,3 +27,7 @@ __pycache__/
 /mkdocs.generated.yml
 /site/
 /.venv-docs/
+
+# Font cache for .github/scripts/build-social-card.py. The TTFs are fetched from
+# Google Fonts on demand; the rendered card is committed, the fonts are not.
+/.cache/
