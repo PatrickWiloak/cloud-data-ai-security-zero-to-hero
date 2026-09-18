@@ -6,17 +6,30 @@ Working task list for **cloud-data-ai-security-zero-to-hero**. Read this at the 
 
 ## Open
 
-### 🟠 Discoverability (added 2026-08-31)
+### 🔴 Link rot backlog (added 2026-09-17)
 
-- [ ] **Upload the social preview image.** GitHub serves an auto-generated card for this repo, so
-      every share on X/LinkedIn/Slack renders as a generic placeholder. A 1280x640 card is rendered
-      at `/tmp/claude-1000/-home-plw-coding/4ffb6de8-198a-4962-8a8b-1f54e9ab4159/scratchpad/social/cloud-data-ai-security-zero-to-hero-social-1280x640-31AUG2026.png`.
-      Upload via **Settings → General → Social preview** (the GitHub API does not expose this).
-- [ ] **Commit and push the new `LICENSE` (CC BY 4.0) and `LICENSE-CODE` (MIT).** Until they
-      land, GitHub shows this repo as unlicensed - all rights reserved - which is the opposite
-      of the "free to use for educational purposes with attribution" the README already states.
-      Content is CC BY; the ~9,500 embedded code samples and `scripts/` are MIT so a reader can
-      copy a snippet without an attribution obligation.
+The external link checker had never run (see CHANGELOG 2026-09-17). With it fixed, a full
+sweep of all 8,591 unique external URLs found **701 dead, cited 903 times**. The full list,
+with the file and line citing each one, is in
+[docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md).
+
+- [ ] **Work through the link-rot report.** Sorted by citation count, so the top of the list is
+      the best use of an hour. Roughly half have a live parent section in the same vendor's docs
+      and half need a successor page found. Concentrated in GCP (234), Microsoft Learn (152) and
+      Oracle (89), which all reorganized their documentation this year.
+- [ ] **Judge by 2026-09-22**: the first repaired weekly link check runs Monday 06:00 UTC. Confirm
+      it files an issue listing broken links rather than passing silently. If it passes clean,
+      something is wrong - there are 701 known-dead links in the tree.
+
+### 🟠 Discoverability (added 2026-08-31, updated 2026-09-17)
+
+- [ ] **Upload the social preview image** at `assets/brand/social-preview-1280x640.png` via
+      **Settings → General → Social preview**. The REST API does not expose this field, so it is
+      the one step here that cannot be scripted. The card is now committed, and
+      `python3 .github/scripts/build-social-card.py` regenerates it, so the old dead `/tmp` path is gone.
+      `check-repo-metadata.py` reports this as drift until it is done.
+- [x] ~~Commit and push `LICENSE` (CC BY 4.0) and `LICENSE-CODE` (MIT)~~ ✅ done 2026-08-31 in
+      f3b8faf. GitHub reports the repo as CC-BY-4.0.
 
 Backlog derived from the repo-wide gap analysis in
 [docs/improvement-roadmap.md](./docs/improvement-roadmap.md) (2026-07-28). See that
@@ -63,7 +76,7 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 ### Priority 3 - leverage
 
 - [x] ~~Build `docs/certs.json` from fact-sheets; generate the hub table and provider indexes from it~~ ✅ done 2026-07-29 (CI fails if either is stale). Freshness ledger still generates independently - fold it in if it drifts.
-- [ ] Add practice questions for uncovered certs. 47 of 150 covered; 103 have none. Use [the template](./resources/practice-questions/template.md). Highest value first: the certs that already have complete notes but no question bank. Next batch by volume: NVIDIA (10 certs, 0 banks), GitHub (5), IBM (5), Anthropic (4), CompTIA (4), MongoDB (3), Salesforce (3).
+- [x] ~~Add practice questions for uncovered certs~~ ✅ done 2026-08-09/10 across PR #1 and follow-ups. Coverage is **151 of 151** cert directories, not the 47 this line claimed until 2026-09-17; `resources/practice-questions/README.md` has said so since August. The item is left here checked rather than deleted because it was the largest single piece of content work in the repo.
 - [x] ~~Add Tier 1 certifications~~ ✅ done 2026-08-09. All 13 added: SC-100, SC-300, **SC-401** (SC-400 is retired and was replaced by SC-401 - the roadmap entry was out of date), PL-300, the five CNCF associates (OTCA/CGOA/CAPA/CCA/CNPA), ISC2 CC, Oracle OCI AI Foundations + OCI GenAI Professional, Google Generative AI Leader. 137 → 150 cert directories, each with README, fact-sheet, practice-plan, scenarios, strategy, domain notes, a practice question bank, and a generated flashcard deck.
 - [x] ~~Stagger `last-updated` re-verification by provider batch~~ ✅ done 2026-07-29 - `check-cert-freshness.py` assigns each provider a review month and reports what is due. The rotation exists; the re-verification work itself is ongoing (12 certs due in month 7).
 
