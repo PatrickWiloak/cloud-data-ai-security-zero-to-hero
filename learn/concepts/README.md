@@ -69,6 +69,13 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | [SQL vs NoSQL](./sql-vs-nosql.md) | You're choosing a database and the options blur together |
 | [Eventual consistency](./eventual-consistency.md) | A read returned stale data and you want to know why |
 | [Caching explained](./caching-explained.md) | You want to know why caches are fast and why they lie |
+| [Warehouses, lakes, and lakehouses](./warehouses-lakes-lakehouses.md) | Someone said "lakehouse" and you nodded |
+| [ETL vs ELT](./etl-vs-elt.md) | You want to know why the transform moved after the load |
+| [Batch vs streaming](./batch-vs-streaming.md) | You're deciding whether a pipeline needs to be real-time |
+| [Data modeling for analytics](./data-modeling-for-analytics.md) | A report double-counted and you need to know how |
+| [File formats and partitioning](./file-formats-and-partitioning.md) | A query is slow or a warehouse bill is high |
+| [Data pipelines and orchestration](./data-pipelines-and-orchestration.md) | Your cron jobs have started depending on each other |
+| [Data quality and lineage](./data-quality-and-lineage.md) | A dashboard showed a wrong number and nothing errored |
 
 ## 🌐 Networking and Security
 

@@ -101,6 +101,7 @@ Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certi
 
 See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
+- **2026-09-17** - Audit pass. The weekly external link check turned out never to have run: it passed lychee a flag lychee had removed, so it checked zero URLs and reported success in 0.2 seconds. Fixed, with a guard that fails the job when lychee cannot run at all. The first real sweep found 701 dead vendor links; the most-cited are repaired and the rest are listed in [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md). Also: seven new data-engineering concept pages and a [data engineering topic index](./topics/data-engineering.md), closing the thinnest of the four subjects in the repo's name; Open Graph cards on every page of the site; and the GitHub repository description, which had drifted to "122+ certs across 22 providers", is now generated from `certs.json` and checked in CI like every other count.
 - **2026-08-14** - The site now opens on a landing page of its own rather than on the repo README, and every counted claim in the README is under CI. The per-provider table was stale in 8 of 22 rows and missing 5 providers entirely, five days after the Tier 1 batch added them; the 17 numbers in the statistics block had nothing watching them either. Both are checked by `check-readme-counts.py` now.
 - **2026-08-14** - The whole repo is now a searchable website: [patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/). Full-text search across 3.0M words, dark mode, mobile nav, generated from these same markdown files. The strict build also caught and fixed an unclosed code fence that was swallowing part of a GCP note, plus 14 broken heading anchors.
 - **2026-08-11** - Anthropic's official Claude certification program (launched March-July 2026) fully covered: new Claude Certified Associate - Foundations (CCAO-F) guide, existing guides retargeted to the real CCDV-F, CCAR-F, and CCAR-P exams with official domain blueprints, pricing, and Pearson VUE logistics. Anthropic promoted from study-track pseudo-provider to the 27th certification provider; repo now at 148 certs.
@@ -115,10 +116,10 @@ See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 A complete cloud + AI learning resource. Whether you're starting fresh, building production systems, or chasing certifications:
 
 - ✅ **[Day One on-ramp](./learn/day-one/)** - terminal, git, HTTP, servers
-- ✅ **[46 concept pages](./learn/concepts/)** - LLMs, RAG, MCP, agents, tool use, multimodal, quantization, VPCs, K8s, IAM, observability, idempotency
+- ✅ **[53 concept pages](./learn/concepts/)** - LLMs, RAG, MCP, agents, tool use, multimodal, quantization, VPCs, K8s, IAM, observability, idempotency
 - ✅ **[Cloud from Scratch](./learn/cloud-from-scratch.md)** + **[AI from Scratch](./learn/ai-from-scratch.md)** - structured 8-phase paths
 - ✅ **148 certification study guides** across 27 providers, 12,000+ embedded vendor doc links
-- ✅ **[13 cross-pillar topic indexes](./topics/)** - LLMs, AI/ML systems, AI security, IAM, networking, K8s, observability, security, databases, serverless, FinOps, platform engineering, SRE (find everything by topic, not provider)
+- ✅ **[14 cross-pillar topic indexes](./topics/)** - LLMs, AI/ML systems, AI security, IAM, networking, K8s, observability, security, databases, serverless, FinOps, platform engineering, SRE (find everything by topic, not provider)
 - ✅ **16 cross-cloud service comparisons** (12 cloud + 4 AI: vector DBs, GenAI platforms, agent frameworks, LLM observability)
 - ✅ **9 CLI cheat sheets** (AWS, Azure, GCP, kubectl, Terraform, Docker, Helm, GitHub CLI, multi-cloud)
 - ✅ **17 architecture patterns** with multi-cloud implementations
@@ -294,12 +295,12 @@ Career-focused learning paths:
 - **Certifications:** 148 (plus 3 self-directed study tracks)
 - **Documentation links:** 12,000+
 - **Providers:** 27
-- **Concept pages:** 46 (cloud + AI primitives)
+- **Concept pages:** 53 (cloud + AI primitives)
 - **Service comparisons:** 16 (12 cloud + 4 AI)
 - **CLI cheat sheets:** 9
 - **Architecture patterns:** 17
 - **Hands-on projects:** 15 (10 cloud + 5 AI)
-- **Topic indexes:** 13 (cross-pillar)
+- **Topic indexes:** 14 (cross-pillar)
 - **Career roadmaps:** 11
 - **Interview prep guides:** 6
 - **Compliance guides:** 8
@@ -315,7 +316,7 @@ cloud-data-ai-security-zero-to-hero/
 ├── STUDY-HUB.md (full per-provider navigation)
 ├── CHANGELOG.md
 ├── learn/                # plain-English learning content
-│   ├── concepts/         # 46 bite-size concept pages
+│   ├── concepts/         # 53 bite-size concept pages
 │   ├── day-one/          # absolute-beginner on-ramp
 │   ├── ai-from-scratch.md
 │   ├── cloud-from-scratch.md

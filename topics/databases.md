@@ -27,6 +27,10 @@ flowchart LR
 - [Idempotency explained](../learn/concepts/idempotency-explained.md) - retries, idempotency keys, common patterns
 - [Queues vs streams](../learn/concepts/queues-vs-streams.md) - SQS vs Kinesis (and equivalents), ordering, replay
 - [Embeddings and vector search](../learn/concepts/embeddings-and-vector-search.md) - vector DB basics
+- [Warehouses, lakes, and lakehouses](../learn/concepts/warehouses-lakes-lakehouses.md) - the analytical stores
+- [Data modeling for analytics](../learn/concepts/data-modeling-for-analytics.md) - star schemas, grain, SCD types
+
+For how data gets into these stores - pipelines, ETL/ELT, batch vs streaming, partitioning, quality - see the [Data engineering topic](./data-engineering.md).
 
 ---
 

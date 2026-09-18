@@ -27,7 +27,7 @@ If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.m
 - **[Day One](./day-one/)** - terminal, git, HTTP, servers. The pages assume nothing. If you've never opened a terminal, start here.
 
 ### 💡 Bite-size concept pages
-- **[Concepts](./concepts/)** - 46 topic pages, 5-10 min each. Cloud primitives (VPC, K8s, serverless), DevOps (CI/CD, Terraform), networking (DNS, TLS), and AI (LLMs, RAG, agents, transformers, embeddings, prompt engineering, evals).
+- **[Concepts](./concepts/)** - 53 topic pages, 5-10 min each. Cloud primitives (VPC, K8s, serverless), DevOps (CI/CD, Terraform), networking (DNS, TLS), and AI (LLMs, RAG, agents, transformers, embeddings, prompt engineering, evals).
 
 ### 🛤️ Structured learning paths
 - **[Cloud from Scratch](./cloud-from-scratch.md)** - 8-phase path from "what is cloud?" to designing real systems
