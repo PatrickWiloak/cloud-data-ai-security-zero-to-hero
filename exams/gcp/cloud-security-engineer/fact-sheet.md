@@ -37,7 +37,7 @@ The Professional Cloud Security Engineer exam assesses your ability to:
 
 **[📖 IAM Policies](https://cloud.google.com/iam/docs/policies)** - How to grant, change, and revoke access to resources
 
-**[📖 IAM Best Practices](https://cloud.google.com/iam/docs/best-practices)** - Security recommendations for IAM implementation
+**[📖 IAM Best Practices](https://docs.cloud.google.com/iam/docs/using-iam-securely)** - Security recommendations for IAM implementation
 
 **[📖 Service Accounts](https://cloud.google.com/iam/docs/service-accounts)** - Understanding service accounts and their use cases
 

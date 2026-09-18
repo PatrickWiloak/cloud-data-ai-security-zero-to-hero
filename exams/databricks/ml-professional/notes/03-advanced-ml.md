@@ -5,7 +5,7 @@
 This section covers advanced ML techniques, representing 25% of the exam. You need to master advanced hyperparameter tuning, distributed training, custom MLflow models, and ensemble methods.
 
 **[📖 Hyperopt](https://docs.databricks.com/en/machine-learning/automl-hyperparam-tuning/index.html)** - Distributed tuning
-**[📖 Distributed Training](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/index.html)** - Distributed DL
+**[📖 Distributed Training](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/)** - Distributed DL
 
 ## Key Topics
 
@@ -35,7 +35,7 @@ space = hp.choice("model_type", [
 
 ### 2. Distributed Training
 
-**[📖 TorchDistributor](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/torch-distributor.html)** - PyTorch distributed
+**[📖 TorchDistributor](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/)** - PyTorch distributed
 **[📖 DeepSpeed](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/deepspeed.html)** - Large model training
 
 **Data Parallelism:**
@@ -124,6 +124,6 @@ class StackedModel(mlflow.pyfunc.PythonModel):
 | Topic | Link |
 |-------|------|
 | Hyperopt | [docs.databricks.com/en/machine-learning/automl-hyperparam-tuning/index.html](https://docs.databricks.com/en/machine-learning/automl-hyperparam-tuning/index.html) |
-| TorchDistributor | [docs.databricks.com/en/machine-learning/deep-learning/distributed-training/torch-distributor.html](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/torch-distributor.html) |
+| TorchDistributor | [docs.databricks.com/en/machine-learning/deep-learning/distributed-training/torch-distributor.html](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/) |
 | DeepSpeed | [docs.databricks.com/en/machine-learning/deep-learning/distributed-training/deepspeed.html](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/deepspeed.html) |
 | Horovod | [docs.databricks.com/en/machine-learning/deep-learning/distributed-training/horovod-runner.html](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/horovod-runner.html) |

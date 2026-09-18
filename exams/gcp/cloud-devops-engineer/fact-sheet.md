@@ -331,7 +331,7 @@ last-updated: 2026-05-03
 - **[📖 IAM Overview](https://cloud.google.com/iam/docs/overview)** - Manage access to Google Cloud resources
 - **[📖 IAM Roles](https://cloud.google.com/iam/docs/understanding-roles)** - Predefined and custom roles
 - **[📖 Service Accounts](https://cloud.google.com/iam/docs/service-accounts)** - Identity for applications and VMs
-- **[📖 IAM Best Practices](https://cloud.google.com/iam/docs/best-practices)** - Secure access management recommendations
+- **[📖 IAM Best Practices](https://docs.cloud.google.com/iam/docs/using-iam-securely)** - Secure access management recommendations
 - **[📖 IAM Conditions](https://cloud.google.com/iam/docs/conditions-overview)** - Add conditional logic to IAM policies
 - **[📖 Organization Policies](https://cloud.google.com/resource-manager/docs/organization-policy/overview)** - Enforce governance across your organization
 

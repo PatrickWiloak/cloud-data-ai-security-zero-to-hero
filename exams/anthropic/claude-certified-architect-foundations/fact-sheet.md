@@ -51,7 +51,7 @@ Registration is through the [Anthropic Partner Academy](https://anthropic-partne
 
 **[API Errors](https://docs.anthropic.com/en/api/errors)** - Error codes, meanings, and recommended handling patterns
 
-**[Rate Limits](https://docs.anthropic.com/en/docs/build-with-claude/rate-limits)** - Rate limit tiers, headers, and management strategies
+**[Rate Limits](https://docs.anthropic.com/en/api/rate-limits)** - Rate limit tiers, headers, and management strategies
 
 ### Prompt Engineering
 
@@ -81,7 +81,7 @@ Registration is through the [Anthropic Partner Academy](https://anthropic-partne
 
 ### Agentic Systems
 
-**[Agentic Patterns](https://docs.anthropic.com/en/docs/build-with-claude/agentic)** - Official guide to building agentic systems with Claude
+**[Agentic Patterns](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)** - Official guide to building agentic systems with Claude
 
 **[Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook)** - Code examples and recipes for common Claude patterns
 

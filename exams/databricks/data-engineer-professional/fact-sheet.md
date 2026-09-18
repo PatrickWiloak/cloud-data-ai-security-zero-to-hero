@@ -87,7 +87,7 @@ This certification is designed for:
 ### Advanced Structured Streaming
 
 **[📖 Structured Streaming Guide](https://docs.databricks.com/en/structured-streaming/index.html)** - Streaming reference
-**[📖 Stream-Stream Joins](https://docs.databricks.com/en/structured-streaming/joining-streams.html)** - Joining streams
+**[📖 Stream-Stream Joins](https://docs.databricks.com/aws/en/structured-streaming/)** - Joining streams
 **[📖 Watermarking](https://docs.databricks.com/en/structured-streaming/watermarks.html)** - Late data handling
 
 **Key Facts:**
@@ -203,7 +203,7 @@ This certification is designed for:
 
 ### Spark UI and Debugging
 
-**[📖 Spark UI](https://docs.databricks.com/en/compute/sparkling/index.html)** - Understanding Spark UI
+**[📖 Spark UI](https://docs.databricks.com/aws/en/compute/)** - Understanding Spark UI
 **[📖 Query Profile](https://docs.databricks.com/en/sql/user/queries/query-profile.html)** - SQL query analysis
 
 **Key Facts:**

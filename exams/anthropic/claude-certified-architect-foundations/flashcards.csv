@@ -9,6 +9,7 @@ Autonomy (agentic architecture),Claude decides which tools to call and in what o
 Iteration (agentic architecture),Multiple rounds of tool calls and reasoning,"notes,agentic-architecture"
 Goal-directed behavior (agentic architecture),Claude works toward completing a defined objective,"notes,agentic-architecture"
 Dynamic decision making (agentic architecture),The path is not predetermined; it depends on intermediate results,"notes,agentic-architecture"
+Rate Limits (agentic architecture),Production rate management,"notes,agentic-architecture"
 User settings (claude code configuration),~/.claude/settings.json - Personal settings,"notes,claude-code-configuration"
 Project settings (claude code configuration),.claude/settings.json - Project-specific settings (checked into repo),"notes,claude-code-configuration"
 Enterprise settings (claude code configuration),Managed centrally by administrators,"notes,claude-code-configuration"

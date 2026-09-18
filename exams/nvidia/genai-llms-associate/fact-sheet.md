@@ -15,7 +15,7 @@ last-updated: 2026-05-03
 **Valid For:** 2 years
 **Delivery:** Online proctored
 
-**[📖 NVIDIA Certification Portal](https://www.nvidia.com/en-us/training/certification/)** - Registration and official details
+**[📖 NVIDIA Certification Portal](https://www.nvidia.com/en-us/learn/certification/)** - Registration and official details
 **[📖 NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/)** - Official training courses
 **[📖 NVIDIA Developer Resources](https://developer.nvidia.com/)** - Developer tools and documentation
 

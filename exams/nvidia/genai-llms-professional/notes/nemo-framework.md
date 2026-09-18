@@ -24,7 +24,7 @@ NVIDIA NeMo Framework is an end-to-end platform for building, training, fine-tun
 - Command-line overrides for experiment management
 - Reproducible experiments through configuration versioning
 
-**[📖 NeMo Configuration](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/gpt/gpt_training.html)** - Configuration guide for NeMo training
+**[📖 NeMo Configuration](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - Configuration guide for NeMo training
 
 ### 2. Supported Model Architectures
 
@@ -48,7 +48,7 @@ NVIDIA NeMo Framework is an end-to-end platform for building, training, fine-tun
 - Custom architectures through modular design
 - Easy architecture extension via NeMo modules
 
-**[📖 NeMo Model Zoo](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/intro.html)** - Supported models and configurations
+**[📖 NeMo Model Zoo](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - Supported models and configurations
 
 ### 3. Distributed Training with Megatron
 
@@ -115,7 +115,7 @@ NVIDIA NeMo Framework is an end-to-end platform for building, training, fine-tun
 - Data sampling ratios for multi-source training
 - Streaming data loading for large datasets
 
-**[📖 NeMo Training Configuration](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/gpt/gpt_training.html)** - Training parameters and configuration
+**[📖 NeMo Training Configuration](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - Training parameters and configuration
 
 ### 5. NeMo Data Curator
 
@@ -172,7 +172,7 @@ NVIDIA NeMo Framework is an end-to-end platform for building, training, fine-tun
 - Storage configuration for checkpoints and data
 - Environment variable management
 
-**[📖 NeMo Launcher](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/intro.html)** - Multi-node training launcher documentation
+**[📖 NeMo Launcher](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - Multi-node training launcher documentation
 
 ## Exam Focus Areas
 

@@ -84,7 +84,7 @@ with mlflow.start_run():
 ### 4. Feature Store
 
 **[📖 Feature Store](https://docs.databricks.com/en/machine-learning/feature-store/index.html)** - Feature management
-**[📖 Feature Engineering](https://docs.databricks.com/en/machine-learning/feature-store/feature-engineering.html)** - Feature APIs
+**[📖 Feature Engineering](https://docs.databricks.com/aws/en/machine-learning/feature-store/)** - Feature APIs
 
 ```python
 from databricks.feature_engineering import FeatureEngineeringClient, FeatureLookup

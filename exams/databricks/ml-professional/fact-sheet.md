@@ -32,7 +32,7 @@ This certification is designed for:
 ### Feature Store Architecture
 
 **[📖 Feature Store](https://docs.databricks.com/en/machine-learning/feature-store/index.html)** - Feature Store overview
-**[📖 Feature Engineering Client](https://docs.databricks.com/en/machine-learning/feature-store/feature-engineering.html)** - Feature engineering APIs
+**[📖 Feature Engineering Client](https://docs.databricks.com/aws/en/machine-learning/feature-store/)** - Feature engineering APIs
 **[📖 Online Feature Store](https://docs.databricks.com/en/machine-learning/feature-store/online-tables.html)** - Real-time feature serving
 **[📖 Point-in-Time Lookups](https://docs.databricks.com/en/machine-learning/feature-store/time-series.html)** - Time-series features
 
@@ -123,7 +123,7 @@ This certification is designed for:
 
 ### Distributed Training
 
-**[📖 TorchDistributor](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/torch-distributor.html)** - PyTorch distributed
+**[📖 TorchDistributor](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/)** - PyTorch distributed
 **[📖 DeepSpeed](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/deepspeed.html)** - Large model training
 **[📖 Horovod](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/horovod-runner.html)** - Horovod integration
 

@@ -135,7 +135,7 @@ The SnowPro Advanced - Administrator Certification validates expertise in managi
 - **[Exam Registration](https://www.snowflake.com/certifications/)** - Certification portal
 - **[Snowflake Documentation](https://docs.snowflake.com/en/)** - Complete documentation
 - **[Account Usage](https://docs.snowflake.com/en/sql-reference/account-usage)** - Usage monitoring views
-- **[Security Guide](https://docs.snowflake.com/en/user-guide/security)** - Security documentation
+- **[Security Guide](https://docs.snowflake.com/en/guides-overview-secure)** - Security documentation
 - **[Resource Monitors](https://docs.snowflake.com/en/user-guide/resource-monitors)** - Cost control
 
 ### Recommended Preparation

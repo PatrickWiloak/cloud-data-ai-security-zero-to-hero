@@ -28,7 +28,7 @@
 
 ## Recommended Resources
 - **[NVIDIA Networking Documentation](https://docs.nvidia.com/networking/)** - Complete reference
-- **[UFM Documentation](https://docs.nvidia.com/networking/display/ufm/)** - Fabric management
+- **[UFM Documentation](https://docs.nvidia.com/networking/software/management-software/index.html)** - Fabric management
 - **[DGX SuperPOD Guide](https://docs.nvidia.com/dgx-superpod/)** - Reference architecture
 - **[NVIDIA DLI Courses](https://www.nvidia.com/en-us/training/)** - Official training
 - **[NVIDIA Developer Blog](https://developer.nvidia.com/blog/)** - Technical articles

@@ -45,7 +45,7 @@
 - [ ] Understand the foreachBatch sink for custom processing
 - [ ] Learn streaming deduplication patterns
 - [ ] Review Notes: `notes/02-incremental-processing.md`
-- [ ] Read: [Stream-Stream Joins](https://docs.databricks.com/en/structured-streaming/joining-streams.html)
+- [ ] Read: [Stream-Stream Joins](https://docs.databricks.com/aws/en/structured-streaming/)
 
 #### Day 12-13: Advanced Auto Loader
 - [ ] Configure file notification mode vs directory listing
@@ -110,7 +110,7 @@
 - [ ] Practice using DESCRIBE HISTORY and DESCRIBE DETAIL
 - [ ] Understand query profile for SQL analysis
 - [ ] Review Notes: `notes/05-monitoring-troubleshooting.md`
-- [ ] Read: [Spark UI](https://docs.databricks.com/en/compute/sparkling/index.html)
+- [ ] Read: [Spark UI](https://docs.databricks.com/aws/en/compute/)
 
 #### Day 28: Week 4 Review
 - [ ] Compare liquid clustering vs Z-ordering vs partitioning

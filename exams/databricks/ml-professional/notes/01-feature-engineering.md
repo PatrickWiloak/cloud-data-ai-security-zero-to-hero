@@ -11,7 +11,7 @@ This section covers advanced feature engineering, representing 20% of the exam. 
 
 ### 1. Feature Store Architecture
 
-**[📖 Feature Engineering Client](https://docs.databricks.com/en/machine-learning/feature-store/feature-engineering.html)** - Feature APIs
+**[📖 Feature Engineering Client](https://docs.databricks.com/aws/en/machine-learning/feature-store/)** - Feature APIs
 
 **Offline Feature Store:**
 - Feature tables are Delta tables with defined primary keys
@@ -116,6 +116,6 @@ training_set = fe.create_training_set(
 | Topic | Link |
 |-------|------|
 | Feature Store | [docs.databricks.com/en/machine-learning/feature-store/index.html](https://docs.databricks.com/en/machine-learning/feature-store/index.html) |
-| Feature Engineering | [docs.databricks.com/en/machine-learning/feature-store/feature-engineering.html](https://docs.databricks.com/en/machine-learning/feature-store/feature-engineering.html) |
+| Feature Engineering | [docs.databricks.com/en/machine-learning/feature-store/feature-engineering.html](https://docs.databricks.com/aws/en/machine-learning/feature-store/) |
 | Online Tables | [docs.databricks.com/en/machine-learning/feature-store/online-tables.html](https://docs.databricks.com/en/machine-learning/feature-store/online-tables.html) |
 | Point-in-Time | [docs.databricks.com/en/machine-learning/feature-store/time-series.html](https://docs.databricks.com/en/machine-learning/feature-store/time-series.html) |

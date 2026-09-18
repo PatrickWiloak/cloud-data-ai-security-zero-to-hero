@@ -319,7 +319,7 @@ last-updated: 2026-05-03
 - **[📖 IAM Roles](https://cloud.google.com/iam/docs/understanding-roles)** - Role types and hierarchy
 - **[📖 Custom Roles](https://cloud.google.com/iam/docs/creating-custom-roles)** - Role creation
 - **[📖 IAM Conditions](https://cloud.google.com/iam/docs/conditions-overview)** - Conditional access
-- **[📖 IAM Best Practices](https://cloud.google.com/iam/docs/best-practices)** - Security guidelines
+- **[📖 IAM Best Practices](https://docs.cloud.google.com/iam/docs/using-iam-securely)** - Security guidelines
 - **[📖 Policy Intelligence](https://cloud.google.com/iam/docs/policy-intelligence-overview)** - Policy analysis tools
 
 ### Service Accounts
@@ -329,7 +329,7 @@ last-updated: 2026-05-03
 - User-managed service accounts (recommended)
 - Short-lived credentials via Workload Identity Federation
 - **[📖 Service Accounts](https://cloud.google.com/iam/docs/service-accounts)** - Complete guide
-- **[📖 Best Practices](https://cloud.google.com/iam/docs/best-practices-for-using-service-accounts)** - Security patterns
+- **[📖 Best Practices](https://docs.cloud.google.com/iam/docs/using-iam-securely-for-using-service-accounts)** - Security patterns
 - **[📖 Workload Identity](https://cloud.google.com/iam/docs/workload-identity-federation)** - External identity federation
 - **[📖 Service Account Impersonation](https://cloud.google.com/iam/docs/impersonating-service-accounts)** - Delegation patterns
 

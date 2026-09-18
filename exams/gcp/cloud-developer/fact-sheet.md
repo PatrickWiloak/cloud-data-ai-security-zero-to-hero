@@ -516,7 +516,7 @@ last-updated: 2026-05-03
 
 **[📖 Service Accounts](https://cloud.google.com/iam/docs/service-account-overview)** - Application identity
 
-**[📖 IAM Best Practices](https://cloud.google.com/iam/docs/best-practices)** - Security recommendations
+**[📖 IAM Best Practices](https://docs.cloud.google.com/iam/docs/using-iam-securely)** - Security recommendations
 
 **[📖 Principle of Least Privilege](https://cloud.google.com/iam/docs/using-iam-securely)** - Security hardening
 

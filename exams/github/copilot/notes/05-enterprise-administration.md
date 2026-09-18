@@ -102,7 +102,7 @@ Policies are set at org (Business/Enterprise) or enterprise (Enterprise) level.
 - Open a file matching a rule; confirm Copilot does not suggest in it
 - Open chat in that repo; confirm context from excluded files is not used
 
-**[Excluding content](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization/excluding-content-from-github-copilot)** - Exclusion guide
+**[Excluding content](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization)** - Exclusion guide
 
 ## Knowledge Bases (Enterprise)
 

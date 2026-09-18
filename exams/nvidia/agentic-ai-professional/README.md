@@ -116,7 +116,7 @@ The NVIDIA Certified Professional - Agentic AI certification validates your abil
 8. **Stay Current:** Agentic AI is rapidly evolving - follow NVIDIA blogs
 
 ## Quick Links
-- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/training/certification/)** - Registration and exam details
+- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/learn/certification/)** - Registration and exam details
 - **[NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/)** - Official training courses
 - **[NVIDIA NIM](https://docs.nvidia.com/nim/index.html)** - Inference microservices documentation
 - **[NeMo Guardrails](https://docs.nvidia.com/nemo/guardrails/latest/index.html)** - Guardrails framework

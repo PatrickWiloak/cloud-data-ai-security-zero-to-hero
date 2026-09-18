@@ -75,7 +75,7 @@ Go deep on the highest-weighted domains (Agentic Architecture at 27%) and build 
    - Production AI Systems
 
 2. Read and study:
-   - **[Agentic Patterns Guide](https://docs.anthropic.com/en/docs/build-with-claude/agentic)** - Official agentic documentation
+   - **[Agentic Patterns Guide](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)** - Official agentic documentation
    - **[Extended Thinking](https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking)** - Reasoning mode
    - **[Prompt Caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)** - Cost optimization
    - **[Anthropic Cookbook - Agents](https://github.com/anthropics/anthropic-cookbook)** - Code examples
@@ -90,7 +90,7 @@ Go deep on the highest-weighted domains (Agentic Architecture at 27%) and build 
 
 1. Study:
    - **[Long Context Tips](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching#long-context-tips)** - Managing large contexts
-   - **[Rate Limits](https://docs.anthropic.com/en/docs/build-with-claude/rate-limits)** - API limits and handling
+   - **[Rate Limits](https://docs.anthropic.com/en/api/rate-limits)** - API limits and handling
    - **[Streaming](https://docs.anthropic.com/en/docs/build-with-claude/streaming)** - Real-time responses
    - **[Error Handling](https://docs.anthropic.com/en/api/errors)** - API error codes and recovery
 

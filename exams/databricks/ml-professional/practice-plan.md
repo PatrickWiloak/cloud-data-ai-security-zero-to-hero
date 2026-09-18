@@ -66,7 +66,7 @@
 - [ ] Learn TorchDistributor for PyTorch distribution
 - [ ] Study DeepSpeed ZeRO stages for memory efficiency
 - [ ] Practice mixed precision training concepts
-- [ ] Read: [Distributed Training](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/index.html)
+- [ ] Read: [Distributed Training](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/)
 
 ### Week 4: Deployment and Monitoring (Domains 4-5)
 

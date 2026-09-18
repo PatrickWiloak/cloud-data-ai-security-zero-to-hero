@@ -45,7 +45,7 @@ last-updated: 2026-05-03
 | SYSADMIN | Databases, warehouses, objects | None |
 | PUBLIC | Default role for all users | None |
 
-**[📖 System Roles](https://docs.snowflake.com/en/user-guide/security-access-control-overview)** - Role hierarchy
+**[📖 System Roles](https://docs.snowflake.com/en/guides-overview-secure-access-control-overview)** - Role hierarchy
 
 ### Parameter Management
 | Level | Scope | Set By | Example |
@@ -110,7 +110,7 @@ GRANT SELECT ON ALL TABLES IN DATABASE analytics_db TO DATABASE ROLE analytics_d
 GRANT DATABASE ROLE analytics_db.reader TO ROLE analyst_role;
 ```
 
-**[📖 Database Roles](https://docs.snowflake.com/en/user-guide/security-access-control-database-roles)** - Scoped roles
+**[📖 Database Roles](https://docs.snowflake.com/en/guides-overview-secure-access-control-database-roles)** - Scoped roles
 
 ### Future Grants
 ```sql

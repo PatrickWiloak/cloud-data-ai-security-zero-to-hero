@@ -50,7 +50,7 @@ The NVIDIA Certified Professional - OpenUSD certification validates expertise in
 - Industry workflows (AEC, manufacturing, film)
 
 ## Quick Links
-- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/training/certification/)** - Registration
+- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/learn/certification/)** - Registration
 - **[OpenUSD Documentation](https://openusd.org/release/index.html)** - Official USD reference
 - **[NVIDIA Omniverse](https://docs.omniverse.nvidia.com/)** - Platform documentation
 - **[USD Python API](https://openusd.org/release/api/index.html)** - Programming reference

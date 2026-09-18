@@ -4,14 +4,14 @@
 
 This section covers monitoring, debugging, and troubleshooting data engineering workloads, representing 13% of the exam. You need to interpret the Spark UI, diagnose performance issues, and monitor production pipelines.
 
-**[📖 Spark UI](https://docs.databricks.com/en/compute/sparkling/index.html)** - Spark UI reference
+**[📖 Spark UI](https://docs.databricks.com/aws/en/compute/)** - Spark UI reference
 **[📖 Job Monitoring](https://docs.databricks.com/en/workflows/jobs/monitor-job-runs.html)** - Job run monitoring
 
 ## Key Topics
 
 ### 1. Spark UI Interpretation
 
-**[📖 Spark UI](https://docs.databricks.com/en/compute/sparkling/index.html)** - Understanding the Spark UI
+**[📖 Spark UI](https://docs.databricks.com/aws/en/compute/)** - Understanding the Spark UI
 
 **Spark UI Tabs:**
 | Tab | Purpose |
@@ -172,7 +172,7 @@ AND event_date >= current_date() - 1;
 
 | Topic | Link |
 |-------|------|
-| Spark UI | [docs.databricks.com/en/compute/sparkling/index.html](https://docs.databricks.com/en/compute/sparkling/index.html) |
+| Spark UI | [docs.databricks.com/en/compute/sparkling/index.html](https://docs.databricks.com/aws/en/compute/) |
 | Query Profile | [docs.databricks.com/en/sql/user/queries/query-profile.html](https://docs.databricks.com/en/sql/user/queries/query-profile.html) |
 | Job Monitoring | [docs.databricks.com/en/workflows/jobs/monitor-job-runs.html](https://docs.databricks.com/en/workflows/jobs/monitor-job-runs.html) |
 | Delta History | [docs.databricks.com/en/delta/history.html](https://docs.databricks.com/en/delta/history.html) |

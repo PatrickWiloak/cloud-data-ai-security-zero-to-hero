@@ -252,7 +252,7 @@ When Claude decides to use a tool during streaming:
 
 ## Rate Limiting
 
-**[Rate Limits](https://docs.anthropic.com/en/docs/build-with-claude/rate-limits)** - API limit management
+**[Rate Limits](https://docs.anthropic.com/en/api/rate-limits)** - API limit management
 
 ### Limit Types
 
@@ -316,5 +316,5 @@ Every API response includes rate limit headers:
 - **[Prompt Caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)** - Caching system
 - **[Extended Thinking](https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking)** - Reasoning mode
 - **[Streaming](https://docs.anthropic.com/en/docs/build-with-claude/streaming)** - Real-time responses
-- **[Rate Limits](https://docs.anthropic.com/en/docs/build-with-claude/rate-limits)** - API limits
+- **[Rate Limits](https://docs.anthropic.com/en/api/rate-limits)** - API limits
 - **[API Errors](https://docs.anthropic.com/en/api/errors)** - Error codes

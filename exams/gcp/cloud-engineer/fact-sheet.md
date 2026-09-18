@@ -208,7 +208,7 @@ last-updated: 2026-05-03
 - **[📖 Custom Roles](https://cloud.google.com/iam/docs/creating-custom-roles)** - Role creation
 - **[📖 Policy Management](https://cloud.google.com/iam/docs/policies)** - Policy structure
 - **[📖 Conditional Access](https://cloud.google.com/iam/docs/conditions-overview)** - Context-based access
-- **[📖 Best Practices](https://cloud.google.com/iam/docs/best-practices)** - Security guidelines
+- **[📖 Best Practices](https://docs.cloud.google.com/iam/docs/using-iam-securely)** - Security guidelines
 
 **Service Accounts**
 - Machine-to-machine authentication
@@ -218,7 +218,7 @@ last-updated: 2026-05-03
 - Impersonation: Service account as another identity
 - **[📖 Service Accounts](https://cloud.google.com/iam/docs/service-accounts)** - Complete guide
 - **[📖 Key Management](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)** - Key lifecycle
-- **[📖 Best Practices](https://cloud.google.com/iam/docs/best-practices-service-accounts)** - Security guidelines
+- **[📖 Best Practices](https://docs.cloud.google.com/iam/docs/using-iam-securely-service-accounts)** - Security guidelines
 - **[📖 Impersonation](https://cloud.google.com/iam/docs/impersonating-service-accounts)** - Identity delegation
 
 ### Operations and Monitoring

@@ -109,7 +109,7 @@ The NVIDIA Certified Professional - AI Infrastructure certification validates ex
 8. **Stay Current:** Follow NVIDIA data center product updates
 
 ## Quick Links
-- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/training/certification/)** - Registration and exam details
+- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/learn/certification/)** - Registration and exam details
 - **[NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/)** - Official training courses
 - **[DGX Documentation](https://docs.nvidia.com/dgx/)** - DGX system guides
 - **[GPU Operator Documentation](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/index.html)** - Kubernetes GPU management

@@ -68,7 +68,7 @@ GitHub Copilot is an AI pair programmer that provides code completions, chat-bas
 - Copilot does not know private code unless it is part of the current context (or an Enterprise knowledge base)
 - Suggestions can match public code; the duplicate detection filter mitigates this
 
-**[Responsible Use](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot)** - Official guidance
+**[Responsible Use](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features)** - Official guidance
 
 ### Duplicate Detection Filter
 
@@ -84,7 +84,7 @@ GitHub Copilot is an AI pair programmer that provides code completions, chat-bas
 - Applied to both completions and chat
 - Do not apply to public code or code already submitted to Copilot
 
-**[Content Exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization/excluding-content-from-github-copilot)** - Exclusion setup
+**[Content Exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization)** - Exclusion setup
 
 ### Data Handling
 

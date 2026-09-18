@@ -4,7 +4,7 @@
 
 Evaluation and benchmarking are critical for assessing model quality, comparing fine-tuning approaches, and ensuring production readiness. This document covers standard benchmarks, evaluation methodologies, performance profiling, and quality assurance practices for LLM deployments.
 
-**[📖 NVIDIA AI Model Evaluation](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/intro.html)** - Model evaluation in NeMo
+**[📖 NVIDIA AI Model Evaluation](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - Model evaluation in NeMo
 **[📖 NVIDIA Model Analyzer](https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/user_guide/model_analyzer.html)** - Performance analysis tool
 
 ## Key Topics

@@ -14,7 +14,7 @@ When a user asks Copilot for a completion or chat response:
 Requests are encrypted in transit via TLS. For Business and Enterprise, prompts and suggestions are not retained after the response is delivered, and they are not used to train models.
 
 **[Trust Center](https://resources.github.com/copilot-trust-center/)** - Complete privacy reference
-**[Responsible Use](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot)** - Responsible-use guidance
+**[Responsible Use](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features)** - Responsible-use guidance
 
 ## Data Retention by Plan
 
@@ -86,7 +86,7 @@ Exclusion rules use glob-like path patterns. Examples:
 - Do not affect data already indexed by public code search
 - Do not block the user from editing excluded files; only Copilot behavior changes
 
-**[Content Exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization/excluding-content-from-github-copilot)** - Full exclusion guide
+**[Content Exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization)** - Full exclusion guide
 
 ## Secrets Handling
 

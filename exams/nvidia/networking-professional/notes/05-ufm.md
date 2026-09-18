@@ -1,6 +1,6 @@
 # UFM and Network Management
 
-**[📖 UFM Documentation](https://docs.nvidia.com/networking/display/ufm/)** - Unified Fabric Manager
+**[📖 UFM Documentation](https://docs.nvidia.com/networking/software/management-software/index.html)** - Unified Fabric Manager
 
 ## NVIDIA UFM Overview
 

@@ -23,7 +23,7 @@
 3. **Resources for Phase 1**
    - **[Change Data Feed](https://docs.databricks.com/en/delta/delta-change-data-feed.html)** - CDC in Delta Lake
    - **[MERGE INTO](https://docs.databricks.com/en/sql/language-manual/delta-merge-into.html)** - Advanced upsert patterns
-   - **[Stream-Stream Joins](https://docs.databricks.com/en/structured-streaming/joining-streams.html)** - Joining streams
+   - **[Stream-Stream Joins](https://docs.databricks.com/aws/en/structured-streaming/)** - Joining streams
    - **[Auto Loader Options](https://docs.databricks.com/en/ingestion/auto-loader/options.html)** - Full configuration
 
 ### Phase 2: Governance and Performance (Weeks 3-4)
@@ -67,7 +67,7 @@
    - Focus on weak areas identified through practice
 
 3. **Resources for Phase 3**
-   - **[Spark UI](https://docs.databricks.com/en/compute/sparkling/index.html)** - Understanding Spark UI
+   - **[Spark UI](https://docs.databricks.com/aws/en/compute/)** - Understanding Spark UI
    - **[Exam Page](https://www.databricks.com/learn/certification/data-engineer-professional)** - Official exam details
    - **[Databricks Academy](https://www.databricks.com/learn)** - Advanced courses
 

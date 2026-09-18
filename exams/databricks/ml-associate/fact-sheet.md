@@ -80,7 +80,7 @@ This certification is designed for:
 ### Feature Store
 
 **[📖 Feature Store](https://docs.databricks.com/en/machine-learning/feature-store/index.html)** - Feature management
-**[📖 Feature Engineering](https://docs.databricks.com/en/machine-learning/feature-store/feature-engineering.html)** - Feature engineering client
+**[📖 Feature Engineering](https://docs.databricks.com/aws/en/machine-learning/feature-store/)** - Feature engineering client
 
 **Key Facts:**
 - Feature Store centralizes feature computation and serving
@@ -210,7 +210,7 @@ This certification is designed for:
 
 ### Deep Learning on Databricks
 
-**[📖 Deep Learning](https://docs.databricks.com/en/machine-learning/deep-learning/index.html)** - DL overview
+**[📖 Deep Learning](https://docs.databricks.com/aws/en/machine-learning/train-model/deep-learning)** - DL overview
 **[📖 TensorFlow on Databricks](https://docs.databricks.com/en/machine-learning/deep-learning/tensorflow.html)** - TF integration
 **[📖 PyTorch on Databricks](https://docs.databricks.com/en/machine-learning/deep-learning/pytorch.html)** - PyTorch integration
 
@@ -224,8 +224,8 @@ This certification is designed for:
 
 ### Distributed Deep Learning
 
-**[📖 Distributed Training](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/index.html)** - Distributed DL options
-**[📖 TorchDistributor](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/torch-distributor.html)** - PyTorch distribution
+**[📖 Distributed Training](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/)** - Distributed DL options
+**[📖 TorchDistributor](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/)** - PyTorch distribution
 
 **Key Facts:**
 - Horovod: distributed training framework (data parallelism)

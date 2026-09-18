@@ -41,7 +41,7 @@
 - [ ] Learn telemetry collection and monitoring
 - [ ] Understand event management and alerting
 - [ ] Practice diagnostic workflows
-- [ ] **Reference:** [UFM Documentation](https://docs.nvidia.com/networking/display/ufm/)
+- [ ] **Reference:** [UFM Documentation](https://docs.nvidia.com/networking/software/management-software/index.html)
 
 ### Phase 3: Review and Exam Prep (Weeks 6-8)
 

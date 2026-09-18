@@ -33,7 +33,7 @@ last-updated: 2026-05-03
 - Positional encoding - sinusoidal, learned, RoPE (Rotary Position Embedding)
 - Feed-forward networks with activation functions (GeLU, SwiGLU)
 - Residual connections for gradient flow in deep networks
-- **[📖 Transformer Architecture](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/gpt/gpt_training.html)** - NeMo GPT training architecture guide
+- **[📖 Transformer Architecture](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - NeMo GPT training architecture guide
 - **[📖 NVIDIA AI Foundation Models](https://docs.nvidia.com/ai-foundation-models/index.html)** - Pre-trained model catalog and capabilities
 
 ### Model Families and Design Choices
@@ -42,7 +42,7 @@ last-updated: 2026-05-03
 - **Mixtral/MoE:** Sparse mixture of experts, router networks, expert parallelism
 - **Gemma:** Efficient small models, multi-query attention
 - **Falcon:** Multi-query attention, refined data curation
-- **[📖 NeMo Supported Models](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/intro.html)** - Models supported in NeMo Framework
+- **[📖 NeMo Supported Models](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - Models supported in NeMo Framework
 
 ### Tokenization
 - Byte Pair Encoding (BPE) - iterative merging of frequent byte pairs
@@ -79,7 +79,7 @@ last-updated: 2026-05-03
 - NeMo Data Curator for training data processing and filtering
 - **[📖 NeMo Framework Overview](https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html)** - Complete NeMo documentation
 - **[📖 NeMo GitHub Repository](https://github.com/NVIDIA/NeMo)** - Source code and examples
-- **[📖 NeMo Launcher](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/intro.html)** - Multi-node training launcher
+- **[📖 NeMo Launcher](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - Multi-node training launcher
 
 ### Parameter-Efficient Fine-Tuning (PEFT)
 - **LoRA:** Low-rank adaptation - inject trainable low-rank matrices into attention layers
@@ -96,7 +96,7 @@ last-updated: 2026-05-03
 - Proximal Policy Optimization (PPO) for RLHF
 - Direct Preference Optimization (DPO) as simpler alternative to PPO
 - SteerLM - attribute-conditioned generation for controllability
-- **[📖 NeMo Aligner](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/intro.html)** - RLHF and alignment in NeMo
+- **[📖 NeMo Aligner](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - RLHF and alignment in NeMo
 
 ### Training Best Practices
 - Mixed precision training with BF16/FP16 and loss scaling

@@ -49,7 +49,7 @@
 
 4. **Resources for Phase 2**
    - **[Pipeline API](https://spark.apache.org/docs/latest/ml-pipeline.html)** - Spark ML pipelines
-   - **[Deep Learning](https://docs.databricks.com/en/machine-learning/deep-learning/index.html)** - DL on Databricks
+   - **[Deep Learning](https://docs.databricks.com/aws/en/machine-learning/train-model/deep-learning)** - DL on Databricks
    - **[Pandas UDFs](https://docs.databricks.com/en/udf/pandas.html)** - Distributed pandas
    - **[Batch Inference](https://docs.databricks.com/en/machine-learning/model-inference/index.html)** - Inference patterns
 

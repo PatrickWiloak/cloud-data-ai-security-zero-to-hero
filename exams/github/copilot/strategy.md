@@ -73,8 +73,8 @@
 
 5. **Phase 3 Resources**
    - **[Trust Center](https://resources.github.com/copilot-trust-center/)**
-   - **[Content Exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization/excluding-content-from-github-copilot)**
-   - **[Responsible Use](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot)**
+   - **[Content Exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization)**
+   - **[Responsible Use](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features)**
 
 ### Phase 4: Review and Exam (Week 5)
 

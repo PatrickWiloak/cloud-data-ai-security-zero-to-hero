@@ -50,7 +50,7 @@ The NVIDIA Certified Associate - Multimodal Generative AI certification validate
 - Real-world applications
 
 ## Quick Links
-- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/training/certification/)** - Registration
+- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/learn/certification/)** - Registration
 - **[NVIDIA NIM](https://docs.nvidia.com/nim/index.html)** - Inference microservices
 - **[NVIDIA Riva](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/index.html)** - Speech AI
 - **[NVIDIA Build](https://build.nvidia.com/)** - Model exploration

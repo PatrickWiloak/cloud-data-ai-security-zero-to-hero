@@ -55,7 +55,7 @@ An agentic loop is appropriate here because the workflow requires dynamic decisi
 - **D** - Separate, uncoordinated instances cannot maintain conversation context or make decisions based on combined information.
 
 **Related docs:**
-- **[Agentic Patterns](https://docs.anthropic.com/en/docs/build-with-claude/agentic)** - Design patterns for agentic systems
+- **[Agentic Patterns](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)** - Design patterns for agentic systems
 
 ---
 
@@ -276,7 +276,7 @@ This answer implements a comprehensive reliability stack:
 
 **Related docs:**
 - **[API Errors](https://docs.anthropic.com/en/api/errors)** - Error codes and handling
-- **[Rate Limits](https://docs.anthropic.com/en/docs/build-with-claude/rate-limits)** - Rate limit management
+- **[Rate Limits](https://docs.anthropic.com/en/api/rate-limits)** - Rate limit management
 - **[Extended Thinking](https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking)** - Reasoning mode
 
 ---
@@ -367,7 +367,7 @@ The supervisor pattern is ideal for this use case:
 - **D** - Extended thinking helps with complex reasoning but does not solve the context overload problem. All three sets of rules in one prompt still dilutes the context.
 
 **Related docs:**
-- **[Agentic Patterns](https://docs.anthropic.com/en/docs/build-with-claude/agentic)** - Multi-agent and supervisor patterns
+- **[Agentic Patterns](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)** - Multi-agent and supervisor patterns
 
 ---
 
@@ -449,4 +449,4 @@ The research feature requires an agentic approach because:
 **Key principle:** Use agents when the task requires dynamic decision-making about which actions to take next based on intermediate results. Use simple prompts when the input-to-output mapping is straightforward.
 
 **Related docs:**
-- **[Agentic Patterns](https://docs.anthropic.com/en/docs/build-with-claude/agentic)** - When to use agentic systems
+- **[Agentic Patterns](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)** - When to use agentic systems

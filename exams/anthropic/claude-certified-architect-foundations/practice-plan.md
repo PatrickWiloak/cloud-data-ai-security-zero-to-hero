@@ -129,10 +129,10 @@ Answer these questions without looking at notes:
 
 ### Documentation Reading
 
-- [ ] Read [Agentic Patterns](https://docs.anthropic.com/en/docs/build-with-claude/agentic)
+- [ ] Read [Agentic Patterns](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)
 - [ ] Read [Computer Use](https://docs.anthropic.com/en/docs/build-with-claude/computer-use)
 - [ ] Read [Claude Code Best Practices](https://docs.anthropic.com/en/docs/claude-code/best-practices)
-- [ ] Read [Rate Limits](https://docs.anthropic.com/en/docs/build-with-claude/rate-limits)
+- [ ] Read [Rate Limits](https://docs.anthropic.com/en/api/rate-limits)
 - [ ] Read [API Errors Reference](https://docs.anthropic.com/en/api/errors)
 - [ ] Read [Anthropic Cookbook - Agentic examples](https://github.com/anthropics/anthropic-cookbook)
 - [ ] Read [Token Counting](https://docs.anthropic.com/en/docs/build-with-claude/token-counting)

@@ -113,9 +113,9 @@ This is the most heavily weighted domain covering Snowflake's unique architectur
 - **PUBLIC:** Automatically granted to every user. Lowest privilege.
 - **ORGADMIN:** Organization-level management (cross-account).
 
-**[📖 Access Control Overview](https://docs.snowflake.com/en/user-guide/security-access-control-overview)** - RBAC fundamentals
-**[📖 System-Defined Roles](https://docs.snowflake.com/en/user-guide/security-access-control-overview#system-defined-roles)** - Role descriptions
-**[📖 Access Control Privileges](https://docs.snowflake.com/en/user-guide/security-access-control-privileges)** - All available privileges
+**[📖 Access Control Overview](https://docs.snowflake.com/en/guides-overview-secure-access-control-overview)** - RBAC fundamentals
+**[📖 System-Defined Roles](https://docs.snowflake.com/en/guides-overview-secure-access-control-overview#system-defined-roles)** - Role descriptions
+**[📖 Access Control Privileges](https://docs.snowflake.com/en/guides-overview-secure-access-control-privileges)** - All available privileges
 
 **Best Practices:**
 - Always use SYSADMIN or lower for object creation
@@ -135,7 +135,7 @@ This is the most heavily weighted domain covering Snowflake's unique architectur
 
 **[📖 Authentication](https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-overview)** - Federation and SSO
 **[📖 Key Pair Authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth)** - Service account auth
-**[📖 MFA](https://docs.snowflake.com/en/user-guide/security-mfa)** - Multi-factor setup
+**[📖 MFA](https://docs.snowflake.com/en/guides-overview-secure-mfa)** - Multi-factor setup
 
 ### Network Security
 
@@ -154,8 +154,8 @@ This is the most heavily weighted domain covering Snowflake's unique architectur
 - Periodic key rotation (annual for Snowflake-managed keys)
 - Tri-Secret Secure (customer-managed key + Snowflake key) - Business Critical+
 
-**[📖 Encryption](https://docs.snowflake.com/en/user-guide/security-encryption)** - Encryption overview
-**[📖 Tri-Secret Secure](https://docs.snowflake.com/en/user-guide/security-encryption-manage)** - Customer-managed keys
+**[📖 Encryption](https://docs.snowflake.com/en/guides-overview-secure-encryption)** - Encryption overview
+**[📖 Tri-Secret Secure](https://docs.snowflake.com/en/guides-overview-secure-encryption-manage)** - Customer-managed keys
 
 ## Domain 3: Performance Concepts (15%)
 

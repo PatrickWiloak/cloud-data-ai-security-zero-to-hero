@@ -47,7 +47,7 @@
 - **[Snowflake Certification Portal](https://www.snowflake.com/certifications/)** - Exam registration and guides
 - **[Snowflake Documentation](https://docs.snowflake.com/en/)** - Complete reference documentation
 - **[Architecture Overview](https://docs.snowflake.com/en/user-guide/intro-key-concepts)** - Core architecture
-- **[Security Guide](https://docs.snowflake.com/en/user-guide/security)** - Security documentation
+- **[Security Guide](https://docs.snowflake.com/en/guides-overview-secure)** - Security documentation
 - **[Data Sharing Guide](https://docs.snowflake.com/en/user-guide/data-sharing-intro)** - Sharing documentation
 
 ### Recommended Courses

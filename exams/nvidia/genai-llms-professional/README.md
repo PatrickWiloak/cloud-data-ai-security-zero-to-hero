@@ -120,7 +120,7 @@ The NVIDIA Certified Professional - Generative AI & LLMs certification validates
 8. **Practice Questions:** Work through scenario-based problems regularly
 
 ## Quick Links
-- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/training/certification/)** - Registration and exam details
+- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/learn/certification/)** - Registration and exam details
 - **[NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/)** - Official training courses
 - **[NVIDIA NeMo Framework](https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html)** - Framework documentation
 - **[TensorRT-LLM Documentation](https://nvidia.github.io/TensorRT-LLM/)** - Inference optimization docs

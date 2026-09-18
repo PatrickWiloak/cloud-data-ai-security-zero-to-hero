@@ -90,7 +90,7 @@ Start with a cloud associate certification to build foundational cloud knowledge
 - Prompt engineering, fine-tuning, RAG
 - Responsible AI practices
 - Cost: ~$135
-- https://www.nvidia.com/en-us/training/certification/
+- https://www.nvidia.com/en-us/learn/certification/
 
 **AI/ML Fundamentals - Choose one:**
 
@@ -146,7 +146,7 @@ Choose based on your primary cloud:
 - Model customization and fine-tuning at scale
 - Production inference optimization
 - Cost: ~$300
-- https://www.nvidia.com/en-us/training/certification/
+- https://www.nvidia.com/en-us/learn/certification/
 
 ### Phase 6 - AI Application Development (24-30 months)
 

@@ -12,7 +12,7 @@
 - [ ] Study self-attention mechanism and multi-head attention math
 - [ ] Understand positional encoding - sinusoidal, learned, RoPE
 - [ ] Read about pre-norm vs post-norm layer normalization
-- [ ] **Reference:** [NVIDIA NeMo GPT Training Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/gpt/gpt_training.html)
+- [ ] **Reference:** [NVIDIA NeMo GPT Training Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)
 
 #### Day 3-4: Model Families and Tokenization
 - [ ] Study GPT-style decoder-only architectures

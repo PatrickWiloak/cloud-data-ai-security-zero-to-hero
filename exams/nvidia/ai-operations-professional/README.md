@@ -66,7 +66,7 @@ The NVIDIA Certified Professional - AI Operations certification validates expert
 - **Monitoring** - Model performance and data drift detection
 
 ## Quick Links
-- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/training/certification/)** - Registration
+- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/learn/certification/)** - Registration
 - **[DCGM Documentation](https://docs.nvidia.com/datacenter/dcgm/latest/index.html)** - GPU monitoring
 - **[Triton Inference Server](https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/index.html)** - Model serving
 - **[NIM Documentation](https://docs.nvidia.com/nim/large-language-models/latest/getting-started.html)** - Inference microservices

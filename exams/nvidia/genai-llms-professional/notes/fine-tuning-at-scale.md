@@ -5,7 +5,7 @@
 This document covers the methods, strategies, and best practices for fine-tuning large language models using NVIDIA tools. Topics include Parameter-Efficient Fine-Tuning (PEFT) methods, supervised fine-tuning, RLHF, data preparation, and distributed training configurations for fine-tuning workflows.
 
 **[📖 NeMo PEFT Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/peft/landing_page.html)** - PEFT methods in NeMo Framework
-**[📖 NeMo Aligner](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/intro.html)** - Alignment training documentation
+**[📖 NeMo Aligner](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - Alignment training documentation
 
 ## Key Topics
 
@@ -160,7 +160,7 @@ This document covers the methods, strategies, and best practices for fine-tuning
 - Train model to generate responses conditioned on attribute values
 - More controllable than standard RLHF
 
-**[📖 NeMo Alignment](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/intro.html)** - Alignment training in NeMo
+**[📖 NeMo Alignment](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - Alignment training in NeMo
 
 ### 7. Data Preparation for Fine-Tuning
 

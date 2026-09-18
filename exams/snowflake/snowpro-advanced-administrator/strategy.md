@@ -46,7 +46,7 @@
 ### Official Resources
 - **[Snowflake Certification Portal](https://www.snowflake.com/certifications/)** - Exam registration
 - **[Account Usage Views](https://docs.snowflake.com/en/sql-reference/account-usage)** - Monitoring reference
-- **[Security Overview](https://docs.snowflake.com/en/user-guide/security)** - Security documentation
+- **[Security Overview](https://docs.snowflake.com/en/guides-overview-secure)** - Security documentation
 - **[Resource Monitors](https://docs.snowflake.com/en/user-guide/resource-monitors)** - Cost control
 - **[Parameters Reference](https://docs.snowflake.com/en/sql-reference/parameters)** - All parameters
 

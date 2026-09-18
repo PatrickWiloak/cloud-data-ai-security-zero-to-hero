@@ -50,9 +50,9 @@ The NVIDIA Certified Professional - Networking certification validates expertise
 - Troubleshooting with UFM tools
 
 ## Quick Links
-- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/training/certification/)** - Registration
+- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/learn/certification/)** - Registration
 - **[NVIDIA Networking Documentation](https://docs.nvidia.com/networking/)** - Networking guides
-- **[UFM Documentation](https://docs.nvidia.com/networking/display/ufm/)** - Fabric management
+- **[UFM Documentation](https://docs.nvidia.com/networking/software/management-software/index.html)** - Fabric management
 - **[ConnectX Documentation](https://docs.nvidia.com/networking/)** - Network adapter guides
 - **[Spectrum Documentation](https://docs.nvidia.com/networking/)** - Switch documentation
 

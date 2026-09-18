@@ -82,7 +82,7 @@
 - [ ] Understand distributed training: TorchDistributor, Horovod
 - [ ] Practice MLflow integration with TensorFlow and PyTorch
 - [ ] Review Notes: `notes/04-deep-learning.md`
-- [ ] Read: [Deep Learning](https://docs.databricks.com/en/machine-learning/deep-learning/index.html)
+- [ ] Read: [Deep Learning](https://docs.databricks.com/aws/en/machine-learning/train-model/deep-learning)
 
 #### Day 21: Week 3 Review
 - [ ] Build a complete Spark ML pipeline from scratch

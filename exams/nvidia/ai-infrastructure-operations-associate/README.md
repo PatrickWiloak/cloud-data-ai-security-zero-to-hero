@@ -50,7 +50,7 @@ The NVIDIA Certified Associate - AI Infrastructure Operations certification vali
 - Escalation and documentation
 
 ## Quick Links
-- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/training/certification/)** - Registration
+- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/learn/certification/)** - Registration
 - **[DCGM Documentation](https://docs.nvidia.com/datacenter/dcgm/latest/index.html)** - GPU monitoring
 - **[Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/index.html)** - GPU containers
 - **[GPU Operator](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/index.html)** - Kubernetes GPU management

@@ -1,12 +1,12 @@
 # Account Access and Security
 
-**[📖 Security Overview](https://docs.snowflake.com/en/user-guide/security)** - Comprehensive security reference
+**[📖 Security Overview](https://docs.snowflake.com/en/guides-overview-secure)** - Comprehensive security reference
 
 ## Role-Based Access Control (RBAC)
 
 Snowflake uses RBAC as its primary access control model. All privileges are granted to roles, and roles are granted to users.
 
-**[📖 Access Control Overview](https://docs.snowflake.com/en/user-guide/security-access-control-overview)** - RBAC fundamentals
+**[📖 Access Control Overview](https://docs.snowflake.com/en/guides-overview-secure-access-control-overview)** - RBAC fundamentals
 
 ### System-Defined Roles
 
@@ -49,7 +49,7 @@ Snowflake uses RBAC as its primary access control model. All privileges are gran
 - Can view organization usage and billing
 - Separate from account-level roles
 
-**[📖 System-Defined Roles](https://docs.snowflake.com/en/user-guide/security-access-control-overview#system-defined-roles)** - Role details
+**[📖 System-Defined Roles](https://docs.snowflake.com/en/guides-overview-secure-access-control-overview#system-defined-roles)** - Role details
 
 ### Role Hierarchy Best Practices
 
@@ -70,7 +70,7 @@ ACCOUNTADMIN
 - Use role hierarchy for privilege inheritance
 - Regularly review and audit role assignments
 
-**[📖 Access Control Configuration](https://docs.snowflake.com/en/user-guide/security-access-control-configure)** - Setup guide
+**[📖 Access Control Configuration](https://docs.snowflake.com/en/guides-overview-secure-access-control-configure)** - Setup guide
 
 ### Privileges
 
@@ -89,7 +89,7 @@ ACCOUNTADMIN
 - MONITOR USAGE - view account-level usage statistics
 - EXECUTE TASK - run tasks
 
-**[📖 Privileges](https://docs.snowflake.com/en/user-guide/security-access-control-privileges)** - Complete privilege reference
+**[📖 Privileges](https://docs.snowflake.com/en/guides-overview-secure-access-control-privileges)** - Complete privilege reference
 
 ### Managed Access Schemas
 
@@ -98,7 +98,7 @@ ACCOUNTADMIN
 - Provides centralized privilege management
 - Useful for regulated environments
 
-**[📖 Managed Access](https://docs.snowflake.com/en/user-guide/security-access-control-configure#managed-access-schemas)** - Schema access control
+**[📖 Managed Access](https://docs.snowflake.com/en/guides-overview-secure-access-control-configure#managed-access-schemas)** - Schema access control
 
 ## Authentication Methods
 
@@ -115,7 +115,7 @@ ACCOUNTADMIN
 - Recommended for ACCOUNTADMIN users
 - Can enforce minimum MFA enrollment via authentication policies
 
-**[📖 MFA](https://docs.snowflake.com/en/user-guide/security-mfa)** - MFA configuration
+**[📖 MFA](https://docs.snowflake.com/en/guides-overview-secure-mfa)** - MFA configuration
 
 ### Key Pair Authentication
 - RSA key pairs (2048-bit minimum)
@@ -193,8 +193,8 @@ ALTER ACCOUNT SET NETWORK_POLICY = corp_policy;
 - Customer can revoke access by disabling their key
 - Available on AWS KMS, Azure Key Vault, GCP Cloud KMS
 
-**[📖 Encryption](https://docs.snowflake.com/en/user-guide/security-encryption)** - Encryption architecture
-**[📖 Tri-Secret Secure](https://docs.snowflake.com/en/user-guide/security-encryption-manage)** - Customer-managed keys
+**[📖 Encryption](https://docs.snowflake.com/en/guides-overview-secure-encryption)** - Encryption architecture
+**[📖 Tri-Secret Secure](https://docs.snowflake.com/en/guides-overview-secure-encryption-manage)** - Customer-managed keys
 
 ### Column-Level Security (Enterprise+)
 
@@ -210,7 +210,7 @@ CREATE MASKING POLICY mask_ssn AS (val STRING)
 ALTER TABLE employees MODIFY COLUMN ssn SET MASKING POLICY mask_ssn;
 ```
 
-**[📖 Dynamic Data Masking](https://docs.snowflake.com/en/user-guide/security-column-ddm-intro)** - Masking policies
+**[📖 Dynamic Data Masking](https://docs.snowflake.com/en/guides-overview-secure-column-ddm-intro)** - Masking policies
 
 ### Row Access Policies (Enterprise+)
 
@@ -223,7 +223,7 @@ CREATE ROW ACCESS POLICY region_policy AS (region_col VARCHAR)
 ALTER TABLE sales ADD ROW ACCESS POLICY region_policy ON (region);
 ```
 
-**[📖 Row Access Policies](https://docs.snowflake.com/en/user-guide/security-row-intro)** - Row-level security
+**[📖 Row Access Policies](https://docs.snowflake.com/en/guides-overview-secure-row-intro)** - Row-level security
 
 ## Session Management
 

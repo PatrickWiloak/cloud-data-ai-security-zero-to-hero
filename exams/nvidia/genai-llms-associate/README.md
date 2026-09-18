@@ -253,7 +253,7 @@ The NVIDIA Certified Associate - Generative AI and LLMs (NCA-GENL) exam validate
 ## Study Resources
 
 ### Official NVIDIA Resources
-- **[NVIDIA Certification Page](https://www.nvidia.com/en-us/training/certification/)** - Registration and official details
+- **[NVIDIA Certification Page](https://www.nvidia.com/en-us/learn/certification/)** - Registration and official details
 - **[NVIDIA Deep Learning Institute (DLI)](https://www.nvidia.com/en-us/training/)** - Official training courses
 - **[NeMo Framework Documentation](https://docs.nvidia.com/nemo-framework/user-guide/latest/index.html)** - NeMo guides and tutorials
 - **[NVIDIA NIM Documentation](https://docs.nvidia.com/nim/index.html)** - NIM deployment guides

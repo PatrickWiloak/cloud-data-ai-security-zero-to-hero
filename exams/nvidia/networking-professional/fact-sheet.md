@@ -194,7 +194,7 @@ last-updated: 2026-05-03
 - Real-time monitoring and telemetry
 - Event management and alerting
 - Performance analysis and optimization
-- **[📖 UFM Documentation](https://docs.nvidia.com/networking/display/ufm/)**
+- **[📖 UFM Documentation](https://docs.nvidia.com/networking/software/management-software/index.html)**
 
 **UFM Telemetry:**
 - Per-port counters (data, errors)

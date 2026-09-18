@@ -21,7 +21,7 @@ This section covers advanced incremental data processing, representing 20% of th
 
 ### 2. Stream-Stream Joins
 
-**[📖 Stream-Stream Joins](https://docs.databricks.com/en/structured-streaming/joining-streams.html)** - Joining two streams
+**[📖 Stream-Stream Joins](https://docs.databricks.com/aws/en/structured-streaming/)** - Joining two streams
 
 ```python
 # Both streams must have watermarks
@@ -187,7 +187,7 @@ query = (stream_df.writeStream
 | Topic | Link |
 |-------|------|
 | Structured Streaming | [docs.databricks.com/en/structured-streaming/index.html](https://docs.databricks.com/en/structured-streaming/index.html) |
-| Stream-Stream Joins | [docs.databricks.com/en/structured-streaming/joining-streams.html](https://docs.databricks.com/en/structured-streaming/joining-streams.html) |
+| Stream-Stream Joins | [docs.databricks.com/en/structured-streaming/joining-streams.html](https://docs.databricks.com/aws/en/structured-streaming/) |
 | Watermarks | [docs.databricks.com/en/structured-streaming/watermarks.html](https://docs.databricks.com/en/structured-streaming/watermarks.html) |
 | Auto Loader Options | [docs.databricks.com/en/ingestion/auto-loader/options.html](https://docs.databricks.com/en/ingestion/auto-loader/options.html) |
 | Schema Evolution | [docs.databricks.com/en/ingestion/auto-loader/schema-evolution.html](https://docs.databricks.com/en/ingestion/auto-loader/schema-evolution.html) |

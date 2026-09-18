@@ -15,7 +15,7 @@ An agentic system is one where Claude operates in a loop - calling tools, observ
 - **Goal-directed behavior** - Claude works toward completing a defined objective
 - **Dynamic decision making** - The path is not predetermined; it depends on intermediate results
 
-**[Agentic Patterns Guide](https://docs.anthropic.com/en/docs/build-with-claude/agentic)** - Official documentation on building agentic systems with Claude
+**[Agentic Patterns Guide](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)** - Official documentation on building agentic systems with Claude
 
 ---
 
@@ -260,9 +260,9 @@ Tradeoffs:
 
 ## Related Documentation
 
-- **[Agentic Patterns](https://docs.anthropic.com/en/docs/build-with-claude/agentic)** - Primary reference for agentic design
+- **[Agentic Patterns](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/overview)** - Primary reference for agentic design
 - **[Tool Use Guide](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)** - Foundation for agentic tool loops
 - **[Extended Thinking](https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking)** - Enhancing agent reasoning
 - **[Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook)** - Agentic code examples
 - **[Token Counting](https://docs.anthropic.com/en/docs/build-with-claude/token-counting)** - Managing agent costs
-- **[Rate Limits](https://docs.anthropic.com/en/docs/build-with-claude/rate-limits)** - Production rate management
+- **[Rate Limits](https://docs.anthropic.com/en/api/rate-limits)** - Production rate management

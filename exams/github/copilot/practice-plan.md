@@ -90,7 +90,7 @@
 - [ ] Understand content exclusions and their scopes
 - [ ] Review IP indemnity requirements (Business/Enterprise + duplicate detection)
 - [ ] Review Notes: `notes/04-security-privacy-and-data-handling.md`
-- [ ] Read: [Responsible Use](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-github-copilot)
+- [ ] Read: [Responsible Use](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features)
 
 #### Day 24-25: Policies and Content Exclusions
 - [ ] In a sandbox org, configure content exclusions at repo level

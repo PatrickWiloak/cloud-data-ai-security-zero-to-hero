@@ -50,7 +50,7 @@
    - Design retraining triggers: scheduled, performance-based, drift-based
 
 4. **Resources for Phase 2**
-   - **[Distributed Training](https://docs.databricks.com/en/machine-learning/deep-learning/distributed-training/index.html)** - DL distribution
+   - **[Distributed Training](https://docs.databricks.com/aws/en/machine-learning/train-model/distributed-training/)** - DL distribution
    - **[Model Serving](https://docs.databricks.com/en/machine-learning/model-serving/index.html)** - Serving endpoints
    - **[Lakehouse Monitoring](https://docs.databricks.com/en/lakehouse-monitoring/index.html)** - Monitoring
 

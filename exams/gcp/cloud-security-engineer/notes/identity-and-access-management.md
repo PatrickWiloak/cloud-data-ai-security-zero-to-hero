@@ -281,6 +281,6 @@ gcloud projects get-iam-policy PROJECT_ID \
 ## Additional Resources
 
 - [IAM Documentation](https://cloud.google.com/iam/docs)
-- [IAM Best Practices](https://cloud.google.com/iam/docs/best-practices)
+- [IAM Best Practices](https://docs.cloud.google.com/iam/docs/using-iam-securely)
 - [Organization Policies](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
 - [Workload Identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity)

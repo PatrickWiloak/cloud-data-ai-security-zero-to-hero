@@ -114,7 +114,7 @@
 - Avoids hot spots
 - Supported on Quantum switches
 
-**[📖 UFM Subnet Manager](https://docs.nvidia.com/networking/display/ufm/)** - SM configuration
+**[📖 UFM Subnet Manager](https://docs.nvidia.com/networking/software/management-software/index.html)** - SM configuration
 
 ## Partitioning and QoS
 

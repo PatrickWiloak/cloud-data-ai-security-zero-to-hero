@@ -45,7 +45,7 @@ The NVIDIA Certified Professional - Accelerated Data Science certification valid
 - Performance tuning for GPU data pipelines
 
 ## Quick Links
-- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/training/certification/)** - Registration
+- **[NVIDIA Certification Program](https://www.nvidia.com/en-us/learn/certification/)** - Registration
 - **[RAPIDS Documentation](https://docs.rapids.ai/)** - Complete RAPIDS reference
 - **[cuDF Documentation](https://docs.rapids.ai/api/cudf/stable/)** - GPU DataFrames
 - **[cuML Documentation](https://docs.rapids.ai/api/cuml/stable/)** - GPU Machine Learning

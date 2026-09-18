@@ -24,7 +24,7 @@ The transformer architecture is the foundation of all modern LLMs. Key component
 - Outputs concatenated and projected back to model dimension
 - Typical head counts: 32 (7B), 40 (13B), 64 (70B)
 
-**[📖 NeMo GPT Architecture](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/gpt/gpt_training.html)** - NeMo implementation of GPT-style models
+**[📖 NeMo GPT Architecture](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - NeMo implementation of GPT-style models
 
 ### 2. Attention Variants
 
@@ -109,7 +109,7 @@ The transformer architecture is the foundation of all modern LLMs. Key component
 - Total parameters much larger than active parameters
 - Requires expert parallelism for efficient training
 
-**[📖 NeMo Supported Models](https://docs.nvidia.com/nemo-framework/user-guide/latest/nemotoolkit/nlp/nemo_megatron/intro.html)** - All model architectures supported by NeMo
+**[📖 NeMo Supported Models](https://docs.nvidia.com/nemo-framework/user-guide/latest/llms/gpt/index.html)** - All model architectures supported by NeMo
 
 ### 6. Tokenization Strategies
 

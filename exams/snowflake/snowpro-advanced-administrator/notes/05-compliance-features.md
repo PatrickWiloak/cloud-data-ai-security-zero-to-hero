@@ -1,6 +1,6 @@
 # Compliance Features
 
-**[📖 Security and Compliance](https://docs.snowflake.com/en/user-guide/security-compliance)** - Compliance documentation
+**[📖 Security and Compliance](https://docs.snowflake.com/en/guides-overview-secure-compliance)** - Compliance documentation
 
 ## Overview
 
