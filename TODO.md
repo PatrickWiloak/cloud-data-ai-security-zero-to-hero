@@ -38,6 +38,9 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       the one step here that cannot be scripted. The card is now committed, and
       `python3 .github/scripts/build-social-card.py` regenerates it, so the old dead `/tmp` path is gone.
       `check-repo-metadata.py` reports this as drift until it is done.
+      **Checked 2026-09-18:** GitHub has a custom preview set (`usesCustomOpenGraphImage: true`),
+      but it is the **old** card (blue, "122+ certifications, 22 providers") - not the committed
+      green one from 2026-09-17. So this is a *replace*, not a first upload.
 - [x] ~~Commit and push `LICENSE` (CC BY 4.0) and `LICENSE-CODE` (MIT)~~ ✅ done 2026-08-31 in
       f3b8faf. GitHub reports the repo as CC-BY-4.0.
 
