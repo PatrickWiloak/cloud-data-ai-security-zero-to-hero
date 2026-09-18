@@ -6,6 +6,22 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-09-18] - 340 dead links repaired, and three kinds of dead link instead of one
+
+The first real sweep had only counted 404s. This one also catches **soft 404s** (a 200 response on a "page not found" page, which no status-code checker can see, lychee included) and **deep links lost to a redirect** (a URL that now forwards to a homepage, a search page or a login wall). That raised the count from 685 known-dead to **783**.
+
+### Fixed
+
+- **303 dead URLs repaired, 449 citations.** No replacement was accepted on a similarity score. Candidates came from each vendor's own navigation tree (Google, Oracle, Microsoft and NVIDIA render the whole product nav server-side), sitemaps (Databricks, Snowflake) and Microsoft Learn's search API. Each one was chosen by reading the candidates against the citation's own link text, then fetched and title-checked. The scores alone were not safe: they matched Snowflake to its separate Open Catalog product, Cosmos DB for NoSQL to the Cassandra and Gremlin APIs, and one Catalyst switch to a different one because both URLs ended in `series.html`. All of those were rejected.
+- **37 moved links re-pointed, 87 citations.** Dead hosts with a known new home (`home.pearsonvue.com` to `www.pearsonvue.com`, `spec.modelcontextprotocol.io` to `modelcontextprotocol.io/specification`, Forseti to its archived repo), plus links that only still worked through a redirect: AWS doc indexes, and Vertex AI docs now served as Gemini Enterprise Agent Platform.
+- Where IBM retired a service and names a successor (Log Analysis to Cloud Logs, Cloud Functions to Code Engine, Certificate Manager to Secrets Manager), the citation now points at the successor. The link text still names the old product, and the report lists every such substitution.
+
+### Not fixed, deliberately
+
+- **480 URLs, 574 citations**, whose pages were removed with no successor: most of Google's Architecture Center articles, retired products (LUIS, PaLM, IBM Watson services, Cloud Foundry, AWS Quick Starts) and restructured Oracle and Microsoft pages. A live landing page exists for most of them, but pointing a specific citation at a generic page would make it look fixed without the page covering what was cited. They are listed in [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md) with the files citing each one, and TODO.md has the decision.
+
+---
+
 ## [2026-09-17] - The link checker that never ran, and the data pillar
 
 An audit of the repo against its own claims. Every validator was green and had been for weeks, which turned out to be part of the problem: one of them was green because it was not running, and the numbers GitHub shows about this project are not files, so nothing checked them.

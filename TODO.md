@@ -6,20 +6,30 @@ Working task list for **cloud-data-ai-security-zero-to-hero**. Read this at the 
 
 ## Open
 
-### 🔴 Link rot backlog (added 2026-09-17)
+### 🔴 Link rot backlog (added 2026-09-17, cut 2026-09-18)
 
-The external link checker had never run (see CHANGELOG 2026-09-17). With it fixed, a full
-sweep of all 8,591 unique external URLs found **701 dead, cited 903 times**. The full list,
-with the file and line citing each one, is in
+The external link checker had never run (see CHANGELOG 2026-09-17). Sweeps on 2026-09-17/18
+checked every external URL for hard 404s, soft 404s ("not found" pages served as 200) and deep
+links lost to a redirect: **783 dead**. 303 are repaired (449 citations), each replacement fetched
+and title-checked, plus 37 moved links re-pointed (87 citations). **480 remain, cited 574 times**, all
+pages removed with no successor. The list, with the files citing each one, is
 [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md).
 
-- [ ] **Work through the link-rot report.** Sorted by citation count, so the top of the list is
-      the best use of an hour. Roughly half have a live parent section in the same vendor's docs
-      and half need a successor page found. Concentrated in GCP (234), Microsoft Learn (152) and
-      Oracle (89), which all reorganized their documentation this year.
-- [ ] **Judge by 2026-09-22**: the first repaired weekly link check runs Monday 06:00 UTC. Confirm
-      it files an issue listing broken links rather than passing silently. If it passes clean,
-      something is wrong - there are 701 known-dead links in the tree.
+- [ ] **Decide what to do with the 480 unrepairable links.** Options: leave them listed (current), unlink the
+      text and mark it "(retired by vendor)", or point each at its product's live landing page (a fallback
+      exists for most, listed in the report). Concentrated in GCP Architecture Center (removed articles),
+      Microsoft Learn, Oracle, and retired IBM services.
+- [ ] **Judge by 2026-09-22**: the first repaired weekly link check runs Monday 06:00 UTC. It should open an
+      issue listing broken links. If it passes clean, something is wrong - 480 known-dead links remain.
+- [ ] **Your own blog link is dead.** README footer "Study Guide 2025" ->
+      `patrickwiloak.com/blog/aws-certification-study-framework-how-to-prepare-pass-certifications` now
+      redirects to your homepage. Restore the post or change the link; left untouched because it is your site.
+- [ ] **Content checks the sweep surfaced** (links fixed, content may be stale):
+  - `exams/azure/ai-102/fact-sheet.md` cites LUIS pages; LUIS is retired (successor: conversational language understanding).
+  - Microsoft now lists **AI-901** "Azure AI Fundamentals" alongside AI-900. Check for an AI-900 retirement date and set `exam-retires:` on `exams/azure/ai-900`.
+  - The **PCNSA** exam page is gone (404) and Palo Alto now promotes a Network Security Analyst certification. Check whether PCNSA was retired or renamed.
+  - 15 citations of retired IBM services now point at the official successors (listed in the report); the surrounding IBM notes may describe the retired products.
+- [ ] **62 URLs could not be checked** (bot protection or sign-in, mostly vendor cert pages and Cisco docs). Spot-check by hand; listed at the end of the report.
 
 ### 🟠 Discoverability (added 2026-08-31, updated 2026-09-17)
 
