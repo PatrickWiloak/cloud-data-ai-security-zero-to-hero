@@ -295,6 +295,15 @@ def stage() -> list[str]:
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, dest)
             staged.append(rel.as_posix())
+
+    # IndexNow proves site ownership with /<key>.txt holding the key. The key
+    # lives in the chrome dir (a .txt, so the loop above skips it) and is
+    # written at the site root, the directory every page URL sits under.
+    key_file = SITE_CHROME / "indexnow-key.txt"
+    if key_file.is_file():
+        key = key_file.read_text(encoding="utf-8").strip()
+        (STAGE / f"{key}.txt").write_text(key, encoding="utf-8")
+        staged.append(f"{key}.txt")
     return staged
 
 

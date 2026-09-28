@@ -41,6 +41,30 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       **Checked 2026-09-18:** GitHub has a custom preview set (`usesCustomOpenGraphImage: true`),
       but it is the **old** card (blue, "122+ certifications, 22 providers") - not the committed
       green one from 2026-09-17. So this is a *replace*, not a first upload.
+- [x] ~~Per-page meta descriptions, shorter titles, BreadcrumbList JSON-LD, IndexNow on deploy~~ ✅ done 2026-09-28
+      (CHANGELOG 2026-09-28). Baseline for judging it, GitHub traffic 2026-09-14..28: 248 views / 99 uniques;
+      referrers github.com 13, chatgpt.com 10, Bing 6, Google 5, DuckDuckGo 1. 40 stars, 20 forks.
+- [ ] **Patrick: create the Google Search Console property.** Search Console → Add property → **URL prefix**
+      `https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/` (as pat@noblerworks.com) →
+      verify with **HTML tag** → paste the `content="..."` value into `mkdocs.yml` `extra.google_site_verification`
+      → push → click Verify → Sitemaps → submit `sitemap.xml`. Then add the `nobler-reporting` service account
+      as a Full user so the fleet reporting can read it. Nothing has told Google the site exists; this is the
+      single biggest remaining SEO step.
+- [ ] **Patrick: Bing Webmaster Tools** → Import from Google Search Console once the property above exists
+      (IndexNow already pings Bing on every deploy; Webmaster Tools shows what it did with them).
+- [ ] **2026-10-05 check**: the first deploy after 2026-09-28 ran the "Notify IndexNow" step. Open that run; it
+      should say `IndexNow accepted: HTTP 200/202`. A brand-new key can 403 `SiteVerificationNotCompleted`
+      once while Pages propagates; if so, run `python3 .github/scripts/notify-indexnow.py --all` locally.
+- [ ] **2026-10-28 judge**: re-pull `gh api repos/PatrickWiloak/cloud-data-ai-security-zero-to-hero/traffic/popular/referrers`.
+      Target: Google + Bing referrals above 11 per 14 days (baseline above), and new pages showing in
+      Search Console → Pages → Indexed (if the property exists by then).
+- [ ] **Decide: custom domain?** e.g. `zerotohero.patrickwiloak.com`. It would be covered by the existing
+      `sc-domain:patrickwiloak.com` Search Console property (the reporting SA is already a Full user there),
+      allow a real `robots.txt` with a `Sitemap:` line (a `github.io/<repo>` subpath cannot have one), and
+      build authority on your own domain. GitHub Pages redirects the old URLs. Cost: one CNAME + `site_url` change.
+- [ ] **Patrick: distribution** (stars come from here, not from SEO). Submit to awesome lists
+      (awesome-certifications, awesome-aws, awesome-azure, awesome-kubernetes, awesome-llm-security); post one
+      useful page each to r/AWSCertifications, r/AzureCertification, r/CompTIA, r/kubernetes, linking back.
 - [x] ~~Commit and push `LICENSE` (CC BY 4.0) and `LICENSE-CODE` (MIT)~~ ✅ done 2026-08-31 in
       f3b8faf. GitHub reports the repo as CC-BY-4.0.
 

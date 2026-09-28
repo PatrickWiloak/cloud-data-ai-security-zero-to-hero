@@ -6,6 +6,24 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-09-28] - Every page gets its own search snippet, and search engines hear about changes
+
+GitHub's traffic view for the 14 days to 2026-09-28 showed Google sending 5 visits to a site of 2,041 pages. ChatGPT sent 10. The published site had three defects that explain part of that.
+
+### Fixed
+
+- **All 2,041 pages shared one meta description**, the site-wide `site_description`. Google treats a repeated description as boilerplate and writes its own snippet. `.github/scripts/site_hooks.py` now gives each page its own: the first prose paragraph, or for cert landing pages, fact sheets, study plans, scenarios and strategy pages a summary built from `docs/certs.json` (those open with fact lists, and they are what people search for by exam code). Result: 2,041 distinct descriptions.
+- **Titles ended in the 45-character site name**, so "AWS Certified Solutions Architect - Associate (SAA-C03) - Cloud, Data, AI, and Security - Zero to Hero" was cut off in results. Titles are now the page's H1, with the exam code appended inside a cert directory ("Core Data Concepts - DP-900") and a short "| Zero to Hero" suffix only when it fits. Cert landing pages read "... Study Guide".
+- **No search engine was ever told the site existed.** Deploys now send the changed page URLs to IndexNow (`notify-indexnow.py`). Google reads the sitemap instead; its Search Console property is a manual step, listed in TODO.md, and `mkdocs.yml` has an `extra.google_site_verification` slot for the token.
+
+### Added
+
+- schema.org **BreadcrumbList** JSON-LD on every page, and **WebSite** on the home page.
+- `noindex` on working files published for transparency (`TODO.md`, `CLAUDE.md`, the roadmap and link-rot reports).
+- A new home-page description that names the certifications people search for (AWS, Azure, GCP, Kubernetes, CompTIA, CISSP).
+
+---
+
 ## [2026-09-18] - All 783 dead links repaired, and three kinds of dead link instead of one
 
 The first real sweep had only counted 404s. This one also catches **soft 404s** (a 200 response on a "page not found" page, which no status-code checker can see, lychee included) and **deep links lost to a redirect** (a URL that now forwards to a homepage, a search page or a login wall). That raised the count from 685 known-dead to **783**.

@@ -10,10 +10,12 @@
 #   .venv-docs/bin/python .github/scripts/build-site.py --strict
 
 site_name: Cloud, Data, AI, and Security - Zero to Hero
+# The home page's search snippet; every other page gets its own description from
+# .github/scripts/site_hooks.py. No counts here - nothing checks this file.
 site_description: >-
-  Plain-English concepts, hands-on builds, deep references, and the most
-  comprehensive certification library on GitHub. Cloud, data, AI, and security
-  from absolute zero.
+  Free study guides for AWS, Azure, GCP, Kubernetes, CompTIA, CISSP and 100+
+  more cloud, data, AI and security certifications, plus plain-English concepts
+  and hands-on builds. From absolute zero.
 site_author: Patrick Wiloak
 site_url: https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/
 
@@ -109,6 +111,10 @@ theme:
     text: Geist
     code: Geist Mono
 
+# Per-page <title>, meta description and JSON-LD. See the module docstring.
+hooks:
+  - .github/scripts/site_hooks.py
+
 plugins:
   - search:
       separator: '[\s​\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
@@ -174,6 +180,9 @@ validation:
   anchors: warn
 
 extra:
+  # Google Search Console URL-prefix verification token (the content="..." value
+  # of the HTML-tag method). Empty = no tag emitted. See TODO.md.
+  google_site_verification: ""
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero

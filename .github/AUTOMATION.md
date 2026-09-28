@@ -14,7 +14,9 @@ This directory holds CI workflows, validation scripts, and contributor templates
 │   └── content_suggestion.md
 ├── site/                     # site chrome (not repo content)
 │   ├── extra.css             # site-only styling
-│   └── home.md               # the site's landing page, rendered over the staged README
+│   ├── home.md               # the site's landing page, rendered over the staged README
+│   └── indexnow-key.txt      # IndexNow ownership key, served at the site root as <key>.txt
+├── site-overrides/           # Material template overrides (head tags, JSON-LD, nav partial)
 ├── workflows/                # GitHub Actions CI gates
 │   ├── cspell.yml
 │   ├── docs-site.yml
@@ -34,6 +36,8 @@ This directory holds CI workflows, validation scripts, and contributor templates
     ├── glossary-add-anchors.py
     ├── glossary-autolink.py
     ├── glossary-upgrade-existing-links.py
+    ├── notify-indexnow.py
+    ├── site_hooks.py
     ├── validate-cert-structure.sh
     └── validate-frontmatter.sh
 ```
@@ -50,7 +54,7 @@ GitHub Actions run on PR, push to main, and a weekly schedule. All four are desi
 | `markdown-lint.yml` | PR, push | Runs `markdownlint-cli2` against `.markdownlint.json` config | Yes |
 | `structure-validate.yml` | PR, push | Runs `validate-cert-structure.sh`, `validate-frontmatter.sh`, and `--check` on both index generators | Yes (fails on missing required files, malformed frontmatter, or stale generated files; warns are advisory) |
 | `cspell.yml` | PR, push to `**/*.md` | Spell-checks against `.cspell.json` | No (currently non-strict; will flip once dictionary is tuned) |
-| `docs-site.yml` | PR, push to main, manual | Builds the published site with `build-site.py --strict`. Deploys to GitHub Pages on push to main. | Yes (fails on a broken relative link, a missing heading anchor, or a page no nav entry reaches) |
+| `docs-site.yml` | PR, push to main, manual | Builds the published site with `build-site.py --strict`. Deploys to GitHub Pages on push to main, then sends the changed page URLs to IndexNow (`notify-indexnow.py`, continue-on-error). | Yes (fails on a broken relative link, a missing heading anchor, or a page no nav entry reaches) |
 
 > **One-time setup for deployment.** Settings > Pages > Build and deployment > Source must be set to **GitHub Actions**. Until then the build job passes and the deploy job fails.
 
@@ -167,6 +171,12 @@ python3 -m venv .venv-docs
 .venv-docs/bin/python .github/scripts/build-site.py --serve    # live preview
 .venv-docs/bin/python .github/scripts/build-site.py --strict   # what CI runs
 ```
+
+**`site_hooks.py`** (MkDocs hook, loaded via `hooks:` in `mkdocs.yml`)
+Sets per-page search metadata at build time, without touching the markdown: a `<meta name="description">` from the page's first prose paragraph (or, for cert landing pages, fact sheets, plans, scenarios and strategy pages, a summary built from `docs/certs.json`), a `<title>` of the page's H1 with the exam code appended inside a cert directory, schema.org BreadcrumbList JSON-LD on every page, and `noindex` on working files (`TODO.md`, `CLAUDE.md`, dated reports). Until 2026-09-28 all ~2,000 pages shared one description. A frontmatter `description:` on a page overrides the generated one.
+
+**`notify-indexnow.py`**
+Runs after each deploy. Maps the markdown files changed in the push to their site URLs and submits them to IndexNow (Bing, Yandex, and through Bing, DuckDuckGo and ChatGPT search). A change to anything rendered on every page (`mkdocs.yml`, the overrides, the hooks, `build-site.py`, `extra.css`) submits every URL in the sitemap. `--all` does the same by hand; `--dry-run` prints without sending. It diffs git rather than sitemaps because MkDocs stamps every sitemap `lastmod` with the build date.
 
 Configuration lives in the root `mkdocs.yml`, which deliberately has no `nav` key. See [docs/ARCHITECTURE.md](../docs/ARCHITECTURE.md#the-published-site) for the design and its conventions.
 
