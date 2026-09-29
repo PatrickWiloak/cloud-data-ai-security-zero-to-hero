@@ -182,7 +182,7 @@ validation:
 extra:
   # Google Search Console URL-prefix verification token (the content="..." value
   # of the HTML-tag method). Empty = no tag emitted. See TODO.md.
-  google_site_verification: ""
+  google_site_verification: "IiZNJDxVVPECZMC0xTbmls7EdKJm0Bs5wgq7k3HEwPc"
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero
