@@ -44,12 +44,13 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 - [x] ~~Per-page meta descriptions, shorter titles, BreadcrumbList JSON-LD, IndexNow on deploy~~ ✅ done 2026-09-28
       (CHANGELOG 2026-09-28). Baseline for judging it, GitHub traffic 2026-09-14..28: 248 views / 99 uniques;
       referrers github.com 13, chatgpt.com 10, Bing 6, Google 5, DuckDuckGo 1. 40 stars, 20 forks.
-- [ ] **Patrick: create the Google Search Console property.** Search Console → Add property → **URL prefix**
-      `https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/` (as pat@noblerworks.com) →
-      verify with **HTML tag** → paste the `content="..."` value into `mkdocs.yml` `extra.google_site_verification`
-      → push → click Verify → Sitemaps → submit `sitemap.xml`. Then add the `nobler-reporting` service account
-      as a Full user so the fleet reporting can read it. Nothing has told Google the site exists; this is the
-      single biggest remaining SEO step.
+- [x] ~~Google Search Console property~~ ✅ done 2026-09-28: URL-prefix property
+      `https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/` verified by meta tag
+      (`mkdocs.yml` `extra.google_site_verification`) through the Site Verification API as the `nobler-reporting`
+      service account (API enabled on project 822136630919 for this). Owners: that SA and pat@noblerworks.com.
+      `sitemap.xml` submitted the same day.
+- [ ] **2026-10-12 check**: Search Console → Sitemaps shows the sitemap as read (not pending) with ~2,000
+      discovered URLs, and Pages → Indexed is above zero.
 - [ ] **Patrick: Bing Webmaster Tools** → Import from Google Search Console once the property above exists
       (IndexNow already pings Bing on every deploy; Webmaster Tools shows what it did with them).
 - [x] ~~IndexNow first submission~~ ✅ done 2026-09-28: the deploy step got the expected first-run 403
