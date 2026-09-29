@@ -228,6 +228,26 @@ def cert_description(cert: dict, inner: str) -> str:
     return ""
 
 
+def _title_tag(cert: dict, title: str) -> str:
+    """What to append to a cert page's title so it names its exam, or "" if it already does.
+
+    A plain code ("DP-900") when the cert has one. Otherwise the cert's short
+    name ("CompTIA A+" for 220-1201 + 220-1202), unless the title already
+    carries it without the provider prefix ("Vault Associate - Scenarios").
+    """
+    low = title.lower()
+    code = cert.get("exam_code") or ""
+    if code and " " not in code:
+        return "" if code.lower() in low else code
+    if code and code.lower() in low:
+        return ""
+    short = cert.get("name", "").split(" (")[0].split(" - ")[0].strip()
+    bare = short.removeprefix(cert.get("provider_name", "")).strip()
+    if not bare or bare.lower() in low:
+        return ""
+    return short
+
+
 _KIND = {
     "practice-plan.md": "study plan",
     "scenarios.md": "practice scenarios",
@@ -284,13 +304,8 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
             seo = f"{title} Study Guide"
         elif cert and inner == "notes/README.md":
             seo = f"{_code(cert)} Study Notes"
-        elif (
-            cert
-            and cert.get("exam_code")
-            and " " not in cert["exam_code"]  # a real code, not "Vault Associate (003)"
-            and cert["exam_code"].lower() not in title.lower()
-        ):
-            seo = f"{title} - {cert['exam_code']}"
+        elif cert and (tag := _title_tag(cert, title)):
+            seo = f"{title} - {tag}"
         else:
             seo = title
         # The brand suffix only while the whole title still fits a result line.
