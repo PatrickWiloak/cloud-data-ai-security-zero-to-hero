@@ -51,6 +51,20 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       `sitemap.xml` submitted the same day.
 - [ ] **2026-10-12 check**: Search Console → Sitemaps shows the sitemap as read (not pending) with ~2,000
       discovered URLs, and Pages → Indexed is above zero.
+- [ ] **Patrick: unblock site analytics (2 steps, ~3 min), then hand back to Claude.** The site has no analytics
+      at all; the only visitor numbers are GitHub's 14-day repo traffic. Plan agreed 2026-09-28: GA4 behind
+      Material's cookie consent banner (feeds the Nobler OS dashboard) **plus** Cloudflare Web Analytics
+      (cookieless, no banner, the honest full count - GA undercounts EU visitors who decline).
+  - **GA4:** the `nobler-reporting` SA is only *Viewer* on the NoblerWorks GA account (403 creating a property).
+    Either (a) GA Admin → Account access management → add `nobler-reporting@nobler-os.iam.gserviceaccount.com`
+    as **Editor** (then Claude creates this and future properties), or (b) create property "Zero to Hero" with a
+    Web stream for the site URL yourself and give Claude the `G-…` ID and the numeric property ID.
+  - **Cloudflare:** sign up free at dash.cloudflare.com → Analytics & Logs → Web Analytics → Add a site →
+    `patrickwiloak.github.io`, **JavaScript snippet** option (not automatic setup) → give Claude the `token`.
+  - **Then Claude:** GA via `extra.analytics` + `extra.consent` in `mkdocs.yml`; Cloudflare beacon in
+    `.github/site-overrides/main.html`; add the property to Nobler OS (see nobler-os TODO.md); confirm hits in both.
+  - **Then Patrick, one click:** GA Admin → Search Console links → link the property to the Search Console
+    property created 2026-09-28 (no API for this).
 - [ ] **Patrick: Bing Webmaster Tools** → Import from Google Search Console once the property above exists
       (IndexNow already pings Bing on every deploy; Webmaster Tools shows what it did with them).
 - [x] ~~IndexNow first submission~~ ✅ done 2026-09-28: the deploy step got the expected first-run 403
