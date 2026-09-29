@@ -89,6 +89,12 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       check three times (twice 2026-09-28, once 2026-09-29 at your request, even with notes limited to concepts and
       countermeasures). Claude will not attempt it again. Writing it is yours: the finished 2026-09-29 drafts (README,
       fact sheet with the official v5.0 blueprint weights, domain 1 note) are in `~/.cache/ceh-draft-2026-09-29/`.
+- [ ] **Patrick: start a fresh Claude session for the next cert guides** - **Linux+, SSCP, CyberOps Associate,
+      AI-901** (one per session is safest). On 2026-09-29 a Linux+ attempt was stopped by the safety check in the
+      same session as the CEH stops, most likely carried over from that session's history; nothing was written.
+      A new session does not carry that history. Prompt: "add the <cert> study guide to zero to hero, same shape as
+      A+ (see TODO.md)". Template is the A+ commit `94bd744` plus follow-up `105cd98` (lab map, flashcards). Do not
+      include CEH in those sessions.
 - [ ] **Patrick: distribution** (stars come from here, not from SEO). Submit to awesome lists
       (awesome-certifications, awesome-aws, awesome-azure, awesome-kubernetes, awesome-llm-security); post one
       useful page each to r/AWSCertifications, r/AzureCertification, r/CompTIA, r/kubernetes, linking back.
