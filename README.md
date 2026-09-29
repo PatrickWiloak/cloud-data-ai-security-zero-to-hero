@@ -54,7 +54,7 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 >
 > 🎥 [@patrickwiloak](https://youtube.com/@patrickwiloak) | 💼 [LinkedIn](https://www.linkedin.com/in/patricklukewilson/)
 
-![Certifications](https://img.shields.io/badge/Certifications-148-blue.svg)
+![Certifications](https://img.shields.io/badge/Certifications-149-blue.svg)
 ![Documentation Links](https://img.shields.io/badge/Documentation%20Links-12000+-green.svg)
 ![Providers](https://img.shields.io/badge/Providers-27-orange.svg)
 ![Free to Use](https://img.shields.io/badge/Free%20to%20Use-Educational-green.svg)
@@ -63,7 +63,7 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 
 > ### 🔎 Read this as a website: **[patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)**
 >
-> Every page in this repo is published as a searchable site with full-text search across all 3.0M words, dark mode, and mobile navigation. Browsing on GitHub works fine too - the site is generated from these same markdown files, so nothing is duplicated or out of date.
+> Every page in this repo is published as a searchable site with full-text search across all 3.1M words, dark mode, and mobile navigation. Browsing on GitHub works fine too - the site is generated from these same markdown files, so nothing is duplicated or out of date.
 
 ---
 
@@ -73,7 +73,7 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 |---|---|---|---|
 | 🎓 | **Learn** | Plain-English concepts, beginner on-ramp, structured paths. No exam scaffolding. | [learn/](./learn/) |
 | 🛠️ | **Build** | Hands-on projects, architecture patterns, CLI cheat sheets. Practitioner reference. | [resources/hands-on-projects/](./resources/hands-on-projects/) |
-| 🎯 | **Certify** | 148 cert study guides across 27 providers, plus 3 self-directed study tracks. Fact sheets, practice plans, scenarios. | [STUDY-HUB.md](./STUDY-HUB.md) |
+| 🎯 | **Certify** | 149 cert study guides across 27 providers, plus 3 self-directed study tracks. Fact sheets, practice plans, scenarios. | [STUDY-HUB.md](./STUDY-HUB.md) |
 | 📚 | **Reference** | Cross-cloud service comparisons, career roadmaps, compliance and FinOps guides. | [resources/](./resources/) |
 
 Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certify together by subject (LLMs, IAM, networking, K8s, observability, security, databases).
@@ -101,10 +101,11 @@ Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certi
 
 See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
+- **2026-09-28** - New [CompTIA A+ (220-1201 and 220-1202)](./exams/comptia/a-plus/) guide: nine notes across both Core exams, a fact sheet, study plan, scenarios, strategy and 20 [practice questions](./resources/practice-questions/comptia-a-plus-220-1201-1202.md). On the site, every page now has its own search description and a title led by its exam code, and deploys notify search engines through IndexNow.
 - **2026-09-18** - Every dead vendor link repaired: 783 URLs, each replacement fetched and matched to the page the citation meant. The sweep now also catches soft 404s and deep links that silently redirect to a homepage. The record of every old-to-new replacement is [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md).
 - **2026-09-17** - Audit pass. The weekly external link check turned out never to have run: it passed lychee a flag lychee had removed, so it checked zero URLs and reported success in 0.2 seconds. Fixed, with a guard that fails the job when lychee cannot run at all. The first real sweep found 701 dead vendor links; the most-cited are repaired and the rest are listed in [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md). Also: seven new data-engineering concept pages and a [data engineering topic index](./topics/data-engineering.md), closing the thinnest of the four subjects in the repo's name; Open Graph cards on every page of the site; and the GitHub repository description, which had drifted to "122+ certs across 22 providers", is now generated from `certs.json` and checked in CI like every other count.
 - **2026-08-14** - The site now opens on a landing page of its own rather than on the repo README, and every counted claim in the README is under CI. The per-provider table was stale in 8 of 22 rows and missing 5 providers entirely, five days after the Tier 1 batch added them; the 17 numbers in the statistics block had nothing watching them either. Both are checked by `check-readme-counts.py` now.
-- **2026-08-14** - The whole repo is now a searchable website: [patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/). Full-text search across 3.0M words, dark mode, mobile nav, generated from these same markdown files. The strict build also caught and fixed an unclosed code fence that was swallowing part of a GCP note, plus 14 broken heading anchors.
+- **2026-08-14** - The whole repo is now a searchable website: [patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/). Full-text search across 3.1M words, dark mode, mobile nav, generated from these same markdown files. The strict build also caught and fixed an unclosed code fence that was swallowing part of a GCP note, plus 14 broken heading anchors.
 - **2026-08-11** - Anthropic's official Claude certification program (launched March-July 2026) fully covered: new Claude Certified Associate - Foundations (CCAO-F) guide, existing guides retargeted to the real CCDV-F, CCAR-F, and CCAR-P exams with official domain blueprints, pricing, and Pearson VUE logistics. Anthropic promoted from study-track pseudo-provider to the 27th certification provider; repo now at 148 certs.
 - **2026-07-29** - Gap-analysis pass: notes drafted for the last 10 outline-stage certs (CySA+, Network+, CCNP ENCOR, CISA, CISM, OSCP, PCNSA, Salesforce PD2, ServiceNow CSA, VMware VCP-DCV); generated cert index (`docs/certs.json`) driving the provider tables and 27 provider index pages; per-cert Anki flashcards; lab-to-cert map; freshness rotation; fixed 383 broken internal links and made internal link-checking a blocking CI gate.
 - **2026-05-03** - Cloud + AI scope expansion: `learn/` pillar, AI concept pages, `topics/` cross-pillar index, AI service comparisons (vector DBs, GenAI platforms, agent frameworks, LLM observability), AI hands-on builds (RAG, MCP agents, vLLM, evals, LoRA), CI link/lint/structure checks, freshness ledger.
@@ -119,7 +120,7 @@ A complete cloud + AI learning resource. Whether you're starting fresh, building
 - ✅ **[Day One on-ramp](./learn/day-one/)** - terminal, git, HTTP, servers
 - ✅ **[53 concept pages](./learn/concepts/)** - LLMs, RAG, MCP, agents, tool use, multimodal, quantization, VPCs, K8s, IAM, observability, idempotency
 - ✅ **[Cloud from Scratch](./learn/cloud-from-scratch.md)** + **[AI from Scratch](./learn/ai-from-scratch.md)** - structured 8-phase paths
-- ✅ **148 certification study guides** across 27 providers, 12,000+ embedded vendor doc links
+- ✅ **149 certification study guides** across 27 providers, 12,000+ embedded vendor doc links
 - ✅ **[14 cross-pillar topic indexes](./topics/)** - LLMs, AI/ML systems, AI security, IAM, networking, K8s, observability, security, databases, serverless, FinOps, platform engineering, SRE (find everything by topic, not provider)
 - ✅ **16 cross-cloud service comparisons** (12 cloud + 4 AI: vector DBs, GenAI platforms, agent frameworks, LLM observability)
 - ✅ **9 CLI cheat sheets** (AWS, Azure, GCP, kubectl, Terraform, Docker, Helm, GitHub CLI, multi-cloud)
@@ -157,7 +158,7 @@ Full per-provider breakdown lives in **[STUDY-HUB.md](./STUDY-HUB.md)**. Quick l
 | 📊 [Confluent/Kafka](./exams/confluent/) | 2 | Certified Developer, Certified Administrator |
 | 🍃 [MongoDB](./exams/mongodb/) | 3 | Associate Developer, DBA, Atlas Administrator |
 | 💰 [FinOps Foundation](./exams/finops/) | 4 | Practitioner, Engineer, Analyst, Professional |
-| 🔒 [CompTIA](./exams/comptia/) | 4 | Cloud+ (CV0-004), Security+ (SY0-701), Network+ (N10-009), CySA+ (CS0-003) |
+| 🔒 [CompTIA](./exams/comptia/) | 5 | Cloud+ (CV0-004), Security+ (SY0-701), Network+ (N10-009), CySA+ (CS0-003) |
 | 🛡️ [ISC2](./exams/isc2/) | 3 | CISSP, CCSP, CC |
 | 🛡️ [ISACA](./exams/isaca/) | 2 | CISA, CISM |
 | ☁️ [Cloud Security Alliance](./exams/cloud-security-alliance/) | 1 | CCSK v5 |
@@ -168,7 +169,7 @@ Full per-provider breakdown lives in **[STUDY-HUB.md](./STUDY-HUB.md)**. Quick l
 | ☁️ [IBM Cloud](./exams/ibm/) | 5 | Advocate, Developer, Solution Architect, Security, SRE |
 | 🧰 [ServiceNow](./exams/servicenow/) | 1 | Certified System Administrator |
 | 🖥️ [VMware](./exams/vmware/) | 1 | VCP-DCV (2V0-21.23) |
-| **Total** | **148** | across 27 providers, plus 3 self-directed study tracks |
+| **Total** | **149** | across 27 providers, plus 3 self-directed study tracks |
 
 Highlights are a sample, not the full list - the Certs column is the total. Open a provider for everything it covers.
 
@@ -292,7 +293,7 @@ Career-focused learning paths:
 
 ## 📊 Repository Statistics
 
-- **Certifications:** 148 (plus 3 self-directed study tracks)
+- **Certifications:** 149 (plus 3 self-directed study tracks)
 - **Documentation links:** 12,000+
 - **Providers:** 27
 - **Concept pages:** 53 (cloud + AI primitives)
@@ -321,7 +322,7 @@ cloud-data-ai-security-zero-to-hero/
 │   ├── ai-from-scratch.md
 │   ├── cloud-from-scratch.md
 │   └── glossary.md
-├── exams/                # 148 certs across 27 providers, plus 3 study tracks
+├── exams/                # 149 certs across 27 providers, plus 3 study tracks
 ├── resources/            # comparisons, cheat sheets, roadmaps, guides, projects
 ├── topics/               # cross-pillar topic indexes
 ├── assets/diagrams/      # PNG diagrams, for the few too dense for inline Mermaid

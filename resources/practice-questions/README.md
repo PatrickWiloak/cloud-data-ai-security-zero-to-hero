@@ -166,8 +166,9 @@ Scenario-based practice question banks, one per certification. Every bank follow
 - [Claude Certified Architect - Professional (CCAR-P)](./anthropic-claude-architect-professional.md)
 - [Claude Prompt Engineering Specialist - Self-Directed Study Track](./anthropic-claude-prompt-engineering-specialist.md)
 
-### CompTIA (4)
+### CompTIA (5)
 
+- [CompTIA A+ (220-1201 and 220-1202)](./comptia-a-plus-220-1201-1202.md)
 - [CompTIA Cloud+ (CV0-004)](./comptia-cloud-plus.md)
 - [CompTIA CySA+ (CS0-003)](./comptia-cysa-plus.md)
 - [CompTIA Network+ (N10-009)](./comptia-network-plus.md)

@@ -52,9 +52,11 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       single biggest remaining SEO step.
 - [ ] **Patrick: Bing Webmaster Tools** → Import from Google Search Console once the property above exists
       (IndexNow already pings Bing on every deploy; Webmaster Tools shows what it did with them).
-- [ ] **2026-10-05 check**: the first deploy after 2026-09-28 ran the "Notify IndexNow" step. Open that run; it
-      should say `IndexNow accepted: HTTP 200/202`. A brand-new key can 403 `SiteVerificationNotCompleted`
-      once while Pages propagates; if so, run `python3 .github/scripts/notify-indexnow.py --all` locally.
+- [x] ~~IndexNow first submission~~ ✅ done 2026-09-28: the deploy step got the expected first-run 403
+      `SiteVerificationNotCompleted`; `notify-indexnow.py --all` minutes later was accepted (HTTP 200, 2,043 URLs).
+- [ ] **2026-10-05 check**: open the next "Docs site" run's "Notify IndexNow" step; it should now say
+      `IndexNow accepted`. If it 403s again, the key file at the site root is not being served - check
+      `https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/<key>.txt` (key in `.github/site/indexnow-key.txt`).
 - [ ] **2026-10-28 judge**: re-pull `gh api repos/PatrickWiloak/cloud-data-ai-security-zero-to-hero/traffic/popular/referrers`.
       Target: Google + Bing referrals above 11 per 14 days (baseline above), and new pages showing in
       Search Console → Pages → Indexed (if the property exists by then).
@@ -62,6 +64,14 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       `sc-domain:patrickwiloak.com` Search Console property (the reporting SA is already a Full user there),
       allow a real `robots.txt` with a `Sitemap:` line (a `github.io/<repo>` subpath cannot have one), and
       build authority on your own domain. GitHub Pages redirects the old URLs. Cost: one CNAME + `site_url` change.
+- [x] ~~CompTIA A+ (220-1201/1202)~~ ✅ done 2026-09-28 - the biggest-search-volume gap.
+- [ ] **By 2026-10-31: confirm the A+ voucher price** on the CompTIA store (US) and replace the "not verified"
+      line in `exams/comptia/a-plus/fact-sheet.md` (CompTIA renders prices client-side; no official figure was readable).
+- [ ] **Remaining high-search cert gaps**, in rough order of search volume: EC-Council **CEH** (312-50, needs a new
+      `ec-council` provider: add it to `PROVIDER_HIGHLIGHTS`/`PROVIDER_EMOJI` in `build-provider-indexes.py` and the
+      name map in `build-certs-index.py`), CompTIA **Linux+**, **PenTest+**, **SecurityX (CASP+)**, ISC2 **SSCP**,
+      Cisco **CyberOps Associate**, GIAC **GSEC**, and Microsoft **AI-901**. An automated attempt at CEH on
+      2026-09-28 was stopped by a model safety check partway through; it needs writing by hand or with more care.
 - [ ] **Patrick: distribution** (stars come from here, not from SEO). Submit to awesome lists
       (awesome-certifications, awesome-aws, awesome-azure, awesome-kubernetes, awesome-llm-security); post one
       useful page each to r/AWSCertifications, r/AzureCertification, r/CompTIA, r/kubernetes, linking back.

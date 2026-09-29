@@ -188,7 +188,7 @@ What's your starting point?
 | **Confluent/Kafka** | 2 | Certified Developer, Certified Administrator | [exams/confluent/](./exams/confluent/) |
 | **MongoDB** | 3 | Associate Developer, DBA, Atlas Administrator | [exams/mongodb/](./exams/mongodb/) |
 | **FinOps Foundation** | 4 | Practitioner, Engineer, Analyst, Professional | [exams/finops/](./exams/finops/) |
-| **CompTIA** | 4 | Cloud+ (CV0-004), Security+ (SY0-701), Network+ (N10-009), CySA+ (CS0-003) | [exams/comptia/](./exams/comptia/) |
+| **CompTIA** | 5 | Cloud+ (CV0-004), Security+ (SY0-701), Network+ (N10-009), CySA+ (CS0-003) | [exams/comptia/](./exams/comptia/) |
 | **ISC2** | 3 | CISSP, CCSP, CC | [exams/isc2/](./exams/isc2/) |
 | **ISACA** | 2 | CISA, CISM | [exams/isaca/](./exams/isaca/) |
 | **Cloud Security Alliance** | 1 | CCSK v5 | [exams/cloud-security-alliance/](./exams/cloud-security-alliance/) |
@@ -199,7 +199,7 @@ What's your starting point?
 | **IBM Cloud** | 5 | Advocate, Developer, Solution Architect, Security, SRE | [exams/ibm/](./exams/ibm/) |
 | **ServiceNow** | 1 | Certified System Administrator | [exams/servicenow/](./exams/servicenow/) |
 | **VMware** | 1 | VCP-DCV (2V0-21.23) | [exams/vmware/](./exams/vmware/) |
-| **CERTIFICATIONS TOTAL** | **148** | across 27 providers | |
+| **CERTIFICATIONS TOTAL** | **149** | across 27 providers | |
 
 The Certs column counts real exams. This repo also carries 3 self-directed study tracks (the Anthropic prompt engineering track plus the Azure and GCP GenAI tracks), which are study guides spanning several exams or none, not certifications in their own right.
 

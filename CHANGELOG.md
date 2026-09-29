@@ -6,7 +6,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
-## [2026-09-28] - Every page gets its own search snippet, and search engines hear about changes
+## [2026-09-28] - CompTIA A+, every page gets its own search snippet, and search engines hear about changes
 
 GitHub's traffic view for the 14 days to 2026-09-28 showed Google sending 5 visits to a site of 2,041 pages. ChatGPT sent 10. The published site had three defects that explain part of that.
 
@@ -18,6 +18,7 @@ GitHub's traffic view for the 14 days to 2026-09-28 showed Google sending 5 visi
 
 ### Added
 
+- **CompTIA A+ (220-1201 and 220-1202)**, the most-searched entry-level IT certification and the repo's first A+ coverage: README, fact sheet, study plan, scenarios, strategy, nine notes (Core 1 domains 1-5, Core 2 domains 1-4, 16 Mermaid diagrams) and 20 original [practice questions](./resources/practice-questions/comptia-a-plus-220-1201-1202.md). Exam facts were checked against CompTIA's V15 pages on 2026-09-28; the voucher price could not be read from an official page and the fact sheet says so. The repo is now at 149 certifications.
 - schema.org **BreadcrumbList** JSON-LD on every page, and **WebSite** on the home page.
 - `noindex` on working files published for transparency (`TODO.md`, `CLAUDE.md`, the roadmap and link-rot reports).
 - A new home-page description that names the certifications people search for (AWS, Azure, GCP, Kubernetes, CompTIA, CISSP).
