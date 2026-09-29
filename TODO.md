@@ -85,8 +85,10 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 - [ ] **Remaining high-search cert gaps**, in rough order of search volume: EC-Council **CEH** (312-50, needs a new
       `ec-council` provider: add it to `PROVIDER_HIGHLIGHTS`/`PROVIDER_EMOJI` in `build-provider-indexes.py` and the
       name map in `build-certs-index.py`), CompTIA **Linux+**, **PenTest+**, **SecurityX (CASP+)**, ISC2 **SSCP**,
-      Cisco **CyberOps Associate**, GIAC **GSEC**, and Microsoft **AI-901**. An automated attempt at CEH on
-      2026-09-28 was stopped by a model safety check partway through; it needs writing by hand or with more care.
+      Cisco **CyberOps Associate**, GIAC **GSEC**, and Microsoft **AI-901**. CEH has now been stopped by a model safety
+      check three times (twice 2026-09-28, once 2026-09-29 at your request, even with notes limited to concepts and
+      countermeasures). Claude will not attempt it again. Writing it is yours: the finished 2026-09-29 drafts (README,
+      fact sheet with the official v5.0 blueprint weights, domain 1 note) are in `~/.cache/ceh-draft-2026-09-29/`.
 - [ ] **Patrick: distribution** (stars come from here, not from SEO). Submit to awesome lists
       (awesome-certifications, awesome-aws, awesome-azure, awesome-kubernetes, awesome-llm-security); post one
       useful page each to r/AWSCertifications, r/AzureCertification, r/CompTIA, r/kubernetes, linking back.
