@@ -25,9 +25,9 @@ If you need custom software built, [get in touch](https://noblerworks.com/).
 
 Built for **every kind of technologist**, across 21 role-targeted learning paths. This repo gives you the material. gitGood gives you the reps, and tells you whether you actually know it.
 
-[![Start 10 days free](https://img.shields.io/badge/Start%2010%20Days%20Free-000000?style=for-the-badge&logo=rocket&logoColor=white)](https://gitgood.dev)
+[![Start a 7-day free trial](https://img.shields.io/badge/Start%207--Day%20Free%20Trial-000000?style=for-the-badge&logo=rocket&logoColor=white)](https://gitgood.dev)
 
-**$5/month** or **$40/year** after the trial. Free tier needs no card: 20 practice questions, the free coding challenges, streaks, achievements, and the job board.
+**$8/month** or **$64/year** after the trial. Free tier needs no card: 20 practice questions, the free coding challenges, streaks, achievements, and the job board.
 
 <details class="promo" markdown="1">
 <summary>What's inside gitGood.dev</summary>

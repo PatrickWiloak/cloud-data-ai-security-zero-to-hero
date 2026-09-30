@@ -139,7 +139,7 @@ We build custom software and products at **[Nobler Works](https://noblerworks.co
 
     1,950+ practice questions across 34 categories · certification practice exams for AWS CLF-C02, SAA-C03 and DVA-C02, Azure AZ-900, AZ-104, AZ-305 and AI-900, Google Cloud Digital Leader and Associate Cloud Engineer, Kubernetes CKA and CKAD, CompTIA Security+ and HashiCorp Terraform Associate - original scenario questions, never brain dumps, with per-domain scoring and a timed simulator · coding challenges · SQL playground · system design walkthroughs · AI mock interviews · AI resume reviews · salary coaching · live job-market pulse.
 
-    10 days free, then $5/month or $40/year. The free tier needs no card.
+    A 7-day free trial, then $8/month or $64/year. The free tier needs no card.
 
 ## Fine print
 
