@@ -9,7 +9,7 @@ Working task list for **cloud-data-ai-security-zero-to-hero**. Read this at the 
 Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half day) / M (1-3 days) / L, and the risk of making the fix. 🔴 = a live bug or safety hole.
 
 - [ ] 🟡 `.github/scripts/site_hooks.py` has drifted 360 diff lines from genai-research-papers-summarized's port - one canonical module both vendor (with a sync check), or record the fork in both. S-M, low.
-- [ ] 🟡 Confirm and delete the one-time `glossary-add-anchors.py`, `glossary-autolink.py`, `glossary-upgrade-existing-links.py`. S, low.
+- [ ] 🟡 Confirm and delete the one-time `glossary-add-anchors.py`, `glossary-autolink.py`, `glossary-upgrade-existing-links.py`. S, low. (checked 2026-10-01, kept: not in CI/hooks, but `.github/AUTOMATION.md` + `CONTRIBUTING.md` document all three as the manual pipeline to re-run on new glossary terms, so they are not one-time migrations. Delete only if that pipeline is retired; roadmap 4.4 covers wiring them.)
 
 ## Open
 
