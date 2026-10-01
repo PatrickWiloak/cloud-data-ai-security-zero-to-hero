@@ -4,6 +4,13 @@ Working task list for **cloud-data-ai-security-zero-to-hero**. Read this at the 
 
 ---
 
+## Refactor audit (2026-10-01) - found, not started
+
+Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half day) / M (1-3 days) / L, and the risk of making the fix. 🔴 = a live bug or safety hole.
+
+- [ ] 🟡 `.github/scripts/site_hooks.py` has drifted 360 diff lines from genai-research-papers-summarized's port - one canonical module both vendor (with a sync check), or record the fork in both. S-M, low.
+- [ ] 🟡 Confirm and delete the one-time `glossary-add-anchors.py`, `glossary-autolink.py`, `glossary-upgrade-existing-links.py`. S, low.
+
 ## Open
 
 ### 🔴 Link rot backlog (added 2026-09-17, cleared 2026-09-18)
