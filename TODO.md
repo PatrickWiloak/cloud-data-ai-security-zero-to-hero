@@ -11,6 +11,12 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [ ] 🟡 `.github/scripts/site_hooks.py` has drifted 360 diff lines from genai-research-papers-summarized's port - one canonical module both vendor (with a sync check), or record the fork in both. S-M, low.
 - [ ] 🟡 Confirm and delete the one-time `glossary-add-anchors.py`, `glossary-autolink.py`, `glossary-upgrade-existing-links.py`. S, low. (checked 2026-10-01, kept: not in CI/hooks, but `.github/AUTOMATION.md` + `CONTRIBUTING.md` document all three as the manual pipeline to re-run on new glossary terms, so they are not one-time migrations. Delete only if that pipeline is retired; roadmap 4.4 covers wiring them.)
 
+## Audit findings (2026-10-02)
+
+- [x] 2026-10-02 🟡 medium - Home page bio hard-coded stale cert counts (`.github/site/home.md:129`, "60 ... 18x"): numbers removed ("multi-cloud certified"); `build-site.py --strict` passes. Goes live on the next push to main (Pages workflow).
+- [x] 2026-10-02 🟢 low - README Nobler banner was hotlinked from `Noblerworks/IRONSIGHT`: vendored to `assets/brand/nobler-works-banner.jpg`.
+- [ ] 🟢 **Patrick: decide** whether the bio should carry a cert count again. If yes, add a `{{personal_certs}}` token in `build-site.py` fed from one checked-in value, and update it on 2026-10-21 / 2026-11-05 (lapses) - the private career ledger cannot feed CI.
+
 ## Open
 
 ### 🔴 Link rot backlog (added 2026-09-17, cleared 2026-09-18)
