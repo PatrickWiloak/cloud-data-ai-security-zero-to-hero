@@ -24,10 +24,25 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       closest live page on the same subject; 6 Amazon QLDB links point at pinned Internet Archive snapshots.
 - [x] ~~Your own blog link is dead~~ ✅ done 2026-09-18: the post went with the blog on 2026-09-05. README
       mentions dropped, site footer now links to patrickwiloak.com.
-- [ ] **Judge by 2026-09-22**: the first repaired weekly link check runs Monday 06:00 UTC. The after-repair run on
+- [x] **Judge by 2026-09-22**: the first repaired weekly link check runs Monday 06:00 UTC. The after-repair run on
       2026-09-18 counted 895 errors across 21,983 checks before this last batch; expect far fewer. Whatever it still
       opens an issue for should be rate limits and bot walls (the 62 below), not removed pages. Open the issue and
       re-check any real 404 in it.
+      ✅ 2026-10-02 judged: **the check works, the expectation half-held.** Scheduled runs 2026-09-21 and 09-28 each
+      walked 21,981 links in ~32 min (vs 9-14 s before the repair) and opened issues #6 (348 errors) and #7 (405).
+      Of #7's errors: 279 `ERROR` are connection failures, 252 of them `cloud.google.com` (rate limiting); all 44 unique
+      `cloud.ibm.com` "404"s answer **200** to a browser user agent (bot wall, false). **29 unique URLs are real 404s**
+      (re-checked with curl, browser UA, 2026-10-02) - new rot since the 09-18 sweep: GCP cert guides (cloud-developer,
+      cloud-network-engineer, professional-cloud-architect, cloud-devops-engineer) and three migration-to-gcp pages,
+      finops.org (2), FOCUS_Spec, isc2 CCSP outline, isaca maintain-cert, OWASP LLM03/LLM06, AWS docs (ecr/ecs/sqs
+      guide roots, migration evaluator, prescriptive migration guide, PCI scoping whitepaper), az500 lab site,
+      pennylane braket, aws quantum research, terraform cert tutorial, LF Argo APA, litmuschaos docs, two IBM sdk-core
+      example trees. Two side findings: the issue body is cut at GitHub's 65,536-char limit (the list is incomplete),
+      and each week opens a NEW issue without closing the last (#6 and #7 both open).
+- [ ] **By 2026-10-12: repair the 29 real 404s** listed in the judge line above (same method as the 09-17 sweep:
+      fetch + title-check each replacement), then close issues #6 and #7. Consider: accept IBM (`--exclude
+      cloud.ibm.com` or treat as bot wall), make the workflow close/update the previous week's issue, and attach the
+      full lychee report as an artifact since the issue body truncates.
 - [ ] **Spot-check the retired-product replacements (by 2026-10-31).** These links now reach the successor product,
       but the surrounding notes may still teach the retired one: QLDB (`exams/aws/specialty/database-dbs-c01`),
       OpsWorks, LUIS (`exams/azure/ai-102`), PaLM and AutoML (GCP ML notes), IBM Watson and Cloud Foundry
