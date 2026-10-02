@@ -2,7 +2,7 @@
      centered block. GitHub ignores the attribute, so rendering there is unchanged. -->
 <div align="center" markdown="1">
 
-<a href="https://noblerworks.com/"><img src="https://raw.githubusercontent.com/Noblerworks/IRONSIGHT/main/nobler-works-banner.JPG" alt="Nobler Works" width="240"></a>
+<a href="https://noblerworks.com/"><img src="./assets/brand/nobler-works-banner.jpg" alt="Nobler Works" width="240"></a>
 
 ### Built by [Patrick Wiloak](https://patrickwiloak.com) at [Nobler Works](https://noblerworks.com/)
 

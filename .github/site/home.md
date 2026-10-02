@@ -126,7 +126,7 @@
 
 ## Who made this
 
-Built by **[Patrick Wiloak](https://patrickwiloak.com)** - ex-AWS Solutions Architect, 10 years in tech, 60 certifications and accreditations, 18x multi-cloud certified.
+Built by **[Patrick Wiloak](https://patrickwiloak.com)** - ex-AWS Solutions Architect, 10 years in tech, multi-cloud certified.
 [YouTube](https://youtube.com/@patrickwiloak) · [LinkedIn](https://www.linkedin.com/in/patricklukewilson/) · [Website](https://patrickwiloak.com) · [Source on GitHub](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero)
 
 We build custom software and products at **[Nobler Works](https://noblerworks.com/)**. Open-source training like this is how we give back - we are nothing without the community that supports us. If you need software built, [get in touch](https://noblerworks.com/).
