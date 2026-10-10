@@ -75,3 +75,6 @@ Every number advertised in `README.md` and `STUDY-HUB.md` is verified by CI. Cer
 **When you add or remove content, run `python3 .github/scripts/check-readme-counts.py --fix` in the same change.** Hand-kept counts drift, and a dated snapshot restated elsewhere reads as a current fact. If you add a new counted claim to the README, add a matching entry to `CLAIMS` in that script - an unchecked number goes stale.
 
 The script counts via `git ls-files`, never a filesystem walk: a local site build leaves a full staged copy of the tree in `.site-src/`, and walking the working directory counts every page twice.
+
+## Docs stay current
+- Update README, `docs/`, this CLAUDE.md and TODO.md **in the same commit** as the change that makes them wrong, never in a later cleanup. A stale doc is a bug.
