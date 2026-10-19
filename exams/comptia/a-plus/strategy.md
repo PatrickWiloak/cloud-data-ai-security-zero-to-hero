@@ -44,6 +44,7 @@ Whatever the order, sit both exams from the **same series**. CompTIA's FAQ state
 - **[📖 Windows Commands Reference](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)** - Official docs for every Windows command on the exam
 - **[📖 macOS User Guide](https://support.apple.com/guide/mac-help/welcome/mac)** - Apple's guide to Finder, Time Machine, FileVault, and more
 - **[📖 Linux man-pages Project](https://man7.org/linux/man-pages/)** - Manual pages for the Linux commands
+- **[🧪 Free A+ PBQ Practice](https://www.examwizardz.app/pbq-practice)** - Interactive performance-based questions for 220-1201/1202, graded in the browser with no account
 
 Professor Messer also publishes a free video course for each V15 core on the same site.
 
