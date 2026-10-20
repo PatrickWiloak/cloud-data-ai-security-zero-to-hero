@@ -20,6 +20,7 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [x] 2026-10-02 🟡 medium - Home page bio hard-coded stale cert counts (`.github/site/home.md:129`, "60 ... 18x"): numbers removed ("multi-cloud certified"); `build-site.py --strict` passes. Goes live on the next push to main (Pages workflow).
 - [x] 2026-10-02 🟢 low - README Nobler banner was hotlinked from `Noblerworks/IRONSIGHT`: vendored to `assets/brand/nobler-works-banner.jpg`.
 - [ ] 🟢 **Patrick: decide** whether the bio should carry a cert count again. If yes, add a `{{personal_certs}}` token in `build-site.py` fed from one checked-in value, and update it on 2026-10-21 / 2026-11-05 (lapses) - the private career ledger cannot feed CI.
+- [ ] 2026-11-05: Database Specialty lapses - `README.md` (lines ~53 and ~409) and `learn/README.md` line 5 go from 19x multi-cloud / 14x AWS / 64 to **18x / 13x / 63**. (2026-10-20: swept 20x / 15x / 65 -> 19x / 14x / 64 for the 2026-10-21 ML Specialty lapse; source `go-to-market/claims.md`.)
 
 ## Retired-exam sweep (2026-10-16)
 
@@ -153,7 +154,7 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       (IndexNow already pings Bing on every deploy; Webmaster Tools shows what it did with them).
 - [x] ~~IndexNow first submission~~ ✅ done 2026-09-28: the deploy step got the expected first-run 403
       `SiteVerificationNotCompleted`; `notify-indexnow.py --all` minutes later was accepted (HTTP 200, 2,043 URLs).
-- [ ] **2026-10-05 check**: open the next "Docs site" run's "Notify IndexNow" step; it should now say
+- [x] 2026-10-20 ✅ **2026-10-05 check** (✏️ 2026-10-20: run 39078323231, 2026-10-17, prints `IndexNow: 2 URL(s)` / `IndexNow accepted: HTTP 200`): open the next "Docs site" run's "Notify IndexNow" step; it should now say
       `IndexNow accepted`. If it 403s again, the key file at the site root is not being served - check
       `https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/<key>.txt` (key in `.github/site/indexnow-key.txt`).
 - [ ] **2026-10-28 judge**: re-pull `gh api repos/PatrickWiloak/cloud-data-ai-security-zero-to-hero/traffic/popular/referrers`.
