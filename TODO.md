@@ -7,7 +7,8 @@ Working task list for **cloud-zero-to-hero** (Cloud Zero to Hero, https://cloud.
 ## Zero to Hero split (2026-10-21)
 
 - [x] 2026-10-21 Split from cloud-data-ai-security-zero-to-hero on 2026-10-21: data, security and AI content (and their TODO items) moved to data-zero-to-hero, security-zero-to-hero and ai-zero-to-hero; this repo is Cloud Zero to Hero. README, STUDY-HUB, home page, CLAUDE.md, CONTRIBUTING, docs/ARCHITECTURE.md, mkdocs.yml, social card and repo-metadata template rewritten for cloud only.
-- [ ] Patrick: rename the GitHub repo to `cloud-zero-to-hero` if not done, then run `python3 .github/scripts/check-repo-metadata.py --fix` (description + topics) and upload the regenerated `assets/brand/social-preview-1280x640.png` (Settings > General > Social preview).
+- [x] 2026-10-21 Repo renamed to `cloud-zero-to-hero`; `check-repo-metadata.py --fix` run (description, homepage).
+- [ ] 2026-10-28 Patrick: upload `assets/brand/social-preview-1280x640.png` at GitHub Settings > General > Social preview (no API). Card is the shared Zero to Hero template (`assets/brand/social-preview.html`, 2026-10-21).
 
 ---
 
@@ -113,14 +114,6 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 
 ### 🟠 Discoverability (added 2026-08-31, updated 2026-09-17)
 
-- [ ] **Upload the social preview image** at `assets/brand/social-preview-1280x640.png` via
-      **Settings → General → Social preview**. The REST API does not expose this field, so it is
-      the one step here that cannot be scripted. The card is now committed, and
-      `python3 .github/scripts/build-social-card.py` regenerates it, so the old dead `/tmp` path is gone.
-      `check-repo-metadata.py` reports this as drift until it is done.
-      **Checked 2026-09-18:** GitHub has a custom preview set (`usesCustomOpenGraphImage: true`),
-      but it is the **old** card (blue, "122+ certifications, 22 providers") - not the committed
-      green one from 2026-09-17. So this is a *replace*, not a first upload.
 - [x] ~~Per-page meta descriptions, shorter titles, BreadcrumbList JSON-LD, IndexNow on deploy~~ ✅ done 2026-09-28
       (CHANGELOG 2026-09-28). Baseline for judging it, GitHub traffic 2026-09-14..28: 248 views / 99 uniques;
       referrers github.com 13, chatgpt.com 10, Bing 6, Google 5, DuckDuckGo 1. 40 stars, 20 forks.
