@@ -35,12 +35,21 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | [Regions and availability zones](./regions-and-availability-zones.md) | You're asking "where does my code actually run?" |
 | [Shared responsibility model](https://security.noblerworks.com/learn/concepts/shared-responsibility-model/) | You're wondering "what's AWS's job vs mine?" |
 | [VPC explained](./vpc-explained.md) | Networking inside the cloud confuses you |
+| [Object, block, and file storage](./object-block-file-storage.md) | You can't tell when to use S3 vs EBS vs EFS |
 | [IAM explained](https://security.noblerworks.com/learn/concepts/iam-explained/) | "Roles vs policies vs federation" is fuzzy |
+| [Cloud identity basics for builders](./cloud-identity-basics-for-builders.md) | Your code needs cloud credentials and you don't want to paste an access key |
 | [Serverless explained](./serverless-explained.md) | You keep hearing "serverless" without a clear definition |
 | [CDN explained](./cdn-explained.md) | You see CloudFront/CloudFlare/Akamai and wonder what they do |
 | [Caching explained](./caching-explained.md) | You want to know why caches are fast and why they lie |
 | [Load balancing explained](./load-balancing-explained.md) | "Layer 4 vs layer 7" keeps coming up and you want specifics |
 | [Autoscaling explained](./autoscaling-explained.md) | You want capacity to follow demand without an outage |
+| [High availability and fault tolerance](./high-availability-and-fault-tolerance.md) | You want to know what "four nines" costs and where the single points of failure hide |
+| [Disaster recovery: RPO and RTO](./disaster-recovery-rpo-rto.md) | Someone asked "how much data can we lose?" and nobody had a number |
+| [API gateways explained](./api-gateways-explained.md) | You're deciding between a load balancer and an API gateway |
+| [Managed databases explained](./managed-databases-explained.md) | You're weighing RDS or Cloud SQL against running the database yourself |
+| [Edge computing explained](./edge-computing-explained.md) | "Run it at the edge" keeps coming up and you want to know where the edge is |
+| [Multi-account strategy and landing zones](./multi-account-and-landing-zones.md) | One account has stopped being enough |
+| [Well-Architected explained](./well-architected-explained.md) | You want the shared checklist behind every provider's architecture advice |
 | [Cloud cost basics](./cloud-cost-basics.md) | The bill went up and nobody decided to spend more |
 
 ## ☸️ Containers and Orchestration
@@ -49,17 +58,22 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 |-------|--------------|
 | [Containers vs VMs](./containers-vs-vms.md) | You don't know why containers replaced VMs |
 | [Kubernetes in 10 minutes](./kubernetes-in-10-minutes.md) | Everyone uses K8s; you want to know why |
+| [Service mesh explained](./service-mesh-explained.md) | Istio or Linkerd came up and you want to know if you need one |
 
 ## 🛠️ DevOps / Infrastructure
 
 | Topic | Read when... |
 |-------|--------------|
 | [Terraform explained](./terraform-explained.md) | You want to understand IaC without diving into HCL |
+| [Infrastructure as Code explained](./infrastructure-as-code-explained.md) | You want the tool-neutral idea: declarative vs imperative, state, drift |
+| [GitOps explained](./gitops-explained.md) | You want to deploy by merging a pull request |
+| [Platform engineering explained](./platform-engineering-explained.md) | "Internal developer platform" and "golden paths" need a plain answer |
 | [CI/CD explained](./cicd-explained.md) | "Pipelines" is hand-waved everywhere; you want specifics |
 | [Observability basics](./observability-basics.md) | "Logs vs metrics vs traces" needs a one-page answer |
 | [Idempotency explained](./idempotency-explained.md) | You're worried about retries doing things twice |
 | [Eventual consistency](https://data.noblerworks.com/learn/concepts/eventual-consistency/) | A read returned stale data and you want to know why |
 | [Queues vs streams](https://data.noblerworks.com/learn/concepts/queues-vs-streams/) | You can't pick between SQS and Kinesis |
+| [Message queues and pub/sub](./message-queues-and-pub-sub-for-cloud.md) | You want to decouple services with SQS, Service Bus or Pub/Sub |
 | [Deployment strategies](./deployment-strategies.md) | Rolling, blue-green, canary: which and when |
 
 ## 🗄️ Data and Databases
@@ -67,6 +81,7 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | Topic | Read when... |
 |-------|--------------|
 | [SQL vs NoSQL](https://data.noblerworks.com/learn/concepts/sql-vs-nosql/) | You're choosing a database and the options blur together |
+| [Managed databases explained](./managed-databases-explained.md) | You want the cloud provider to run the database for you |
 | [Eventual consistency](https://data.noblerworks.com/learn/concepts/eventual-consistency/) | A read returned stale data and you want to know why |
 | [Caching explained](./caching-explained.md) | You want to know why caches are fast and why they lie |
 | [Warehouses, lakes, and lakehouses](https://data.noblerworks.com/learn/concepts/warehouses-lakes-lakehouses/) | Someone said "lakehouse" and you nodded |

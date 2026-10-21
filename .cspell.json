@@ -1181,7 +1181,15 @@
     "TKIP",
     "Trackpad",
     "UEFI",
-    "VCSEL"
+    "VCSEL",
+    "SPOF",
+    "SPOFs",
+    "sidecarless",
+    "Sidecarless",
+    "telco",
+    "Kustomizations",
+    "poolers",
+    "userland"
   ],
   "files": [
     "**/*.md"
