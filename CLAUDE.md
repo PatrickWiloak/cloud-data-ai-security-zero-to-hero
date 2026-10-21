@@ -1,21 +1,24 @@
-# Cloud + AI Learning Resource - Project Instructions
+# Cloud Zero to Hero - Project Instructions
 
 ## Overview
-A learning resource for cloud and AI - concepts, hands-on builds, deep references, and certification prep. Covers certifications from providers including AWS, Azure, GCP, Kubernetes/CNCF, NVIDIA, Anthropic, HashiCorp, Databricks, Snowflake, GitHub, Red Hat, Cisco, Salesforce, Confluent/Kafka, MongoDB, FinOps, CompTIA, ISC2, ISACA, Cloud Security Alliance, Offensive Security, Palo Alto Networks, Linux Foundation, Oracle, IBM, ServiceNow and VMware, plus self-directed study tracks (Anthropic prompt engineering, plus Azure and GCP GenAI). Cert, provider and track counts live in `docs/certs.json` (`totals`), not here - don't type them into this file. Certifications are one pillar; the repo also serves non-cert learners.
+A cloud learning resource - concepts, hands-on builds, deep references, and certification prep for cloud architects, DevOps, platform engineers and SREs. Covers certifications from AWS, Azure, GCP, Oracle (OCI), IBM Cloud, Kubernetes/CNCF, HashiCorp, GitHub, Red Hat, Linux Foundation, Cisco, CompTIA (A+, Network+, Cloud+), FinOps Foundation, Salesforce, ServiceNow and VMware. Cert and provider counts live in `docs/certs.json` (`totals`), not here - don't type them into this file. Certifications are one pillar; the repo also serves non-cert learners.
+
+Data, security and AI content lives on the sibling sites - [Data](https://data.noblerworks.com/), [Security](https://security.noblerworks.com/) and [AI](https://ai.noblerworks.com/) Zero to Hero - and is linked with absolute URLs, never copied back. The shared family bar (announce block in `.github/site-overrides/main.html` + the CSS at the end of `.github/site/extra.css`) is identical in all four repos: edit all four together.
+
+History: split from `cloud-data-ai-security-zero-to-hero` ("Cloud, Data, AI & Security") on 2026-10-21; this repo kept the cloud subject and the git history.
 
 ## Structure
 ```
-cloud-data-ai-security-zero-to-hero/
+cloud-zero-to-hero/
 ├── exams/              # Cert-specific study guides (the certify pillar)
 ├── learn/              # Plain-English learning content (the learn pillar)
-│   ├── concepts/       # Bite-size topic pages (5-10 min): cloud + AI primitives
+│   ├── concepts/       # Bite-size topic pages (5-10 min): cloud primitives
 │   ├── day-one/        # Strict beginner on-ramp: terminal, git, HTTP, servers
-│   ├── ai-from-scratch.md
 │   ├── cloud-from-scratch.md
 │   ├── glossary.md
 │   └── youtube.md
 ├── resources/          # Cross-cert reference (build + reference pillars)
-├── topics/             # Cross-pillar topic indexes (LLMs, IAM, networking, K8s, ...)
+├── topics/             # Cross-pillar topic indexes (Kubernetes, networking, SRE, FinOps, ...)
 ├── assets/diagrams/    # PNG diagrams (draw.io exports), organized by topic
 ├── docs/               # Repo-level docs (ARCHITECTURE.md, certs.json, freshness.md, tag-taxonomy.md, improvement-roadmap.md)
 ├── .github/site/       # Site chrome: extra.css (staged to assets/site/) + home.md (the site's landing page)
@@ -34,7 +37,7 @@ cloud-data-ai-security-zero-to-hero/
 - **The site's home page is `.github/site/home.md`, not `README.md`.** A repo front page (banner, badges, repo structure, "star this repo") and a website landing page want different things, so the build renders `home.md` over the staged `README.md`. Editing the README does not change the site's front door - except for the "What's new" bullets, which are extracted from it. Every number on that page is a `{{token}}` filled from `certs.json` and `check-readme-counts.py`; never type a figure into it. See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md#the-home-page-is-not-the-readme).
 - Organized by purpose (learn / certify / reference) and within each, by provider.
 - Each cert dir has: `README.md`, `fact-sheet.md`, `notes/`, `practice-plan.md`, `scenarios.md`, `strategy.md`.
-- Resources include: architecture patterns, service comparisons, CLI cheat sheets, roadmaps, compliance guides, migration guides, interview prep, troubleshooting guides, hands-on projects.
+- Resources include: architecture patterns, service comparisons, CLI cheat sheets, roadmaps, migration guides, cost optimization, well-architected, interview prep, troubleshooting guides, hands-on projects.
 
 ## House style / conventions
 

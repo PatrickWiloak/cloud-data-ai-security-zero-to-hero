@@ -15,7 +15,7 @@ A dead link, a stale vendor fact, or an out-of-date exam detail is a content bug
 
 ## How to report
 
-For anything in the first list, use **[GitHub's private vulnerability reporting](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/security/advisories/new)** rather than a public issue, so the fix can land before the detail is public.
+For anything in the first list, use **[GitHub's private vulnerability reporting](https://github.com/PatrickWiloak/cloud-zero-to-hero/security/advisories/new)** rather than a public issue, so the fix can land before the detail is public.
 
 Please include the file path, the line, and what a reader would do wrong if they followed it.
 

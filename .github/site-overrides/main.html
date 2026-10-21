@@ -55,7 +55,7 @@
   <meta property="og:image" content="{{ image }}">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="640">
-  <meta property="og:image:alt" content="Cloud, Data, AI and Security - from absolute zero to hired. Learn, certify, build, reference.">
+  <meta property="og:image:alt" content="Cloud Zero to Hero - AWS, Azure, GCP, Kubernetes and DevOps from absolute zero to hired. Learn, certify, build, reference.">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ title }}">
@@ -76,4 +76,17 @@
   {% if page and page.meta and page.meta.jsonld %}
   <script type="application/ld+json">{{ page.meta.jsonld }}</script>
   {% endif %}
+{% endblock %}
+
+{#- Zero to Hero family bar: the same four links on every sibling site (cloud, data,
+    security, ai .noblerworks.com). Edit all four repos together - see CLAUDE.md. -#}
+{% block announce %}
+<nav class="z2h-family" aria-label="Zero to Hero sites by Nobler Works">
+  <span class="z2h-family__brand">Zero to Hero</span>
+    <a href="https://cloud.noblerworks.com/" style="--fam:#16a34a" aria-current="page">Cloud</a>
+    <a href="https://data.noblerworks.com/" style="--fam:#0891b2">Data</a>
+    <a href="https://security.noblerworks.com/" style="--fam:#d97706">Security</a>
+    <a href="https://ai.noblerworks.com/" style="--fam:#dc2626">AI</a>
+  <a class="z2h-family__nw" href="https://noblerworks.com/">by Nobler Works</a>
+</nav>
 {% endblock %}

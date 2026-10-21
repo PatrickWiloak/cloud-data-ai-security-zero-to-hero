@@ -2,9 +2,9 @@
 last-updated: 2026-05-03
 ---
 
-# 📖 Cloud + AI Glossary
+# 📖 Cloud Glossary
 
-> **200+ terms across cloud, AI/ML, DevOps, networking, and security - in plain English.**
+> **Cloud, DevOps, networking and observability terms, plus the security, data and AI vocabulary cloud work runs into - in plain English.** For depth on those three, see [Security](https://security.noblerworks.com/), [Data](https://data.noblerworks.com/) and [AI](https://ai.noblerworks.com/) Zero to Hero.
 >
 > Use Ctrl+F. This is a reference doc, not something to read end-to-end.
 

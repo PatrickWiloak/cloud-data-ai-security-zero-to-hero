@@ -55,30 +55,30 @@ STATUS_LABEL = {
 # A sample of what the provider covers, not an exhaustive list - the Certs column
 # carries the total, and both tables say so underneath.
 PROVIDER_HIGHLIGHTS = {
-    "aws": "CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, GenAI Developer (AIP-C01), Quantum (QPC-C01); 4 retired specialties retained",
-    "azure": "AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-100/200/300/401, PL-100/200/300, MS-900",
-    "gcp": "Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI",
-    "kubernetes": "KCNA, KCSA, CKA, CKAD, CKS, plus Argo (CAPA), Cilium (CCA), GitOps (CGOA), Istio (ICA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA)",
+    "aws": "CLF-C02, SAA-C03, SOA-C03, DVA-C02, SAP-C02, DOP-C02, Advanced Networking (ANS-C01), SAP on AWS (PAS-C01), Quantum (QPC-C01); retired SOA-C02 retained",
+    "azure": "AZ-900/104/204/305/400/700, MS-900, PL-100/200/900",
+    "gcp": "Digital Leader, Associate Cloud Engineer, Cloud Architect, Cloud Developer, DevOps, Network Engineer, Workspace Admin",
+    "kubernetes": "KCNA, CKA, CKAD, plus Argo (CAPA), Cilium (CCA), GitOps (CGOA), Istio (ICA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA)",
     "nvidia": "AI Infra & Ops, GenAI/LLM, Multimodal, Agentic AI, Networking, OpenUSD",
-    "hashicorp": "Terraform Assoc + Pro, Vault, Consul, Packer, Boundary, Nomad",
+    "hashicorp": "Terraform Assoc + Pro, Consul, Packer, Nomad",
     "databricks": "Data Engineer (A/P), ML (A/P), GenAI Engineer, Lakehouse Admin",
     "snowflake": "SnowPro Core + 3 Advanced (Architect, Data Eng, Admin)",
-    "github": "Foundations, Actions, Administration, Advanced Security, Copilot",
+    "github": "Foundations, Actions, Administration",
     "redhat": "RHCSA (EX200), OpenShift Administrator (EX280)",
     "cisco": "CCNA (200-301), CCNP Enterprise ENCOR (350-401)",
     "salesforce": "Administrator, Platform Developer I, Platform Developer II",
     "confluent": "Certified Developer, Certified Administrator",
     "mongodb": "Associate Developer, DBA, Atlas Administrator",
     "finops": "Practitioner, Engineer, Analyst, Professional",
-    "comptia": "Cloud+ (CV0-004), Security+ (SY0-701), Network+ (N10-009), CySA+ (CS0-003)",
+    "comptia": "A+ (220-1201/1202), Cloud+ (CV0-004), Network+ (N10-009)",
     "isc2": "CISSP, CCSP, CC",
     "isaca": "CISA, CISM",
     "cloud-security-alliance": "CCSK v5",
     "offensive-security": "OSCP (PEN-200)",
     "palo-alto-networks": "PCNSA",
     "linux-foundation": "LFCS, LFCA",
-    "oracle": "OCI Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc, AI Foundations, GenAI Professional",
-    "ibm": "Advocate, Developer, Solution Architect, Security, SRE",
+    "oracle": "OCI Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc",
+    "ibm": "Advocate, Developer, Solution Architect, SRE",
     "servicenow": "Certified System Administrator",
     "vmware": "VCP-DCV (2V0-21.23)",
     "anthropic": "Associate (CCAO-F), Developer (CCDV-F), Architect Foundations (CCAR-F) + Professional (CCAR-P)",
@@ -236,10 +236,17 @@ def build_readme_table(index):
             f"| {PROVIDER_EMOJI[provider]} [{entry['name']}](./{entry['path']}) "
             f"| {entry['count']} | {PROVIDER_HIGHLIGHTS[provider]} |"
         )
+    # Study tracks are named only when there are any. Since the 2026-10-21 split
+    # this site has none (the Anthropic and GenAI tracks moved to the AI site), and
+    # "plus 0 self-directed study tracks" reads as a mistake.
+    tracks_n = totals["study_tracks"]
+    tracks_note = (
+        f", plus {tracks_n} self-directed study track{'s' if tracks_n != 1 else ''}"
+        if tracks_n else ""
+    )
     rows.append(
         f"| **Total** | **{totals['certifications']}** "
-        f"| across {totals['certification_providers']} providers, plus "
-        f"{totals['study_tracks']} self-directed study tracks |"
+        f"| across {totals['certification_providers']} providers{tracks_note} |"
     )
     return "\n".join(rows) + (
         "\n\nHighlights are a sample, not the full list - the Certs column is the "
@@ -277,12 +284,16 @@ def build_hub_table(index):
         f"| **CERTIFICATIONS TOTAL** | **{totals['certifications']}** "
         f"| across {totals['certification_providers']} providers | |"
     )
-    legend_text = (
+    tracks_legend = (
         f"\n\nThe Certs column counts real exams. This repo also carries "
-        f"{totals['study_tracks']} self-directed study tracks (the Anthropic prompt "
-        f"engineering track plus the Azure and GCP GenAI tracks), which are study guides "
+        f"{totals['study_tracks']} self-directed study track"
+        f"{'s' if totals['study_tracks'] != 1 else ''}, which are study guides "
         f"spanning several exams or none, not certifications in their own right."
-        "\n\n◇ = outline stage: README, fact-sheet, and practice plan are written; topic "
+        if totals["study_tracks"] else ""
+    )
+    legend_text = (
+        tracks_legend
+        + "\n\n◇ = outline stage: README, fact-sheet, and practice plan are written; topic "
         "notes are outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting "
         "queue."
     )

@@ -141,11 +141,9 @@ def main() -> int:
         x += draw.textlength(char, font=mono_600) + 4.2
 
     y += 58
-    draw.text((PAD, y), "Cloud, Data, AI", font=title, fill=WHITE)
+    draw.text((PAD, y), "Cloud", font=title, fill=WHITE)
     y += 88
-    amp_w = draw.textlength("& ", font=title)
-    draw.text((PAD, y), "&", font=title, fill=GREEN)
-    draw.text((PAD + amp_w, y), "Security", font=title, fill=WHITE)
+    draw.text((PAD, y), "Zero to Hero", font=title, fill=GREEN)
 
     y += 118
     draw.text((PAD, y), "From absolute zero to hired.", font=sub, fill=GREY)

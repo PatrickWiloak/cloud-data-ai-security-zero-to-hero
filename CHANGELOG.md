@@ -6,6 +6,13 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-10-21] - Cloud Zero to Hero
+
+### Changed
+
+- The all-in-one Zero to Hero repo was split by subject into four sibling sites. This repo keeps the cloud subject and is now **Cloud Zero to Hero** (`cloud-zero-to-hero`, https://cloud.noblerworks.com/). Data, security and AI guides moved to [Data](https://data.noblerworks.com/), [Security](https://security.noblerworks.com/) and [AI](https://ai.noblerworks.com/) Zero to Hero; links into them are absolute URLs.
+- README, Study Hub (decision tree, career tracks, popular certs, timelines), the site home page, CONTRIBUTING, docs/ARCHITECTURE.md, the learn and topic indexes, the social card and the repository description template now describe the cloud site only. Every page carries the shared Zero to Hero family bar, and the home page and README link the three sibling sites.
+
 ## [2026-10-16] (2) - Seven more exams flagged from a vendor check of all providers
 
 ### Fixed

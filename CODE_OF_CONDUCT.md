@@ -25,7 +25,7 @@ This applies in issues, pull requests, discussions, commit messages, and anywher
 
 ## Reporting
 
-Report a problem to the maintainer, **[@PatrickWiloak](https://github.com/PatrickWiloak)**, by opening a private report through [GitHub's reporting flow](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/security/advisories/new) or by direct message on any of the channels linked from the [README](./README.md).
+Report a problem to the maintainer, **[@PatrickWiloak](https://github.com/PatrickWiloak)**, by opening a private report through [GitHub's reporting flow](https://github.com/PatrickWiloak/cloud-zero-to-hero/security/advisories/new) or by direct message on any of the channels linked from the [README](./README.md).
 
 Reports are handled privately. The maintainer may edit, delete, or decline any contribution, and may block an account, for behavior that breaches this document.
 

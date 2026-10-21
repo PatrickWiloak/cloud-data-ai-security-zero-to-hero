@@ -1,6 +1,6 @@
-# 🎓 Learn Cloud + AI - Without Chasing a Certification
+# 🎓 Learn Cloud - Without Chasing a Certification
 
-> **Plain-English explanations of cloud computing and AI/ML for people who want to understand the technology, not just pass an exam.**
+> **Plain-English explanations of cloud computing, networking, containers and DevOps for people who want to understand the technology, not just pass an exam.**
 >
 > Built and maintained by [Patrick Wiloak](https://patricklukewilson.com) - Ex-AWS Solutions Architect, 19x multi cloud certified, 64 certifications and accreditations, 10 years in tech. If certs aren't your goal, start here.
 >
@@ -10,14 +10,14 @@
 
 ## Who this is for
 
-You want to understand cloud and AI, but:
+You want to understand cloud, but:
 
 - You're not preparing for an exam (or not yet)
 - You want context and intuition, not 200-question fact dumps
 - You'd rather learn the **why** before drilling into vendor-specific details
 - You're a developer, founder, PM, analyst, or curious technologist
 
-If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.md)** - 148 certs across 27 providers, fully indexed.
+If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.md)** - every cloud cert on this site, fully indexed.
 
 ---
 
@@ -27,14 +27,18 @@ If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.m
 - **[Day One](./day-one/)** - terminal, git, HTTP, servers. The pages assume nothing. If you've never opened a terminal, start here.
 
 ### 💡 Bite-size concept pages
-- **[Concepts](./concepts/)** - 18 topic pages, 5-10 min each. Cloud primitives (VPC, K8s, serverless), DevOps (CI/CD, Terraform), networking (DNS, TLS), and AI (LLMs, RAG, agents, transformers, embeddings, prompt engineering, evals).
+- **[Concepts](./concepts/)** - 18 topic pages, 5-10 min each. Cloud primitives (regions, VPC, K8s, serverless), DevOps (CI/CD, Terraform, deployment strategies), networking (DNS, CDNs, load balancing), and operations (autoscaling, caching, observability, cost).
 
 ### 🛤️ Structured learning paths
 - **[Cloud from Scratch](./cloud-from-scratch.md)** - 8-phase path from "what is cloud?" to designing real systems
-- **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** - LLMs, RAG, agents, and production AI apps
+
+### 🧭 Learning AI, data or security?
+- **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** on AI Zero to Hero - LLMs, RAG, agents, and production AI apps
+- **[Data Zero to Hero](https://data.noblerworks.com/learn/)** - databases, pipelines, streaming and analytics
+- **[Security Zero to Hero](https://security.noblerworks.com/learn/)** - identity, cloud security and compliance
 
 ### 📖 Reference
-- **[Glossary](./glossary.md)** - 200+ cloud, AI, DevOps, networking, and security terms in plain English
+- **[Glossary](./glossary.md)** - cloud, DevOps and networking terms in plain English
 - **[YouTube curation](./youtube.md)** - filtered videos worth your time
 
 ---
@@ -47,9 +51,8 @@ There's no "right order." Pick what fits:
 |------------------|------------|
 | Start from absolute zero | [Day One](./day-one/) |
 | Look up a term you keep seeing | [Glossary](./glossary.md) |
-| Understand one concept (RAG, VPC, agents, ...) | [Concepts](./concepts/) |
+| Understand one concept (VPC, DNS, containers, ...) | [Concepts](./concepts/) |
 | Build a foundation in cloud | [Cloud from Scratch](./cloud-from-scratch.md) |
-| Build a foundation in AI/LLMs | [AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/) |
 | Compare AWS vs Azure vs GCP | [Service comparisons](../resources/) |
 | See real architectures | [Architecture patterns](../resources/architecture-patterns/) |
 | Try hands-on labs | [Hands-on projects](../resources/hands-on-projects/) |
@@ -58,7 +61,7 @@ There's no "right order." Pick what fits:
 
 ## Why this exists
 
-Most cloud and AI content is either:
+Most cloud content is either:
 
 1. **Cert-shaped** - exam objectives, fact sheets, practice questions (great if you have an exam date, useless if you just want to understand)
 2. **Vendor marketing** - "transform your business with the cloud!" (no actual technical content)
@@ -71,7 +74,7 @@ This hub is the missing middle: technical, accurate, plain-English, no exam scaf
 ## Companion resources
 
 - **[Main Study Hub](../STUDY-HUB.md)** - if you decide to certify
-- **[Architecture Patterns](../resources/architecture-patterns/)** - 17 real-world patterns
+- **[Architecture Patterns](../resources/architecture-patterns/)** - real-world multi-cloud patterns
 - **[CLI Cheat Sheets](../resources/)** - AWS, Azure, GCP, kubectl, Terraform, Docker, Helm, GitHub CLI
 - **[Service Comparisons](../resources/)** - cross-cloud equivalents
 

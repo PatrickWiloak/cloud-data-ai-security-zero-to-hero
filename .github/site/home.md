@@ -24,11 +24,11 @@
 
 <div class="home-hero" markdown>
 
-# Cloud, Data, AI, and Security - From Zero to Hero { .home-title }
+# Cloud Zero to Hero { .home-title }
 
-<p class="home-intro">Plain-English concepts, hands-on builds, deep references, and the most comprehensive certification library on GitHub - free, no signup, nothing gated.</p>
+<p class="home-intro">AWS, Azure, GCP, OCI, Kubernetes, Linux, networking, Terraform, DevOps, SRE and FinOps. Plain-English concepts, hands-on builds, deep references, and a full cloud certification library - free, no signup, nothing gated.</p>
 
-<p class="home-sub">Never opened a terminal, or chasing your fifth cert - both start here. Press <kbd>/</kbd> to search all {{words}} words.</p>
+<p class="home-sub">Never opened a terminal, or chasing your fifth cloud cert - both start here. Press <kbd>/</kbd> to search all {{words}} words.</p>
 
 [Start from zero](learn/day-one/){ .md-button .md-button--primary }
 [Browse {{certifications}} certifications](STUDY-HUB.md){ .md-button }
@@ -57,7 +57,7 @@
 
     ---
 
-    Plain English, no exam scaffolding. A strict-beginner on-ramp, {{concept_pages}} bite-size concept pages, and two structured paths through cloud and AI.
+    Plain English, no exam scaffolding. A strict-beginner on-ramp, {{concept_pages}} bite-size concept pages, and a structured path from zero to cloud.
 
     [:octicons-arrow-right-24: Start learning](learn/)
 
@@ -81,7 +81,7 @@
 
     ---
 
-    {{service_comparisons}} cross-cloud service comparisons, {{roadmaps}} career roadmaps, plus compliance, FinOps, migration and troubleshooting deep dives.
+    {{service_comparisons}} cross-cloud service comparisons, {{roadmaps}} career roadmaps, plus FinOps, migration, well-architected and troubleshooting deep dives.
 
     [:octicons-arrow-right-24: Browse reference](resources/)
 
@@ -95,8 +95,7 @@
 
 - [Day One](learn/day-one/) - terminal, git, HTTP and servers, assuming nothing
 - [Cloud from Scratch](learn/cloud-from-scratch.md) - compute, storage, networking, identity
-- [AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/) - LLMs, RAG, agents, evals, fine-tuning
-- [Concepts](learn/concepts/) - {{concept_pages}} five-minute explainers, one idea each
+- [Concepts](learn/concepts/) - {{concept_pages}} five-minute explainers, one cloud idea each
 - [Topic indexes](topics/) - {{topic_indexes}} subjects tied across all four pillars
 - [Glossary](learn/glossary.md) - the vocabulary, defined once
 - [Hands-on projects](resources/hands-on-projects/) - {{hands_on_projects}} builds you can finish in a sitting
@@ -124,10 +123,44 @@
 
 {{whats_new}}
 
+## More Zero to Hero
+
+Cloud is one of four free sites. When your study crosses into another subject, the sibling site covers it in the same depth.
+
+<div class="grid cards" markdown>
+
+-   :material-database-outline:{ .lg .middle } **Data Zero to Hero**
+
+    ---
+
+    Data engineering, databases, streaming and analytics, with Snowflake, Databricks and cloud data certifications.
+
+    [:octicons-arrow-right-24: data.noblerworks.com](https://data.noblerworks.com/)
+
+-   :material-shield-lock-outline:{ .lg .middle } **Security Zero to Hero**
+
+    ---
+
+    Cloud and application security, identity, compliance, and certifications from Security+ to CISSP.
+
+    [:octicons-arrow-right-24: security.noblerworks.com](https://security.noblerworks.com/)
+
+-   :material-robot-outline:{ .lg .middle } **AI Zero to Hero**
+
+    ---
+
+    LLMs, RAG, agents and evals in plain English, AI at work, AI certifications, and landmark papers explained.
+
+    [:octicons-arrow-right-24: ai.noblerworks.com](https://ai.noblerworks.com/)
+
+</div>
+
+All four are free, by [Nobler Works](https://noblerworks.com/).
+
 ## Who made this
 
 Built by **[Patrick Wiloak](https://patricklukewilson.com)** - ex-AWS Solutions Architect, 10 years in tech, multi-cloud certified.
-[YouTube](https://youtube.com/@patrickwiloak) · [LinkedIn](https://www.linkedin.com/in/patricklukewilson/) · [Website](https://patricklukewilson.com) · [Source on GitHub](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero)
+[YouTube](https://youtube.com/@patrickwiloak) · [LinkedIn](https://www.linkedin.com/in/patricklukewilson/) · [Website](https://patricklukewilson.com) · [Source on GitHub](https://github.com/PatrickWiloak/cloud-zero-to-hero)
 
 We build custom software and products at **[Nobler Works](https://noblerworks.com/)**. Open-source training like this is how we give back - we are nothing without the community that supports us. If you need software built, [get in touch](https://noblerworks.com/).
 

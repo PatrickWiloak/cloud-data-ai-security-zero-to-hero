@@ -1,6 +1,13 @@
 # TODO
 
-Working task list for **cloud-data-ai-security-zero-to-hero**. Read this at the start of a work session and keep it current as work completes - check items off with a date, add follow-ups as they surface. Stale TODOs are worse than none. Security debt (if any) is tracked separately in `SECURITY-DEBT.md`.
+Working task list for **cloud-zero-to-hero** (Cloud Zero to Hero, https://cloud.noblerworks.com/). Read this at the start of a work session and keep it current as work completes - check items off with a date, add follow-ups as they surface. Stale TODOs are worse than none. Security debt (if any) is tracked separately in `SECURITY-DEBT.md`.
+
+---
+
+## Zero to Hero split (2026-10-21)
+
+- [x] 2026-10-21 Split from cloud-data-ai-security-zero-to-hero on 2026-10-21: data, security and AI content (and their TODO items) moved to data-zero-to-hero, security-zero-to-hero and ai-zero-to-hero; this repo is Cloud Zero to Hero. README, STUDY-HUB, home page, CLAUDE.md, CONTRIBUTING, docs/ARCHITECTURE.md, mkdocs.yml, social card and repo-metadata template rewritten for cloud only.
+- [ ] Patrick: rename the GitHub repo to `cloud-zero-to-hero` if not done, then run `python3 .github/scripts/check-repo-metadata.py --fix` (description + topics) and upload the regenerated `assets/brand/social-preview-1280x640.png` (Settings > General > Social preview).
 
 ---
 
@@ -25,28 +32,25 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 ## Retired-exam sweep (2026-10-16)
 
 - [x] 2026-10-16 Checked every Azure guide against Microsoft's [retired-exams page](https://learn.microsoft.com/en-us/credentials/support/retired-certification-exams): nine were retired but unflagged. Now marked RETIRED with `exam-retires:` (status flips to Retired in `certs.json` and the provider tables): MS-900 (2026-03-31), DP-100 (06-01), AI-102 (06-30), AI-900 (06-30), AZ-204 (07-31), AZ-500 (08-31), PL-200 (08-31), plus DP-203 (2025-03-31, date from Microsoft Q&A and third-party posts, not the page) and PL-100 (2024-06-30). The only Azure exam on Microsoft's "retiring in 12 months" list is MS-102, which the repo does not cover.
-- [ ] **Successors not built or verified.** Microsoft's pages name no replacement except AI-900 -> AI-901 (live, updated 2026-04-15). Third-party posts report AZ-204 -> AI-200, AI-102 -> AI-103 and AZ-500 -> SC-500; confirm on learn.microsoft.com before writing any guide. Retired guides still have practice banks, flashcards and `labs-by-cert` entries; decide whether to keep them as reference or prune.
+- [ ] **Successors not built or verified.** Third-party posts report AZ-204 -> AI-200; confirm on learn.microsoft.com before writing any guide. Retired guides (MS-900, AZ-204, PL-100, PL-200) still have practice banks, flashcards and `labs-by-cert` entries; decide whether to keep them as reference or prune.
 - [x] 2026-10-16 Ran the same check on the other 26 providers (vendor pages, three read-only agents). Flagged: SCS-C02, MLA-C01 and HashiCorp Consul 003 as retired; SAP-C02 (2026-11-16), DVA-C02 (11-30), ANS-C01 (12-31) and CySA+ CS0-003 (12-22) as retiring. Everything below was found but NOT applied, because the evidence is a search snippet or third-party only, or it needs a content rewrite. Confidence in brackets (H = vendor page read, M = vendor page plus search, L = third-party).
-- [ ] **Rewrites that wait on new outlines.** AWS SAP-C03 and DVA-C03 (registration opens 2026-10-27; build after the outlines publish), MLA-C02 (beta), SCS-C03 (open now, [H]), CySA+ V4, Security+ V8/SY0-801 (CompTIA says expected around 2026-11-17 [H]; the SY0-701 end date is third-party only), CISM outline change 2026-11-03 [H], CISSP outline effective 2027-04-15 [H], Azure DP-420 (renamed Cosmos DB AI Developer Associate, effective 2026-10-06, AI/RAG scope [H]), Azure exams with content updates DP-600/DP-700 (10-19), SC-100/SC-200/SC-900 (10-21), DP-300 (10-27), SC-300 (10-28), AZ-305 (updated 04-17) and AZ-400 (07-27) [H]. RHCSA EX200 is now based on RHEL 10 and the guide says RHEL 9 [H]; EX280 may be on OpenShift 4.22 vs the guide's 4.14 [M]. **Judge 2026-11-01:** which of these are rebuilt or dated.
-- [ ] **Version or code mismatches to confirm, then fix.** HashiCorp Terraform Associate 003 -> 004 (last day for 003 reported as 2026-01-07, from search not the page [M]); Snowflake COF-C02 -> COF-C03 [M], ADA-C01 -> ADA-C02 [H], and the Advanced Data Engineer code ADE-C01 looks wrong (catalog lists DEA-C02) [H]; NVIDIA NCP-NET -> NCP-AIN, NCP-USD -> NCP-OUSD, NCA-MMGA -> NCA-GENM [H]; Oracle OCI codes -24/-25 are stale (-26 pages exist for Foundations, Architect Associate and Professional [H]; Developer is "Developer Professional" in the catalog [M]); HashiCorp "Terraform Authoring and Operations Advanced" (not "Professional") [H]; Databricks Lakehouse Platform Administrator is now an accreditation [M]; FinOps analyst is "FinOps Certified FOCUS Analyst" and the code "FOCA" is unsourced [L].
-- [ ] **Facts that are wrong in the guides.** GitHub: Foundations (GH-900) does not expire and the other four GitHub certs are valid 2 years, but Actions and Administration say 3 [H]. Palo Alto PCNSA: the vendor certification page lists no PCNSA and promotes Network Security Analyst; no retirement date found, so not flagged [M]. CCSK is v5 and current [H].
-- [ ] **Guides that may not describe a real exam.** `anthropic/claude-prompt-engineering-specialist` (code CPES) is absent from Anthropic's official certification FAQ, which lists four certs [M, one page]; the Associate dir should read "Claude Certified Associate" per the FAQ. HashiCorp `boundary-associate`, `nomad-associate` and `packer-associate` have no vendor exam on HashiCorp's lists [M]. All five IBM guides pair "IBM Certified ... Cloud v2" titles with codes C1000-170..174 that third-party listings give to other exams (the Advocate code is probably C1000-142) and IBM's pages were unreadable [L]. **Patrick or a fresh session: check ibm.com/training and each of these exam pages by hand before editing.** Also unverified: VMware 2V0-21.23 (Broadcom page unreadable), Salesforce Admin/PD1/PD2, OSCP content vs the current exam, AWS PAS-C01 (not on AWS's landing page).
-- [ ] **New-guide candidates found** (verify codes first): AWS AI Business Strategist (beta); Terraform Infrastructure Engineer Pro, Vault Operations Advanced; CNCF CNPE, CKNE, KCA, CBA; Databricks Data Analyst, Context Engineer, Apache Spark Developer; Snowflake MLA-C01, GES-C02; Confluent CCAC; FinOps AI Value and Technology Value; NVIDIA NCA-ADS, NCP-ARI; MongoDB Associate Data Modeler; GitHub GH-600 [L]. Two exams retire soon: Snowflake SPS-C01 and DSA-C03 (2026-11-01), SEA-C01 and DAA-C01 (2026-12-01) [M]; the repo has no guides for them.
+- [ ] **Rewrites that wait on new outlines.** AWS SAP-C03 and DVA-C03 (registration opens 2026-10-27; build after the outlines publish), Azure exams with content updates AZ-305 (updated 04-17) and AZ-400 (07-27) [H]. RHCSA EX200 is now based on RHEL 10 and the guide says RHEL 9 [H]; EX280 may be on OpenShift 4.22 vs the guide's 4.14 [M]. **Judge 2026-11-01:** which of these are rebuilt or dated.
+- [ ] **Version or code mismatches to confirm, then fix.** HashiCorp Terraform Associate 003 -> 004 (last day for 003 reported as 2026-01-07, from search not the page [M]); Oracle OCI codes -24/-25 are stale (-26 pages exist for Foundations, Architect Associate and Professional [H]; Developer is "Developer Professional" in the catalog [M]); HashiCorp "Terraform Authoring and Operations Advanced" (not "Professional") [H]; FinOps analyst is "FinOps Certified FOCUS Analyst" and the code "FOCA" is unsourced [L].
+- [ ] **Facts that are wrong in the guides.** GitHub: Foundations (GH-900) does not expire and the other GitHub certs are valid 2 years, but Actions and Administration say 3 [H].
+- [ ] **Guides that may not describe a real exam.** HashiCorp `nomad-associate` and `packer-associate` have no vendor exam on HashiCorp's lists [M]. The IBM guides pair "IBM Certified ... Cloud v2" titles with codes C1000-170..174 that third-party listings give to other exams (the Advocate code is probably C1000-142) and IBM's pages were unreadable [L]. **Patrick or a fresh session: check ibm.com/training and each of these exam pages by hand before editing.** Also unverified: VMware 2V0-21.23 (Broadcom page unreadable), Salesforce Admin/PD1/PD2, AWS PAS-C01 (not on AWS's landing page).
+- [ ] **New-guide candidates found** (verify codes first): Terraform Infrastructure Engineer Pro; CNCF CNPE, CKNE, KCA, CBA; FinOps AI Value and Technology Value; GitHub GH-600 [L].
 
 ## Content backlog (gap review 2026-10-16, ranked)
 
-1. **AI governance and AI security certs** (the repo's niche, almost no free guides): IAPP AIGP, ISACA AAISM and AAIA, CSA TAISE. Verify names and codes first.
-2. **Breach postmortems** (all 3 existing postmortems are outages): Capital One 2019, Snowflake customer breaches 2024, SolarWinds, MOVEit; outages CrowdStrike 2024 and the Oct 2025 AWS us-east-1 DNS event.
-3. **Defensive security labs** (106 of 152 certs have no lab): least-privilege IAM, cloud incident response, detection/SIEM pipeline, container scan with SBOM, prompt-injection red team of a RAG app.
-4. **Cert gaps**: observability (Splunk/Elastic/Datadog), GIAC GCLD/GSEC, Google Associate Data Practitioner and Professional Security Operations Engineer, Databricks Spark Developer, CNCF Backstage and Kyverno associates, plus the Linux+/SSCP/CyberOps/AI-901 items below.
-5. **Concept pages**: OAuth/OIDC/SAML, encryption and KMS, logging and SIEM, backup and DR (RPO/RTO), reasoning models, A2A beside the MCP page; day-one Python and environment variables.
-6. **Compliance guides**: NIST CSF 2.0, ISO 27001, NIS2/DORA, CMMC. **Cost of AI** (tokens, caching, batching, model sizing). **AI/ML engineer interview prep.**
+1. **Outage postmortems** beside the 3 existing ones: CrowdStrike 2024 and the Oct 2025 AWS us-east-1 DNS event.
+2. **Cert gaps**: observability (Splunk/Elastic/Datadog), CNCF Backstage and Kyverno associates, plus the Linux+ item below.
+3. **Concept pages**: backup and DR (RPO/RTO); day-one Python and environment variables.
 
 ## GCP exam refresh (2026-10-14)
 
 - [x] 2026-10-14 Workspace Administrator re-levelled to Associate and rebuilt (7 notes, flashcards, 23 scenarios, 45 questions). Strict site build passes; pushed 2026-10-14.
 - [x] 2026-10-14 Cloud Architect refreshed to the current guide: weights, four case studies (own words), AI / Agent Platform note, Well-Architected and operations note, 26 new questions, 6 scenarios, shuffled answer key, dead guide link fixed.
-- [ ] **Rename sweep.** The older Cloud Architect notes (and `resources/`) still say "Vertex AI". Google renamed it Gemini Enterprise Agent Platform on 2026-04-22. Sweep once the names settle; the new AI note carries the mapping. Also `exams/gcp/machine-learning-engineer` and the GCP genai tracks.
+- [ ] **Rename sweep.** The older Cloud Architect notes (and `resources/`) still say "Vertex AI". Google renamed it Gemini Enterprise Agent Platform on 2026-04-22. Sweep once the names settle; the new AI note carries the mapping.
 - [x] 2026-10-14 Answer-position skew fixed repo-wide (150 banks, 2,904 questions) with `.github/scripts/balance-answer-positions.py`.
 - [x] 2026-10-14 Length tell fixed: the correct option was the longest in 88% of questions; a first fix overshot to the shortest in 38%, so a second pass assigned each question a target length rank. Both `--check` and `--check-length` now run in the structure-validate workflow. The 76 cross-referencing questions were rewritten; the `offensive-security-oscp.md` stub was deleted (duplicate of `oscp-pen-200`).
 - [x] 2026-10-14 The ~70 flagged practice-question keys were checked against vendor docs (AWS, Microsoft, Google, Kubernetes, Snowflake, Databricks, GitHub, Confluent and others) by sourced agent review; 18 keys or questions were corrected and the rest confirmed or tightened. Outcome and sources: [docs/practice-question-key-review.md](./docs/practice-question-key-review.md). Still open there: a handful of unverified facts (IBM Cloud Functions end date, "Anthos is GKE Enterprise", Azure AD naming in az-104/204/305) and the judgment-call questions.
@@ -101,12 +105,9 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 - [ ] **Judge 2026-10-19:** the Monday run updates the existing issue (no new one) and lists no real 404s beyond
       what is already tracked; the workflow change is unproven until that run.
 - [ ] **Spot-check the retired-product replacements (by 2026-10-31).** These links now reach the successor product,
-      but the surrounding notes may still teach the retired one: QLDB (`exams/aws/specialty/database-dbs-c01`),
-      OpsWorks, LUIS (`exams/azure/ai-102`), PaLM and AutoML (GCP ML notes), IBM Watson and Cloud Foundry
-      (`exams/ibm`), AWS Data Analytics and SAP specialty exams. The report lists every replacement.
+      but the surrounding notes may still teach the retired one: OpsWorks, IBM Watson and Cloud Foundry
+      (`exams/ibm`), AWS SAP specialty exam. The report lists every replacement.
 - [ ] **Content checks the sweep surfaced** (links fixed, content may be stale):
-  - [x] 2026-10-16 AI-900 retired 2026-06-30; `exam-retires:` set and the guide marked RETIRED (see Retired-exam sweep below). Building an AI-901 guide is still open (listed under the cert gaps).
-  - The **PCNSA** exam page is gone (404) and Palo Alto now promotes a Network Security Analyst certification. Check whether PCNSA was retired or renamed.
   - 15 citations of retired IBM services now point at the official successors (listed in the report); the surrounding IBM notes may describe the retired products.
 - [ ] **62 URLs could not be checked** (bot protection or sign-in, mostly vendor cert pages and Cisco docs). Spot-check by hand; listed at the end of the report.
 
@@ -157,7 +158,7 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 - [x] 2026-10-20 ✅ **2026-10-05 check** (✏️ 2026-10-20: run 39078323231, 2026-10-17, prints `IndexNow: 2 URL(s)` / `IndexNow accepted: HTTP 200`): open the next "Docs site" run's "Notify IndexNow" step; it should now say
       `IndexNow accepted`. If it 403s again, the key file at the site root is not being served - check
       `https://cloud.noblerworks.com/<key>.txt` (key in `.github/site/indexnow-key.txt`).
-- [ ] **2026-10-28 judge**: re-pull `gh api repos/PatrickWiloak/cloud-data-ai-security-zero-to-hero/traffic/popular/referrers`.
+- [ ] **2026-10-28 judge**: re-pull `gh api repos/PatrickWiloak/cloud-zero-to-hero/traffic/popular/referrers`.
       Target: Google + Bing referrals above 11 per 14 days (baseline above), and new pages showing in
       Search Console → Pages → Indexed (if the property exists by then).
 - [x] 2026-10-21 Moved to `cloud.noblerworks.com` (Route 53 CNAME, NW) + robots.txt; no redirect needed (never indexed).
@@ -165,21 +166,15 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
 - [x] ~~CompTIA A+ (220-1201/1202)~~ ✅ done 2026-09-28 - the biggest-search-volume gap.
 - [ ] **By 2026-10-31: confirm the A+ voucher price** on the CompTIA store (US) and replace the "not verified"
       line in `exams/comptia/a-plus/fact-sheet.md` (CompTIA renders prices client-side; no official figure was readable).
-- [ ] **Remaining high-search cert gaps**, in rough order of search volume: EC-Council **CEH** (312-50, needs a new
-      `ec-council` provider: add it to `PROVIDER_HIGHLIGHTS`/`PROVIDER_EMOJI` in `build-provider-indexes.py` and the
-      name map in `build-certs-index.py`), CompTIA **Linux+**, **PenTest+**, **SecurityX (CASP+)**, ISC2 **SSCP**,
-      Cisco **CyberOps Associate**, GIAC **GSEC**, and Microsoft **AI-901**. CEH has now been stopped by a model safety
-      check three times (twice 2026-09-28, once 2026-09-29 at your request, even with notes limited to concepts and
-      countermeasures). Claude will not attempt it again. Writing it is yours: the finished 2026-09-29 drafts (README,
-      fact sheet with the official v5.0 blueprint weights, domain 1 note) are in `~/.cache/ceh-draft-2026-09-29/`.
-- [ ] **Patrick: start a fresh Claude session for the next cert guides** - **Linux+, SSCP, CyberOps Associate,
-      AI-901** (one per session is safest). On 2026-09-29 a Linux+ attempt was stopped by the safety check in the
+- [ ] **Remaining high-search cert gap**: CompTIA **Linux+**.
+- [ ] **Patrick: start a fresh Claude session for the next cert guide** - **Linux+**. On 2026-09-29 a Linux+ attempt
+      was stopped by the safety check in the
       same session as the CEH stops, most likely carried over from that session's history; nothing was written.
       A new session does not carry that history. Prompt: "add the <cert> study guide to zero to hero, same shape as
       A+ (see TODO.md)". Template is the A+ commit `94bd744` plus follow-up `105cd98` (lab map, flashcards). Do not
-      include CEH in those sessions.
+      include CEH in that session.
 - [ ] **Patrick: distribution** (stars come from here, not from SEO). Submit to awesome lists
-      (awesome-certifications, awesome-aws, awesome-azure, awesome-kubernetes, awesome-llm-security); post one
+      (awesome-certifications, awesome-aws, awesome-azure, awesome-kubernetes); post one
       useful page each to r/AWSCertifications, r/AzureCertification, r/CompTIA, r/kubernetes, linking back.
 - [x] ~~Commit and push `LICENSE` (CC BY 4.0) and `LICENSE-CODE` (MIT)~~ ✅ done 2026-08-31 in
       f3b8faf. GitHub reports the repo as CC-BY-4.0.
@@ -389,19 +384,6 @@ link checker:
 A repo-wide gap analysis found four holes. All four are now closed. Counts below
 are measured, not estimated.
 
-### AI security and governance (new)
-
-The repo is named `cloud-data-ai-security-zero-to-hero` and had no dedicated AI
-security material: "OWASP LLM Top 10" appeared in exactly one file, "model supply
-chain" in zero, and `resources/compliance-guides/` covered FedRAMP, GDPR, HIPAA,
-PCI-DSS and SOC 2 with nothing AI-specific.
-
-- [x] `resources/ai-security/` - OWASP LLM Top 10, prompt injection defense, agent
-      and tool security, model supply chain, LLM red teaming, plus an index
-- [x] `resources/compliance-guides/` - EU AI Act, NIST AI RMF, ISO/IEC 42001
-- [x] `learn/concepts/` - prompt injection explained, AI threat modeling
-- [x] `topics/ai-security.md` cross-pillar hub
-
 ### Tier 1 certifications (13 added)
 
 - [x] Microsoft: SC-100, SC-300, SC-401, PL-300
@@ -449,41 +431,3 @@ Was 54k words against 2.17M in `exams/`.
 
 ---
 
-## Completed 2026-08-11 - Anthropic certification program refresh
-
-Anthropic launched an official certification program in 2026 (Architect Foundations
-in March; Associate, Developer, and Architect Professional in July). The four repo
-"study tracks" predated it. This pass aligned the repo with the real program.
-
-- [x] Renamed `claude-certified-architect-advanced` → `claude-certified-architect-professional`
-      and `claude-application-developer` → `claude-certified-developer-foundations`
-      (git mv, practice banks renamed too, all inbound links repointed)
-- [x] Retargeted all three existing technical tracks to the official exams with
-      verified blueprints: CCAR-F ($125, 60q), CCAR-P ($175, 63q, 7 domains),
-      CCDV-F ($125, 53q, 8 domains) - real domain weights, Pearson VUE delivery,
-      Partner Academy registration, 12-month validity, retake policy
-- [x] New cert dir `claude-certified-associate-foundations` (CCAO-F, $99, 60q,
-      7 domains): full skeleton + 7 notes + 15-question bank, 2,335 lines
-- [x] 5 new notes filling blueprint gaps: governance/safety/risk and stakeholder
-      lifecycle (CCAR-P); model selection, agents/workflows, security+Claude
-      Code+evals (CCDV-F)
-- [x] Prompt Engineering Specialist stays a study track (no official prompt exam);
-      banner updated to say so
-- [x] Provider promoted from "Anthropic Claude (study tracks)" to a certification
-      provider in both generator scripts; STUDY-HUB table now lists it with the
-      cloud/AI providers
-- [x] All indexes regenerated: certs.json (148 certs / 27 providers / 3 tracks),
-      27 provider indexes, STUDY-HUB table, lab map, freshness ledger, flashcards
-      (105 decks, 9,660 cards)
-- [x] Hand-maintained counts corrected in README, STUDY-HUB, CLAUDE.md,
-      docs/ARCHITECTURE.md
-- [x] Validators at zero: structure 0/0, 4,832 internal links 0 broken
-
-### Known follow-ups
-
-- Exam facts came from the official Pearson VUE page plus secondary 2026 guides;
-  domain weights for CCAO-F and CCAR-P could not be confirmed against the official
-  exam guides (Partner Academy login required). Verify when Partner Network access
-  is available and stamp `docs/freshness.md`.
-- `docs/improvement-roadmap.md` (2026-07-28 snapshot) still describes 4 Anthropic
-  study tracks; left as a dated historical analysis.

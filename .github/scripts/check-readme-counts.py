@@ -113,7 +113,6 @@ def gather() -> dict[str, int]:
         ),
         "roadmaps": count_glob("resources/certification-roadmap-*.md"),
         "interview_prep": count_pages("resources/interview-prep"),
-        "compliance_guides": count_pages("resources/compliance-guides"),
         "migration_guides": count_pages("resources/migration-guides"),
         "words": total_words(),
         "doc_links": doc_links(),
@@ -141,7 +140,6 @@ CLAIMS: list[tuple[str, str, str]] = [
     # 13 - the same drift the rest of this script exists to stop, in the one
     # section of the README that is nothing but counts.
     ("stats certifications", r"\*\*Certifications:\*\* (\d+)", "certifications"),
-    ("stats study tracks", r"\*\*Certifications:\*\* \d+ \(plus (\d+) self-directed", "study_tracks"),
     ("stats providers", r"\*\*Providers:\*\* (\d+)", "providers"),
     ("stats concept pages", r"\*\*Concept pages:\*\* (\d+)", "concept_pages"),
     ("stats service comparisons", r"\*\*Service comparisons:\*\* (\d+)", "service_comparisons"),
@@ -151,13 +149,11 @@ CLAIMS: list[tuple[str, str, str]] = [
     ("stats topic indexes", r"\*\*Topic indexes:\*\* (\d+)", "topic_indexes"),
     ("stats career roadmaps", r"\*\*Career roadmaps:\*\* (\d+)", "roadmaps"),
     ("stats interview prep", r"\*\*Interview prep guides:\*\* (\d+)", "interview_prep"),
-    ("stats compliance guides", r"\*\*Compliance guides:\*\* (\d+)", "compliance_guides"),
     ("stats migration guides", r"\*\*Migration guides:\*\* (\d+)", "migration_guides"),
     # The repository-structure code block restates three of them again.
     ("tree concept pages", r"# (\d+) bite-size concept pages", "concept_pages"),
     ("tree certifications", r"# (\d+) certs across \d+ providers", "certifications"),
     ("tree providers", r"# \d+ certs across (\d+) providers", "providers"),
-    ("tree study tracks", r"# \d+ certs across \d+ providers, plus (\d+) study tracks", "study_tracks"),
 ]
 
 # The same treatment for learn/README.md, which advertises its own count of

@@ -1,15 +1,15 @@
 # Repository Architecture
 
-This document explains the structure and conventions of the cloud certification study guides repository. Read it before contributing or making non-trivial changes.
+This document explains the structure and conventions of Cloud Zero to Hero (the cloud member of the Zero to Hero family; data, security and AI live in sibling repos since the 2026-10-21 split). Read it before contributing or making non-trivial changes.
 
 ---
 
 ## At a glance
 
-This repo is a **markdown knowledge base** for cloud + AI learning - certifications, hands-on patterns, plain-English concepts, and a beginner on-ramp. There is no build step, no test suite, no deployment - it is a content repository served as Markdown via GitHub.
+This repo is a **markdown knowledge base** for cloud learning - certifications, hands-on patterns, plain-English concepts, and a beginner on-ramp. There is no build step, no test suite, no deployment - it is a content repository served as Markdown via GitHub.
 
 ```
-cloud-data-ai-security-zero-to-hero/
+cloud-zero-to-hero/
 ├── README.md           # Top-level overview + pillars + provider table
 ├── STUDY-HUB.md        # Navigation hub: decision tree, career tracks, full provider table
 ├── CLAUDE.md           # Project context for Claude Code / AI tools
@@ -20,9 +20,8 @@ cloud-data-ai-security-zero-to-hero/
 ├── docs/               # Repo docs: ARCHITECTURE.md, certs.json (generated index), freshness.md, tag-taxonomy.md, improvement-roadmap.md
 ├── exams/              # All certification study guides, organized by provider
 ├── learn/              # Plain-English learning content for non-cert students
-│   ├── concepts/       # Bite-size topic pages (5-10 min reads): cloud + AI primitives
+│   ├── concepts/       # Bite-size topic pages (5-10 min reads): cloud primitives
 │   ├── day-one/        # Strict beginner on-ramp (terminal, git, HTTP, servers)
-│   ├── ai-from-scratch.md
 │   ├── cloud-from-scratch.md
 │   ├── glossary.md
 │   └── youtube.md
@@ -41,16 +40,16 @@ cloud-data-ai-security-zero-to-hero/
 
 Use the lowercase, hyphen-free provider name when possible:
 
-- `aws`, `azure`, `gcp`, `kubernetes`, `nvidia`, `anthropic`, `hashicorp`, `databricks`, `snowflake`, `github`, `redhat`, `cisco`, `confluent`, `mongodb`, `finops`, `comptia`, `isc2`, `cloud-security-alliance`, `linux-foundation`, `oracle`, `ibm`
+- `aws`, `azure`, `gcp`, `kubernetes`, `hashicorp`, `github`, `redhat`, `cisco`, `salesforce`, `finops`, `comptia`, `linux-foundation`, `oracle`, `ibm`, `servicenow`, `vmware`
 
 #### AWS tier subdirectories
 
 AWS uses an extra layer because it has many tiers:
 
-- `exams/aws/foundational/` - CLF-C02 (Cloud Practitioner), AIF-C01 (AI Practitioner)
-- `exams/aws/associate/` - SAA-C03, DVA-C02, SOA-C03, MLA-C01, DEA-C01, SOA-C02 (retired but retained)
+- `exams/aws/foundational/` - CLF-C02 (Cloud Practitioner)
+- `exams/aws/associate/` - SAA-C03, DVA-C02, SOA-C03, SOA-C02 (retired but retained)
 - `exams/aws/professional/` - SAP-C02, DOP-C02
-- `exams/aws/specialty/` - SCS-C02, ANS-C01, PAS-C01, QPC-C01, MLS-C01 (retired), DAS-C01 (retired), DBS-C01 (retired)
+- `exams/aws/specialty/` - ANS-C01, PAS-C01, QPC-C01
 - `exams/aws/shared/services/` - shared service references (compute, storage, network, etc.)
 
 Other providers don't use tier subdirs - the cert dir sits directly under the provider dir.
@@ -109,16 +108,15 @@ When scaffolding a new cert, the validator's tier classification is the default;
 
 ```
 resources/
-├── architecture-patterns/      # Multi-cloud architecture write-ups (17 files)
-├── compliance-guides/          # SOC 2, HIPAA, PCI DSS, GDPR, FedRAMP (5 files)
-├── cost-optimization/          # Per-cloud cost optimization playbooks (4 files)
-├── hands-on-projects/          # 15 guided builds + generated labs-by-cert.md index
-├── interview-prep/             # Role-based interview prep (6 files)
-├── migration-guides/           # On-prem and cloud-to-cloud migration (5 files)
-├── networking-deep-dives/      # Hybrid, multi-cloud, DNS, load balancing (4 files)
-├── practice-questions/         # Per-cert question banks (34 files + template)
-├── troubleshooting/            # Per-platform troubleshooting (4 files)
-└── well-architected/           # AWS / Azure / GCP frameworks (3 files)
+├── architecture-patterns/      # Multi-cloud architecture write-ups
+├── cost-optimization/          # Per-cloud cost optimization playbooks
+├── hands-on-projects/          # guided builds + generated labs-by-cert.md index
+├── interview-prep/             # Role-based interview prep
+├── migration-guides/           # On-prem and cloud-to-cloud migration
+├── networking-deep-dives/      # Hybrid, multi-cloud, DNS, load balancing
+├── practice-questions/         # Per-cert question banks
+├── troubleshooting/            # Per-platform troubleshooting
+└── well-architected/           # AWS / Azure / GCP frameworks
 ```
 
 ### Top-level resource files
@@ -126,14 +124,14 @@ resources/
 ```
 resources/
 ├── budget-study-plan.md
-├── certification-roadmap-*.md          # 11 career-focused roadmaps
-├── cli-cheat-sheet-*.md                # 9 CLI quick references
+├── certification-roadmap-*.md          # career-focused roadmaps
+├── cli-cheat-sheet-*.md                # CLI quick references
 ├── community-resources.md
 ├── exam-day-checklist.md
 ├── free-tier-guide.md
 ├── practice-resources.md
 ├── recommended-courses.md
-├── service-comparison-*.md             # 12 cross-cloud comparisons
+├── service-comparison-*.md             # cross-cloud comparisons
 └── study-strategies.md
 ```
 
@@ -363,8 +361,8 @@ Because a Mermaid diagram carries no alt text, give it a caption or a sentence o
 ### Where to add diagrams
 
 Highest-ROI pages for diagrams:
-- `learn/cloud-from-scratch.md`, `learn/ai-from-scratch.md` (foundational paths)
-- `learn/concepts/` AI pages: transformer-architecture, RAG, agents
+- `learn/cloud-from-scratch.md` (the foundational path)
+- `learn/concepts/` pages: VPCs, load balancing, Kubernetes, CDNs
 - `resources/architecture-patterns/` (every pattern benefits from a diagram)
 - `resources/networking-deep-dives/` (network topologies)
 
@@ -406,13 +404,13 @@ When a vendor retires a cert:
 5. Update any roadmaps that recommended the retired cert
 6. Add an entry to `CHANGELOG.md`
 
-The canonical retired-banner pattern is in [exams/aws/specialty/data-analytics-das-c01/README.md](https://data.noblerworks.com/exams/aws/specialty/data-analytics-das-c01/).
+The canonical retired-banner pattern is in [exams/aws/associate/sysops-administrator-soa-c02/README.md](../exams/aws/associate/sysops-administrator-soa-c02/README.md).
 
 ---
 
 ## How aspirational / non-cert study tracks are handled
 
-Some dirs in `exams/` cover topics that aren't tied to a specific certification (e.g., the Anthropic Prompt Engineering Specialist track, AWS Quantum before formal exam announcement, cross-cert GenAI study tracks). These get a clear disclaimer:
+Some dirs in `exams/` cover topics that aren't tied to a specific certification (e.g., AWS Quantum before formal exam announcement). These get a clear disclaimer:
 
 ```markdown
 > ℹ️ **Study track, not an official certification.** [Vendor] does not currently run a discrete certification for this material. Use this as a self-directed proficiency track.
@@ -424,13 +422,7 @@ The README and STUDY-HUB call these out as "study tracks" separately from certif
 
 ## Counts and consistency
 
-The README, STUDY-HUB, and CLAUDE.md all claim specific counts:
-
-- 148 certifications
-- 3 study tracks
-- 27 providers
-
-When you add or remove a cert, update **all three** docs to keep counts consistent. The provider table in STUDY-HUB is the canonical source - everything else should match it.
+Cert, provider and study-track counts are generated, never typed. `docs/certs.json` (`totals`) is the source of truth, built by `build-certs-index.py`; the provider tables in README.md and STUDY-HUB.md are generated from it by `build-provider-indexes.py`; every other number in the README is checked by `check-readme-counts.py`. When you add or remove a cert, rerun those scripts rather than editing a figure by hand.
 
 For verification:
 

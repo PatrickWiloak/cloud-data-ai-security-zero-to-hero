@@ -640,3 +640,16 @@
     gap: 0 1.4rem;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Zero to Hero family bar (announce block in site-overrides/main.html) */
+/* Identical in cloud / data / security / ai zero-to-hero - edit all four. */
+/* ------------------------------------------------------------------ */
+.md-banner { background: #0a0a0a; color: #a3a3a3; border-bottom: 1px solid #262626; }
+.md-banner__inner { margin: 0 auto; padding: 0.35rem 0.8rem; font-size: 0.68rem; }
+.z2h-family { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 1.1rem; justify-content: center; }
+.z2h-family__brand { font-weight: 700; color: #fafafa; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.62rem; }
+.z2h-family a { color: #d4d4d4; text-decoration: none; font-weight: 600; border-bottom: 2px solid transparent; padding-bottom: 1px; }
+.z2h-family a:hover { color: #fff; border-bottom-color: var(--fam, #fff); }
+.z2h-family a[aria-current="page"] { color: var(--fam); border-bottom-color: var(--fam); }
+.z2h-family a.z2h-family__nw { font-weight: 400; color: #737373; }

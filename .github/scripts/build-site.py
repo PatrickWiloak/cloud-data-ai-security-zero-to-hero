@@ -488,7 +488,7 @@ SKIP_PREFIXES = ("http://", "https://", "mailto:", "tel:", "#", "//", "/")
 
 # Repo tooling that is deliberately not part of the site. Links to it are sent to
 # GitHub rather than dropped, because the pages they point at are real.
-GITHUB_BLOB = "https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/"
+GITHUB_BLOB = "https://github.com/PatrickWiloak/cloud-zero-to-hero/blob/main/"
 OFF_SITE_PREFIXES = (".github/", ".gitignore", ".markdownlint.json", ".cspell.json", "CODEOWNERS")
 
 

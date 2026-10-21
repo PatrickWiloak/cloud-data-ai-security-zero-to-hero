@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in improving this repo. It's a markdown knowledge base for cloud and AI - concepts, hands-on builds, references, and certification prep. The goal is accurate, well-linked, exam-aligned material that respects readers' time. Plain-English, no fluff.
+Thanks for your interest in improving this repo. It's a markdown knowledge base for cloud - AWS, Azure, GCP, OCI, Kubernetes, Linux, networking, Terraform, DevOps, SRE and FinOps: concepts, hands-on builds, references, and certification prep. The goal is accurate, well-linked, exam-aligned material that respects readers' time. Plain-English, no fluff.
 
 ## What kinds of contributions are welcome
 
@@ -12,6 +12,7 @@ Thanks for your interest in improving this repo. It's a markdown knowledge base 
 - **Resource updates**: better practice questions, scenarios, or hands-on lab walkthroughs.
 - **Roadmap additions** for under-served career paths.
 - **`learn/` content**: new concept pages (`learn/concepts/<topic>.md`), day-one onramp expansions, glossary additions. Keep concept pages 5-10 minute reads, plain English, no exam framing.
+- **Wrong-site content goes to the sibling repo.** Data, security and AI material belongs in [data-zero-to-hero](https://github.com/PatrickWiloak/data-zero-to-hero), [security-zero-to-hero](https://github.com/PatrickWiloak/security-zero-to-hero) or [ai-zero-to-hero](https://github.com/PatrickWiloak/ai-zero-to-hero). Link to it from here with an absolute URL rather than copying it in.
 - **Diagrams**: inline Mermaid in the page that needs it (the default), or a PNG under `assets/diagrams/<topic>/` when the diagram is too dense to read inline. See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md#visual-content-standards).
 
 ## What is out of scope
@@ -32,24 +33,22 @@ exams/<provider>/<cert-dir>/
     scenarios.md        # exam-style scenarios with explanations (optional but recommended)
     strategy.md         # exam day approach, time allocation (optional)
 learn/
-    concepts/           # bite-size topic pages (5-10 min reads), cloud + AI
+    concepts/           # bite-size topic pages (5-10 min reads), cloud primitives
     day-one/            # strict beginner on-ramp (terminal, git, HTTP, servers)
-    ai-from-scratch.md  # 8-phase non-cert AI path
     cloud-from-scratch.md  # 8-phase non-cert cloud path
-    glossary.md         # 200+ term reference
+    glossary.md         # term reference
     youtube.md          # curated video resources
 resources/
     architecture-patterns/      # multi-cloud architecture write-ups
     certification-roadmap-*.md  # career-focused learning paths
     cli-cheat-sheet-*.md        # tool quick references
-    compliance-guides/          # SOC 2, HIPAA, PCI DSS, GDPR, FedRAMP
     cost-optimization/          # per-cloud cost playbooks
-    decision-matrix-*.md        # score-driven product picks (vector DB, IaC, LLM serving)
+    decision-matrix-*.md        # score-driven product picks (IaC tool)
     hands-on-projects/          # guided builds
     interview-prep/             # role-based interview prep
     migration-guides/           # cloud migration playbooks
     networking-deep-dives/      # hybrid, multi-cloud, DNS, load balancing
-    playlist-*.md               # persona reading sequences (AI engineer, SRE, etc.)
+    playlist-*.md               # persona reading sequences (SRE, etc.)
     postmortem-*.md             # real-incident study guides mapped to cert domains
     practice-questions/         # per-cert question banks
     service-comparison-*.md     # cross-cloud service comparisons
@@ -82,7 +81,7 @@ The repo has a few specialized content shapes beyond the core cert dirs and conc
 - **`resources/decision-matrix-*.md`** - score-driven product picks. Lead paragraph (when you'd reach for this matrix), criteria-by-product table, per-product strengths / limitations, default pick, alternatives by use case. Examples: `decision-matrix-vector-database.md`, `decision-matrix-iac-tool.md`, `decision-matrix-llm-serving.md`.
 - **`resources/postmortem-*.md`** - real-incident study guides. Lead paragraph (incident summary in one sentence), timeline, root cause, what would have caught it, mapped cert exam domains, lessons cross-linked to repo concepts. Examples: `postmortem-aws-s3-2017.md`, `postmortem-cloudflare-regex-2019.md`, `postmortem-gcp-networking-2019.md`.
 - **`resources/playlist-*.md`** - persona reading sequences. Frontmatter with `persona` + `time-budget`, ordered list of repo links with one-sentence justifications, "what you'll be able to do at the end" summary. Examples: `playlist-ai-engineer-30min.md`, `playlist-sre-1hour.md`.
-- **`topics/<topic>.md`** - cross-pillar topic index. Mermaid "topic at a glance" diagram, then sections linking Learn / Compare / Reference / Build / Certify pages relevant to that topic. Existing topics: ai-ml-systems, databases, finops, iam, kubernetes, llms-and-genai, networking, observability, security, serverless, sre-and-reliability.
+- **`topics/<topic>.md`** - cross-pillar topic index. Mermaid "topic at a glance" diagram, then sections linking Learn / Compare / Reference / Build / Certify pages relevant to that topic. Existing topics: finops, kubernetes, networking, observability, platform-engineering, serverless, sre-and-reliability.
 
 ## Documentation link format
 
@@ -152,7 +151,7 @@ Keep these to one per page. Topic stays the source of truth; the video is a comp
 
 When a vendor retires a cert:
 
-1. Add a clear "RETIRED [DATE]" banner to the top of `README.md` and `fact-sheet.md` for that cert. See [exams/aws/specialty/data-analytics-das-c01/](https://data.noblerworks.com/exams/aws/specialty/data-analytics-das-c01/) for the canonical pattern.
+1. Add a clear "RETIRED [DATE]" banner to the top of `README.md` and `fact-sheet.md` for that cert. See [exams/aws/associate/sysops-administrator-soa-c02/](./exams/aws/associate/sysops-administrator-soa-c02/) for the canonical pattern.
 2. Link to the replacement cert (if any).
 3. Keep the original content intact for credential holders.
 4. Remove the cert from active counts in `README.md` and `STUDY-HUB.md`.

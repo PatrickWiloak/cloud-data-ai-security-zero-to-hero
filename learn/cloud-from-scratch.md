@@ -152,6 +152,7 @@ Create an IAM role that lets a Lambda function read from one specific S3 bucket 
 **Pointer**
 - [AWS IAM CLI cheat sheet](../resources/cli-cheat-sheet-aws.md)
 - Glossary: IAM, RBAC, Service account, OIDC, SSO, MFA, Secret
+- Going deeper on identity and cloud security: the [IAM topic index](https://security.noblerworks.com/topics/iam/) and [cloud security](https://security.noblerworks.com/topics/security/) on Security Zero to Hero
 
 You should now be able to explain why "let's just use root credentials" is a hangable offense.
 
@@ -256,6 +257,8 @@ Pick one [hands-on project](../resources/hands-on-projects/) and build it end to
 - [Azure Well-Architected](../resources/well-architected/azure-well-architected.md)
 - [GCP Well-Architected](../resources/well-architected/gcp-well-architected.md)
 - [Hands-On Projects](../resources/hands-on-projects/)
+- Compliance (SOC 2, HIPAA, PCI DSS, GDPR, FedRAMP): [compliance guides](https://security.noblerworks.com/resources/compliance-guides/) on Security Zero to Hero
+- Data pipelines and databases: [Data Zero to Hero](https://data.noblerworks.com/)
 
 You should now be able to design a small production system and defend the choices.
 
@@ -265,7 +268,8 @@ You should now be able to design a small production system and defend the choice
 
 - **Want a cert?** Head to the **[Study Hub](../STUDY-HUB.md)** and pick a path.
 - **Want depth in one cloud?** Pick AWS, Azure, or GCP and follow its associate-level path - the certification material has the most depth.
-- **Want depth in AI?** Try **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** next.
+- **Want depth in AI?** Try **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** on AI Zero to Hero next.
+- **Want depth in data or security?** [Data Zero to Hero](https://data.noblerworks.com/) and [Security Zero to Hero](https://security.noblerworks.com/) pick up where Phases 2, 4 and 8 leave off.
 - **Want hands-on work?** Pick another [hands-on project](../resources/hands-on-projects/).
 
 Good engineers cycle through "build a thing → read a book → build a thing → fix a bug at 3am → read another book." This is the cycle. The cloud is too big to ever finish learning.
