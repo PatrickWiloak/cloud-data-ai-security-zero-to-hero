@@ -647,7 +647,11 @@ def strip_heading_emoji() -> int:
                 if stripped and stripped != text:
                     anchor = slug(text, "-")
                     eol = "\n" if line.endswith("\n") else ""
-                    out_lines.append(f"{hm.group('hashes')} {stripped} {{: #{anchor} }}{eol}")
+                    # An H1 becomes the page's nav label, and MkDocs keeps the
+                    # attr_list text in that label ("Glossary {: -glossary }"), so
+                    # page titles get no pinned id - nothing links to an H1 anchor.
+                    pin = "" if hm.group("hashes") == "#" else f" {{: #{anchor} }}"
+                    out_lines.append(f"{hm.group('hashes')} {stripped}{pin}{eol}")
                     dirty = True
                     continue
             out_lines.append(line)
