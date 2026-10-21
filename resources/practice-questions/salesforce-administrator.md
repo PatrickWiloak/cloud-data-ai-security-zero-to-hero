@@ -285,5 +285,5 @@ D. A Rollback button in Setup that reverts the organization to its state before 
 
 - [Salesforce Administrator cert page](../../exams/salesforce/administrator/) - notes, practice plan, strategy
 - [Platform Developer I practice questions](./salesforce-platform-developer-1.md) - the programmatic counterpart
-- [IAM explained](../../learn/concepts/iam-explained.md) - profiles and permissions in context
+- [IAM explained](https://security.noblerworks.com/learn/concepts/iam-explained/) - profiles and permissions in context
 - **[📖 Salesforce Trailhead](https://trailhead.salesforce.com/credentials/administrator)** - official exam guide and study path

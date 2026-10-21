@@ -163,5 +163,5 @@ When does IaaS still come up?
 
 - **[Serverless explained](./serverless-explained.md)** - the most common modern PaaS pattern
 - **[Containers vs VMs](./containers-vs-vms.md)** - the unit IaaS and PaaS run
-- **[Shared responsibility model](./shared-responsibility-model.md)** - whose job is security at each layer
+- **[Shared responsibility model](https://security.noblerworks.com/learn/concepts/shared-responsibility-model/)** - whose job is security at each layer
 - **[Glossary: IaaS, PaaS, SaaS](../glossary.md#cloud-fundamentals)**

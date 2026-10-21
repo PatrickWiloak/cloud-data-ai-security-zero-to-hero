@@ -625,9 +625,9 @@ Cost: $298
 2. **Leverage Service Comparison Guides:**
    - [Compute Service Comparison](service-comparison-compute.md)
    - [Storage Service Comparison](service-comparison-storage.md)
-   - [Database Service Comparison](service-comparison-databases.md)
+   - [Database Service Comparison](https://data.noblerworks.com/resources/service-comparison-databases/)
    - [Networking Service Comparison](service-comparison-networking.md)
-   - [AI/ML Service Comparison](service-comparison-ai-ml.md)
+   - [AI/ML Service Comparison](https://ai.noblerworks.com/tools/comparisons/cloud-ai-ml-services/)
 
 3. **Build Cross-Platform Projects:**
    - Deploy same application on all clouds
@@ -1201,7 +1201,7 @@ Good luck on your certification journey!
 
 - [Compute Service Comparison](service-comparison-compute.md)
 - [Storage Service Comparison](service-comparison-storage.md)
-- [Database Service Comparison](service-comparison-databases.md)
+- [Database Service Comparison](https://data.noblerworks.com/resources/service-comparison-databases/)
 - [Networking Service Comparison](service-comparison-networking.md)
-- [AI/ML Service Comparison](service-comparison-ai-ml.md)
+- [AI/ML Service Comparison](https://ai.noblerworks.com/tools/comparisons/cloud-ai-ml-services/)
 

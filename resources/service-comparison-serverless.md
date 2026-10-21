@@ -258,6 +258,6 @@ This guide compares serverless compute, event routing, workflow orchestration, a
 **Related Guides:**
 - [Compute Service Comparison](./service-comparison-compute.md)
 - [Containers and Kubernetes Comparison](./service-comparison-containers-kubernetes.md)
-- [Messaging and Queues Comparison](./service-comparison-messaging-queues.md)
-- [Database Service Comparison](./service-comparison-databases.md)
+- [Messaging and Queues Comparison](https://data.noblerworks.com/resources/service-comparison-messaging-queues/)
+- [Database Service Comparison](https://data.noblerworks.com/resources/service-comparison-databases/)
 - [Topic: Serverless](../topics/serverless.md)

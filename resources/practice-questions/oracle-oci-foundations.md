@@ -285,6 +285,6 @@ D. One instance
 
 - [OCI Foundations cert page](../../exams/oracle/oci-foundations/) - notes, practice plan, strategy
 - [OCI Architect Associate practice questions](./oracle-oci-architect-associate.md) - the next level up
-- [OCI AI Foundations practice questions](./oracle-oci-ai-foundations.md) - the AI sibling
+- [OCI AI Foundations practice questions](https://ai.noblerworks.com/certifications/practice-questions/oracle-oci-ai-foundations/) - the AI sibling
 - [What is cloud computing?](../../learn/concepts/what-is-cloud-computing.md) - plain-English foundation
 - **[📖 Oracle University certification](https://education.oracle.com/oracle-certification-path/pFamily_647)** - official exam pages

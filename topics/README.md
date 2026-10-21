@@ -12,16 +12,16 @@ If you want everything the repo has on a given subject - the plain-English expla
 
 ## Browse by topic
 
-- **[LLMs and GenAI](./llms-and-genai.md)** - language models, RAG, agents, MCP, fine-tuning, eval, inference, the whole AI stack
-- **[AI/ML systems](./ai-ml-systems.md)** - production ML, training infra, MLOps, model deployment, GPU certs (broader than just LLMs)
-- **[Identity and IAM](./iam.md)** - authentication, authorization, federation, roles vs policies, SSO, RBAC vs ABAC
+- **[LLMs and GenAI](https://ai.noblerworks.com/learn/)** - language models, RAG, agents, MCP, fine-tuning, eval, inference, the whole AI stack
+- **[AI/ML systems](https://ai.noblerworks.com/build/)** - production ML, training infra, MLOps, model deployment, GPU certs (broader than just LLMs)
+- **[Identity and IAM](https://security.noblerworks.com/topics/iam/)** - authentication, authorization, federation, roles vs policies, SSO, RBAC vs ABAC
 - **[Networking](./networking.md)** - VPCs, hybrid connectivity, DNS, load balancing, multi-cloud networking
-- **[Databases](./databases.md)** - SQL, NoSQL, vector DBs, data warehouses, lakehouses, choosing per workload
-- **[Data engineering](./data-engineering.md)** - pipelines, ETL/ELT, batch vs streaming, modeling, partitioning, quality and lineage
+- **[Databases](https://data.noblerworks.com/topics/databases/)** - SQL, NoSQL, vector DBs, data warehouses, lakehouses, choosing per workload
+- **[Data engineering](https://data.noblerworks.com/topics/data-engineering/)** - pipelines, ETL/ELT, batch vs streaming, modeling, partitioning, quality and lineage
 - **[Observability](./observability.md)** - logs, metrics, traces, dashboards, alerting, the three pillars of observability
 - **[SRE and reliability](./sre-and-reliability.md)** - SLOs, chaos engineering, DR, multi-region, blast-radius reduction
-- **[Security](./security.md)** - shared responsibility, zero trust, secrets, threat detection, compliance
-- **[AI security](./ai-security.md)** - prompt injection, agent and tool security, model supply chain, AI governance
+- **[Security](https://security.noblerworks.com/topics/security/)** - shared responsibility, zero trust, secrets, threat detection, compliance
+- **[AI security](https://ai.noblerworks.com/safety/)** - prompt injection, agent and tool security, model supply chain, AI governance
 - **[Serverless](./serverless.md)** - functions, container-based serverless, event-driven, scale-to-zero
 - **[FinOps](./finops.md)** - cloud cost accountability, optimization, the FinOps cert family
 - **[Kubernetes](./kubernetes.md)** - K8s primitives, distributions, security, operations, certs

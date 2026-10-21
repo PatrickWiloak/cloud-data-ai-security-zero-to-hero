@@ -14,7 +14,7 @@ Seven reads in order, ~60 minutes. By the end you have working mental models for
 2. **[Idempotency explained](../learn/concepts/idempotency-explained.md)** (~6 min)
    Retry-safe operations. The single design property that makes incident response (and resilient systems) possible.
 
-3. **[Eventual consistency](../learn/concepts/eventual-consistency.md)** (~7 min)
+3. **[Eventual consistency](https://data.noblerworks.com/learn/concepts/eventual-consistency/)** (~7 min)
    Why distributed systems sometimes show stale data, and why "make it strongly consistent" is rarely the right answer in production.
 
 4. **[Architecture pattern: disaster recovery](./architecture-patterns/disaster-recovery-patterns.md)** (~12 min)
@@ -70,6 +70,6 @@ Read these alongside the playlist:
 
 ## Related playlists
 
-- [AI engineer in 30 min](./playlist-ai-engineer-30min.md)
-- [Cloud security in 1 hour](./playlist-cloud-security-1hour.md)
-- [Data engineer in 1 hour](./playlist-data-engineer-1hour.md)
+- [AI engineer in 30 min](https://ai.noblerworks.com/learn/start-here/ai-engineer-path/)
+- [Cloud security in 1 hour](https://security.noblerworks.com/resources/playlist-cloud-security-1hour/)
+- [Data engineer in 1 hour](https://data.noblerworks.com/resources/playlist-data-engineer-1hour/)

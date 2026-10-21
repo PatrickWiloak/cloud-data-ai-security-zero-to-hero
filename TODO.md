@@ -248,7 +248,7 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 
 The repo's 3.0M words had no search: navigation was GitHub's file listing. Every
 page is now also published at
-[cloud.noblerworks.com](https://cloud.noblerworks.com/).
+[cloud.noblerworks.com](README.md).
 
 The markdown tree is unchanged and stays the source of truth. `build-site.py`
 adapts the tree to MkDocs at build time rather than restructuring the tree for

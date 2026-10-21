@@ -86,7 +86,7 @@ Spend at least 15-20 hours in a lab. Subnetting and troubleshooting questions ar
 
 ## Companion Materials
 
-- **[CompTIA Security+ (SY0-701)](../security-plus/README.md)** - Direct follow-on cert. Network security overlaps heavily; many candidates take Net+ then Sec+ within the same year.
+- **[CompTIA Security+ (SY0-701)](https://security.noblerworks.com/exams/comptia/security-plus/)** - Direct follow-on cert. Network security overlaps heavily; many candidates take Net+ then Sec+ within the same year.
 - **[AWS Advanced Networking - Specialty (ANS-C01)](../../aws/specialty/advanced-networking-ans-c01/README.md)** - Cloud networking deep dive. Network+ subnetting, BGP, and VPN concepts are direct prerequisites in spirit.
 - **[Cisco CCNA (200-301)](../../cisco/ccna-200-301/README.md)** - Vendor-specific deeper dive into routing/switching. CCNA covers everything in Network+ plus Cisco IOS configuration. Many people study them in parallel.
 - **[GCP Professional Cloud Network Engineer](../../gcp/cloud-network-engineer/README.md)** - GCP analogue to AWS ANS. Useful if your stack is on Google Cloud.

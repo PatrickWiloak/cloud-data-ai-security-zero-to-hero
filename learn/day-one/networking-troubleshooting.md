@@ -133,6 +133,6 @@ In cloud, also check: security groups / NSGs / firewall rules, route tables, NAT
 ## What to look at next
 
 - **[DNS explained](../concepts/dns-explained.md)** - the lookup layer
-- **[TLS and HTTPS](../concepts/tls-and-https.md)** - what TLS actually does
+- **[TLS and HTTPS](https://security.noblerworks.com/learn/concepts/tls-and-https/)** - what TLS actually does
 - **[VPC explained](../concepts/vpc-explained.md)** - where most cloud network "issues" are actually security group rules
 - **[What is a server?](./what-is-a-server.md)** - what's at the other end

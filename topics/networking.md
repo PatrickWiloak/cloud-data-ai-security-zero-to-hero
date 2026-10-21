@@ -26,7 +26,7 @@ flowchart LR
 
 - [VPC explained](../learn/concepts/vpc-explained.md) - private network basics, CIDR, subnets, route tables
 - [DNS explained](../learn/concepts/dns-explained.md) - resolution, records, recursion, caching
-- [TLS and HTTPS](../learn/concepts/tls-and-https.md) - what TLS actually does
+- [TLS and HTTPS](https://security.noblerworks.com/learn/concepts/tls-and-https/) - what TLS actually does
 - [CDN explained](../learn/concepts/cdn-explained.md) - edge caching, origin shielding
 - [Regions and availability zones](../learn/concepts/regions-and-availability-zones.md) - the geography of cloud
 
@@ -76,7 +76,7 @@ flowchart LR
 - [AWS Solutions Architect Professional (SAP-C02)](../exams/aws/professional/solutions-architect-pro-sap-c02/)
 - [AWS Advanced Networking Specialty (ANS-C01)](../exams/aws/specialty/advanced-networking-ans-c01/)
 - [GCP Cloud Network Engineer](../exams/gcp/cloud-network-engineer/)
-- [NVIDIA Networking Professional](../exams/nvidia/networking-professional/) - data center fabric for AI workloads
+- [NVIDIA Networking Professional](https://ai.noblerworks.com/certifications/nvidia/networking-professional/) - data center fabric for AI workloads
 
 **Service mesh and ingress**
 - [Istio Certified Associate (ICA)](../exams/kubernetes/ica/)

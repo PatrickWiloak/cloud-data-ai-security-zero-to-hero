@@ -20,7 +20,7 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 
 **Brand new to all of this?** Start with **[Day One](../day-one/)** - terminal, git, HTTP, and servers - then come back here once that vocabulary feels familiar.
 
-**Want a curated path through these?** Try **[Cloud from Scratch](../cloud-from-scratch.md)** or **[AI from Scratch](../ai-from-scratch.md)**, which order the concepts into 8-phase paths.
+**Want a curated path through these?** Try **[Cloud from Scratch](../cloud-from-scratch.md)** or **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)**, which order the concepts into 8-phase paths.
 
 **Want them grouped by subject across the whole repo?** See the **[topic indexes](../../topics/)**.
 
@@ -33,9 +33,9 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | [What is cloud computing?](./what-is-cloud-computing.md) | You want the foundational mental model |
 | [IaaS vs PaaS vs SaaS](./iaas-paas-saas.md) | The three terms keep coming up |
 | [Regions and availability zones](./regions-and-availability-zones.md) | You're asking "where does my code actually run?" |
-| [Shared responsibility model](./shared-responsibility-model.md) | You're wondering "what's AWS's job vs mine?" |
+| [Shared responsibility model](https://security.noblerworks.com/learn/concepts/shared-responsibility-model/) | You're wondering "what's AWS's job vs mine?" |
 | [VPC explained](./vpc-explained.md) | Networking inside the cloud confuses you |
-| [IAM explained](./iam-explained.md) | "Roles vs policies vs federation" is fuzzy |
+| [IAM explained](https://security.noblerworks.com/learn/concepts/iam-explained/) | "Roles vs policies vs federation" is fuzzy |
 | [Serverless explained](./serverless-explained.md) | You keep hearing "serverless" without a clear definition |
 | [CDN explained](./cdn-explained.md) | You see CloudFront/CloudFlare/Akamai and wonder what they do |
 | [Caching explained](./caching-explained.md) | You want to know why caches are fast and why they lie |
@@ -58,68 +58,68 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | [CI/CD explained](./cicd-explained.md) | "Pipelines" is hand-waved everywhere; you want specifics |
 | [Observability basics](./observability-basics.md) | "Logs vs metrics vs traces" needs a one-page answer |
 | [Idempotency explained](./idempotency-explained.md) | You're worried about retries doing things twice |
-| [Eventual consistency](./eventual-consistency.md) | A read returned stale data and you want to know why |
-| [Queues vs streams](./queues-vs-streams.md) | You can't pick between SQS and Kinesis |
+| [Eventual consistency](https://data.noblerworks.com/learn/concepts/eventual-consistency/) | A read returned stale data and you want to know why |
+| [Queues vs streams](https://data.noblerworks.com/learn/concepts/queues-vs-streams/) | You can't pick between SQS and Kinesis |
 | [Deployment strategies](./deployment-strategies.md) | Rolling, blue-green, canary: which and when |
 
 ## 🗄️ Data and Databases
 
 | Topic | Read when... |
 |-------|--------------|
-| [SQL vs NoSQL](./sql-vs-nosql.md) | You're choosing a database and the options blur together |
-| [Eventual consistency](./eventual-consistency.md) | A read returned stale data and you want to know why |
+| [SQL vs NoSQL](https://data.noblerworks.com/learn/concepts/sql-vs-nosql/) | You're choosing a database and the options blur together |
+| [Eventual consistency](https://data.noblerworks.com/learn/concepts/eventual-consistency/) | A read returned stale data and you want to know why |
 | [Caching explained](./caching-explained.md) | You want to know why caches are fast and why they lie |
-| [Warehouses, lakes, and lakehouses](./warehouses-lakes-lakehouses.md) | Someone said "lakehouse" and you nodded |
-| [ETL vs ELT](./etl-vs-elt.md) | You want to know why the transform moved after the load |
-| [Batch vs streaming](./batch-vs-streaming.md) | You're deciding whether a pipeline needs to be real-time |
-| [Data modeling for analytics](./data-modeling-for-analytics.md) | A report double-counted and you need to know how |
-| [File formats and partitioning](./file-formats-and-partitioning.md) | A query is slow or a warehouse bill is high |
-| [Data pipelines and orchestration](./data-pipelines-and-orchestration.md) | Your cron jobs have started depending on each other |
-| [Data quality and lineage](./data-quality-and-lineage.md) | A dashboard showed a wrong number and nothing errored |
+| [Warehouses, lakes, and lakehouses](https://data.noblerworks.com/learn/concepts/warehouses-lakes-lakehouses/) | Someone said "lakehouse" and you nodded |
+| [ETL vs ELT](https://data.noblerworks.com/learn/concepts/etl-vs-elt/) | You want to know why the transform moved after the load |
+| [Batch vs streaming](https://data.noblerworks.com/learn/concepts/batch-vs-streaming/) | You're deciding whether a pipeline needs to be real-time |
+| [Data modeling for analytics](https://data.noblerworks.com/learn/concepts/data-modeling-for-analytics/) | A report double-counted and you need to know how |
+| [File formats and partitioning](https://data.noblerworks.com/learn/concepts/file-formats-and-partitioning/) | A query is slow or a warehouse bill is high |
+| [Data pipelines and orchestration](https://data.noblerworks.com/learn/concepts/data-pipelines-and-orchestration/) | Your cron jobs have started depending on each other |
+| [Data quality and lineage](https://data.noblerworks.com/learn/concepts/data-quality-and-lineage/) | A dashboard showed a wrong number and nothing errored |
 
 ## 🌐 Networking and Security
 
 | Topic | Read when... |
 |-------|--------------|
 | [DNS explained](./dns-explained.md) | You want to understand how the internet finds things |
-| [TLS and HTTPS](./tls-and-https.md) | You want to know what the lock icon actually means |
-| [Secrets management](./secrets-management.md) | You need credentials in an app without leaving copies everywhere |
+| [TLS and HTTPS](https://security.noblerworks.com/learn/concepts/tls-and-https/) | You want to know what the lock icon actually means |
+| [Secrets management](https://security.noblerworks.com/learn/concepts/secrets-management/) | You need credentials in an app without leaving copies everywhere |
 
 ## 🤖 AI / Machine Learning - foundations
 
 | Topic | Read when... |
 |-------|--------------|
-| [LLM basics](./llm-basics.md) | You want to understand what a language model actually does |
-| [Transformer architecture](./transformer-architecture.md) | You're ready to look inside the model |
-| [Embeddings and vector search](./embeddings-and-vector-search.md) | You want to understand semantic search |
-| [Context windows and management](./context-windows-and-management.md) | You're hitting token limits in production |
-| [Multimodal models](./multimodal-models.md) | You want to use images / audio / video in prompts |
+| [LLM basics](https://ai.noblerworks.com/learn/concepts/llm-basics/) | You want to understand what a language model actually does |
+| [Transformer architecture](https://ai.noblerworks.com/learn/concepts/transformer-architecture/) | You're ready to look inside the model |
+| [Embeddings and vector search](https://ai.noblerworks.com/learn/concepts/embeddings-and-vector-search/) | You want to understand semantic search |
+| [Context windows and management](https://ai.noblerworks.com/learn/concepts/context-windows-and-management/) | You're hitting token limits in production |
+| [Multimodal models](https://ai.noblerworks.com/learn/concepts/multimodal-models/) | You want to use images / audio / video in prompts |
 
 ## 🤖 AI / Machine Learning - building with LLMs
 
 | Topic | Read when... |
 |-------|--------------|
-| [Prompt engineering](./prompt-engineering.md) | You want to write prompts that actually work |
-| [Tool use and function calling](./tool-use-and-function-calling.md) | You want the model to call your code |
-| [MCP explained](./mcp-explained.md) | "Model Context Protocol" keeps coming up |
-| [Structured outputs](./structured-outputs.md) | You want guaranteed-valid JSON from the model |
-| [RAG explained](./rag-explained.md) | "Retrieval-augmented generation" is everywhere |
-| [Fine-tuning vs RAG](./fine-tuning-vs-rag.md) | You want to know which one to reach for |
-| [AI agents explained](./agents-explained.md) | You're trying to figure out what "agent" really means |
-| [Agentic loops](./agentic-loops.md) | You want the deep-dive on the loop, not just the concept |
-| [Prompt caching](./prompt-caching.md) | Your input costs are higher than they should be |
+| [Prompt engineering](https://ai.noblerworks.com/learn/concepts/prompt-engineering/) | You want to write prompts that actually work |
+| [Tool use and function calling](https://ai.noblerworks.com/learn/concepts/tool-use-and-function-calling/) | You want the model to call your code |
+| [MCP explained](https://ai.noblerworks.com/learn/concepts/mcp-explained/) | "Model Context Protocol" keeps coming up |
+| [Structured outputs](https://ai.noblerworks.com/learn/concepts/structured-outputs/) | You want guaranteed-valid JSON from the model |
+| [RAG explained](https://ai.noblerworks.com/learn/concepts/rag-explained/) | "Retrieval-augmented generation" is everywhere |
+| [Fine-tuning vs RAG](https://ai.noblerworks.com/learn/concepts/fine-tuning-vs-rag/) | You want to know which one to reach for |
+| [AI agents explained](https://ai.noblerworks.com/learn/concepts/agents-explained/) | You're trying to figure out what "agent" really means |
+| [Agentic loops](https://ai.noblerworks.com/learn/concepts/agentic-loops/) | You want the deep-dive on the loop, not just the concept |
+| [Prompt caching](https://ai.noblerworks.com/learn/concepts/prompt-caching/) | Your input costs are higher than they should be |
 
 ## 🤖 AI / Machine Learning - operations
 
 | Topic | Read when... |
 |-------|--------------|
-| [Evals for LLMs](./evals-for-llms.md) | You're shipping LLM features and wondering how to test them |
-| [Guardrails and safety](./guardrails-and-safety.md) | You're worried about prompt injection or unsafe output |
-| [Prompt injection explained](./prompt-injection-explained.md) | You want to know why prompt injection has no clean fix |
-| [AI threat modeling](./ai-threat-modeling.md) | You're designing an AI feature and want to find the risk early |
-| [Inference servers](./inference-servers.md) | You're considering self-hosting an open-weights model |
-| [Quantization and distillation](./quantization-and-distillation.md) | You want a smaller, faster model |
-| [GPUs for AI](./gpus-for-ai.md) | You want to know what VRAM, FLOPS, and bandwidth actually decide |
+| [Evals for LLMs](https://ai.noblerworks.com/learn/concepts/evals-for-llms/) | You're shipping LLM features and wondering how to test them |
+| [Guardrails and safety](https://ai.noblerworks.com/learn/concepts/guardrails-and-safety/) | You're worried about prompt injection or unsafe output |
+| [Prompt injection explained](https://ai.noblerworks.com/safety/security/prompt-injection-explained/) | You want to know why prompt injection has no clean fix |
+| [AI threat modeling](https://ai.noblerworks.com/safety/security/ai-threat-modeling/) | You're designing an AI feature and want to find the risk early |
+| [Inference servers](https://ai.noblerworks.com/learn/concepts/inference-servers/) | You're considering self-hosting an open-weights model |
+| [Quantization and distillation](https://ai.noblerworks.com/learn/concepts/quantization-and-distillation/) | You want a smaller, faster model |
+| [GPUs for AI](https://ai.noblerworks.com/learn/concepts/gpus-for-ai/) | You want to know what VRAM, FLOPS, and bandwidth actually decide |
 
 ---
 
@@ -127,7 +127,7 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 
 - **[Glossary](../glossary.md)** - 200+ terms, one-line definitions
 - **[Cloud from Scratch](../cloud-from-scratch.md)** - structured 8-phase cloud path
-- **[AI from Scratch](../ai-from-scratch.md)** - structured AI/LLM learning path
+- **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** - structured AI/LLM learning path
 - **[YouTube curation](../youtube.md)** - videos for visual learners
 - **[Topic indexes](../../topics/)** - browse Learn + Build + Compare + Certify by subject
 

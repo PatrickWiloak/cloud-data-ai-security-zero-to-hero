@@ -31,7 +31,7 @@ flowchart LR
 
 - [Compute](../resources/service-comparison-compute.md) - the largest single cost line for most workloads
 - [Storage](../resources/service-comparison-storage.md) - tiering, lifecycle, egress
-- [Databases](../resources/service-comparison-databases.md) - managed DBs are cost-heavy; choosing right matters
+- [Databases](https://data.noblerworks.com/resources/service-comparison-databases/) - managed DBs are cost-heavy; choosing right matters
 
 ---
 

@@ -375,5 +375,5 @@ D. Paste it as written, because AI tools give accurate results and so the full l
 
 - [A+ cert page](../../exams/comptia/a-plus/) - notes, fact sheet, practice plan, strategy, scenarios
 - [Network+ practice questions](./comptia-network-plus.md) - the natural next step
-- [Security+ practice questions](./comptia-security-plus.md) - the security baseline after A+
+- [Security+ practice questions](https://security.noblerworks.com/resources/practice-questions/comptia-security-plus/) - the security baseline after A+
 - **[📖 CompTIA A+](https://www.comptia.org/en-us/certifications/a/)** - official exam details and objectives

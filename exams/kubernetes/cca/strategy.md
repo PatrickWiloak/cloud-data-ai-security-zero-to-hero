@@ -90,4 +90,4 @@ Layer 7 rules are enforced by redirecting matching traffic through **Envoy**, wh
 - [Practice plan](./practice-plan.md)
 - [Scenarios](./scenarios.md)
 - [Fact sheet](./fact-sheet.md)
-- [CKS](../cks/) - Kubernetes security including NetworkPolicy
+- [CKS](https://security.noblerworks.com/exams/kubernetes/cks/) - Kubernetes security including NetworkPolicy

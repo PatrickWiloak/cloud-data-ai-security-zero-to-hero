@@ -67,4 +67,4 @@ difficulty: intermediate
 ## Related
 
 - [GCP certifications index](../README.md)
-- [IAM topic index](../../../topics/iam.md)
+- [IAM topic index](https://security.noblerworks.com/topics/iam/)

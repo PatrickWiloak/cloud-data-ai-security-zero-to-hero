@@ -223,7 +223,7 @@ After this, you can navigate the rest of YouTube without getting lost. Come back
 ## 🔁 Companion docs
 
 - **[Cloud from Scratch](./cloud-from-scratch.md)** - structured cloud learning path
-- **[AI from Scratch](./ai-from-scratch.md)** - structured AI learning path
+- **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** - structured AI learning path
 - **[Glossary](./glossary.md)** - look up any term you encounter in these videos
 - **[Concepts](./concepts/)** - bite-size written explanations of single topics
 

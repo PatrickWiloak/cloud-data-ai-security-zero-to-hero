@@ -105,5 +105,5 @@ You will learn more from this than from 5 hours of reading.
 
 - **[IaaS vs PaaS vs SaaS](./iaas-paas-saas.md)** - the three service models
 - **[Regions and availability zones](./regions-and-availability-zones.md)** - where your code actually runs
-- **[Shared responsibility model](./shared-responsibility-model.md)** - what's the provider's job vs yours
+- **[Shared responsibility model](https://security.noblerworks.com/learn/concepts/shared-responsibility-model/)** - what's the provider's job vs yours
 - **[Glossary: Cloud Fundamentals](../glossary.md#cloud-fundamentals)**

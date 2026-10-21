@@ -143,7 +143,7 @@ This handles duplicates at the source level (webhook providers retry on non-2xx 
 
 ## What to look at next
 
-- **[Eventual consistency](./eventual-consistency.md)** - the world that demands idempotency
-- **[Queues vs streams](./queues-vs-streams.md)** - delivery semantics
-- **[Topic: databases](../../topics/databases.md)** - where dedup state usually lives
+- **[Eventual consistency](https://data.noblerworks.com/learn/concepts/eventual-consistency/)** - the world that demands idempotency
+- **[Queues vs streams](https://data.noblerworks.com/learn/concepts/queues-vs-streams/)** - delivery semantics
+- **[Topic: databases](https://data.noblerworks.com/topics/databases/)** - where dedup state usually lives
 - **[Architecture pattern: Event-driven](../../resources/architecture-patterns/event-driven-architecture.md)**

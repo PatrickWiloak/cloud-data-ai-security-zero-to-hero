@@ -285,7 +285,7 @@ This guide compares monitoring, logging, tracing, and alerting services across A
 ---
 
 **Related Guides:**
-- [LLM Observability Comparison](./service-comparison-llm-observability.md)
+- [LLM Observability Comparison](https://ai.noblerworks.com/tools/comparisons/llm-observability/)
 - [DevOps and CI/CD Comparison](./service-comparison-devops-cicd.md)
 - [Containers and Kubernetes Comparison](./service-comparison-containers-kubernetes.md)
 - [Topic: Observability](../topics/observability.md)

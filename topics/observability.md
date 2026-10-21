@@ -26,14 +26,14 @@ flowchart LR
 ## Learn
 
 - [Observability basics](../learn/concepts/observability-basics.md) - the three pillars, golden signals, when to use which
-- [Eventual consistency](../learn/concepts/eventual-consistency.md) - the failure modes you'll see in dashboards
+- [Eventual consistency](https://data.noblerworks.com/learn/concepts/eventual-consistency/) - the failure modes you'll see in dashboards
 
 ---
 
 ## Compare
 
 - [Observability and monitoring services](../resources/service-comparison-observability-monitoring.md) - CloudWatch vs Azure Monitor vs Cloud Operations, Datadog, New Relic
-- [LLM observability](../resources/service-comparison-llm-observability.md) - LangSmith, Langfuse, Helicone, Phoenix, Braintrust
+- [LLM observability](https://ai.noblerworks.com/tools/comparisons/llm-observability/) - LangSmith, Langfuse, Helicone, Phoenix, Braintrust
 
 ---
 
@@ -50,7 +50,7 @@ flowchart LR
 ## Build
 
 - [Set up a monitoring stack](../resources/hands-on-projects/setup-monitoring-stack.md) - Prometheus, Grafana, alerting end-to-end
-- [Set up an eval harness](../resources/hands-on-projects/set-up-eval-harness.md) - LLM-side observability and regression detection
+- [Set up an eval harness](https://ai.noblerworks.com/build/projects/set-up-eval-harness/) - LLM-side observability and regression detection
 
 ---
 
@@ -72,8 +72,8 @@ flowchart LR
 - [Red Hat RHCSA (EX200)](../exams/redhat/rhcsa-ex200/)
 
 **LLM observability** appears in:
-- [Anthropic Claude Developer Foundations cert](../exams/anthropic/claude-certified-developer-foundations/)
-- [NVIDIA AI Operations Professional](../exams/nvidia/ai-operations-professional/)
+- [Anthropic Claude Developer Foundations cert](https://ai.noblerworks.com/certifications/anthropic/claude-certified-developer-foundations/)
+- [NVIDIA AI Operations Professional](https://ai.noblerworks.com/certifications/nvidia/ai-operations-professional/)
 
 ---
 

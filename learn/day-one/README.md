@@ -31,7 +31,7 @@ This isn't cloud or AI yet. This is the bedrock under both. Skip this and the re
 10. **[JSON and YAML](./json-and-yaml.md)** - the two formats every config file uses, and their gotchas. (7 min)
 11. **[Reading error messages](./reading-error-messages.md)** - extracting the answer that is usually already in the error. (7 min)
 
-After these you have enough vocabulary to start [Cloud from Scratch](../cloud-from-scratch.md) or [AI from Scratch](../ai-from-scratch.md) without getting blocked every other paragraph.
+After these you have enough vocabulary to start [Cloud from Scratch](../cloud-from-scratch.md) or [AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/) without getting blocked every other paragraph.
 
 ## What you do NOT need to know yet
 
@@ -61,4 +61,4 @@ You'll come back when you actually need each piece. By then you'll have context 
 - **[Glossary](../glossary.md)** - look up any term you don't recognize
 - **[Concepts](../concepts/)** - the next layer up: bite-size topic explanations
 - **[Cloud from Scratch](../cloud-from-scratch.md)** - structured cloud path once you're ready
-- **[AI from Scratch](../ai-from-scratch.md)** - structured AI path once you're ready
+- **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** - structured AI path once you're ready

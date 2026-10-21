@@ -285,6 +285,6 @@ D. Two separate service names, with callers updated to choose between them by pe
 
 - [Consul Associate cert page](../../exams/hashicorp/consul-associate/) - notes, practice plan, strategy
 - [ICA practice questions](./cncf-ica.md) - Istio, the other major service mesh
-- [Vault Associate practice questions](./hashicorp-vault-associate.md) - the secrets sibling
+- [Vault Associate practice questions](https://security.noblerworks.com/resources/practice-questions/hashicorp-vault-associate/) - the secrets sibling
 - [Networking topic index](../../topics/networking.md) - service networking in context
 - **[📖 Consul documentation](https://developer.hashicorp.com/consul/docs)** - primary source

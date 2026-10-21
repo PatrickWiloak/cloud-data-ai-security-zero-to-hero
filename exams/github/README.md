@@ -4,14 +4,12 @@ Study guides for GitHub in this repo. For the full picture across every provider
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-5 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+3 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
 | [GitHub Foundations](foundations/) | - | Foundational | Ready | 5 |
-| [GitHub Advanced Security (GHAS)](advanced-security/) | - | Professional | Ready | 6 |
 | [GitHub Actions Certification](actions/) | - | - | Ready | 5 |
 | [GitHub Administration Certification](administration/) | - | - | Ready | 5 |
-| [GitHub Copilot](copilot/) | - | - | Ready | 6 |
 
 <!-- END GENERATED: provider-certs -->

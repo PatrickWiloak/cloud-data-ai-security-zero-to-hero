@@ -32,7 +32,7 @@ flowchart LR
 
 - [Serverless services](../resources/service-comparison-serverless.md) - Lambda vs Functions vs Cloud Run vs Cloudflare Workers
 - [Compute](../resources/service-comparison-compute.md) - where serverless fits next to VMs and containers
-- [Messaging and queues](../resources/service-comparison-messaging-queues.md) - the event sources serverless functions consume
+- [Messaging and queues](https://data.noblerworks.com/resources/service-comparison-messaging-queues/) - the event sources serverless functions consume
 
 ---
 
@@ -74,6 +74,6 @@ Certs that test serverless deeply:
 
 ## Related topics
 
-- [LLMs and GenAI](./llms-and-genai.md) - serverless functions are the standard glue for AI agents
+- [LLMs and GenAI](https://ai.noblerworks.com/learn/) - serverless functions are the standard glue for AI agents
 - [Observability](./observability.md) - serverless observability has its own gotchas (cold-start tracing)
 - [Kubernetes](./kubernetes.md) - the alternative when serverless doesn't fit

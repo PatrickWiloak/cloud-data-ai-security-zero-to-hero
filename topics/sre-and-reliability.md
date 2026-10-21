@@ -23,17 +23,17 @@ flowchart LR
 ## Learn
 
 - [Observability basics](../learn/concepts/observability-basics.md) - logs, metrics, traces, the three pillars
-- [Eventual consistency](../learn/concepts/eventual-consistency.md) - reliability under partial failure
+- [Eventual consistency](https://data.noblerworks.com/learn/concepts/eventual-consistency/) - reliability under partial failure
 - [Idempotency explained](../learn/concepts/idempotency-explained.md) - retry-safe operations are the foundation of resilience
 - [Regions and availability zones](../learn/concepts/regions-and-availability-zones.md) - the geography of resilience
-- [Queues vs streams](../learn/concepts/queues-vs-streams.md) - decoupling for reliability
+- [Queues vs streams](https://data.noblerworks.com/learn/concepts/queues-vs-streams/) - decoupling for reliability
 
 ---
 
 ## Compare
 
 - [Observability and monitoring](../resources/service-comparison-observability-monitoring.md) - CloudWatch vs Azure Monitor vs Cloud Operations vs Datadog vs New Relic
-- [Messaging and queues](../resources/service-comparison-messaging-queues.md) - SQS, Service Bus, Pub/Sub, Kafka - decoupling layer
+- [Messaging and queues](https://data.noblerworks.com/resources/service-comparison-messaging-queues/) - SQS, Service Bus, Pub/Sub, Kafka - decoupling layer
 
 ---
 

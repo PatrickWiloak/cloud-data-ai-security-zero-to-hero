@@ -64,10 +64,10 @@ flowchart TB
 
 **CNCF**
 - [KCNA - Kubernetes and Cloud Native Associate](../exams/kubernetes/kcna/) - foundational
-- [KCSA - Kubernetes Security Associate](../exams/kubernetes/kcsa/)
+- [KCSA - Kubernetes Security Associate](https://security.noblerworks.com/exams/kubernetes/kcsa/)
 - [CKA - Certified Kubernetes Administrator](../exams/kubernetes/cka/)
 - [CKAD - Certified Kubernetes Application Developer](../exams/kubernetes/ckad/)
-- [CKS - Certified Kubernetes Security Specialist](../exams/kubernetes/cks/)
+- [CKS - Certified Kubernetes Security Specialist](https://security.noblerworks.com/exams/kubernetes/cks/)
 - [PCA - Prometheus Certified Associate](../exams/kubernetes/pca/) - observability
 - [ICA - Istio Certified Associate](../exams/kubernetes/ica/) - service mesh
 

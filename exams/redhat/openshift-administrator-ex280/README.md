@@ -149,6 +149,6 @@ Vendor-neutral parallel: **Kubernetes CKA / CKAD / CKS**.
 ## Companion Materials in This Repo
 
 - **[Kubernetes CKA](../../kubernetes/cka/)** - vendor-neutral cluster admin
-- **[Kubernetes CKS](../../kubernetes/cks/)** - K8s security specialist
+- **[Kubernetes CKS](https://security.noblerworks.com/exams/kubernetes/cks/)** - K8s security specialist
 - **[Containers and Kubernetes service comparison](../../../resources/service-comparison-containers-kubernetes.md)** - cross-cloud
 - **[RHCSA](../rhcsa-ex200/)** - Linux foundation often required first

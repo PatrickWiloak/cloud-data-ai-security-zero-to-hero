@@ -375,4 +375,4 @@ Why each step matters:
 - [06 - Operating Systems](06-operating-systems.md#13-windows-editions) - Which editions support which security features
 - [08 - Software Troubleshooting](08-software-troubleshooting.md#34-pc-security-issues) - Recognizing infections from symptoms
 - [02 - Networking](02-networking.md) - Ports and SOHO network setup
-- [Security+ (SY0-701)](../../security-plus/README.md) - The next step for this material
+- [Security+ (SY0-701)](https://security.noblerworks.com/exams/comptia/security-plus/) - The next step for this material

@@ -285,6 +285,6 @@ D. Cancel manually from the Actions tab each time a newer commit arrives on the 
 
 - [GitHub Actions cert page](../../exams/github/actions/) - notes, practice plan, strategy
 - [GitHub Administration practice questions](./github-administration.md) - the enterprise exam
-- [GHAS practice questions](./github-advanced-security.md) - security scanning in the pipeline
+- [GHAS practice questions](https://security.noblerworks.com/resources/practice-questions/github-advanced-security/) - security scanning in the pipeline
 - [CI/CD explained](../../learn/concepts/cicd-explained.md) - pipelines in plain English
 - **[📖 GitHub Certifications](https://learn.github.com/certifications)** - official exam pages

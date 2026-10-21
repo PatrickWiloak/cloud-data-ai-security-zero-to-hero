@@ -288,5 +288,5 @@ D. IBM secures the cloud infrastructure; the customer owns data, identities, and
 - [IBM Cloud Advocate cert page](../../exams/ibm/cloud-advocate/) - notes, practice plan, strategy
 - [IBM Cloud Solution Architect practice questions](./ibm-cloud-solution-architect.md) - the architecture level
 - [What is cloud computing?](../../learn/concepts/what-is-cloud-computing.md) - plain-English foundation
-- [Shared responsibility model](../../learn/concepts/shared-responsibility-model.md) - question 15 in depth
+- [Shared responsibility model](https://security.noblerworks.com/learn/concepts/shared-responsibility-model/) - question 15 in depth
 - **[📖 IBM Training](https://www.ibm.com/training/)** - official certification pages

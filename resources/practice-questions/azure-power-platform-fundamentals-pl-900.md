@@ -285,6 +285,6 @@ D. Letting people close to the business build and automate solutions quickly, wi
 
 - [PL-900 cert page](../../exams/azure/pl-900/) - notes, practice plan, strategy
 - [PL-100 practice questions](./azure-power-platform-app-maker-pl-100.md) - the app maker next step
-- [PL-300 practice questions](./azure-power-bi-pl-300.md) - Power BI at analyst depth
+- [PL-300 practice questions](https://data.noblerworks.com/resources/practice-questions/azure-power-bi-pl-300/) - Power BI at analyst depth
 - [MS-900 practice questions](./azure-m365-fundamentals-ms-900.md) - the Microsoft 365 sibling
 - **[📖 PL-900 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/pl-900)** - official skills outline

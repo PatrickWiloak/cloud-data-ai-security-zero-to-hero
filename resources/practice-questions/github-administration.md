@@ -285,6 +285,6 @@ D. Cloud is GitHub-hosted and has the newest features; Server is self-hosted, gi
 
 - [GitHub Administration cert page](../../exams/github/administration/) - notes, practice plan, strategy
 - [GitHub Actions practice questions](./github-actions.md) - the Actions domain in depth
-- [GHAS practice questions](./github-advanced-security.md) - the security domain in depth
+- [GHAS practice questions](https://security.noblerworks.com/resources/practice-questions/github-advanced-security/) - the security domain in depth
 - [GitHub Foundations practice questions](./github-foundations.md) - the fundamentals below this
 - **[📖 GitHub Certifications](https://learn.github.com/certifications)** - official exam pages

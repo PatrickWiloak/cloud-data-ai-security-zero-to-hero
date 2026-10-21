@@ -286,7 +286,7 @@ D. A semantic version tag such as `v1.4.2`, which is readable but which maintain
 ## Where to go deeper
 
 - [KCNA cert page](../../exams/kubernetes/kcna/) - notes, practice plan, strategy
-- [KCSA practice questions](./cncf-kcsa.md) - the security sibling exam
+- [KCSA practice questions](https://security.noblerworks.com/resources/practice-questions/cncf-kcsa/) - the security sibling exam
 - [Kubernetes in 10 minutes](../../learn/concepts/kubernetes-in-10-minutes.md) - plain-English primer
 - [Containers vs VMs](../../learn/concepts/containers-vs-vms.md) - the foundation KCNA assumes
 - **[📖 Kubernetes concepts](https://kubernetes.io/docs/concepts/)** - the source for most KCNA content

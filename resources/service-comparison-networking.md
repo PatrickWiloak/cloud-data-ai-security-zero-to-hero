@@ -888,5 +888,5 @@ User → CDN (edge location) → Global LB → Regional LB → Application
 **Related Guides:**
 - [Compute Service Comparison](./service-comparison-compute.md)
 - [Storage Service Comparison](./service-comparison-storage.md)
-- [Database Service Comparison](./service-comparison-databases.md)
-- [Security Tools Comparison](./service-comparison-security-tools.md)
+- [Database Service Comparison](https://data.noblerworks.com/resources/service-comparison-databases/)
+- [Security Tools Comparison](https://security.noblerworks.com/resources/service-comparison-security-tools/)

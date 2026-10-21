@@ -288,5 +288,5 @@ D. A single Gateway resource in one cluster that is attached to the namespaces o
 - [ICA cert page](../../exams/kubernetes/ica/) - notes, practice plan, strategy
 - [CKA practice questions](./kubernetes-cka.md) - the Kubernetes baseline ICA assumes
 - [Kubernetes topic index](../../topics/kubernetes.md) - service mesh in context
-- [Zero trust architecture](../architecture-patterns/zero-trust-architecture.md) - the identity model mTLS implements
+- [Zero trust architecture](https://security.noblerworks.com/resources/architecture-patterns/zero-trust-architecture/) - the identity model mTLS implements
 - **[📖 Istio documentation](https://istio.io/latest/docs/)** - primary source

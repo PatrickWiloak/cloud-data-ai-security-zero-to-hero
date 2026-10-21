@@ -284,7 +284,7 @@ D. A first-hop redundancy protocol such as HSRP or VRRP presenting a virtual IP
 ## Where to go deeper
 
 - [Network+ cert page](../../exams/comptia/network-plus/) - notes, practice plan, strategy
-- [Security+ practice questions](./comptia-security-plus.md) - the security sibling
+- [Security+ practice questions](https://security.noblerworks.com/resources/practice-questions/comptia-security-plus/) - the security sibling
 - [CCNA practice questions](./cisco-ccna.md) - the vendor-specific counterpart
 - [Networking topic index](../../topics/networking.md) - cloud networking builds on this
 - **[📖 CompTIA Network+](https://www.comptia.org/certifications/network)** - official exam objectives

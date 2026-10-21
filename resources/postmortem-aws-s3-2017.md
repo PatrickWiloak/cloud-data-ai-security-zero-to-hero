@@ -51,7 +51,7 @@ Because both subsystems lost capacity, S3 in us-east-1 was unable to service req
 
 ### Change management
 - A routine debugging task in production had outsized blast radius. Production tooling needs the same gates as production deploys: CI, peer review, dry-run mode.
-- Map to: change management in [CISA scenarios](../exams/isaca/cisa/scenarios.md), CISM, and SRE practices.
+- Map to: change management in [CISA scenarios](https://security.noblerworks.com/exams/isaca/cisa/scenarios/), CISM, and SRE practices.
 
 ## Cert mapping
 

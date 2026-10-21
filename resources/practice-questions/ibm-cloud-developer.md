@@ -285,6 +285,6 @@ D. Update once a year
 
 - [IBM Cloud Developer cert page](../../exams/ibm/cloud-developer/) - notes, practice plan, strategy
 - [IBM Cloud Advocate practice questions](./ibm-cloud-advocate.md) - the platform fundamentals
-- [IBM Cloud Security Engineer practice questions](./ibm-cloud-security-engineer.md) - the security domain in depth
+- [IBM Cloud Security Engineer practice questions](https://security.noblerworks.com/resources/practice-questions/ibm-cloud-security-engineer/) - the security domain in depth
 - [Twelve-factor thinking in CI/CD](../../learn/concepts/cicd-explained.md) - pipelines in plain English
 - **[📖 IBM Training](https://www.ibm.com/training/)** - official certification pages

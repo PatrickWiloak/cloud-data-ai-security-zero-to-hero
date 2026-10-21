@@ -127,4 +127,4 @@ This is a strong argument for platform investment and a recurring exam theme.
 
 - [Notes 03: delivery, APIs, and provisioning](./03-delivery-apis-provisioning.md)
 - [Scenarios](../scenarios.md) - scenarios 2 and 7
-- [AI security](../../../../resources/ai-security/) - supply chain thinking applied to models
+- [AI security](https://ai.noblerworks.com/safety/) - supply chain thinking applied to models

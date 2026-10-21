@@ -81,8 +81,8 @@ MS-900 is foundational and high-pass-rate. Most candidates pass with 20-30 hours
 ## Companion Materials
 
 - **[AZ-900 Azure Fundamentals](../az-900/)** - Azure-side counterpart
-- **[SC-900 Security/Compliance/Identity Fundamentals](../sc-900/)** - deeper on security/compliance
-- **[AI-900 AI Fundamentals](../ai-900/)** - AI counterpart
+- **[SC-900 Security/Compliance/Identity Fundamentals](https://security.noblerworks.com/exams/azure/sc-900/)** - deeper on security/compliance
+- **[AI-900 AI Fundamentals](https://ai.noblerworks.com/certifications/azure/ai-900/)** - AI counterpart
 
 ---
 

@@ -73,7 +73,7 @@ Build a "static website" by uploading an `index.html` to S3 and enabling website
 - [Service Comparison: Compute](../resources/service-comparison-compute.md)
 - [Service Comparison: Storage](../resources/service-comparison-storage.md)
 - [Service Comparison: Networking](../resources/service-comparison-networking.md)
-- [Service Comparison: Databases](../resources/service-comparison-databases.md)
+- [Service Comparison: Databases](https://data.noblerworks.com/resources/service-comparison-databases/)
 
 You should now be able to read an architecture diagram and identify the compute, storage, network, and database pieces.
 
@@ -265,7 +265,7 @@ You should now be able to design a small production system and defend the choice
 
 - **Want a cert?** Head to the **[Study Hub](../STUDY-HUB.md)** and pick a path.
 - **Want depth in one cloud?** Pick AWS, Azure, or GCP and follow its associate-level path - the certification material has the most depth.
-- **Want depth in AI?** Try **[AI from Scratch](./ai-from-scratch.md)** next.
+- **Want depth in AI?** Try **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** next.
 - **Want hands-on work?** Pick another [hands-on project](../resources/hands-on-projects/).
 
 Good engineers cycle through "build a thing → read a book → build a thing → fix a bug at 3am → read another book." This is the cycle. The cloud is too big to ever finish learning.

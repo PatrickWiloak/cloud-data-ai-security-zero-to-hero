@@ -158,7 +158,7 @@ On the published site these three pages appear under Reference as "Provider Reso
 ## The published site
 
 The repo is published as a MkDocs Material site at
-**[cloud.noblerworks.com](https://cloud.noblerworks.com/)**.
+**[cloud.noblerworks.com](../README.md)**.
 
 The guiding constraint: **the markdown tree is the source of truth and does not
 bend to the site generator.** Reading the repo on GitHub stays a first-class
@@ -406,7 +406,7 @@ When a vendor retires a cert:
 5. Update any roadmaps that recommended the retired cert
 6. Add an entry to `CHANGELOG.md`
 
-The canonical retired-banner pattern is in [exams/aws/specialty/data-analytics-das-c01/README.md](../exams/aws/specialty/data-analytics-das-c01/README.md).
+The canonical retired-banner pattern is in [exams/aws/specialty/data-analytics-das-c01/README.md](https://data.noblerworks.com/exams/aws/specialty/data-analytics-das-c01/).
 
 ---
 

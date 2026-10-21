@@ -76,7 +76,7 @@ Cilium installs on kind in minutes with the Cilium CLI. Worth doing:
 ## Related
 
 - [CKA](../cka/) - Kubernetes operations
-- [CKS](../cks/) - Kubernetes security, including network policy
+- [CKS](https://security.noblerworks.com/exams/kubernetes/cks/) - Kubernetes security, including network policy
 - [OTCA](../otca/) - observability, complementing Hubble
 - [Networking topic](../../../topics/networking.md)
 - [Load balancing deep dive](../../../resources/networking-deep-dives/load-balancing-deep-dive.md)

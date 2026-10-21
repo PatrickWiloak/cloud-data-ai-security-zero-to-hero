@@ -4,16 +4,14 @@ Study guides for HashiCorp in this repo. For the full picture across every provi
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-7 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+5 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
-| [HashiCorp Boundary Associate Certification](boundary-associate/) | - | Associate | Ready | 6 |
 | [HashiCorp Consul Associate (003) Certification](consul-associate/) | Consul Associate (003) | Associate | Retired | 5 |
 | [HashiCorp Nomad Associate Certification](nomad-associate/) | - | Associate | Ready | 6 |
 | [HashiCorp Packer Associate (003) Certification](packer-associate/) | - | Associate | Ready | 6 |
 | [HashiCorp Terraform Associate (003) Certification](terraform-associate/) | Terraform Associate (003) | Associate | Ready | 6 |
-| [HashiCorp Vault Associate (003) Certification](vault-associate/) | Vault Associate (003) | Associate | Ready | 5 |
 | [HashiCorp Terraform Authoring and Operations Professional Certification](terraform-authoring-operations-pro/) | - | Professional | Ready | 6 |
 
 **Retired** - the exam is no longer offered. The guide is kept for anyone holding the credential, and points to its replacement.

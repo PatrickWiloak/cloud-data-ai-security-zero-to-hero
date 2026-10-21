@@ -287,6 +287,6 @@ D. A virtual desktop service that streams a Windows desktop to remote users from
 
 - [MS-900 cert page](../../exams/azure/ms-900/) - notes, practice plan, strategy
 - [AZ-900 practice questions](./azure-fundamentals-az-900.md) - the Azure fundamentals sibling
-- [SC-900 practice questions](./azure-security-compliance-identity-sc-900.md) - security and compliance fundamentals
+- [SC-900 practice questions](https://security.noblerworks.com/resources/practice-questions/azure-security-compliance-identity-sc-900/) - security and compliance fundamentals
 - [IaaS vs PaaS vs SaaS](../../learn/concepts/iaas-paas-saas.md) - the service models in plain English
 - **[📖 MS-900 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ms-900)** - official skills outline

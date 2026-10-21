@@ -285,6 +285,6 @@ D. Refuse
 
 - [IBM Cloud Solution Architect cert page](../../exams/ibm/cloud-solution-architect/) - notes, practice plan, strategy
 - [IBM Cloud Advocate practice questions](./ibm-cloud-advocate.md) - the foundations below this
-- [Zero trust architecture](../architecture-patterns/zero-trust-architecture.md) - the security model in question 8
+- [Zero trust architecture](https://security.noblerworks.com/resources/architecture-patterns/zero-trust-architecture/) - the security model in question 8
 - [SRE and reliability topic index](../../topics/sre-and-reliability.md) - availability in practice
 - **[📖 IBM Training](https://www.ibm.com/training/)** - official certification pages

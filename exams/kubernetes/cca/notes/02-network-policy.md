@@ -162,4 +162,4 @@ A verdict of `Policy denied` confirms a policy cause. A timeout with no Hubble r
 
 - [Notes 03: service mesh and observability](./03-service-mesh-and-observability.md)
 - [Scenarios](../scenarios.md) - scenarios 2, 3, 4, and 7
-- [CKS](../../cks/) - Kubernetes NetworkPolicy in the security exam
+- [CKS](https://security.noblerworks.com/exams/kubernetes/cks/) - Kubernetes NetworkPolicy in the security exam

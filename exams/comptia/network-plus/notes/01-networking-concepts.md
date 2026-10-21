@@ -117,7 +117,7 @@ usable addresses, which is why it suits point-to-point links.
 - **SaaS** - you manage configuration and data only.
 
 See [IaaS, PaaS, SaaS explained](../../../../learn/concepts/iaas-paas-saas.md) and the
-[shared responsibility model](../../../../learn/concepts/shared-responsibility-model.md).
+[shared responsibility model](https://security.noblerworks.com/learn/concepts/shared-responsibility-model/).
 
 - **Public, private, hybrid, and community cloud** - deployment models distinguished by who owns the infrastructure and who may use it.
 - **VPC (Virtual Private Cloud)** - a logically isolated network inside a provider's cloud.

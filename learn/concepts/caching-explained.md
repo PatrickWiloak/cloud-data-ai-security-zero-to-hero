@@ -129,7 +129,7 @@ Also watch memory use, eviction rate (high evictions mean the cache is too small
 ## What to look at next
 
 - **[CDN explained](./cdn-explained.md)** - caching at the network edge
-- **[Eventual consistency](./eventual-consistency.md)** - why a cached read returning stale data is a general distributed systems problem
-- **[Prompt caching](./prompt-caching.md)** - the same idea applied to LLM inputs
+- **[Eventual consistency](https://data.noblerworks.com/learn/concepts/eventual-consistency/)** - why a cached read returning stale data is a general distributed systems problem
+- **[Prompt caching](https://ai.noblerworks.com/learn/concepts/prompt-caching/)** - the same idea applied to LLM inputs
 - **[Idempotency explained](./idempotency-explained.md)** - the companion property for safe retries
 - **[Load balancing deep dive](../../resources/networking-deep-dives/load-balancing-deep-dive.md)** - where caches sit in a request path

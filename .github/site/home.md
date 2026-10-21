@@ -95,7 +95,7 @@
 
 - [Day One](learn/day-one/) - terminal, git, HTTP and servers, assuming nothing
 - [Cloud from Scratch](learn/cloud-from-scratch.md) - compute, storage, networking, identity
-- [AI from Scratch](learn/ai-from-scratch.md) - LLMs, RAG, agents, evals, fine-tuning
+- [AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/) - LLMs, RAG, agents, evals, fine-tuning
 - [Concepts](learn/concepts/) - {{concept_pages}} five-minute explainers, one idea each
 - [Topic indexes](topics/) - {{topic_indexes}} subjects tied across all four pillars
 - [Glossary](learn/glossary.md) - the vocabulary, defined once

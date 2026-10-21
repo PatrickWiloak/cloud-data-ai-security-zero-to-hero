@@ -54,26 +54,26 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 >
 > 🎥 [@patrickwiloak](https://youtube.com/@patrickwiloak) | 💼 [LinkedIn](https://www.linkedin.com/in/patricklukewilson/)
 
-![Certifications](https://img.shields.io/badge/Certifications-149-blue.svg)
+![Certifications](https://img.shields.io/badge/Certifications-72-blue.svg)
 ![Documentation Links](https://img.shields.io/badge/Documentation%20Links-12000+-green.svg)
-![Providers](https://img.shields.io/badge/Providers-27-orange.svg)
+![Providers](https://img.shields.io/badge/Providers-16-orange.svg)
 ![Free to Use](https://img.shields.io/badge/Free%20to%20Use-Educational-green.svg)
 
 <div align="center" markdown="1">
 
-[![Visit the website](https://img.shields.io/badge/Visit_the_website-cloud.noblerworks.com-FF9900?style=for-the-badge&logo=googlechrome&logoColor=white)](https://cloud.noblerworks.com/)
+[![Visit the website](https://img.shields.io/badge/Visit_the_website-cloud.noblerworks.com-FF9900?style=for-the-badge&logo=googlechrome&logoColor=white)](README.md)
 
-**[→ cloud.noblerworks.com](https://cloud.noblerworks.com/)**
+**[→ cloud.noblerworks.com](README.md)**
 
-Full-text search across all 3.1M words, dark mode, mobile-friendly.
+Full-text search across all 1.8M words, dark mode, mobile-friendly.
 
 </div>
 
 ---
 
-> ### 🔎 Read this as a website: **[cloud.noblerworks.com](https://cloud.noblerworks.com/)**
+> ### 🔎 Read this as a website: **[cloud.noblerworks.com](README.md)**
 >
-> Every page in this repo is published as a searchable site with full-text search across all 3.1M words, dark mode, and mobile navigation. Browsing on GitHub works fine too - the site is generated from these same markdown files, so nothing is duplicated or out of date.
+> Every page in this repo is published as a searchable site with full-text search across all 1.8M words, dark mode, and mobile navigation. Browsing on GitHub works fine too - the site is generated from these same markdown files, so nothing is duplicated or out of date.
 
 ---
 
@@ -83,7 +83,7 @@ Full-text search across all 3.1M words, dark mode, mobile-friendly.
 |---|---|---|---|
 | 🎓 | **Learn** | Plain-English concepts, beginner on-ramp, structured paths. No exam scaffolding. | [learn/](./learn/) |
 | 🛠️ | **Build** | Hands-on projects, architecture patterns, CLI cheat sheets. Practitioner reference. | [resources/hands-on-projects/](./resources/hands-on-projects/) |
-| 🎯 | **Certify** | 149 cert study guides across 27 providers, plus 3 self-directed study tracks. Fact sheets, practice plans, scenarios. | [STUDY-HUB.md](./STUDY-HUB.md) |
+| 🎯 | **Certify** | 72 cert study guides across 16 providers, plus 3 self-directed study tracks. Fact sheets, practice plans, scenarios. | [STUDY-HUB.md](./STUDY-HUB.md) |
 | 📚 | **Reference** | Cross-cloud service comparisons, career roadmaps, compliance and FinOps guides. | [resources/](./resources/) |
 
 Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certify together by subject (LLMs, IAM, networking, K8s, observability, security, databases).
@@ -96,7 +96,7 @@ Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certi
 |------|-------|
 | 🌅 Start from absolute zero (terminal, git, HTTP) | **[Day One](./learn/day-one/)** |
 | 💡 Look up a concept (RAG, MCP, agents, VPC, K8s) | **[Concepts](./learn/concepts/)** |
-| 🤖 Learn AI without an exam | **[AI from Scratch](./learn/ai-from-scratch.md)** |
+| 🤖 Learn AI without an exam | **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** |
 | ☁️ Learn cloud without an exam | **[Cloud from Scratch](./learn/cloud-from-scratch.md)** |
 | 🛠️ Build something hands-on (RAG, agents, 3-tier app) | **[15 hands-on projects](./resources/hands-on-projects/)** (with time estimates) |
 | 📺 Learn from videos | **[Curated YouTube playlist](./learn/youtube.md)** |
@@ -113,9 +113,9 @@ See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
 - **2026-09-28** - New [CompTIA A+ (220-1201 and 220-1202)](./exams/comptia/a-plus/) guide: nine notes across both Core exams, a fact sheet, study plan, scenarios, strategy and 20 [practice questions](./resources/practice-questions/comptia-a-plus-220-1201-1202.md). On the site, every page now has its own search description and a title led by its exam code, and deploys notify search engines through IndexNow.
 - **2026-09-18** - Every dead vendor link repaired: 783 URLs, each replacement fetched and matched to the page the citation meant. The sweep now also catches soft 404s and deep links that silently redirect to a homepage. The record of every old-to-new replacement is [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md).
-- **2026-09-17** - Audit pass. The weekly external link check turned out never to have run: it passed lychee a flag lychee had removed, so it checked zero URLs and reported success in 0.2 seconds. Fixed, with a guard that fails the job when lychee cannot run at all. The first real sweep found 701 dead vendor links; the most-cited are repaired and the rest are listed in [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md). Also: seven new data-engineering concept pages and a [data engineering topic index](./topics/data-engineering.md), closing the thinnest of the four subjects in the repo's name; Open Graph cards on every page of the site; and the GitHub repository description, which had drifted to "122+ certs across 22 providers", is now generated from `certs.json` and checked in CI like every other count.
+- **2026-09-17** - Audit pass. The weekly external link check turned out never to have run: it passed lychee a flag lychee had removed, so it checked zero URLs and reported success in 0.2 seconds. Fixed, with a guard that fails the job when lychee cannot run at all. The first real sweep found 701 dead vendor links; the most-cited are repaired and the rest are listed in [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md). Also: seven new data-engineering concept pages and a [data engineering topic index](https://data.noblerworks.com/topics/data-engineering/), closing the thinnest of the four subjects in the repo's name; Open Graph cards on every page of the site; and the GitHub repository description, which had drifted to "122+ certs across 22 providers", is now generated from `certs.json` and checked in CI like every other count.
 - **2026-08-14** - The site now opens on a landing page of its own rather than on the repo README, and every counted claim in the README is under CI. The per-provider table was stale in 8 of 22 rows and missing 5 providers entirely, five days after the Tier 1 batch added them; the 17 numbers in the statistics block had nothing watching them either. Both are checked by `check-readme-counts.py` now.
-- **2026-08-14** - The whole repo is now a searchable website: [cloud.noblerworks.com](https://cloud.noblerworks.com/). Full-text search across 3.1M words, dark mode, mobile nav, generated from these same markdown files. The strict build also caught and fixed an unclosed code fence that was swallowing part of a GCP note, plus 14 broken heading anchors.
+- **2026-08-14** - The whole repo is now a searchable website: [cloud.noblerworks.com](README.md). Full-text search across 1.8M words, dark mode, mobile nav, generated from these same markdown files. The strict build also caught and fixed an unclosed code fence that was swallowing part of a GCP note, plus 14 broken heading anchors.
 - **2026-08-11** - Anthropic's official Claude certification program (launched March-July 2026) fully covered: new Claude Certified Associate - Foundations (CCAO-F) guide, existing guides retargeted to the real CCDV-F, CCAR-F, and CCAR-P exams with official domain blueprints, pricing, and Pearson VUE logistics. Anthropic promoted from study-track pseudo-provider to the 27th certification provider; repo now at 148 certs.
 - **2026-07-29** - Gap-analysis pass: notes drafted for the last 10 outline-stage certs (CySA+, Network+, CCNP ENCOR, CISA, CISM, OSCP, PCNSA, Salesforce PD2, ServiceNow CSA, VMware VCP-DCV); generated cert index (`docs/certs.json`) driving the provider tables and 27 provider index pages; per-cert Anki flashcards; lab-to-cert map; freshness rotation; fixed 383 broken internal links and made internal link-checking a blocking CI gate.
 - **2026-05-03** - Cloud + AI scope expansion: `learn/` pillar, AI concept pages, `topics/` cross-pillar index, AI service comparisons (vector DBs, GenAI platforms, agent frameworks, LLM observability), AI hands-on builds (RAG, MCP agents, vLLM, evals, LoRA), CI link/lint/structure checks, freshness ledger.
@@ -128,16 +128,16 @@ See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 A complete cloud + AI learning resource. Whether you're starting fresh, building production systems, or chasing certifications:
 
 - ✅ **[Day One on-ramp](./learn/day-one/)** - terminal, git, HTTP, servers
-- ✅ **[53 concept pages](./learn/concepts/)** - LLMs, RAG, MCP, agents, tool use, multimodal, quantization, VPCs, K8s, IAM, observability, idempotency
-- ✅ **[Cloud from Scratch](./learn/cloud-from-scratch.md)** + **[AI from Scratch](./learn/ai-from-scratch.md)** - structured 8-phase paths
-- ✅ **149 certification study guides** across 27 providers, 12,000+ embedded vendor doc links
-- ✅ **[14 cross-pillar topic indexes](./topics/)** - LLMs, AI/ML systems, AI security, IAM, networking, K8s, observability, security, databases, serverless, FinOps, platform engineering, SRE (find everything by topic, not provider)
-- ✅ **16 cross-cloud service comparisons** (12 cloud + 4 AI: vector DBs, GenAI platforms, agent frameworks, LLM observability)
+- ✅ **[18 concept pages](./learn/concepts/)** - LLMs, RAG, MCP, agents, tool use, multimodal, quantization, VPCs, K8s, IAM, observability, idempotency
+- ✅ **[Cloud from Scratch](./learn/cloud-from-scratch.md)** + **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** - structured 8-phase paths
+- ✅ **72 certification study guides** across 27 providers, 12,000+ embedded vendor doc links
+- ✅ **[7 cross-pillar topic indexes](./topics/)** - LLMs, AI/ML systems, AI security, IAM, networking, K8s, observability, security, databases, serverless, FinOps, platform engineering, SRE (find everything by topic, not provider)
+- ✅ **7 cross-cloud service comparisons** (12 cloud + 4 AI: vector DBs, GenAI platforms, agent frameworks, LLM observability)
 - ✅ **9 CLI cheat sheets** (AWS, Azure, GCP, kubectl, Terraform, Docker, Helm, GitHub CLI, multi-cloud)
-- ✅ **17 architecture patterns** with multi-cloud implementations
-- ✅ **15 hands-on projects** (10 cloud + 5 AI: RAG, MCP agents, vLLM, eval harness, LoRA fine-tune)
-- ✅ **11 certification roadmaps** by career path
-- ✅ **6 interview prep guides**
+- ✅ **12 architecture patterns** with multi-cloud implementations
+- ✅ **7 hands-on projects** (10 cloud + 5 AI: RAG, MCP agents, vLLM, eval harness, LoRA fine-tune)
+- ✅ **7 certification roadmaps** by career path
+- ✅ **4 interview prep guides**
 - ✅ **Compliance, migration, cost optimization, troubleshooting** deep-dives
 - ✅ **[Freshness ledger](./docs/freshness.md)** - per-cert last-verified dates
 - ✅ **Free tier guides** to minimize study costs
@@ -152,34 +152,23 @@ Full per-provider breakdown lives in **[STUDY-HUB.md](./STUDY-HUB.md)**. Quick l
 
 | Provider | Certs | Highlights |
 |----------|------:|------------|
-| ☁️ [AWS](./exams/aws/) | 18 | CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, GenAI Developer (AIP-C01), Quantum (QPC-C01); 4 retired specialties retained |
-| ☁️ [Azure](./exams/azure/) | 26 | AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-100/200/300/401, PL-100/200/300, MS-900 |
-| ☁️ [GCP](./exams/gcp/) | 12 | Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI |
-| ☸️ [Kubernetes/CNCF](./exams/kubernetes/) | 12 | KCNA, KCSA, CKA, CKAD, CKS, plus Argo (CAPA), Cilium (CCA), GitOps (CGOA), Istio (ICA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA) |
-| 🟢 [NVIDIA](./exams/nvidia/) | 10 | AI Infra & Ops, GenAI/LLM, Multimodal, Agentic AI, Networking, OpenUSD |
-| 🤖 [Anthropic Claude](./exams/anthropic/) | 4 | Associate (CCAO-F), Developer (CCDV-F), Architect Foundations (CCAR-F) + Professional (CCAR-P) |
-| 🔧 [HashiCorp](./exams/hashicorp/) | 7 | Terraform Assoc + Pro, Vault, Consul, Packer, Boundary, Nomad |
-| 🧱 [Databricks](./exams/databricks/) | 6 | Data Engineer (A/P), ML (A/P), GenAI Engineer, Lakehouse Admin |
-| ❄️ [Snowflake](./exams/snowflake/) | 4 | SnowPro Core + 3 Advanced (Architect, Data Eng, Admin) |
-| 🐙 [GitHub](./exams/github/) | 5 | Foundations, Actions, Administration, Advanced Security, Copilot |
+| ☁️ [AWS](./exams/aws/) | 10 | CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, GenAI Developer (AIP-C01), Quantum (QPC-C01); 4 retired specialties retained |
+| ☁️ [Azure](./exams/azure/) | 10 | AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-100/200/300/401, PL-100/200/300, MS-900 |
+| ☁️ [GCP](./exams/gcp/) | 7 | Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI |
+| ☸️ [Kubernetes/CNCF](./exams/kubernetes/) | 10 | KCNA, KCSA, CKA, CKAD, CKS, plus Argo (CAPA), Cilium (CCA), GitOps (CGOA), Istio (ICA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA) |
+| 🔧 [HashiCorp](./exams/hashicorp/) | 5 | Terraform Assoc + Pro, Vault, Consul, Packer, Boundary, Nomad |
+| 🐙 [GitHub](./exams/github/) | 3 | Foundations, Actions, Administration, Advanced Security, Copilot |
 | 🎩 [Red Hat](./exams/redhat/) | 2 | RHCSA (EX200), OpenShift Administrator (EX280) |
 | 🌐 [Cisco](./exams/cisco/) | 2 | CCNA (200-301), CCNP Enterprise ENCOR (350-401) |
 | ☁️ [Salesforce](./exams/salesforce/) | 3 | Administrator, Platform Developer I, Platform Developer II |
-| 📊 [Confluent/Kafka](./exams/confluent/) | 2 | Certified Developer, Certified Administrator |
-| 🍃 [MongoDB](./exams/mongodb/) | 3 | Associate Developer, DBA, Atlas Administrator |
 | 💰 [FinOps Foundation](./exams/finops/) | 4 | Practitioner, Engineer, Analyst, Professional |
-| 🔒 [CompTIA](./exams/comptia/) | 5 | Cloud+ (CV0-004), Security+ (SY0-701), Network+ (N10-009), CySA+ (CS0-003) |
-| 🛡️ [ISC2](./exams/isc2/) | 3 | CISSP, CCSP, CC |
-| 🛡️ [ISACA](./exams/isaca/) | 2 | CISA, CISM |
-| ☁️ [Cloud Security Alliance](./exams/cloud-security-alliance/) | 1 | CCSK v5 |
-| 🎯 [Offensive Security](./exams/offensive-security/) | 1 | OSCP (PEN-200) |
-| 🔥 [Palo Alto Networks](./exams/palo-alto-networks/) | 1 | PCNSA |
+| 🔒 [CompTIA](./exams/comptia/) | 3 | Cloud+ (CV0-004), Security+ (SY0-701), Network+ (N10-009), CySA+ (CS0-003) |
 | 🐧 [Linux Foundation](./exams/linux-foundation/) | 2 | LFCS, LFCA |
-| ☁️ [Oracle Cloud (OCI)](./exams/oracle/) | 7 | OCI Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc, AI Foundations, GenAI Professional |
-| ☁️ [IBM Cloud](./exams/ibm/) | 5 | Advocate, Developer, Solution Architect, Security, SRE |
+| ☁️ [Oracle Cloud (OCI)](./exams/oracle/) | 5 | OCI Foundations, Architect Assoc + Pro, Developer Assoc, Operations Assoc, AI Foundations, GenAI Professional |
+| ☁️ [IBM Cloud](./exams/ibm/) | 4 | Advocate, Developer, Solution Architect, Security, SRE |
 | 🧰 [ServiceNow](./exams/servicenow/) | 1 | Certified System Administrator |
 | 🖥️ [VMware](./exams/vmware/) | 1 | VCP-DCV (2V0-21.23) |
-| **Total** | **149** | across 27 providers, plus 3 self-directed study tracks |
+| **Total** | **72** | across 16 providers, plus 0 self-directed study tracks |
 
 Highlights are a sample, not the full list - the Certs column is the total. Open a provider for everything it covers.
 
@@ -194,49 +183,49 @@ Highlights are a sample, not the full list - the Certs column is the total. Open
 Career-focused learning paths:
 
 - **[☁️ Cloud Engineer](./resources/certification-roadmap-cloud-engineer.md)** | **[🏗️ Solutions Architect](./resources/certification-roadmap-solutions-architect.md)** | **[⚙️ DevOps/SRE](./resources/certification-roadmap-devops-sre.md)**
-- **[📊 Data Engineer](./resources/certification-roadmap-data-engineer.md)** | **[🔒 Security Engineer](./resources/certification-roadmap-security-engineer.md)** | **[🌐 Multi-Cloud](./resources/certification-roadmap-multi-cloud.md)**
-- **[☸️ Kubernetes Specialist](./resources/certification-roadmap-kubernetes-specialist.md)** | **[🛠️ Platform Engineer](./resources/certification-roadmap-platform-engineer.md)** | **[🤖 AI/ML Engineer](./resources/certification-roadmap-ai-ml-engineer.md)**
-- **[💰 FinOps](./resources/certification-roadmap-finops.md)** | **[🗄️ Database Specialist](./resources/certification-roadmap-database-specialist.md)**
+- **[📊 Data Engineer](https://data.noblerworks.com/resources/certification-roadmap-data-engineer/)** | **[🔒 Security Engineer](https://security.noblerworks.com/resources/certification-roadmap-security-engineer/)** | **[🌐 Multi-Cloud](./resources/certification-roadmap-multi-cloud.md)**
+- **[☸️ Kubernetes Specialist](./resources/certification-roadmap-kubernetes-specialist.md)** | **[🛠️ Platform Engineer](./resources/certification-roadmap-platform-engineer.md)** | **[🤖 AI/ML Engineer](https://ai.noblerworks.com/careers/roles/ai-engineer-roadmap/)**
+- **[💰 FinOps](./resources/certification-roadmap-finops.md)** | **[🗄️ Database Specialist](https://data.noblerworks.com/resources/certification-roadmap-database-specialist/)**
 
 ---
 
 ## 📚 Study Resources
 
 ### **Service Comparisons** (cross-cloud + AI)
-**Cloud:** [Compute](./resources/service-comparison-compute.md) · [Storage](./resources/service-comparison-storage.md) · [Databases](./resources/service-comparison-databases.md) · [Networking](./resources/service-comparison-networking.md) · [AI/ML](./resources/service-comparison-ai-ml.md) · [Containers/K8s](./resources/service-comparison-containers-kubernetes.md) · [Security](./resources/service-comparison-security-tools.md) · [DevOps/CI/CD](./resources/service-comparison-devops-cicd.md) · [Observability](./resources/service-comparison-observability-monitoring.md) · [Serverless](./resources/service-comparison-serverless.md) · [Identity/IAM](./resources/service-comparison-identity-iam.md) · [Messaging](./resources/service-comparison-messaging-queues.md)
+**Cloud:** [Compute](./resources/service-comparison-compute.md) · [Storage](./resources/service-comparison-storage.md) · [Databases](https://data.noblerworks.com/resources/service-comparison-databases/) · [Networking](./resources/service-comparison-networking.md) · [AI/ML](https://ai.noblerworks.com/tools/comparisons/cloud-ai-ml-services/) · [Containers/K8s](./resources/service-comparison-containers-kubernetes.md) · [Security](https://security.noblerworks.com/resources/service-comparison-security-tools/) · [DevOps/CI/CD](./resources/service-comparison-devops-cicd.md) · [Observability](./resources/service-comparison-observability-monitoring.md) · [Serverless](./resources/service-comparison-serverless.md) · [Identity/IAM](https://security.noblerworks.com/resources/service-comparison-identity-iam/) · [Messaging](https://data.noblerworks.com/resources/service-comparison-messaging-queues/)
 
-**AI:** [Vector databases](./resources/service-comparison-vector-databases.md) · [GenAI platforms](./resources/service-comparison-genai-platforms.md) · [Agent frameworks](./resources/service-comparison-agent-frameworks.md) · [LLM observability](./resources/service-comparison-llm-observability.md)
+**AI:** [Vector databases](https://ai.noblerworks.com/tools/decisions/vector-database/) · [GenAI platforms](https://ai.noblerworks.com/tools/comparisons/genai-platforms/) · [Agent frameworks](https://ai.noblerworks.com/tools/comparisons/agent-frameworks/) · [LLM observability](https://ai.noblerworks.com/tools/comparisons/llm-observability/)
 
 ### **CLI Quick References**
 [AWS](./resources/cli-cheat-sheet-aws.md) | [Azure](./resources/cli-cheat-sheet-azure.md) | [GCP](./resources/cli-cheat-sheet-gcp.md) | [Multi-cloud](./resources/cli-cheat-sheet-comparison.md) | [kubectl](./resources/cli-cheat-sheet-kubectl.md) | [Terraform](./resources/cli-cheat-sheet-terraform.md) | [Docker](./resources/cli-cheat-sheet-docker.md) | [Helm](./resources/cli-cheat-sheet-helm.md) | [GitHub CLI](./resources/cli-cheat-sheet-github-cli.md)
 
 ### **Architecture Patterns**
-17 multi-cloud patterns: [3-Tier Web App](./resources/architecture-patterns/web-app-3-tier.md) · [Serverless API](./resources/architecture-patterns/serverless-api.md) · [Microservices](./resources/architecture-patterns/microservices-architecture.md) · [Event-Driven](./resources/architecture-patterns/event-driven-architecture.md) · [Data Pipeline/ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Disaster Recovery](./resources/architecture-patterns/disaster-recovery-patterns.md) · [Zero Trust](./resources/architecture-patterns/zero-trust-architecture.md) · [Data Mesh](./resources/architecture-patterns/data-mesh.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [AI/ML Pipeline](./resources/architecture-patterns/ai-ml-pipeline.md) · [Multi-Region Active-Active](./resources/architecture-patterns/multi-region-active-active.md) · [CQRS/Event Sourcing](./resources/architecture-patterns/cqrs-event-sourcing.md) · [API Gateway](./resources/architecture-patterns/api-gateway-pattern.md) · [Strangler Fig](./resources/architecture-patterns/strangler-fig-migration.md) · [Cell-Based](./resources/architecture-patterns/cell-based-architecture.md) · [Chaos Engineering](./resources/architecture-patterns/chaos-engineering-patterns.md) · [Hybrid Cloud](./resources/architecture-patterns/hybrid-cloud-connectivity.md)
+17 multi-cloud patterns: [3-Tier Web App](./resources/architecture-patterns/web-app-3-tier.md) · [Serverless API](./resources/architecture-patterns/serverless-api.md) · [Microservices](./resources/architecture-patterns/microservices-architecture.md) · [Event-Driven](./resources/architecture-patterns/event-driven-architecture.md) · [Data Pipeline/ETL](https://data.noblerworks.com/resources/architecture-patterns/data-pipeline-etl/) · [Disaster Recovery](./resources/architecture-patterns/disaster-recovery-patterns.md) · [Zero Trust](https://security.noblerworks.com/resources/architecture-patterns/zero-trust-architecture/) · [Data Mesh](https://data.noblerworks.com/resources/architecture-patterns/data-mesh/) · [Lakehouse](https://data.noblerworks.com/resources/architecture-patterns/lakehouse-architecture/) · [AI/ML Pipeline](https://ai.noblerworks.com/build/patterns/ai-ml-pipeline/) · [Multi-Region Active-Active](./resources/architecture-patterns/multi-region-active-active.md) · [CQRS/Event Sourcing](./resources/architecture-patterns/cqrs-event-sourcing.md) · [API Gateway](./resources/architecture-patterns/api-gateway-pattern.md) · [Strangler Fig](./resources/architecture-patterns/strangler-fig-migration.md) · [Cell-Based](./resources/architecture-patterns/cell-based-architecture.md) · [Chaos Engineering](./resources/architecture-patterns/chaos-engineering-patterns.md) · [Hybrid Cloud](./resources/architecture-patterns/hybrid-cloud-connectivity.md)
 
 ### **Hands-on Projects**
-**Cloud:** [3-Tier App](./resources/hands-on-projects/deploy-3-tier-app.md) · [CI/CD Pipeline](./resources/hands-on-projects/build-ci-cd-pipeline.md) · [Monitoring Stack](./resources/hands-on-projects/setup-monitoring-stack.md) · [Zero Trust](./resources/hands-on-projects/implement-zero-trust.md) · [Data Pipeline](./resources/hands-on-projects/build-data-pipeline.md) · [Deploy ML Model](./resources/hands-on-projects/deploy-ml-model.md) · [K8s Cluster](./resources/hands-on-projects/kubernetes-cluster-setup.md) · [Terraform Infra](./resources/hands-on-projects/terraform-infrastructure.md) · [Serverless App](./resources/hands-on-projects/serverless-application.md) · [DR Drill](./resources/hands-on-projects/disaster-recovery-drill.md)
+**Cloud:** [3-Tier App](./resources/hands-on-projects/deploy-3-tier-app.md) · [CI/CD Pipeline](./resources/hands-on-projects/build-ci-cd-pipeline.md) · [Monitoring Stack](./resources/hands-on-projects/setup-monitoring-stack.md) · [Zero Trust](https://security.noblerworks.com/resources/hands-on-projects/implement-zero-trust/) · [Data Pipeline](https://data.noblerworks.com/resources/hands-on-projects/build-data-pipeline/) · [Deploy ML Model](https://ai.noblerworks.com/build/projects/deploy-ml-model/) · [K8s Cluster](./resources/hands-on-projects/kubernetes-cluster-setup.md) · [Terraform Infra](./resources/hands-on-projects/terraform-infrastructure.md) · [Serverless App](./resources/hands-on-projects/serverless-application.md) · [DR Drill](./resources/hands-on-projects/disaster-recovery-drill.md)
 
-**AI:** [RAG pipeline](./resources/hands-on-projects/build-rag-pipeline.md) · [Claude agent with MCP](./resources/hands-on-projects/build-claude-agent-with-mcp.md) · [Run Llama on single GPU](./resources/hands-on-projects/run-llama-on-single-gpu.md) · [Eval harness](./resources/hands-on-projects/set-up-eval-harness.md) · [LoRA fine-tune](./resources/hands-on-projects/fine-tune-with-lora.md)
+**AI:** [RAG pipeline](https://ai.noblerworks.com/build/projects/build-rag-pipeline/) · [Claude agent with MCP](https://ai.noblerworks.com/build/projects/build-claude-agent-with-mcp/) · [Run Llama on single GPU](https://ai.noblerworks.com/build/projects/run-llama-on-single-gpu/) · [Eval harness](https://ai.noblerworks.com/build/projects/set-up-eval-harness/) · [LoRA fine-tune](https://ai.noblerworks.com/build/projects/fine-tune-with-lora/)
 
 ### **Deep Dive Guides**
-- **Compliance:** [SOC 2](./resources/compliance-guides/soc2.md) | [HIPAA](./resources/compliance-guides/hipaa.md) | [PCI DSS](./resources/compliance-guides/pci-dss.md) | [GDPR](./resources/compliance-guides/gdpr.md) | [FedRAMP](./resources/compliance-guides/fedramp.md)
-- **Migration:** [On-Prem to AWS](./resources/migration-guides/on-prem-to-aws.md) | [to Azure](./resources/migration-guides/on-prem-to-azure.md) | [to GCP](./resources/migration-guides/on-prem-to-gcp.md) | [Cloud-to-Cloud](./resources/migration-guides/cloud-to-cloud.md) | [Database](./resources/migration-guides/database-migration.md)
+- **Compliance:** [SOC 2](https://security.noblerworks.com/resources/compliance-guides/soc2/) | [HIPAA](https://security.noblerworks.com/resources/compliance-guides/hipaa/) | [PCI DSS](https://security.noblerworks.com/resources/compliance-guides/pci-dss/) | [GDPR](https://security.noblerworks.com/resources/compliance-guides/gdpr/) | [FedRAMP](https://security.noblerworks.com/resources/compliance-guides/fedramp/)
+- **Migration:** [On-Prem to AWS](./resources/migration-guides/on-prem-to-aws.md) | [to Azure](./resources/migration-guides/on-prem-to-azure.md) | [to GCP](./resources/migration-guides/on-prem-to-gcp.md) | [Cloud-to-Cloud](./resources/migration-guides/cloud-to-cloud.md) | [Database](https://data.noblerworks.com/resources/migration-guides/database-migration/)
 - **Well-Architected:** [AWS](./resources/well-architected/aws-well-architected.md) | [Azure](./resources/well-architected/azure-well-architected.md) | [GCP](./resources/well-architected/gcp-well-architected.md)
 - **Cost Optimization:** [AWS](./resources/cost-optimization/aws-cost-optimization.md) | [Azure](./resources/cost-optimization/azure-cost-optimization.md) | [GCP](./resources/cost-optimization/gcp-cost-optimization.md) | [FinOps Principles](./resources/cost-optimization/finops-principles.md)
 - **Troubleshooting:** [AWS](./resources/troubleshooting/aws-troubleshooting.md) | [Azure](./resources/troubleshooting/azure-troubleshooting.md) | [GCP](./resources/troubleshooting/gcp-troubleshooting.md) | [Kubernetes](./resources/troubleshooting/kubernetes-troubleshooting.md)
 - **Networking:** [Hybrid Connectivity](./resources/networking-deep-dives/hybrid-connectivity.md) | [Multi-Cloud](./resources/networking-deep-dives/multi-cloud-networking.md) | [DNS Deep Dive](./resources/networking-deep-dives/dns-deep-dive.md) | [Load Balancing](./resources/networking-deep-dives/load-balancing-deep-dive.md)
 
 ### **Interview Prep**
-[Solutions Architect](./resources/interview-prep/solutions-architect-interview.md) | [DevOps](./resources/interview-prep/devops-interview.md) | [Cloud Engineer](./resources/interview-prep/cloud-engineer-interview.md) | [Data Engineer](./resources/interview-prep/data-engineer-interview.md) | [Security Engineer](./resources/interview-prep/security-engineer-interview.md) | [SRE](./resources/interview-prep/sre-interview.md)
+[Solutions Architect](./resources/interview-prep/solutions-architect-interview.md) | [DevOps](./resources/interview-prep/devops-interview.md) | [Cloud Engineer](./resources/interview-prep/cloud-engineer-interview.md) | [Data Engineer](https://data.noblerworks.com/resources/interview-prep/data-engineer-interview/) | [Security Engineer](https://security.noblerworks.com/resources/interview-prep/security-engineer-interview/) | [SRE](./resources/interview-prep/sre-interview.md)
 
 ### **Decision Matrices** - score-driven product picks
-[Vector database](./resources/decision-matrix-vector-database.md) | [IaC tool](./resources/decision-matrix-iac-tool.md) | [LLM serving](./resources/decision-matrix-llm-serving.md)
+[Vector database](https://ai.noblerworks.com/tools/decisions/vector-database/) | [IaC tool](./resources/decision-matrix-iac-tool.md) | [LLM serving](https://ai.noblerworks.com/tools/decisions/llm-serving/)
 
 ### **Postmortem Study Guides** - real public outages, mapped to exam domains
 [AWS S3 us-east-1, 2017](./resources/postmortem-aws-s3-2017.md) | [Cloudflare regex, 2019](./resources/postmortem-cloudflare-regex-2019.md) | [GCP networking, 2019](./resources/postmortem-gcp-networking-2019.md)
 
 ### **Persona Playlists** - curated reading sequences
-[AI engineer in 30 min](./resources/playlist-ai-engineer-30min.md) | [Cloud security in 1 hour](./resources/playlist-cloud-security-1hour.md) | [Data engineer in 1 hour](./resources/playlist-data-engineer-1hour.md) | [SRE in 1 hour](./resources/playlist-sre-1hour.md)
+[AI engineer in 30 min](https://ai.noblerworks.com/learn/start-here/ai-engineer-path/) | [Cloud security in 1 hour](https://security.noblerworks.com/resources/playlist-cloud-security-1hour/) | [Data engineer in 1 hour](https://data.noblerworks.com/resources/playlist-data-engineer-1hour/) | [SRE in 1 hour](./resources/playlist-sre-1hour.md)
 
 ### **Practice & Strategy**
 - [📝 Practice Question Banks](./resources/practice-questions/) - scenario questions with explained answers, one bank per certification (151 of 151)
@@ -303,19 +292,19 @@ Career-focused learning paths:
 
 ## 📊 Repository Statistics
 
-- **Certifications:** 149 (plus 3 self-directed study tracks)
+- **Certifications:** 72 (plus 0 self-directed study tracks)
 - **Documentation links:** 12,000+
-- **Providers:** 27
-- **Concept pages:** 53 (cloud + AI primitives)
-- **Service comparisons:** 16 (12 cloud + 4 AI)
+- **Providers:** 16
+- **Concept pages:** 18 (cloud + AI primitives)
+- **Service comparisons:** 7 (12 cloud + 4 AI)
 - **CLI cheat sheets:** 9
-- **Architecture patterns:** 17
-- **Hands-on projects:** 15 (10 cloud + 5 AI)
-- **Topic indexes:** 14 (cross-pillar)
-- **Career roadmaps:** 11
-- **Interview prep guides:** 6
-- **Compliance guides:** 8
-- **Migration guides:** 5
+- **Architecture patterns:** 12
+- **Hands-on projects:** 7 (10 cloud + 5 AI)
+- **Topic indexes:** 7 (cross-pillar)
+- **Career roadmaps:** 7
+- **Interview prep guides:** 4
+- **Compliance guides:** 0
+- **Migration guides:** 4
 
 ---
 
@@ -327,12 +316,12 @@ cloud-data-ai-security-zero-to-hero/
 ├── STUDY-HUB.md (full per-provider navigation)
 ├── CHANGELOG.md
 ├── learn/                # plain-English learning content
-│   ├── concepts/         # 53 bite-size concept pages
+│   ├── concepts/         # 18 bite-size concept pages
 │   ├── day-one/          # absolute-beginner on-ramp
 │   ├── ai-from-scratch.md
 │   ├── cloud-from-scratch.md
 │   └── glossary.md
-├── exams/                # 149 certs across 27 providers, plus 3 study tracks
+├── exams/                # 72 certs across 16 providers, plus 0 study tracks
 ├── resources/            # comparisons, cheat sheets, roadmaps, guides, projects
 ├── topics/               # cross-pillar topic indexes
 ├── assets/diagrams/      # PNG diagrams, for the few too dense for inline Mermaid

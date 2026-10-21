@@ -147,4 +147,4 @@ That last pair is the lesson most worth keeping: **on a directory, `x` is the pe
 - **[Terminal basics](./terminal-basics.md)** - navigating and manipulating files
 - **[SSH basics](./ssh-basics.md)** - where `600` on a private key becomes mandatory
 - **[What is a server?](./what-is-a-server.md)** - the machines these permissions protect
-- **[IAM explained](../concepts/iam-explained.md)** - the same ideas at cloud scale
+- **[IAM explained](https://security.noblerworks.com/learn/concepts/iam-explained/)** - the same ideas at cloud scale

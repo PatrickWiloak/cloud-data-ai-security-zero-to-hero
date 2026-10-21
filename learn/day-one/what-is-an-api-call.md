@@ -174,6 +174,6 @@ In order:
 ## What to look at next
 
 - **[HTTP and APIs](./http-and-apis.md)** - HTTP basics in more depth
-- **[TLS and HTTPS](../concepts/tls-and-https.md)** - the encryption layer under HTTPS
+- **[TLS and HTTPS](https://security.noblerworks.com/learn/concepts/tls-and-https/)** - the encryption layer under HTTPS
 - **[Networking troubleshooting](./networking-troubleshooting.md)** - when API calls don't connect at all
-- **[Tool use and function calling](../concepts/tool-use-and-function-calling.md)** - what an LLM tool call looks like (it's also just an API)
+- **[Tool use and function calling](https://ai.noblerworks.com/learn/concepts/tool-use-and-function-calling/)** - what an LLM tool call looks like (it's also just an API)

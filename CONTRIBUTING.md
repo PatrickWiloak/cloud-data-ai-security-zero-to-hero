@@ -152,7 +152,7 @@ Keep these to one per page. Topic stays the source of truth; the video is a comp
 
 When a vendor retires a cert:
 
-1. Add a clear "RETIRED [DATE]" banner to the top of `README.md` and `fact-sheet.md` for that cert. See [exams/aws/specialty/data-analytics-das-c01/](exams/aws/specialty/data-analytics-das-c01/) for the canonical pattern.
+1. Add a clear "RETIRED [DATE]" banner to the top of `README.md` and `fact-sheet.md` for that cert. See [exams/aws/specialty/data-analytics-das-c01/](https://data.noblerworks.com/exams/aws/specialty/data-analytics-das-c01/) for the canonical pattern.
 2. Link to the replacement cert (if any).
 3. Keep the original content intact for credential holders.
 4. Remove the cert from active counts in `README.md` and `STUDY-HUB.md`.
@@ -190,7 +190,7 @@ See [.github/AUTOMATION.md](./.github/AUTOMATION.md) for a one-page map of every
 
 ## Previewing the documentation site
 
-The repo is published at **[cloud.noblerworks.com](https://cloud.noblerworks.com/)**. The site is generated from the markdown tree by `.github/scripts/build-site.py`, so there is no second copy of any page: write markdown as normal and the site picks it up.
+The repo is published at **[cloud.noblerworks.com](README.md)**. The site is generated from the markdown tree by `.github/scripts/build-site.py`, so there is no second copy of any page: write markdown as normal and the site picks it up.
 
 ```bash
 python3 -m venv .venv-docs

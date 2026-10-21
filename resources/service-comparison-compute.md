@@ -298,6 +298,6 @@ az aks create \
 
 **Related Guides:**
 - [Storage Service Comparison](./service-comparison-storage.md)
-- [Database Service Comparison](./service-comparison-databases.md)
+- [Database Service Comparison](https://data.noblerworks.com/resources/service-comparison-databases/)
 - [Networking Service Comparison](./service-comparison-networking.md)
 - [Serverless Service Comparison](./service-comparison-serverless.md)

@@ -105,5 +105,5 @@ That last point is the one that bites. Autoscaling the compute tier without cons
 - **[Load balancing explained](./load-balancing-explained.md)** - what distributes traffic to the instances you added
 - **[Serverless explained](./serverless-explained.md)** - where scaling is the platform's problem
 - **[Kubernetes in 10 minutes](./kubernetes-in-10-minutes.md)** - the three autoscalers in context
-- **[Queues vs streams](./queues-vs-streams.md)** - where queue depth as a scaling signal comes from
+- **[Queues vs streams](https://data.noblerworks.com/learn/concepts/queues-vs-streams/)** - where queue depth as a scaling signal comes from
 - **[Cloud cost basics](./cloud-cost-basics.md)** - the bill autoscaling is meant to control

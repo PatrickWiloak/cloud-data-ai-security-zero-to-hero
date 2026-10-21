@@ -286,5 +286,5 @@ GitHub/CSR -> Cloud Build -> Artifact Registry -> Cloud Deploy -> GKE/Cloud Run
 **Related Guides:**
 - [Containers and Kubernetes Comparison](./service-comparison-containers-kubernetes.md)
 - [Observability and Monitoring Comparison](./service-comparison-observability-monitoring.md)
-- [Security Tools Comparison](./service-comparison-security-tools.md)
+- [Security Tools Comparison](https://security.noblerworks.com/resources/service-comparison-security-tools/)
 - [IaC Tool Decision Matrix](./decision-matrix-iac-tool.md)

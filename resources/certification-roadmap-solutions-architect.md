@@ -433,7 +433,7 @@ After achieving professional certification, consider specialties aligned with yo
 **Study Time**: 8-12 weeks (15-20 hours/week)
 **Prerequisites**: Associate-level security knowledge, 2+ years AWS security experience
 **Best For**: Security architects, security engineers, compliance specialists
-**Resources**: [Exam Notes](../exams/aws/specialty/security-scs-c02/README.md)
+**Resources**: [Exam Notes](https://security.noblerworks.com/exams/aws/specialty/security-scs-c02/)
 **Salary Impact**: $140,000-$190,000
 
 #### AWS Certified Machine Learning Engineer - Associate (MLA-C01)
@@ -444,7 +444,7 @@ After achieving professional certification, consider specialties aligned with yo
 **Study Time**: 8-12 weeks (15-20 hours/week)
 **Prerequisites**: 1+ year hands-on SageMaker experience
 **Best For**: ML engineers, applied scientists, data engineers moving into ML
-**Resources**: [Exam Notes](../exams/aws/associate/ml-engineer-mla-c01/README.md)
+**Resources**: [Exam Notes](https://ai.noblerworks.com/certifications/aws/associate/ml-engineer-mla-c01/)
 **Salary Impact**: $145,000-$200,000
 
 #### AWS Certified Advanced Networking - Specialty
@@ -726,7 +726,7 @@ Azure Solutions Architect Expert (AZ-305)
 **Focus**: Security controls, identity management, security operations
 **Study Time**: 8-12 weeks (12-18 hours/week)
 **Prerequisites**: AZ-104 or equivalent experience
-**Resources**: [Exam Notes](../exams/azure/az-500/README.md)
+**Resources**: [Exam Notes](https://security.noblerworks.com/exams/azure/az-500/)
 **Salary Impact**: $130,000-$180,000
 
 #### Microsoft Certified: Azure DevOps Engineer Expert (AZ-400)
@@ -1077,9 +1077,9 @@ Professional Cloud Architect
 **Salary Range**: $150,000-$220,000
 
 **Resources:**
-- [AWS GenAI Certification](../exams/aws/foundational/ai-practitioner-aif-c01/README.md)
-- [Azure AI Certification](../exams/azure/genai/README.md)
-- [GCP GenAI Certification](../exams/gcp/genai/README.md)
+- [AWS GenAI Certification](https://ai.noblerworks.com/certifications/aws/foundational/ai-practitioner-aif-c01/)
+- [Azure AI Certification](https://ai.noblerworks.com/certifications/azure/genai/)
+- [GCP GenAI Certification](https://ai.noblerworks.com/certifications/gcp/genai/)
 
 ### DevOps Architecture Specialization
 

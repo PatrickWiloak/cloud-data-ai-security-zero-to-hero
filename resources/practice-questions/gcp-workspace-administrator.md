@@ -870,6 +870,6 @@ D. Support rebuilds the Drive from Google's backups at the admin's request
 
 - [Workspace Administrator cert page](../../exams/gcp/workspace-administrator/) - notes, scenarios, practice plan, strategy
 - [MS-900 practice questions](./azure-m365-fundamentals-ms-900.md) - the Microsoft 365 counterpart
-- [SC-300 practice questions](./azure-identity-access-sc-300.md) - identity administration at depth
-- [IAM topic index](../../topics/iam.md) - identity across the repo
+- [SC-300 practice questions](https://security.noblerworks.com/resources/practice-questions/azure-identity-access-sc-300/) - identity administration at depth
+- [IAM topic index](https://security.noblerworks.com/topics/iam/) - identity across the repo
 - **[📖 Google Cloud certification](https://cloud.google.com/learn/certification)** - official exam guides

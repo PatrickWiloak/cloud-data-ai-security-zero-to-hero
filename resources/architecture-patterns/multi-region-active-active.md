@@ -456,4 +456,4 @@ flowchart TB
 **Related Guides:**
 - [Disaster Recovery Patterns](./disaster-recovery-patterns.md)
 - [Service Comparison - Networking](../service-comparison-networking.md)
-- [Service Comparison - Databases](../service-comparison-databases.md)
+- [Service Comparison - Databases](https://data.noblerworks.com/resources/service-comparison-databases/)

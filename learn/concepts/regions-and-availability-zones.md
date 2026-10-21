@@ -112,6 +112,6 @@ You'll memorize the ones you use.
 
 ## What to look at next
 
-- **[Shared responsibility model](./shared-responsibility-model.md)** - region-level disaster recovery is mostly your job
+- **[Shared responsibility model](https://security.noblerworks.com/learn/concepts/shared-responsibility-model/)** - region-level disaster recovery is mostly your job
 - **[VPC explained](./vpc-explained.md)** - VPCs are typically scoped to one region
 - **[Glossary: Availability Zone, Region, Edge Location](../glossary.md#cloud-fundamentals)**

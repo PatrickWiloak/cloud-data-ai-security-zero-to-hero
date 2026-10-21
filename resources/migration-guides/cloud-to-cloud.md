@@ -76,7 +76,7 @@ Migrating between cloud providers - or operating across multiple clouds - introd
 - Continuous replication tools: Striim, Fivetran, or native DMS tools
 - Homogeneous migrations (e.g., PostgreSQL to PostgreSQL) are simpler
 - Heterogeneous migrations require schema conversion
-- See the dedicated [Database Migration Guide](database-migration.md) for details
+- See the dedicated [Database Migration Guide](https://data.noblerworks.com/resources/migration-guides/database-migration/) for details
 
 ### Large Dataset Transfers
 

@@ -27,11 +27,11 @@ If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.m
 - **[Day One](./day-one/)** - terminal, git, HTTP, servers. The pages assume nothing. If you've never opened a terminal, start here.
 
 ### 💡 Bite-size concept pages
-- **[Concepts](./concepts/)** - 53 topic pages, 5-10 min each. Cloud primitives (VPC, K8s, serverless), DevOps (CI/CD, Terraform), networking (DNS, TLS), and AI (LLMs, RAG, agents, transformers, embeddings, prompt engineering, evals).
+- **[Concepts](./concepts/)** - 18 topic pages, 5-10 min each. Cloud primitives (VPC, K8s, serverless), DevOps (CI/CD, Terraform), networking (DNS, TLS), and AI (LLMs, RAG, agents, transformers, embeddings, prompt engineering, evals).
 
 ### 🛤️ Structured learning paths
 - **[Cloud from Scratch](./cloud-from-scratch.md)** - 8-phase path from "what is cloud?" to designing real systems
-- **[AI from Scratch](./ai-from-scratch.md)** - LLMs, RAG, agents, and production AI apps
+- **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** - LLMs, RAG, agents, and production AI apps
 
 ### 📖 Reference
 - **[Glossary](./glossary.md)** - 200+ cloud, AI, DevOps, networking, and security terms in plain English
@@ -49,7 +49,7 @@ There's no "right order." Pick what fits:
 | Look up a term you keep seeing | [Glossary](./glossary.md) |
 | Understand one concept (RAG, VPC, agents, ...) | [Concepts](./concepts/) |
 | Build a foundation in cloud | [Cloud from Scratch](./cloud-from-scratch.md) |
-| Build a foundation in AI/LLMs | [AI from Scratch](./ai-from-scratch.md) |
+| Build a foundation in AI/LLMs | [AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/) |
 | Compare AWS vs Azure vs GCP | [Service comparisons](../resources/) |
 | See real architectures | [Architecture patterns](../resources/architecture-patterns/) |
 | Try hands-on labs | [Hands-on projects](../resources/hands-on-projects/) |

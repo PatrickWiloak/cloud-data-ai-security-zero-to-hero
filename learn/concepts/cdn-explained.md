@@ -149,5 +149,5 @@ If you're behind Cloudflare's free plan, you basically have a CDN with no work. 
 ## What to look at next
 
 - **[VPC explained](./vpc-explained.md)** - the origin lives in a VPC; CDN sits in front
-- **[TLS and HTTPS](./tls-and-https.md)** - CDNs typically terminate TLS at the edge
+- **[TLS and HTTPS](https://security.noblerworks.com/learn/concepts/tls-and-https/)** - CDNs typically terminate TLS at the edge
 - **[Glossary: CDN, Edge location, TTL](../glossary.md#networking)**

@@ -17,7 +17,7 @@ If you're new, build mental models before exam prep. These plain-English pages g
 - **[What is cloud computing?](../learn/concepts/what-is-cloud-computing.md)** - the foundational mental model
 - **[IaaS vs PaaS vs SaaS](../learn/concepts/iaas-paas-saas.md)** - the three terms that come up daily
 - **[Regions and availability zones](../learn/concepts/regions-and-availability-zones.md)** - where your code physically runs
-- **[Shared responsibility model](../learn/concepts/shared-responsibility-model.md)** - what the cloud provider does vs what you do
+- **[Shared responsibility model](https://security.noblerworks.com/learn/concepts/shared-responsibility-model/)** - what the cloud provider does vs what you do
 - **[VPC explained](../learn/concepts/vpc-explained.md)** - networking inside the cloud
 - **[Containers vs VMs](../learn/concepts/containers-vs-vms.md)** - why containers won
 - **[Kubernetes in 10 minutes](../learn/concepts/kubernetes-in-10-minutes.md)** - the orchestrator everyone deploys
@@ -262,10 +262,10 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 - Security and compliance automation
 
 **Phase 4: Specializations (Optional, 2-4 months each)**
-- Security Specialty (SCS-C02) - [/exams/aws/specialty/security-scs-c02/](../exams/aws/specialty/security-scs-c02)
+- Security Specialty (SCS-C02) - [/exams/aws/specialty/security-scs-c02/](https://security.noblerworks.com/exams/aws/specialty/security-scs-c02/)
 - Advanced Networking Specialty (ANS-C01) - [/exams/aws/specialty/advanced-networking-ans-c01/](../exams/aws/specialty/advanced-networking-ans-c01)
-- Machine Learning Engineer Associate (MLA-C01) - [/exams/aws/associate/ml-engineer-mla-c01/](../exams/aws/associate/ml-engineer-mla-c01) (replaces retired MLS-C01)
-- Data Engineer Associate (DEA-C01) - [/exams/aws/associate/data-engineer-dea-c01/](../exams/aws/associate/data-engineer-dea-c01) (replaces retired DAS-C01 and DBS-C01)
+- Machine Learning Engineer Associate (MLA-C01) - [/exams/aws/associate/ml-engineer-mla-c01/](https://ai.noblerworks.com/certifications/aws/associate/ml-engineer-mla-c01/) (replaces retired MLS-C01)
+- Data Engineer Associate (DEA-C01) - [/exams/aws/associate/data-engineer-dea-c01/](https://data.noblerworks.com/exams/aws/associate/data-engineer-dea-c01/) (replaces retired DAS-C01 and DBS-C01)
 - SAP on AWS (PAS-C01) - [/exams/aws/specialty/sap-on-aws-pas-c01/](../exams/aws/specialty/sap-on-aws-pas-c01)
 
 ---
@@ -291,9 +291,9 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 - Azure pricing and support
 
 *Optional Parallel Fundamentals:*
-- AI Fundamentals (AI-900) - [/exams/azure/ai-900/](../exams/azure/ai-900)
-- Data Fundamentals (DP-900) - [/exams/azure/dp-900/](../exams/azure/dp-900)
-- Security Fundamentals (SC-900) - [/exams/azure/sc-900/](../exams/azure/sc-900)
+- AI Fundamentals (AI-900) - [/exams/azure/ai-900/](https://ai.noblerworks.com/certifications/azure/ai-900/)
+- Data Fundamentals (DP-900) - [/exams/azure/dp-900/](https://data.noblerworks.com/exams/azure/dp-900/)
+- Security Fundamentals (SC-900) - [/exams/azure/sc-900/](https://security.noblerworks.com/exams/azure/sc-900/)
 
 **Phase 2: Associate/Expert Level (5-7 months)**
 
@@ -339,7 +339,7 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 *Security Engineer Associate (AZ-500)*
 - Time: 80-120 hours study
 - Cost: $165 exam fee
-- Link: [/exams/azure/az-500/](../exams/azure/az-500)
+- Link: [/exams/azure/az-500/](https://security.noblerworks.com/exams/azure/az-500/)
 
 **Skills Learned:**
 - Managing identity and access
@@ -349,8 +349,8 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 
 **Phase 4: Additional Specializations**
 - Developer Associate (AZ-204) - [/exams/azure/az-204/](../exams/azure/az-204)
-- Data Engineer Associate (DP-203) - [/exams/azure/dp-203/](../exams/azure/dp-203)
-- AI Engineer Associate (AI-102) - [/exams/azure/ai-102/](../exams/azure/ai-102)
+- Data Engineer Associate (DP-203) - [/exams/azure/dp-203/](https://data.noblerworks.com/exams/azure/dp-203/)
+- AI Engineer Associate (AI-102) - [/exams/azure/ai-102/](https://ai.noblerworks.com/certifications/azure/ai-102/)
 
 ---
 
@@ -416,11 +416,11 @@ SPECIALTY CERTIFICATIONS (2-4 months each)
 
 **Phase 4: Specializations (Optional)**
 - Professional Cloud Network Engineer - [/exams/gcp/cloud-network-engineer/](../exams/gcp/cloud-network-engineer)
-- Professional Cloud Security Engineer - [/exams/gcp/cloud-security-engineer/](../exams/gcp/cloud-security-engineer)
-- Professional Data Engineer - [/exams/gcp/data-engineer/](../exams/gcp/data-engineer)
+- Professional Cloud Security Engineer - [/exams/gcp/cloud-security-engineer/](https://security.noblerworks.com/exams/gcp/cloud-security-engineer/)
+- Professional Data Engineer - [/exams/gcp/data-engineer/](https://data.noblerworks.com/exams/gcp/data-engineer/)
 - Professional Cloud Developer - [/exams/gcp/cloud-developer/](../exams/gcp/cloud-developer)
-- Professional Cloud Database Engineer - [/exams/gcp/cloud-database-engineer/](../exams/gcp/cloud-database-engineer)
-- Professional Machine Learning Engineer - [/exams/gcp/machine-learning-engineer/](../exams/gcp/machine-learning-engineer)
+- Professional Cloud Database Engineer - [/exams/gcp/cloud-database-engineer/](https://data.noblerworks.com/exams/gcp/cloud-database-engineer/)
+- Professional Machine Learning Engineer - [/exams/gcp/machine-learning-engineer/](https://ai.noblerworks.com/certifications/gcp/machine-learning-engineer/)
 
 ---
 

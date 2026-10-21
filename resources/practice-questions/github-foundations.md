@@ -285,6 +285,6 @@ D. A CI runner that executes workflow jobs on virtual machines hosted by GitHub 
 
 - [GitHub Foundations cert page](../../exams/github/foundations/) - notes, practice plan, strategy
 - [GitHub Actions practice questions](./github-actions.md) - the automation exam
-- [GitHub Copilot practice questions](./github-copilot.md) - the Copilot exam
+- [GitHub Copilot practice questions](https://ai.noblerworks.com/certifications/practice-questions/github-copilot/) - the Copilot exam
 - [Git and GitHub basics](../../learn/day-one/) - the Day One on-ramp
 - **[📖 GitHub Certifications](https://learn.github.com/certifications)** - official exam pages

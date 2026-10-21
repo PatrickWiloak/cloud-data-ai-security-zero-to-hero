@@ -62,7 +62,7 @@ exploit network protocols, and the switch and router features that stop them.
 **Encryption and tunnelling**
 
 - **IPsec** - encrypts at Layer 3. AH provides authentication and integrity only; ESP provides confidentiality as well, which is why ESP is used in practice. Transport mode protects the payload; tunnel mode protects the whole original packet and is used for site-to-site VPNs.
-- **TLS** - encrypts at the transport layer, protecting HTTPS and much else. See [TLS and HTTPS](../../../../learn/concepts/tls-and-https.md).
+- **TLS** - encrypts at the transport layer, protecting HTTPS and much else. See [TLS and HTTPS](https://security.noblerworks.com/learn/concepts/tls-and-https/).
 - **SSH** - encrypted remote administration, and a tunnel for other protocols.
 - **IKE** - negotiates the IPsec security association, in two phases.
 

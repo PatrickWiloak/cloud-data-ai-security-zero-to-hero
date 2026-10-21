@@ -38,7 +38,7 @@ CCA is also the only certification in the repo that teaches **eBPF**, which is n
 - Platform and network engineers running Kubernetes clusters
 - SREs debugging cluster networking
 - Security engineers implementing network policy and micro-segmentation
-- Anyone holding [CKA](../cka/) or [CKS](../cks/) going deeper on the data plane
+- Anyone holding [CKA](../cka/) or [CKS](https://security.noblerworks.com/exams/kubernetes/cks/) going deeper on the data plane
 
 Assumed background: Kubernetes services, pods, and the CNI concept. Linux networking helps considerably.
 
@@ -149,6 +149,6 @@ Assumed background: Kubernetes services, pods, and the CNI concept. Linux networ
 - [Practice plan](./practice-plan.md) - 5-week schedule
 - [Scenarios](./scenarios.md)
 - [Strategy](./strategy.md)
-- [CKA](../cka/) and [CKS](../cks/) - the Kubernetes layer above
+- [CKA](../cka/) and [CKS](https://security.noblerworks.com/exams/kubernetes/cks/) - the Kubernetes layer above
 - [Networking deep dives](../../../resources/networking-deep-dives/)
 - [VPC explained](../../../learn/concepts/vpc-explained.md)

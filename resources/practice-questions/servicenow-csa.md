@@ -285,5 +285,5 @@ D. A notification that emails the assignee when a task is due, with a fixed remi
 
 - [CSA cert page](../../exams/servicenow/csa/) - notes, practice plan, strategy
 - [Salesforce Administrator practice questions](./salesforce-administrator.md) - a comparable platform-admin credential
-- [IAM explained](../../learn/concepts/iam-explained.md) - roles, groups, and access in plain English
+- [IAM explained](https://security.noblerworks.com/learn/concepts/iam-explained/) - roles, groups, and access in plain English
 - **[📖 ServiceNow certification](https://www.servicenow.com/services/training-and-certification.html)** - official exam blueprint

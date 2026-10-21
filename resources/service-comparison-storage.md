@@ -1015,5 +1015,5 @@ azcopy copy \
 
 **Related Guides:**
 - [Compute Service Comparison](./service-comparison-compute.md)
-- [Database Service Comparison](./service-comparison-databases.md)
+- [Database Service Comparison](https://data.noblerworks.com/resources/service-comparison-databases/)
 - [Networking Service Comparison](./service-comparison-networking.md)

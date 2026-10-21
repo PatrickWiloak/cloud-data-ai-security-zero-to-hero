@@ -151,9 +151,9 @@ An audit of the repo against its own claims. Every validator was green and had b
 
 ### Added
 
-- **Seven data-engineering concept pages**, closing the weakest of the four subjects in the repo's own name. "Data and Databases" in the learn pillar was three pages, two of which are really distributed-systems topics, while the exam notes carried the material in depth (Parquet appears in 111 files, lakehouse in 75) with no plain-English entry point: [warehouses, lakes and lakehouses](./learn/concepts/warehouses-lakes-lakehouses.md), [ETL vs ELT](./learn/concepts/etl-vs-elt.md), [batch vs streaming](./learn/concepts/batch-vs-streaming.md), [data modeling for analytics](./learn/concepts/data-modeling-for-analytics.md), [file formats and partitioning](./learn/concepts/file-formats-and-partitioning.md), [data pipelines and orchestration](./learn/concepts/data-pipelines-and-orchestration.md), [data quality and lineage](./learn/concepts/data-quality-and-lineage.md).
+- **Seven data-engineering concept pages**, closing the weakest of the four subjects in the repo's own name. "Data and Databases" in the learn pillar was three pages, two of which are really distributed-systems topics, while the exam notes carried the material in depth (Parquet appears in 111 files, lakehouse in 75) with no plain-English entry point: [warehouses, lakes and lakehouses](https://data.noblerworks.com/learn/concepts/warehouses-lakes-lakehouses/), [ETL vs ELT](https://data.noblerworks.com/learn/concepts/etl-vs-elt/), [batch vs streaming](https://data.noblerworks.com/learn/concepts/batch-vs-streaming/), [data modeling for analytics](https://data.noblerworks.com/learn/concepts/data-modeling-for-analytics/), [file formats and partitioning](https://data.noblerworks.com/learn/concepts/file-formats-and-partitioning/), [data pipelines and orchestration](https://data.noblerworks.com/learn/concepts/data-pipelines-and-orchestration/), [data quality and lineage](https://data.noblerworks.com/learn/concepts/data-quality-and-lineage/).
 
-- **[`topics/data-engineering.md`](./topics/data-engineering.md)**, the 14th cross-pillar hub. `topics/README.md` had named data engineering as a subject with no index; that line is now retired.
+- **[`topics/data-engineering.md`](https://data.noblerworks.com/topics/data-engineering/)**, the 14th cross-pillar hub. `topics/README.md` had named data engineering as a subject with no index; that line is now retired.
 
 - **Open Graph and Twitter card tags on the site**, via `.github/site-overrides/main.html`. Material ships none, so all 2,034 pages previewed in Slack, X and LinkedIn as a bare URL. Static tags against one committed card rather than the `social` plugin, which needs Cairo and Pillow on the runner and can fail a build.
 
@@ -236,7 +236,7 @@ The published site opened on the repo's `README.md`, because MkDocs treats a dir
 
 ## [2026-08-14] - Published as a searchable website on GitHub Pages
 
-The repo's 3.0M words were only navigable through GitHub's file listing, with no search. Every page is now also published as a MkDocs Material site at **[cloud.noblerworks.com](https://cloud.noblerworks.com/)** with full-text search, dark mode, and mobile navigation.
+The repo's 3.0M words were only navigable through GitHub's file listing, with no search. Every page is now also published as a MkDocs Material site at **[cloud.noblerworks.com](README.md)** with full-text search, dark mode, and mobile navigation.
 
 The markdown tree is unchanged and remains the source of truth. The site is generated from it at build time rather than the tree being restructured for the generator, so there is no second copy of any page and reading the repo on GitHub is unaffected.
 

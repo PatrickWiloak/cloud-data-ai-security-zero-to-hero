@@ -103,4 +103,4 @@ A Sensor declares:
 
 - [Notes 01: Argo Workflows](./01-argo-workflows.md)
 - [Scenarios](../scenarios.md) - scenario 7
-- [Queues vs streams](../../../../learn/concepts/queues-vs-streams.md)
+- [Queues vs streams](https://data.noblerworks.com/learn/concepts/queues-vs-streams/)

@@ -132,7 +132,7 @@ A+ rewards hands-on time more than any other entry-level cert. The PBQs ask you 
 ## Companion Materials
 
 - **[CompTIA Network+ (N10-009)](../network-plus/README.md)** - The natural next cert. A+ networking is a small subset of Network+.
-- **[CompTIA Security+ (SY0-701)](../security-plus/README.md)** - The next step after Network+, or straight after A+ if you want security work.
+- **[CompTIA Security+ (SY0-701)](https://security.noblerworks.com/exams/comptia/security-plus/)** - The next step after Network+, or straight after A+ if you want security work.
 
 ## After This Cert
 
@@ -145,7 +145,7 @@ A+ rewards hands-on time more than any other entry-level cert. The PBQs ask you 
 
 ### Recommended Next Certifications
 - **CompTIA Network+** - Networking depth. See [Network+](../network-plus/README.md).
-- **CompTIA Security+** - Security baseline. See [Security+](../security-plus/README.md).
+- **CompTIA Security+** - Security baseline. See [Security+](https://security.noblerworks.com/exams/comptia/security-plus/).
 - **Microsoft or Linux admin certs** - If you want to move from desktop support to systems administration.
 
 ---

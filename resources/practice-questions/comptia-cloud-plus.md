@@ -286,7 +286,7 @@ D. A configuration spreadsheet listing every setting per environment, kept up to
 ## Where to go deeper
 
 - [Cloud+ cert page](../../exams/comptia/cloud-plus/) - notes, practice plan, strategy
-- [Security+ practice questions](./comptia-security-plus.md) - the security sibling
+- [Security+ practice questions](https://security.noblerworks.com/resources/practice-questions/comptia-security-plus/) - the security sibling
 - [AWS Cloud Practitioner practice questions](./aws-cloud-practitioner.md) - a vendor-specific view of the same concepts
 - [What is cloud computing?](../../learn/concepts/what-is-cloud-computing.md) - plain-English foundation
 - **[📖 CompTIA Cloud+](https://www.comptia.org/certifications/cloud)** - official exam objectives

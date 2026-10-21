@@ -154,6 +154,6 @@ whois example.com                  # registrar info
 ## What to look at next
 
 - **[CDN explained](./cdn-explained.md)** - CDNs typically need DNS records pointed at them
-- **[TLS and HTTPS](./tls-and-https.md)** - TLS depends on the CN/SAN matching the DNS name
+- **[TLS and HTTPS](https://security.noblerworks.com/learn/concepts/tls-and-https/)** - TLS depends on the CN/SAN matching the DNS name
 - **[Glossary: DNS, A record, CNAME, TTL](../glossary.md#networking)**
 - **[Networking deep dives: DNS](../../resources/networking-deep-dives/dns-deep-dive.md)**

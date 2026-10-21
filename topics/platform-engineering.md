@@ -38,18 +38,18 @@ The feedback arrow is the one that matters. A platform nobody adopts voluntarily
 - [Deployment strategies](../learn/concepts/deployment-strategies.md) - rolling, blue-green, canary
 - [Autoscaling explained](../learn/concepts/autoscaling-explained.md) - capacity as a platform capability
 - [Observability basics](../learn/concepts/observability-basics.md) - what the platform should provide by default
-- [Secrets management](../learn/concepts/secrets-management.md) - a capability every platform must solve once
+- [Secrets management](https://security.noblerworks.com/learn/concepts/secrets-management/) - a capability every platform must solve once
 
 ---
 
 ## Reference
 
 - [Architecture patterns](../resources/architecture-patterns/) - the designs platforms encode as golden paths
-- [Zero trust architecture](../resources/architecture-patterns/zero-trust-architecture.md) - the identity model tenants sit inside
+- [Zero trust architecture](https://security.noblerworks.com/resources/architecture-patterns/zero-trust-architecture/) - the identity model tenants sit inside
 - [Cell-based architecture](../resources/architecture-patterns/cell-based-architecture.md) - blast radius reduction at scale
 - [Service comparison: DevOps and CI/CD](../resources/service-comparison-devops-cicd.md)
 - [Kubernetes troubleshooting](../resources/troubleshooting/kubernetes-troubleshooting.md)
-- [AI security](../resources/ai-security/) - the guardrails an AI-era platform now needs
+- [AI security](https://ai.noblerworks.com/safety/) - the guardrails an AI-era platform now needs
 
 ---
 
@@ -59,7 +59,7 @@ The feedback arrow is the one that matters. A platform nobody adopts voluntarily
 - [Set up a Kubernetes cluster](../resources/hands-on-projects/kubernetes-cluster-setup.md)
 - [Build infrastructure with Terraform](../resources/hands-on-projects/terraform-infrastructure.md)
 - [Set up a monitoring stack](../resources/hands-on-projects/setup-monitoring-stack.md)
-- [Implement zero trust](../resources/hands-on-projects/implement-zero-trust.md)
+- [Implement zero trust](https://security.noblerworks.com/resources/hands-on-projects/implement-zero-trust/)
 
 ---
 
@@ -73,7 +73,7 @@ The feedback arrow is the one that matters. A platform nobody adopts voluntarily
 - [CAPA - Certified Argo Project Associate](../exams/kubernetes/capa/) - Argo CD, Workflows, Rollouts, Events
 - [OTCA - OpenTelemetry Certified Associate](../exams/kubernetes/otca/) - observability as a capability
 - [CCA - Cilium Certified Associate](../exams/kubernetes/cca/) - the networking and policy datapath
-- [CKA](../exams/kubernetes/cka/) and [CKS](../exams/kubernetes/cks/) - operating and securing the substrate
+- [CKA](../exams/kubernetes/cka/) and [CKS](https://security.noblerworks.com/exams/kubernetes/cks/) - operating and securing the substrate
 - [HashiCorp Terraform Associate](../exams/hashicorp/terraform-associate/) - infrastructure as code
 - [GitHub Actions](../exams/github/actions/) - pipeline automation
 
