@@ -175,7 +175,7 @@ Several scripts live under `.github/scripts/`. The validators run in CI on every
 - `glossary-upgrade-existing-links.py` - upgrades old section-level glossary links to per-term anchors when an anchor is available.
 
 - `check-repo-metadata.py` - checks the GitHub repository description, homepage and topics against the tree. The description is generated from `docs/certs.json`, never typed. `--fix` patches it, and needs admin rights, so it runs locally rather than in CI.
-- `build-social-card.py` - renders `assets/brand/social-preview-1280x640.png`, used both as GitHub's social preview and as the site's Open Graph image. Needs `pillow`.
+- `assets/brand/social-preview.html` - the social preview card template (same layout on all four Zero to Hero sites); screenshot it at 1280x640 into `assets/brand/social-preview-1280x640.png`, used both as GitHub's social preview and the site's Open Graph image.
 
 **CI workflows under `.github/workflows/`:**
 

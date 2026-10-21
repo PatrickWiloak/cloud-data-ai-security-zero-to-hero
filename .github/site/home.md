@@ -24,7 +24,7 @@
 
 <div class="home-hero" markdown>
 
-# Cloud Zero to Hero { .home-title }
+# Cloud, from zero to hero { .home-title }
 
 <p class="home-intro">AWS, Azure, GCP, OCI, Kubernetes, Linux, networking, Terraform, DevOps, SRE and FinOps. Plain-English concepts, hands-on builds, deep references, and a full cloud certification library - free, no signup, nothing gated.</p>
 
