@@ -6,6 +6,15 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-10-21] (2) - Concept gap fill
+
+### Added
+
+- 14 concept pages in `learn/concepts/`: object, block and file storage; high availability and fault tolerance; disaster recovery (RPO and RTO); API gateways; message queues and pub/sub; multi-account strategy and landing zones; infrastructure as code; GitOps; service mesh; platform engineering; cloud identity for builders; Well-Architected; managed databases; edge computing. Short pages link the deep dives here and on the Data and Security sites.
+- 3 Day One pages: environment variables and config, Linux processes and services (systemd), your first Docker container.
+- 2 hands-on projects: build a landing zone (AWS Organizations, SCPs, org trail, budgets, with Azure and GCP equivalents) and GitOps with Argo CD (kind, Kustomize overlays, promotion and rollback by Git).
+- All wired into the concept and Day One indexes, Cloud from Scratch, the hands-on index, labs-by-cert and the topic indexes.
+
 ## [2026-10-21] - Cloud Zero to Hero
 
 ### Changed

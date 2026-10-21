@@ -120,6 +120,7 @@ Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certi
 
 See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
+- **2026-10-21** - Fourteen new [concept pages](./learn/concepts/) (object/block/file storage, high availability, DR with RPO and RTO, API gateways, queues and pub/sub, landing zones, IaC, GitOps, service mesh, platform engineering, cloud identity for builders, Well-Architected, managed databases, edge computing), three new [Day One](./learn/day-one/) pages (environment variables, Linux processes and systemd, your first Docker container) and two hands-on builds: [a landing zone](./resources/hands-on-projects/build-a-landing-zone.md) and [GitOps with Argo CD](./resources/hands-on-projects/gitops-with-argo-cd.md).
 - **2026-10-21** - This repo is now **Cloud Zero to Hero**. The old all-in-one repo was split by subject into four sibling sites: cloud stays here, and the data, security and AI material moved to [Data](https://data.noblerworks.com/), [Security](https://security.noblerworks.com/) and [AI](https://ai.noblerworks.com/) Zero to Hero. Links between them are absolute, so nothing you bookmarked on a subject page is lost.
 - **2026-09-28** - New [CompTIA A+ (220-1201 and 220-1202)](./exams/comptia/a-plus/) guide: nine notes across both Core exams, a fact sheet, study plan, scenarios, strategy and 20 [practice questions](./resources/practice-questions/comptia-a-plus-220-1201-1202.md). On the site, every page now has its own search description and a title led by its exam code, and deploys notify search engines through IndexNow.
 - **2026-09-18** - Every dead vendor link repaired: each replacement fetched and matched to the page the citation meant. The sweep now also catches soft 404s and deep links that silently redirect to a homepage. The record of every old-to-new replacement is [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md).
@@ -132,14 +133,14 @@ See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 A complete cloud learning resource. Whether you're starting fresh, building production systems, or chasing certifications:
 
 - ✅ **[Day One on-ramp](./learn/day-one/)** - terminal, git, HTTP, servers
-- ✅ **[18 concept pages](./learn/concepts/)** - cloud computing, regions, VPCs, DNS, CDNs, load balancing, containers, Kubernetes, serverless, Terraform, CI/CD, observability, cost
+- ✅ **[32 concept pages](./learn/concepts/)** - cloud computing, regions, VPCs, DNS, CDNs, load balancing, containers, Kubernetes, serverless, Terraform, CI/CD, observability, cost, storage types, high availability, disaster recovery, API gateways, landing zones, IaC, GitOps, service mesh, platform engineering, edge
 - ✅ **[Cloud from Scratch](./learn/cloud-from-scratch.md)** - a structured 8-phase path
 - ✅ **72 certification study guides** across 16 providers, 6,000+ embedded vendor doc links
 - ✅ **[7 cross-pillar topic indexes](./topics/)** - Kubernetes, networking, serverless, observability, SRE, platform engineering, FinOps (find everything by topic, not provider)
 - ✅ **7 cross-cloud service comparisons** - compute, storage, networking, containers, DevOps/CI/CD, observability, serverless
 - ✅ **9 CLI cheat sheets** (AWS, Azure, GCP, kubectl, Terraform, Docker, Helm, GitHub CLI, multi-cloud)
 - ✅ **12 architecture patterns** with multi-cloud implementations
-- ✅ **7 hands-on projects** - 3-tier app, CI/CD, monitoring, Kubernetes, Terraform, serverless, DR drill
+- ✅ **9 hands-on projects** - 3-tier app, CI/CD, monitoring, Kubernetes, Terraform, serverless, DR drill, landing zone, GitOps with Argo CD
 - ✅ **7 certification roadmaps** by career path
 - ✅ **4 interview prep guides**
 - ✅ **Migration, cost optimization, well-architected, networking and troubleshooting** deep-dives
@@ -210,7 +211,7 @@ On the sibling sites: [Databases](https://data.noblerworks.com/resources/service
 On the sibling sites: [Data Pipeline/ETL](https://data.noblerworks.com/resources/architecture-patterns/data-pipeline-etl/) · [Data Mesh](https://data.noblerworks.com/resources/architecture-patterns/data-mesh/) · [Lakehouse](https://data.noblerworks.com/resources/architecture-patterns/lakehouse-architecture/) · [Zero Trust](https://security.noblerworks.com/resources/architecture-patterns/zero-trust-architecture/) · [AI/ML Pipeline](https://ai.noblerworks.com/build/patterns/ai-ml-pipeline/)
 
 ### **Hands-on Projects**
-[3-Tier App](./resources/hands-on-projects/deploy-3-tier-app.md) · [CI/CD Pipeline](./resources/hands-on-projects/build-ci-cd-pipeline.md) · [Monitoring Stack](./resources/hands-on-projects/setup-monitoring-stack.md) · [K8s Cluster](./resources/hands-on-projects/kubernetes-cluster-setup.md) · [Terraform Infra](./resources/hands-on-projects/terraform-infrastructure.md) · [Serverless App](./resources/hands-on-projects/serverless-application.md) · [DR Drill](./resources/hands-on-projects/disaster-recovery-drill.md)
+[3-Tier App](./resources/hands-on-projects/deploy-3-tier-app.md) · [CI/CD Pipeline](./resources/hands-on-projects/build-ci-cd-pipeline.md) · [Monitoring Stack](./resources/hands-on-projects/setup-monitoring-stack.md) · [K8s Cluster](./resources/hands-on-projects/kubernetes-cluster-setup.md) · [Terraform Infra](./resources/hands-on-projects/terraform-infrastructure.md) · [Serverless App](./resources/hands-on-projects/serverless-application.md) · [DR Drill](./resources/hands-on-projects/disaster-recovery-drill.md) · [Landing Zone](./resources/hands-on-projects/build-a-landing-zone.md) · [GitOps with Argo CD](./resources/hands-on-projects/gitops-with-argo-cd.md)
 
 On the sibling sites: [Data Pipeline](https://data.noblerworks.com/resources/hands-on-projects/build-data-pipeline/) · [Zero Trust](https://security.noblerworks.com/resources/hands-on-projects/implement-zero-trust/) · [RAG pipeline](https://ai.noblerworks.com/build/projects/build-rag-pipeline/) · [Claude agent with MCP](https://ai.noblerworks.com/build/projects/build-claude-agent-with-mcp/)
 
@@ -302,11 +303,11 @@ On the sibling sites: [Data Pipeline](https://data.noblerworks.com/resources/han
 - **Certifications:** 72
 - **Documentation links:** 6,000+
 - **Providers:** 16
-- **Concept pages:** 18
+- **Concept pages:** 32
 - **Service comparisons:** 7
 - **CLI cheat sheets:** 9
 - **Architecture patterns:** 12
-- **Hands-on projects:** 7
+- **Hands-on projects:** 9
 - **Topic indexes:** 7 (cross-pillar)
 - **Career roadmaps:** 7
 - **Interview prep guides:** 4
@@ -322,7 +323,7 @@ cloud-zero-to-hero/
 ├── STUDY-HUB.md (full per-provider navigation)
 ├── CHANGELOG.md
 ├── learn/                # plain-English learning content
-│   ├── concepts/         # 18 bite-size concept pages
+│   ├── concepts/         # 32 bite-size concept pages
 │   ├── day-one/          # absolute-beginner on-ramp
 │   ├── cloud-from-scratch.md
 │   └── glossary.md

@@ -25,6 +25,8 @@ flowchart LR
 - [IaaS vs PaaS vs SaaS](../learn/concepts/iaas-paas-saas.md) - where serverless sits in the stack
 - [Containers vs VMs](../learn/concepts/containers-vs-vms.md) - what runs underneath
 - [CI/CD explained](../learn/concepts/cicd-explained.md) - deploys for serverless are usually CI-driven
+- [API gateways explained](../learn/concepts/api-gateways-explained.md) - the usual front door for functions
+- [Message queues and pub/sub](../learn/concepts/message-queues-and-pub-sub-for-cloud.md) - the event sources functions consume
 
 ---
 

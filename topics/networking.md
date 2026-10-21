@@ -29,6 +29,9 @@ flowchart LR
 - [TLS and HTTPS](https://security.noblerworks.com/learn/concepts/tls-and-https/) - what TLS actually does
 - [CDN explained](../learn/concepts/cdn-explained.md) - edge caching, origin shielding
 - [Regions and availability zones](../learn/concepts/regions-and-availability-zones.md) - the geography of cloud
+- [API gateways explained](../learn/concepts/api-gateways-explained.md) - the managed front door for APIs, vs a load balancer
+- [Edge computing explained](../learn/concepts/edge-computing-explained.md) - CDN functions, Local Zones, on-premises edge
+- [Service mesh explained](../learn/concepts/service-mesh-explained.md) - east-west traffic inside the cluster
 
 ---
 

@@ -39,6 +39,11 @@ The feedback arrow is the one that matters. A platform nobody adopts voluntarily
 - [Autoscaling explained](../learn/concepts/autoscaling-explained.md) - capacity as a platform capability
 - [Observability basics](../learn/concepts/observability-basics.md) - what the platform should provide by default
 - [Secrets management](https://security.noblerworks.com/learn/concepts/secrets-management/) - a capability every platform must solve once
+- [Platform engineering explained](../learn/concepts/platform-engineering-explained.md) - internal developer platforms, golden paths, platform as a product
+- [Infrastructure as Code explained](../learn/concepts/infrastructure-as-code-explained.md) - declarative vs imperative, state and drift, tool-neutral
+- [GitOps explained](../learn/concepts/gitops-explained.md) - pull-based delivery with Argo CD and Flux
+- [Service mesh explained](../learn/concepts/service-mesh-explained.md) - mTLS, retries and traffic splitting between services
+- [Multi-account strategy and landing zones](../learn/concepts/multi-account-and-landing-zones.md) - the governed cloud foundation a platform sits on
 
 ---
 
@@ -59,6 +64,8 @@ The feedback arrow is the one that matters. A platform nobody adopts voluntarily
 - [Set up a Kubernetes cluster](../resources/hands-on-projects/kubernetes-cluster-setup.md)
 - [Build infrastructure with Terraform](../resources/hands-on-projects/terraform-infrastructure.md)
 - [Set up a monitoring stack](../resources/hands-on-projects/setup-monitoring-stack.md)
+- [Build a landing zone](../resources/hands-on-projects/build-a-landing-zone.md)
+- [GitOps with Argo CD](../resources/hands-on-projects/gitops-with-argo-cd.md)
 - [Implement zero trust](https://security.noblerworks.com/resources/hands-on-projects/implement-zero-trust/)
 
 ---

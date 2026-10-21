@@ -34,6 +34,9 @@ flowchart TB
 - [Kubernetes in 10 minutes](../learn/concepts/kubernetes-in-10-minutes.md) - pods, deployments, services, namespaces
 - [Containers vs VMs](../learn/concepts/containers-vs-vms.md) - what containers actually are
 - [IaaS / PaaS / SaaS](../learn/concepts/iaas-paas-saas.md) - where K8s sits
+- [Your first Docker container](../learn/day-one/docker-first-container.md) - build and run an image before you orchestrate one
+- [GitOps explained](../learn/concepts/gitops-explained.md) - Argo CD and Flux reconcile clusters from Git
+- [Service mesh explained](../learn/concepts/service-mesh-explained.md) - Istio, Linkerd and Cilium for service-to-service traffic
 
 ---
 
@@ -57,6 +60,7 @@ flowchart TB
 
 - [Kubernetes cluster setup](../resources/hands-on-projects/kubernetes-cluster-setup.md) - cluster end-to-end
 - [Build a CI/CD pipeline](../resources/hands-on-projects/build-ci-cd-pipeline.md) - container builds and rollouts
+- [GitOps with Argo CD](../resources/hands-on-projects/gitops-with-argo-cd.md) - deploy, promote and roll back by Git commit
 
 ---
 

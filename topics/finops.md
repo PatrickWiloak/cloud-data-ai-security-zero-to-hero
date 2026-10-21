@@ -24,6 +24,8 @@ flowchart LR
 - [What is cloud computing?](../learn/concepts/what-is-cloud-computing.md) - capex → opex is the FinOps premise
 - [Serverless explained](../learn/concepts/serverless-explained.md) - pay-per-use lever
 - [Regions and availability zones](../learn/concepts/regions-and-availability-zones.md) - region pricing matters
+- [Multi-account strategy and landing zones](../learn/concepts/multi-account-and-landing-zones.md) - per-account billing and budgets make cost ownership real
+- [Well-Architected explained](../learn/concepts/well-architected-explained.md) - the cost optimization pillar and its trade-offs
 
 ---
 

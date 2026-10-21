@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-21
 ---
 
 # ☁️ Cloud From Scratch
@@ -71,6 +71,7 @@ Build a "static website" by uploading an `index.html` to S3 and enabling website
 
 **Pointer**
 - [Service Comparison: Compute](../resources/service-comparison-compute.md)
+- Concepts: [Object, block, and file storage](./concepts/object-block-file-storage.md) and [Managed databases explained](./concepts/managed-databases-explained.md)
 - [Service Comparison: Storage](../resources/service-comparison-storage.md)
 - [Service Comparison: Networking](../resources/service-comparison-networking.md)
 - [Service Comparison: Databases](https://data.noblerworks.com/resources/service-comparison-databases/)
@@ -127,6 +128,7 @@ Build a VPC with two subnets (public + private). Put a VM in each. Make sure the
 
 **Pointer**
 - [Networking Deep Dives](../resources/networking-deep-dives/)
+- Concepts: [API gateways explained](./concepts/api-gateways-explained.md) and [Edge computing explained](./concepts/edge-computing-explained.md)
 - Glossary entries: VPC, CIDR, Subnet, Security group, DNS, Load balancer, TLS
 
 You should now be comfortable reading and writing network diagrams.
@@ -151,6 +153,8 @@ Create an IAM role that lets a Lambda function read from one specific S3 bucket 
 
 **Pointer**
 - [AWS IAM CLI cheat sheet](../resources/cli-cheat-sheet-aws.md)
+- Concepts: [Cloud identity basics for builders](./concepts/cloud-identity-basics-for-builders.md) (how code gets credentials) and [Multi-account strategy and landing zones](./concepts/multi-account-and-landing-zones.md) (accounts as security boundaries)
+- Day One: [Environment variables and config](./day-one/environment-variables-and-config.md)
 - Glossary: IAM, RBAC, Service account, OIDC, SSO, MFA, Secret
 - Going deeper on identity and cloud security: the [IAM topic index](https://security.noblerworks.com/topics/iam/) and [cloud security](https://security.noblerworks.com/topics/security/) on Security Zero to Hero
 
@@ -176,6 +180,7 @@ Write a Terraform file that creates one S3 bucket. Run `terraform plan`, then `t
 
 **Pointer**
 - [Terraform CLI cheat sheet](../resources/cli-cheat-sheet-terraform.md)
+- Concepts: [Infrastructure as Code explained](./concepts/infrastructure-as-code-explained.md) (tool-neutral) and [GitOps explained](./concepts/gitops-explained.md)
 - [DevOps & CI/CD comparison](../resources/service-comparison-devops-cicd.md)
 - Glossary: IaC, CI, CD, Pipeline, Drift, Blue/green
 
@@ -200,6 +205,9 @@ Containerize a Hello World web app. Run it locally with `docker run`. Push to EC
 
 **Pointer**
 - [Docker CLI cheat sheet](../resources/cli-cheat-sheet-docker.md)
+- Day One: [Your first Docker container](./day-one/docker-first-container.md) and [Linux processes and services](./day-one/linux-processes-and-services.md)
+- Concepts: [Service mesh explained](./concepts/service-mesh-explained.md) and [Platform engineering explained](./concepts/platform-engineering-explained.md) (when you have many services and many teams)
+- Hands-on: [GitOps with Argo CD](../resources/hands-on-projects/gitops-with-argo-cd.md)
 - [kubectl cheat sheet](../resources/cli-cheat-sheet-kubectl.md)
 - [Helm cheat sheet](../resources/cli-cheat-sheet-helm.md)
 - [Containers comparison](../resources/service-comparison-containers-kubernetes.md)
@@ -227,6 +235,7 @@ Add CloudWatch / Cloud Monitoring / Azure Monitor alarms to the VM you built in 
 
 **Pointer**
 - [Observability comparison](../resources/service-comparison-observability-monitoring.md)
+- Concepts: [High availability and fault tolerance](./concepts/high-availability-and-fault-tolerance.md) and [Message queues and pub/sub](./concepts/message-queues-and-pub-sub-for-cloud.md)
 - [Cost Optimization (AWS)](../resources/cost-optimization/aws-cost-optimization.md)
 - [Cost Optimization (Azure)](../resources/cost-optimization/azure-cost-optimization.md)
 - [Cost Optimization (GCP)](../resources/cost-optimization/gcp-cost-optimization.md)
@@ -253,10 +262,12 @@ Pick one [hands-on project](../resources/hands-on-projects/) and build it end to
 
 **Pointer**
 - [Architecture Patterns](../resources/architecture-patterns/)
+- Concepts: [Well-Architected explained](./concepts/well-architected-explained.md) and [Disaster recovery: RPO and RTO](./concepts/disaster-recovery-rpo-rto.md)
 - [AWS Well-Architected](../resources/well-architected/aws-well-architected.md)
 - [Azure Well-Architected](../resources/well-architected/azure-well-architected.md)
 - [GCP Well-Architected](../resources/well-architected/gcp-well-architected.md)
 - [Hands-On Projects](../resources/hands-on-projects/)
+- Hands-on: [Build a landing zone](../resources/hands-on-projects/build-a-landing-zone.md) - an organization, guardrails and central logging
 - Compliance (SOC 2, HIPAA, PCI DSS, GDPR, FedRAMP): [compliance guides](https://security.noblerworks.com/resources/compliance-guides/) on Security Zero to Hero
 - Data pipelines and databases: [Data Zero to Hero](https://data.noblerworks.com/)
 

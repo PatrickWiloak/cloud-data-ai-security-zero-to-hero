@@ -45,7 +45,14 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 
 1. **Outage postmortems** beside the 3 existing ones: CrowdStrike 2024 and the Oct 2025 AWS us-east-1 DNS event.
 2. **Cert gaps**: observability (Splunk/Elastic/Datadog), CNCF Backstage and Kyverno associates, plus the Linux+ item below.
-3. **Concept pages**: backup and DR (RPO/RTO); day-one Python and environment variables.
+3. **Concept pages**: day-one Python still open (DR/RPO-RTO and environment variables shipped 2026-10-21).
+
+## Concept gap fill (2026-10-21)
+
+- [x] 2026-10-21 14 concept pages, 3 day-one pages, 2 projects (landing zone, GitOps with Argo CD) added and wired in; see git log.
+- [ ] 2026-11-04 Run `gitops-with-argo-cd.md` end to end on kind and fix any command that fails (written, not executed).
+- [ ] 2026-11-04 Dry-run `build-a-landing-zone.md` in a throwaway AWS org (never in NW `791588190257` or a client account); fix commands.
+- [ ] 2026-11-04 Add glossary terms the new pages use but `learn/glossary.md` lacks: RPO, RTO, landing zone, SCP, golden path, SPOF.
 
 ## GCP exam refresh (2026-10-14)
 

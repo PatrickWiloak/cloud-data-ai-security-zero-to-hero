@@ -27,6 +27,9 @@ flowchart LR
 - [Idempotency explained](../learn/concepts/idempotency-explained.md) - retry-safe operations are the foundation of resilience
 - [Regions and availability zones](../learn/concepts/regions-and-availability-zones.md) - the geography of resilience
 - [Queues vs streams](https://data.noblerworks.com/learn/concepts/queues-vs-streams/) - decoupling for reliability
+- [High availability and fault tolerance](../learn/concepts/high-availability-and-fault-tolerance.md) - the nines, SPOFs, active-passive vs active-active
+- [Disaster recovery: RPO and RTO](../learn/concepts/disaster-recovery-rpo-rto.md) - the four DR strategies and how to pick one
+- [Well-Architected explained](../learn/concepts/well-architected-explained.md) - the reliability pillar in context
 
 ---
 
