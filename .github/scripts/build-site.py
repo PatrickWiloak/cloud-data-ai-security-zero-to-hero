@@ -304,6 +304,15 @@ def stage() -> list[str]:
         key = key_file.read_text(encoding="utf-8").strip()
         (STAGE / f"{key}.txt").write_text(key, encoding="utf-8")
         staged.append(f"{key}.txt")
+
+    # robots.txt at the domain root - possible since the move to the
+    # cloud.noblerworks.com custom domain (2026-10-21); a github.io project page
+    # has no root of its own. Sitemap URL follows site_url.
+    m = re.search(r"^site_url:\s*(\S+)", (REPO / "mkdocs.yml").read_text(encoding="utf-8"), re.MULTILINE)
+    if m:
+        base = m.group(1).rstrip("/") + "/"
+        (STAGE / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {base}sitemap.xml\n", encoding="utf-8")
+        staged.append("robots.txt")
     return staged
 
 

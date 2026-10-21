@@ -34,7 +34,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 SLUG = "PatrickWiloak/cloud-data-ai-security-zero-to-hero"
-SITE_URL = "https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/"
+SITE_URL = "https://cloud.noblerworks.com/"
 
 # The description GitHub shows. Every number is a token; none is typed. Keep it
 # under 350 characters, which is GitHub's limit.

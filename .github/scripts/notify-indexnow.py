@@ -39,7 +39,7 @@ import urllib.request
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-SITE = "https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/"
+SITE = "https://cloud.noblerworks.com/"
 HOST = "patrickwiloak.github.io"
 KEY = (REPO / ".github" / "site" / "indexnow-key.txt").read_text(encoding="utf-8").strip()
 ENDPOINT = "https://api.indexnow.org/indexnow"

@@ -158,7 +158,7 @@ def main() -> int:
     for label in ("Learn", "Certify", "Build", "Reference"):
         x = pill(draw, x, y, label, chip)
 
-    draw.text((PAD, H - 62), "patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero",
+    draw.text((PAD, H - 62), "cloud.noblerworks.com",
               font=mono_400, fill=DIM)
     draw.text((W - PAD, H - 62), "Nobler Works", font=mono_400, fill=FAINT, anchor="ra")
 

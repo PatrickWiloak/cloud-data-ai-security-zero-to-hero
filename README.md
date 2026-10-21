@@ -61,9 +61,9 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 
 <div align="center" markdown="1">
 
-[![Visit the website](https://img.shields.io/badge/Visit_the_website-patrickwiloak.github.io%2Fcloud--data--ai--security--zero--to--hero-FF9900?style=for-the-badge&logo=googlechrome&logoColor=white)](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)
+[![Visit the website](https://img.shields.io/badge/Visit_the_website-cloud.noblerworks.com-FF9900?style=for-the-badge&logo=googlechrome&logoColor=white)](https://cloud.noblerworks.com/)
 
-**[→ patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)**
+**[→ cloud.noblerworks.com](https://cloud.noblerworks.com/)**
 
 Full-text search across all 3.1M words, dark mode, mobile-friendly.
 
@@ -71,7 +71,7 @@ Full-text search across all 3.1M words, dark mode, mobile-friendly.
 
 ---
 
-> ### 🔎 Read this as a website: **[patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)**
+> ### 🔎 Read this as a website: **[cloud.noblerworks.com](https://cloud.noblerworks.com/)**
 >
 > Every page in this repo is published as a searchable site with full-text search across all 3.1M words, dark mode, and mobile navigation. Browsing on GitHub works fine too - the site is generated from these same markdown files, so nothing is duplicated or out of date.
 
@@ -115,7 +115,7 @@ See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 - **2026-09-18** - Every dead vendor link repaired: 783 URLs, each replacement fetched and matched to the page the citation meant. The sweep now also catches soft 404s and deep links that silently redirect to a homepage. The record of every old-to-new replacement is [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md).
 - **2026-09-17** - Audit pass. The weekly external link check turned out never to have run: it passed lychee a flag lychee had removed, so it checked zero URLs and reported success in 0.2 seconds. Fixed, with a guard that fails the job when lychee cannot run at all. The first real sweep found 701 dead vendor links; the most-cited are repaired and the rest are listed in [docs/link-rot-2026-09-17.md](./docs/link-rot-2026-09-17.md). Also: seven new data-engineering concept pages and a [data engineering topic index](./topics/data-engineering.md), closing the thinnest of the four subjects in the repo's name; Open Graph cards on every page of the site; and the GitHub repository description, which had drifted to "122+ certs across 22 providers", is now generated from `certs.json` and checked in CI like every other count.
 - **2026-08-14** - The site now opens on a landing page of its own rather than on the repo README, and every counted claim in the README is under CI. The per-provider table was stale in 8 of 22 rows and missing 5 providers entirely, five days after the Tier 1 batch added them; the 17 numbers in the statistics block had nothing watching them either. Both are checked by `check-readme-counts.py` now.
-- **2026-08-14** - The whole repo is now a searchable website: [patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/). Full-text search across 3.1M words, dark mode, mobile nav, generated from these same markdown files. The strict build also caught and fixed an unclosed code fence that was swallowing part of a GCP note, plus 14 broken heading anchors.
+- **2026-08-14** - The whole repo is now a searchable website: [cloud.noblerworks.com](https://cloud.noblerworks.com/). Full-text search across 3.1M words, dark mode, mobile nav, generated from these same markdown files. The strict build also caught and fixed an unclosed code fence that was swallowing part of a GCP note, plus 14 broken heading anchors.
 - **2026-08-11** - Anthropic's official Claude certification program (launched March-July 2026) fully covered: new Claude Certified Associate - Foundations (CCAO-F) guide, existing guides retargeted to the real CCDV-F, CCAR-F, and CCAR-P exams with official domain blueprints, pricing, and Pearson VUE logistics. Anthropic promoted from study-track pseudo-provider to the 27th certification provider; repo now at 148 certs.
 - **2026-07-29** - Gap-analysis pass: notes drafted for the last 10 outline-stage certs (CySA+, Network+, CCNP ENCOR, CISA, CISM, OSCP, PCNSA, Salesforce PD2, ServiceNow CSA, VMware VCP-DCV); generated cert index (`docs/certs.json`) driving the provider tables and 27 provider index pages; per-cert Anki flashcards; lab-to-cert map; freshness rotation; fixed 383 broken internal links and made internal link-checking a blocking CI gate.
 - **2026-05-03** - Cloud + AI scope expansion: `learn/` pillar, AI concept pages, `topics/` cross-pillar index, AI service comparisons (vector DBs, GenAI platforms, agent frameworks, LLM observability), AI hands-on builds (RAG, MCP agents, vLLM, evals, LoRA), CI link/lint/structure checks, freshness ledger.
@@ -430,10 +430,10 @@ Free, open-source projects from the [Nobler Works](https://noblerworks.com/) tea
 
 | Project | What it is | |
 |---|---|---|
-| 🛰️ **[IRONSIGHT](https://github.com/NoblerWorks-HQ/IRONSIGHT)** | Real-time OSINT command center - 50+ live intel feeds, no API keys | **[Website →](https://noblerworks-hq.github.io/IRONSIGHT/)** |
-| 🌍 **[War Games](https://github.com/NoblerWorks-HQ/WarGames)** | NATO, Russia, and China on one map, each commanded by an LLM | **[Website →](https://noblerworks-hq.github.io/WarGames/)** |
+| 🛰️ **[IRONSIGHT](https://github.com/NoblerWorks-HQ/IRONSIGHT)** | Real-time OSINT command center - 50+ live intel feeds, no API keys | **[Website →](https://ironsight.noblerworks.com/)** |
+| 🌍 **[War Games](https://github.com/NoblerWorks-HQ/WarGames)** | NATO, Russia, and China on one map, each commanded by an LLM | **[Website →](https://wargames.noblerworks.com/)** |
 | ⛏️ **[Minecraft Agentic Builder](https://github.com/NoblerWorks-HQ/minecraft-agentic)** | A crew of AI agents builds Minecraft worlds live in your browser | [Repo →](https://github.com/NoblerWorks-HQ/minecraft-agentic) |
-| 📚 **[AI Zero to Hero](https://github.com/PatrickWiloak/ai-zero-to-hero)** | Everything AI in one place: learn, use at work, build, govern, get hired - plus 156 landmark papers in plain language | **[Website →](https://ai.patrickwiloak.com/)** |
+| 📚 **[AI Zero to Hero](https://github.com/PatrickWiloak/ai-zero-to-hero)** | Everything AI in one place: learn, use at work, build, govern, get hired - plus 156 landmark papers in plain language | **[Website →](https://ai.noblerworks.com/)** |
 | 🧠 **[Bedrock RAG with S3 Vectors](https://github.com/PatrickWiloak/bedrock-rag-s3-vectors-tutorial)** | Deploy document Q&A on AWS Bedrock in under 10 minutes (CDK or Terraform) | [Repo →](https://github.com/PatrickWiloak/bedrock-rag-s3-vectors-tutorial) |
 | 🏃 **[Proper Training for Distance Running](https://github.com/PatrickWiloak/proper-distance-running-training-guidance)** | Evidence-based running guide with twelve 5K-to-marathon plans | **[Read online →](https://achilles.fit/guides)** |
 

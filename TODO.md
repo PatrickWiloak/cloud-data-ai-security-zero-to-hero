@@ -124,7 +124,7 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       (CHANGELOG 2026-09-28). Baseline for judging it, GitHub traffic 2026-09-14..28: 248 views / 99 uniques;
       referrers github.com 13, chatgpt.com 10, Bing 6, Google 5, DuckDuckGo 1. 40 stars, 20 forks.
 - [x] ~~Google Search Console property~~ ✅ done 2026-09-28: URL-prefix property
-      `https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/` verified by meta tag
+      `https://cloud.noblerworks.com/` verified by meta tag
       (`mkdocs.yml` `extra.google_site_verification`) through the Site Verification API as the `nobler-reporting`
       service account (API enabled on project 822136630919 for this). Owners: that SA and pat@noblerworks.com.
       `sitemap.xml` submitted the same day.
@@ -156,14 +156,12 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       `SiteVerificationNotCompleted`; `notify-indexnow.py --all` minutes later was accepted (HTTP 200, 2,043 URLs).
 - [x] 2026-10-20 ✅ **2026-10-05 check** (✏️ 2026-10-20: run 39078323231, 2026-10-17, prints `IndexNow: 2 URL(s)` / `IndexNow accepted: HTTP 200`): open the next "Docs site" run's "Notify IndexNow" step; it should now say
       `IndexNow accepted`. If it 403s again, the key file at the site root is not being served - check
-      `https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/<key>.txt` (key in `.github/site/indexnow-key.txt`).
+      `https://cloud.noblerworks.com/<key>.txt` (key in `.github/site/indexnow-key.txt`).
 - [ ] **2026-10-28 judge**: re-pull `gh api repos/PatrickWiloak/cloud-data-ai-security-zero-to-hero/traffic/popular/referrers`.
       Target: Google + Bing referrals above 11 per 14 days (baseline above), and new pages showing in
       Search Console → Pages → Indexed (if the property exists by then).
-- [ ] **Decide: custom domain?** e.g. `zerotohero.patricklukewilson.com`. It would be covered by the existing
-      `sc-domain:patricklukewilson.com` Search Console property (the reporting SA is already a Full user there),
-      allow a real `robots.txt` with a `Sitemap:` line (a `github.io/<repo>` subpath cannot have one), and
-      build authority on your own domain. GitHub Pages redirects the old URLs. Cost: one CNAME + `site_url` change.
+- [x] 2026-10-21 Moved to `cloud.noblerworks.com` (Route 53 CNAME, NW) + robots.txt; no redirect needed (never indexed).
+- [ ] 2026-10-28 Patrick: Search Console `sc-domain:noblerworks.com` -> submit `https://cloud.noblerworks.com/sitemap.xml`.
 - [x] ~~CompTIA A+ (220-1201/1202)~~ ✅ done 2026-09-28 - the biggest-search-volume gap.
 - [ ] **By 2026-10-31: confirm the A+ voucher price** on the CompTIA store (US) and replace the "not verified"
       line in `exams/comptia/a-plus/fact-sheet.md` (CompTIA renders prices client-side; no official figure was readable).
@@ -250,7 +248,7 @@ Add items as `- [ ] task`, grouped by priority or theme. Mark done inline:
 
 The repo's 3.0M words had no search: navigation was GitHub's file listing. Every
 page is now also published at
-[patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/).
+[cloud.noblerworks.com](https://cloud.noblerworks.com/).
 
 The markdown tree is unchanged and stays the source of truth. `build-site.py`
 adapts the tree to MkDocs at build time rather than restructuring the tree for

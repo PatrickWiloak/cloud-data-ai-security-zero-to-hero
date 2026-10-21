@@ -158,7 +158,7 @@ On the published site these three pages appear under Reference as "Provider Reso
 ## The published site
 
 The repo is published as a MkDocs Material site at
-**[patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)**.
+**[cloud.noblerworks.com](https://cloud.noblerworks.com/)**.
 
 The guiding constraint: **the markdown tree is the source of truth and does not
 bend to the site generator.** Reading the repo on GitHub stays a first-class

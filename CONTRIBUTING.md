@@ -190,7 +190,7 @@ See [.github/AUTOMATION.md](./.github/AUTOMATION.md) for a one-page map of every
 
 ## Previewing the documentation site
 
-The repo is published at **[patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero](https://patrickwiloak.github.io/cloud-data-ai-security-zero-to-hero/)**. The site is generated from the markdown tree by `.github/scripts/build-site.py`, so there is no second copy of any page: write markdown as normal and the site picks it up.
+The repo is published at **[cloud.noblerworks.com](https://cloud.noblerworks.com/)**. The site is generated from the markdown tree by `.github/scripts/build-site.py`, so there is no second copy of any page: write markdown as normal and the site picks it up.
 
 ```bash
 python3 -m venv .venv-docs
