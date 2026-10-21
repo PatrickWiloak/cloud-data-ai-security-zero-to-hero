@@ -8,7 +8,7 @@
 
 ## What this section is
 
-Eleven pages, in order. Each is a 5-15 minute read. By the end, you'll know enough to follow conversations and tutorials that currently feel like another language.
+Fourteen pages, in order. Each is a 5-15 minute read. By the end, you'll know enough to follow conversations and tutorials that currently feel like another language.
 
 This isn't cloud or AI yet. This is the bedrock under both. Skip this and the rest of the repo will feel harder than it should.
 
@@ -30,6 +30,9 @@ This isn't cloud or AI yet. This is the bedrock under both. Skip this and the re
 9. **[File permissions](./file-permissions.md)** - what `rw-r--r--` means, and why not to run `chmod 777`. (8 min)
 10. **[JSON and YAML](./json-and-yaml.md)** - the two formats every config file uses, and their gotchas. (7 min)
 11. **[Reading error messages](./reading-error-messages.md)** - extracting the answer that is usually already in the error. (7 min)
+12. **[Environment variables and config](./environment-variables-and-config.md)** - `export`, `.env` files, and why config lives outside the code. (8 min)
+13. **[Linux processes and services](./linux-processes-and-services.md)** - `ps`, signals, systemd, and why your app died when you logged out. (10 min)
+14. **[Your first Docker container](./docker-first-container.md)** - build an image, run it, configure it, and throw it away. (12 min)
 
 After these you have enough vocabulary to start [Cloud from Scratch](../cloud-from-scratch.md) or [AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/) without getting blocked every other paragraph.
 
