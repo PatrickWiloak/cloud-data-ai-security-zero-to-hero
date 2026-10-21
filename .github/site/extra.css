@@ -209,7 +209,9 @@
 /* Primary: accent fill, white text, accent glow shadow that deepens on
    hover. */
 .md-typeset .md-button--primary {
-  background-color: var(--nw-accent);
+  /* White text needs >= 4.5:1 (WCAG AA); the brand accent is only ~3.2:1, so
+     the button fill is the darker text shade (#15803d = 5.02:1, hover #166534 = ~7.1:1). */
+  background-color: #15803d;
   box-shadow: 0 10px 15px -3px var(--nw-accent-glow-faint);
   color: #ffffff;
   font-weight: 700;
@@ -217,7 +219,7 @@
 
 .md-typeset .md-button--primary:hover,
 .md-typeset .md-button--primary:focus {
-  background-color: var(--nw-accent-dark);
+  background-color: #166534;
   box-shadow: 0 10px 15px -3px var(--nw-accent-glow);
   color: #ffffff;
 }
