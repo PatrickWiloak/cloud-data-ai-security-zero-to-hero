@@ -36,7 +36,7 @@ Some network logs are always on (admin activity audit logs); most data-plane log
 | **Firewall Insights** | Insights and recommendations | Needs Firewall Rules Logging for hit-count based insights | Shadowed, unused and overly permissive rules |
 | **VPC Flow Logs** | Sampled flow records | Per subnet, VPC network, organization, VLAN attachment or VPN tunnel | 5-tuple, bytes, packets, RTT, VM and geo metadata |
 | **Cloud DNS** | Query logs | Server policy `--enable-logging` (private); per-zone logging for public zones | Who queried what, response code |
-| **Cloud NAT** | Translation and error logs | `--enable-logging --log-filter=ALL|ERRORS_ONLY|TRANSLATIONS_ONLY` on the gateway | New NAT translations, and drops for lack of ports |
+| **Cloud NAT** | Translation and error logs | `--enable-logging` with `--log-filter` set to `ALL`, `ERRORS_ONLY` or `TRANSLATIONS_ONLY` on the gateway | New NAT translations, and drops for lack of ports |
 | **Network Connectivity Center** | Cloud Audit Logs and hub/spoke state | Automatic | Spoke acceptance, route table changes, who changed what |
 | **Load balancers** | Request logs | `--enable-logging --logging-sample-rate` on the backend service | Status code, latency, `statusDetails`, cache hit, Cloud Armor outcome |
 | **Cloud Armor** | Fields in load balancer logs (`enforcedSecurityPolicy`); verbose logging option | Enabled with LB logging; `--log-level=VERBOSE` on the policy for details | Which rule matched, preview results, rate limit actions |
