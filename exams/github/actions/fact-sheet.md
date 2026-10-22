@@ -1,259 +1,165 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
+applies-to: GH-200 skills measured as of January 2026, checked 2026-10-22
 ---
 
-# GitHub Actions Certification Fact Sheet
+# GitHub Actions (GH-200) Fact Sheet
 
 ## Exam Overview
 
+**Exam Code:** GH-200
 **Exam Name:** GitHub Actions
-**Duration:** 120 minutes
-**Format:** Multiple choice (65 questions)
-**Passing Score:** 70%
-**Cost:** $99 USD
-**Valid For:** 3 years
-**Delivery:** Online proctored
+**Level:** Intermediate
+**Duration:** 100 minutes
+**Format:** Multiple choice, proctored; may include interactive components
+**Passing Score:** 700 (scaled 1-1000)
+**Cost:** Set by country; commonly listed as $99 USD in the US
+**Valid For:** 2 years
+**Delivery:** Pearson VUE, scheduled through Microsoft Learn
 **Prerequisites:** None (GitHub Foundations recommended)
 
-**[📖 GitHub Certifications](https://learn.github.com/certifications)** - Registration and exam details
-**[📖 GitHub Actions Documentation](https://docs.github.com/en/actions)** - Complete Actions documentation
-**[📖 Workflow Syntax](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)** - YAML syntax reference
+**[📖 GitHub Actions certification](https://learn.microsoft.com/en-us/credentials/certifications/github-actions/)** - registration and exam details
+**[📖 Exam GH-200 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-200)** - skills measured as of January 2026
+**[📖 Workflow syntax](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax)** - YAML reference
 
-## Exam Domains
+## Exam Domains (January 2026)
 
-### Domain 1: Author and Maintain Workflows (40%)
+| Domain | Weight | Notes |
+|---|---|---|
+| Author and manage workflows | 20-25% | [01](notes/01-workflow-authoring.md), [02](notes/02-expressions-contexts.md) |
+| Consume and troubleshoot workflows | 15-20% | [03](notes/03-consume-and-troubleshoot.md) |
+| Author and maintain actions | 15-20% | [04](notes/04-custom-actions.md) |
+| Manage GitHub Actions for the enterprise | 20-25% | [05](notes/05-enterprise-management.md) |
+| Secure and optimize automation | 10-15% | [06](notes/06-secure-and-optimize.md) |
 
-#### 1.1 Workflow Structure
-```yaml
-name: CI Pipeline
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-permissions:
-  contents: read
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Run tests
-      run: npm test
-```
+## Domain 1: Author and Manage Workflows (20-25%)
 
-**[📖 Workflow Syntax](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)** - Complete YAML reference
+### Triggers
 
-#### 1.2 Event Triggers
+| Trigger | Fires when | Remember |
+|---|---|---|
+| `push` | Commits or tags pushed | `branches`, `tags`, `paths` filters; all present filters must match |
+| `pull_request` | PR activity (default: opened, synchronize, reopened) | Fork PRs: read-only token, no secrets |
+| `pull_request_target` | Same, but base-branch workflow | Has secrets and write token; never run PR code in it |
+| `schedule` | Cron, UTC | Default branch only; may be delayed |
+| `workflow_dispatch` | Manual or API | Up to 25 inputs: string, boolean, choice, number, environment |
+| `workflow_call` | Called by another workflow | Declares inputs, secrets, outputs |
+| `repository_dispatch` | REST call with `event_type` | Payload in `github.event.client_payload` |
+| `workflow_run` | Another workflow completed | Privileged follow-up after untrusted builds |
 
-| Trigger | Description |
-|---------|-------------|
-| `push` | Push to a branch or tag |
-| `pull_request` | PR opened, synchronized, reopened |
-| `schedule` | Cron-based schedule |
-| `workflow_dispatch` | Manual trigger with optional inputs |
-| `repository_dispatch` | External webhook trigger |
-| `workflow_call` | Called by another workflow (reusable) |
-| `release` | Release created, published, etc. |
-| `issues` | Issue created, edited, labeled, etc. |
+### Structure essentials
 
-**Filters:**
-- `branches`, `branches-ignore` - filter by branch name
-- `paths`, `paths-ignore` - filter by file path changes
-- `tags`, `tags-ignore` - filter by tag name
+- Jobs run in parallel; `needs` orders them and skips dependants on failure unless `if: always()`.
+- Steps run in order on one runner and share the file system; jobs share nothing unless passed.
+- An `if:` without a status function gets an implicit `success()`.
+- `timeout-minutes` default is 360 per job.
+- **Service containers** (`services:`): on the runner use `localhost` plus mapped `ports`; in a job container use the service label as host name. Linux runners only. Health checks go in `options:`.
+- **Matrix**: max 256 jobs per run; `exclude` then `include`; `fail-fast` defaults to `true`; `max-parallel` caps concurrency.
+- **YAML anchors** (`&name`, `*name`): same file only, defined before use, no parameters. Merge keys (`<<`) are listed in the study guide but GitHub parses YAML 1.2.
+- **Runner images**: `-latest` labels move to new images (Ubuntu 20.04 retired 2025; `windows-latest` moving to Windows Server 2025).
 
-**[📖 Events](https://docs.github.com/en/actions/reference/events-that-trigger-workflows)** - All trigger events
+### Expressions and contexts
 
-#### 1.3 Expressions and Contexts
+| Context | Holds |
+|---|---|
+| `github` | Event, ref, sha, actor, repository, run IDs, `event` payload |
+| `env` / `vars` / `secrets` | Variables, configuration variables, secrets |
+| `inputs` | Typed dispatch or call inputs (prefer over `github.event.inputs`) |
+| `matrix` / `strategy` | Current combination; `job-index`, `job-total` |
+| `needs` | `outputs` and `result` of needed jobs |
+| `steps` | `outputs`, `outcome` (before `continue-on-error`), `conclusion` (after) |
+| `job` / `runner` | Job status, services; runner OS, arch, temp, tool cache |
 
-**Contexts:**
-| Context | Contents |
-|---------|----------|
-| `github` | Workflow run info (event, sha, ref, actor, repository) |
-| `env` | Environment variables |
-| `secrets` | Repository and organization secrets |
-| `inputs` | Workflow dispatch or reusable workflow inputs |
-| `vars` | Configuration variables |
-| `job` | Current job info |
-| `steps` | Step outputs and outcomes |
-| `runner` | Runner info (os, arch, temp) |
-| `matrix` | Current matrix values |
-| `needs` | Outputs from dependent jobs |
+- Evaluated at run creation (job `if`, `runs-on`, `strategy`, `environment`): no `steps`, `runner` or `secrets`.
+- Evaluated on the runner (step `if`, `with`, `run`, step `env`): full runtime contexts.
+- Status functions: `success()`, `failure()`, `cancelled()`, `always()`; prefer `!cancelled()` for cleanup.
+- Functions: `contains`, `startsWith`, `endsWith`, `format`, `join`, `toJSON`, `fromJSON`, `hashFiles`.
+- Secrets cannot be used directly in `if:`; copy into `env` first.
 
-**Status Functions:**
-- `success()` - True if all previous steps succeeded
-- `failure()` - True if any previous step failed
-- `always()` - Always true (run regardless of status)
-- `cancelled()` - True if workflow was cancelled
+### Execution and outputs
 
-**[📖 Expressions](https://docs.github.com/en/actions/reference/workflows-and-actions/expressions)** - Expression syntax
-**[📖 Contexts](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts)** - Available contexts
+| Need | Use |
+|---|---|
+| Speed up future runs | `actions/cache` or `setup-*` `cache:` input, key on lock-file hash |
+| Pass files to a later job or keep reports | `upload-artifact` / `download-artifact` |
+| Pass a value between steps | `echo "k=v" >> "$GITHUB_OUTPUT"`, read `steps.<id>.outputs.k` |
+| Pass a value between jobs | Map to `jobs.<id>.outputs`, read `needs.<id>.outputs.k` |
+| Set an env var for later steps | `echo "K=v" >> "$GITHUB_ENV"` |
+| Rich run report | Markdown to `$GITHUB_STEP_SUMMARY` |
+| Human approval before deploy | `environment:` with required reviewers |
 
-#### 1.4 Matrix Strategy
-```yaml
-strategy:
-  matrix:
-    node-version: [16, 18, 20]
-    os: [ubuntu-latest, windows-latest]
-  fail-fast: false
-  max-parallel: 4
-```
-- Creates a job for each combination
-- `fail-fast`: Cancel remaining jobs if one fails (default: true)
-- `include`/`exclude`: Add or remove specific combinations
+- Retention: default 90 days (up to 400 for private repos); `retention-days` per upload; org/repo defaults via settings or REST.
+- Badge: `https://github.com/OWNER/REPO/actions/workflows/FILE.yml/badge.svg?branch=main`.
+- `concurrency` group plus `cancel-in-progress` for superseded CI runs.
 
-#### 1.5 Artifacts and Caching
-- **Artifacts**: Upload/download build outputs between jobs
-- `actions/upload-artifact` and `actions/download-artifact`
-- **Cache**: Speed up dependency installation
-- `actions/cache` with key and restore-keys
-- Cache key should include lock file hash
+## Domain 2: Consume and Troubleshoot Workflows (15-20%)
 
-**[📖 Caching](https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows)** - Caching dependencies
+- Find the first failing step; read annotations; check "Set up job" for image version, token permissions and resolved action SHAs.
+- Debug: `ACTIONS_STEP_DEBUG=true` (step) and `ACTIONS_RUNNER_DEBUG=true` (runner), or re-run with debug logging.
+- Re-run all, failed, or one job; re-runs reuse the original commit and workflow file and bump `run_attempt`.
+- Pushes made with `GITHUB_TOKEN` do not trigger new workflow runs (except dispatch events).
+- CLI: `gh run list`, `gh run view --log-failed`, `gh run download -n NAME`, `gh run rerun --failed`, `gh workflow disable`.
 
-#### 1.6 Secrets and Variables
-- **Secrets**: Encrypted, masked in logs, available via `${{ secrets.NAME }}`
-- **Variables**: Non-sensitive configuration, available via `${{ vars.NAME }}`
-- Scope: repository, environment, organization
-- Secrets cannot be read back after creation
-- Environment secrets require approval for protected environments
+| | Workflow template | Reusable workflow | Composite action |
+|---|---|---|---|
+| Used by | Copying | `jobs.<id>.uses` | `steps[*].uses` |
+| Updates flow to users | No | Yes | Yes |
+| Own runner | Yes | Yes | No (caller's) |
+| Limit | n/a | 10 nesting levels, 50 unique per file | n/a |
 
-**[📖 Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)** - Managing secrets
+- Org templates: `.github` repo, `workflow-templates/*.yml` plus `.properties.json`. Internal `.github`: internal and private repos may use them; private `.github`: private repos only.
+- Disable keeps file and history; delete removes the file (history stays until deleted).
 
-#### 1.7 Reusable Workflows
-```yaml
-# Caller workflow
-jobs:
-  call-workflow:
-    uses: org/repo/.github/workflows/reusable.yml@main
-    with:
-      environment: production
-    secrets: inherit
-```
-- Triggered by `workflow_call` event
-- Support inputs, secrets, and outputs
-- `secrets: inherit` passes all caller secrets
-- Maximum nesting depth: 4 levels
+## Domain 3: Author and Maintain Actions (15-20%)
 
-**[📖 Reusable Workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows)** - Reusable workflow guide
+| Type | `runs.using` | Platforms | Notes |
+|---|---|---|---|
+| JavaScript | `node20` / `node24` | All | Fast; commit bundled `dist/`; toolkit `@actions/*` |
+| Docker | `docker` | Linux only | Any language; slower start |
+| Composite | `composite` | All | Steps only; `run` steps need `shell:` |
 
-#### 1.8 Concurrency
-```yaml
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-```
-- Prevents duplicate runs for the same branch/PR
-- `cancel-in-progress`: Cancel the running workflow when a new one starts
+- `action.yml` needs `name`, `description`, `runs`; optional `inputs`, `outputs`, `branding`, `author`.
+- Inputs arrive as strings and as `INPUT_<NAME>` env vars; composite outputs need `value:` mapping.
+- `core.setOutput`, `core.exportVariable`, `core.addPath`, `core.setSecret`, `core.setFailed`, `core.summary`.
+- Marketplace: public repo, single root `action.yml`, no workflow files, unique name; publish from a release.
+- Versioning: `v1.2.3` tags plus a moving `v1` major tag; breaking change means a new major.
+- Immutable actions: published releases cannot change; self-hosted runners must allow `pkg.actions.githubusercontent.com`.
 
-#### 1.9 Permissions
-```yaml
-permissions:
-  contents: read
-  pull-requests: write
-  issues: write
-```
-- GITHUB_TOKEN permissions can be restricted per workflow or job
-- Default: permissive or restricted (configurable at org/repo level)
-- Principle of least privilege: only grant what is needed
+## Domain 4: Manage GitHub Actions for the Enterprise (20-25%)
 
-### Domain 2: Consume Workflows (20%)
+- Policy order: enterprise > organization > repository; higher levels can enforce.
+- Allowed actions: all; enterprise only; enterprise plus GitHub-created and/or verified creators; explicit patterns (with `!` to block); optional SHA-pinning requirement.
+- Private actions shared via the repository's Actions > Access setting (organization or enterprise).
+- Runner groups: share runners with selected repos, orgs or workflows; each runner in one group; `runs-on: { group: name }`.
+- Self-hosted labels: `self-hosted`, OS, arch, plus custom; a job needs a runner with all requested labels.
+- Ephemeral runners (`--ephemeral`) and ARC for clean, autoscaled capacity; never run untrusted public-repo code on persistent self-hosted runners.
+- IP allow lists block standard hosted runners; use self-hosted egress IPs or larger runners with static IPs.
+- Hosted images list software in `actions/runner-images`; add tools with `setup-*`, package managers, containers or custom images.
 
-#### 2.1 Using Actions
-```yaml
-- uses: actions/checkout@v4          # Tag
-- uses: actions/setup-node@main      # Branch
-- uses: actions/cache@a1b2c3d4e5...  # SHA (most secure)
-```
-- Pin to SHA for security (prevents supply chain attacks)
-- Pin to tag for convenience
-- Pin to branch only for development
+| Secret scope | Shared with | Precedence |
+|---|---|---|
+| Environment | Jobs referencing it, after protection rules | Highest |
+| Repository | All workflows in the repo | Middle |
+| Organization | All, private, or selected repos | Lowest |
 
-#### 2.2 Starter Workflows
-- Pre-built workflow templates for common patterns
-- Available from repository "Actions" tab
-- Organization starter workflows in `.github` repository
-- Covers: CI, CD, security, code quality
+- Limits: 48 KB per secret, 100 per repo, 1,000 per org; names not case-sensitive, no `GITHUB_` prefix.
+- REST: get the public key, encrypt with libsodium, `PUT` with `key_id`; or `gh secret set` / `gh variable set`.
 
-### Domain 3: Author and Maintain Actions (25%)
+## Domain 5: Secure and Optimize Automation (10-15%)
 
-#### 3.1 Action Types
+- **Script injection**: never `${{ github.event.* }}` inside `run:`; pass through `env:` and quote.
+- **GITHUB_TOKEN**: per job, one repo, revoked at job end; set `permissions:` (unnamed scopes become `none`). Prefer it over PATs; use a GitHub App for cross-repo work.
+- **OIDC**: `permissions: id-token: write`; cloud trust policy matches the `sub` claim (repo plus environment or branch); short-lived credentials, no stored cloud keys.
+- **Pinning**: full 40-character commit SHA with a version comment; Dependabot keeps it current.
+- **Attestations**: `actions/attest-build-provenance` with `id-token: write` and `attestations: write`; verify with `gh attestation verify`.
+- **Environments**: required reviewers, wait timer, deployment branch rules, prevent self-review.
+- **Optimize**: path filters, concurrency cancel, narrow PR matrices, caching, short retention for intermediate artifacts, `timeout-minutes`, cheapest suitable runner OS.
 
-| Type | Runtime | Platform | Speed |
-|------|---------|----------|-------|
-| JavaScript | Node.js | All platforms | Fast (no container) |
-| Docker | Any language | Linux only | Slower (container build) |
-| Composite | N/A (combines steps) | All platforms | Varies |
+## Common Pitfalls
 
-#### 3.2 action.yml Metadata
-```yaml
-name: 'My Action'
-description: 'Does something useful'
-inputs:
-  who-to-greet:
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-outputs:
-  greeting:
-    description: 'The greeting'
-runs:
-  using: 'node20'
-  main: 'dist/index.js'
-```
-
-**[📖 Action Metadata](https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions)** - action.yml syntax
-
-#### 3.3 Toolkit Packages
-- `@actions/core` - Input/output, logging, annotations, secrets masking
-- `@actions/github` - Octokit client for GitHub API
-- `@actions/exec` - Execute commands
-- `@actions/io` - File system operations
-- `@actions/cache` - Caching support
-
-### Domain 4: Manage GitHub Actions for the Enterprise (15%)
-
-#### 4.1 Self-Hosted Runners
-- Run workflows on your own infrastructure
-- Benefits: custom environments, compliance, cost control, network access
-- Security: treat as untrusted (especially with public repos)
-- Runner groups: control which repos can use which runners
-- Auto-scaling with Actions Runner Controller (ARC) for Kubernetes
-
-**[📖 Self-Hosted Runners](https://docs.github.com/en/actions/hosting-your-own-runners)** - Runner documentation
-
-#### 4.2 Enterprise Policies
-- Allow or deny specific actions (all, local only, selected)
-- Require approval for first-time contributors
-- Set default GITHUB_TOKEN permissions
-- Configure runner groups and access
-- Audit log for all Actions activity
-
-#### 4.3 OIDC for Cloud Authentication
-- OpenID Connect for short-lived cloud credentials
-- No stored secrets needed for cloud deployments
-- Supports AWS, Azure, GCP
-- Trust established via OIDC provider configuration
-- Claims include repository, branch, environment
-
-**[📖 OIDC](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect)** - OIDC security guide
-
-## Exam Tips
-
-### MCQ Strategy
-1. **Focus on workflow YAML (40%)** - Know the syntax cold
-2. **Know all event triggers** - Including filter options
-3. **Understand expressions** - Contexts, functions, conditionals
-4. **Action types** - When to use JS vs Docker vs composite
-5. **Security** - Secrets, OIDC, runner security, action pinning
-
-### Common Pitfalls
-- Confusing `pull_request` with `pull_request_target` (different security contexts)
-- Not understanding that jobs run in parallel by default
-- Confusing `secrets` with `vars` (secrets are encrypted and masked)
-- Not knowing matrix strategy syntax (include/exclude)
-- Mixing up reusable workflows (`workflow_call`) with composite actions
-
----
-
-**Key Takeaway:** Master the workflow YAML syntax - it is 40% of the exam. Know triggers, expressions, contexts, matrix strategies, and reusable workflows. Understand the three action types and when to use each. Know enterprise features like self-hosted runners and OIDC.
+- `pull_request` vs `pull_request_target` security context.
+- `github.event.inputs` booleans are strings; `inputs` keeps types.
+- A cleanup step without `always()` or `!cancelled()` is skipped after a failure.
+- Reusable workflow vs composite action vs workflow template.
+- Docker actions do not run on Windows or macOS runners.
+- Cached dependencies are not artifacts, and artifacts are not caches.

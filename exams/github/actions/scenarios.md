@@ -1,3 +1,7 @@
+---
+last-updated: 2026-10-22
+---
+
 # GitHub Actions High-Yield Scenarios and Practice Problems
 
 ## Scenario 1: CI/CD Workflow Design
@@ -258,16 +262,56 @@ jobs:
 
 **Key Takeaway**: Use the appropriate scope for each secret - repository for repo-specific, organization for shared, environment for deployment-specific. Environment secrets benefit from protection rules.
 
+## Scenario 8: Troubleshooting a Failed Matrix Run
+
+**Scenario**: A pull request's CI shows `test (ubuntu-latest, 22)` failed, and the five other matrix jobs show "cancelled". The same commit passed yesterday. The developer wants to know what broke and to re-check only the failing combination.
+
+**Approach**: Treat only the first failure as evidence. The cancelled jobs were stopped by `fail-fast`, which is `true` by default, so they say nothing about their own combinations. Open the failed job, read the annotations at the top of the summary, then expand "Set up job": it names the runner image version and the resolved SHA of each action. A new image version or a moved action tag on an unchanged commit is the usual explanation for "it passed yesterday". Re-run with debug logging if the log is thin, and use "Re-run failed jobs" (or `gh run rerun RUN_ID --failed`) to repeat just that job. Remember a re-run uses the original commit and workflow file, so it will not pick up a fix pushed since.
+
+**Common Distractors**:
+- Assuming the cancelled matrix jobs also failed
+- Pushing an empty commit to "retry" instead of re-running the failed job
+- Expecting a re-run to use the latest version of the workflow file
+
+**Key Takeaway**: Map the job name to its matrix values, find the first real failure, and compare the setup step against the last green run.
+
+## Scenario 9: Script Injection in an Issue Triage Workflow
+
+**Scenario**: An `issues: opened` workflow runs `run: echo "New issue: ${{ github.event.issue.title }}" | ./triage.sh` with `permissions: write-all`. A security review flags it.
+
+**Approach**: The expression is pasted into the script before bash runs, so a title containing shell syntax executes with a write-capable token. Move the value into an environment variable and quote it, drop the permissions to what triage needs, and validate the input in the script.
+
+```yaml
+permissions:
+  issues: write
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: echo "New issue: $TITLE" | ./triage.sh
+        env:
+          TITLE: ${{ github.event.issue.title }}
+```
+
+**Common Distractors**:
+- Wrapping the expression in single quotes inside the script (still injectable)
+- Relying on secret masking to make the step safe
+- Switching to `pull_request_target`, which adds secrets instead of removing risk
+
+**Key Takeaway**: Untrusted event text goes through `env:` and quoted shell variables, never directly into `run:`, and the job keeps least-privilege permissions.
+
 ## Key Decision Factors
 
-### Domain Priority for Study
-1. **Author and Maintain Workflows (40%)** - YAML syntax, triggers, expressions, matrix, reusable workflows
-2. **Author and Maintain Actions (25%)** - JS, Docker, composite actions, action.yml
-3. **Consume Workflows (20%)** - Marketplace, pinning, starter workflows
-4. **Manage for Enterprise (15%)** - Self-hosted runners, policies, OIDC
+### Domain Priority for Study (skills measured as of January 2026)
+1. **Author and manage workflows (20-25%)** - triggers, structure, matrices, service containers, YAML anchors, contexts and expressions, outputs, summaries, environments
+2. **Manage GitHub Actions for the enterprise (20-25%)** - action policies, runners and runner groups, networking and IP allow lists, preinstalled software, secrets and variables via UI and REST
+3. **Consume and troubleshoot workflows (15-20%)** - reading runs and logs, matrix failures, re-runs, artifacts via UI and API, templates vs reusable workflows vs composite actions, disable vs delete
+4. **Author and maintain actions (15-20%)** - JS, Docker, composite, `action.yml`, workflow commands, Marketplace, versioning, immutable actions
+5. **Secure and optimize automation (10-15%)** - environments and approvals, script injection, `GITHUB_TOKEN` vs PAT, OIDC, SHA pinning, attestations, caching and cost
 
 ### Common Anti-Patterns
-- Memorizing syntax without building real workflows
-- Ignoring security features (OIDC, action pinning, permissions)
-- Not understanding the difference between reusable workflows and composite actions
-- Skipping enterprise features (15% of the exam)
+- Memorizing syntax without building and debugging real workflows
+- Ignoring security features (OIDC, SHA pinning, least-privilege permissions)
+- Not understanding the difference between workflow templates, reusable workflows and composite actions
+- Skipping enterprise administration, which is now joint-largest at 20-25%
