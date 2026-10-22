@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: beginner
 ---
 
 # Oracle Cloud Infrastructure Foundations (1Z0-1085) - Practice Questions
 
-15 questions for OCI Foundations prep, weighted toward OCI architecture and core services (30%), security and identity (20%), then compute, storage, and networking (15% each).
+30 questions for OCI Foundations prep, weighted toward OCI architecture and core services (30%), security and identity (20%), then compute, storage, and networking (15% each).
 
 > **Cert page:** [exams/oracle/oci-foundations/](../../exams/oracle/oci-foundations/)
 
@@ -277,6 +277,306 @@ D. One instance
 **Correct: C**
 
 **Why:** The pattern is distribution plus health checking. Which isolation unit to spread across depends on the region: multiple ADs where available, fault domains where the region has a single AD.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A company moves its finance team onto Oracle Fusion Cloud ERP. Oracle runs the application, its database, and the infrastructure; the company only configures the software and manages its users.
+
+A. Software as a service (SaaS)
+B. Platform as a service (PaaS)
+C. Infrastructure as a service (IaaS)
+D. On-premises private cloud
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** When the provider delivers a complete application and the customer only configures and uses it, that is SaaS. With PaaS the customer still builds and deploys its own application code on a managed platform, and with IaaS the customer manages the operating system and everything above it. An on-premises private cloud is run by the company itself.
+
+**Key Concept:** [Oracle Fusion Cloud ERP](https://www.oracle.com/applications/erp/)
+</details>
+
+---
+
+### Question 17
+**Scenario:** A tenancy is subscribed to three regions. An administrator in a secondary region tries to create a new IAM group and is told it must be done elsewhere.
+
+A. In whichever region has the most compute instances
+B. In any region, since IAM is fully regional on OCI
+C. In the tenancy's home region, where IAM resources are defined
+D. In a region paired with the secondary region for DR
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** The home region is chosen at sign-up and holds the definitions of IAM resources. They are replicated to every subscribed region for use, but they can only be changed in the home region. IAM is not independently regional, and neither instance counts nor DR pairing decides where identity changes are made.
+
+**Key Concept:** [Managing Regions: The Home Region](https://docs.oracle.com/en-us/iaas/Content/Identity/regions/managingregions.htm)
+</details>
+
+---
+
+### Question 18
+**Scenario:** A student signs up for OCI to learn. After the trial ends they want to keep a small VM and database running at no cost, indefinitely.
+
+A. Keep using the trial credits, which roll over each month
+B. Request a support exception to extend the trial
+C. Move the workload to preemptible instances, which are free
+D. Use Always Free resources, which remain after the trial
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The OCI Free Tier has two parts: a time-limited Free Trial with credits, and Always Free resources (such as small compute instances and Autonomous Databases) that stay available for the life of the account. Trial credits expire rather than rolling over. Preemptible instances are discounted, not free, and support does not turn a trial into free service.
+
+**Key Concept:** [Oracle Cloud Free Tier](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier.htm)
+</details>
+
+---
+
+### Question 19
+**Scenario:** A compliance rule says the company's virtual machines must run on physical hardware not shared with any other customer, but the team still wants to run several VMs per host.
+
+A. Standard VM shapes in a private subnet
+B. Dedicated Virtual Machine Hosts
+C. Flexible shapes with extra OCPUs
+D. Instances spread across fault domains
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A Dedicated Virtual Machine Host is a single-tenant server on which you place your own VM instances, giving hardware isolation while keeping the flexibility of VMs. A private subnet isolates network traffic, not hardware. Extra OCPUs and fault domain placement still leave the VM on shared multi-tenant hosts.
+
+**Key Concept:** [Dedicated Virtual Machine Hosts](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/dedicatedvmhosts.htm)
+</details>
+
+---
+
+### Question 20
+**Scenario:** A batch rendering job can be interrupted and restarted without harm. The team wants the cheapest compute capacity OCI offers for it.
+
+A. Preemptible instances, which can be reclaimed at any time
+B. Bare metal instances, which avoid hypervisor overhead
+C. Dedicated VM hosts, which are billed for the whole host
+D. Burstable instances sized for the peak demand of the rendering job
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Preemptible capacity costs 50% less than on-demand because OCI can reclaim it, which suits fault-tolerant, interruptible work such as batch jobs. Bare metal and dedicated hosts cost more, not less. Burstable instances are designed for a low baseline with occasional spikes, not for sustained heavy processing.
+
+**Key Concept:** [Preemptible Instances](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/preemptible.htm)
+</details>
+
+---
+
+### Question 21
+**Scenario:** A self-managed database on a compute instance needs low-latency, persistent disk storage attached to that single instance, which can be resized later.
+
+A. Object Storage, accessed through the bucket API
+B. File Storage, mounted over NFS by many hosts
+C. Block Volume, attached to the instance as a disk
+D. Archive Storage, restored before each read
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Block Volume provides persistent, network-attached disks that behave like local drives, can be resized, and are the normal choice for database data files. Object Storage is accessed over an API, not as a disk. File Storage is a shared NFS file system, and Archive Storage must be restored before it can be read at all.
+
+**Key Concept:** [Overview of Block Volume](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/overview.htm)
+</details>
+
+---
+
+### Question 22
+**Scenario:** Seven-year-old audit records must be kept at the lowest storage cost. They are read perhaps once a year, and waiting a while before reading is acceptable.
+
+A. Object Storage Standard tier
+B. Block Volume with the Lower Cost setting
+C. File Storage with snapshots
+D. Object Storage Archive tier
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The Archive tier is the cheapest storage in OCI and is meant for data kept for long periods and rarely read. Objects are offline and must be restored first, which takes up to an hour before the first byte is available. Standard tier costs more for data that is almost never read, and block or file storage costs far more per GB for this purpose.
+
+**Key Concept:** [Understanding Object Storage Tiers](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/understandingstoragetiers.htm)
+</details>
+
+---
+
+### Question 23
+**Scenario:** A public web server in a VCN must be reachable from the internet and must also be able to initiate outbound connections to the internet.
+
+A. A NAT gateway added as the default route in the subnet's route table
+B. An internet gateway, a public subnet, and a public IP
+C. A service gateway for Oracle Services Network
+D. A dynamic routing gateway attached to the VCN
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** An internet gateway allows traffic in both directions between the internet and resources in a public subnet that have public IP addresses. A NAT gateway only allows outbound connections from private resources. A service gateway reaches Oracle services without the internet, and a DRG connects to on-premises networks or other VCNs.
+
+**Key Concept:** [Internet Gateway](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingIGs.htm)
+</details>
+
+---
+
+### Question 24
+**Scenario:** A bank needs a private, dedicated connection from its data center to OCI with consistent throughput, not traffic carried over the public internet.
+
+A. FastConnect through a partner or colocation provider
+B. Site-to-Site VPN with IPSec tunnels over the public internet
+C. An internet gateway with a security list
+D. Local peering between two VCNs
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** FastConnect is a dedicated private connection between on-premises and OCI, with higher bandwidth and more consistent performance than internet-based links. Site-to-Site VPN is encrypted but still runs over the internet. An internet gateway exposes resources to the internet, and local peering connects VCNs to each other, not to a data center.
+
+**Key Concept:** [FastConnect Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/fastconnect.htm)
+</details>
+
+---
+
+### Question 25
+**Scenario:** A mobile game needs a fully managed database for player profiles accessed by key, with predictable single-digit-millisecond latency at very high scale.
+
+A. Oracle Base Database Service on a VM
+B. A MySQL database on a self-managed instance
+C. Oracle NoSQL Database Cloud Service
+D. Oracle Exadata Database Service
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** NoSQL Database Cloud Service is a fully managed key-value and document store built for low, predictable latency at scale, which matches simple keyed access. Base Database and Exadata are relational services suited to complex SQL workloads and cost more for this pattern. A self-managed MySQL instance is not fully managed.
+
+**Key Concept:** [Oracle NoSQL Database Cloud Service](https://docs.oracle.com/en-us/iaas/nosql-database/index.html)
+</details>
+
+---
+
+### Question 26
+**Scenario:** Twelve developers need to manage instances in the Dev compartment. The administrator wants the simplest setup that stays manageable as people join and leave.
+
+A. Write one policy per developer, naming each user
+B. Make every developer a tenancy administrator
+C. Share one IAM user's credentials across the team
+D. Put them in a group and write one policy for the group
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** OCI policies grant access to groups (or dynamic groups), not to individual users, so the standard pattern is one group, one policy, and group membership changes as people come and go. Per-user policies are not how OCI policy subjects work. Tenancy admin rights break least privilege, and shared credentials destroy accountability.
+
+**Key Concept:** [How Policies Work](https://docs.oracle.com/en-us/iaas/Content/Identity/policieshow/how-policies-work.htm)
+</details>
+
+---
+
+### Question 27
+**Scenario:** An auditor asks whether data in OCI Block Volume and Object Storage is encrypted at rest if the team never configured anything.
+
+A. No, encryption must be enabled per resource at creation
+B. Yes, it is encrypted by default with Oracle-managed keys
+C. Only if the data is stored in an Archive tier bucket
+D. Only if a Cloud Guard target covers the compartment
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** OCI encrypts Block Volume and Object Storage data at rest by default using Oracle-managed keys. Customers can choose their own keys in OCI Vault when they need control over rotation and revocation. Encryption is not opt-in per resource, not limited to Archive, and Cloud Guard detects problems rather than providing encryption.
+
+**Key Concept:** [Overview of Block Volume](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/overview.htm)
+</details>
+
+---
+
+### Question 28
+**Scenario:** Engineers need time-limited SSH access to instances in a private subnet, without giving those instances public IPs or running a jump host themselves.
+
+A. OCI Bastion service with time-limited sessions
+B. A public IP added to each instance temporarily
+C. An internet gateway on the private subnet
+D. A self-managed jump server running in a public subnet of the VCN
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The Bastion service is a managed, audited way to reach private resources through sessions that expire automatically. Adding public IPs or an internet gateway exposes the instances to the internet. A self-managed jump server works, but it is exactly the server the team wants to avoid patching and hardening.
+
+**Key Concept:** [Bastion Overview](https://docs.oracle.com/en-us/iaas/Content/Bastion/Concepts/bastionoverview.htm)
+</details>
+
+---
+
+### Question 29
+**Scenario:** A security list was changed last night and broke an application. The team needs to know who made the change and when, and nobody had set up any logging beforehand.
+
+A. The Monitoring service's CPU metrics for the subnet
+B. The instance's own syslog files
+C. The Audit service, which records API calls automatically
+D. A Notifications topic subscribed to the VCN
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** The Audit service automatically records supported API calls against tenancy resources, including who made the call, when, and from where, with no setup required. Monitoring metrics show resource behavior, not who changed configuration. Syslog on an instance does not see control-plane changes, and a Notifications topic only delivers messages that something else publishes.
+
+**Key Concept:** [Overview of Audit](https://docs.oracle.com/en-us/iaas/Content/Audit/Concepts/auditoverview.htm)
+</details>
+
+---
+
+### Question 30
+**Scenario:** A company already owns Oracle Database Enterprise Edition licenses and wants to use them for databases it runs on OCI to lower the cost.
+
+A. Pay As You Go pricing with the license included
+B. Always Free Autonomous Database
+C. Preemptible capacity reservations
+D. Bring Your Own License (BYOL) pricing
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** BYOL lets customers apply existing Oracle licenses to eligible OCI services at a lower rate, since they are not paying for the license again. License-included pricing charges for the license on top of the infrastructure. Always Free databases are small and not a home for production licenses, and preemptible capacity relates to compute instances, not database licensing.
+
+**Key Concept:** [Oracle Bring Your Own License](https://www.oracle.com/cloud/bring-your-own-license/)
 </details>
 
 ---

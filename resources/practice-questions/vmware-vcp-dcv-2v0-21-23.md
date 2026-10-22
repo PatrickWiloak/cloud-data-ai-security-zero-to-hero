@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: advanced
 ---
 
 # VMware Certified Professional - Data Center Virtualization (VCP-DCV 2V0-21.23) - Practice Questions
 
-15 questions on vSphere 8 administration: ESXi and vCenter, virtual machines, networking with standard and distributed switches, storage, resource management, and availability with HA and DRS.
+30 questions on vSphere 8 administration: ESXi and vCenter, virtual machines, networking with standard and distributed switches, storage, resource management, and availability with HA and DRS.
 
 > **Cert page:** [exams/vmware/vcp-dcv-2v0-21-23/](../../exams/vmware/vcp-dcv-2v0-21-23/)
 
@@ -277,6 +277,306 @@ D. One VMkernel adapter
 **Correct: A**
 
 **Why:** VMkernel adapters carry host system traffic and each is tagged for a service. Isolating them protects latency-sensitive vMotion and storage from each other and from VM traffic, which is a baseline design practice rather than an optimization.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A trading application VM must keep running with no downtime and no data loss if its ESXi host fails. A restart on another host, even a fast one, is not acceptable.
+
+A. vSphere HA with VM restart priority set to Highest
+B. A DRS rule keeping the VM on the most reliable host
+C. vSphere Fault Tolerance for the VM
+D. Hourly snapshots replicated to a second datastore
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Fault Tolerance keeps a secondary copy of the VM running on another host, continuously synchronized, and switches to it instantly on host failure with no data loss. HA restarts the VM, which means an outage, whatever the priority. DRS rules do not survive a host failure, and snapshots are neither backups nor a failover mechanism.
+
+**Key Concept:** [Providing Fault Tolerance for Virtual Machines](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-availability/providing-fault-tolerance-for-virtual-machines.html)
+</details>
+
+---
+
+### Question 17
+**Scenario:** A datastore must be retired. Its running VMs' disks need to move to a new datastore with no downtime, while the VMs stay on their current hosts.
+
+A. Storage vMotion of each VM to the new datastore
+B. vMotion of each VM to a different host in the cluster
+C. Cold migration after powering each VM off
+D. Clone each VM to the new datastore and delete the original
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Storage vMotion moves a running VM's files and disks between datastores with no downtime and without changing its host. A plain vMotion changes the host, not the storage. Cold migration requires powering off, and cloning creates a new VM, needs a cutover, and briefly duplicates the workload.
+
+**Key Concept:** [Migrating Virtual Machines](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html)
+</details>
+
+---
+
+### Question 18
+**Scenario:** Three vCenter Server instances in different sites must all use the same set of approved VM templates and ISOs, kept in sync from one central source.
+
+A. Copy the templates to each site's datastores by hand every month
+B. Export each template as OVF and email the files to each site
+C. Store the templates on a local datastore of one ESXi host
+D. Publish a content library centrally and subscribe to it from each vCenter
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A published content library can be subscribed to from other vCenter Server instances, which synchronize its templates, OVFs, and ISOs automatically. Manual copies and emailed exports drift out of date. A local datastore on one host is not shared with other sites and is a single point of failure.
+
+**Key Concept:** [Using Content Libraries](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration/using-content-librariesvsphere-vm-admin.html)
+</details>
+
+---
+
+### Question 19
+**Scenario:** An HA cluster has eight hosts. Administrators keep powering on more VMs, and the team worries that after a host failure there will not be enough capacity to restart everything.
+
+A. Disable HA so that more VMs can be powered on
+B. Enable admission control sized to tolerate one host failure
+C. Set DRS to fully automated with the most aggressive threshold
+D. Turn off VM monitoring to reduce resource overhead
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** HA admission control reserves failover capacity (for example, enough for one host failure) and prevents power-on operations that would consume it. Disabling HA removes the protection entirely. DRS balances load among running hosts but does not reserve spare capacity, and VM monitoring has nothing to do with restart capacity.
+
+**Key Concept:** [vSphere HA Admission Control](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-availability/creating-and-using-vsphere-ha-clusters/vsphere-ha-admission-control.html)
+</details>
+
+---
+
+### Question 20
+**Scenario:** A VM's guest OS sometimes hangs while its host stays healthy. The team wants vSphere to restart the VM automatically when this happens.
+
+A. Enable vSphere Fault Tolerance on the VM
+B. Configure DRS affinity rules for the VM
+C. Enable VM monitoring in the vSphere HA settings
+D. Add a CPU reservation equal to the VM's full size
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** HA VM monitoring watches VMware Tools heartbeats (and I/O activity) and resets a VM whose guest stops responding. Fault Tolerance protects against host failure, and its secondary would mirror the same hung guest. DRS rules affect placement only, and a CPU reservation guarantees resources but cannot detect or fix a hang.
+
+**Key Concept:** [How vSphere HA Works](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-availability/creating-and-using-vsphere-ha-clusters/how-vsphere-ha-works.html)
+</details>
+
+---
+
+### Question 21
+**Scenario:** New hosts with a newer Intel CPU generation are added to a cluster of older Intel hosts. vMotion between old and new hosts fails with CPU compatibility errors.
+
+A. Enable EVC on the cluster at the older CPU baseline
+B. Upgrade every VM's hardware version to the latest
+C. Put the new hosts in maintenance mode permanently
+D. Reinstall the older hosts with the newest ESXi release
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** EVC masks newer CPU features so every host in the cluster presents the same baseline, which allows vMotion across processor generations from the same vendor. VM hardware version and ESXi release do not change the physical CPU features exposed. Keeping the new hosts in maintenance mode wastes them.
+
+**Key Concept:** [Migrating Virtual Machines](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html)
+</details>
+
+---
+
+### Question 22
+**Scenario:** Database VMs must always land on storage that provides a specific level of availability and performance, and vSphere should flag any VM that is out of compliance.
+
+A. Name the datastores "gold" and ask admins to choose them
+B. Use a resource pool with high shares for storage
+C. Create a custom attribute on each database VM
+D. Create a VM storage policy and assign it to the VMs
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Storage policy-based management matches VMs to datastores whose capabilities meet the policy, filters compatible storage at placement, and reports compliance status. Naming conventions rely on people. Resource pool shares govern CPU and memory, not storage capability, and custom attributes are labels with no placement or compliance logic.
+
+**Key Concept:** [Storage Policy Based Management](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage/storage-policy-based-management-in-vsphere.html)
+</details>
+
+---
+
+### Question 23
+**Scenario:** A team wants to provision 2 TB virtual disks that initially use only the space actually written, accepting the need to monitor datastore usage.
+
+A. Thick provision eager zeroed disks
+B. Thin provisioned disks
+C. Thick provision lazy zeroed disks
+D. Raw device mappings in physical mode
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A thin disk consumes datastore space only as data is written, so it saves space but allows overcommitment, which is why datastore usage must be monitored. Both thick formats allocate the full 2 TB at creation (eager zeroed also zeroes it up front). A raw device mapping passes a whole LUN to the VM and is not a space-saving format.
+
+**Key Concept:** [Storage Provisioning and Space Reclamation](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage/storage-provisioning-and-space-reclamation-in-vsphere.html)
+</details>
+
+---
+
+### Question 24
+**Scenario:** On a distributed switch, one uplink is saturated while others are idle. The team wants ESXi to move VM traffic between uplinks based on actual utilization, without configuring the physical switch.
+
+A. Route based on IP hash with a static EtherChannel
+B. Route based on source MAC hash
+C. Route based on physical NIC load
+D. Use explicit failover order with one active uplink
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Route based on physical NIC load (load-based teaming), available only on a distributed switch, checks uplink utilization and moves VM ports off a busy uplink, with no physical switch configuration. IP hash requires EtherChannel on the physical switch. Source MAC hash and the originating port policy place traffic statically, and explicit failover order uses one uplink at a time.
+
+**Key Concept:** [Networking Policies](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-networking/networking-policies.html)
+</details>
+
+---
+
+### Question 25
+**Scenario:** Users report a slow 8-vCPU VM. In `esxtop` its %RDY is high while the host's CPUs are heavily committed, and the guest itself shows only modest CPU use.
+
+A. CPU contention; reduce the VM's vCPU count or rebalance load across hosts
+B. Memory swapping; add a memory reservation equal to configured RAM
+C. Storage latency; move the VM to a faster datastore right away
+D. Network saturation; add a second virtual NIC to the VM
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** %RDY is the time a vCPU was ready to run but waited for a physical CPU, so high values mean CPU scheduling contention, which oversized VMs make worse. Right-sizing vCPUs or moving load (DRS) helps. Swapping shows in memory counters such as %SWP, storage latency in disk counters, and network saturation in network counters, not in %RDY.
+
+**Key Concept:** [Performance Monitoring Utilities: resxtop and esxtop](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-monitoring-and-performance/performance-monitoring-utilities-resxtop-and-esxtop.html)
+</details>
+
+---
+
+### Question 26
+**Scenario:** Memory counters show balloon activity (MCTL) on several VMs of one host. What does this indicate?
+
+A. The VMs have more memory than their guest OS can address
+B. VMware Tools is out of date and must be reinstalled
+C. Transparent page sharing has been turned off on the host
+D. The host is under memory pressure and is reclaiming guest memory
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** When host memory runs short, ESXi uses the balloon driver in VMware Tools to make guests release memory they are not actively using. Ballooning is a sign of host memory pressure (and a warning before compression and swapping). It does not indicate an addressing limit or outdated tools, and page sharing settings do not cause ballooning.
+
+**Key Concept:** [Administering Memory Resources](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-resource-management/administering-memory-resources.html)
+</details>
+
+---
+
+### Question 27
+**Scenario:** The vCenter Server Appliance must be backed up regularly so it can be restored after a failure, using the method VMware supports.
+
+A. Take a VM snapshot of the appliance every night
+B. Schedule file-based backup in the appliance management interface
+C. Copy the appliance's VMDK files with a datastore browser
+D. Export the inventory to a CSV file from the vSphere Client
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The appliance management interface (port 5480) supports scheduled file-based backups to a remote target, and the installer can restore from them. Snapshots are not backups and degrade performance when kept. Copying VMDKs of a running appliance is not consistent, and an inventory CSV cannot rebuild vCenter.
+
+**Key Concept:** [File-Based Backup and Restore of vCenter Server](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vcenter-installation-and-setup/file-based-backup-and-restore-of-a-vcenter-server-environment.html)
+</details>
+
+---
+
+### Question 28
+**Scenario:** An ESXi host intermittently loses paths to its iSCSI LUNs. Which host log is the first place to look for storage and device errors?
+
+A. `/var/log/vpxa.log`
+B. `/var/log/shell.log`
+C. `/var/log/vmkernel.log`
+D. `/var/log/syslog.log`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** The VMkernel log records core kernel activity including storage devices, paths, and multipathing events, so path loss shows there. `vpxa.log` covers the vCenter agent's communication, `shell.log` records commands run in the ESXi shell, and `syslog.log` holds general system messages rather than storage path details.
+
+**Key Concept:** [ESXi System Log Files](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-monitoring-and-performance/system-log-files.html)
+</details>
+
+---
+
+### Question 29
+**Scenario:** The database team must be able to power VMs on and off and open consoles, but only for VMs in the Databases folder, and nothing else.
+
+A. Assign a custom role with those privileges on the folder, propagated
+B. Assign the Administrator role to the team's group on the vCenter root object
+C. Give the team the root password for each ESXi host running database VMs
+D. Assign the Read-only role on the Datacenter and ask the team to request changes
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A permission pairs a user or group with a role on an inventory object, and propagation applies it to the objects beneath, so a custom role on the folder grants exactly the needed privileges there. Administrator on the root grants everything everywhere. Host root passwords bypass vCenter permissions and auditing, and Read-only does not let the team do the work.
+
+**Key Concept:** [vSphere Permissions and User Management Tasks](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-security/vsphere-permissions-and-user-management-tasks.html)
+</details>
+
+---
+
+### Question 30
+**Scenario:** Administrators keep placing new VMs on datastores that are nearly full, while other datastores are almost empty. vSphere should pick datastores and rebalance space and I/O automatically.
+
+A. Enable DRS on the compute cluster
+B. Enable Storage I/O Control on one datastore
+C. Increase the size of the fullest datastore
+D. Group the datastores into a datastore cluster with Storage DRS
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Storage DRS on a datastore cluster recommends or performs initial placement and moves disks to balance space use and I/O latency across the datastores. Compute DRS balances CPU and memory between hosts, not datastores. Storage I/O Control prioritizes I/O during contention but does not place or move VMs, and growing one datastore only delays the problem.
+
+**Key Concept:** [Using Datastore Clusters to Manage Storage Resources](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-resource-management/using-datastore-clusters-to-manage-storage-resources.html)
 </details>
 
 ---

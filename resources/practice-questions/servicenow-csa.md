@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
 # ServiceNow Certified System Administrator (CSA) - Practice Questions
 
-15 questions across the CSA areas: the Now Platform and user interface, lists and forms, tables and the CMDB, access control, workflow and flow automation, notifications, reporting, and platform administration.
+30 questions across the CSA areas: the Now Platform and user interface, lists and forms, tables and the CMDB, access control, workflow and flow automation, notifications, reporting, and platform administration.
 
 > **Cert page:** [exams/servicenow/csa/](../../exams/servicenow/csa/)
 
@@ -277,6 +277,306 @@ D. A notification that emails the assignee when a task is due, with a fixed remi
 **Correct: C**
 
 **Why:** SLA definitions measure against targets and drive escalation, and the start, pause, and stop conditions are what make the measurement accurate. A pause condition for on-hold states is what stops customer wait time counting against the support team unfairly.
+</details>
+
+---
+
+### Question 16
+**Scenario:** An administrator changed roles for a service desk user and needs to confirm exactly which modules, records, and fields that user now sees, without asking for the user's password.
+
+A. Impersonate the user from the user menu
+B. Temporarily give the administrator the same roles
+C. Export the user's roles to a spreadsheet and review them
+D. Reset the user's password and log in as them
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Impersonation lets an administrator see the instance as that user, with the same roles, menus, and access, which is the standard way to test security changes. Actions taken while impersonating are recorded as that user, so test carefully. Giving yourself the roles does not remove your admin access, a role list does not show effective visibility, and resetting a password is disruptive and unnecessary.
+
+**Key Concept:** [Impersonating Users](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/users-and-groups/concept/c_ImpersonateAUser.html)
+</details>
+
+---
+
+### Question 17
+**Scenario:** Agents viewing an Incident form want to see the incident's child incidents and affected CIs listed below the form fields, without leaving the record.
+
+A. Add a reference field for each related record to the form
+B. Create a report and embed its link in the short description
+C. Configure the form's related lists to include those relationships
+D. Add a client script that opens each related record in a new tab
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Related lists appear at the bottom of a form and show records related to the current one, such as child incidents or affected CIs, and are added through the form's related list configuration. A reference field points to one record, not a list. A report link and a script that opens tabs are both workarounds that take agents away from the form.
+
+**Key Concept:** [Forms in the Classic Environment](https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/use/using-forms/concept/c_UsingForms.html)
+</details>
+
+---
+
+### Question 18
+**Scenario:** An agent wants to move a few fields on the Incident form for their own view only. The admin wants to add a new field to the form for every user.
+
+A. Both use the same personalize option, which applies the change to every user of the form
+B. Both must ask a developer to edit the form's HTML template
+C. The agent edits the dictionary entry; the admin uses personalize
+D. The agent personalizes their own view; the admin configures the form layout
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Personalizing a form changes only the current user's view, while configuring the form layout (or using Form Builder) changes the form for everyone who uses that view. Personalization never applies to all users. Forms are configured, not edited as HTML, and dictionary entries define fields rather than where they appear on a form.
+
+**Key Concept:** [Forms in the Classic Environment](https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/use/using-forms/concept/c_UsingForms.html)
+</details>
+
+---
+
+### Question 19
+**Scenario:** When an agent clicks Submit on a Change form, the browser must check that the planned end date is after the start date and stop the save with a message if not.
+
+A. An onLoad client script that hides the date fields
+B. An onSubmit client script that returns false when the check fails
+C. An onChange client script on the Short description field
+D. A scheduled job that checks the dates on every change record each night
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** An onSubmit client script runs when the form is submitted, and returning false cancels the submission so the user can fix the dates. onLoad runs only when the form opens, and an onChange script on an unrelated field never sees the submit. A nightly job finds bad data after it has been saved. Server-side checks (such as a business rule) are still wise for saves that do not come through the form.
+
+**Key Concept:** [Client Scripts](https://www.servicenow.com/docs/bundle/zurich-api-reference/page/script/client-scripts/concept/client-scripts.html)
+</details>
+
+---
+
+### Question 20
+**Scenario:** On the Incident form, when the Category field changes to Network, the Subcategory field should immediately be cleared and the user shown a message, before saving.
+
+A. A before business rule on the Incident table
+B. An ACL on the Subcategory field
+C. A scheduled data import into the Incident table
+D. An onChange client script on the Category field
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** An onChange client script runs in the browser when a specific field's value changes, so it can clear another field and show a message right away. A business rule runs on the server when the record is saved, which is too late for this. ACLs control access, not field behavior, and imports have nothing to do with live form changes.
+
+**Key Concept:** [Client Scripts](https://www.servicenow.com/docs/bundle/zurich-api-reference/page/script/client-scripts/concept/client-scripts.html)
+</details>
+
+---
+
+### Question 21
+**Scenario:** Every time a Priority 1 incident is created, the major incident team must be notified and a set of follow-up tasks created, without writing scripts.
+
+A. A scheduled job that queries for P1 incidents every hour
+B. A flow with a record-created trigger and a P1 condition
+C. A UI policy that shows the tasks section on P1 incidents
+D. A related list of tasks added to the incident form
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A flow with a record trigger runs when a record is created (or updated) and its conditions match, and its actions can send notifications and create tasks without code. An hourly job delays the response and needs scripting. UI policies and related lists change how a form looks but take no action.
+
+**Key Concept:** [Flow Trigger Types](https://www.servicenow.com/docs/bundle/zurich-build-workflows/page/administer/flow-designer/reference/flow-triggers.html)
+</details>
+
+---
+
+### Question 22
+**Scenario:** Every weekday morning, a summary of open high-priority incidents must be compiled and emailed to the service desk manager by a no-code automation.
+
+A. A record-updated trigger on the Incident table
+B. An inbound email trigger on the manager's mailbox
+C. A flow with a scheduled trigger that looks up the incidents
+D. An onLoad client script on the Incident list
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A scheduled trigger starts a flow at set times, and the flow then looks up the records it needs and sends the email. A record-updated trigger fires on individual changes, not on a schedule. An inbound email trigger reacts to received mail, and client scripts run in a user's browser only when someone opens the list.
+
+**Key Concept:** [Flow Trigger Types](https://www.servicenow.com/docs/bundle/zurich-build-workflows/page/administer/flow-designer/reference/flow-triggers.html)
+</details>
+
+---
+
+### Question 23
+**Scenario:** An administrator creates a new custom table to track equipment loans and wants users to reach its list from the application navigator straight away.
+
+A. Choose the option to create a module when creating the table
+B. Add the table name to a user's favorites by hand for each user
+C. Create a UI policy on the table to make it visible
+D. Import an empty spreadsheet to register the table
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** When creating a table, the administrator can have the platform create an application menu and module for it, so its list appears in the navigator for users with the right roles. Adding favorites one user at a time does not scale. UI policies control form fields, and an import is not how tables are registered.
+
+**Key Concept:** [Table Administration](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/table-administration/concept/c_TableAdministration.html)
+</details>
+
+---
+
+### Question 24
+**Scenario:** The Assignment group field must be mandatory on incidents whether they are created on a form, through an import set, or through a web service.
+
+A. A UI policy that makes the field mandatory on the form
+B. An onSubmit client script that checks the field
+C. A data policy that makes the field mandatory
+D. Marking the field as required in the form layout
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Data policies enforce mandatory and read-only rules on the data itself, and can apply to import sets and web services as well as forms. UI policies and client scripts run only in the browser on forms, so imports and integrations bypass them. Form layout controls where fields appear, not whether every channel must fill them.
+
+**Key Concept:** [Data Policies](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/field-administration/concept/c_DataPolicy.html)
+</details>
+
+---
+
+### Question 25
+**Scenario:** An administrator built a custom Asset Request table and later wants two new tables to extend it and inherit its fields, but the option to extend it is not offered.
+
+A. The table must first be added to the CMDB as a CI class
+B. The table's Extensible option was not selected in its definition
+C. Only tables in the global scope can ever be extended
+D. Tables can only extend the Task table, not custom tables
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A table can be used as a parent only if it is marked extensible in its table definition. Custom tables do not have to be CI classes to be extended, scoped applications can contain extensible tables, and any extensible table, not only Task, can be a parent.
+
+**Key Concept:** [Table Administration](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/administer/table-administration/concept/c_TableAdministration.html)
+</details>
+
+---
+
+### Question 26
+**Scenario:** A report must show incidents together with fields from their SLA records, which live in a separate table that references Incident.
+
+A. Two separate reports placed side by side on a dashboard
+B. A new field on Incident copied from the SLA record by a business rule script
+C. A list export of each table merged in a spreadsheet
+D. A database view joining the two tables, used as the report source
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A database view joins tables into a read-only virtual table that reports can use as their source, so fields from both appear in one report. Two side-by-side reports cannot combine rows. Copying fields by script duplicates data, and spreadsheet merges are manual and stale immediately.
+
+**Key Concept:** [Work with Database Views](https://www.servicenow.com/docs/bundle/zurich-platform-administration/page/use/reporting/concept/c_DatabaseViews.html)
+</details>
+
+---
+
+### Question 27
+**Scenario:** The IT director wants the "Open incidents by assignment group" report delivered to her inbox every Monday at 8 AM, without logging in.
+
+A. Schedule the report to be emailed on a weekly schedule
+B. Share the report with her and ask her to open it on Mondays
+C. Create a notification on the Incident table for every update
+D. Add the report to a dashboard and set it as her homepage
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A scheduled report runs at the chosen time and emails the result to the recipients, which meets the requirement without logging in. Sharing or a dashboard still requires her to log in and look. A notification on every incident update would flood her inbox with individual records, not a report.
+
+**Key Concept:** [Schedule Emails of Core UI Reports](https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/reporting/task/t_ScheduleAReport.html)
+</details>
+
+---
+
+### Question 28
+**Scenario:** An agent needs to record troubleshooting steps on an incident that the caller should not see, and separately send the caller an update.
+
+A. Put both in the Short description field, separated by a line
+B. Use Additional comments for the internal notes and Work notes for the caller
+C. Use Work notes for the internal notes and Additional comments for the caller
+D. Put internal notes in an attachment and email the caller directly
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Work notes are internal and visible only to fulfillers, while additional comments are customer-visible and can be sent to the caller. Swapping them would expose internal notes to the caller. The short description is a summary field, and attachments plus outside email lose the record's activity history.
+
+**Key Concept:** [Forms in the Classic Environment](https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/use/using-forms/concept/c_UsingForms.html)
+</details>
+
+---
+
+### Question 29
+**Scenario:** Employees must report a broken printer from the service portal using a simple guided form, and the submission should create an Incident record rather than a request.
+
+A. A catalog item with a cart and a fulfillment workflow
+B. A record producer that creates records in the Incident table
+C. A knowledge article with a link to the Incident form
+D. An order guide that bundles several catalog items into one request
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A record producer is a catalog item that creates a task-based record, such as an incident, from a portal form. A standard catalog item creates a request and requested item, not an incident. A knowledge article link sends users to the raw form, and an order guide bundles multiple items into one request.
+
+**Key Concept:** [Record Producer](https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/product/service-catalog-management/concept/c_RecordProducer.html)
+</details>
+
+---
+
+### Question 30
+**Scenario:** When an employee orders a "New Laptop" catalog item, approval and fulfillment tasks must start automatically for that requested item.
+
+A. Associate a flow that uses a Service Catalog trigger with the catalog item
+B. Add a scheduled flow that scans all requested items every night for new laptop orders
+C. Create a UI policy on the catalog item's variables
+D. Attach a report of open requested items to the catalog item
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Flows built with the Service Catalog trigger are associated with a catalog item and run for each requested item, handling approvals and fulfillment tasks. A nightly scan delays every order. UI policies only change variable behavior on the order form, and a report takes no action.
+
+**Key Concept:** [Flow Trigger Types](https://www.servicenow.com/docs/bundle/zurich-build-workflows/page/administer/flow-designer/reference/flow-triggers.html)
 </details>
 
 ---

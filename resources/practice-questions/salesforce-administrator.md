@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: beginner
 ---
 
 # Salesforce Certified Administrator - Practice Questions
 
-15 questions across the administrator exam's main areas: configuration and setup, object manager and Lightning App Builder, process automation, data and analytics management, and the sales and service applications.
+30 questions across the administrator exam's main areas: configuration and setup, object manager and Lightning App Builder, process automation, data and analytics management, and the sales and service applications.
 
 > **Cert page:** [exams/salesforce/administrator/](../../exams/salesforce/administrator/)
 
@@ -277,6 +277,306 @@ D. A Rollback button in Setup that reverts the organization to its state before 
 **Correct: A**
 
 **Why:** The Recycle Bin covers deletes, not overwrites, so a bad update needs your own prior extract to restore from. Taking an export before any bulk operation is the habit that makes this recoverable.
+</details>
+
+---
+
+### Question 16
+**Scenario:** Call center agents may log in to Salesforce only during their shift, 7 AM to 7 PM on weekdays, and only from the office network.
+
+A. A validation rule on the User object that checks the current time
+B. Login hours and login IP ranges on the agents' profile
+C. A permission set that removes the API Enabled permission
+D. Session timeout set to 12 hours in Session Settings
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Profiles can define login hours and trusted login IP ranges, and Salesforce refuses logins outside them. A validation rule on User only fires when a user record is saved, not at login. Removing API access does not restrict when or where people log in, and a session timeout only limits how long a session lasts.
+
+**Key Concept:** [Data Security: Control Access to the Org](https://trailhead.salesforce.com/content/learn/modules/data_security/data_security_org)
+</details>
+
+---
+
+### Question 17
+**Scenario:** Opportunities are Private. All opportunities where Region equals West must be visible to every member of the West Sales public group, whoever owns them.
+
+A. Change the opportunity organization-wide default to Public Read Only for all users
+B. Ask each owner to share their West opportunities manually
+C. Add the West Sales members to the Opportunity record type
+D. Create a criteria-based sharing rule for Region equals West shared with the group
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Criteria-based sharing rules open access to records that match field criteria, regardless of owner, to groups or roles. Changing the org-wide default exposes every opportunity to everyone. Manual sharing depends on each owner and does not cover new records, and record types control processes and layouts, not record visibility.
+
+**Key Concept:** [Data Security: Create Sharing Rules](https://trailhead.salesforce.com/content/learn/modules/data_security/data_security_sharing_rules)
+</details>
+
+---
+
+### Question 18
+**Scenario:** Ten permission sets together make up the Sales Ops job role. Admins want to assign them as one unit, but one member of that role must not get the Delete permission on Accounts that one of the sets includes.
+
+A. A permission set group with a muting permission set
+B. A cloned profile for that single user with Delete removed
+C. Ten separate permission set assignments for every user
+D. A validation rule that blocks deletes for that user
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A permission set group bundles permission sets for one assignment, and a muting permission set inside a group removes specific permissions from that group's combined set. A cloned profile per exception multiplies maintenance. Assigning ten sets separately is exactly what the team wants to avoid, and validation rules do not run on delete.
+
+**Key Concept:** [Permission Set Groups](https://trailhead.salesforce.com/content/learn/modules/permission-set-groups)
+</details>
+
+---
+
+### Question 19
+**Scenario:** Users viewing a Contact want to see the parent Account's Industry on the contact record, always current, without anyone entering it twice.
+
+A. A roll-up summary field on Contact counting the Account
+B. A custom text field on Contact updated by users when needed
+C. A cross-object formula field on Contact referencing Account.Industry
+D. A new lookup relationship from Account to Contact
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A cross-object formula can reference fields on a parent through the relationship, so it always shows the Account's current value with no data entry. Roll-up summaries go from children to a master-detail parent, not down to children. A manual text field drifts out of date, and a new lookup from Account to Contact points the wrong direction.
+
+**Key Concept:** [Formulas and Validations](https://trailhead.salesforce.com/content/learn/modules/point_click_business_logic)
+</details>
+
+---
+
+### Question 20
+**Scenario:** On a Case, the Sub-Type picklist should only offer values relevant to the Type the user selected, such as Billing sub-types only when Type is Billing.
+
+A. One record type per Type value with separate layouts
+B. A field dependency with Type controlling Sub-Type
+C. A validation rule that rejects invalid combinations
+D. A global value set shared by Type and Sub-Type
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A dependent picklist filters its values based on the controlling field's selection, so users only see relevant options. A record type per value multiplies layouts and does not follow changes to Type on the same record. A validation rule reports errors after the fact instead of guiding the choice, and a global value set shares one value list without any dependency.
+
+**Key Concept:** [Picklist Administration: Manage Your Picklist Values](https://trailhead.salesforce.com/content/learn/modules/picklist_admin/picklist_admin_manage)
+</details>
+
+---
+
+### Question 21
+**Scenario:** On the Opportunity record page, a "Closed Lost Details" component should appear only when Stage equals Closed Lost.
+
+A. Create a separate page layout for Closed Lost opportunities and assign it by profile
+B. Write an Apex trigger that hides the component on save
+C. Make the component's fields required with a validation rule
+D. Set a component visibility filter on Stage in the Lightning App Builder
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Component visibility filters in the Lightning App Builder show or hide a component on a record page based on field values, permissions, or device, with no code. A page layout is assigned by profile and record type, not by Stage. Triggers run on the server and cannot change how a page renders, and validation rules enforce data, not visibility.
+
+**Key Concept:** [Add Visibility Rules for Dynamic Pages](https://trailhead.salesforce.com/content/learn/modules/lightning_app_builder/add-visibility-rules-for-dynamic-pages-lab)
+</details>
+
+---
+
+### Question 22
+**Scenario:** A qualified lead from a new company is ready to become a customer opportunity. The rep wants the related records created in one step.
+
+A. Convert the lead, creating an account, a contact, and optionally an opportunity
+B. Clone the lead three times and change each clone's record type
+C. Create the account, contact, and opportunity by hand, then delete the lead
+D. Change the lead's status to Closed Won and let it become an opportunity
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Lead conversion creates (or matches) an account and contact and can create an opportunity, carrying over mapped fields and campaign history. Leads cannot be cloned into other objects. Creating records by hand and deleting the lead loses history and conversion reporting, and lead status alone never creates an opportunity.
+
+**Key Concept:** [Leads and Opportunities for Lightning Experience](https://trailhead.salesforce.com/content/learn/modules/leads_opportunities_lightning_experience)
+</details>
+
+---
+
+### Question 23
+**Scenario:** Marketing runs a trade show and must track which leads and contacts attended, who responded, and the revenue from opportunities it influenced.
+
+A. A custom checkbox on Lead named Attended Trade Show
+B. A public group containing everyone who attended
+C. A campaign with campaign members and opportunities linked to it
+D. A Chatter group where attendees post comments
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Campaigns track members (leads and contacts) with statuses such as Sent and Responded, and opportunities associated with the campaign roll up into its revenue fields, which supports ROI reporting. A checkbox records attendance but not responses or revenue. Public groups are for sharing, and a Chatter group is for discussion.
+
+**Key Concept:** [Campaign Basics](https://trailhead.salesforce.com/content/learn/modules/campaign_basics)
+</details>
+
+---
+
+### Question 24
+**Scenario:** High-priority cases that stay open more than four hours must automatically be reassigned to a senior support queue and the manager notified.
+
+A. An assignment rule on the Case object
+B. An escalation rule with time-based actions
+C. An auto-response rule for high-priority cases
+D. A list view filtered on high-priority open cases
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Escalation rules evaluate cases against criteria and, after a set time, reassign them and send notifications. Assignment rules route a case when it is created or edited, not after time passes. Auto-response rules email the customer, and a list view only shows cases without acting on them.
+
+**Key Concept:** [Service Cloud: Automated Case Management](https://trailhead.salesforce.com/content/learn/modules/service_lex/service_lex_case_manage)
+</details>
+
+---
+
+### Question 25
+**Scenario:** Customers email support@ the company. Each email must automatically become a case in Salesforce, with replies threaded on the same case.
+
+A. Email-to-Case routing addresses
+B. An email template on the Case object
+C. A Chatter email digest for support agents
+D. Mass email to all contacts with open cases
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Email-to-Case turns incoming emails to the routing address into cases and attaches later replies to the same case, keeping the conversation together. Email templates format outgoing messages. Chatter digests summarize feed activity, and mass email sends messages out rather than capturing them.
+
+**Key Concept:** [Service Cloud: Automated Case Management](https://trailhead.salesforce.com/content/learn/modules/service_lex/service_lex_case_manage)
+</details>
+
+---
+
+### Question 26
+**Scenario:** A sales manager wants to be notified in their feed whenever the Amount or Stage of a key opportunity changes, without building automation.
+
+A. A scheduled report emailed to the manager every Monday
+B. A record-triggered flow that emails the manager on every edit of the record
+C. A validation rule that blocks changes to Amount and Stage
+D. Feed tracking on Opportunity and following the record in Chatter
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** With feed tracking enabled for those fields, changes post to the record's feed, and users who follow the record see them in their own feed. A weekly report is delayed and not tied to the change. A flow works but is automation the manager wanted to avoid, and a validation rule would stop the changes rather than announce them.
+
+**Key Concept:** [Chatter Basics for Users](https://trailhead.salesforce.com/content/learn/modules/chatter_basics_for_users)
+</details>
+
+---
+
+### Question 27
+**Scenario:** One "My Pipeline" dashboard should show each sales rep only the opportunities they are allowed to see, instead of building a dashboard per rep.
+
+A. A dashboard running as the system administrator
+B. A dashboard per rep stored in private folders
+C. A dynamic dashboard where the viewer is the running user
+D. A report with a filter on the manager's name
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A dynamic dashboard runs as the logged-in viewer, so each person sees data according to their own access. A dashboard running as an administrator shows everyone the administrator's view of the data. One dashboard per rep is the maintenance the team wants to avoid, and a fixed filter on one manager shows every viewer the same records.
+
+**Key Concept:** [Reports and Dashboards for Lightning Experience](https://trailhead.salesforce.com/content/learn/modules/lex_implementation_reports_dashboards/lex_implementation_reports_dashboards_visualizing_data)
+</details>
+
+---
+
+### Question 28
+**Scenario:** A report must group accounts into Small, Medium, and Large by Annual Revenue ranges, without creating a new field on Account.
+
+A. A bucket field on Annual Revenue in the report
+B. A roll-up summary field on Account
+C. A new picklist field populated by Data Loader
+D. A formula field on Account with CASE logic
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A bucket field lives in the report and sorts values into named categories, such as revenue ranges, with no schema change. Roll-up summaries aggregate child records and are fields on the object. A picklist filled by Data Loader and a formula field both add a new field, which the scenario rules out.
+
+**Key Concept:** [Group and Categorize Your Data](https://trailhead.salesforce.com/content/learn/projects/create-reports-and-dashboards-for-sales-and-marketing-managers/group-and-categorize-your-data)
+</details>
+
+---
+
+### Question 29
+**Scenario:** Whenever an Opportunity is created or edited, its Next Step Due field must be set on the same record, with the best performance and no extra save.
+
+A. An after-save record-triggered flow updating the record
+B. A before-save record-triggered flow (fast field updates)
+C. A scheduled flow that runs nightly over all opportunities
+D. A screen flow that users launch from the record page
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A before-save flow changes field values on the triggering record before it is written, with no extra DML, which Salesforce documents as much faster than after-save updates. An after-save flow updating the same record performs a second save. A nightly flow leaves values wrong all day, and a screen flow depends on users remembering to run it.
+
+**Key Concept:** [Record-Triggered Flows](https://trailhead.salesforce.com/content/learn/modules/record-triggered-flows)
+</details>
+
+---
+
+### Question 30
+**Scenario:** Any opportunity discount above 20% must be approved by the rep's manager before the quote can be sent, with the record locked while it waits.
+
+A. A validation rule that blocks any discount above 20% on save
+B. A sharing rule that gives managers edit access
+C. A report of high discounts reviewed each week
+D. An approval process with entry criteria on Discount
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** An approval process routes records that meet entry criteria to an approver, locks them during approval, and runs actions on approval or rejection. A validation rule simply blocks the discount with no approval path. A sharing rule only grants access, and a weekly report finds problems after quotes have gone out.
+
+**Key Concept:** [Business Process Automation](https://trailhead.salesforce.com/content/learn/modules/business_process_automation)
 </details>
 
 ---

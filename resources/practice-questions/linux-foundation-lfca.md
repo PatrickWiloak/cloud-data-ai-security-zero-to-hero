@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: beginner
 ---
 
 # Linux Foundation Certified IT Associate (LFCA) - Practice Questions
 
-15 questions for LFCA prep, weighted across Linux fundamentals, system administration, and cloud computing (20% each), then DevOps and SRE (16%), security and networking (12% each).
+30 questions for LFCA prep, weighted across Linux fundamentals, system administration, and cloud computing (20% each), then DevOps and SRE (16%), security and networking (12% each).
 
 LFCA is multiple choice and entry-level. It covers breadth across IT, not depth in any one area.
 
@@ -279,6 +279,306 @@ D. Least privilege: grant the minimum permissions needed for the role, and revie
 **Correct: D**
 
 **Why:** Least privilege limits the blast radius of any compromised or misused account. Shared admin accounts destroy accountability because you cannot attribute actions. Permanent grants accumulate into privilege creep, which is why periodic access review exists.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A junior admin needs to see every entry in a directory, including hidden dotfiles such as `.bashrc`, along with permissions and owners.
+
+A. `ls -R`, which recurses into every subdirectory
+B. `ls -lh`, which prints sizes in human-readable units
+C. `ls -la`, which adds hidden entries to the long listing
+D. `ls -t`, which sorts the listing by modification time
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** `-l` gives the long format (permissions, owner, group, size, date) and `-a` includes entries whose names start with a dot, which `ls` hides by default. `-lh` gives the long format but still hides dotfiles. `-R` recurses without showing hidden files or details, and `-t` only changes the sort order.
+
+**Key Concept:** [ls(1) manual page](https://man7.org/linux/man-pages/man1/ls.1.html)
+</details>
+
+---
+
+### Question 17
+**Scenario:** On a Linux system that follows the Filesystem Hierarchy Standard, an admin must edit the system-wide SSH server configuration. Which directory tree holds it?
+
+A. `/var`, for logs, spools, and other variable data
+B. `/etc`, for host-specific system configuration
+C. `/opt`, for add-on application software packages
+D. `/usr/bin`, for most user command binaries
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The FHS reserves `/etc` for host-specific configuration, so the SSH daemon reads `/etc/ssh/sshd_config`. `/var` holds data that changes while the system runs, such as logs under `/var/log`. `/opt` is for self-contained add-on packages, and `/usr/bin` holds executables, not their configuration.
+
+**Key Concept:** [FHS 3.0: /etc](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/ch03s07.html)
+</details>
+
+---
+
+### Question 18
+**Scenario:** A nightly script must add its output to the end of `app.log` without erasing what earlier runs wrote.
+
+A. `cmd > app.log`, which redirects standard output there
+B. `cmd 2> app.log`, which sends only standard error there
+C. `cmd < app.log`, which feeds the file in as standard input
+D. `cmd >> app.log`, which appends standard output to it
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** `>>` opens the file in append mode, creating it if needed, so earlier content survives. A single `>` truncates the file first, so each run would wipe the previous log. `2>` redirects only standard error (and also truncates), and `<` reads from the file rather than writing to it.
+
+**Key Concept:** [Bash manual: Redirections](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)
+</details>
+
+---
+
+### Question 19
+**Scenario:** An Ubuntu server needs the `nginx` package installed from the configured repositories, with its dependencies resolved automatically.
+
+A. `sudo apt install nginx`
+B. `sudo dpkg -i nginx`
+C. `sudo rpm -i nginx`
+D. `sudo dnf install nginx`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** On Debian and Ubuntu, `apt` fetches packages from the configured repositories and resolves dependencies. `dpkg -i` installs a local `.deb` file you already have and does not download dependencies. `rpm` and `dnf` are the Red Hat family tools (RHEL, Fedora, Rocky) and are not the package manager on Ubuntu.
+
+**Key Concept:** [apt(8) manual page](https://manpages.debian.org/bookworm/apt/apt.8.en.html)
+</details>
+
+---
+
+### Question 20
+**Scenario:** A server feels slow. The admin wants a live, continuously refreshing view of which processes are using the most CPU and memory right now.
+
+A. `ps aux`, which prints a one-time process snapshot
+B. `df -h`, which prints free space on each filesystem
+C. `top`, which refreshes a sorted process view live
+D. `uptime`, which prints the load averages once
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** `top` redraws every few seconds and sorts by CPU by default, so you can watch the culprit in real time. `ps aux` lists the same processes but only once. `uptime` shows load averages without naming any process, and `df -h` is about disk space, not CPU or memory.
+
+**Key Concept:** [top(1) manual page](https://man7.org/linux/man-pages/man1/top.1.html)
+</details>
+
+---
+
+### Question 21
+**Scenario:** Several admins share a server. Each must be able to run privileged commands, and the security team needs a record of who ran what.
+
+A. Share the root password and have admins log in as root directly
+B. Grant each admin `sudo` rights and keep their own accounts
+C. Add every admin to the same shared `admin` login account
+D. Set the setuid bit on the shell so any user gets root
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** `sudo` lets each person elevate with their own credentials and logs each command against their username, which preserves accountability. A shared root password or shared login makes every action anonymous. A setuid shell would hand root to every user on the system, which is a severe security hole.
+
+**Key Concept:** [sudo manual](https://www.sudo.ws/docs/man/sudo.man/)
+</details>
+
+---
+
+### Question 22
+**Scenario:** A retail site's cloud environment adds web servers automatically during a holiday spike and removes them when traffic drops, so the company pays only for what it uses.
+
+A. High availability
+B. Multi-tenancy
+C. Fault tolerance
+D. Rapid elasticity
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** NIST lists rapid elasticity as an essential characteristic of cloud computing: capacity is provisioned and released automatically to match demand, in both directions. High availability and fault tolerance are about surviving failures, not matching load. Multi-tenancy describes many customers sharing pooled infrastructure.
+
+**Key Concept:** [NIST SP 800-145: The NIST Definition of Cloud Computing](https://csrc.nist.gov/pubs/sp/800/145/final)
+</details>
+
+---
+
+### Question 23
+**Scenario:** A team runs Linux virtual machines on an IaaS provider. A critical vulnerability is announced in the guest operating system's kernel.
+
+A. The customer patches the guest OS on its own instances
+B. The provider patches it, because it owns the instances
+C. Nobody needs to act, because IaaS kernels are immutable
+D. The hardware vendor patches it through a firmware update
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Under the shared responsibility model for IaaS, the provider secures the physical hosts, network, and hypervisor, while the customer owns the guest OS, its patches, and everything above it. The provider does not patch customer instances. Guest kernels are not immutable, and firmware updates do not fix a guest OS vulnerability.
+
+**Key Concept:** [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
+</details>
+
+---
+
+### Question 24
+**Scenario:** A small piece of code must run each time a file is uploaded. The team wants no servers to manage and to pay only while the code is running.
+
+A. A dedicated bare metal server running a polling script
+B. A virtual machine left running with a cron job every minute
+C. A serverless function triggered by the upload event
+D. A container cluster sized for the busiest expected day
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Serverless functions run in response to events, scale automatically, and bill for invocations and execution time, with no servers to patch. A VM or bare metal server bills around the clock and needs OS management. A cluster sized for peak load wastes capacity most of the time and still needs to be operated.
+
+**Key Concept:** [What is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+</details>
+
+---
+
+### Question 25
+**Scenario:** A team wants to release a new version with near-zero downtime and the ability to switch back instantly if it misbehaves.
+
+A. Rolling deployment, replacing servers one at a time in place
+B. Blue-green deployment, flipping traffic between two environments
+C. Big-bang deployment, updating all servers during a maintenance window
+D. Recreate deployment, stopping the old version before starting the new
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Blue-green keeps the old environment intact while the new one takes traffic, so rollback is just switching the router back. A rolling deployment avoids downtime, but rolling back means rolling again across every server. Big-bang and recreate both involve downtime and have no instant fallback.
+
+**Key Concept:** [BlueGreenDeployment (Martin Fowler)](https://martinfowler.com/bliki/BlueGreenDeployment.html)
+</details>
+
+---
+
+### Question 26
+**Scenario:** A service has a 99.9% monthly availability SLO. By mid-month, outages have already used all the allowed downtime.
+
+A. Lower the SLO to 99% so the service is back in compliance
+B. Keep shipping features, since the SLO resets next month
+C. Add more monitoring dashboards and continue as normal
+D. Pause risky releases and focus on reliability work
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The 0.1% the SLO permits is the error budget. When it is spent, SRE practice is to slow or freeze risky changes and invest in reliability until the budget recovers. Lowering the target hides the problem from users who still see failures. Shipping as usual or only adding dashboards ignores the signal the budget exists to give.
+
+**Key Concept:** [Google SRE book: Embracing Risk](https://sre.google/sre-book/embracing-risk/)
+</details>
+
+---
+
+### Question 27
+**Scenario:** A developer must start work on a new feature in Git without touching `main`, creating a branch and switching to it in one step.
+
+A. `git switch -c feature-login`
+B. `git merge feature-login`
+C. `git commit -m feature-login`
+D. `git push origin feature-login`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** `git switch -c` creates the branch and checks it out in one command (the older equivalent is `git checkout -b`). `git merge` combines an existing branch into the current one, `git commit` records changes on the current branch, and `git push` publishes a branch that must already exist locally.
+
+**Key Concept:** [git-switch documentation](https://git-scm.com/docs/git-switch)
+</details>
+
+---
+
+### Question 28
+**Scenario:** An attacker phishes an employee's password for the company VPN. Which control most directly stops the attacker from logging in with it?
+
+A. A longer minimum password length policy
+B. Encrypting the laptop's hard drive
+C. Multi-factor authentication on the VPN
+D. A screen lock after five minutes idle
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** MFA requires a second factor the attacker does not have, so a stolen password alone is not enough. A longer password does not help once the password itself has been handed over. Disk encryption protects a lost device, and a screen lock protects an unattended one; neither affects a remote VPN login.
+
+**Key Concept:** [CISA: More than a Password (MFA)](https://www.cisa.gov/MFA)
+</details>
+
+---
+
+### Question 29
+**Scenario:** A web application must store user passwords so that a stolen copy of the database does not reveal them.
+
+A. Encrypted with a key kept in the same database
+B. Hashed with a salted, slow algorithm such as Argon2 or bcrypt
+C. Base64-encoded so they are unreadable to a casual viewer
+D. Stored in plain text in a table only admins can read
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A salted, deliberately slow one-way hash means the application can verify a password without ever storing it, and cracking stolen hashes becomes expensive. Encryption is reversible, and a key stored beside the data is stolen with it. Base64 is an encoding, not protection, and plain text relies entirely on access control never failing.
+
+**Key Concept:** [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
+</details>
+
+---
+
+### Question 30
+**Scenario:** A firewall in front of a new web server must allow encrypted browser traffic using the standard port.
+
+A. TCP 22
+B. TCP 80
+C. UDP 53
+D. TCP 443
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** HTTPS (HTTP over TLS) uses TCP port 443 by default. Port 80 is unencrypted HTTP, port 22 is SSH, and UDP 53 is DNS. Knowing the common well-known ports is basic networking literacy for reading and writing firewall rules.
+
+**Key Concept:** [IANA Service Name and Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
 </details>
 
 ---

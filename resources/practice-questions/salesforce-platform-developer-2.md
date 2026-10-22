@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: advanced
 ---
 
 # Salesforce Platform Developer II (PDII) - Practice Questions
 
-15 questions at PDII level: advanced Apex, asynchronous processing, integration patterns, performance at scale, and testing and deployment discipline. The full credential also requires the programmatic assignments.
+30 questions at PDII level: advanced Apex, asynchronous processing, integration patterns, performance at scale, and testing and deployment discipline. The full credential also requires the programmatic assignments.
 
 > **Cert page:** [exams/salesforce/platform-developer-2/](../../exams/salesforce/platform-developer-2/)
 
@@ -277,6 +277,306 @@ D. Custom error logging to a custom object plus platform event logging, since ev
 **Correct: D**
 
 **Why:** Writing an error record with plain DML is lost in the rollback that follows the exception. Publishing a platform event with `PUBLISH_IMMEDIATELY` survives the rollback, which is why it is the standard logging pattern on the platform.
+</details>
+
+---
+
+### Question 16
+**Scenario:** Apex code inserts a list of 1,000 Account records in a single DML statement. How does the Account before-insert trigger process them?
+
+A. Once, with all 1,000 records in `Trigger.new`
+B. 1,000 times, with one record in `Trigger.new` each time
+C. Five times, in chunks of 200 records, within the same transaction
+D. Five times, in five separate transactions with fresh governor limits
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Triggers process records in chunks of up to 200, so 1,000 records cause five trigger invocations, all inside the one transaction and sharing its governor limits (and its static variables). The trigger never sees all 1,000 at once, and it is not invoked per record. Chunks do not start new transactions, which is why a static "already ran" flag can wrongly skip later chunks.
+
+**Key Concept:** [Apex Triggers: Bulk Apex Triggers](https://trailhead.salesforce.com/content/learn/modules/apex_triggers/apex_triggers_bulk)
+</details>
+
+---
+
+### Question 17
+**Scenario:** An org must retain several billion historical device readings on-platform for compliance, queried occasionally by device ID and date, with consistent performance.
+
+A. A custom big object with an index on device ID and date
+B. A custom object with a skinny table and a custom index on device ID
+C. A hierarchy custom setting storing the readings
+D. Files attached to each Account record as CSV
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Big objects are built to store billions of records with consistent performance, queried through their defined index fields, which suits archival and compliance data. Standard custom objects degrade and consume storage at this scale even with tuning. Custom settings are for small configuration data, and CSV files cannot be queried.
+
+**Key Concept:** [Big Objects](https://developer.salesforce.com/docs/atlas.en-us.bigobjects.meta/bigobjects/big_object.htm)
+</details>
+
+---
+
+### Question 18
+**Scenario:** Apex makes callouts to a partner API that uses OAuth. Endpoints and credentials must differ between sandbox and production, and no secrets may appear in code or custom fields.
+
+A. Store the token in a custom setting and add it as a header
+B. Use a named credential (with an external credential) as the callout endpoint
+C. Hardcode the endpoint and read the secret from a static resource
+D. Ask the partner to allowlist Salesforce IP ranges and skip authentication on calls
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A named credential defines the endpoint and, with its external credential, the authentication, and Salesforce handles the auth headers so code only references `callout:Name`. Each org can hold its own values. Custom settings and static resources store secrets in plain places, and IP allowlisting is not a substitute for authenticating the caller.
+
+**Key Concept:** [Named Credentials as Callout Endpoints](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_callouts_named_credentials.htm)
+</details>
+
+---
+
+### Question 19
+**Scenario:** A Lightning component calls an external service that can take up to a minute to respond. Synchronous callouts are tying up server resources and hitting timeouts.
+
+A. Increase the HTTP timeout to five minutes on the request
+B. Move the callout to a before-insert trigger
+C. Retry the synchronous callout in a loop until it succeeds
+D. Return a `Continuation` from the `@AuraEnabled` Apex method
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A Continuation makes the callout asynchronously from a component's Apex method and calls a callback when the response arrives, allowing longer waits without holding a server thread. Apex callout timeouts cannot be raised that far. Triggers cannot make synchronous callouts, and retry loops make the problem worse.
+
+**Key Concept:** [Continuations](https://developer.salesforce.com/docs/platform/lwc/guide/apex-continuations.html)
+</details>
+
+---
+
+### Question 20
+**Scenario:** A mobile app must create an Account, then a Contact and an Opportunity linked to it, and wants one round trip to Salesforce with later steps using the new Account's ID.
+
+A. A REST Composite request with reference IDs between subrequests
+B. Three sequential REST calls, each waiting for the previous one to return
+C. A Bulk API 2.0 job containing all three records
+D. A SOQL query followed by two separate SOAP calls
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The Composite resource runs a series of subrequests in one call, and a later subrequest can reference an earlier one's result, such as the new Account ID. Three sequential calls are three round trips. A Bulk API job loads one object per job and is meant for large volumes, and mixing SOQL and SOAP adds calls rather than removing them.
+
+**Key Concept:** [Composite Resource](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_composite_composite.htm)
+</details>
+
+---
+
+### Question 21
+**Scenario:** A Batch Apex job must count how many records failed validation across all `execute` calls and email the total from `finish`. The count is always zero.
+
+A. Declare the counter `static` so it survives between batches
+B. Store the counter in a local variable inside `execute`
+C. Implement `Database.Stateful` so instance variables keep their values
+D. Increase the batch size to 2,000 so there is only one batch
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Each `execute` call runs in its own transaction, and only a class implementing `Database.Stateful` keeps instance member values between them. Static variables reset between transactions, and a local variable is gone after each call. Batch size is capped at 2,000, and relying on one batch breaks as data grows.
+
+**Key Concept:** [Asynchronous Apex: Use Batch Apex](https://trailhead.salesforce.com/content/learn/modules/asynchronous_apex/async_apex_batch)
+</details>
+
+---
+
+### Question 22
+**Scenario:** A test method inserts a User with a role and then an Account in the same method, and fails with `MIXED_DML_OPERATION`.
+
+A. Insert both records in one `Database.insert` call with `allOrNone` false
+B. Perform the setup-object DML inside a `System.runAs` block
+C. Mark the test method `@isTest(SeeAllData=true)`
+D. Insert the Account before the User instead of after it
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** DML on setup objects (such as User with a role) and non-setup objects (such as Account) cannot be mixed in one transaction, but in tests the setup DML can be isolated inside `System.runAs` (or moved to an asynchronous job). A single mixed insert still violates the rule. `SeeAllData` affects data visibility, and the order of the statements does not matter.
+
+**Key Concept:** [Mixed DML Operations in Test Methods](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_dml_non_mix_sobjects_test_methods.htm)
+</details>
+
+---
+
+### Question 23
+**Scenario:** An Apex method inserts an Order and then its line items. If any line item fails, the Order insert must be undone while the method handles the error gracefully.
+
+A. Delete the Order in the `catch` block using its saved ID
+B. Throw an unhandled exception so the platform rolls everything back
+C. Insert the line items before the Order so failures happen first
+D. Use `Database.setSavepoint()` and `Database.rollback()`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A savepoint marks the database state, and rolling back to it discards every DML after it while the code continues and handles the error. Deleting by hand is a second operation that can also fail and leaves traces such as consumed autonumbers. An unhandled exception rolls back but gives the user an error rather than graceful handling, and line items need the Order's ID first.
+
+**Key Concept:** [Transaction Control](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_transaction_control.htm)
+</details>
+
+---
+
+### Question 24
+**Scenario:** A dynamic SOQL query builds its WHERE clause from a search term typed by the user. A security review flags it.
+
+A. Use bind variables, such as `Database.queryWithBinds`
+B. Convert the input to upper case before adding it to the query
+C. Limit the input to 255 characters in the component
+D. Run the query in a `without sharing` class
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Concatenating user input into a query string allows SOQL injection. Bind variables keep input as data rather than query syntax, and `String.escapeSingleQuotes` is the fallback where binding is impossible. Changing case or length does not neutralize quotes, and `without sharing` widens access, which makes injection worse.
+
+**Key Concept:** [SOQL Injection Due to Insecure Database Query Construction](https://developer.salesforce.com/docs/atlas.en-us.packagingGuide.meta/packagingGuide/secure_code_violation_soql_injection.htm)
+</details>
+
+---
+
+### Question 25
+**Scenario:** After a user saves a new record in a Lightning Web Component, the component must open that record's standard record page without hardcoding a URL.
+
+A. Set `window.location.href` to `/lightning/r/` plus the record ID
+B. Dispatch a `CustomEvent` named `navigate` to the parent component with the ID
+C. Call an Apex method that returns a `PageReference`
+D. Use `NavigationMixin.Navigate` with a `standard__recordPage` page reference
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The navigation service takes a PageReference object describing the destination, so it works across Lightning Experience, mobile, and Experience Cloud without building URLs. Setting `window.location` hardcodes a URL format and reloads the app. A custom event only notifies a parent, and an Apex `PageReference` is a Visualforce concept.
+
+**Key Concept:** [Navigation](https://developer.salesforce.com/docs/platform/lightning-component-reference/guide/lightning-navigation.html)
+</details>
+
+---
+
+### Question 26
+**Scenario:** A component displays records from a wired `cacheable=true` Apex method. After the component updates a record through an imperative Apex call, the list still shows the old values.
+
+A. Remove `cacheable=true` so the wire cannot be cached
+B. Call `refreshApex()` on the wired result after the update succeeds
+C. Call the cacheable method imperatively in a loop until values change
+D. Reload the whole browser page with `location.reload()`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** `refreshApex` re-queries the server for a wired Apex result and refreshes the client cache, so the component shows current data. A wired Apex method must be cacheable, so removing the flag breaks the wire. Polling imperatively does not update the wired value, and reloading the page is a poor user experience.
+
+**Key Concept:** [Client-Side Caching](https://developer.salesforce.com/docs/platform/lwc/guide/apex-result-caching.html)
+</details>
+
+---
+
+### Question 27
+**Scenario:** A component must list up to 100,000 order lines in a table. Loading them all at once makes the page slow and hits heap limits.
+
+A. Query all rows in one Apex call and filter them in JavaScript
+B. Render each row as its own child component with its own query
+C. Use `lightning-datatable` with infinite loading and fetch rows in pages
+D. Increase the Apex heap limit in Setup for this component
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Infinite loading (`enable-infinite-loading` with an `onloadmore` handler) loads a first page and fetches more as the user scrolls, keeping queries, heap, and DOM size small. Loading everything is exactly what fails. A query per row multiplies calls, and the heap limit is a governor limit that cannot be raised in Setup.
+
+**Key Concept:** [Datatable](https://developer.salesforce.com/docs/platform/lightning-component-reference/guide/lightning-datatable.html)
+</details>
+
+---
+
+### Question 28
+**Scenario:** A complex trigger misbehaves in a sandbox. The developer wants to step through the execution with breakpoints and inspect variables, using VS Code.
+
+A. Add `System.debug` after every line and read the raw log in Setup
+B. Capture a debug log and use the Apex Replay Debugger
+C. Run the code in Anonymous Apex with `System.assert` calls
+D. Write a test class and read only its code coverage report
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The Apex Replay Debugger in the Salesforce Extensions for VS Code replays a debug log as if it were a live session, with breakpoints, variable inspection, and the call stack. Reading raw logs filled with debug statements is slow. Anonymous Apex assertions halt at the first failure without stepping, and coverage shows which lines ran, not what values they held.
+
+**Key Concept:** [Find and Fix Bugs with Apex Replay Debugger](https://trailhead.salesforce.com/content/learn/modules/find-and-fix-bugs-with-apex-replay-debugger)
+</details>
+
+---
+
+### Question 29
+**Scenario:** A large org wants its customizations split into modular, versioned units it can install, upgrade, and track independently across environments from source control.
+
+A. Change sets built by hand in each sandbox for every release
+B. A single metadata ZIP of the whole org deployed each time
+C. Copying metadata between orgs with the Metadata API by hand
+D. Unlocked packages built with Salesforce CLI from the repository
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Unlocked packages group related metadata into versioned artifacts built from source control, which can be installed and upgraded independently in each org. Change sets are manual, unversioned, and cannot be scripted. Deploying the whole org every time is not modular, and hand copies are neither versioned nor repeatable.
+
+**Key Concept:** [Unlocked Packages for Customers](https://trailhead.salesforce.com/content/learn/modules/unlocked-packages-for-customers)
+</details>
+
+---
+
+### Question 30
+**Scenario:** An Apex service recalculates the same exchange rate table on almost every request, repeating identical queries and computation across many users.
+
+A. Store the table in a static variable so all users share it
+B. Query the table with `FOR UPDATE` to speed later reads
+C. Cache the computed table in Platform Cache with a time-to-live
+D. Move the computation into a before-insert trigger
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Platform Cache (org or session partitions) keeps computed data in memory across transactions and users, with a time-to-live, avoiding repeated queries and computation. Static variables last only for one transaction. `FOR UPDATE` locks rows and slows concurrency, and moving the work into a trigger does not reduce how often it runs.
+
+**Key Concept:** [Platform Cache Basics](https://trailhead.salesforce.com/content/learn/modules/platform_cache)
 </details>
 
 ---

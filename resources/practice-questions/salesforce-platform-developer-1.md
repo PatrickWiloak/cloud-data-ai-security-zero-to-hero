@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
 # Salesforce Platform Developer I (PD1) - Practice Questions
 
-15 questions across the PD1 areas: developer fundamentals, process automation and logic (the largest section), user interface, and testing, debugging, and deployment.
+30 questions across the PD1 areas: developer fundamentals, process automation and logic (the largest section), user interface, and testing, debugging, and deployment.
 
 > **Cert page:** [exams/salesforce/platform-developer-1/](../../exams/salesforce/platform-developer-1/)
 
@@ -277,6 +277,306 @@ D. A custom object, which deploys with the package and whose records can be quer
 **Correct: C**
 
 **Why:** Custom metadata is packageable and moves through environments as metadata rather than data, which custom settings do not. Custom labels are for translatable user-facing text, not configuration.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A synchronous Apex transaction started from a record save throws `System.LimitException: Too many SOQL queries`. What is the per-transaction SOQL query limit in synchronous Apex?
+
+A. 50 queries
+B. 100 queries
+C. 200 queries
+D. 150 queries
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Synchronous Apex allows 100 SOQL queries per transaction, and asynchronous Apex allows 200. The 150 figure is the limit on DML statements per transaction, and 50 is not a SOQL limit. Limits exist because the platform is multi-tenant, which is why queries belong outside loops and code must be bulkified.
+
+**Key Concept:** [Execution Governors and Limits](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_gov_limits.htm)
+</details>
+
+---
+
+### Question 17
+**Scenario:** A before-update trigger on Opportunity sets a Discount field. A custom validation rule checks that Discount stays under 30%. Will the validation rule see the value the trigger set?
+
+A. No, validation rules run before any trigger fires
+B. No, validation rules only check values typed by the user
+C. Only if the trigger is rewritten as an after-update trigger
+D. Yes, custom validation rules run after before triggers
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** In the order of execution, system validation runs, then before triggers, then custom validation rules, so the rules evaluate values the before trigger set. Validation rules check the record as it will be saved, not only user input. Moving the logic to an after trigger would require another DML to change the field.
+
+**Key Concept:** [Triggers and Order of Execution](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers_order_of_execution.htm)
+</details>
+
+---
+
+### Question 18
+**Scenario:** A single query must return each Account's Name together with the last names of its related Contacts.
+
+A. `SELECT Name, (SELECT LastName FROM Contacts) FROM Account`
+B. `SELECT Name, Contact.LastName FROM Account`
+C. `SELECT Name, (SELECT LastName FROM Contact) FROM Account`
+D. `SELECT Account.Name, LastName FROM Contact GROUP BY Account`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Parent-to-child queries use a nested subquery on the child relationship name, which for standard Contacts is the plural `Contacts`. Dot notation only works from child to parent. The singular object name is not the relationship name, and grouping contacts by account returns aggregates rather than each account's list of contacts.
+
+**Key Concept:** [Apex Database: Write SOQL Queries](https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_soql)
+</details>
+
+---
+
+### Question 19
+**Scenario:** A nightly integration sends product records keyed by the ERP's ID. Existing products must be updated and new ones inserted, without duplicates and without querying first.
+
+A. `insert` every record and delete duplicates afterward
+B. `update` every record and catch the errors for new ones
+C. `upsert` on a custom field marked as an External ID
+D. `merge` every record into the oldest matching product
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** `upsert` with an External ID field matches incoming records to existing ones by that key, updating matches and inserting the rest in one operation. Inserting everything creates duplicates. Updating fails for records that do not exist yet, and `merge` combines existing duplicates rather than loading data.
+
+**Key Concept:** [Apex Database: Manipulate Records with DML](https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_dml)
+</details>
+
+---
+
+### Question 20
+**Scenario:** A search box must find a term entered by the user across the Name fields of Accounts, Contacts, and Leads in one call.
+
+A. Three SOQL queries with `LIKE` filters, one per object
+B. A SOSL `FIND` query returning Account, Contact, and Lead
+C. A SOQL query on Account with a semi-join to Contact and Lead
+D. A report filtered on the term and exported by Apex
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** SOSL searches text across multiple objects in one query using the search index and returns a list of lists, one per object. Three `LIKE` queries use three SOQL calls and scan rather than search. A semi-join filters one object by another's IDs, and Apex cannot run a report as a search mechanism.
+
+**Key Concept:** [Apex Database: Write SOSL Queries](https://trailhead.salesforce.com/content/learn/modules/apex_database/apex_database_sosl)
+</details>
+
+---
+
+### Question 21
+**Scenario:** An Apex controller returns cases to a component. Users must only see cases they have record-level access to through sharing.
+
+A. Declare the class `without sharing`
+B. Declare the class `global` instead of `public`
+C. Add `@AuraEnabled(cacheable=true)` to the method
+D. Declare the class `with sharing`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** `with sharing` makes the class enforce the running user's sharing rules, so queries return only records the user can access. `without sharing` ignores sharing. Access modifiers such as `global` control visibility of code, not data, and `cacheable=true` enables client caching. Object and field security are separate and need user mode or other checks.
+
+**Key Concept:** [Secure Apex Classes](https://developer.salesforce.com/docs/platform/lwc/guide/apex-security.html)
+</details>
+
+---
+
+### Question 22
+**Scenario:** A cleanup routine written in Apex must run every Sunday at 2 AM without anyone starting it.
+
+A. Implement `Schedulable` and schedule it with `System.schedule` and a cron expression
+B. Put the logic in an after-insert trigger on a custom object
+C. Annotate the method with `@future` and call it from a trigger
+D. Add the class to a Lightning page so it runs when users visit
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A class implementing `Schedulable` can be scheduled with `System.schedule` (or from Setup) using a cron expression, so it runs at the set time automatically. Triggers and Lightning pages run only when someone saves a record or opens a page. `@future` runs code asynchronously soon after it is called, not on a schedule.
+
+**Key Concept:** [Asynchronous Apex: Schedule Jobs Using the Apex Scheduler](https://trailhead.salesforce.com/content/learn/modules/asynchronous_apex/async_apex_scheduled)
+</details>
+
+---
+
+### Question 23
+**Scenario:** An admin's record-triggered flow needs a complex calculation that is already written in Apex.
+
+A. Rewrite the calculation as nested flow formulas
+B. Call the Apex from a validation rule on the object
+C. Expose the method with `@InvocableMethod` and call it as a flow action
+D. Mark the method `@AuraEnabled` so flows can see it
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** `@InvocableMethod` exposes a static Apex method as an action that Flow Builder can call, passing lists of inputs and outputs. Rewriting the logic duplicates it. Validation rules cannot call Apex, and `@AuraEnabled` exposes methods to Lightning components, not to flows.
+
+**Key Concept:** [InvocableMethod Annotation](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_annotation_InvocableMethod.htm)
+</details>
+
+---
+
+### Question 24
+**Scenario:** When an order ships, several independent systems and Salesforce processes must react, and the code that records the shipment should not need to know who is listening.
+
+A. Call each subscriber's API directly from the trigger
+B. Publish a platform event with `EventBus.publish`
+C. Insert a Task for each subscriber to poll
+D. Send an email alert that subscribers parse
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Platform events decouple publishers from subscribers: Apex publishes with `EventBus.publish`, and triggers, flows, and external clients subscribe without the publisher knowing about them. Direct callouts from a trigger are synchronous coupling and are not allowed from trigger context anyway. Polling Tasks and parsing emails are fragile workarounds.
+
+**Key Concept:** [Platform Events Basics: Define and Publish Platform Events](https://trailhead.salesforce.com/content/learn/modules/platform_events_basics/platform_events_define_publish)
+</details>
+
+---
+
+### Question 25
+**Scenario:** A child Lightning Web Component has a button. When it is clicked, the parent component must be told which item was selected.
+
+A. The child sets a property marked `@api` on the parent
+B. The child calls the parent's Apex controller directly
+C. The child writes the value to `sessionStorage` for the parent to poll
+D. The child dispatches a `CustomEvent` that the parent handles
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Data flows down through public `@api` properties and up through events: the child dispatches a `CustomEvent` with a `detail` payload, and the parent listens with an `on<eventname>` handler. A child cannot set its parent's properties. Apex is server-side, and polling browser storage is a workaround, not component communication.
+
+**Key Concept:** [Communicate with Events](https://developer.salesforce.com/docs/platform/lwc/guide/events.html)
+</details>
+
+---
+
+### Question 26
+**Scenario:** A Lightning Web Component on a record page must load two fields of the current record and refresh when the record ID changes, without writing Apex.
+
+A. `@wire(getRecord, { recordId: '$recordId', fields: FIELDS })`
+B. `@wire(getRecord, { recordId: 'recordId', fields: FIELDS })`
+C. An imperative Apex call in `connectedCallback`
+D. A `fetch()` call to the REST API in `renderedCallback`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The Lightning Data Service `getRecord` adapter loads record data without Apex, and the `$` prefix makes `recordId` reactive so the wire re-runs when it changes. Without `$`, the literal string "recordId" is passed. Imperative Apex is unnecessary code, and calling the REST API from the browser bypasses Lightning Data Service caching and security handling.
+
+**Key Concept:** [Lightning Web Components and Salesforce Data](https://trailhead.salesforce.com/content/learn/modules/lightning-web-components-and-salesforce-data)
+</details>
+
+---
+
+### Question 27
+**Scenario:** A component must display and edit a handful of fields on a record, with layout and save handled by the platform and no custom Apex.
+
+A. A Visualforce page with a custom controller
+B. An Aura component with a custom Apex save method
+C. The `lightning-record-form` base component
+D. An LWC with an imperative Apex DML call
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** `lightning-record-form` uses Lightning Data Service to view, edit, and save records with field-level security and sharing applied, and needs no Apex. A Visualforce custom controller, an Aura component with Apex, and imperative DML from an LWC all require custom server code for something the base component already does.
+
+**Key Concept:** [Lightning Web Components and Salesforce Data](https://trailhead.salesforce.com/content/learn/modules/lightning-web-components-and-salesforce-data)
+</details>
+
+---
+
+### Question 28
+**Scenario:** A test calls a method that enqueues a Queueable job, but assertions on the job's results fail because the job has not run yet.
+
+A. Add `Thread.sleep` in the test until the job finishes
+B. Wrap the call in `Test.startTest()` and `Test.stopTest()`
+C. Mark the test with `@isTest(SeeAllData=true)`
+D. Query `AsyncApexJob` in a loop until it completes
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Asynchronous work enqueued between `Test.startTest()` and `Test.stopTest()` runs synchronously when `stopTest()` is called, so assertions afterward see the results; the pair also gives the code under test a fresh set of governor limits. Apex has no thread sleep, `SeeAllData` controls access to org data, and polling `AsyncApexJob` never sees the job finish inside a test.
+
+**Key Concept:** [Asynchronous Apex](https://trailhead.salesforce.com/content/learn/modules/asynchronous_apex)
+</details>
+
+---
+
+### Question 29
+**Scenario:** A test class reaches 95% coverage but would still pass if the method under test returned the wrong value.
+
+A. Add assertions such as `Assert.areEqual(expected, actual)`
+B. Add more test methods that call the same code paths
+C. Use `@isTest(SeeAllData=true)` to test with real data
+D. Mark the class `@isTest(isParallel=true)` to run faster
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Coverage only shows which lines ran; assertions are what verify behavior, and the `Assert` class (`areEqual`, `isTrue`, and so on) makes them explicit. More calls without assertions raise coverage but still verify nothing. Real org data makes tests brittle, and parallel execution affects speed, not correctness.
+
+**Key Concept:** [Assert Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_class_System_Assert.htm)
+</details>
+
+---
+
+### Question 30
+**Scenario:** A trigger fails only for one sales user in production. The developer needs detailed logs of that user's transactions for the next hour.
+
+A. Add `System.debug` statements and deploy them to production
+B. Run all tests in production and read the test results
+C. Ask the user to send screenshots of the error message each time it appears
+D. Set a user trace flag with a debug level in Setup's Debug Logs
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A trace flag on the user, with a chosen debug level and time window, generates debug logs for that user's transactions so the developer can see the actual execution. `System.debug` output is only captured when logging is active, and deploying just to add it is slow. Test runs use test data, and screenshots show the message but not the execution path.
+
+**Key Concept:** [Set Up Debug Logging](https://help.salesforce.com/s/articleView?id=sf.code_add_users_debug_log.htm&language=en_US&type=5)
 </details>
 
 ---

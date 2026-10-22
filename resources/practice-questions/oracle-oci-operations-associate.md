@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
 # Oracle Cloud Infrastructure Operations Associate (1Z0-1067) - Practice Questions
 
-15 questions for OCI Operations Associate prep, weighted toward observability and management (20%), then compute, storage, network, and security operations (15% each).
+30 questions for OCI Operations Associate prep, weighted toward observability and management (20%), then compute, storage, network, and security operations (15% each).
 
 > **Cert page:** [exams/oracle/oci-operations-associate/](../../exams/oracle/oci-operations-associate/)
 
@@ -277,6 +277,306 @@ D. Ask people in each team which resources they believe they can reach
 **Correct: B**
 
 **Why:** Policy review shows what is permitted; audit data shows what was used. The gap between the two is where you find permissions nobody needs, which is the most productive place to apply least privilege.
+</details>
+
+---
+
+### Question 16
+**Scenario:** An instance is moved from the Dev compartment to the Prod compartment. The Dev team can still see it in the Console a minute later, but can no longer stop it.
+
+A. The move failed and must be retried by the tenancy administrator
+B. The policies of the new compartment now govern access to the instance
+C. The instance kept its Dev policies until its next reboot
+D. Moving instances is not supported, so the Console view is stale
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Access in OCI follows the compartment a resource is in, so after a move the policies written for the destination compartment apply immediately and the source compartment's policies no longer do. The behavior shows the move worked. Policies are not tied to reboots, and instances can be moved between compartments.
+
+**Key Concept:** [Managing Compartments](https://docs.oracle.com/en-us/iaas/Content/Identity/compartments/managingcompartments.htm)
+</details>
+
+---
+
+### Question 17
+**Scenario:** After an edit to `/etc/fstab`, a Linux instance hangs during boot. SSH is unreachable and the team needs to get to the boot console to repair the file.
+
+A. Reboot the instance again from the Console and wait for SSH to recover
+B. Attach a new VNIC to the instance in a public subnet
+C. Change the instance shape to one with more memory
+D. Create an instance console connection and use the serial console
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** An instance console connection provides serial console access that works even when networking and SSH are down, so you can boot into maintenance mode and fix `/etc/fstab`. Rebooting repeats the same failure. A new VNIC does not help an OS that never finishes booting, and more memory does not fix a bad mount entry.
+
+**Key Concept:** [Instance Console Connections](https://docs.oracle.com/en-us/iaas/Content/Compute/References/serialconsole.htm)
+</details>
+
+---
+
+### Question 18
+**Scenario:** A fully configured application server in Ashburn must be reproduced as new instances in Frankfurt, using the same OS configuration.
+
+A. Create a custom image, export it to Object Storage, and import it in Frankfurt
+B. Take a boot volume backup and attach it to a Frankfurt instance directly
+C. Clone the instance's VNIC into a Frankfurt subnet
+D. Copy the instance's OCID into the Frankfurt launch form
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A custom image captures the boot volume's configuration and can be exported to Object Storage and imported in another region (images can also be copied between regions directly). A backup must first be copied cross-region and restored before it can boot anything. VNICs carry network identity, not the OS, and an OCID cannot be used to clone an instance.
+
+**Key Concept:** [Image Import/Export](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/imageimportexport.htm)
+</details>
+
+---
+
+### Question 19
+**Scenario:** An alarm must fire when the one-minute average CPU utilization of an instance is above 80%.
+
+A. `CpuUtilization > 80`
+B. `CpuUtilization[80].mean() > 1m`
+C. `CpuUtilization[1m].mean() > 80`
+D. `CpuUtilization[1m].count() > 80`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** An MQL expression names the metric, gives the aggregation interval in brackets, applies a statistic, and compares it with a threshold, so `[1m].mean() > 80` matches the requirement. The bare metric with no interval or statistic is incomplete. Swapping the interval and threshold is invalid, and `count()` counts data points rather than measuring CPU.
+
+**Key Concept:** [Monitoring Query Language (MQL) Reference](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Reference/mql.htm)
+</details>
+
+---
+
+### Question 20
+**Scenario:** The operations team needs an alarm on an application's internal job backlog, a number only the application knows.
+
+A. Publish the backlog as a custom metric with the PostMetricData API
+B. Write the backlog to the instance's syslog and alarm on disk usage
+C. Use the built-in CpuUtilization metric as a stand-in for backlog
+D. Ask Oracle Support to add a new service metric for the application
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Applications can publish their own metrics to the Monitoring service in a custom namespace with PostMetricData, and alarms work on custom metrics the same way as on service metrics. Disk usage and CPU are indirect signals that do not track the backlog. Oracle does not add service metrics for customer applications.
+
+**Key Concept:** [Publishing Custom Metrics](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Tasks/publishingcustommetrics.htm)
+</details>
+
+---
+
+### Question 21
+**Scenario:** A planned two-hour maintenance window will trip several CPU and health alarms. The team wants no pages during the window but the alarms active again afterward.
+
+A. Delete the alarms and recreate them after the window ends
+B. Unsubscribe the on-call team from the Notifications topic
+C. Raise every alarm threshold to 100% for the day
+D. Suppress the alarms for the window's start and end time
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Alarm suppression stops notifications for a defined time range and lifts automatically when it ends, with no configuration to restore. Deleting and recreating alarms risks mistakes and loses history. Unsubscribing the team silences every alarm on the topic, and raising thresholds needs manual reversal and can hide genuine problems.
+
+**Key Concept:** [Monitoring Overview](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Concepts/monitoringoverview.htm)
+</details>
+
+---
+
+### Question 22
+**Scenario:** An application writes logs to `/var/log/app/*.log` on twenty instances. These must appear in the OCI Logging service for search and retention.
+
+A. Enable service logs on the subnet that hosts the instances
+B. Create a custom log with an agent configuration for the log paths
+C. Turn on VCN flow logs for the instances' VNICs
+D. Mount an Object Storage bucket at `/var/log/app` on each host
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Custom logs collect application log files through the Oracle Cloud Agent's Custom Logs Monitoring plugin, using an agent configuration that names the paths and a dynamic group of instances. Service logs and flow logs record OCI service activity and network traffic, not application files. Mounting a bucket is not a supported way to ingest logs into Logging.
+
+**Key Concept:** [Custom Logs](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/custom_logs.htm)
+</details>
+
+---
+
+### Question 23
+**Scenario:** Operations collects large volumes of logs from OCI and on-premises systems and wants machine-learning-based clustering, pattern detection, and dashboards across them.
+
+A. The Audit service with a longer retention period
+B. VCN flow logs exported to a bucket
+C. Oracle Logging Analytics
+D. The Notifications service with filters
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Logging Analytics ingests logs from OCI and other sources, parses them, and provides clustering, anomaly and pattern detection, and dashboards. Audit records only API calls. Flow logs in a bucket are raw network records with no analysis, and Notifications delivers messages without analyzing anything.
+
+**Key Concept:** [Oracle Logging Analytics](https://docs.oracle.com/en-us/iaas/logging-analytics/index.html)
+</details>
+
+---
+
+### Question 24
+**Scenario:** Block volume backups exist only in the primary region. The DR plan requires restorable copies in a second region.
+
+A. Increase the backup policy's retention period
+B. Enable a reserved public IP on each volume
+C. Move the backups to a different compartment
+D. Copy the volume backups to the DR region
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Block volume backups can be copied to another region (manually or through a backup policy's cross-region copy), where they can be restored if the primary region is lost. Longer retention keeps more copies in the same region. Compartments organize access, not location, and a public IP has nothing to do with backups.
+
+**Key Concept:** [Copying a Volume Backup Between Regions](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/copyingvolumebackupcrossregion.htm)
+</details>
+
+---
+
+### Question 25
+**Scenario:** Users of a File Storage file system often delete files by mistake and need a quick way to recover yesterday's version themselves.
+
+A. Restore the whole file system from a block volume backup
+B. Take scheduled snapshots and let users copy files from `.snapshot`
+C. Enable Object Storage versioning on the mount target
+D. Run `fsck` on the mount point after each deletion
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** File Storage snapshots are point-in-time, read-only copies exposed in the hidden `.snapshot` directory, so users can copy back a single file without an admin restore. File systems are not backed up as block volumes. Versioning is an Object Storage bucket feature, and `fsck` checks file system consistency but does not recover deleted files.
+
+**Key Concept:** [Managing Snapshots](https://docs.oracle.com/en-us/iaas/Content/File/Tasks/managingsnapshots.htm)
+</details>
+
+---
+
+### Question 26
+**Scenario:** Infrastructure is deployed from a Resource Manager stack. The team suspects someone changed security rules by hand in the Console.
+
+A. Run a fresh apply job and compare the job logs line by line
+B. Delete the stack and recreate it from the Terraform files
+C. Run a drift detection report on the stack
+D. Search the Logging service for the stack's name
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Drift detection compares the actual state of the stack's resources with the last executed configuration and reports what changed, per resource. An apply job would overwrite the manual changes without explaining them first. Deleting the stack destroys its resources, and searching logs by stack name does not report configuration differences.
+
+**Key Concept:** [Overview of Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm)
+</details>
+
+---
+
+### Question 27
+**Scenario:** A scheduled OCI CLI script runs on an admin instance in OCI. Security forbids storing API keys or config files with credentials on that instance.
+
+A. Run the CLI with `--auth instance_principal` and grant a dynamic group access
+B. Store an API key in the instance's metadata and read it at runtime
+C. Embed a user's auth token in the script and rotate it monthly
+D. Run the script as root so the CLI can skip authentication
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** With instance principal authentication the instance itself is the caller, using automatically rotated credentials, and a dynamic group plus a policy controls what it may do. Keys in metadata or tokens in scripts are still stored credentials. Running as root changes local permissions, not OCI API authentication.
+
+**Key Concept:** [Calling Services from an Instance](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/callingservicesfrominstances.htm)
+</details>
+
+---
+
+### Question 28
+**Scenario:** A teammate updated a Resource Manager stack's Terraform variables. Before anything changes in production, the team wants to see exactly what will be created, changed, or destroyed.
+
+A. Run an apply job with automatic approval enabled
+B. Run an import job against the live compartment
+C. Run a destroy job followed by an apply job
+D. Run a plan job and review its output
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A plan job runs `terraform plan` and lists the proposed creates, updates, and destroys without changing anything, so it can be reviewed before an apply. Auto-approved apply makes the changes immediately. An import job brings existing resources under the stack, and destroy then apply recreates everything with an outage.
+
+**Key Concept:** [Overview of Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm)
+</details>
+
+---
+
+### Question 29
+**Scenario:** A load balancer shows every backend as Critical, although the application responds when tested locally on each server.
+
+A. Increase the load balancer's bandwidth shape to the maximum
+B. Change the load balancing policy from round robin to IP hash on the backend set
+C. Check the health check port and path, and allow traffic from the load balancer subnet
+D. Add more backend servers so the health checker has more targets
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Backends marked Critical while the app works locally usually means the health check probes the wrong port or path, or security rules (or host firewalls) block the load balancer's subnet. Bandwidth and balancing policy do not affect health checks. Adding servers with the same configuration only adds more failing backends.
+
+**Key Concept:** [Editing Health Checks](https://docs.oracle.com/en-us/iaas/Content/Balance/Tasks/editinghealthcheck.htm)
+</details>
+
+---
+
+### Question 30
+**Scenario:** Launching new instances in a compartment fails with a "LimitExceeded" error, although the account has budget and the shape is available in the region.
+
+A. Delete the compartment and launch in a new one
+B. Check limits and usage, then request a service limit increase
+C. Launch in a different fault domain of the same availability domain
+D. Wait for the next billing cycle to reset the counts
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Service limits cap how many resources of a type a tenancy can create. The Limits, Quotas and Usage page shows current use against the limit, and a limit increase request raises it (a compartment quota could also be the cap). A new compartment still counts against tenancy limits, fault domain choice is irrelevant, and limits do not reset with billing.
+
+**Key Concept:** [Service Limits](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/servicelimits.htm)
 </details>
 
 ---

@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: beginner
 ---
 
 # Linux Foundation Certified System Administrator (LFCS) - Practice Questions
 
-15 questions for LFCS prep, weighted toward essential commands (20%) and service configuration (20%), with users, running systems, networking, and storage at 15% each.
+30 questions for LFCS prep, weighted toward essential commands (20%) and service configuration (20%), with users, running systems, networking, and storage at 15% each.
 
 LFCS is performance-based on a live system. These reinforce which tool to reach for and why.
 
@@ -279,6 +279,306 @@ D. Add it to `/etc/fstab` on the server with the `rw` option so that the subnet 
 **Correct: B**
 
 **Why:** `/etc/exports` defines what the server offers and to whom, and `exportfs -ra` re-reads it without a restart. `/etc/fstab` is the client side. Samba is SMB rather than NFS. Loosening permissions does not export anything, and the firewall plus `nfs-server` service still need to be in place.
+</details>
+
+---
+
+### Question 16
+**Scenario:** Disk space is running out. You need every regular file under `/var` larger than 100 MB that was modified in the last 7 days.
+
+A. `find /var -type f -size -100M -mtime +7`
+B. `find /var -type f -size +100M -mtime -7`
+C. `du -sh /var/* | sort -h | tail -7`
+D. `ls -lR /var | grep 100M`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** In `find`, `+100M` means larger than 100 MiB and `-mtime -7` means modified less than 7 days ago. Flipping the signs, as in the other `find` command, selects small files older than a week. `du | sort` ranks directories by total size but ignores modification time, and grepping `ls` output for "100M" matches text, not sizes.
+
+**Key Concept:** [find(1) manual page](https://man7.org/linux/man-pages/man1/find.1.html)
+</details>
+
+---
+
+### Question 17
+**Scenario:** Before an upgrade, `/etc` must be saved as a single gzip-compressed archive named `etc-backup.tar.gz`.
+
+A. `tar -xzf etc-backup.tar.gz /etc`
+B. `gzip -r /etc > etc-backup.tar.gz`
+C. `tar -tzf etc-backup.tar.gz /etc`
+D. `tar -czf etc-backup.tar.gz /etc`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** `-c` creates an archive, `-z` filters it through gzip, and `-f` names the output file. `-x` extracts and `-t` lists the contents of an existing archive, so neither creates a backup. `gzip -r` compresses each file in place, one by one, and does not produce a tar archive.
+
+**Key Concept:** [GNU tar manual](https://www.gnu.org/software/tar/manual/tar.html)
+</details>
+
+---
+
+### Question 18
+**Scenario:** A link is needed at `/home/app/logs` pointing to `/data/logs`, which is on a different filesystem.
+
+A. `ln -s /data/logs /home/app/logs`
+B. `ln /data/logs /home/app/logs`
+C. `cp -a /data/logs /home/app/logs`
+D. `mv /data/logs /home/app/logs`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A symbolic link stores a path, so it can cross filesystems and point at directories. A hard link (plain `ln`) references an inode and cannot span filesystems or, normally, link to a directory. `cp -a` makes an independent copy that drifts out of date, and `mv` relocates the data rather than linking to it.
+
+**Key Concept:** [ln(1) manual page](https://man7.org/linux/man-pages/man1/ln.1.html)
+</details>
+
+---
+
+### Question 19
+**Scenario:** A new user `maria` was created with a temporary password. She must be forced to choose a new password the first time she logs in.
+
+A. `usermod -L maria`
+B. `chage -M 0 maria`
+C. `chage -d 0 maria`
+D. `userdel -f maria`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** `chage -d 0` sets the last password change date to the epoch, which marks the password as expired and forces a change at next login. `chage -M 0` sets the maximum password age to zero days, which is a policy change rather than a one-time reset. `usermod -L` locks the account, and `userdel` deletes it.
+
+**Key Concept:** [chage(1) manual page](https://man7.org/linux/man-pages/man1/chage.1.html)
+</details>
+
+---
+
+### Question 20
+**Scenario:** User `alice` already belongs to several supplementary groups. She must be added to the `docker` group without losing any of them.
+
+A. `usermod -G docker alice`
+B. `usermod -aG docker alice`
+C. `groupmod -n docker alice`
+D. `useradd -G docker alice`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** `-a` (append) with `-G` adds the group to her existing list. Without `-a`, `usermod -G` replaces the whole supplementary group list, silently removing her from the others. `groupmod -n` renames a group, and `useradd` fails because the user already exists.
+
+**Key Concept:** [usermod(8) manual page](https://man7.org/linux/man-pages/man8/usermod.8.html)
+</details>
+
+---
+
+### Question 21
+**Scenario:** A server boots into a graphical desktop. It must boot to a text-only, multi-user environment by default from now on.
+
+A. `systemctl isolate multi-user.target`
+B. `systemctl enable multi-user.target`
+C. `systemctl start multi-user.target`
+D. `systemctl set-default multi-user.target`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** `set-default` changes the `default.target` symlink, which is what the system boots into. `isolate` switches the running system to that target now but does not persist across a reboot. `start` only pulls the target in for the current boot, and `enable` is for units with an install section, not for choosing the boot target.
+
+**Key Concept:** [systemctl manual](https://www.freedesktop.org/software/systemd/man/latest/systemctl.html)
+</details>
+
+---
+
+### Question 22
+**Scenario:** A running report job (PID 4182) is slowing interactive users. It should keep running but get less CPU when there is contention.
+
+A. `renice -n 10 -p 4182`
+B. `renice -n -10 -p 4182`
+C. `kill -STOP 4182`
+D. `nice -n 10 4182`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** `renice` changes the priority of a process that is already running, and a higher nice value (up to 19) means a lower scheduling priority. A negative value raises its priority, the opposite of what is wanted. `nice` only applies when starting a new command, and `SIGSTOP` pauses the job entirely instead of letting it continue.
+
+**Key Concept:** [renice(1) manual page](https://man7.org/linux/man-pages/man1/renice.1.html)
+</details>
+
+---
+
+### Question 23
+**Scenario:** IPv4 forwarding must be enabled on a router host now and must stay enabled after reboots.
+
+A. `echo 1 > /proc/sys/net/ipv4/ip_forward` and nothing else
+B. Add `ip_forward=1` to `/etc/fstab` and run `mount -a`
+C. Put `net.ipv4.ip_forward = 1` in `/etc/sysctl.d/` and run `sysctl --system`
+D. Run `sysctl -w net.ipv4.ip_forward=1` and nothing else
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A file in `/etc/sysctl.d/` is applied at every boot, and `sysctl --system` loads it immediately, so both requirements are met. Writing to `/proc` or using `sysctl -w` changes only the running kernel and is lost at reboot. `/etc/fstab` describes filesystems to mount and has nothing to do with kernel parameters.
+
+**Key Concept:** [sysctl.d manual](https://www.freedesktop.org/software/systemd/man/latest/sysctl.d.html)
+</details>
+
+---
+
+### Question 24
+**Scenario:** On a NetworkManager host, connection `ens3` must use static address 10.0.0.20/24 with gateway 10.0.0.1, persistently.
+
+A. `ip addr add 10.0.0.20/24 dev ens3` and `ip route add default via 10.0.0.1`, applied directly to the live kernel tables
+B. `nmcli con mod ens3 ipv4.method manual ipv4.addresses 10.0.0.20/24 ipv4.gateway 10.0.0.1`, then `nmcli con up ens3`
+C. `ifconfig ens3 10.0.0.20 netmask 255.255.255.0` and add the gateway in `/etc/hosts`
+D. `hostnamectl set-hostname 10.0.0.20` and restart NetworkManager
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** `nmcli con mod` writes the settings into the saved connection profile, and `con up` reactivates it so they take effect now. The `ip` commands work immediately but are lost at reboot or when NetworkManager reapplies the profile. `/etc/hosts` maps names to addresses and never holds a gateway, and `hostnamectl` sets the hostname, not an address.
+
+**Key Concept:** [nmcli reference](https://networkmanager.dev/docs/api/latest/nmcli.html)
+</details>
+
+---
+
+### Question 25
+**Scenario:** Users report that `app.internal` does not resolve. You need to query the internal DNS server at 10.0.0.53 directly for that name, bypassing the local resolver configuration.
+
+A. `ping -c 1 app.internal`
+B. `host -l app.internal`
+C. `cat /etc/resolv.conf | grep app.internal`
+D. `dig @10.0.0.53 app.internal`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** `dig @server name` sends the query straight to the named server and shows its full answer, which isolates whether that server or the client configuration is at fault. `ping` goes through the normal resolver and mixes in reachability. `host -l` requests a zone transfer, and `resolv.conf` lists resolvers but holds no records.
+
+**Key Concept:** [BIND 9 manual pages: dig](https://bind9.readthedocs.io/en/latest/manpages.html)
+</details>
+
+---
+
+### Question 26
+**Scenario:** A host with no spare partitions needs 2 GB of extra swap, active now and after reboot.
+
+A. Create the file with `fallocate`, `chmod 600`, `mkswap`, `swapon`, and add an `/etc/fstab` entry
+B. Create the file with `fallocate`, format it with `mkfs.ext4`, mount it at `/swap`, and add that mount to `/etc/fstab`
+C. Run `swapon -a` so the kernel creates any missing swap space
+D. Create the file with `fallocate` and run `swapon` on it immediately
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A swap file must be secured, formatted as swap with `mkswap`, activated with `swapon`, and listed in `/etc/fstab` to survive reboot. Skipping `mkswap` makes `swapon` fail because the file has no swap signature. Formatting it as ext4 makes a filesystem, not swap, and `swapon -a` only enables swap already listed in fstab.
+
+**Key Concept:** [mkswap(8) manual page](https://man7.org/linux/man-pages/man8/mkswap.8.html)
+</details>
+
+---
+
+### Question 27
+**Scenario:** `umount /mnt/data` fails with "target is busy". You need to identify which processes are holding the filesystem open.
+
+A. `df -h /mnt/data`
+B. `mount | grep /mnt/data`
+C. `fuser -vm /mnt/data`
+D. `blkid /mnt/data`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** `fuser -m` reports every process using the mounted filesystem, and `-v` shows the user, PID, and access type so you can stop the right one (`lsof` on the mount point works too). `df` shows space usage, `mount` confirms the filesystem is mounted, and `blkid` prints device attributes such as UUID and type.
+
+**Key Concept:** [fuser(1) manual page](https://man7.org/linux/man-pages/man1/fuser.1.html)
+</details>
+
+---
+
+### Question 28
+**Scenario:** You edited an nginx site configuration and want to confirm the syntax is valid before reloading, so a typo does not take the site down.
+
+A. `systemctl restart nginx`
+B. `nginx -t`
+C. `nginx -s stop`
+D. `journalctl -u nginx`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** `nginx -t` parses the configuration and reports errors without changing the running server, so you reload only after it passes. Restarting with a broken file can leave the service down. `nginx -s stop` shuts the server off, and the journal shows past errors but does not test new configuration.
+
+**Key Concept:** [nginx command-line parameters](https://nginx.org/en/docs/switches.html)
+</details>
+
+---
+
+### Question 29
+**Scenario:** A systemd-based server's clock has drifted, breaking TLS and log correlation. Network time synchronization must be turned on.
+
+A. `timedatectl set-ntp true`
+B. `date -s "12:00"` once a day by cron
+C. `hwclock --systohc` after every boot
+D. `timedatectl set-timezone UTC`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** `timedatectl set-ntp true` enables the configured NTP client (systemd-timesyncd or chrony) so the clock is continuously disciplined. Setting the time by hand with `date` drifts again between runs. `hwclock --systohc` copies the already-wrong system time to the hardware clock, and the time zone does not fix drift.
+
+**Key Concept:** [timedatectl manual](https://www.freedesktop.org/software/systemd/man/latest/timedatectl.html)
+</details>
+
+---
+
+### Question 30
+**Scenario:** An application listens on 127.0.0.1:3000. nginx must accept requests on port 80 and forward them to it.
+
+A. A `return 301 http://127.0.0.1:3000;` line in the server block
+B. A `root /var/www/127.0.0.1:3000;` line in the server block
+C. A `listen 3000;` line added to the existing server block
+D. A `proxy_pass http://127.0.0.1:3000;` line in a location block
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** `proxy_pass` makes nginx act as a reverse proxy, forwarding each request to the backend and relaying its response. A `return 301` sends the browser a redirect to a loopback address it cannot reach. `root` serves static files from a directory, and `listen 3000` would make nginx compete with the application for its own port.
+
+**Key Concept:** [nginx ngx_http_proxy_module](https://nginx.org/en/docs/http/ngx_http_proxy_module.html)
 </details>
 
 ---

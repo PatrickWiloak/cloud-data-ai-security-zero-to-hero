@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
 # Oracle Cloud Infrastructure Architect Associate (1Z0-1072) - Practice Questions
 
-15 questions for OCI Architect Associate prep, weighted toward networking (25%), then compute, storage, and security (15% each), and IAM, database, and observability (10% each).
+30 questions for OCI Architect Associate prep, weighted toward networking (25%), then compute, storage, and security (15% each), and IAM, database, and observability (10% each).
 
 > **Cert page:** [exams/oracle/oci-architect-associate/](../../exams/oracle/oci-architect-associate/)
 
@@ -277,6 +277,306 @@ D. Larger instances with more OCPUs and memory in the primary region, to absorb 
 **Correct: B**
 
 **Why:** Three pieces are required: the data must already be there, the infrastructure must be reproducible, and the failover must have been practiced. Missing the third is why untested DR plans fail on a dependency nobody documented.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A private subnet's instances must reach the on-premises network 172.16.0.0/16, which is connected to the VCN through a DRG with a Site-to-Site VPN.
+
+A. Add a route rule for 172.16.0.0/16 targeting the VCN's NAT gateway
+B. Add a route rule for 172.16.0.0/16 targeting the attached DRG
+C. Add a route rule for 0.0.0.0/0 targeting the VCN's internet gateway
+D. Add an ingress rule for 172.16.0.0/16 to the subnet's security list only
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Traffic leaves a subnet according to its route table, so the on-premises CIDR needs a rule whose target is the DRG that carries the VPN. A NAT gateway or internet gateway sends traffic to the internet, not over the VPN. Security list rules allow or deny traffic but do not route it anywhere.
+
+**Key Concept:** [VCN Route Tables](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingroutetables.htm)
+</details>
+
+---
+
+### Question 17
+**Scenario:** For a high-volume service, an architect replaced stateful security list rules with a stateless ingress rule allowing TCP 443. Clients now connect but never receive responses.
+
+A. Stateless rules only work with network security groups, not lists
+B. Stateless rules require a NAT gateway for the return path
+C. TCP 443 cannot be used in a stateless security rule
+D. A matching stateless egress rule for the return traffic is missing
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Stateless rules do not track connections, so response traffic is evaluated on its own and needs its own egress rule (to the client ports). Stateful rules allow responses automatically, which is why they are the default. Both security lists and NSGs support stateless rules, any port can be used, and a NAT gateway has nothing to do with responses to inbound connections.
+
+**Key Concept:** [Security Rules](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/securityrules.htm)
+</details>
+
+---
+
+### Question 18
+**Scenario:** A fleet of firewall appliances needs load balancing for TCP and UDP traffic with very low latency, and the backends must see the original client source IP.
+
+A. Network Load Balancer in pass-through mode
+B. Flexible Load Balancer with an HTTP listener
+C. Flexible Load Balancer with SSL termination
+D. A DNS traffic management steering policy
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The Network Load Balancer is a non-proxy, layer 4 service that preserves source and destination IPs and suits appliances, UDP, and latency-sensitive flows. The flexible Load Balancer is a layer 7 proxy, so backends see the load balancer's address, and HTTP or SSL listeners do not handle UDP. DNS steering distributes by name resolution and is not a per-flow load balancer.
+
+**Key Concept:** [Network Load Balancer Overview](https://docs.oracle.com/en-us/iaas/Content/NetworkLoadBalancer/overview.htm)
+</details>
+
+---
+
+### Question 19
+**Scenario:** A VCN in Frankfurt must communicate privately with a VCN in London without traffic crossing the internet.
+
+A. A local peering gateway in each VCN
+B. A Site-to-Site VPN between two internet gateways
+C. A remote peering connection between DRGs in each region
+D. A service gateway in each VCN
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Peering VCNs in different regions uses a remote peering connection (RPC) on the DRG in each region, and the traffic stays on Oracle's backbone. Local peering only works within a single region. A VPN between internet gateways is not how OCI connects VCNs, and a service gateway reaches Oracle services, not other VCNs.
+
+**Key Concept:** [Remote VCN Peering](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/remoteVCNpeering.htm)
+</details>
+
+---
+
+### Question 20
+**Scenario:** Instances in OCI must resolve names in an on-premises DNS zone, and on-premises servers must resolve names in an OCI private zone.
+
+A. Copy every record into public DNS zones in both locations
+B. Use the VCN private resolver with listening and forwarding endpoints
+C. Add all hostnames to each instance's `/etc/hosts` file
+D. Point every instance at a public DNS resolver on the internet
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A VCN's private resolver can forward queries for on-premises domains through a forwarding endpoint and accept queries from on-premises through a listening endpoint, giving hybrid resolution in both directions. Publishing private records in public zones exposes them. Host files do not scale or stay current, and public resolvers cannot see private zones.
+
+**Key Concept:** [Private DNS](https://docs.oracle.com/en-us/iaas/Content/DNS/Tasks/privatedns.htm)
+</details>
+
+---
+
+### Question 21
+**Scenario:** A DR plan depends on launching 40 instances of a specific shape in the standby region during a regional outage, when many other customers may be doing the same.
+
+A. Rely on on-demand capacity being available at failover time
+B. Pre-create instance configurations for the shape in the standby region
+C. Use preemptible instances in the standby region to save cost
+D. Create a compute capacity reservation in the standby region
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A capacity reservation sets aside compute capacity for your tenancy so launches succeed when demand spikes, which is the risk in a regional failover. On-demand capacity is not guaranteed. An instance configuration is only a template and reserves nothing, and preemptible instances can be reclaimed, the opposite of what DR needs.
+
+**Key Concept:** [Reserving Compute Capacity](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/reserve-capacity.htm)
+</details>
+
+---
+
+### Question 22
+**Scenario:** A workload ran on 8 vCPUs in another cloud. It is moving to an OCI x86 flexible shape billed in OCPUs, and should get the equivalent processing capacity.
+
+A. 4 OCPUs, because one x86 OCPU equals two vCPUs
+B. 8 OCPUs, because one OCPU equals one vCPU
+C. 16 OCPUs, because one vCPU equals two OCPUs
+D. 2 OCPUs, because one OCPU equals four vCPUs
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** On x86 processors one OCPU is one physical core with two hardware threads, which equals two vCPUs, so 8 vCPUs maps to 4 OCPUs. Choosing 8 OCPUs doubles the capacity and cost, and 16 quadruples it. Two OCPUs would halve the capacity. Sizing errors here are a common source of overspending after migration.
+
+**Key Concept:** [Compute Shapes](https://docs.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm)
+</details>
+
+---
+
+### Question 23
+**Scenario:** An external partner without an OCI account must upload files to one bucket for the next 7 days, and must not be able to read anything else.
+
+A. Create an IAM user for the partner with bucket-level policies
+B. Make the bucket public for writes for 7 days
+C. Create a pre-authenticated request for object writes that expires in 7 days
+D. Share an administrator's API signing key with the partner
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A pre-authenticated request gives URL-based access to a bucket or object with a chosen operation and an expiry date, without an OCI identity. Creating an IAM user is heavier than needed for a short external task. Public buckets cannot grant anonymous writes safely, and sharing an admin key hands over far more than one bucket.
+
+**Key Concept:** [Using Pre-Authenticated Requests](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm)
+</details>
+
+---
+
+### Question 24
+**Scenario:** An application's data is spread across a boot volume and three block volumes. Backups must capture all four at the same point in time so the application restores consistently.
+
+A. Schedule separate backups for each volume at the same minute
+B. Put the volumes in a volume group and back up the group
+C. Copy the files to Object Storage with a cron job each night
+D. Clone each volume one after another during off-hours
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A volume group backup takes a coordinated, crash-consistent point-in-time copy of every volume in the group. Separate backups scheduled for the same minute still run independently and can differ. A cron copy at file level is not consistent across volumes, and sequential clones each capture a different moment.
+
+**Key Concept:** [Volume Groups](https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/volumegroups.htm)
+</details>
+
+---
+
+### Question 25
+**Scenario:** A public web application behind an OCI load balancer must be protected against SQL injection, cross-site scripting, and bot traffic.
+
+A. Attach a Web Application Firewall policy to the load balancer
+B. Add stricter stateful rules to the subnet's security lists
+C. Enable Cloud Guard detector recipes on the compartment
+D. Move the application into a private subnet with no load balancer
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** OCI WAF inspects HTTP requests and blocks application-layer attacks such as SQL injection and XSS, and offers bot management, and it can be attached to a load balancer. Security lists filter by IP, port, and protocol and cannot see request content. Cloud Guard finds configuration problems, and removing the load balancer makes a public application unreachable.
+
+**Key Concept:** [Web Application Firewall Overview](https://docs.oracle.com/en-us/iaas/Content/WAF/Concepts/overview.htm)
+</details>
+
+---
+
+### Question 26
+**Scenario:** Employees already sign in with Microsoft Entra ID. They must use the same corporate identity to access the OCI Console, without separate OCI passwords.
+
+A. Create matching local users in OCI and sync passwords nightly
+B. Give every employee an API signing key instead of a password
+C. Share a single OCI administrator account across the employees
+D. Federate the OCI identity domain with Entra ID using SAML
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Federation lets the identity domain trust the corporate identity provider, so users sign in with existing credentials and group mappings drive their OCI permissions. Syncing passwords into local users duplicates identities and secrets. API keys are for programmatic access, not console sign-in, and a shared account breaks accountability.
+
+**Key Concept:** [Federating with Identity Providers](https://docs.oracle.com/en-us/iaas/Content/Identity/federating/federating_section.htm)
+</details>
+
+---
+
+### Question 27
+**Scenario:** A policy `allow group NetAdmins to manage virtual-network-family in compartment Prod` exists. Prod contains child compartments Prod-Web and Prod-DB.
+
+A. NetAdmins can manage networking in Prod only, not its children
+B. NetAdmins need separate policies in each child compartment
+C. NetAdmins can manage networking in Prod and all its children
+D. NetAdmins can manage networking anywhere in the tenancy
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Policies are inherited downward: access granted in a compartment applies to all compartments nested inside it. Separate child policies are unnecessary for this reason. The grant does not extend upward or sideways, so it does not cover the rest of the tenancy. Inheritance is why policies at high levels deserve careful review.
+
+**Key Concept:** [How Policies Work](https://docs.oracle.com/en-us/iaas/Content/Identity/policieshow/how-policies-work.htm)
+</details>
+
+---
+
+### Question 28
+**Scenario:** An Oracle database on OCI must keep running if one database server node fails, with no failover to a standby and no change of connection endpoint.
+
+A. A single-node DB system with daily automatic backups
+B. A multi-node RAC DB system in Base Database Service
+C. A single-node DB system with a cross-region backup copy
+D. A Data Guard standby in a second region
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Real Application Clusters runs one database across multiple nodes, so the loss of a node leaves the others serving connections without a role change. Backups require a restore, which means downtime. Data Guard protects against larger failures but works by switching to a separate standby database, which the scenario rules out.
+
+**Key Concept:** [About Oracle Base Database Service](https://docs.oracle.com/en-us/iaas/base-database/doc/overview-base-database-service.html)
+</details>
+
+---
+
+### Question 29
+**Scenario:** All logs from the Logging service must be copied continuously to an Object Storage bucket for long-term retention, without writing custom code.
+
+A. Create a Connector Hub connector from Logging to Object Storage
+B. Write a scheduled function that exports logs to the bucket
+C. Increase the log group retention period to ten years
+D. Enable the Audit service on the bucket's compartment
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Connector Hub (formerly Service Connector Hub) moves data between OCI services, such as from Logging to Object Storage, Streaming, or Monitoring, with no code to maintain. A scheduled function works but is custom code the scenario rules out. Logging retention is capped and is not archival storage, and Audit records API calls rather than exporting logs.
+
+**Key Concept:** [Connector Hub Overview](https://docs.oracle.com/en-us/iaas/Content/connector-hub/overview.htm)
+</details>
+
+---
+
+### Question 30
+**Scenario:** A multi-tier application spans compute, databases, and load balancers. Cross-region switchover must be orchestrated in the right order with one action and tested regularly.
+
+A. A runbook document that operators follow step by step
+B. Cross-region backup copies restored by hand when needed
+C. A DNS steering policy that points at the standby region
+D. OCI Full Stack Disaster Recovery with a DR protection group
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Full Stack Disaster Recovery groups the application's resources into protection groups and runs ordered DR plans for switchover and failover, including prechecks for testing. A manual runbook and hand restores are slow and error-prone. DNS steering only redirects traffic; it does not bring the standby tiers up in order.
+
+**Key Concept:** [Full Stack Disaster Recovery](https://docs.oracle.com/en-us/iaas/disaster-recovery/index.html)
 </details>
 
 ---

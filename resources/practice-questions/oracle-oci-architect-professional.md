@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: advanced
 ---
 
 # Oracle Cloud Infrastructure Architect Professional (1Z0-997) - Practice Questions
 
-15 questions for OCI Architect Professional prep, weighted toward advanced architecture design (20%) and networking and connectivity (20%), then HA/DR, security and compliance, performance, and database architecture.
+30 questions for OCI Architect Professional prep, weighted toward advanced architecture design (20%) and networking and connectivity (20%), then HA/DR, security and compliance, performance, and database architecture.
 
 > **Cert page:** [exams/oracle/oci-architect-professional/](../../exams/oracle/oci-architect-professional/)
 
@@ -277,6 +277,306 @@ D. A diagram of the final architecture, which shows what was built but not the o
 **Correct: A**
 
 **Why:** A diagram captures the result, not the constraints that produced it, so the next team cannot tell which trade-offs still apply. Recording the rejected options is what stops the same debate recurring after the original participants have moved on.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A new OCI tenancy for a regulated enterprise must start with a CIS-aligned compartment structure, IAM groups and policies, network topology, and security services enabled, deployed as code in days rather than designed from scratch.
+
+A. Build each compartment and policy by hand in the Console, then document the result
+B. Copy another company's Terraform files and adjust names until they apply cleanly
+C. Deploy the OCI Core Landing Zone and extend it for the workloads
+D. Start with one compartment and add structure later as audit findings arrive
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** The OCI landing zones are Oracle-maintained Terraform templates that stand up a CIS OCI Benchmark-aligned tenancy baseline (compartments, groups, policies, networking, Cloud Guard, logging) that teams then extend. Console builds are slow and drift from the documentation. Borrowed code carries unknown assumptions, and retrofitting structure after audit findings is far more disruptive than starting with it.
+
+**Key Concept:** [Deploy a secure landing zone that meets the CIS Foundations Benchmark](https://docs.oracle.com/en/solutions/cis-oci-benchmark/index.html)
+</details>
+
+---
+
+### Question 17
+**Scenario:** Several business units share one tenancy. Each unit's compartment must be capped at a fixed number of compute cores so one unit cannot consume the tenancy's service limits.
+
+A. Write compartment quota policies that set the core count for each unit's compartment
+B. Ask Oracle to lower the tenancy-wide service limits to one unit's share
+C. Create budgets with alerts at 100% of each unit's forecast spend
+D. Tag each instance with the unit name and review usage reports monthly
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Compartment quotas let administrators set, unset, or zero resource counts per compartment, and they are enforced when resources are created. Lowering tenancy service limits caps everyone together rather than per unit. Budgets alert on spend but do not block a launch, and tagging plus monthly reports only shows the problem after the fact.
+
+**Key Concept:** [Overview of Compartment Quotas](https://docs.oracle.com/en-us/iaas/Content/Quotas/Concepts/resourcequotas.htm)
+</details>
+
+---
+
+### Question 18
+**Scenario:** Finance requires every resource to carry a CostCenter tag. Teams keep forgetting it, and finance wants the value applied automatically per compartment.
+
+A. Free-form tags typed by each engineer when a resource is created
+B. A naming convention that embeds the cost center in each resource name
+C. A monthly script that reads resource names and writes them to a spreadsheet
+D. A defined tag namespace with tag defaults set on each compartment
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Defined tags have a controlled schema, and a tag default on a compartment automatically applies the tag (and can require a value) to resources created there. Free-form tags are optional and inconsistent. Names and spreadsheets do not feed OCI cost reports by tag, and both rely on people remembering.
+
+**Key Concept:** [Managing Tag Defaults](https://docs.oracle.com/en-us/iaas/Content/Tagging/Tasks/managingtagdefaults.htm)
+</details>
+
+---
+
+### Question 19
+**Scenario:** A company runs its applications in Microsoft Azure but needs Oracle Exadata performance and features for the database, with the lowest possible latency to those applications.
+
+A. Run Oracle Database on Azure VMs with locally attached disks
+B. Use Oracle Database@Azure, running OCI Exadata in Azure data centers
+C. Keep the database in OCI and reach it over the public internet
+D. Migrate the database to a non-Oracle engine native to Azure
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Oracle Database@Azure deploys Oracle-managed Exadata infrastructure inside Azure data centers, giving Exadata capabilities next to the Azure applications. Self-managed Oracle on Azure VMs does not provide Exadata. Reaching OCI over the internet adds latency and variability, and changing engines is a rewrite rather than an architecture choice.
+
+**Key Concept:** [Oracle Database@Azure](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaa.htm)
+</details>
+
+---
+
+### Question 20
+**Scenario:** A FastConnect private virtual circuit connects a data center to OCI. A new regulation requires that traffic on that link be encrypted with IPSec while keeping FastConnect's bandwidth and consistency.
+
+A. Configure Site-to-Site VPN tunnels over the FastConnect virtual circuit
+B. Replace FastConnect with a Site-to-Site VPN over the internet
+C. Rely on FastConnect being private, which counts as encrypted
+D. Switch the virtual circuit to public peering and require TLS on each application
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** IPSec over FastConnect runs Site-to-Site VPN tunnels on a FastConnect virtual circuit, adding encryption to a link that is already private and dedicated. Moving to an internet VPN loses the consistent performance. A private circuit is not the same as encryption, and public peering with per-application TLS changes the path and does not encrypt all traffic at the network layer.
+
+**Key Concept:** [FastConnect Security](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/fastconnectsecurity.htm)
+</details>
+
+---
+
+### Question 21
+**Scenario:** On-premises servers must reach Object Storage privately over an existing FastConnect private virtual circuit, without using public peering.
+
+A. Add an internet gateway to the hub VCN and route on-premises traffic to it
+B. Create a separate FastConnect public virtual circuit just for Object Storage
+C. Route through the DRG to a hub VCN whose service gateway reaches Oracle services
+D. Copy the data to a block volume and share it over NFS from an instance
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Transit routing lets traffic arriving at the DRG pass through a hub VCN to its service gateway, giving private access to Oracle Services Network from on-premises. An internet gateway sends traffic to the public internet. A public virtual circuit is public peering, which the scenario rules out, and copying data to block storage changes the design rather than providing access.
+
+**Key Concept:** [Private Access to Oracle Services from On-Premises](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/transitroutingoracleservices.htm)
+</details>
+
+---
+
+### Question 22
+**Scenario:** A regulator requires that master encryption keys for data in OCI be held in the customer's own third-party key management system outside OCI, with OCI storing only key references.
+
+A. Import the customer's key material into an OCI Vault HSM
+B. Use Oracle-managed keys and document the key rotation schedule
+C. Store the keys as secrets in OCI Vault with tightly restricted IAM policies
+D. Use the OCI External Key Management Service with the external KMS
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** External Key Management Service keeps key material in a supported third-party key manager outside OCI. OCI stores only references and calls out for each cryptographic operation, so the customer can revoke access. Importing keys into Vault places the material inside OCI, Oracle-managed keys give the customer no custody, and storing keys as secrets still keeps them in OCI.
+
+**Key Concept:** [External Key Management Service](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/external_key_management.htm)
+</details>
+
+---
+
+### Question 23
+**Scenario:** Security must find which Oracle databases hold sensitive personal data, assess risky user accounts and configurations, and create masked copies for test environments.
+
+A. Cloud Guard detector recipes on each database compartment
+B. Oracle Data Safe registered against each target database
+C. Vulnerability Scanning Service on the database hosts
+D. Logging Analytics parsing the database alert logs
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Data Safe provides security and user assessment, sensitive data discovery, data masking, and activity auditing for Oracle databases. Cloud Guard looks at cloud resource configuration rather than inside the database. Vulnerability Scanning checks hosts and images for known CVEs, and Logging Analytics analyzes logs but does not discover or mask sensitive data.
+
+**Key Concept:** [Oracle Data Safe](https://docs.oracle.com/en-us/iaas/data-safe/index.html)
+</details>
+
+---
+
+### Question 24
+**Scenario:** A hub VCN must inspect all north-south and east-west traffic with intrusion detection and prevention, URL filtering, and TLS inspection, using a managed OCI service.
+
+A. OCI Network Firewall in the hub VCN with route tables steering traffic to it
+B. Network security groups on every spoke subnet with detailed per-port allow rules
+C. Web Application Firewall policies on every load balancer
+D. Stateless security lists on the DRG attachment subnets
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** OCI Network Firewall is a managed next-generation firewall, built on Palo Alto Networks technology, offering IDS/IPS, URL filtering, and TLS inspection, and it is placed in the path with route tables. NSGs and security lists filter on addresses, ports, and protocols without deep inspection. WAF protects HTTP applications behind load balancers, not all traffic between networks.
+
+**Key Concept:** [OCI Network Firewall Overview](https://docs.oracle.com/en-us/iaas/Content/network-firewall/overview.htm)
+</details>
+
+---
+
+### Question 25
+**Scenario:** A data center runs hundreds of VMs on vSphere. The team wants to move them to OCI quickly and keep using vCenter, existing runbooks, and full administrative control of the VMware stack.
+
+A. Convert every VM to a native OCI compute image and rebuild the runbooks
+B. Containerize each application and deploy it to OKE
+C. Deploy Oracle Cloud VMware Solution and migrate with VMware tooling
+D. Run nested ESXi on bare metal instances without VMware support
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Oracle Cloud VMware Solution deploys a full VMware SDDC on OCI bare metal in the customer's tenancy with full administrative access, so VMs move with familiar VMware tools and operations do not change. Converting to native images or containers is a larger transformation that the scenario does not want. Nested, unsupported ESXi is not an enterprise option.
+
+**Key Concept:** [Oracle Cloud VMware Solution Overview](https://docs.oracle.com/en-us/iaas/Content/VMware/Concepts/ocvsoverview.htm)
+</details>
+
+---
+
+### Question 26
+**Scenario:** Two hundred VMs running in VMware and on AWS EC2 must be rehosted as native OCI compute instances, with discovery, replication, and planned cutover handled by an OCI service.
+
+A. Oracle Zero Downtime Migration for each virtual machine
+B. OCI Cloud Migrations with source environments and migration plans
+C. A manual export of each disk image followed by a custom image import
+D. The Data Transfer Service shipping disk images on appliances
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** OCI Cloud Migrations discovers source VMs, replicates them, recommends target shapes and costs through migration plans, and launches them as OCI instances. Zero Downtime Migration is for Oracle databases, not whole VMs. Manual image export and import does not scale to hundreds of VMs, and shipping appliances suits bulk offline data rather than live VM rehosting.
+
+**Key Concept:** [OCI Cloud Migrations](https://docs.oracle.com/en-us/iaas/Content/cloud-migration/home.htm)
+</details>
+
+---
+
+### Question 27
+**Scenario:** Hundreds of terabytes of archive data must move to Object Storage, but the data center's internet uplink would take months to send it.
+
+A. Increase the parallelism of the OCI CLI multipart upload jobs
+B. Compress the data and upload it through Site-to-Site VPN
+C. Replicate the data with Object Storage cross-region replication
+D. Use the OCI Data Transfer Service to ship the data on appliances
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The Data Transfer Service moves large data sets offline on Oracle-provided appliances or customer disks, which are shipped to Oracle and loaded into Object Storage. More upload parallelism or compression cannot overcome a link that is simply too slow. Cross-region replication copies data that is already in OCI, so it does not help get it there.
+
+**Key Concept:** [Overview of Data Transfer Service](https://docs.oracle.com/en-us/iaas/Content/DataTransfer/Concepts/overview.htm)
+</details>
+
+---
+
+### Question 28
+**Scenario:** A stateless, horizontally scaled microservice fleet on x86 VMs must cut compute cost while keeping throughput, and the code is already built for Linux on Arm64.
+
+A. Move to larger x86 shapes and run fewer, busier instances in each fault domain
+B. Move to burstable x86 shapes with a 12.5% baseline
+C. Move to Ampere Arm-based flexible shapes for price-performance
+D. Move to bare metal x86 shapes to remove hypervisor overhead
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Ampere Arm shapes offer strong price-performance for scale-out, multi-threaded, stateless workloads, and the code already supports Arm64. Fewer, larger instances reduce resilience without changing the unit price. Burstable shapes suit idle-most-of-the-time workloads, not a busy fleet, and bare metal is a bigger, costlier unit for a scale-out service.
+
+**Key Concept:** [Arm-Based Compute](https://docs.oracle.com/en-us/iaas/Content/Compute/References/arm.htm)
+</details>
+
+---
+
+### Question 29
+**Scenario:** An Autonomous Database application needs a standby in another region with the lowest data loss and fastest recovery Autonomous Database offers for regional failure.
+
+A. Rely on the automatic backups kept in the primary region
+B. Configure a cross-region Autonomous Data Guard standby database
+C. Export the schema nightly with Data Pump to a bucket in the other region
+D. Create a refreshable clone in the same region and refresh it weekly
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A cross-region Autonomous Data Guard standby is continuously synchronized and can take over by switchover or failover, giving the lowest RPO and RTO for a regional event. Backups held in the primary region are lost with it. Nightly exports lose up to a day of data and are slow to load, and a weekly same-region clone protects neither data freshness nor the region.
+
+**Key Concept:** [Autonomous Data Guard](https://docs.oracle.com/en-us/iaas/autonomous-database-serverless/doc/autonomous-data-guard.html)
+</details>
+
+---
+
+### Question 30
+**Scenario:** Objects written to a bucket in the primary region must be copied automatically and asynchronously to a bucket in the DR region.
+
+A. A lifecycle policy that moves objects to the Archive tier
+B. Versioning enabled on the source bucket
+C. A pre-authenticated request shared with the DR region
+D. A replication policy on the source bucket targeting the DR bucket
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** An Object Storage replication policy asynchronously copies new and updated objects from the source bucket to a destination bucket, which can be in another region. Lifecycle policies change tiers or delete objects within the same bucket. Versioning protects against overwrites and deletes in place, and a pre-authenticated request is an access URL, not a copy mechanism.
+
+**Key Concept:** [Using Replication](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usingreplication.htm)
 </details>
 
 ---
