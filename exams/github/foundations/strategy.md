@@ -1,171 +1,121 @@
-# GitHub Foundations Study Strategy
+---
+last-updated: 2026-10-22
+applies-to: GH-900 skills measured as of January 2026, checked 2026-10-22
+difficulty: beginner
+---
 
-## Study Approach
+# GitHub Foundations (GH-900) Study Strategy
 
-### Phase 1: Foundation Building (Weeks 1-2)
+GH-900 was rewritten in January 2026. The biggest change for your study time: **Git and GitHub basics is now the heaviest domain at 25-30%**, and collaboration dropped to 10-15%. Copilot (agents, plans, models), github.dev versus Codespaces, rulesets, passkeys and Enterprise Managed Users are new or much more prominent. Study to the new weights, not to older guides.
 
-**Goal:** Master Git fundamentals and understand the GitHub platform.
+## Where to spend your time
 
-1. **Git Version Control**
-   - Install Git and configure your environment
-   - Practice all essential commands (init, clone, add, commit, push, pull, fetch)
-   - Understand the three-tree architecture (working directory, staging, repository)
-   - Master branching, merging, and rebasing
-   - Learn to resolve merge conflicts
+| # | Domain | Weight | Share of study time | Note |
+|---|--------|--------|--------------------|------|
+| 1 | Understand Git and GitHub basics | 25-30% | About a quarter | [01-git-and-github-basics.md](notes/01-git-and-github-basics.md) |
+| 2 | Work with GitHub repositories | 10-15% | About an eighth | [02-repositories.md](notes/02-repositories.md) |
+| 3 | Collaborate using GitHub | 10-15% | About an eighth | [03-collaboration.md](notes/03-collaboration.md) |
+| 4 | Apply modern development practices | 10-15% | About an eighth, more if Copilot is new to you | [04-modern-development.md](notes/04-modern-development.md) |
+| 5 | Manage projects with GitHub | 5-10% | A small slice | [05-project-management.md](notes/05-project-management.md) |
+| 6 | Understand privacy, security, and administration | 10-15% | About an eighth | [06-privacy-security-administration.md](notes/06-privacy-security-administration.md) |
+| 7 | Explore the GitHub community | 5-10% | A small slice | [07-github-community.md](notes/07-github-community.md) |
 
-2. **GitHub Platform Basics**
-   - Create a GitHub account and explore the interface
-   - Understand account types and plan differences
-   - Create repositories with READMEs, licenses, and .gitignore files
-   - Practice cloning and forking workflows
-   - Explore GitHub Desktop, Mobile, and CLI
+Domains 2, 3, 4 and 6 together are 40-60% of the exam, so do not treat them as minor just because each one is smaller than Domain 1.
 
-3. **Resources for Phase 1**
-   - **[Git Handbook](https://docs.github.com/en/get-started/using-git/about-git)** - Git fundamentals
-   - **[GitHub Skills: Introduction to GitHub](https://github.com/skills/introduction-to-github)** - Interactive course
-   - **[Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)** - Quick command reference
-   - **[GitHub Quickstart](https://docs.github.com/en/get-started/quickstart)** - Getting started guide
+## Study approach
 
-### Phase 2: Collaboration and Development (Weeks 3-4)
+### Phase 1: Git and GitHub basics (week 1)
 
-**Goal:** Master collaboration workflows and modern development features.
+Goal: be fluent with the vocabulary and the everyday workflow, because every other domain builds on it.
 
-1. **Collaboration Deep Dive**
-   - Create and manage issues with labels, assignees, and milestones
-   - Practice the complete pull request lifecycle
-   - Conduct code reviews with inline comments and suggestions
-   - Configure branch protection rules
-   - Set up CODEOWNERS for automatic review assignment
-   - Understand all three merge strategies
+- Read [Domain 1](notes/01-git-and-github-basics.md) and do every command in it on a real repository.
+- Walk through GitHub Flow end to end: branch, commit, push, pull request, review, merge, delete branch.
+- Be able to explain, in one sentence each: Git vs GitHub, fetch vs pull, merge vs rebase, revert vs reset.
+- Know the three account types and the two Enterprise deployment options.
+- Use GitHub Desktop and GitHub Mobile once each so the "which tool" questions feel obvious.
 
-2. **GitHub Actions and Modern Tools**
-   - Write basic workflow YAML files
-   - Understand triggers, jobs, steps, and actions
-   - Explore the Actions Marketplace
-   - Learn Codespaces concepts and configuration
-   - Understand Copilot features at a high level
+### Phase 2: Repositories, collaboration and projects (week 2)
 
-3. **Resources for Phase 2**
-   - **[About Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)** - PR documentation
-   - **[Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)** - Actions fundamentals
-   - **[GitHub Skills: Review Pull Requests](https://github.com/skills/review-pull-requests)** - Interactive PR review course
-   - **[GitHub Skills: Hello GitHub Actions](https://github.com/skills/hello-github-actions)** - Actions course
+Goal: know the right feature for each collaboration need.
 
-### Phase 3: Exam Preparation (Weeks 5-6)
+- [Domain 2](notes/02-repositories.md): build a repository with README, LICENSE, CONTRIBUTING, CODEOWNERS and SECURITY.md. Open each Insights view and note what it answers.
+- [Domain 3](notes/03-collaboration.md): open an issue, link a PR with `Fixes #1`, review it, merge it. Set a repository to Custom watch. Create a gist, a wiki page and a Pages site.
+- [Domain 5](notes/05-project-management.md): build a project with table, board and roadmap views, an iteration field and built-in workflows.
 
-**Goal:** Cover remaining domains, review all material, and practice for the exam.
+### Phase 3: Modern development, administration and community (week 3)
 
-1. **Remaining Domains**
-   - GitHub Projects - views, custom fields, automation
-   - Security - 2FA, SSH keys, Dependabot, secret scanning
-   - Community - open source licensing, InnerSource, contributing
-   - Organization management - roles, teams, permissions
+Goal: handle the newest and most scenario-heavy topics.
 
-2. **Review and Practice**
-   - Review all notes and the fact sheet
-   - Work through scenario-based questions
-   - Take practice exams and identify weak areas
-   - Re-read documentation for topics you struggle with
-   - Create a one-page summary of key differentiators
+- [Domain 4](notes/04-modern-development.md): learn the Copilot plan line-up, agent mode vs the coding agent, and github.dev vs Codespaces until you can answer without thinking.
+- [Domain 6](notes/06-privacy-security-administration.md): memorise the five repository roles in order, the organization roles, what EMUs restrict, and branch protection rules vs rulesets.
+- [Domain 7](notes/07-github-community.md): licenses at a glance, Sponsors, follow vs star vs watch, Marketplace apps vs actions, InnerSource, fork vs template.
 
-3. **Resources for Phase 3**
-   - **[About Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)** - Projects documentation
-   - **[Security Features](https://docs.github.com/en/code-security)** - Security overview
-   - **[Open Source Guide](https://opensource.guide/)** - Open source best practices
-   - **[GitHub Foundations Study Guide PDF](https://assets.ctfassets.net/wfutmusr1t3h/1kmMx7AwI4qH8yIZgOmQlP/4e60030cc6c76688698652e830ea2a48/github-foundations-exam-study-guide.pdf)** - Official study guide
+### Phase 4: Review and practice (week 4)
 
-## Study Resources
+- Re-read the [fact sheet](fact-sheet.md) and its key differentiators table.
+- Work through [scenarios.md](scenarios.md) and the [practice questions](../../../resources/practice-questions/github-foundations.md).
+- Drill [flashcards.csv](flashcards.csv) for vocabulary.
+- For every wrong answer, find the note section and re-read it, then write one line on why the right answer is right.
 
-### Official GitHub Resources
-- **[GitHub Skills](https://skills.github.com/)** - Free interactive courses (the best starting point)
-- **[GitHub Docs](https://docs.github.com)** - Complete documentation
-- **[GitHub Learning Pathways](https://learn.github.com/learning-pathways)** - Structured learning paths
-- **[GitHub Certifications](https://learn.github.com/certifications)** - Certification program details
-- **[GitHub YouTube Channel](https://www.youtube.com/github)** - Video tutorials and demos
-- **[GitHub Blog](https://github.blog/)** - Latest features and updates
+## Official and free resources
 
-### Free Learning Resources
-- **[GitHub Skills Courses](https://skills.github.com/)** - Interactive, repository-based learning
-- **[Git Documentation](https://git-scm.com/doc)** - Official Git reference
-- **[Pro Git Book](https://git-scm.com/book/en/v2)** - Free comprehensive Git book
-- **[GitHub Training Manual](https://githubtraining.github.io/training-manual/)** - Training materials
+- **[📖 GH-900 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-900)** - the skills measured; the single most important document
+- **[📖 GitHub Foundations certification page](https://learn.microsoft.com/en-us/credentials/certifications/github-foundations/)** - logistics and scheduling
+- **[📖 GitHub Foundations learning path, part 1](https://learn.microsoft.com/en-us/training/paths/github-foundations/)** - free Microsoft Learn modules
+- **[📖 GitHub Foundations learning path, part 2](https://learn.microsoft.com/en-us/training/paths/github-foundations-2/)** - free Microsoft Learn modules, continued
+- **[📖 GitHub Docs](https://docs.github.com)** - the reference every note links into
+- **[📖 GitHub Skills](https://skills.github.com/)** - free hands-on courses that run inside a repository
+- **[📖 Pro Git book](https://git-scm.com/book/en/v2)** - free, official Git book
 
-### Community Resources
-- **[GitHub Community Forum](https://github.com/orgs/community/discussions)** - Community discussions
-- **[r/github](https://www.reddit.com/r/github/)** - Reddit community
-- **[GitHub Education](https://education.github.com/)** - Student resources and benefits
+## On exam day
 
-### Practice Platforms
-- GitHub Skills courses (free, interactive)
-- Create personal projects to practice workflows
-- Contribute to open source projects for real-world experience
-- Practice with a study partner for code review scenarios
+### Time management
 
-## Exam Tactics
+You have **100 minutes**. Microsoft does not publish the question count, so do not plan on a fixed number per minute. A workable approach:
 
-### Question Strategy
-1. **Read the full question** - Identify what is being asked (best practice, correct command, right feature)
-2. **Eliminate wrong answers** - Remove obviously incorrect options first
-3. **Look for keywords** - "best," "most appropriate," "correct" signal specific answers
-4. **Consider the GitHub way** - GitHub exams favor platform-native solutions
-5. **Think about the workflow** - Many questions test proper workflow order
+- **First pass (about 65 minutes):** answer everything you know. Flag anything that needs more than a minute or two.
+- **Second pass (about 25 minutes):** return to flagged questions. Re-read the scenario and eliminate options.
+- **Final check (about 10 minutes):** make sure nothing is unanswered. There is no benefit to leaving a blank.
+- If the exam includes interactive components, read their instructions carefully; they can take longer than a single multiple choice question.
 
-### Time Management
-- **75 questions in 120 minutes** = ~1.6 minutes per question
-- **First pass (80 minutes):** Answer questions you are confident about, flag uncertain ones
-- **Second pass (30 minutes):** Return to flagged questions with fresh perspective
-- **Final review (10 minutes):** Check for unanswered questions, verify flagged answers
-- Do not spend more than 3 minutes on any single question
+### Question tactics
 
-### Question Types to Expect
-- **Factual recall** - What does command X do? What is feature Y?
-- **Scenario-based** - Given this situation, what is the best approach?
-- **Comparison** - What is the difference between X and Y?
-- **Best practice** - What is the recommended way to do X?
-- **Feature identification** - Which GitHub feature solves this problem?
+1. **Find the real ask.** Is it the best practice, the cheapest option, the least privilege, or the only feature that can do it?
+2. **Spot the look-alike.** Many wrong options are the neighbouring feature: star instead of watch, fork instead of template, Maintain instead of Triage.
+3. **Prefer GitHub-native and least effort.** If a built-in workflow does it, the answer is not "write a custom Action".
+4. **Prefer least privilege.** If Triage is enough, Write is wrong.
+5. **Watch for absolutes.** "Always", "never" and "only" are often the tell in a wrong option.
 
-### Key Differentiators to Study
-These pairs/groups are commonly tested because they are easy to confuse:
+## Commonly confused pairs
 
-| Concept A | Concept B | Key Difference |
-|-----------|-----------|----------------|
-| `git fetch` | `git pull` | fetch downloads only; pull downloads and merges |
-| Fork | Clone | Fork is server-side copy; clone is local copy |
-| Merge commit | Squash merge | Merge preserves history; squash creates one commit |
-| Branch | Tag | Branch is movable; tag is fixed at a commit |
-| Issues | Discussions | Issues track work; discussions are conversations |
-| PAT (classic) | Fine-grained PAT | Classic has broad scopes; fine-grained has per-repo permissions |
-| Public repo | Internal repo | Public is visible to everyone; internal is org-only |
-| `git reset` | `git revert` | Reset removes commits; revert creates new undoing commit |
-| GitHub-hosted runner | Self-hosted runner | GitHub-hosted is managed; self-hosted is your infrastructure |
-| Classic Projects | New Projects | Classic is per-repo kanban; new is cross-repo with custom fields |
+| A | B | Key difference |
+|---|---|----------------|
+| Git | GitHub | Version control tool vs hosting and collaboration platform |
+| `git fetch` | `git pull` | Download only vs download and merge |
+| `git revert` | `git reset` | New undoing commit vs rewriting history |
+| Fork | Template | Linked copy for contributing vs fresh copy with no link |
+| Issue | Discussion | Tracked work vs open conversation |
+| Star | Watch | Bookmark vs notifications |
+| Assignee | Reviewer | Does the work vs reviews the PR |
+| Label | Milestone | Many categories vs one goal with due date |
+| Agent mode | Coding agent (Copilot cloud agent) | In the IDE while you watch vs on GitHub, returns a PR |
+| Copilot Pro/Pro+ | Copilot Business/Enterprise | Individual vs centrally managed seats with policies |
+| github.dev | Codespaces | Free browser editor, no terminal vs billed cloud VM with terminal |
+| Triage | Maintain | Manage issues and PRs vs manage the repository without destructive settings |
+| Billing manager | Security manager | Billing only vs security alerts and settings across all repositories |
+| Branch protection rule | Ruleset | One rule per branch in one repo vs layered rules, org-wide on Enterprise |
+| Private | Internal | Explicit access only vs every enterprise member |
+| SAML SSO | Enterprise Managed Users | Person owns the account vs company owns the account |
+| Secret scanning | Code scanning | Finds credentials vs finds vulnerable code patterns |
+| Marketplace app | Marketplace action | Installed on an account vs referenced in a workflow |
 
-## Common Pitfalls
+## Common pitfalls
 
-### Git Concepts
-- **Confusing `git fetch` and `git pull`** - fetch does NOT merge; pull does both
-- **Not understanding merge vs rebase** - rebase rewrites history, merge preserves it
-- **Forgetting `git stash`** - useful for temporarily saving work without committing
-- **Mixing up `git reset` modes** - soft, mixed, hard have different effects
-- **Ignoring `.gitignore`** - files already tracked are not affected by adding to .gitignore
-
-### GitHub Platform
-- **Thinking fork is the same as clone** - fork creates a copy on GitHub; clone creates local copy
-- **Not knowing branch protection details** - understand all available protection options
-- **Confusing organization roles** - Owner, Member, and Outside Collaborator have different permissions
-- **Overlooking GitHub Plans differences** - know what each plan includes
-- **Forgetting about draft PRs** - they signal work in progress and prevent accidental merging
-
-### Exam Strategy
-- **Rushing through questions** - take time to read the full question and all options
-- **Over-studying low-weight domains** - focus effort proportional to domain weight
-- **Only reading without practicing** - hands-on experience is critical for this exam
-- **Ignoring the official study guide** - it tells you exactly what to study
-- **Not reviewing incorrect practice answers** - understanding why you were wrong is more valuable than getting answers right
-
-### Security Topics
-- **Thinking 2FA is optional** - GitHub requires 2FA for all accounts
-- **Confusing PAT types** - classic vs fine-grained have different scoping models
-- **Not understanding SSH key workflow** - know how to generate and add SSH keys
-- **Overlooking Dependabot** - it is a key security feature for dependency management
-- **Mixing up secret scanning and code scanning** - secrets detect credentials; code scanning finds code vulnerabilities
+- **Studying the old outline.** Older guides weight collaboration as the biggest domain, quote a longer exam with a fixed question count, and say the certification expires. All of that is out of date.
+- **Underweighting Domain 1.** It is the largest domain; Git and GitHub vocabulary must be automatic.
+- **Treating Copilot as one product.** Know the plans and know agent mode from the coding agent.
+- **Assuming "private" means a private website.** A Pages site from a private repository is public unless Enterprise Cloud access control is used.
+- **Thinking secret gists are private.** They are unlisted.
+- **Expecting closing keywords to work on any branch.** They close issues only on merge into the default branch.
+- **Mixing up "public" and "licensed".** No LICENSE means no reuse rights.
+- **Only reading.** Most of these features take five minutes to try, and trying them is what makes the scenario questions easy.

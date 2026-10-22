@@ -1,5 +1,7 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
+applies-to: GH-900 skills measured as of January 2026, checked 2026-10-22
+difficulty: beginner
 ---
 
 # GitHub Foundations Certification Fact Sheet
@@ -7,390 +9,163 @@ last-updated: 2026-05-03
 ## Exam Overview
 
 **Exam Name:** GitHub Foundations
-**Duration:** 120 minutes
-**Questions:** 75 multiple choice questions
-**Passing Score:** 70%
-**Cost:** $99 USD
-**Delivery:** Online proctored
+**Exam Code:** GH-900
+**Duration:** 100 minutes
+**Questions:** Not published by Microsoft
+**Format:** Multiple choice; may include interactive components
+**Passing Score:** 700 (scale 1-1000)
+**Cost:** Based on country; commonly listed as $99 USD in the US
+**Delivery:** Proctored, through Pearson VUE via Microsoft Learn
+**Languages:** English, Spanish, Portuguese (Brazil), Korean, Japanese
 **Prerequisites:** None
-**Validity:** 3 years
+**Valid For:** Does not expire (no renewal required)
 
-**[Official Exam Page](https://learn.github.com/certifications)** - Registration and details
-**[GitHub Foundations Study Guide](https://assets.ctfassets.net/wfutmusr1t3h/1kmMx7AwI4qH8yIZgOmQlP/4e60030cc6c76688698652e830ea2a48/github-foundations-exam-study-guide.pdf)** - Official study guide
-**[GitHub Skills](https://skills.github.com/)** - Interactive learning paths
+**[📖 GitHub Foundations certification page](https://learn.microsoft.com/en-us/credentials/certifications/github-foundations/)** - registration and policies
+**[📖 GH-900 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-900)** - skills measured as of January 2026
+**[📖 GitHub Foundations learning path, part 1](https://learn.microsoft.com/en-us/training/paths/github-foundations/)** - free modules
+**[📖 GitHub Foundations learning path, part 2](https://learn.microsoft.com/en-us/training/paths/github-foundations-2/)** - free modules, continued
 
-## Target Audience
+Retakes: wait 24 hours before the first retake, then Microsoft's retake policy applies. Scores are on Microsoft's 1-1000 scale, so 700 is not the same as "70% correct".
 
-This certification is designed for:
-- Developers new to GitHub and version control
-- Students and early-career professionals
-- Project managers and team leads using GitHub
-- Anyone seeking to validate GitHub platform knowledge
-- Professionals transitioning to collaborative development
+## Domain Weights
 
-## Domain 1: Introduction to Git and GitHub (22%)
+| # | Domain | Weight | Notes |
+|---|--------|--------|-------|
+| 1 | Understand Git and GitHub basics | 25-30% | [notes/01-git-and-github-basics.md](notes/01-git-and-github-basics.md) |
+| 2 | Work with GitHub repositories | 10-15% | [notes/02-repositories.md](notes/02-repositories.md) |
+| 3 | Collaborate using GitHub | 10-15% | [notes/03-collaboration.md](notes/03-collaboration.md) |
+| 4 | Apply modern development practices | 10-15% | [notes/04-modern-development.md](notes/04-modern-development.md) |
+| 5 | Manage projects with GitHub | 5-10% | [notes/05-project-management.md](notes/05-project-management.md) |
+| 6 | Understand privacy, security, and administration | 10-15% | [notes/06-privacy-security-administration.md](notes/06-privacy-security-administration.md) |
+| 7 | Explore the GitHub community | 5-10% | [notes/07-github-community.md](notes/07-github-community.md) |
 
-### Git Basics
+## Domain 1: Understand Git and GitHub basics (25-30%)
 
-**Core Concepts:**
-- **Repository** - A directory tracked by Git containing project files and history
-- **Commit** - A snapshot of changes with a message, author, and timestamp
-- **Branch** - A lightweight movable pointer to a commit
-- **HEAD** - A pointer to the current branch/commit you are working on
-- **Remote** - A version of the repository hosted on a server (e.g., GitHub)
-- **Working directory** - The files you see and edit on your local machine
-- **Staging area (index)** - A holding area for changes to be included in the next commit
+**Version control** records every change with author and message, enables collaboration, recovery and parallel work on branches.
 
-**[Git Handbook](https://docs.github.com/en/get-started/using-git/about-git)** - Git fundamentals
-**[Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)** - Quick reference for commands
+| | Git | GitHub |
+|-|-----|--------|
+| What | Distributed version control tool | Cloud platform hosting Git repositories |
+| Runs | Your machine | github.com (or self-hosted Enterprise Server) |
+| Adds | Commits, branches, merges | PRs, issues, Actions, Projects, security, Copilot |
 
-**Essential Git Commands:**
+**Core objects:** repository (files plus history), commit (snapshot with SHA, author, message), branch (movable pointer), HEAD (what you have checked out), remote (`origin`).
+
 | Command | Purpose |
 |---------|---------|
-| `git init` | Initialize a new repository |
-| `git clone <url>` | Copy a remote repository locally |
-| `git add <file>` | Stage changes for commit |
-| `git commit -m "message"` | Create a commit with staged changes |
-| `git push` | Upload local commits to remote |
-| `git pull` | Fetch and merge remote changes |
-| `git fetch` | Download remote changes without merging |
-| `git branch` | List, create, or delete branches |
-| `git checkout` / `git switch` | Switch between branches |
-| `git merge` | Combine branch histories |
-| `git rebase` | Reapply commits on top of another base |
-| `git status` | Show working directory status |
-| `git log` | View commit history |
-| `git diff` | Show changes between commits/working directory |
-| `git stash` | Temporarily save uncommitted changes |
-| `git reset` | Unstage or undo commits |
+| `git clone` | Copy a remote repository with full history |
+| `git add` / `git commit` | Stage, then record a snapshot |
+| `git fetch` | Download, do not merge |
+| `git pull` | Fetch and merge |
+| `git push` | Upload commits |
+| `git switch -c` | Create and switch branch |
+| `git merge` / `git rebase` | Join histories / replay commits linearly |
+| `git revert` | New commit undoing an old one (safe on shared history) |
+| `git reset` | Move branch pointer back (rewrites history) |
+| `git stash` | Shelve uncommitted work |
 
-**[Using Git](https://docs.github.com/en/get-started/using-git)** - Comprehensive Git guide
-**[About Git](https://docs.github.com/en/get-started/using-git/about-git)** - Git overview
+**Accounts:** personal (a person), organization (shared ownership, roles and teams), enterprise (governs many organizations). **Enterprise options:** Enterprise Cloud (hosted by GitHub) or Enterprise Server (self-hosted). **Plans:** Free, Pro, Team, Enterprise. Free includes unlimited private repositories.
 
-### Git vs GitHub
+**GitHub Flow:** branch from `main` -> commit -> open PR -> review and checks -> merge -> delete branch. `main` always deployable.
 
-| Feature | Git | GitHub |
-|---------|-----|--------|
-| Type | Version control system | Cloud platform |
-| Hosting | Local | Cloud-hosted |
-| Collaboration | Basic (patches, email) | Rich (PRs, issues, reviews) |
-| UI | Command line | Web interface + CLI |
-| Extras | None | Actions, Projects, Security |
+**Markdown:** GitHub Flavored Markdown in issues, PRs, READMEs. `@user` notifies, `#123` links, `- [ ]` task lists, `> [!NOTE]` alerts, Mermaid diagrams.
 
-**[About GitHub](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git)** - GitHub and Git relationship
+**Tools:** Desktop = visual Git on Windows/macOS. Mobile = notifications, reviews, merges and 2FA approvals on iOS/Android. CLI (`gh`) = GitHub in the terminal.
 
-### GitHub Account Types and Plans
+## Domain 2: Work with GitHub repositories (10-15%)
 
-| Feature | Free | Pro | Team | Enterprise |
-|---------|------|-----|------|------------|
-| Public repos | Unlimited | Unlimited | Unlimited | Unlimited |
-| Private repos | Unlimited | Unlimited | Unlimited | Unlimited |
-| Collaborators | Unlimited | Unlimited | Unlimited | Unlimited |
-| Actions minutes | 2,000/mo | 3,000/mo | 3,000/mo | 50,000/mo |
-| Packages storage | 500 MB | 2 GB | 2 GB | 50 GB |
-| Code review tools | Basic | Advanced | Advanced | Advanced |
-| SAML SSO | No | No | No | Yes |
-| Advanced audit | No | No | No | Yes |
-
-**[GitHub Plans](https://docs.github.com/en/get-started/learning-about-github/githubs-plans)** - Plan comparison
-**[Account Types](https://docs.github.com/en/get-started/learning-about-github/types-of-github-accounts)** - Personal, Organization, Enterprise
-
-### GitHub Mobile and Desktop
-
-- **GitHub Mobile** - iOS and Android app for managing notifications, issues, PRs on the go
-- **GitHub Desktop** - GUI application for Git operations without command line
-- **GitHub CLI (gh)** - Command-line tool for GitHub operations
-
-**[GitHub Mobile](https://docs.github.com/en/get-started/using-github/github-mobile)** - Mobile app features
-**[GitHub Desktop](https://docs.github.com/en/desktop)** - Desktop application guide
-**[GitHub CLI](https://docs.github.com/en/github-cli)** - CLI tool documentation
-
-## Domain 2: Working with GitHub Repositories (8%)
-
-### Repository Management
-
-**Creating Repositories:**
-- New repositories can be created via web, CLI, API, or Desktop
-- Choose visibility: public, private, or internal (organizations only)
-- Initialize with README, .gitignore, and license
-
-**Key Repository Files:**
 | File | Purpose |
 |------|---------|
-| `README.md` | Project description and documentation |
-| `.gitignore` | Files/directories to exclude from tracking |
-| `LICENSE` | Open source license terms |
-| `CODEOWNERS` | Automatic review assignment rules |
-| `CONTRIBUTING.md` | Contribution guidelines |
-| `CODE_OF_CONDUCT.md` | Community behavior standards |
-| `SECURITY.md` | Security vulnerability reporting |
-| `FUNDING.yml` | Sponsorship configuration |
-
-**[Creating a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)** - Step-by-step guide
-**[About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)** - README best practices
-**[Licensing a Repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)** - License guide
-
-### Clone vs Fork
-
-| Aspect | Clone | Fork |
-|--------|-------|------|
-| Creates | Local copy | Server-side copy under your account |
-| Link to original | Direct remote | Upstream relationship |
-| Use case | Direct collaboration | Contributing to others' repos |
-| Push access | Requires permissions | Always (to your fork) |
-| Stays synced | Via pull/fetch | Manual sync required |
-
-**[Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)** - Clone guide
-**[Fork a Repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)** - Fork guide
-
-### GitHub Pages
-
-- Free static site hosting directly from a repository
-- Supports custom domains and HTTPS
-- Can use Jekyll or custom static site generators
-- Source can be from root, /docs folder, or gh-pages branch
-
-**[GitHub Pages](https://docs.github.com/en/pages)** - Pages documentation
-
-## Domain 3: Collaboration Features (30%)
-
-### Issues
-
-- Track bugs, feature requests, tasks, and discussions
-- Support labels, assignees, milestones, and projects
-- Can be linked to pull requests using keywords (fixes, closes, resolves)
-- Templates can be created for consistent issue reporting
-- Support task lists with checkboxes
-
-**[About Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)** - Issues overview
-**[Creating an Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue)** - Issue creation
-**[Linking a PR to an Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)** - Auto-closing issues
-
-### Pull Requests
-
-**Lifecycle:**
-1. Create a branch from the base branch
-2. Make commits with changes
-3. Open a pull request
-4. Request reviewers and address feedback
-5. Pass required checks (CI, code review)
-6. Merge the pull request
-7. Delete the feature branch (optional)
-
-**PR Features:**
-- Draft pull requests - signal work in progress
-- Review requests - assign specific reviewers
-- Code review comments - inline suggestions
-- Suggested changes - propose specific code changes
-- Status checks - automated CI/CD validation
-- Auto-merge - merge when all conditions are met
-
-**[About Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)** - PR overview
-**[Creating a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)** - PR creation
-**[Reviewing Changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests)** - Code review guide
-
-### Merge Strategies
-
-| Strategy | Result | History | Use Case |
-|----------|--------|---------|----------|
-| Merge commit | Creates merge commit | Preserves all commits | Default, preserves context |
-| Squash and merge | Single commit | Clean linear history | Feature branches with many small commits |
-| Rebase and merge | Replays commits | Linear history | Clean history without merge commits |
-
-**[About Merge Methods](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github)** - Merge strategies
-
-### Branch Protection Rules
-
-- Require pull request reviews before merging
-- Require status checks to pass before merging
-- Require signed commits
-- Require linear history
-- Restrict who can push to matching branches
-- Require conversation resolution before merging
-- Lock branch (read-only)
-
-**[Branch Protection Rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)** - Protection settings
-**[CODEOWNERS](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)** - Automatic review assignment
-
-### GitHub Markdown
-
-Essential syntax for communication on GitHub:
-- Headers, bold, italic, strikethrough
-- Lists (ordered, unordered, task lists)
-- Links and images
-- Code blocks and syntax highlighting
-- Tables
-- Alerts/admonitions (Note, Warning, Important)
-- Mermaid diagrams
-- Mathematical expressions (LaTeX)
-- Emoji shortcodes
-
-**[Basic Formatting Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)** - Markdown reference
-**[GitHub Flavored Markdown](https://github.github.com/gfm/)** - GFM specification
-
-## Domain 4: Modern Development (13%)
-
-### GitHub Actions Basics
-
-- **Workflow** - Automated process defined in YAML, stored in `.github/workflows/`
-- **Event/Trigger** - What starts the workflow (push, pull_request, schedule, etc.)
-- **Job** - A set of steps that run on a single runner
-- **Step** - An individual task (runs a command or an action)
-- **Action** - A reusable unit of code from the Marketplace or custom
-- **Runner** - The machine that executes the workflow (GitHub-hosted or self-hosted)
-
-**[Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)** - Actions overview
-**[Workflow Syntax](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)** - YAML reference
-**[GitHub Marketplace](https://github.com/marketplace?type=actions)** - Actions marketplace
-
-### GitHub Codespaces
-
-- Cloud-hosted development environment
-- Accessible via browser or VS Code
-- Pre-configured with devcontainer.json
-- Includes default tools, SDKs, and extensions
-- Billed per compute and storage usage
-- Supports port forwarding and dotfiles
-
-**[GitHub Codespaces Overview](https://docs.github.com/en/codespaces/overview)** - Codespaces documentation
-
-### GitHub Copilot Basics
-
-- AI-powered code completion tool
-- Integrates with VS Code, JetBrains, Neovim, and more
-- Provides code suggestions, chat, and explanations
-- Available in Individual, Business, and Enterprise plans
-
-**[GitHub Copilot](https://docs.github.com/en/copilot)** - Copilot documentation
-
-## Domain 5: Project Management (7%)
-
-### GitHub Projects
-
-**New Projects (recommended):**
-- Flexible table, board, and roadmap views
-- Custom fields (text, number, date, single select, iteration)
-- Built-in workflows for automation
-- Supports cross-repository tracking
-- Insights and charts
-
-**Classic Projects:**
-- Kanban-style boards
-- Limited to a single repository or organization
-- Being superseded by new Projects
-
-**[About Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)** - Projects overview
-**[Quickstart for Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects)** - Getting started
-
-### Milestones
-
-- Group issues and PRs into milestones with due dates
-- Track progress as percentage complete
-- Useful for release planning and sprint tracking
-
-**[About Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones)** - Milestones guide
-
-## Domain 6: Privacy, Security, and Administration (10%)
-
-### Authentication
-
-- **Two-factor authentication (2FA)** - Required for all GitHub.com accounts
-- **SSH Keys** - Secure authentication for Git operations
-- **Personal Access Tokens (PATs)** - Token-based API/CLI authentication
-- **GPG/SSH Signing** - Verify commit authorship
-- **SAML SSO** - Enterprise single sign-on (Enterprise plan)
-
-**[About 2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/about-two-factor-authentication)** - 2FA setup
-**[SSH Keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)** - SSH configuration
-**[Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)** - PAT management
-
-### Security Features
-
-- **Dependabot alerts** - Notify about vulnerable dependencies
-- **Secret scanning** - Detect exposed secrets in repositories
-- **Code scanning** - Find potential security vulnerabilities in code
-- **Security advisories** - Report and manage security vulnerabilities
-- **Security policy** - SECURITY.md file for vulnerability reporting
-
-**[Dependabot Alerts](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)** - Dependency vulnerability alerts
-**[Secret Scanning](https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning)** - Secret detection
-**[Code Scanning](https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning)** - Code analysis
-
-### Organization Management
-
-- **Roles:** Owner, Member, Billing Manager, Outside Collaborator
-- **Teams:** Group members with cascading access permissions
-- **Repository permissions:** Read, Triage, Write, Maintain, Admin
-- **Audit log:** Track organization activity
-
-**[Organization Roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization)** - Role permissions
-**[Managing Teams](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams)** - Team management
-
-## Domain 7: Benefits of the GitHub Community (10%)
-
-### Open Source
-
-**Common Licenses:**
-| License | Type | Key Feature |
-|---------|------|-------------|
-| MIT | Permissive | Simple, minimal restrictions |
-| Apache 2.0 | Permissive | Patent protection included |
-| GPL v3 | Copyleft | Derivative work must be GPL |
-| BSD 2/3 | Permissive | Similar to MIT |
-| LGPL | Weak copyleft | Libraries can be linked freely |
-| Unlicense | Public domain | No restrictions whatsoever |
-
-**[Choose a License](https://choosealicense.com/)** - License comparison tool
-**[Open Source Guide](https://opensource.guide/)** - GitHub's open source guide
-
-### Contributing to Open Source
-
-1. Find a project (GitHub Explore, Topics, Good First Issues)
-2. Read CONTRIBUTING.md and CODE_OF_CONDUCT.md
-3. Fork the repository
-4. Create a feature branch
-5. Make changes and commit
-6. Open a pull request
-7. Address review feedback
-
-**[Contributing to Projects](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)** - Contribution guide
-**[GitHub Explore](https://github.com/explore)** - Discover projects
-
-### InnerSource
-
-- Applying open source practices within an organization
-- Internal collaboration across teams and departments
-- Shared codebases with internal visibility
-- Benefits: reduced duplication, faster development, knowledge sharing
-
-**[InnerSource Introduction](https://resources.github.com/innersource/fundamentals/)** - InnerSource fundamentals
-
-### Community Features
-
-- **GitHub Sponsors** - Fund open source maintainers
-- **GitHub Stars** - Recognize community contributors
-- **GitHub Discussions** - Forum-style conversations in repositories
-- **Community profiles** - Health score for repositories
-
-**[GitHub Sponsors](https://docs.github.com/en/sponsors)** - Sponsorship program
-**[GitHub Discussions](https://docs.github.com/en/discussions)** - Discussions feature
-
-## Exam Tips
-
-### High-Priority Topics (by weight)
-1. **Collaboration Features (30%)** - Master issues, PRs, code review
-2. **Git and GitHub (22%)** - Know all Git commands and concepts
-3. **Modern Development (13%)** - Understand Actions, Codespaces, Copilot basics
-4. **Security (10%)** - Know 2FA, SSH, basic security features
-5. **Community (10%)** - Understand open source, licenses, InnerSource
-6. **Repositories (8%)** - Repository management essentials
-7. **Project Management (7%)** - Projects, milestones, labels
-
-### Key Differentiators to Remember
-- `git fetch` downloads but does NOT merge; `git pull` does both
-- Fork creates a server-side copy; clone creates a local copy
-- Squash merge creates one commit; merge commit preserves all
-- Issues track work; Discussions are for conversations
-- Classic Projects are per-repo; new Projects are cross-repo
-- Personal Access Tokens (classic) vs fine-grained tokens
-- GitHub-hosted runners vs self-hosted runners
+| `README.md` | Front page |
+| `LICENSE` | Reuse rights; none means all rights reserved |
+| `CONTRIBUTING.md` | How to contribute; linked on new issues and PRs |
+| `CODEOWNERS` | Auto-request reviews by path; last match wins; root, `docs/` or `.github/` |
+| `SECURITY.md` | How to report vulnerabilities privately |
+| `CODE_OF_CONDUCT.md`, `SUPPORT.md`, `.github/FUNDING.yml` | Behaviour, help, Sponsor button |
+
+- Organization `.github` repository supplies default community health files.
+- **Template** = fresh history, no link. **Fork** = linked copy for contributing back.
+- Add files: web UI (create or upload, 25 MB per file), Git push (100 MB hard limit; use Git LFS for large files), or github.dev.
+- **Insights:** Pulse (recent activity), Contributors, Community standards, Traffic (14 days, push access only), Commits, Code frequency, Dependency graph, Network, Forks.
+- **Dependency insights:** organization-wide dependency and license view (Enterprise Cloud).
+- **Stars** bookmark; **feature preview** opts you into early UI features.
+- **Maintenance:** description and topics, auto-delete head branches, Dependabot, releases, **archive** to make read-only.
+
+## Domain 3: Collaborate using GitHub (10-15%)
+
+| Feature | For |
+|---------|-----|
+| Issue | Tracked work (bug, feature, task); sub-issues and issue types |
+| Pull request | Proposed code change with review and checks |
+| Discussion | Questions, ideas, announcements; Q&A can mark an answer |
+
+- Draft PRs cannot be merged. Reviews: Comment, Approve, Request changes.
+- Merge methods: merge commit, squash and merge, rebase and merge.
+- **Closing keywords:** close(s/d), fix(es/ed), resolve(s/d) + `#123`; only closes on merge to the **default branch**.
+- Templates: `.github/ISSUE_TEMPLATE/` (Markdown or YAML forms, `config.yml`), `pull_request_template.md`.
+- Filters: `is:issue is:open label:bug assignee:@me`, `review-requested:@me`, `no:assignee`.
+- Assignees (up to 10) do the work; reviewers review.
+- **Watch levels:** Participating and @mentions (default), All Activity, Ignore, Custom (pick issues, PRs, releases, discussions, security alerts).
+- Inbox: Done, Save, Unsubscribe, custom filters; delivery to web, email, Mobile.
+- **Gist** = snippet repo, public or secret (secret = unlisted, not private). **Wiki** = repo docs pages. **Pages** = static site hosting; `<owner>.github.io` user/org site, `/<repo>` project site.
+
+## Domain 4: Apply modern development practices (10-15%)
+
+- **Actions:** workflows (YAML in `.github/workflows/`) triggered by events; jobs on runners; steps run commands or actions. CI/CD plus any repository automation. Results become status checks.
+- **Copilot features:** inline suggestions, Chat, agent mode, coding agent (now Copilot cloud agent), code review, multi-model choice.
+- **Agent mode** = IDE, synchronous, edits and runs tests while you watch. **Coding agent** = GitHub, asynchronous, from an assigned issue to a pull request.
+- **Plans:** Free, Pro, Pro+ (individual; GitHub also lists Student and Max) and Business, Enterprise (organization seats). Usage metered in GitHub AI Credits.
+- **Business/Enterprise add:** policy management, model control, content exclusion, audit logs, IP indemnity; Enterprise adds a larger credit pool and enterprise capabilities (knowledge bases in the outline; Copilot Spaces today).
+- **Codespaces:** cloud VM dev environment, defined by `.devcontainer/devcontainer.json`, billed compute while running plus storage while it exists.
+- **github.dev:** press `.`; free, browser-only, no terminal, cannot run code.
+
+## Domain 5: Manage projects with GitHub (5-10%)
+
+- **Projects:** owned by a user or organization; items from many repositories plus draft issues. Projects (classic) retired.
+- **Layouts:** table (spreadsheet), board (Kanban), roadmap (timeline).
+- **Field types:** text, number, date, single select, iteration.
+- **Built-in workflows:** item closed or PR merged -> Done, item added -> status, reopened, auto-add by filter, auto-archive.
+- **Insights:** charts (bar, column, line, stacked area), current and historical.
+- **Labels** many per item; **milestone** one per item with due date and progress; **assignees** up to 10; **saved replies** personal canned responses.
+
+## Domain 6: Understand privacy, security, and administration (10-15%)
+
+- **2FA methods:** authenticator app (TOTP), security key, passkey, GitHub Mobile, SMS (weakest). Keep recovery codes. Required for code contributors on GitHub.com.
+- **Passkeys:** phishing-resistant, can satisfy both password and 2FA in one step.
+- **Repository roles:** Read < Triage < Write < Maintain < Admin.
+- **Organization roles:** Owner, Member, Moderator, Billing manager, Security manager; outside collaborators are not members. Base permissions set default repo access.
+- **Teams:** grant access in bulk; nested teams inherit; visible or secret.
+- **EMUs:** accounts provisioned by the identity provider via SCIM, sign in via IdP, username suffix, no public activity outside the enterprise (Enterprise Cloud).
+- **Copilot policies:** set by enterprise and organization owners (features, models, public code matching, content exclusion, seats).
+- **Visibility:** public, private, internal (enterprise only, for InnerSource).
+- **Branch protection rule:** one per branch pattern, one repository. **Ruleset:** layered, bypass list, Active/Evaluate/Disabled, branch/tag/push, organization-wide on Enterprise, visible to readers.
+- **Security awareness:** Dependabot (packages), secret scanning plus push protection (credentials), code scanning with CodeQL (code), security advisories.
+
+## Domain 7: Explore the GitHub community (5-10%)
+
+- Open source benefits: quality, speed, shared cost, learning, transparency, no lock-in.
+- **Permissive:** MIT, Apache 2.0 (patent grant), BSD. **Copyleft:** GPL. **Weak copyleft:** LGPL.
+- GitHub supports open source: free public-repo features, Sponsors, Advisory Database, Stars programme, Education, Archive Program.
+- **Sponsors** funds maintainers; `.github/FUNDING.yml` shows the Sponsor button.
+- **Follow** people and orgs (feed), **star** repos (bookmark), **watch** repos (notifications).
+- **Discovery:** topics, Explore, Trending, Collections, `good first issue`.
+- **Marketplace:** apps (installed) and actions (referenced in workflows); verified creators.
+- **InnerSource:** open source practice inside a company; internal repositories.
+- **Fork vs template:** fork keeps link and history; template starts fresh with no link.
+
+## Key Differentiators
+
+| A | B | Difference |
+|---|---|-----------|
+| Git | GitHub | Tool vs platform |
+| `git fetch` | `git pull` | Download only vs download and merge |
+| `git revert` | `git reset` | New undo commit vs rewrite history |
+| Fork | Template | Linked copy vs fresh copy |
+| Issue | Discussion | Tracked work vs conversation |
+| Star | Watch | Bookmark vs notifications |
+| Agent mode | Coding agent | IDE, synchronous vs GitHub, asynchronous PR |
+| github.dev | Codespaces | Free browser editor vs billed cloud VM with terminal |
+| Triage | Maintain | Manage issues/PRs vs manage repo without destructive settings |
+| Branch protection rule | Ruleset | One per branch, one repo vs layered, org-wide |
+| Label | Milestone | Many categories vs one goal with due date |
+| Personal + SAML SSO | EMU | Person owns account vs company owns account |

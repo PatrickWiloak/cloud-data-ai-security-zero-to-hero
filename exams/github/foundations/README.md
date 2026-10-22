@@ -1,212 +1,94 @@
-# GitHub Foundations Certification Exam Guide
+---
+last-updated: 2026-10-22
+applies-to: GH-900 skills measured as of January 2026, checked 2026-10-22
+difficulty: beginner
+---
+
+# GitHub Foundations (GH-900) Certification Exam Guide
+
+> **Outline updated 2026-10-22.** GitHub rewrote GH-900 in January 2026 and moved delivery to Microsoft Learn. Earlier versions of this folder used the older seven-domain weights and logistics.
 
 ## Exam Overview
 
-The GitHub Foundations certification validates your understanding of the foundational topics and concepts of collaborating, contributing, and working on GitHub. This is GitHub's entry-level certification designed for anyone who wants to demonstrate their knowledge of the GitHub platform, Git version control, and collaborative development workflows.
+GitHub Foundations is GitHub's entry-level certification. It checks that you understand Git and GitHub basics, repositories, collaboration, modern development features (Actions, Copilot, Codespaces), project management, privacy and administration, and the GitHub community. It suits developers new to GitHub, students, project managers, and anyone in a technical or business role who works alongside GitHub.
 
 ### Exam Details
-- **Exam Name:** GitHub Foundations
-- **Duration:** 120 minutes
-- **Format:** Multiple choice questions
-- **Number of Questions:** 75 questions
-- **Passing Score:** 70%
-- **Cost:** $99 USD
-- **Delivery:** Online proctored
+
+- **Exam Code:** GH-900
+- **Level:** Beginner
+- **Duration:** 100 minutes
+- **Questions:** Not published by Microsoft
+- **Format:** Multiple choice; the exam may include interactive components
+- **Passing Score:** 700 (on a scale of 1-1000)
+- **Cost:** Based on country; commonly listed as $99 USD in the US
+- **Delivery:** Proctored, scheduled through Pearson VUE via Microsoft Learn
+- **Languages:** English, Spanish, Portuguese (Brazil), Korean, Japanese
 - **Prerequisites:** None
-- **Validity:** 3 years
-- **Retake Policy:** 24-hour wait for first retake, 14 days for subsequent
+- **Validity:** Does not expire; the certification does not require renewal
+- **Retake Policy:** Wait 24 hours before the first retake; after that, Microsoft's exam retake policy applies
 
 ### Official Resources
-- **[Official Exam Page](https://learn.github.com/certifications)** - Registration and exam details
-- **[GitHub Foundations Study Guide](https://assets.ctfassets.net/wfutmusr1t3h/1kmMx7AwI4qH8yIZgOmQlP/4e60030cc6c76688698652e830ea2a48/github-foundations-exam-study-guide.pdf)** - Official study guide PDF
-- **[GitHub Skills](https://skills.github.com/)** - Interactive learning paths
-- **[GitHub Docs](https://docs.github.com)** - Complete platform documentation
+
+- **[📖 GitHub Foundations certification page](https://learn.microsoft.com/en-us/credentials/certifications/github-foundations/)** - registration, price, languages and policies
+- **[📖 GH-900 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-900)** - the official skills measured, with change log
+- **[📖 GitHub Foundations learning path, part 1](https://learn.microsoft.com/en-us/training/paths/github-foundations/)** - free Microsoft Learn modules
+- **[📖 GitHub Foundations learning path, part 2](https://learn.microsoft.com/en-us/training/paths/github-foundations-2/)** - free Microsoft Learn modules, continued
+- **[📖 GitHub Docs](https://docs.github.com)** - the product documentation every note links into
 
 ## Exam Domains
 
-### Domain 1: Introduction to Git and GitHub (22%)
+| # | Domain | Weight | Notes |
+|---|--------|--------|-------|
+| 1 | Understand Git and GitHub basics | 25-30% | [01-git-and-github-basics.md](notes/01-git-and-github-basics.md) |
+| 2 | Work with GitHub repositories | 10-15% | [02-repositories.md](notes/02-repositories.md) |
+| 3 | Collaborate using GitHub | 10-15% | [03-collaboration.md](notes/03-collaboration.md) |
+| 4 | Apply modern development practices | 10-15% | [04-modern-development.md](notes/04-modern-development.md) |
+| 5 | Manage projects with GitHub | 5-10% | [05-project-management.md](notes/05-project-management.md) |
+| 6 | Understand privacy, security, and administration | 10-15% | [06-privacy-security-administration.md](notes/06-privacy-security-administration.md) |
+| 7 | Explore the GitHub community | 5-10% | [07-github-community.md](notes/07-github-community.md) |
 
-This is the second-largest domain and focuses on the fundamentals of version control with Git and the basics of the GitHub platform.
+Weights are from the Microsoft Learn study guide, skills measured as of January 2026. Re-check it before you book.
 
-**Key Topics:**
-- Git version control concepts (repositories, commits, branches)
-- Basic Git commands (clone, commit, push, pull, fetch, merge, rebase)
-- Difference between Git and GitHub
-- GitHub account types (Personal, Organization, Enterprise)
-- GitHub plans and pricing (Free, Pro, Team, Enterprise)
-- GitHub Desktop and GitHub Mobile
-- GitHub Markdown and formatting
+## What each domain covers
 
-**What to Study:**
-- Understand the entire Git workflow from initialization to pushing changes
-- Know the difference between local and remote repositories
-- Be comfortable with branching strategies and merge vs rebase
-- Understand GitHub as a platform built on top of Git
+**Domain 1: Understand Git and GitHub basics (25-30%).** The largest domain by a clear margin. It starts with why version control exists and how Git (the tool) differs from GitHub (the platform), then covers repositories, commits and branches. On the GitHub side it covers personal, organization and enterprise accounts, Enterprise Cloud versus Enterprise Server, GitHub Flow, Markdown in issues and pull requests, and when to use GitHub Desktop or GitHub Mobile. Expect plenty of "which is which" questions here.
 
-### Domain 2: Working with GitHub Repositories (8%)
+**Domain 2: Work with GitHub repositories (10-15%).** What a well-built repository contains (README, LICENSE, CONTRIBUTING, CODEOWNERS, SECURITY.md), creating repositories and using templates, adding and managing files, the Insights tab (Pulse, Contributors, Traffic, Dependency graph), stars and feature previews, dependency insights, and maintenance habits such as topics, branch hygiene and archiving.
 
-The smallest domain, but still important - focuses on repository management.
+**Domain 3: Collaborate using GitHub (10-15%).** Issues versus pull requests versus discussions, linking PRs to issues with closing keywords, issue and PR templates, filters and assignments, notifications and watch levels, and the three publishing features: Gists, Wikis and GitHub Pages.
 
-**Key Topics:**
-- Creating and managing repositories
-- Repository visibility (public, private, internal)
-- README files, license files, and .gitignore
-- Repository templates
-- Cloning vs forking repositories
-- Repository settings and features
-- GitHub Pages basics
+**Domain 4: Apply modern development practices (10-15%).** GitHub Actions at a purpose level, GitHub Copilot including agent mode, the coding agent (now Copilot cloud agent), multi-model choice and the plan line-up (Free, Pro, Pro+, Business, Enterprise), Codespaces and dev containers, and the github.dev editor versus Codespaces.
 
-**What to Study:**
-- Repository creation workflows and best practices
-- When to use templates vs forking
-- Understanding repository visibility and its implications
-- Basic GitHub Pages configuration
+**Domain 5: Manage projects with GitHub (5-10%).** GitHub Projects with table, board and roadmap layouts, custom fields and iterations, built-in workflow automations, project insights charts, and the supporting tools: labels, milestones, assignees and saved replies.
 
-### Domain 3: Collaboration Features (30%)
+**Domain 6: Understand privacy, security, and administration (10-15%).** 2FA methods and passkeys, repository roles (read, triage, write, maintain, admin), organization roles, teams, Enterprise Managed Users, organization-wide Copilot policies, repository visibility, branch protection rules versus rulesets, and security features at awareness level.
 
-The largest domain - covers the collaborative aspects of GitHub that make it the world's leading development platform.
+**Domain 7: Explore the GitHub community (5-10%).** Open source and its benefits, licenses at awareness level, how GitHub supports open source, GitHub Sponsors, following and starring, Explore and topics, GitHub Marketplace, InnerSource, and forks versus templates.
 
-**Key Topics:**
-- Issues (creating, labeling, assigning, linking)
-- Pull requests (creating, reviewing, merging)
-- Code review process and suggestions
-- Discussions and comments
-- Notifications and subscriptions
-- Branch protection rules
-- CODEOWNERS file
-- Draft pull requests
-- Merge strategies (merge commit, squash, rebase)
+## Study Materials
 
-**What to Study:**
-- The complete pull request lifecycle from creation to merge
-- How to conduct effective code reviews
-- Issue management and linking issues to pull requests
-- Understanding branch protection and its configurations
-- How notifications work and how to manage them
+| Material | What it is for |
+|----------|----------------|
+| [fact-sheet.md](fact-sheet.md) | Logistics and a one-page cram summary per domain |
+| [notes/](notes/) | In-depth teaching notes, one file per domain (links in the domain table above) |
+| [scenarios.md](scenarios.md) | Exam-style scenarios with explanations of right and wrong answers |
+| [flashcards.csv](flashcards.csv) | Generated flashcards from the notes' glossary lines |
+| [practice-plan.md](practice-plan.md) | A four-week day-by-day plan weighted by domain |
+| [strategy.md](strategy.md) | How to study, time management on the day, and commonly confused pairs |
+| [Practice questions](../../../resources/practice-questions/github-foundations.md) | Additional practice questions for this exam |
 
-### Domain 4: Modern Development (13%)
+## Common exam patterns
 
-Covers GitHub Actions, Codespaces, and modern development practices.
+- Many questions contrast look-alikes: Git versus GitHub, fetch versus pull, fork versus template, issue versus discussion, star versus watch, agent mode versus the coding agent, github.dev versus Codespaces, branch protection rules versus rulesets.
+- Scenario questions ask for the best-fit feature, not the only possible one. Prefer the GitHub-native, least-privilege, least-effort answer.
+- Security and administration questions test awareness and role fit, not deep configuration.
+- Copilot questions focus on what each plan and agent is for, not on prompt writing.
 
-**Key Topics:**
-- GitHub Actions basics (workflows, triggers, jobs, steps)
-- GitHub Codespaces overview
-- GitHub Copilot overview
-- CI/CD concepts
-- GitHub Marketplace
+## Hands-on practice
 
-**What to Study:**
-- Basic workflow YAML syntax
-- Common triggers (push, pull_request, schedule)
-- What Codespaces is and when to use it
-- Basic understanding of Copilot capabilities
-- How to find and use Actions from the Marketplace
-
-### Domain 5: Project Management (7%)
-
-Focuses on GitHub's project management features.
-
-**Key Topics:**
-- GitHub Projects (classic and new)
-- Project boards and views
-- Custom fields and workflows
-- Milestones
-- Labels and organization
-
-**What to Study:**
-- Differences between classic projects and new Projects
-- How to create and manage project views
-- Using milestones to track progress
-- Effective labeling strategies
-
-### Domain 6: Privacy, Security, and Administration (10%)
-
-Covers security features, administrative settings, and privacy controls.
-
-**Key Topics:**
-- Two-factor authentication (2FA)
-- SSH and GPG keys
-- Repository security advisories
-- Dependabot alerts
-- Secret scanning basics
-- Code scanning basics
-- Organization and enterprise management basics
-- Team management and permissions
-
-**What to Study:**
-- How to enable and configure 2FA
-- Understanding SSH key authentication
-- Basic security feature awareness
-- Organization roles and permissions hierarchy
-
-### Domain 7: Benefits of the GitHub Community (10%)
-
-Focuses on the open source community, InnerSource, and GitHub's community features.
-
-**Key Topics:**
-- Open source licensing
-- Contributing to open source projects
-- InnerSource practices
-- GitHub Sponsors
-- GitHub Stars program
-- Community health files (CODE_OF_CONDUCT.md, CONTRIBUTING.md)
-- README best practices
-- GitHub Explore and trending
-
-**What to Study:**
-- Common open source licenses and their differences
-- How to contribute to open source projects
-- InnerSource concepts and benefits
-- Community health indicators and files
-
-## Key Concepts to Master
-
-### Git Fundamentals
-1. **Repository lifecycle** - init, clone, add, commit, push, pull
-2. **Branching** - create, switch, merge, delete branches
-3. **Merge conflicts** - how they occur and how to resolve them
-4. **Git history** - log, diff, blame, bisect
-5. **Remote operations** - fetch vs pull, push, upstream tracking
-
-### GitHub Platform
-1. **Collaboration** - Issues, PRs, code review, discussions
-2. **Automation** - GitHub Actions basics
-3. **Security** - 2FA, SSH keys, Dependabot, security advisories
-4. **Project management** - Projects, milestones, labels
-5. **Community** - Open source, InnerSource, community health files
-
-### Common Exam Patterns
-- Questions often test the difference between similar concepts (fork vs clone, fetch vs pull)
-- Expect scenario-based questions about collaboration workflows
-- Security questions focus on awareness rather than deep configuration
-- Community questions test understanding of open source practices
-
-## Study Approach
-
-### Recommended Path
-1. **Week 1-2:** Git fundamentals and GitHub basics (Domains 1-2)
-2. **Week 3-4:** Collaboration and modern development (Domains 3-4)
-3. **Week 5:** Project management and security (Domains 5-6)
-4. **Week 6:** Community features and review (Domain 7 + full review)
-
-### Hands-On Practice
-- Create a GitHub account if you don't have one
-- Complete GitHub Skills courses (Introduction to GitHub, Communicate using Markdown)
-- Create repositories, open issues, submit pull requests
-- Set up a basic GitHub Actions workflow
-- Explore open source projects and understand community files
-
-### Study Materials
-- **[GitHub Skills](https://skills.github.com/)** - Free interactive courses
-- **[GitHub Docs](https://docs.github.com)** - Official documentation
-- **[Git Documentation](https://git-scm.com/doc)** - Git reference
-- **[GitHub Learning Pathways](https://learn.github.com/learning-pathways)** - Structured learning
-- **[GitHub YouTube Channel](https://www.youtube.com/github)** - Video tutorials
-
-### Tips for Success
-- Focus heavily on Domain 3 (Collaboration Features) as it represents 30% of the exam
-- Don't neglect Domain 1 (Git and GitHub) at 22% - know your Git commands
-- Practice using GitHub daily - hands-on experience is invaluable
-- Read the official GitHub Docs for each topic area
-- Take practice tests and review incorrect answers thoroughly
-- Understand "why" behind features, not just "what" they do
+- Create a free GitHub account, a repository with a README, LICENSE and CODEOWNERS, and run through GitHub Flow end to end.
+- Open issues, link a pull request with `Fixes #1`, review it and squash-merge it.
+- Create a project with table, board and roadmap views and turn on the built-in workflows.
+- Press `.` on a repository to try github.dev, then open a codespace and compare.
+- Add a ruleset to `main` and see a direct push get rejected.
+- Turn on 2FA with an authenticator app and add a passkey.

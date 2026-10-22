@@ -1,221 +1,164 @@
-# GitHub Foundations Study Plan
+---
+last-updated: 2026-10-22
+applies-to: GH-900 skills measured as of January 2026, checked 2026-10-22
+difficulty: beginner
+---
 
-## 6-Week Study Schedule
+# GitHub Foundations (GH-900) Study Plan
 
-### Week 1: Git Fundamentals (Domain 1 - Part 1)
+A four-week plan of about an hour a day, built around the seven domains of the January 2026 outline. Time follows the weights: Domain 1 (25-30%) gets the most days, Domains 5 and 7 (5-10% each) the fewest. If you already use GitHub daily, compress weeks 1 and 2 and spend the saved time on Domains 4 and 6.
 
-#### Day 1-2: Introduction to Version Control
-- [ ] Understand what version control is and why it matters
-- [ ] Learn the difference between centralized and distributed VCS
-- [ ] Install Git and configure user name/email
-- [ ] Create your first local repository with `git init`
-- [ ] Review Notes: `notes/01-git-basics.md`
-- [ ] Read: [About Git](https://docs.github.com/en/get-started/using-git/about-git)
+## Time allocation by domain weight
 
-#### Day 3-4: Core Git Commands
-- [ ] Practice `git add`, `git commit`, `git status`, `git log`
-- [ ] Understand the working directory, staging area, and repository
-- [ ] Learn `git diff` to compare changes
-- [ ] Practice creating and viewing commit history
-- [ ] Practice `git stash` for saving work in progress
-- [ ] Read: [Getting Started with Git](https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository)
+| Domain | Weight | Suggested hours (of about 28) |
+|--------|--------|-------------------------------|
+| 1. Understand Git and GitHub basics | 25-30% | 7-8 |
+| 2. Work with GitHub repositories | 10-15% | 3-4 |
+| 3. Collaborate using GitHub | 10-15% | 3-4 |
+| 4. Apply modern development practices | 10-15% | 3-4 |
+| 5. Manage projects with GitHub | 5-10% | 2 |
+| 6. Understand privacy, security, and administration | 10-15% | 3-4 |
+| 7. Explore the GitHub community | 5-10% | 2 |
+| Review and practice | - | 3-4 |
 
-#### Day 5-6: Branching and Merging
-- [ ] Create, switch, and delete branches
-- [ ] Practice merging branches (fast-forward and 3-way merge)
-- [ ] Understand and resolve merge conflicts
-- [ ] Learn the difference between merge and rebase
-- [ ] Practice `git checkout` vs `git switch`
-- [ ] Read: [About Branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
+## Week 1: Git and GitHub basics (Domain 1)
 
-#### Day 7: Week 1 Review
-- [ ] Review all Git commands covered this week
-- [ ] Complete GitHub Skills: [Introduction to GitHub](https://github.com/skills/introduction-to-github)
-- [ ] Quiz yourself on Git terminology
-- [ ] Create a cheat sheet of commands
+### Day 1: Version control and Git vs GitHub
+- [ ] Read: [notes/01-git-and-github-basics.md](notes/01-git-and-github-basics.md), "Version control fundamentals"
+- [ ] Explain in your own words why version control exists and the difference between Git and GitHub
+- [ ] Install Git, set `user.name` and `user.email`, run `git init` in a test folder
+- [ ] Read: [About GitHub and Git](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git)
 
-### Week 2: GitHub Platform Basics (Domain 1 - Part 2 and Domain 2)
+### Day 2: Commits and the three areas
+- [ ] Practise `git status`, `git add`, `git commit`, `git log`, `git diff`
+- [ ] Watch a file move from untracked to modified to staged to committed
+- [ ] Try `git stash` and `git stash pop`
 
-#### Day 8-9: GitHub Account and Platform
-- [ ] Understand GitHub account types (Personal, Organization, Enterprise)
-- [ ] Learn GitHub plans (Free, Pro, Team, Enterprise)
-- [ ] Explore GitHub.com interface and navigation
-- [ ] Set up GitHub profile with bio and README
-- [ ] Review Notes: `notes/01-git-basics.md` (GitHub section)
-- [ ] Read: [GitHub Plans](https://docs.github.com/en/get-started/learning-about-github/githubs-plans)
+### Day 3: Branches, merging and conflicts
+- [ ] Create, switch and delete branches with `git switch`
+- [ ] Merge a branch, then cause and resolve a merge conflict
+- [ ] Compare `git revert` and `git reset --soft` on a throwaway repository
 
-#### Day 10-11: Working with Repositories
-- [ ] Create repositories (public and private)
-- [ ] Add README.md, .gitignore, and LICENSE files
-- [ ] Practice cloning repositories
-- [ ] Understand forking and its use cases
-- [ ] Learn about repository templates
-- [ ] Review Notes: `notes/02-github-repos-and-features.md`
-- [ ] Read: [Creating a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+### Day 4: Remotes and GitHub Flow
+- [ ] Push a repository to GitHub; practise `git fetch` vs `git pull`
+- [ ] Run the full GitHub Flow: branch, commit, push, open PR, merge, delete branch
+- [ ] Read: [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow)
 
-#### Day 12-13: Remote Operations and Tools
-- [ ] Practice `git push`, `git pull`, `git fetch`
-- [ ] Understand the difference between fetch and pull
-- [ ] Explore GitHub Desktop application
-- [ ] Try GitHub Mobile app
-- [ ] Learn basics of GitHub CLI (`gh`)
-- [ ] Read: [GitHub Desktop](https://docs.github.com/en/desktop)
+### Day 5: Accounts, plans and enterprise options
+- [ ] Re-read the accounts and plans sections of [Domain 1](notes/01-git-and-github-basics.md)
+- [ ] Create a free organization and look at its settings
+- [ ] Be able to say when Enterprise Cloud or Enterprise Server fits
 
-#### Day 14: Week 2 Review
-- [ ] Review repository management concepts
-- [ ] Complete GitHub Skills: [Communicate using Markdown](https://github.com/skills/communicate-using-markdown)
-- [ ] Practice creating repos with different configurations
-- [ ] Review clone vs fork differences
+### Day 6: Markdown, Desktop and Mobile
+- [ ] Write an issue using headings, a task list, a code block, an alert and an @mention
+- [ ] Install GitHub Desktop and commit through it; install GitHub Mobile and review a PR from it
+- [ ] Read: [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
-### Week 3: Collaboration Features - Part 1 (Domain 3)
+### Day 7: Week 1 review
+- [ ] Re-read the Domain 1 key exam points
+- [ ] Complete the first modules of the [GitHub Foundations learning path, part 1](https://learn.microsoft.com/en-us/training/paths/github-foundations/)
 
-#### Day 15-16: Issues
-- [ ] Create issues with titles, descriptions, and labels
-- [ ] Assign issues to team members
-- [ ] Link issues to milestones
-- [ ] Create issue templates
-- [ ] Use task lists within issues
-- [ ] Practice closing issues with keywords in commits
-- [ ] Review Notes: `notes/03-collaboration.md`
-- [ ] Read: [About Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
+## Week 2: Repositories, collaboration and projects (Domains 2, 3, 5)
 
-#### Day 17-18: Pull Requests
-- [ ] Create pull requests from feature branches
-- [ ] Write effective PR descriptions
-- [ ] Create draft pull requests
-- [ ] Link PRs to issues using keywords
-- [ ] Understand PR status checks
-- [ ] Practice requesting reviews
-- [ ] Read: [About Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+### Day 8: Repository files
+- [ ] Read: [notes/02-repositories.md](notes/02-repositories.md)
+- [ ] Add README, LICENSE, CONTRIBUTING, CODEOWNERS and SECURITY.md to a test repository
+- [ ] Mark it as a template and create a new repository from it
 
-#### Day 19-20: Code Review
-- [ ] Review pull requests and leave comments
-- [ ] Use inline suggestions for code changes
-- [ ] Approve, request changes, or comment on PRs
-- [ ] Understand the review process workflow
-- [ ] Practice resolving review conversations
-- [ ] Read: [Reviewing Changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests)
+### Day 9: Files, insights and maintenance
+- [ ] Add a file through the web UI with "create a new branch and start a pull request"
+- [ ] Open every Insights view and write one line on what each answers
+- [ ] Add topics, turn on auto-delete head branches, then archive and unarchive the repository
 
-#### Day 21: Week 3 Review
-- [ ] Complete GitHub Skills: [Review Pull Requests](https://github.com/skills/review-pull-requests)
-- [ ] Practice the full issue-to-PR workflow
-- [ ] Review merge strategies (merge, squash, rebase)
-- [ ] Quiz yourself on collaboration terminology
+### Day 10: Issues, pull requests and discussions
+- [ ] Read: [notes/03-collaboration.md](notes/03-collaboration.md)
+- [ ] Open an issue, link a PR with `Fixes #1`, request a review, leave a suggested change, squash-merge
+- [ ] Enable Discussions and post in a Q&A category
 
-### Week 4: Collaboration Features - Part 2 and Modern Development (Domains 3-4)
+### Day 11: Templates, filters and notifications
+- [ ] Create an issue form (YAML) and a PR template
+- [ ] Practise filters: `is:open label:bug assignee:@me`, `review-requested:@me`
+- [ ] Set a repository to Custom watch (releases only) and triage your notification inbox
 
-#### Day 22-23: Branch Protection and Advanced Collaboration
-- [ ] Configure branch protection rules
-- [ ] Set up required reviews and status checks
-- [ ] Create and use CODEOWNERS file
-- [ ] Understand merge strategies and when to use each
-- [ ] Learn about notifications and subscriptions
-- [ ] Review Notes: `notes/03-collaboration.md`
-- [ ] Read: [About Protected Branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
+### Day 12: Gists, wikis and Pages
+- [ ] Create a public gist and a secret gist; note who can see each
+- [ ] Add a wiki page and publish a GitHub Pages site from `/docs`
 
-#### Day 24-25: GitHub Actions Basics
-- [ ] Understand workflows, jobs, steps, and actions
-- [ ] Learn common triggers (push, pull_request, schedule)
-- [ ] Create a basic CI workflow
-- [ ] Explore the GitHub Actions Marketplace
-- [ ] Understand GitHub-hosted vs self-hosted runners
-- [ ] Review Notes: `notes/04-modern-development.md`
-- [ ] Read: [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
+### Day 13: GitHub Projects
+- [ ] Read: [notes/05-project-management.md](notes/05-project-management.md)
+- [ ] Create a project with table, board and roadmap views, a single select Priority field and an iteration field
+- [ ] Turn on the item closed and auto-add workflows; add an insights chart
+- [ ] Create a milestone, labels and a saved reply
 
-#### Day 26-27: Codespaces and Copilot
-- [ ] Understand what GitHub Codespaces is
-- [ ] Learn devcontainer.json configuration basics
-- [ ] Understand Codespaces billing and usage
-- [ ] Learn GitHub Copilot features at a high level
-- [ ] Understand Copilot plans and availability
-- [ ] Read: [GitHub Codespaces Overview](https://docs.github.com/en/codespaces/overview)
+### Day 14: Week 2 review
+- [ ] Re-read the key exam points for Domains 2, 3 and 5
+- [ ] Complete the [GitHub Foundations learning path, part 1](https://learn.microsoft.com/en-us/training/paths/github-foundations/)
 
-#### Day 28: Week 4 Review
-- [ ] Complete GitHub Skills: [GitHub Actions](https://github.com/skills/hello-github-actions)
-- [ ] Review modern development tools
-- [ ] Practice writing basic workflow YAML
-- [ ] Review Codespaces and Copilot concepts
+## Week 3: Modern development, administration and community (Domains 4, 6, 7)
 
-### Week 5: Project Management, Security, and Community (Domains 5-7)
+### Day 15: GitHub Actions
+- [ ] Read: [notes/04-modern-development.md](notes/04-modern-development.md), "GitHub Actions"
+- [ ] Add a workflow that runs on `pull_request` and see it appear as a status check
+- [ ] Read: [Understanding GitHub Actions](https://docs.github.com/en/actions/get-started/understand-github-actions)
 
-#### Day 29-30: Project Management
-- [ ] Create a GitHub Project (new style)
-- [ ] Add table, board, and roadmap views
-- [ ] Use custom fields and filters
-- [ ] Create milestones and link issues
-- [ ] Understand labels and their organization
-- [ ] Review Notes: `notes/05-security-community-projects.md`
-- [ ] Read: [About Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
+### Day 16: Copilot
+- [ ] Read the Copilot section of [Domain 4](notes/04-modern-development.md)
+- [ ] Turn on Copilot Free; try inline suggestions, Chat and agent mode
+- [ ] Write out the plan line-up and what Business and Enterprise add
+- [ ] Read: [Plans for GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans)
 
-#### Day 31-32: Security and Administration
-- [ ] Set up two-factor authentication (2FA)
-- [ ] Generate and use SSH keys for GitHub
-- [ ] Create personal access tokens
-- [ ] Understand Dependabot alerts
-- [ ] Learn about secret scanning and code scanning basics
-- [ ] Understand organization roles and permissions
-- [ ] Read: [About 2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/about-two-factor-authentication)
+### Day 17: Codespaces and github.dev
+- [ ] Press `.` on a repository to open github.dev; note there is no terminal
+- [ ] Open a codespace, add a `devcontainer.json`, rebuild, and stop it
+- [ ] Read: [The github.dev web-based editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor)
 
-#### Day 33-34: Community and Open Source
-- [ ] Understand common open source licenses (MIT, Apache, GPL)
-- [ ] Learn the fork-and-PR contribution workflow
-- [ ] Create community health files (CONTRIBUTING.md, CODE_OF_CONDUCT.md)
-- [ ] Understand InnerSource concepts
-- [ ] Explore GitHub Sponsors and GitHub Stars
-- [ ] Learn about GitHub Discussions
-- [ ] Read: [Contributing to Projects](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
+### Day 18: Accounts security and roles
+- [ ] Read: [notes/06-privacy-security-administration.md](notes/06-privacy-security-administration.md)
+- [ ] Turn on 2FA with an authenticator app, save recovery codes, add a passkey
+- [ ] Recite the repository roles in order and the organization roles
 
-#### Day 35: Week 5 Review
-- [ ] Review all three domains covered this week
-- [ ] Practice security setup on a test repository
-- [ ] Explore open source projects on GitHub Explore
-- [ ] Quiz yourself on license types
+### Day 19: Enterprise administration, visibility and rulesets
+- [ ] Re-read EMUs, Copilot policies and visibility in [Domain 6](notes/06-privacy-security-administration.md)
+- [ ] Add a ruleset to `main` that requires a pull request; try a direct push
+- [ ] Turn on Dependabot alerts and secret scanning on a public repository
+- [ ] Read: [About rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets)
 
-### Week 6: Final Review and Exam Preparation
+### Day 20: Community
+- [ ] Read: [notes/07-github-community.md](notes/07-github-community.md)
+- [ ] Follow a developer, star a repository, watch another for releases only
+- [ ] Browse Explore, Topics and Marketplace; find a `good first issue`
+- [ ] Add a `.github/FUNDING.yml` to a test repository
 
-#### Day 36-37: Comprehensive Review
-- [ ] Review all notes files (01 through 05)
-- [ ] Revisit fact-sheet.md for quick reference
-- [ ] Focus on high-weight domains (Collaboration 30%, Git 22%)
-- [ ] Create flashcards for key concepts
-- [ ] Review all Git commands and their purposes
+### Day 21: Week 3 review
+- [ ] Re-read the key exam points for Domains 4, 6 and 7
+- [ ] Complete the [GitHub Foundations learning path, part 2](https://learn.microsoft.com/en-us/training/paths/github-foundations-2/)
 
-#### Day 38-39: Practice and Scenarios
-- [ ] Work through scenarios.md exam-style questions
-- [ ] Take any available practice tests
-- [ ] Review incorrect answers and identify weak areas
-- [ ] Re-read documentation for weak areas
-- [ ] Practice scenario-based thinking
+## Week 4: Review and practice
 
-#### Day 40-41: Final Preparation
-- [ ] Quick review of all domain summaries
-- [ ] Focus on key differentiators (fetch vs pull, fork vs clone, etc.)
-- [ ] Review merge strategies one more time
-- [ ] Ensure you know GitHub plans and account types
-- [ ] Skim official study guide one final time
+### Day 22-23: Fact sheet and flashcards
+- [ ] Read the whole [fact-sheet.md](fact-sheet.md), especially the key differentiators table
+- [ ] Drill [flashcards.csv](flashcards.csv)
 
-#### Day 42: Exam Day
-- [ ] Light review of fact sheet only - no heavy studying
-- [ ] Ensure stable internet connection and quiet environment
-- [ ] Have valid government-issued ID ready
-- [ ] Close unnecessary applications on your computer
-- [ ] Take the exam with confidence
+### Day 24-25: Scenarios and practice questions
+- [ ] Work through [scenarios.md](scenarios.md)
+- [ ] Work through the [practice questions](../../../resources/practice-questions/github-foundations.md)
+- [ ] For each miss, re-read the matching note section
 
-## Study Tips
+### Day 26: Weak areas
+- [ ] Re-read the two notes where you missed the most questions
+- [ ] Re-read the [GH-900 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-900) and tick off each skill
 
-### Time Allocation by Domain Weight
-| Domain | Weight | Suggested Hours |
-|--------|--------|----------------|
-| Collaboration Features | 30% | 15-20 hours |
-| Git and GitHub | 22% | 12-15 hours |
-| Modern Development | 13% | 7-10 hours |
-| Security | 10% | 5-7 hours |
-| Community | 10% | 5-7 hours |
-| Repositories | 8% | 4-6 hours |
-| Project Management | 7% | 4-5 hours |
+### Day 27: Light review
+- [ ] Skim the key exam points of all seven notes
+- [ ] Check your exam appointment, ID and (for online delivery) your system check
 
-### Recommended Daily Schedule
-- **30 min** reading documentation/notes
-- **30 min** hands-on practice on GitHub
-- **15 min** reviewing flashcards or key concepts
-- **Total: ~1.25 hours/day**
+### Day 28: Exam day
+- [ ] Light review of the fact sheet only
+- [ ] 100 minutes: first pass, flag, second pass, final check
+- [ ] Read every option; eliminate the look-alike feature
+
+## Daily rhythm
+
+- **25 minutes** reading the note section
+- **25 minutes** trying it on GitHub
+- **10 minutes** flashcards or key exam points
