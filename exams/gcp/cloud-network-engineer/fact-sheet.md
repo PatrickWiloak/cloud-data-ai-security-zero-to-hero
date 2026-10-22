@@ -1,11 +1,12 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
 ---
 
 # GCP Professional Cloud Network Engineer - Comprehensive Fact Sheet
 
 ## Table of Contents
 - [Exam Overview](#exam-overview)
+- [High-Yield Facts by Section](#high-yield-facts-by-section)
 - [Virtual Private Cloud (VPC)](#virtual-private-cloud-vpc)
 - [Shared VPC & VPC Peering](#shared-vpc--vpc-peering)
 - [Hybrid Connectivity](#hybrid-connectivity)
@@ -22,22 +23,96 @@ last-updated: 2026-05-03
 
 **[📖 Professional Cloud Network Engineer Certification](https://cloud.google.com/learn/certification/cloud-network-engineer)** - Official certification page with exam guide and sample questions
 
-**[📖 Exam Guide PDF](https://cloud.google.com/learn/certification/cloud-network-engineer)** - Detailed exam domains and objectives breakdown
+**[📖 Exam Guide PDF](https://services.google.com/fh/files/misc/042426_professional_cloud_network_engineer_exam_guide_english.pdf)** - Current six-section outline with every consideration
 
-**Exam Details:**
-- Duration: 2 hours
-- Questions: 50-60 (multiple choice and multiple select)
-- Cost: $200 USD
-- Validity: 2 years
-- Languages: English, Japanese
-- Format: Remote or test center
+**Exam Name:** Professional Cloud Network Engineer
+**Duration:** 2 hours
+**Questions:** 50-60
+**Format:** Multiple choice and multiple select
+**Passing Score:** Not published
+**Cost:** $200 USD (plus tax where applicable)
+**Languages:** English, Japanese
+**Validity:** 2 years
+**Delivery:** Online proctored or onsite at a test center
+**Prerequisites:** None required; recommended 3+ years of industry experience including 1+ year on Google Cloud
 
-**Exam Domains:**
-1. Designing, planning, and prototyping a GCP network (26%)
-2. Implementing Virtual Private Cloud (VPC) instances (21%)
-3. Configuring network services (23%)
-4. Implementing hybrid interconnectivity (14%)
-5. Implementing network security (16%)
+**Exam Sections (current guide):**
+
+| Section | Weight | Study note |
+|---------|--------|------------|
+| 1. Designing and planning a Google Cloud VPC network | ~21% | [notes/01](notes/01-designing-planning-vpc-network.md) |
+| 2. Implementing a VPC network | ~20% | [notes/02](notes/02-implementing-vpc-network.md) |
+| 3. Configuring managed network services | ~16% | [notes/03](notes/03-managed-network-services.md) |
+| 4. Configuring and implementing hybrid and multicloud network interconnectivity | ~16% | [notes/04](notes/04-hybrid-multicloud-interconnectivity.md) |
+| 5. Managing, monitoring, and troubleshooting network operations | ~14% | [notes/05](notes/05-network-operations-monitoring-troubleshooting.md) |
+| 6. Configuring, implementing and managing a cloud network security solution | ~13% | [notes/06](notes/06-network-security.md) |
+
+---
+
+## High-Yield Facts by Section
+
+### Section 1 - Designing and planning (~21%)
+
+- Global external Application and proxy Network Load Balancers require **Premium Tier**; Standard Tier is regional only.
+- VPCs are global, subnets regional; custom mode for production; Shared VPC service projects attach to exactly one host project.
+- Peering is **non-transitive**; NCC VPC spokes give transitive hub routing in **mesh** or **star** (fixed at hub creation).
+- Subnets reserve 4 IPv4 addresses, minimum `/29`, can be expanded but never shrunk; IPv6 subnets are `/64`, internal ULA `/48` per VPC from `fd20::/20`.
+- PUPI subnet routes are not exported over peering unless enabled; Private NAT handles overlapping ranges toward NCC spokes and hybrid networks.
+- VPC MTU default **1,460**, range **1,300-8,896**; VLAN attachment MTU 1440/1460/1500/8896.
+- **99.99% Interconnect**: four connections, two metros, Cloud Routers in two regions, **global** dynamic routing. **99.9%**: two connections in one metro, different edge availability domains.
+- Direct Peering reaches Google public services, **not VPCs**, and has **no SLA**; Verified Peering Provider avoids Direct Peering requirements.
+- Interconnect is not encrypted: **MACsec** (L2 to Google edge) or **HA VPN over Cloud Interconnect** (IPsec, encrypted VLAN attachments).
+- GKE default 110 Pods per node = `/24` per node; DNS-based control plane endpoint is IAM-controlled.
+
+### Section 2 - Implementing (~20%)
+
+- Route selection: policy-based routes, then subnet routes, then longest prefix, then priority, then ECMP; static routes cannot equal or sit inside a subnet range.
+- Peering needs both sides; custom routes need export plus import; tag-scoped static routes and the default internet route are never exchanged.
+- Shared VPC service agents (Google APIs, GKE) need `compute.networkUser`; GKE also needs `container.hostServiceAgentUser`.
+- `private.googleapis.com` = `199.36.153.8/30`; `restricted.googleapis.com` = `199.36.153.4/30` (VPC Service Controls only).
+- Regional dynamic routing keeps learned routes in one region; global installs them everywhere with an inter-region cost.
+- An internal passthrough NLB next hop forwards all ports and keeps forwarding even if all backends are unhealthy.
+- NCC spoke types: VPC, hybrid (VPN, VLAN attachment, router appliance), producer VPC; different spokes need different ASNs.
+- GKE Dataplane V2 (eBPF, Cilium) only at cluster creation; NetworkPolicy always on; ip-masq-agent `nonMasqueradeCIDRs` controls SNAT.
+
+### Section 3 - Managed network services (~16%)
+
+- UDP or client-IP preservation means a passthrough NLB; Envoy-based LBs need a **proxy-only subnet**.
+- Health check probes come from `35.191.0.0/16` and `130.211.0.0/22`; capacity scaler `0` drains a backend.
+- Cloud CDN works with global external or classic Application LBs; origins include MIGs, backend buckets, serverless NEGs, internet NEGs and S3 with private origin authentication.
+- CDN invalidation is issued on the URL map; wildcard only at the end of a path; prefer versioned URLs.
+- Cloud DNS routing policies: weighted round robin, geolocation, failover; health checks on internal LBs (private zones) or external endpoints (public zones).
+- DNSSEC needs the **DS record at the registrar**; outbound forwarding comes from `35.199.192.0/19`.
+
+### Section 4 - Hybrid and multicloud (~16%)
+
+- Dedicated circuits 10, 100 or 400 Gbps (up to 8 per connection); LOA-CFA to the colocation provider.
+- Partner Interconnect: Cloud Router ASN **16550**, pairing key, 50 Mbps-50 Gbps attachments; Layer 2 = you run BGP, Layer 3 = provider runs BGP.
+- Cross-Cloud Interconnect to AWS, Azure, OCI and Alibaba Cloud.
+- HA VPN: two interfaces, BGP only, 99.99% with tunnels on both; about 250,000 packets per second per tunnel. Classic VPN: static only, 99.9%.
+- BFD only on Interconnect VLAN attachments; defaults 1000 ms interval, multiplier 5.
+- Custom advertisement for peered subnets, PSA ranges, PGA VIPs and PSC endpoint IPs; custom learned routes withdraw with the BGP session.
+- Standard best path selection uses AS path across all Cloud Routers; legacy is the default.
+
+### Section 5 - Operations (~14%)
+
+- Flow logs, firewall rule logging, Cloud NAT logging, DNS query logging and LB logging are all **off by default**.
+- Firewall Insights hit-based insights need Firewall Rules Logging; implied rules are never logged.
+- Connectivity Tests: configuration analysis plus live data plane analysis.
+- Performance Dashboard: Google Cloud-wide vs project views of loss and latency.
+- Network Analyzer: continuous automatic misconfiguration and IP utilization insights.
+- Flow Analyzer: VPC Flow Logs in a Log Analytics-enabled bucket, 5-tuple analysis without SQL.
+
+### Section 6 - Security (~13%)
+
+- Cloud Armor edge policies run before the CDN cache; network edge policies protect passthrough endpoints (Enterprise).
+- WAF sensitivity 1 = highest-confidence signatures only; 4 = all signatures.
+- Enterprise-only: full Adaptive Protection, Google Threat Intelligence, named IP lists, advanced network DDoS protection.
+- Default firewall order: org policy, folder policies, VPC firewall rules, global network policy, regional network policy, implied rules.
+- NGFW tiers: Essentials (L3/L4, secure tags, address groups), Standard (FQDN, geolocation, threat intelligence), Enterprise (IPS endpoints, TLS inspection).
+- Cloud NAT: 64,512 ports per IP; static default 64 ports per VM; dynamic port allocation default minimum 32; DPA and EIM are mutually exclusive.
+- Secure Web Proxy: deny by default, regional, proxy-only subnet, identity- and URL-based egress rules.
+- Packet Mirroring sources share one project, VPC and region; collector behind an internal passthrough NLB.
 
 ---
 
@@ -315,7 +390,7 @@ last-updated: 2026-05-03
 
 ### Cloud Armor
 
-**[📖 Cloud Armor Overview](https://cloud.google.com/armor/docs/cloud-armor-overview)** - DDoS protection and Web Application Firewall for HTTP(S) load balancers
+**[📖 Cloud Armor Overview](https://cloud.google.com/armor/docs/cloud-armor-overview)** - DDoS protection and WAF for Application LBs, proxy NLBs, passthrough NLBs and public-IP VMs
 
 **[📖 Security Policies](https://cloud.google.com/armor/docs/configure-security-policies)** - Creating and managing Cloud Armor security rules
 
@@ -457,11 +532,11 @@ last-updated: 2026-05-03
 
 **[📖 Hybrid Connectivity NEGs](https://cloud.google.com/load-balancing/docs/negs/hybrid-neg-concepts)** - Routing to on-premises endpoints via VPN/Interconnect
 
-### Traffic Director
+### Cloud Service Mesh (formerly Traffic Director)
 
 **[📖 Traffic Director Overview](https://cloud.google.com/traffic-director/docs/traffic-director-concepts)** - Service mesh traffic management for microservices
 
-**[📖 Traffic Director Architecture](https://docs.cloud.google.com/service-mesh/docs/overview)** - Control plane for Envoy-based service proxies
+**[📖 Cloud Service Mesh overview](https://docs.cloud.google.com/service-mesh/docs/overview)** - Control plane for Envoy-based service proxies
 
 **[📖 Traffic Splitting](https://docs.cloud.google.com/service-mesh/docs/overview)** - Weighted routing and canary deployments
 
@@ -485,7 +560,17 @@ last-updated: 2026-05-03
 
 ### Advanced Security Features
 
-**[📖 Binary Authorization for Borg](https://cloud.google.com/binary-authorization/docs/overview)** - Container deployment security policies
+**[📖 Cloud NGFW overview](https://docs.cloud.google.com/firewall/docs/about-firewalls)** - Essentials, Standard and Enterprise tiers and policy types
+
+**[📖 Firewall policy rule evaluation order](https://docs.cloud.google.com/firewall/docs/firewall-policies-rule-eval-order)** - Hierarchical, VPC rule and network policy ordering
+
+**[📖 Secure Web Proxy](https://docs.cloud.google.com/secure-web-proxy/docs/overview)** - Managed, identity-aware egress web proxy
+
+**[📖 Network Security Integration](https://docs.cloud.google.com/network-security-integration/docs/nsi-overview)** - Out-of-band mirroring and in-band intercept to third-party appliances
+
+**[📖 Network Connectivity Center](https://docs.cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/overview)** - Hub-and-spoke connectivity for VPC and hybrid spokes
+
+**[📖 Cross-Cloud Interconnect](https://docs.cloud.google.com/network-connectivity/docs/interconnect/concepts/cci-overview)** - Dedicated links to other clouds
 
 **[📖 Organization Policy Constraints](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints)** - Network configuration guardrails at organization level
 
@@ -612,37 +697,19 @@ gcloud network-management connectivity-tests create TEST_NAME --source-instance=
 
 ## Exam Tips & Strategies
 
-### Domain-Specific Focus
+### Section-Specific Focus
 
-**VPC Design (26% of exam):**
-- Master subnet sizing and CIDR planning
-- Understand Shared VPC vs VPC Peering use cases
-- Know firewall rule evaluation order
-- Practice routing and next-hop scenarios
+**Section 1 - Designing and planning (~21%):** network tiers, load balancer choice, Shared VPC vs peering vs NCC vs PSC, IPAM (IPv6, PUPI, Private NAT), MTU, hybrid SLA topologies, hybrid DNS, MACsec, GKE IP planning.
 
-**VPC Implementation (21% of exam):**
-- Hands-on practice creating VPCs and subnets
-- Configure firewall rules with various targets
-- Set up private Google access
-- Implement alias IP ranges
+**Section 2 - Implementing (~20%):** subnets and special-purpose subnets, peering flags, Shared VPC IAM, Private Google Access, VPC Service Controls, route selection, ILB next hop, policy-based routes, NCC spokes and topologies, GKE networking.
 
-**Network Services (23% of exam):**
-- Know all load balancer types and use cases
-- Understand Cloud CDN cache modes
-- Practice SSL certificate management
-- Configure Cloud NAT and Cloud DNS
+**Section 3 - Managed services (~16%):** load balancer types and components, backends and NEGs, GKE Gateway, traffic management, Cloud CDN origins and invalidation, Cloud DNS routing policies, DNSSEC, forwarding, peering and cross-project binding.
 
-**Hybrid Connectivity (14% of exam):**
-- Compare VPN, Dedicated Interconnect, Partner Interconnect
-- Understand Cloud Router and BGP configuration
-- Know redundancy and failover patterns
-- Practice VPN troubleshooting
+**Section 4 - Hybrid and multicloud (~16%):** Dedicated, Partner and Cross-Cloud Interconnect, HA VPN and Classic VPN, Cloud Router BGP, BFD, custom routes, best path selection, NCC hybrid spokes.
 
-**Network Security (16% of exam):**
-- Master Cloud Armor rule configuration
-- Understand IAP and context-aware access
-- Know VPC Service Controls concepts
-- Practice packet mirroring setup
+**Section 5 - Operations (~14%):** logs and metrics per component, draining, VPN, Interconnect and BGP troubleshooting, Network Intelligence Center tools.
+
+**Section 6 - Security (~13%):** Cloud Armor, Cloud NGFW policies and tiers, secure tags, migration, Cloud NAT, Secure Web Proxy, NVAs, Network Security Integration, Packet Mirroring.
 
 ### Common Exam Scenarios
 
@@ -665,13 +732,6 @@ gcloud network-management connectivity-tests create TEST_NAME --source-instance=
 ## Certification Value
 
 ### Career Impact
-
-**Job Roles:**
-- Cloud Network Engineer: $110,000 - $160,000
-- Senior Network Architect: $130,000 - $200,000
-- Cloud Infrastructure Engineer: $120,000 - $180,000
-- Network Security Engineer: $115,000 - $175,000
-- Solutions Architect (Networking): $125,000 - $190,000
 
 **Skills Validated:**
 - Enterprise network design and implementation
@@ -710,8 +770,4 @@ gcloud network-management connectivity-tests create TEST_NAME --source-instance=
 
 ---
 
-*This fact sheet contains 100 embedded documentation links to official Google Cloud documentation.*
-
-**Last Updated:** October 2024
-**Certification Validity:** 2 years from passing
-**Recertification:** Required every 2 years
+**Certification Validity:** 2 years from passing; recertify in the final 60 days of validity

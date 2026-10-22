@@ -1,398 +1,192 @@
+---
+last-updated: 2026-10-22
+---
+
 # Google Cloud Professional Cloud Network Engineer Practice Plan
 
-## 12-Week Intensive Study Schedule
-
-### Phase 1: Network Foundations and VPC (Weeks 1-4)
-
-#### Week 1: Networking Fundamentals and GCP Overview
-**Focus:** Core networking concepts and Google Cloud networking introduction
-
-#### Day 1-2: Network Fundamentals Review
-- [ ] Review OSI and TCP/IP models
-- [ ] Study subnetting and CIDR notation
-- [ ] Understand routing protocols (BGP, OSPF)
-- [ ] Learn DNS and network services
-- [ ] **Reading:** Network fundamentals and protocols
-
-#### Day 3-4: GCP Networking Overview
-- [ ] Set up GCP account and networking environment
-- [ ] Install gcloud CLI and networking tools
-- [ ] Study GCP network architecture
-- [ ] Understand global vs regional resources
-- [ ] **Lab:** Navigate GCP networking console
-
-#### Day 5-7: VPC Fundamentals
-- [ ] Study VPC architecture and concepts
-- [ ] Learn about auto mode vs custom mode networks
-- [ ] Understand regional subnets
-- [ ] Practice with VPC creation
-- [ ] **Practice:** Create and configure VPCs
-
-#### Week 1 Assessment
-- [ ] Complete networking fundamentals quiz
-- [ ] Design basic VPC architecture
-- [ ] Document VPC best practices
-
-### Week 2: VPC Advanced Features and Firewall Rules
-
-#### Day 1-2: Subnets and IP Address Management
-- [ ] Study subnet design and planning
-- [ ] Learn IP address allocation strategies
-- [ ] Understand primary and secondary ranges
-- [ ] Practice with subnet expansion
-- [ ] **Lab:** Design and implement subnet architecture
-
-#### Day 3-4: Firewall Rules and Security
-- [ ] Study hierarchical firewall policies
-- [ ] Learn ingress and egress rules
-- [ ] Understand rule priorities and targeting
-- [ ] Practice with firewall configuration
-- [ ] **Practice:** Implement security zones with firewalls
-
-#### Day 5-7: VPC Peering and Shared VPC
-- [ ] Study VPC peering architecture
-- [ ] Learn Shared VPC design patterns
-- [ ] Understand service projects and host projects
-- [ ] Practice with VPC connectivity
-- [ ] **Lab:** Configure VPC peering and Shared VPC
-
-#### Week 2 Assessment
-- [ ] VPC configuration practice exam
-- [ ] Design multi-tier VPC architecture
-- [ ] Create firewall rules documentation
-
-### Week 3: Load Balancing
-
-#### Day 1-2: Load Balancing Fundamentals
-- [ ] Study load balancing types and tiers
-- [ ] Learn global vs regional load balancers
-- [ ] Understand backend services and health checks
-- [ ] Practice with basic load balancer setup
-- [ ] **Lab:** Deploy first load balancer
-
-#### Day 3-4: HTTP(S) and SSL/TCP Load Balancing
-- [ ] Study global HTTP(S) load balancer
-- [ ] Learn SSL proxy and TCP proxy load balancers
-- [ ] Understand URL maps and host/path rules
-- [ ] Practice with SSL certificate management
-- [ ] **Practice:** Configure advanced load balancing
-
-#### Day 5-7: Network and Internal Load Balancing
-- [ ] Study network load balancer (regional)
-- [ ] Learn internal TCP/UDP load balancer
-- [ ] Understand traffic distribution algorithms
-- [ ] Practice with internal load balancing
-- [ ] **Lab:** Implement complete load balancing architecture
-
-#### Week 3 Assessment
-- [ ] Load balancing practice test
-- [ ] Design global load balancing solution
-- [ ] Compare load balancer types
-
-### Week 4: Cloud CDN and DNS
-
-#### Day 1-2: Cloud CDN Configuration
-- [ ] Study Cloud CDN architecture
-- [ ] Learn cache modes and policies
-- [ ] Understand origin configuration
-- [ ] Practice with CDN enablement
-- [ ] **Lab:** Configure Cloud CDN
-
-#### Day 3-4: Cloud DNS
-- [ ] Study managed DNS zones
-- [ ] Learn public and private DNS
-- [ ] Understand DNSSEC implementation
-- [ ] Practice with DNS configuration
-- [ ] **Practice:** Implement DNS architecture
-
-#### Day 5-7: Traffic Director and Network Endpoint Groups
-- [ ] Study Traffic Director service mesh
-- [ ] Learn about Network Endpoint Groups (NEGs)
-- [ ] Understand advanced traffic management
-- [ ] Practice with service routing
-- [ ] **Lab:** Configure Traffic Director
-
-#### Week 4 Assessment
-- [ ] CDN and DNS practice exam
-- [ ] Design content delivery architecture
-- [ ] Create DNS strategy
-
-### Phase 2: Hybrid Connectivity and Security (Weeks 5-8)
-
-#### Week 5: Cloud VPN and Hybrid Connectivity
-
-#### Day 1-2: Cloud VPN Fundamentals
-- [ ] Study Cloud VPN architecture
-- [ ] Learn HA VPN vs Classic VPN
-- [ ] Understand IPsec tunnels
-- [ ] Practice VPN configuration
-- [ ] **Lab:** Deploy Cloud VPN
-
-#### Day 3-4: High Availability VPN
-- [ ] Study HA VPN design patterns
-- [ ] Learn redundancy and failover
-- [ ] Understand BGP routing over VPN
-- [ ] Practice with HA VPN setup
-- [ ] **Practice:** Implement redundant VPN
-
-#### Day 5-7: Cloud Router and Dynamic Routing
-- [ ] Study Cloud Router architecture
-- [ ] Learn BGP configuration and peering
-- [ ] Understand route advertisement
-- [ ] Practice with dynamic routing
-- [ ] **Lab:** Configure Cloud Router with BGP
-
-#### Week 5 Assessment
-- [ ] VPN and routing practice test
-- [ ] Design hybrid connectivity solution
-- [ ] Create VPN failover procedures
-
-### Week 6: Cloud Interconnect
-
-#### Day 1-2: Dedicated Interconnect
-- [ ] Study Dedicated Interconnect architecture
-- [ ] Learn colocation requirements
-- [ ] Understand VLAN attachments
-- [ ] Practice with Interconnect planning
-- [ ] **Lab:** Plan Dedicated Interconnect deployment
-
-#### Day 3-4: Partner Interconnect
-- [ ] Study Partner Interconnect options
-- [ ] Learn service provider integration
-- [ ] Understand capacity and redundancy
-- [ ] Practice with Partner Interconnect
-- [ ] **Practice:** Compare Interconnect options
-
-#### Day 5-7: Hybrid Connectivity Patterns
-- [ ] Study hybrid architecture patterns
-- [ ] Learn multi-region connectivity
-- [ ] Understand bandwidth optimization
-- [ ] Practice with hybrid designs
-- [ ] **Lab:** Design complete hybrid solution
-
-#### Week 6 Assessment
-- [ ] Interconnect practice exam
-- [ ] Design enterprise hybrid connectivity
-- [ ] Create connectivity decision matrix
-
-### Week 7: Network Security
-
-#### Day 1-2: Cloud Armor and DDoS Protection
-- [ ] Study Cloud Armor WAF features
-- [ ] Learn security policies and rules
-- [ ] Understand DDoS protection
-- [ ] Practice with Cloud Armor configuration
-- [ ] **Lab:** Implement Cloud Armor protection
-
-#### Day 3-4: Identity-Aware Proxy and Private Access
-- [ ] Study Identity-Aware Proxy (IAP)
-- [ ] Learn context-aware access
-- [ ] Understand private Google access
-- [ ] Practice with IAP configuration
-- [ ] **Practice:** Implement zero-trust access
-
-#### Day 5-7: VPC Service Controls and Private Service Connect
-- [ ] Study VPC Service Controls
-- [ ] Learn Private Service Connect
-- [ ] Understand service perimeter design
-- [ ] Practice with private connectivity
-- [ ] **Lab:** Configure VPC Service Controls
-
-#### Week 7 Assessment
-- [ ] Network security practice test
-- [ ] Design secure network architecture
-- [ ] Create security policy framework
-
-### Week 8: Advanced Networking and Troubleshooting
-
-#### Day 1-2: Packet Mirroring and Network Intelligence
-- [ ] Study Packet Mirroring for traffic analysis
-- [ ] Learn Network Intelligence Center
-- [ ] Understand network topology visualization
-- [ ] Practice with monitoring tools
-- [ ] **Lab:** Set up network monitoring
-
-#### Day 3-4: Cloud NAT and Private Google Access
-- [ ] Study Cloud NAT architecture
-- [ ] Learn Private Google Access configuration
-- [ ] Understand egress traffic patterns
-- [ ] Practice with NAT configuration
-- [ ] **Practice:** Implement secure egress
-
-#### Day 5-7: Network Troubleshooting
-- [ ] Study connectivity troubleshooting
-- [ ] Learn performance analysis tools
-- [ ] Understand common network issues
-- [ ] Practice with debugging scenarios
-- [ ] **Lab:** Troubleshoot network problems
-
-#### Week 8 Assessment
-- [ ] Advanced networking practice exam
-- [ ] Design monitoring and troubleshooting strategy
-- [ ] Create network runbooks
-
-### Phase 3: Real-World Implementation (Weeks 9-11)
-
-#### Week 9: Project 1 - Enterprise Multi-Region Network
-
-#### Day 1-2: Architecture Design
-- [ ] Design global multi-region network
-- [ ] Plan hub-and-spoke topology
-- [ ] Design security zones and segmentation
-- [ ] Create IP addressing scheme
-- [ ] **Design:** Complete network architecture
-
-#### Day 3-5: Implementation
-- [ ] Deploy VPC infrastructure across regions
-- [ ] Configure global load balancing
-- [ ] Implement Cloud CDN and DNS
-- [ ] Set up monitoring and alerting
-- [ ] **Build:** Multi-region network
-
-#### Day 6-7: Testing and Optimization
-- [ ] Test connectivity and performance
-- [ ] Validate security controls
-- [ ] Optimize routing and costs
-- [ ] Document architecture
-- [ ] **Review:** Network assessment
-
-### Week 10: Project 2 - Hybrid Cloud Connectivity
-
-#### Day 1-2: Hybrid Architecture Design
-- [ ] Design on-premises to cloud connectivity
-- [ ] Plan redundant Interconnect/VPN
-- [ ] Design BGP routing strategy
-- [ ] Plan disaster recovery
-- [ ] **Design:** Hybrid network architecture
-
-#### Day 3-5: Implementation
-- [ ] Deploy Cloud VPN or Interconnect
-- [ ] Configure Cloud Router and BGP
-- [ ] Implement private Google access
-- [ ] Set up monitoring
-- [ ] **Build:** Hybrid connectivity
-
-#### Day 6-7: Validation and Optimization
-- [ ] Test failover procedures
-- [ ] Validate performance and latency
-- [ ] Optimize routing policies
-- [ ] Create operational procedures
-- [ ] **Review:** Hybrid solution assessment
-
-### Week 11: Project 3 - Secure Microservices Network
-
-#### Day 1-2: Microservices Network Design
-- [ ] Design GKE network architecture
-- [ ] Plan service mesh integration
-- [ ] Design security policies
-- [ ] Plan load balancing strategy
-- [ ] **Design:** Microservices network
-
-#### Day 3-5: Implementation
-- [ ] Deploy GKE clusters with custom networking
-- [ ] Configure internal load balancing
-- [ ] Implement network policies
-- [ ] Set up service mesh (Istio/ASM)
-- [ ] **Build:** Microservices infrastructure
-
-#### Day 6-7: Security and Optimization
-- [ ] Implement zero-trust networking
-- [ ] Configure IAP for services
-- [ ] Optimize inter-service communication
-- [ ] Monitor and troubleshoot
-- [ ] **Review:** Security and performance assessment
-
-### Phase 4: Exam Preparation (Week 12)
-
-#### Week 12: Final Review and Exam
-
-#### Day 1-2: Comprehensive Review
-- [ ] Review all networking services
-- [ ] Study architecture patterns
-- [ ] Review security best practices
-- [ ] Practice with scenarios
-- [ ] **Focus:** Knowledge consolidation
-
-#### Day 3-4: Practice Exams
-- [ ] Take first full practice exam (2 hours)
-- [ ] Analyze results and gaps
-- [ ] Review incorrect answers
-- [ ] Take second practice exam
-- [ ] **Target:** Score 85%+ consistently
-
-#### Day 5-6: Scenario Practice
-- [ ] Practice network design scenarios
-- [ ] Review troubleshooting procedures
-- [ ] Study hybrid connectivity patterns
-- [ ] Practice with optimization scenarios
-- [ ] **Preparation:** Final scenario review
-
-#### Day 7: Exam Readiness
-- [ ] Light review of key concepts
-- [ ] Review exam logistics
-- [ ] Prepare exam environment
-- [ ] Rest and stay confident
-- [ ] **Ready:** Take the exam
-
-## Daily Study Routine (2-3 hours)
-
-### Weekday Study (2-3 hours)
-- **Morning (60 minutes):** Networking theory and documentation
-- **Evening (60-90 minutes):** Hands-on configuration labs
-
-### Weekend Deep Dive (4-6 hours each day)
-- **Complete network implementations**
-- **Architecture design exercises**
-- **Troubleshooting simulations**
-- **Practice exams and review**
-
-## gcloud CLI Practice Commands
+## 10-Week Plan Mapped to the Current Exam Guide
+
+The plan follows the six sections of the current exam guide. Time is weighted by section weight: the two biggest sections (Section 1 at ~21% and Section 2 at ~20%) get two weeks each, and the remaining sections a week or more, with labs throughout and a final review fortnight. Budget about 8-10 hours a week (weekday evenings for reading, one longer weekend block for labs). Use a sandbox project with billing alerts, and tear labs down the same day: Interconnect cannot be practiced for real, but HA VPN between two VPCs, load balancers, Cloud NAT, NCC VPC spokes and Cloud Armor all can.
+
+| Week | Exam section | Weight | Note |
+|------|--------------|--------|------|
+| 1-2 | 1. Designing and planning a Google Cloud VPC network | ~21% | [01-designing-planning-vpc-network.md](notes/01-designing-planning-vpc-network.md) |
+| 3-4 | 2. Implementing a VPC network | ~20% | [02-implementing-vpc-network.md](notes/02-implementing-vpc-network.md) |
+| 5 | 3. Configuring managed network services | ~16% | [03-managed-network-services.md](notes/03-managed-network-services.md) |
+| 6 | 4. Configuring and implementing hybrid and multicloud network interconnectivity | ~16% | [04-hybrid-multicloud-interconnectivity.md](notes/04-hybrid-multicloud-interconnectivity.md) |
+| 7 | 5. Managing, monitoring, and troubleshooting network operations | ~14% | [05-network-operations-monitoring-troubleshooting.md](notes/05-network-operations-monitoring-troubleshooting.md) |
+| 8 | 6. Configuring, implementing and managing a cloud network security solution | ~13% | [06-network-security.md](notes/06-network-security.md) |
+| 9-10 | Review, practice exams, weak areas | - | [fact-sheet.md](fact-sheet.md), [strategy.md](strategy.md), [scenarios.md](scenarios.md) |
+
+---
+
+## Week 1: Section 1, architecture and VPC design (tasks 1.1-1.2)
+
+**Read:** [Section 1 note](notes/01-designing-planning-vpc-network.md), tasks 1.1 and 1.2.
+
+- [ ] Premium vs Standard Tier: which load balancers need Premium, and why
+- [ ] HA/DR building blocks: zonal, regional and global resources; global load balancer failover
+- [ ] DNS topology: public, private, forwarding, peering zones; hub DNS VPC
+- [ ] Load balancer selection: walk the four questions for ten made-up requirements
+- [ ] IAM roles: networkAdmin vs securityAdmin vs xpnAdmin vs networkUser vs loadBalancerServiceUser
+- [ ] Managed-service connectivity: private services access vs PSC vs Direct VPC egress vs Serverless VPC Access
+- [ ] VPC count and type: custom mode, Shared VPC, peering vs NCC vs PSC
+- [ ] IPAM: subnet sizing and expansion, IPv6 ULA and GUA, BYOIP, PUPI, internal ranges, Private NAT
+- [ ] MTU: 1,460 default, 1,300-8,896 range; jumbo frame trade-offs
+- [ ] NVA insertion: multi-NIC, IP forwarding, ILB next hop, policy-based routes
+- [ ] **Lab:** design (on paper) a two-environment Shared VPC with a full IP plan including GKE Pod ranges, PSA range and proxy-only subnets
+
+## Week 2: Section 1, hybrid, multicloud and GKE design (tasks 1.3-1.4)
+
+**Read:** [Section 1 note](notes/01-designing-planning-vpc-network.md), tasks 1.3 and 1.4.
+
+- [ ] Hybrid options table: HA VPN, Classic VPN, Dedicated, Partner, SD-WAN via NCC
+- [ ] Cross-Cloud Interconnect: supported clouds, port speeds, SLA shapes
+- [ ] Direct Peering vs Verified Peering Provider (public Google services, no VPC access, no SLA)
+- [ ] 99.9% vs 99.99% Interconnect topologies; global dynamic routing requirement
+- [ ] Reaching many VPCs from on-premises: Shared VPC, hub peering with custom routes, NCC
+- [ ] Private access to Google APIs and Gemini Enterprise Agent Platform (formerly Vertex AI) from on-premises: PGA VIPs and PSC endpoints
+- [ ] Hybrid DNS: inbound policy, forwarding zones, `35.199.192.0/19`, cross-project binding, DNS peering
+- [ ] MTU for VLAN attachments and VPN; MACsec vs HA VPN over Interconnect
+- [ ] GKE: private nodes, DNS-based endpoint vs IP endpoints, authorized networks, Pod range math, PUPI, IPv6, Gateway vs Ingress vs Service LB
+- [ ] **Lab:** size Pod, Service and node ranges for a 300-node cluster at 110 and at 32 Pods per node
+
+## Week 3: Section 2, VPCs and routing (tasks 2.1-2.2)
+
+**Read:** [Section 2 note](notes/02-implementing-vpc-network.md), tasks 2.1 and 2.2.
+
+- [ ] Create custom VPCs, subnets with secondary ranges, a proxy-only subnet and a dual-stack subnet
+- [ ] Private services access range and connection; export custom routes
+- [ ] Peer two VPCs both ways; exchange custom routes; test non-transitivity with a third VPC
+- [ ] Shared VPC: enable host, attach service project, subnet-level networkUser, service agent roles
+- [ ] Private Google Access, restricted VIP DNS zone and route, a PSC endpoint for Google APIs
+- [ ] Expand a subnet range
+- [ ] VPC Service Controls perimeter in dry-run, read the violations
+- [ ] Routing: subnet vs static vs dynamic vs PBR order; tag-scoped routes; regional vs global dynamic routing
+- [ ] Internal passthrough NLB as next hop for two appliance VMs
+- [ ] **Lab:** build hub and spoke with peering, an appliance pair behind an ILB next hop, and a policy-based route with a `DEFAULT_ROUTING` exception
+
+## Week 4: Section 2, NCC and GKE (tasks 2.3-2.4)
+
+**Read:** [Section 2 note](notes/02-implementing-vpc-network.md), tasks 2.3 and 2.4.
+
+- [ ] NCC spoke types: VPC, hybrid, router appliance, producer VPC
+- [ ] Mesh vs star hub; spoke acceptance; export include/exclude ranges
+- [ ] Private NAT for an overlapping spoke; PSC connection propagation and its Private NAT caveat
+- [ ] Hub route tables and spoke state for troubleshooting
+- [ ] GKE: VPC-native cluster in Shared VPC, private nodes, DNS-based endpoint, authorized networks
+- [ ] Dataplane V2 and network policies; ip-masq-agent nonMasqueradeCIDRs
+- [ ] Additional Pod ranges at cluster and node pool level
+- [ ] Cloud DNS for GKE scopes and NodeLocal DNSCache
+- [ ] **Lab:** NCC star hub with three VPC spokes (one center, two edge) and confirm edge-to-edge is blocked; then a Dataplane V2 cluster with a deny-all plus allow NetworkPolicy
+
+## Week 5: Section 3, managed network services
+
+**Read:** [Section 3 note](notes/03-managed-network-services.md).
+
+- [ ] Load balancer family and old-to-new name mapping
+- [ ] Anatomy: forwarding rule, target proxy, URL map, backend service, backends; load balancing schemes
+- [ ] Balancing modes, capacity scaler, session affinity, health check ranges, global access, failover backends
+- [ ] NEG types: zonal, serverless, internet, hybrid, PSC
+- [ ] GKE: Service LoadBalancer, Ingress classes, Gateway classes, container-native LB
+- [ ] Traffic splitting, mirroring, URL rewrite, redirects
+- [ ] Cloud CDN origins, cache modes, cache keys, signed URLs, invalidation rules, internet NEGs and S3 origins
+- [ ] Cloud DNS zones, migration steps, routing policies with health checks, DNSSEC and the DS record, forwarding and server policies, split horizon, cross-project binding, DNS peering, ExternalDNS
+- [ ] **Lab:** global external Application LB with two regional MIGs, a backend bucket with CDN, a 90/10 traffic split, and a Cloud DNS failover policy in a private zone
+
+## Week 6: Section 4, hybrid and multicloud interconnectivity
+
+**Read:** [Section 4 note](notes/04-hybrid-multicloud-interconnectivity.md).
+
+- [ ] Dedicated Interconnect flow (LOA-CFA, VLAN attachments, MTU options)
+- [ ] Partner Interconnect flow (ASN 16550, pairing key, Layer 2 vs Layer 3)
+- [ ] Cross-Cloud Interconnect build steps
+- [ ] HA VPN over Cloud Interconnect (encrypted attachments, two Cloud Routers)
+- [ ] 99.9% and 99.99% topologies, memorized
+- [ ] HA VPN to on-premises and gateway-to-gateway between VPCs; Classic VPN route-based vs policy-based
+- [ ] Cloud Router: ASNs, link-local IPs, MED, MD5, BFD timers, custom advertisements, custom learned routes, legacy vs standard best path selection
+- [ ] NCC hybrid spokes, site-to-site data transfer, router appliances, transitivity table
+- [ ] **Lab:** HA VPN between two VPCs (four tunnels if you like), custom advertisement of a peered range, MED-based primary/backup, then add both as NCC spokes
+
+## Week 7: Section 5, operations, monitoring and troubleshooting
+
+**Read:** [Section 5 note](notes/05-network-operations-monitoring-troubleshooting.md).
+
+- [ ] Which logs are on by default and which must be enabled (flow logs, firewall logging, NAT, DNS, LB)
+- [ ] Metrics and alerts for VPN, Interconnect, Cloud Router, load balancers, Cloud Armor, Cloud NAT
+- [ ] Draining with connection draining, capacity scaler and traffic splitting
+- [ ] VPN, Interconnect and BGP troubleshooting tables
+- [ ] Flow logs vs firewall logs vs Packet Mirroring
+- [ ] Network Intelligence Center: Network Topology, Connectivity Tests, Performance Dashboard, Firewall Insights, Network Analyzer, Flow Analyzer
+- [ ] **Lab:** break things on purpose (remove the health check firewall rule, mismatch a BGP ASN, delete a route) and diagnose each with a Connectivity Test, logs and `get-status`
+
+## Week 8: Section 6, network security
+
+**Read:** [Section 6 note](notes/06-network-security.md).
+
+- [ ] Cloud Armor policy types (backend, edge, network edge), actions, default rule, preview mode
+- [ ] WAF rule sets and sensitivity levels; tuning
+- [ ] Adaptive Protection, advanced network DDoS, Cloud Armor tiers
+- [ ] Rate limiting (throttle vs rate-based ban, enforce-on keys), bot management, Google Threat Intelligence
+- [ ] Firewall evaluation order across hierarchical, VPC rules, global and regional policies; enforcement order setting
+- [ ] Secure tags vs network tags vs service accounts; NGFW Essentials, Standard, Enterprise
+- [ ] NGFW Enterprise endpoints, security profiles, TLS inspection; migration tool
+- [ ] Cloud NAT IP allocation, static vs dynamic ports, sizing math; Secure Web Proxy rules and modes
+- [ ] Multi-NIC NVAs, ILB next hop with symmetric hashing, PBR, Network Security Integration, Packet Mirroring
+- [ ] **Lab:** Cloud Armor policy with an SQLi rule in preview, a rate-based ban on `/login`, and a geo rule; a global network firewall policy using secure tags; Cloud NAT with manual IPs and DPA; a Packet Mirroring policy to a tcpdump collector
+
+## Weeks 9-10: Review and practice exams
+
+- [ ] Re-read every note's **Exam traps** and **Key terms** sections
+- [ ] Work through [scenarios.md](scenarios.md) and explain why each wrong option is wrong
+- [ ] Take the official practice exam (see [README](README.md)) and a second practice test; log every miss by section
+- [ ] Spend the remaining days on the two weakest sections, prioritizing Sections 1 and 2 by weight
+- [ ] Review [strategy.md](strategy.md) for time management and elimination tactics
+- [ ] Day before: logistics (ID, remote proctoring check, quiet room) and light review of the [fact sheet](fact-sheet.md)
+
+## gcloud practice set
 
 ```bash
-# VPC and Subnets
-gcloud compute networks create VPC_NAME --subnet-mode=custom
-gcloud compute networks subnets create SUBNET_NAME --network=VPC --range=CIDR
+# VPC, subnets, expansion
+gcloud compute networks create VPC --subnet-mode=custom --bgp-routing-mode=global
+gcloud compute networks subnets create SUBNET --network=VPC --region=REGION --range=CIDR
+gcloud compute networks subnets expand-ip-range SUBNET --region=REGION --prefix-length=22
 
-# Firewall Rules
-gcloud compute firewall-rules create RULE_NAME --network=VPC --allow=tcp:80
+# Firewall policies and effective rules
+gcloud compute network-firewall-policies create POLICY --global
+gcloud compute instances network-interfaces get-effective-firewalls VM --zone=ZONE
 
-# Load Balancers
-gcloud compute backend-services create BACKEND --global --protocol=HTTP
-gcloud compute url-maps create URL_MAP --default-service=BACKEND
+# Load balancing
+gcloud compute backend-services create BES --global --load-balancing-scheme=EXTERNAL_MANAGED --protocol=HTTP
+gcloud compute url-maps create MAP --default-service=BES --global
 
-# VPN
-gcloud compute vpn-gateways create VPN_GATEWAY --network=VPC --region=REGION
-gcloud compute vpn-tunnels create TUNNEL --peer-address=IP --region=REGION
+# HA VPN and Cloud Router
+gcloud compute vpn-gateways create GW --network=VPC --region=REGION
+gcloud compute routers create ROUTER --network=VPC --region=REGION --asn=65001
+gcloud compute routers get-status ROUTER --region=REGION
 
-# Cloud Router
-gcloud compute routers create ROUTER --network=VPC --region=REGION
-gcloud compute routers add-bgp-peer ROUTER --peer-name=PEER --peer-asn=ASN
+# NCC
+gcloud network-connectivity hubs create HUB --preset-topology=mesh
+gcloud network-connectivity spokes linked-vpc-network create SPOKE --hub=HUB --vpc-network=VPC_URI --global
+
+# Diagnostics
+gcloud network-management connectivity-tests create TEST --source-instance=VM_URI --destination-ip-address=IP --protocol=TCP --destination-port=443
 ```
 
-## Study Resources
+## Study resources
 
-### Official Google Cloud Resources
-- **[Networking Best Practices](https://cloud.google.com/architecture/best-practices-vpc-design)**
-- **[Hybrid Connectivity Patterns](https://docs.cloud.google.com/architecture/hybrid-multicloud-secure-networking-patterns)**
-- **[VPC Documentation](https://cloud.google.com/vpc/docs)**
-- **[Load Balancing Guide](https://cloud.google.com/load-balancing/docs)**
-
-## 📚 Complete Resource Guide
+- **[📖 Professional Cloud Network Engineer exam page](https://cloud.google.com/learn/certification/cloud-network-engineer)** - exam guide, logistics and practice questions
+- **[📖 Best practices for VPC design](https://cloud.google.com/architecture/best-practices-vpc-design)** - Google's design guidance
+- **[📖 Hybrid and multicloud secure networking patterns](https://docs.cloud.google.com/architecture/hybrid-multicloud-secure-networking-patterns)** - reference architectures
+- **[📖 VPC documentation](https://cloud.google.com/vpc/docs)** - networks, routes, firewalls
+- **[📖 Cloud Load Balancing documentation](https://cloud.google.com/load-balancing/docs)** - every load balancer type
 
 **👉 [Complete GCP Study Resources Guide](../../../.templates/resources-gcp.md)**
 
-## Success Metrics
+## Success metrics
 
-### Weekly Targets
-- **Weeks 1-4:** Master VPC and load balancing (70% proficiency)
-- **Weeks 5-8:** Complete hybrid connectivity and security (75% proficiency)
-- **Weeks 9-11:** Build three complete networks (80% proficiency)
-- **Week 12:** Achieve 85%+ on practice exams
-
-### Key Milestones
-- [ ] **Week 4:** Configure all load balancer types
-- [ ] **Week 8:** Implement hybrid connectivity
-- [ ] **Week 11:** Complete all network projects
-- [ ] **Week 12:** Pass Professional Cloud Network Engineer certification
-
-This 12-week plan provides comprehensive preparation for the Professional Cloud Network Engineer certification with extensive hands-on networking practice.
+- [ ] **Week 2:** can choose tier, load balancer, interconnection model and IP plan for any scenario without notes
+- [ ] **Week 4:** has built Shared VPC, peering, NCC and a private GKE cluster
+- [ ] **Week 6:** can recite the 99.99% Interconnect topology and the Cloud Router knobs
+- [ ] **Week 8:** has built Cloud Armor, firewall policies with secure tags, Cloud NAT and Packet Mirroring
+- [ ] **Week 10:** scoring comfortably above 80% on practice exams, with no section clearly weaker than the rest
