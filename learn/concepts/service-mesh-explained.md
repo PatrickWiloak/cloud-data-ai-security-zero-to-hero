@@ -73,7 +73,7 @@ A rough rule: below about a dozen services, or with one language and a good shar
 - **Linkerd:** focused on simplicity and low overhead, with its own proxy. CNCF graduated.
 - **Cilium Service Mesh:** eBPF-based, sidecarless, built on the Cilium networking plugin.
 - **Consul:** HashiCorp's mesh, which also spans VMs and multiple platforms.
-- **Managed:** Google Cloud Service Mesh (managed Istio for GKE and beyond), the Istio-based service mesh add-on for AKS. On AWS, App Mesh was retired in September 2026; AWS points users to ECS Service Connect and Amazon VPC Lattice, or to running Istio or Linkerd on EKS.
+- **Managed:** Google Cloud Service Mesh (managed Istio for GKE and beyond), the Istio-based service mesh add-on for AKS. On AWS, App Mesh reached end of support on September 30, 2026; AWS points users to ECS Service Connect and Amazon VPC Lattice, or to running Istio or Linkerd on EKS.
 
 ## Mesh vs API gateway
 

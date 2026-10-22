@@ -280,7 +280,7 @@ Argo CD syncs the revert, and prod returns to the previous version. The rollback
 
 - **AKS and Azure Arc:** the managed GitOps extension uses Flux v2 (`az k8s-configuration flux create`).
 - **GKE:** Config Sync provides managed GitOps from a Git repository or OCI artifact.
-- **EKS:** run Argo CD or Flux as you did here, or use the managed Argo CD capability for EKS.
+- **EKS:** run Argo CD or Flux as you did here, or use the managed **EKS Capability for Argo CD**, which runs Argo CD in the AWS control plane (no Notifications controller or Config Management Plugins there).
 
 ---
 
@@ -297,6 +297,7 @@ Delete or archive the `gitops-demo` repository if you no longer need it.
 ## Additional Resources
 
 - **[📖 Argo CD getting started](https://argo-cd.readthedocs.io/en/stable/getting_started/)** - the official install and first app
+- **[📖 Comparing EKS Capability for Argo CD to self-managed Argo CD](https://docs.aws.amazon.com/eks/latest/userguide/argocd-comparison.html)** - what the AWS-managed version does and does not support
 - **[📖 Argo CD automated sync policy](https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/)** - prune and self-heal in detail
 - **[📖 Kustomize](https://kubectl.docs.kubernetes.io/references/kustomize/)** - bases, overlays and image overrides
 - **[📖 OpenGitOps principles](https://opengitops.dev/)** - the four principles this lab demonstrates

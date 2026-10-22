@@ -58,7 +58,7 @@ The two CNCF-graduated tools:
 - **Argo CD** is application-centric with a strong web UI. You define `Application` resources that point to a repository path and a target cluster and namespace. It shows each app as synced or out of sync, healthy or degraded, with a diff view. ApplicationSets generate many applications from one template.
 - **Flux** is a set of small controllers (source, kustomize, helm, notification, image automation). It is CLI and YAML first, with no built-in UI, and composes well with other tools.
 
-Both support Helm and Kustomize, multi-cluster setups and automatic image updates. The managed cloud options build on them: **Azure** offers GitOps with Flux v2 as an AKS and Arc extension, **Google Cloud** offers Config Sync, and on **AWS** you typically run Argo CD or Flux yourself on EKS, or use the managed EKS capability for Argo CD.
+Both support Helm and Kustomize, multi-cluster setups and automatic image updates. The managed cloud options build on them: **Azure** offers GitOps with Flux v2 as an AKS and Arc extension, **Google Cloud** offers Config Sync, and on **AWS** you typically run Argo CD or Flux yourself on EKS, or use the **EKS Capability for Argo CD** (part of Amazon EKS Capabilities), where AWS runs Argo CD in its own control plane.
 
 ## Repository layout
 
@@ -103,6 +103,7 @@ GitOps has its own CNCF certifications: **CGOA** (Certified GitOps Associate) te
 - **[📖 OpenGitOps principles](https://opengitops.dev/)** - the four principles from the CNCF working group
 - **[📖 Argo CD documentation](https://argo-cd.readthedocs.io/en/stable/)** - applications, sync policies and health checks
 - **[📖 Flux documentation](https://fluxcd.io/flux/)** - controllers, sources and Kustomizations
+- **[📖 Continuous Deployment with Argo CD (EKS Capability for Argo CD)](https://docs.aws.amazon.com/eks/latest/userguide/argocd.html)** - AWS's managed Argo CD
 - **[📖 GitOps with Flux v2 on AKS and Arc](https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/conceptual-gitops-flux2)** - Azure's managed Flux
 
 ## What to look at next
