@@ -1,10 +1,10 @@
 Question,Answer,Tags
-How long is the GitHub Foundations exam?,120 minutes,exam-logistics
-How many questions are on the GitHub Foundations exam?,75 multiple choice questions,exam-logistics
-What is the passing score for GitHub Foundations?,70%,exam-logistics
-What does the GitHub Foundations exam cost?,$99 USD,exam-logistics
-How long is GitHub Foundations valid for?,3 years,exam-logistics
-How is the GitHub Foundations exam delivered?,Online proctored,exam-logistics
+How long is the GitHub Foundations (GH-900) exam?,100 minutes,exam-logistics
+How many questions are on the GitHub Foundations (GH-900) exam?,Not published by Microsoft,exam-logistics
+What is the passing score for GitHub Foundations (GH-900)?,700 (scale 1-1000),exam-logistics
+What does the GitHub Foundations (GH-900) exam cost?,Based on country; commonly listed as $99 USD in the US,exam-logistics
+How long is GitHub Foundations (GH-900) valid for?,Does not expire (no renewal required),exam-logistics
+How is the GitHub Foundations (GH-900) exam delivered?,"Proctored, through Pearson VUE via Microsoft Learn",exam-logistics
 History (git and github basics),"every change is recorded, so you can see what changed, when, and by whom.","notes,git-and-github-basics"
 Collaboration (git and github basics),many people can work on the same project at once without overwriting each other.,"notes,git-and-github-basics"
 Recovery (git and github basics),you can undo a bad change or restore a deleted file from history.,"notes,git-and-github-basics"

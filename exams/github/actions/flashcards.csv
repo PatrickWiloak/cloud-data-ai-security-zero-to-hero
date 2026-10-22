@@ -1,9 +1,9 @@
 Question,Answer,Tags
-How long is the GitHub Actions Certification exam?,120 minutes,exam-logistics
-What is the passing score for GitHub Actions Certification?,70%,exam-logistics
-What does the GitHub Actions Certification exam cost?,$99 USD,exam-logistics
-How long is GitHub Actions Certification valid for?,3 years,exam-logistics
-How is the GitHub Actions Certification exam delivered?,Online proctored,exam-logistics
+How long is the GitHub Actions Certification (GH-200) exam?,100 minutes,exam-logistics
+What is the passing score for GitHub Actions Certification (GH-200)?,700 (scaled 1-1000),exam-logistics
+What does the GitHub Actions Certification (GH-200) exam cost?,Set by country; commonly listed as $99 USD in the US,exam-logistics
+How long is GitHub Actions Certification (GH-200) valid for?,2 years,exam-logistics
+How is the GitHub Actions Certification (GH-200) exam delivered?,"Pearson VUE, scheduled through Microsoft Learn",exam-logistics
 Repository and webhook events (workflow authoring),"push, pull_request, pull_request_target, issues, issue_comment, release, workflow_run and dozens more. Each fires when something happens in the repository, and most accept types: to narrow the activity (for example pull_request: types: [opened, synchronize, reopened], which is also the default set).","notes,workflow-authoring"
 Scheduled events (workflow authoring),"schedule with one or more POSIX cron strings. They run in UTC, on the latest commit of the default branch only, and can be delayed at busy times. GitHub disables scheduled workflows in public repositories after 60 days with no repository activity.","notes,workflow-authoring"
 Manual events (workflow authoring),"workflow_dispatch, which adds a ""Run workflow"" button and an API endpoint, with typed inputs.","notes,workflow-authoring"

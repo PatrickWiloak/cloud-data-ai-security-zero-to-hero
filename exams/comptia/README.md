@@ -9,7 +9,7 @@ Study guides for CompTIA in this repo. For the full picture across every provide
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
 | [CompTIA A+ (220-1201 and 220-1202)](a-plus/) | 220-1201 + 220-1202 | - | Ready | 9 |
-| [CompTIA Cloud+ (CV0-004)](cloud-plus/) | CV0-004 | - | Ready | 5 |
+| [CompTIA Cloud+ (CV0-004)](cloud-plus/) | CV0-004 | - | Ready | 6 |
 | [CompTIA Network+ (N10-009)](network-plus/) | N10-009 | - | Ready | 5 |
 
 <!-- END GENERATED: provider-certs -->

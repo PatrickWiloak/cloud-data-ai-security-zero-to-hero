@@ -8,8 +8,8 @@ Study guides for GitHub in this repo. For the full picture across every provider
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
-| [GitHub Foundations](foundations/) | - | Foundational | Ready | 5 |
-| [GitHub Actions Certification](actions/) | - | - | Ready | 5 |
+| [GitHub Foundations (GH-900)](foundations/) | GH-900 | Foundational | Ready | 7 |
+| [GitHub Actions Certification (GH-200)](actions/) | GH-200 | - | Ready | 6 |
 | [GitHub Administration Certification](administration/) | - | - | Ready | 5 |
 
 <!-- END GENERATED: provider-certs -->

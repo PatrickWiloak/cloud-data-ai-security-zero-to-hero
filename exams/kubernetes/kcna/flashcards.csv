@@ -1,9 +1,9 @@
 Question,Answer,Tags
 How long is the Kubernetes and Cloud Native Associate (KCNA) exam?,90 minutes,exam-logistics
-What is the passing score for Kubernetes and Cloud Native Associate (KCNA)?,75%,exam-logistics
-What does the Kubernetes and Cloud Native Associate (KCNA) exam cost?,$250 USD (includes one free retake),exam-logistics
-How long is Kubernetes and Cloud Native Associate (KCNA) valid for?,3 years,exam-logistics
-How is the Kubernetes and Cloud Native Associate (KCNA) exam delivered?,Online proctored via PSI,exam-logistics
+What is the passing score for Kubernetes and Cloud Native Associate (KCNA)?,75% (commonly reported; not stated on the exam page),exam-logistics
+What does the Kubernetes and Cloud Native Associate (KCNA) exam cost?,"$250 USD exam only, one retake included",exam-logistics
+How long is Kubernetes and Cloud Native Associate (KCNA) valid for?,2 years,exam-logistics
+How is the Kubernetes and Cloud Native Associate (KCNA) exam delivered?,Online proctored,exam-logistics
 kube-apiserver (kubernetes fundamentals),"The front door of the cluster. Every read and write, from kubectl, controllers or kubelets, goes through its REST API.","notes,kubernetes-fundamentals"
 etcd (kubernetes fundamentals),"A consistent, highly available key-value store that holds all cluster state. Only the API server talks to it.","notes,kubernetes-fundamentals"
 kube-scheduler (kubernetes fundamentals),Watches for Pods with no node assigned and picks a node for each one. It does not start containers.,"notes,kubernetes-fundamentals"
