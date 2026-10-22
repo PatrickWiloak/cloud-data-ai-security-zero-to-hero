@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: beginner
 ---
 
 # CompTIA Network+ (N10-009) - Practice Questions
 
-15 questions for Network+ prep across networking concepts, implementation, operations, security, and troubleshooting.
+30 questions for Network+ prep across networking concepts (23%), implementation (20%), operations (19%), security (14%), and troubleshooting (24%).
 
 > **Cert page:** [exams/comptia/network-plus/](../../exams/comptia/network-plus/)
 
@@ -277,6 +277,276 @@ D. A first-hop redundancy protocol such as HSRP or VRRP presenting a virtual IP
 **Correct: D**
 
 **Why:** FHRPs let two routers share a virtual IP and MAC so clients never change their gateway setting on failover. Pair it with redundant links and link aggregation (LACP) for a design with no single point of failure at the edge.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A branch office is given 192.168.50.0/26. How many usable host addresses does that subnet provide?
+
+A. 64, because every address in a /26 block can be assigned to a host including the first and last
+B. 30
+C. 62 usable hosts
+D. 126, because a /26 leaves seven bits for hosts after the network portion of the address
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A /26 leaves 6 host bits, so 2^6 = 64 addresses, minus the network and broadcast addresses gives 62 usable hosts. 64 forgets that the network and broadcast addresses cannot be assigned. 30 is the usable count for a /27. 126 is the usable count for a /25, which has seven host bits, not a /26.
+</details>
+
+---
+
+### Question 17
+**Scenario:** An administrator needs encrypted command-line access to manage Linux servers remotely. Which protocol and default port fit?
+
+A. SSH on TCP port 22, with key-based or password login
+B. Telnet on TCP 23, which encrypts the session with TLS when both ends support it
+C. RDP on TCP port 3389
+D. SNMP on UDP port 161, which gives a shell on the target server once the community string is known
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** SSH provides an encrypted remote shell and runs on TCP 22 by default. Telnet sends everything, including passwords, in clear text and has no built-in encryption. RDP is a graphical remote desktop protocol, mainly for Windows, not a command-line shell. SNMP is for monitoring and management of devices and does not give a shell.
+</details>
+
+---
+
+### Question 18
+**Scenario:** A host's IPv6 configuration shows an address beginning with `fe80::`. What kind of address is it?
+
+A. A global unicast address that is routable across the internet
+B. A unique local address, the IPv6 equivalent of private IPv4 space such as 10.0.0.0/8
+C. A multicast address that delivers each packet to every node in the same multicast group
+D. A link-local address, valid only on the local segment and never routed
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** `fe80::/10` is link-local: every IPv6 interface has one, and routers never forward it beyond the local link. Global unicast addresses currently come from `2000::/3`. Unique local addresses use `fc00::/7`, usually seen as `fd..`. Multicast addresses start with `ff`.
+</details>
+
+---
+
+### Question 19
+**Scenario:** A new 2.4 GHz wireless network uses three access points with overlapping coverage. Which channel plan avoids co-channel and adjacent-channel interference?
+
+A. Channels 1, 2 and 3, because adjacent numbers keep the access points close together in the band
+B. Channels 1, 6 and 11, spaced so their 20 MHz widths do not overlap
+C. Channel 6 on all three, so clients can roam between access points without changing channel
+D. Channels 3, 7 and 9, which are spaced evenly across the band and so never overlap with each other
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** In the 2.4 GHz band, channels 1, 6 and 11 are the standard non-overlapping set in most regions. Channels 1, 2 and 3 overlap heavily and cause adjacent-channel interference. Putting every access point on channel 6 creates co-channel contention where coverage overlaps. Channels 3, 7 and 9 still overlap because each 20 MHz channel spans about five channel numbers.
+</details>
+
+---
+
+### Question 20
+**Scenario:** A link between two switches must carry traffic for VLANs 10, 20 and 30.
+
+A. Configure the link as an 802.1Q trunk that allows VLANs 10, 20 and 30
+B. Configure the link as an access port in VLAN 10, which forwards every VLAN by default
+C. Run three separate access links, one per VLAN, and enable Spanning Tree on each so they never form a loop
+D. Enable port mirroring on the link
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** An 802.1Q trunk tags frames with their VLAN ID so one link can carry several VLANs, and the allowed list limits it to the ones needed. An access port belongs to a single VLAN and does not carry others. Three access links can work but waste ports and do not scale. Port mirroring copies traffic for analysis and does not carry VLANs between switches.
+</details>
+
+---
+
+### Question 21
+**Scenario:** A company has 25 routers across many sites. Routes must update automatically when a link fails.
+
+A. Static routes on every router, updated by hand by the on-call engineer whenever a link fails
+B. A default route on each router pointing to the head office
+C. Network address translation on every router, so each site hides behind one public address
+D. A dynamic routing protocol such as OSPF running on every router
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A dynamic routing protocol like OSPF shares link-state information between routers and recalculates paths automatically when a link fails. Static routes require manual changes and do not react to failures on their own. A default route to one site ignores alternative paths and creates a single point of failure. NAT translates addresses; it does not build or update routes.
+</details>
+
+---
+
+### Question 22
+**Scenario:** The network team wants switches to push an alert to the monitoring server the moment an interface goes down, rather than waiting for the next poll.
+
+A. Increase the SNMP polling interval from 5 minutes to 60 minutes so fewer requests are sent to each switch
+B. Configure SNMP traps (or informs) to the monitoring server
+C. Run a packet capture on the monitoring server
+D. Enable NetFlow on every interface, which reports interface status changes as flow records
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** SNMP traps and informs are sent by the device as soon as an event, such as link down, occurs, so alerts do not wait for the next poll. Longer polling makes detection slower. A packet capture records traffic but does not generate device alerts. NetFlow reports traffic flows, not interface state changes.
+</details>
+
+---
+
+### Question 23
+**Scenario:** A network printer gets its address from DHCP, but users' saved print settings break each time its address changes.
+
+A. Shorten the DHCP lease time to one hour
+B. Disable DHCP on the whole subnet and give every device a static address by hand
+C. Create a DHCP reservation for the printer's MAC address
+D. Move the printer to the guest VLAN, which keeps device addresses fixed for the length of each visit
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A DHCP reservation always hands the same address to that MAC address, giving a stable IP while still managing it centrally. Shorter leases make the address change more often, not less. Static addressing for every device is a lot of manual work and error-prone. Guest VLANs are for isolation, not fixed addressing.
+</details>
+
+---
+
+### Question 24
+**Scenario:** A business needs a disaster recovery site that can take over within minutes, with current data and running equipment.
+
+A. A hot site with running systems and replicated data
+B. A cold site, which has power and space but needs equipment installed and data restored first
+C. A warm site, which has some equipment but needs data and configuration loaded before use
+D. Off-site tape backups
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A hot site has equipment running and data replicated, so failover takes minutes. A cold site provides space and power only, so recovery takes days or weeks. A warm site has some equipment but needs data and setup, so recovery takes hours to days. Tape backups protect data but give you nowhere to run it.
+</details>
+
+---
+
+### Question 25
+**Scenario:** An attacker plugs into an open office wall port and floods the switch with fake MAC addresses so it starts flooding traffic out of every port.
+
+A. Configure a longer MAC address table aging time so learned addresses stay in the table for longer
+B. Move the management interface of the switch to a different VLAN from the user ports
+C. Enable jumbo frames on the access ports
+D. Enable port security to limit the number of MAC addresses learned per port
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Port security caps how many MAC addresses a port can learn and can shut the port down on a violation, which stops MAC flooding. A longer aging time keeps fake entries longer and helps the attacker fill the table. Moving the management VLAN is good practice but does not stop table overflow. Jumbo frames change frame size and have nothing to do with MAC learning.
+</details>
+
+---
+
+### Question 26
+**Scenario:** Users intermittently receive addresses from a small router someone brought from home, and lose network access.
+
+A. Block UDP port 53 on the access switches
+B. Enable DHCP snooping and trust only the port facing the real DHCP server
+C. Reduce the size of the legitimate DHCP scope so the rogue server's offers are ignored by clients
+D. Enable Spanning Tree PortFast on every access port so the rogue router cannot form a loop
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** DHCP snooping lets the switch drop DHCP server messages on untrusted ports, so only the trusted uplink to the real server can hand out addresses. Port 53 is DNS, not DHCP. A smaller legitimate scope does not make clients ignore a rogue server. PortFast speeds up port startup and does nothing about DHCP.
+</details>
+
+---
+
+### Question 27
+**Scenario:** A server link shows slow throughput, late collisions and rising CRC errors on one side. The other side reports no collisions.
+
+A. A DNS misconfiguration on the server
+B. An expired DHCP lease on the switch port
+C. A duplex mismatch between the server and the switch port
+D. A wrong VLAN assignment, which causes collisions only on the server side of the link
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** When one side runs full duplex and the other half duplex, the half-duplex side sees late collisions and CRC errors while throughput collapses. DNS problems affect name resolution, not interface error counters. Switch ports do not hold DHCP leases. A wrong VLAN stops traffic from reaching the right network rather than causing collisions.
+</details>
+
+---
+
+### Question 28
+**Scenario:** A workstation can reach other hosts on its own subnet but nothing on other subnets or the internet. Its IP and mask are correct.
+
+A. The default gateway is missing or wrong
+B. The network cable is faulty
+C. The DNS server address is wrong, which blocks all traffic to other subnets by IP as well as by name
+D. The switch port is disabled
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Local traffic works without a gateway, but anything off-subnet must be sent to the default gateway, so a wrong or missing gateway breaks only remote destinations. A faulty cable or a disabled port would stop local traffic too. Wrong DNS breaks name lookups, but traffic to remote IP addresses would still work.
+</details>
+
+---
+
+### Question 29
+**Scenario:** A user can ping 8.8.8.8 but cannot open any website by name.
+
+A. The default gateway is wrong, which allows ICMP to the internet but blocks all TCP traffic
+B. The firewall is blocking ICMP
+C. The network interface card has failed and needs replacing
+D. Name resolution is failing, so check the configured DNS servers and test with `nslookup`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Reaching an internet IP proves routing and connectivity are fine, so failure by name points at DNS; `nslookup` or `dig` confirms it. A wrong gateway would also stop the ping. ICMP clearly gets through, since the ping works. A failed NIC would stop all traffic, including the ping.
+</details>
+
+---
+
+### Question 30
+**Scenario:** After six new PoE cameras were added to a switch, several existing access points on the same switch keep rebooting.
+
+A. The cameras use a different VLAN from the access points
+B. The switch's total PoE power budget has been exceeded by the new load
+C. The access points need a firmware update to support cameras on the same switch
+D. The cable runs to the access points are now longer than 100 metres because the switch has more devices on it
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A PoE switch has a fixed total power budget; when connected devices draw more than it can supply, it drops power to some ports and those devices reboot. VLAN membership does not affect power. Access points do not need firmware to coexist with cameras. Cable length is physical and did not change when cameras were added.
 </details>
 
 ---

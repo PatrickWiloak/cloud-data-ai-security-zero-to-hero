@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
 # Certified Kubernetes Application Developer (CKAD) - Practice Questions
 
-15 questions for CKAD prep, weighted toward configuration and security (25%) with design, deployment, and networking at 20% each.
+30 questions for CKAD prep, weighted toward configuration and security (25%) with design, deployment, and networking at 20% each, and observability and maintenance at 15%.
 
 CKAD is performance-based, so these are conceptual reinforcement. Nothing replaces typing `kubectl` under a timer.
 
@@ -279,6 +279,276 @@ D. Kustomize with overlays patching a common base, built into `kubectl -k`
 **Correct: D**
 
 **Why:** Kustomize is deliberately template-free: a base plus per-environment overlays that patch it, built into `kubectl` as `-k`. Helm is the templating answer and is a fine tool, but the question rules it out. Full copies drift. `kubectl apply` has no `--set` flag.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A team builds an image for a Go service. The final image currently contains the full compiler toolchain and is 900 MB. They want a small runtime image without changing the application code.
+
+A. Use a multi-stage Dockerfile that compiles in a builder stage and copies only the binary into a minimal final stage
+B. Add a `RUN rm -rf` step at the end of the single-stage Dockerfile to delete the toolchain after the build
+C. Squash the image layers with an external tool so the toolchain files are compressed into one layer
+D. Set `imagePullPolicy: IfNotPresent` on the pod so the large image is downloaded only once per node and then reused from the node cache
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A multi-stage build keeps the compiler in a throwaway stage and copies only the built binary into a small base, so the toolchain never reaches the final image. Deleting files in a later `RUN` step does not shrink the image, because the earlier layer that added them is still part of it. Squashing can help a little but still ships whatever the final filesystem holds and adds tooling for no benefit over a multi-stage build. `imagePullPolicy` changes when the image is pulled, not how big it is.
+</details>
+
+---
+
+### Question 17
+**Scenario:** A log-shipping helper must start before the main app container, keep running for the whole life of the pod, and be stopped after the app container on shutdown. The cluster runs a current Kubernetes version.
+
+A. A second regular container in the pod spec, listed before the app container so it starts first
+B. A `postStart` hook on the app container that launches the shipper as a background process
+C. A DaemonSet on every node that tails the app container's log files from the host path
+D. An init container with `restartPolicy: Always`, which Kubernetes treats as a native sidecar
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** An init container with `restartPolicy: Always` is a native sidecar: it starts before the app containers, keeps running, and is shut down after them. Regular containers start in parallel with no ordering guarantee, so listing it first does not help. A `postStart` hook runs inside the app container and dies with it, with no restart or ordering control. A DaemonSet is a valid node-level logging design, but it is not part of the pod and does not meet the start-before and stop-after requirement.
+</details>
+
+---
+
+### Question 18
+**Scenario:** A batch Job processes a queue. If a pod fails three times, the Job should stop retrying, and the whole Job must be killed if it runs longer than 10 minutes.
+
+A. Set `restartPolicy: Always` on the pod and `ttlSecondsAfterFinished: 600` on the Job
+B. Set `backoffLimit: 3` and `activeDeadlineSeconds: 600` on the Job
+C. Set `completions: 3` and `parallelism: 1` on the Job with a 600-second readiness probe
+D. Wrap the Job in a CronJob with `startingDeadlineSeconds: 600` and `concurrencyPolicy: Forbid`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** `backoffLimit` caps the number of retries before the Job is marked failed, and `activeDeadlineSeconds` terminates the whole Job once it runs past the deadline. Jobs do not accept `restartPolicy: Always`, and `ttlSecondsAfterFinished` only cleans up a Job after it finishes. `completions` sets how many successful pods are needed, not how many failures are allowed, and a readiness probe has nothing to do with time limits. `startingDeadlineSeconds` on a CronJob is about how late a run may start, not how long it may run.
+</details>
+
+---
+
+### Question 19
+**Scenario:** A new version of a web app should get about 10% of traffic before full rollout. There is no service mesh or ingress controller with traffic-splitting features, only plain Deployments and a Service.
+
+A. Set `maxSurge: 10%` on the existing Deployment so only a tenth of the pods are replaced
+B. Create a second Service pointing to the new pods and give it a 10% weight in its spec so kube-proxy splits requests between the two
+C. Run a second Deployment with the new version and the same Service labels, sized at about one pod in ten
+D. Pause the rollout with `kubectl rollout pause` after the first new pod becomes ready and leave it there
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A Service spreads traffic across all ready pods matching its selector, so running 1 canary pod beside 9 stable pods sends roughly 10% of requests to the canary. `maxSurge` controls how many extra pods exist during a rollout, not a lasting traffic split. A Service has no weight field. Pausing a rollout can give a rough split for a moment, but it leaves a Deployment half-updated and is a fragile way to run a canary.
+</details>
+
+---
+
+### Question 20
+**Scenario:** A team installed an app with Helm. The latest upgrade broke it, and they want the previous working release back quickly.
+
+A. `kubectl rollout undo` on every Deployment the chart created
+B. `helm uninstall` followed by `helm install` with the old values file
+C. `helm rollback <release> <revision>` to a known good revision listed in `helm history`
+D. Edit the chart's `Chart.yaml` to set the previous chart version and then run `helm upgrade` again with the same values
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Helm stores each release revision, so `helm history` shows them and `helm rollback` restores the chosen one in one step, including every resource the chart manages. `kubectl rollout undo` only reverts Deployments and leaves ConfigMaps, Services and other chart objects at the new version. Uninstalling and reinstalling causes an outage and can delete data the chart owns. Changing `Chart.yaml` alters the chart's metadata, not the release history, and is not a rollback.
+</details>
+
+---
+
+### Question 21
+**Scenario:** A cluster is being upgraded and a manifest uses an API version that the new release no longer serves. What does the developer need to do?
+
+A. Update the manifest to the supported API version, using `kubectl convert` or the deprecation guide to map fields
+B. Nothing, because the API server silently translates removed versions to the newest one on apply
+C. Add a `--force` flag to `kubectl apply` so the old API version is accepted after the upgrade
+D. Delete the CustomResourceDefinition for that resource type and recreate it with the old version
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Once an API version is removed, the API server rejects manifests that use it, so the manifest must move to a served version; the deprecation guide and the `kubectl convert` plugin help map fields. The server converts between versions it still serves, but it cannot accept a version it no longer serves. `--force` changes how apply replaces objects and does not bring back a removed API. Built-in types are not CRDs, and deleting a CRD would delete every object of that type.
+</details>
+
+---
+
+### Question 22
+**Scenario:** An app takes up to 3 minutes to start. The liveness probe keeps killing it during startup, but once started it should be restarted within 30 seconds if it hangs.
+
+A. Set the liveness probe's `initialDelaySeconds` to 0 and its `failureThreshold` to 1
+B. Replace the liveness probe with a readiness probe, which never restarts the container
+C. Raise the liveness probe's `periodSeconds` to 180 so it checks only once every 3 minutes for the life of the container
+D. Add a startup probe that allows up to 3 minutes, and keep the liveness probe tight for after startup
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A startup probe holds off the liveness and readiness probes until it succeeds, so a slow start gets its own budget while the liveness probe can still detect a hang fast afterwards. A zero delay with one allowed failure makes the startup problem worse. A readiness probe never restarts anything, so a hung process would sit there forever. Checking only every 3 minutes fixes startup but breaks the 30-second detection goal.
+</details>
+
+---
+
+### Question 23
+**Scenario:** A pod in a namespace with a LimitRange is rejected. The LimitRange sets a maximum of 1 CPU per container, and the container asks for a 2 CPU limit.
+
+A. The pod is admitted but throttled to 1 CPU at runtime by the kubelet
+B. The pod is rejected at admission because its limit exceeds the LimitRange maximum
+C. The pod is scheduled to a node with spare capacity outside the namespace's quota
+D. The LimitRange max is ignored because limits only matter when a ResourceQuota also exists
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** LimitRange is enforced by an admission controller, so a container limit above the configured maximum is rejected when the pod is created. The kubelet does not quietly lower a limit to match a LimitRange. Scheduling never looks outside the namespace's rules to dodge a policy. LimitRange works on its own; a ResourceQuota is a separate, namespace-wide total.
+</details>
+
+---
+
+### Question 24
+**Scenario:** A pod needs to call the Kubernetes API to list ConfigMaps in its own namespace and nothing else.
+
+A. Run the pod with the `default` ServiceAccount and give that account the `cluster-admin` ClusterRole
+B. Mount the cluster administrator's kubeconfig as a Secret and point the client at it
+C. Create a ServiceAccount, a Role allowing `get` and `list` on ConfigMaps, and a RoleBinding to that account
+D. Create a ClusterRole for ConfigMaps and bind it with a ClusterRoleBinding to the pod's ServiceAccount
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A dedicated ServiceAccount with a namespaced Role and RoleBinding grants exactly list and get on ConfigMaps in one namespace. `cluster-admin` on the default account grants everything to every pod that uses it. Copying an admin kubeconfig into a Secret hands full cluster control to the pod. A ClusterRoleBinding applies the permission in every namespace, which is broader than asked.
+</details>
+
+---
+
+### Question 25
+**Scenario:** A team wants Kubernetes to manage a `Database` object type that their operator reconciles. What must exist before `kubectl apply` can create a `Database` resource?
+
+A. A CustomResourceDefinition that registers the `Database` kind with the API server
+B. A ConfigMap named `database` that holds the schema the operator expects
+C. An annotation on the target namespace declaring that it accepts `Database` objects from the operator's controller
+D. A Helm chart named `database` installed in the `kube-system` namespace
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A CustomResourceDefinition adds a new kind to the API, after which the API server stores and serves `Database` objects and an operator can watch them. A ConfigMap is just data and does not add a type. Namespace annotations cannot register API kinds. Helm may be how the CRD is shipped, but the chart is not what registers the type; the CRD is.
+</details>
+
+---
+
+### Question 26
+**Scenario:** A container must read its own pod name and namespace at runtime without calling the API server.
+
+A. Query the cluster DNS for the pod's own A record and parse the namespace from it
+B. Read them from the `HOSTNAME` environment variable, which always contains both the pod name and the namespace
+C. Mount the ServiceAccount token and decode it to find the pod and namespace names
+D. Use the Downward API to expose `metadata.name` and `metadata.namespace` as env vars or files
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The Downward API exposes pod fields such as `metadata.name` and `metadata.namespace` to the container through `fieldRef` env vars or a volume, with no API call. Pod A records are not created by default in the form needed, and parsing DNS is fragile. `HOSTNAME` is usually the pod name but never the namespace. Decoding a token is a workaround that relies on token internals and is not the supported way.
+</details>
+
+---
+
+### Question 27
+**Scenario:** An Ingress should send `shop.example.com/api` to the `api` Service and everything else on that host to the `web` Service.
+
+A. One Ingress with a rule for the host, a path `/api` to `api`, and a path `/` to `web`
+B. Two Services of type LoadBalancer, one per path, with DNS records for each
+C. A NetworkPolicy that allows `/api` traffic to the `api` pods and the rest to `web`
+D. A single ClusterIP Service selecting both the `api` and `web` pods by a shared label, with session affinity turned on
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Ingress rules match on host and path, so one rule with `/api` and `/` paths routes to the two backends; the more specific path wins. LoadBalancer Services work at layer 4 and know nothing about URL paths. NetworkPolicy allows or blocks traffic by pod, namespace and port, not by HTTP path. One Service over both pod sets would spread requests across them at random.
+</details>
+
+---
+
+### Question 28
+**Scenario:** After creating a Service, `kubectl get endpointslices` shows no endpoints, although the pods are running and ready.
+
+A. The Service's selector does not match the pod labels, so no pods are added as endpoints
+B. The Service type is ClusterIP, which never creates endpoints until it is changed to NodePort
+C. The pods have no readiness probe, so they are never counted as endpoints
+D. Cluster DNS is down, and endpoints are only created after the DNS record resolves
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Endpoints come from the Service selector matching labels on ready pods; a typo in the selector or labels leaves the list empty, so compare `kubectl get svc -o yaml` with `kubectl get pods --show-labels`. ClusterIP Services get endpoints normally. Pods without a readiness probe are treated as ready once their containers run. DNS resolves the Service name but plays no part in building the endpoint list.
+</details>
+
+---
+
+### Question 29
+**Scenario:** A NetworkPolicy restricts egress from `api` pods to the `db` pods only. Now `api` cannot resolve any Service name.
+
+A. Egress policies always block DNS, so Service names cannot be used and pods must use IPs
+B. The policy also needs an egress rule allowing UDP and TCP port 53 to the cluster DNS pods
+C. The `db` Service must be changed to a headless Service so names resolve without DNS
+D. NetworkPolicy only ever applies to ingress traffic, so the cause of the DNS failure must be elsewhere in the cluster
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Once a pod has an egress policy, everything not listed is denied, including DNS lookups to CoreDNS; add a rule allowing port 53 over UDP and TCP to the DNS pods. You can keep using Service names once DNS is allowed. A headless Service still relies on DNS to return pod IPs. NetworkPolicy supports `Egress` in `policyTypes`, so it can and does block outbound traffic.
+</details>
+
+---
+
+### Question 30
+**Scenario:** A StatefulSet's pods must be reachable by stable per-pod DNS names such as `db-0.db`.
+
+A. A NodePort Service, which assigns each StatefulSet pod its own fixed port and DNS name on every node in the cluster
+B. An ExternalName Service mapping `db` to the first pod's IP
+C. An Ingress with a host rule for every pod ordinal
+D. A headless Service (`clusterIP: None`) named in the StatefulSet's `serviceName`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A headless Service referenced by `serviceName` gives each StatefulSet pod its own DNS record, such as `db-0.db.<namespace>.svc`. NodePort exposes one port for the whole Service, not per pod. ExternalName maps a name to an external DNS name, not to pod IPs. Ingress handles HTTP from outside the cluster and does not create per-pod DNS names.
 </details>
 
 ---

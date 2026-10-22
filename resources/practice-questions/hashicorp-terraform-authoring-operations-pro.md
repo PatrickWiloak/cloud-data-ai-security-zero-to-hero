@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: advanced
 ---
 
 # HashiCorp Terraform Authoring and Operations Professional - Practice Questions
 
-15 questions for the Terraform Professional exam, covering module design, state operations, workspaces, testing, and troubleshooting.
+30 questions for the Terraform Professional exam, covering module design, state operations, workspaces, testing, and troubleshooting. HashiCorp now lists this lab-based exam as Terraform Authoring and Operations Advanced; questions 16-30 are spread across its six published objectives (resource lifecycle, dynamic configuration, collaborative workflows, modules, providers, and HCP Terraform), which carry no published weights.
 
 This exam is performance-based: four hours of hands-on lab tasks in a live environment. These questions reinforce the reasoning behind the tasks rather than substituting for practice at a keyboard.
 
@@ -279,6 +279,276 @@ D. Start over with a new empty state and re-import each resource one at a time, 
 **Correct: A**
 
 **Why:** Versioned remote backends make restore the first option, which is why versioning on the state bucket is not optional. Direct JSON editing is the last resort and should be done on a copy, with `terraform state pull` and `push` rather than editing the remote object in place.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A VM managed by Terraform has a corrupted disk. Its configuration is unchanged, but the team wants Terraform to destroy and recreate just that one instance in the next run.
+
+A. Edit the state file by hand and delete the instance's `id` attribute so Terraform thinks it is missing
+B. Run `terraform state rm` on the instance, then apply so Terraform creates a second copy beside the old one
+C. Change an unrelated tag on the instance to force the provider to replace it
+D. Run `terraform apply -replace=<address>` for that instance
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** `-replace` plans a destroy and recreate for one resource address and shows it in the plan for review; it replaces the older `taint` workflow. Hand-editing state is risky and unsupported. `state rm` makes Terraform forget the instance, so it creates a new one and leaves the broken one running and unmanaged. Changing a tag usually updates in place and does not force replacement.
+</details>
+
+---
+
+### Question 17
+**Scenario:** Changing a load balancer's name forces replacement. The service must not go down while the old one is destroyed and the new one is created.
+
+A. Add `prevent_destroy = true` so the old load balancer is never removed during the change
+B. Set `create_before_destroy = true` in the resource's `lifecycle` block
+C. Run the apply with `-parallelism=1` so the destroy and create happen one after the other
+D. Add `depends_on` from the load balancer to itself
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** `create_before_destroy` reverses the default order, so the replacement is created, and dependents can switch to it, before the old one is destroyed. `prevent_destroy` makes the plan fail instead of replacing anything. Parallelism controls how many operations run at once, not the order of a replacement. A resource cannot depend on itself; Terraform rejects the cycle.
+</details>
+
+---
+
+### Question 18
+**Scenario:** A production database must never be destroyed by an accidental plan, such as a renamed resource or a mistaken `terraform destroy`.
+
+A. Add `prevent_destroy = true` in the database resource's `lifecycle` block
+B. Mark every attribute of the database resource as `sensitive` in the configuration
+C. Store the database's state in a separate workspace that nobody has write access to
+D. Use `ignore_changes = all` on the database resource
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** `prevent_destroy` makes any plan that would destroy the resource fail with an error, which guards against renames and destroys. `sensitive` only hides values in output. A read-only workspace would block every legitimate change too. `ignore_changes = all` stops updates, but a plan can still destroy the resource, for example after a rename.
+</details>
+
+---
+
+### Question 19
+**Scenario:** A security group needs one ingress rule per entry in a list variable, and the number of entries varies by environment.
+
+A. Write ten ingress blocks and comment out the unused ones per environment before each apply
+B. Use `count` on the security group resource so each copy of the group gets one rule
+C. Use a `dynamic "ingress"` block that iterates over the list variable
+D. Use a `local-exec` provisioner
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A `dynamic` block generates nested blocks, such as `ingress`, from a collection, so the number of rules follows the variable. Commenting out blocks per environment is manual and error-prone. `count` on the resource creates several security groups, not several rules in one group. A provisioner bypasses the provider and leaves the rules out of state.
+</details>
+
+---
+
+### Question 20
+**Scenario:** A module's `environment` variable must be one of `dev`, `staging` or `prod`, and a bad value should fail with a clear message before any resources are planned.
+
+A. Add a `validation` block to the variable with a `condition` and an `error_message`
+B. Use the variable in a `count` expression so a bad value creates zero resources
+C. Document the allowed values in the README and trust callers to read it before they set the variable
+D. Mark the variable `nullable = false`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Variable `validation` blocks check the value when it is set and fail with your own error message, before resources are planned. Creating zero resources hides the mistake instead of reporting it. Documentation helps but enforces nothing. `nullable = false` only rejects null, not wrong strings.
+</details>
+
+---
+
+### Question 21
+**Scenario:** A configuration looks up a machine image with a data source. If the image found is not `x86_64`, the run should stop with an explanation before the instance is created.
+
+A. Add `ignore_changes` on the instance's image attribute so a wrong image is skipped
+B. Use a `local-exec` provisioner on the instance that checks the image architecture after the instance is created
+C. Put the check in an output value so it is printed at the end of the apply
+D. Add a `postcondition` on the data source that checks the architecture and gives an error message
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Custom conditions such as a `postcondition` on the data source run as soon as its result is known and stop the run with a clear message before dependents are created; a `precondition` on the instance is an equally valid placement. `ignore_changes` only affects updates to an existing resource. A provisioner runs after creation, which is too late. An output is evaluated near the end and does not stop resources from being created.
+</details>
+
+---
+
+### Question 22
+**Scenario:** Two engineers and the CI pipeline get different provider versions from the same configuration, causing plan differences.
+
+A. Delete the `.terraform` directory before every run so the newest provider is always downloaded
+B. Commit the `.terraform.lock.hcl` file and update it on purpose with `terraform init -upgrade`
+C. Remove the `required_providers` block so Terraform chooses one default version for everyone
+D. Copy the provider binaries into the repository
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The dependency lock file records the exact provider versions and checksums chosen, so everyone who runs `init` gets the same ones; upgrades happen on purpose with `init -upgrade` and are reviewed in the diff. Deleting `.terraform` makes versions drift further. Removing `required_providers` loosens constraints and makes things worse. Committing binaries is heavy and platform-specific.
+</details>
+
+---
+
+### Question 23
+**Scenario:** An application configuration needs the VPC ID and subnet IDs produced by a separate network configuration managed by another team in HCP Terraform.
+
+A. Copy the IDs into the application configuration by hand after each network change
+B. Give the application workspace write access to the network workspace's state so it can edit it if needed
+C. Read the network workspace's outputs with the `tfe_outputs` data source, or use provider data sources
+D. Merge both configurations into one root module
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Reading the producing workspace's outputs, with `tfe_outputs` in HCP Terraform or `terraform_remote_state`, or querying the cloud provider with data sources shares the values without hard-coding them. Hand-copied IDs go stale. Read access to outputs is all that is needed, and write access breaks the ownership boundary. Merging configurations removes the team boundary and grows the blast radius.
+</details>
+
+---
+
+### Question 24
+**Scenario:** The same configuration is deployed to several environments, each with its own state bucket and key, and the backend block cannot use variables.
+
+A. Leave those settings out of the backend block and pass them with `terraform init -backend-config=<file>`
+B. Reference `var.environment` inside the backend block so the bucket name is chosen at runtime
+C. Use one shared state file for every environment and separate resources with name prefixes
+D. Hard-code the production bucket in the backend block and switch environments by editing the file
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Partial backend configuration leaves environment-specific settings out of the block and supplies them at `init` time from a file or flags, which is the supported way to vary backends. Backend blocks cannot reference variables. A single state for every environment couples them and widens the blast radius. Editing the file per run is error-prone and risky.
+</details>
+
+---
+
+### Question 25
+**Scenario:** A root module uses a public registry module at version 2.1.0. The team wants bug fixes in later 2.1.x versions but no new minor or major versions.
+
+A. `version = ">= 2.1.0"`
+B. Omit the version argument so Terraform installs the latest compatible release
+C. `version = "2.1.0"` with `terraform init -upgrade`, which still pulls the newest patch release
+D. `version = "~> 2.1.0"`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** `~> 2.1.0` allows only the rightmost part to increase, so 2.1.x is accepted and 2.2.0 is not. `>= 2.1.0` accepts any newer version, including breaking majors. Omitting the version takes the latest release whatever it is. An exact `2.1.0` stays at that version even with `-upgrade`, so bug fixes never arrive.
+</details>
+
+---
+
+### Question 26
+**Scenario:** A shared module is consumed by many root modules that deploy to different regions and accounts. Where should the provider configuration live?
+
+A. In the module, with a `provider "aws"` block that hard-codes the region used by most teams
+B. In the root modules, with the module declaring only `required_providers`, and aliased providers passed in through `providers`
+C. In a separate module that every other module calls to get its provider settings
+D. In environment variables only, with no `required_providers` anywhere
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Reusable modules should declare which providers and versions they need in `required_providers` and let the caller configure them, passing aliased providers with the `providers` argument when needed. A provider block inside a module ties every caller to its settings and makes the module hard to remove safely. Modules cannot hand provider configurations to sibling modules that way. Without `required_providers`, the source and version are unclear and may resolve wrongly.
+</details>
+
+---
+
+### Question 27
+**Scenario:** One configuration must create a bucket in `us-east-1` and its replica in `eu-west-1` with the same provider.
+
+A. Run the configuration twice with a different `AWS_REGION` environment variable each time
+B. Create two separate state files and apply one region at a time from two directories
+C. Declare a second provider block with an `alias` and set `provider = aws.eu` on the replica
+D. Set `region` on each bucket resource instead of on the provider
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** An aliased provider block gives a second configuration of the same provider, and resources select it with the `provider` meta-argument, so both regions are managed in one plan. Running twice with different environment variables would manage only one bucket per run and conflict over state. Splitting into two configurations is possible but does not match "one configuration" and loses the direct reference. Resources choose a provider configuration; for most resources the region is a provider-level setting.
+</details>
+
+---
+
+### Question 28
+**Scenario:** A plan fails with a vague authentication error from a provider, and the team needs to see the API calls and credential sources the provider is trying.
+
+A. Set `TF_LOG=DEBUG` (or `TF_LOG_PROVIDER`) and optionally `TF_LOG_PATH`, then run the plan again
+B. Run `terraform fmt -recursive` to fix the configuration's formatting before planning again
+C. Delete the state file and run the plan again so the provider re-authenticates from scratch
+D. Downgrade Terraform itself to the oldest release that the provider still supports, then run the same plan again
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** `TF_LOG` turns on detailed logging, `TF_LOG_PROVIDER` focuses on provider plugins, and `TF_LOG_PATH` writes the log to a file, showing the requests and credential chain the provider uses. `fmt` only rewrites layout. Deleting state loses tracking of real resources and has nothing to do with authentication. Downgrading Terraform is guesswork and rarely the cause of a credential error.
+</details>
+
+---
+
+### Question 29
+**Scenario:** A VCS-connected HCP Terraform workspace should show reviewers the plan for every pull request, without anyone being able to apply from the pull request.
+
+A. Give reviewers permission to run `terraform apply` locally against the workspace's state
+B. Turn on auto-apply on the workspace so each pull request is applied to production as soon as a reviewer approves it
+C. Use the CLI-driven workflow and ask authors to paste plan output into the pull request
+D. Rely on speculative plans, which HCP Terraform runs for pull requests and reports as status checks
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** With the VCS-driven workflow, HCP Terraform runs a plan-only speculative run for each pull request and posts the result as a status check; it can never be applied. Local applies bypass the workspace's controls. Auto-apply applies after merges to the tracked branch, not on pull requests, and is the opposite of plan-only. Pasted output can be edited or stale.
+</details>
+
+---
+
+### Question 30
+**Scenario:** HCP Terraform workspaces currently hold long-lived cloud access keys as sensitive variables. Security wants them removed.
+
+A. Move the keys into the Terraform configuration as variable defaults marked `sensitive`
+B. Configure dynamic provider credentials, so each run gets short-lived credentials through workload identity (OIDC)
+C. Rotate the long-lived keys every 90 days and keep storing them as workspace variables
+D. Store the keys in a public repository's secrets
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Dynamic provider credentials let HCP Terraform present a signed workload identity token that the cloud provider trusts, and each run receives short-lived credentials, so no static keys are stored. Defaults in code put secrets in version control. Rotation shortens exposure but keeps long-lived keys in place. Secrets in another repository are still static keys, and they cannot be used by HCP Terraform anyway.
 </details>
 
 ---

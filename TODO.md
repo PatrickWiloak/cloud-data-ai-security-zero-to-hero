@@ -41,6 +41,10 @@ Read-only fleet audit (9 agents, nothing changed). Each line: effort S (<half da
 - [ ] **Guides that may not describe a real exam.** HashiCorp `nomad-associate` and `packer-associate` have no vendor exam on HashiCorp's lists [M]. The IBM guides pair "IBM Certified ... Cloud v2" titles with codes C1000-170..174 that third-party listings give to other exams (the Advocate code is probably C1000-142) and IBM's pages were unreadable [L]. **Patrick or a fresh session: check ibm.com/training and each of these exam pages by hand before editing.** Also unverified: VMware 2V0-21.23 (Broadcom page unreadable), Salesforce Admin/PD1/PD2, AWS PAS-C01 (not on AWS's landing page).
 - [ ] **New-guide candidates found** (verify codes first): Terraform Infrastructure Engineer Pro; CNCF CNPE, CKNE, KCA, CBA; FinOps AI Value and Technology Value; GitHub GH-600 [L].
 
+## Stale cert-page domains (found 2026-10-22, bank expansion)
+
+- [ ] 2026-11-15 Update domain names/weights on cert pages to current guides: SOA-C03 (5 domains), AZ-700 (2026-07-27), GH-200 + GH-900 (Jan 2026), Cloud+ CV0-004, KCNA (Nov 2025), PCNE (6 sections), Terraform Advanced (6 objectives, no weights). Banks' headers already cite them.
+
 ## Content backlog (gap review 2026-10-16, ranked)
 
 1. **Outage postmortems** beside the 3 existing ones: CrowdStrike 2024 and the Oct 2025 AWS us-east-1 DNS event.
