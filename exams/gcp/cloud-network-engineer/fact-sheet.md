@@ -232,7 +232,7 @@ last-updated: 2026-10-22
 
 **[📖 Choosing Interconnect Options](https://cloud.google.com/network-connectivity/docs/how-to/choose-product)** - Decision tree for selecting VPN, Dedicated, or Partner Interconnect
 
-**[📖 VLAN Attachments](https://docs.cloud.google.com/network-connectivity/docs/interconnect/concepts/vlan-attachments)** - Configuring Layer 2 connections over Interconnect circuits
+**[📖 VLAN Attachments](https://docs.cloud.google.com/network-connectivity/docs/interconnect/how-to/dedicated/creating-vlan-attachments)** - Configuring Layer 2 connections over Interconnect circuits
 
 **[📖 Interconnect Pricing](https://cloud.google.com/network-connectivity/docs/interconnect/pricing)** - Understanding attachment, egress, and port costs
 

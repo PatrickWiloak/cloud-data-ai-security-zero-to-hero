@@ -75,7 +75,7 @@ GCP offers dedicated connections to other cloud providers without going over the
 - Available for connections to AWS, Azure, and Oracle Cloud
 - 10 Gbps or 100 Gbps dedicated links
 - Lower latency and higher throughput than VPN
-- Docs: https://cloud.google.com/network-connectivity/docs/interconnect/concepts/cross-cloud-overview
+- Docs: https://docs.cloud.google.com/network-connectivity/docs/interconnect/concepts/cci-overview
 
 ### Third-Party SD-WAN
 

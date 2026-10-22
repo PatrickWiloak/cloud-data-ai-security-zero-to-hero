@@ -119,8 +119,9 @@ all 783 now repaired**, each replacement fetched and title-checked. The old-to-n
       `link-check` issue (`gh issue list`) and passes it to peter-evans as `issue-number`, so the Monday report
       rewrites that issue instead of opening a new one (no open issue -> it opens one). YAML parses; NOT run in
       Actions (nothing pushed).
-- [ ] **Judge 2026-10-19:** the Monday run updates the existing issue (no new one) and lists no real 404s beyond
-      what is already tracked; the workflow change is unproven until that run.
+- [x] ✅ 2026-10-22 judged the 10-19 run: opened #12 (no open issue existed, so the update path is still unrun); 3 real breaks fixed here, the rest moved to data/ai repos in the split.
+- [ ] **Judge 2026-10-27:** the 10-26 Monday run rewrites #12 instead of opening #13 (`gh issue list --label link-check`).
+- [ ] 🟡 Link-check noise: 130 of #12's 257 errors are `cloud.google.com` refusing the Actions runner ("Connection failed"); lower lychee concurrency for that host or exclude it. S.
 - [ ] **Spot-check the retired-product replacements (by 2026-10-31).** These links now reach the successor product,
       but the surrounding notes may still teach the retired one: OpsWorks, IBM Watson and Cloud Foundry
       (`exams/ibm`), AWS SAP specialty exam. The report lists every replacement.

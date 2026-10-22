@@ -126,7 +126,7 @@ last-updated: 2026-05-03
 - **[📖 Dedicated Region](https://docs.oracle.com/en-us/iaas/Content/dedicated/dedicated-region/dedicated-region-overview.htm)**
 
 ### Additional Resources
-- **[📖 Whitepapers](https://www.oracle.com/cloud/architecture-and-regions/)**
+- **[📖 Architecture Center](https://www.oracle.com/cloud/architecture-center/)**
 - **[📖 Technical Briefs](https://docs.oracle.com/en-us/iaas/Content/General/Reference/aqswhitepapers.htm)**
 - **[📖 Customer Success Stories](https://www.oracle.com/customers/)**
 - **[📖 Cloud Infrastructure Blog](https://blogs.oracle.com/cloud-infrastructure/)**
