@@ -12,7 +12,7 @@ Study guides for HashiCorp in this repo. For the full picture across every provi
 | [HashiCorp Nomad Associate Certification](nomad-associate/) | - | Associate | Ready | 6 |
 | [HashiCorp Packer Associate (003) Certification](packer-associate/) | - | Associate | Ready | 6 |
 | [HashiCorp Terraform Associate (003) Certification](terraform-associate/) | Terraform Associate (003) | Associate | Ready | 6 |
-| [HashiCorp Terraform Authoring and Operations Professional Certification](terraform-authoring-operations-pro/) | - | Professional | Ready | 6 |
+| [HashiCorp Certified: Terraform Authoring and Operations Advanced](terraform-authoring-operations-pro/) | - | Professional | Ready | 6 |
 
 **Retired** - the exam is no longer offered. The guide is kept for anyone holding the credential, and points to its replacement.
 

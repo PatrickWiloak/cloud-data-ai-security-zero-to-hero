@@ -9,7 +9,6 @@ Each row shows when a page was last verified against its source of truth.
 
 | Cert | Last verified | Path |
 |------|---------------|------|
-| aws/associate/cloudops-engineer-soa-c03 | 2026-05-03 | [exams/aws/associate/cloudops-engineer-soa-c03](../exams/aws/associate/cloudops-engineer-soa-c03/) |
 | aws/associate/solutions-architect-saa-c03 | 2026-05-03 | [exams/aws/associate/solutions-architect-saa-c03](../exams/aws/associate/solutions-architect-saa-c03/) |
 | aws/associate/sysops-administrator-soa-c02 | 2026-05-03 | [exams/aws/associate/sysops-administrator-soa-c02](../exams/aws/associate/sysops-administrator-soa-c02/) |
 | aws/foundational/cloud-practitioner-clf-c02 | 2026-05-03 | [exams/aws/foundational/cloud-practitioner-clf-c02](../exams/aws/foundational/cloud-practitioner-clf-c02/) |
@@ -19,7 +18,6 @@ Each row shows when a page was last verified against its source of truth.
 | azure/az-104 | 2026-05-03 | [exams/azure/az-104](../exams/azure/az-104/) |
 | azure/az-305 | 2026-05-03 | [exams/azure/az-305](../exams/azure/az-305/) |
 | azure/az-400 | 2026-05-03 | [exams/azure/az-400](../exams/azure/az-400/) |
-| azure/az-700 | 2026-05-03 | [exams/azure/az-700](../exams/azure/az-700/) |
 | azure/az-900 | 2026-05-03 | [exams/azure/az-900](../exams/azure/az-900/) |
 | azure/pl-900 | 2026-05-03 | [exams/azure/pl-900](../exams/azure/pl-900/) |
 | cisco/ccna-200-301 | 2026-05-03 | [exams/cisco/ccna-200-301](../exams/cisco/ccna-200-301/) |
@@ -33,12 +31,10 @@ Each row shows when a page was last verified against its source of truth.
 | gcp/cloud-devops-engineer | 2026-05-03 | [exams/gcp/cloud-devops-engineer](../exams/gcp/cloud-devops-engineer/) |
 | gcp/cloud-digital-leader | 2026-05-03 | [exams/gcp/cloud-digital-leader](../exams/gcp/cloud-digital-leader/) |
 | gcp/cloud-engineer | 2026-05-03 | [exams/gcp/cloud-engineer](../exams/gcp/cloud-engineer/) |
-| gcp/cloud-network-engineer | 2026-05-03 | [exams/gcp/cloud-network-engineer](../exams/gcp/cloud-network-engineer/) |
 | github/administration | 2026-05-03 | [exams/github/administration](../exams/github/administration/) |
 | hashicorp/nomad-associate | 2026-05-03 | [exams/hashicorp/nomad-associate](../exams/hashicorp/nomad-associate/) |
 | hashicorp/packer-associate | 2026-05-03 | [exams/hashicorp/packer-associate](../exams/hashicorp/packer-associate/) |
 | hashicorp/terraform-associate | 2026-05-03 | [exams/hashicorp/terraform-associate](../exams/hashicorp/terraform-associate/) |
-| hashicorp/terraform-authoring-operations-pro | 2026-05-03 | [exams/hashicorp/terraform-authoring-operations-pro](../exams/hashicorp/terraform-authoring-operations-pro/) |
 | ibm/cloud-advocate | 2026-05-03 | [exams/ibm/cloud-advocate](../exams/ibm/cloud-advocate/) |
 | ibm/cloud-developer | 2026-05-03 | [exams/ibm/cloud-developer](../exams/ibm/cloud-developer/) |
 | ibm/cloud-site-reliability-engineer | 2026-05-03 | [exams/ibm/cloud-site-reliability-engineer](../exams/ibm/cloud-site-reliability-engineer/) |
@@ -77,9 +73,13 @@ Each row shows when a page was last verified against its source of truth.
 | azure/pl-100 | 2026-10-16 | [exams/azure/pl-100](../exams/azure/pl-100/) |
 | azure/pl-200 | 2026-10-16 | [exams/azure/pl-200](../exams/azure/pl-200/) |
 | hashicorp/consul-associate | 2026-10-16 | [exams/hashicorp/consul-associate](../exams/hashicorp/consul-associate/) |
+| aws/associate/cloudops-engineer-soa-c03 | 2026-10-22 | [exams/aws/associate/cloudops-engineer-soa-c03](../exams/aws/associate/cloudops-engineer-soa-c03/) |
+| azure/az-700 | 2026-10-22 | [exams/azure/az-700](../exams/azure/az-700/) |
 | comptia/cloud-plus | 2026-10-22 | [exams/comptia/cloud-plus](../exams/comptia/cloud-plus/) |
+| gcp/cloud-network-engineer | 2026-10-22 | [exams/gcp/cloud-network-engineer](../exams/gcp/cloud-network-engineer/) |
 | github/actions | 2026-10-22 | [exams/github/actions](../exams/github/actions/) |
 | github/foundations | 2026-10-22 | [exams/github/foundations](../exams/github/foundations/) |
+| hashicorp/terraform-authoring-operations-pro | 2026-10-22 | [exams/hashicorp/terraform-authoring-operations-pro](../exams/hashicorp/terraform-authoring-operations-pro/) |
 | kubernetes/kcna | 2026-10-22 | [exams/kubernetes/kcna](../exams/kubernetes/kcna/) |
 
 ## Concept pages

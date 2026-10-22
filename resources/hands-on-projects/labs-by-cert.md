@@ -52,8 +52,8 @@ Which [hands-on projects](./README.md) back up which certification. Doing the la
 
 | Cert | Labs |
 |------|------|
+| [HashiCorp Certified: Terraform Authoring and Operations Advanced](../../exams/hashicorp/terraform-authoring-operations-pro/) | [Hands-On Project: Build Infrastructure with Terraform](./terraform-infrastructure.md) |
 | [HashiCorp Terraform Associate (003) Certification](../../exams/hashicorp/terraform-associate/) | [Hands-On Project: Build Infrastructure with Terraform](./terraform-infrastructure.md) |
-| [HashiCorp Terraform Authoring and Operations Professional Certification](../../exams/hashicorp/terraform-authoring-operations-pro/) | [Hands-On Project: Build Infrastructure with Terraform](./terraform-infrastructure.md) |
 
 ### GitHub
 
