@@ -1,119 +1,143 @@
+---
+last-updated: 2026-10-22
+---
+
 # AZ-700 - 8-Week Practice Plan
 
-This plan assumes 1-2 hours of theory + 1-2 hours of hands-on lab per day.
+This plan follows the five skill areas measured as of July 27, 2026, in the order that makes them easiest to learn: core networking first, because everything else builds on it. It assumes 1-2 hours of reading plus 1-2 hours of hands-on lab per day.
 
-Networking labs in Azure can be expensive (gateways, ER, App Gateway). Tear down between sessions.
+Networking labs in Azure can be expensive (VPN gateways, Azure Firewall, Application Gateway). Tear everything down at the end of each session.
+
+| Week | Skill area | Weight | Note |
+|---|---|---|---|
+| 1-2 | 1. Core networking infrastructure | 25-30% | [01](./notes/01-core-networking-infrastructure.md) |
+| 3-4 | 2. Connectivity services | 20-25% | [02](./notes/02-connectivity-services.md) |
+| 5 | 3. Application delivery services | 15-20% | [03](./notes/03-application-delivery-services.md) |
+| 6 | 4. Private access to Azure services | 10-15% | [04](./notes/04-private-access-to-azure-services.md) |
+| 7 | 5. Network security services | 15-20% | [05](./notes/05-network-security-services.md) |
+| 8 | Practice exams and review | - | [fact-sheet](./fact-sheet.md), [scenarios](./scenarios.md) |
 
 ---
 
 ## Lab setup
 
-- [ ] Activate Azure free account ($200 credit) or Visual Studio sub
-- [ ] Set up cost alerts at $50, $100, $150 thresholds
+- [ ] Activate an Azure free account ($200 credit) or Visual Studio subscription credits
+- [ ] Set budget alerts at $50, $100 and $150
 - [ ] Create a resource group named `learn-az700`
-- [ ] Practice tearing it down at end of each session: `az group delete --name learn-az700`
+- [ ] Practise tearing it down at the end of each session: `az group delete --name learn-az700`
 
 ---
 
-## Week 1 - VNets, Subnets, NSGs, Peering
+## Week 1 - Core networking: addressing and name resolution
 
-- [ ] Read [notes/01-vnets-and-core-networking.md](./notes/01-vnets-and-core-networking.md)
-- [ ] Lab: 2 VNets, peer them, deploy a VM in each, ping across
-- [ ] Lab: NSG rule blocking 80, then allowing - test with curl
-- [ ] Lab: ASGs - tag two VMs and write rules using ASGs
-- [ ] Lab: Hub-spoke topology with allow gateway transit / use remote gateway
-
----
-
-## Week 2 - Hybrid Connectivity (VPN)
-
-- [ ] Read [notes/02-hybrid-connectivity.md](./notes/02-hybrid-connectivity.md)
-- [ ] Lab: Deploy a VPN Gateway (this takes 30-45 min, plan accordingly)
-- [ ] Lab: Configure a "fake on-prem" VPN with another VNet + a Linux VM running strongSwan or Azure VPN Gateway in another region
-- [ ] Lab: Establish Site-to-Site VPN; verify traffic
-- [ ] Lab: Active-active VPN gateway
+- [ ] Read [notes/01-core-networking-infrastructure.md](./notes/01-core-networking-infrastructure.md), sections 1 and 2
+- [ ] Lab: design an address plan for a hub and two spokes in two regions with no overlaps; create the VNets and subnets, including `GatewaySubnet`, `AzureFirewallSubnet` and `AzureBastionSubnet`
+- [ ] Lab: delegate a subnet to App Service and integrate a web app with it
+- [ ] Lab: create a public IP prefix and derive two public IPs from it
+- [ ] Lab: private DNS zone with auto-registration linked to one VNet and resolution-only links to another
+- [ ] Lab: Azure DNS Private Resolver with an inbound endpoint and an outbound endpoint plus a forwarding ruleset
 
 ### Self-check
-- [ ] Can I size GatewaySubnet correctly?
-- [ ] Do I know VPN Gateway SKU tradeoffs?
-- [ ] Can I configure BGP on a VPN connection?
+- [ ] Can I name the minimum size of every named subnet?
+- [ ] Can I explain inbound versus outbound endpoints of Private Resolver?
 
 ---
 
-## Week 3 - Hybrid Connectivity (ExpressRoute) + Virtual WAN
+## Week 2 - Core networking: connectivity, routing and monitoring
 
-- [ ] Read [notes/02-hybrid-connectivity.md](./notes/02-hybrid-connectivity.md) - ER and Virtual WAN sections
-- [ ] You can't actually deploy ExpressRoute in a lab (requires provider). Read docs end-to-end and follow Microsoft Learn guided lab simulations
-- [ ] Lab: Deploy a Virtual WAN with two regional hubs and connect VNets
-- [ ] Read about ER Direct, Global Reach, FastPath, ExpressRoute coexistence with VPN
-
----
-
-## Week 4 - Load Balancing (LB, App Gateway, Front Door, Traffic Manager)
-
-- [ ] Read [notes/03-load-balancing-and-traffic.md](./notes/03-load-balancing-and-traffic.md)
-- [ ] Lab: Standard Load Balancer with 2-VM backend pool, public IP, health probe, distribution rule
-- [ ] Lab: Application Gateway WAF_v2 with path-based routing and SSL termination
-- [ ] Lab: Front Door Standard with two origins in different regions; test failover
-- [ ] Lab: Traffic Manager with Priority routing across two endpoints
+- [ ] Read [notes/01-core-networking-infrastructure.md](./notes/01-core-networking-infrastructure.md), sections 3 and 4
+- [ ] Lab: peer hub and spokes; test that spoke-to-spoke fails (non-transitive)
+- [ ] Lab: Azure Virtual Network Manager with a dynamic network group (tag-based) and a hub-and-spoke configuration; deploy it and watch the peerings appear
+- [ ] Lab: route table with `0.0.0.0/0` to a Linux VM acting as an NVA; enable IP forwarding and check effective routes and Next hop
+- [ ] Lab: NAT Gateway on a private subnet; confirm the egress IP
+- [ ] Lab: Connection monitor between two VMs; IP flow verify and NSG diagnostics on a blocked flow
+- [ ] Read: Route Server, DDoS protection tiers, Defender for Cloud Secure Score network recommendations, attack path analysis and Cloud Security Explorer
 
 ### Self-check
-- [ ] Can I pick the right LB option for any prompt?
-- [ ] Do I know App Gateway vs Front Door tradeoffs?
-- [ ] Can I configure WAF rules?
+- [ ] Can I predict which route wins when a UDR and a BGP route overlap?
+- [ ] Do I know when to pick Route Server, NAT Gateway or AVNM?
 
 ---
 
-## Week 5 - Routing and Azure Firewall
+## Week 3 - Connectivity services: VPN
 
-- [ ] Read [notes/04-routing-and-firewall.md](./notes/04-routing-and-firewall.md)
-- [ ] Lab: Hub-spoke with Azure Firewall Standard
-- [ ] Lab: Force-tunnel spokes through hub firewall via UDR
-- [ ] Lab: Configure FQDN application rules (allow only `microsoft.com` and subdomains)
-- [ ] Lab: DNAT rule to publish a port from public IP to a VM in spoke
-- [ ] Read about Azure Firewall Premium features (TLS inspection, IDPS)
-- [ ] Read about Firewall Policy hierarchical management
-- [ ] Read about Azure Route Server (deploy if budget allows)
+- [ ] Read [notes/02-connectivity-services.md](./notes/02-connectivity-services.md), sections 1 and 2
+- [ ] Lab: deploy a VPN gateway with an AZ SKU (this takes 30-45 minutes, so plan around it)
+- [ ] Lab: simulate on-premises with a second VNet and its own gateway (or strongSwan on a Linux VM); build site-to-site with BGP
+- [ ] Lab: apply a custom IPsec/IKE policy and break it on purpose to see the failure in VPN troubleshoot
+- [ ] Lab: point-to-site with OpenVPN and Microsoft Entra ID authentication using the Azure VPN Client
+- [ ] Read: Always On VPN, Azure Network Adapter, Azure Extended Network
 
----
-
-## Week 6 - Private Link / Endpoints, DNS
-
-- [ ] Read [notes/05-private-link-and-monitoring.md](./notes/05-private-link-and-monitoring.md)
-- [ ] Lab: Storage account with Private Endpoint; disable public access; verify access from VM in same VNet
-- [ ] Lab: Configure Private DNS zone for `privatelink.blob.core.windows.net`; link to VNet
-- [ ] Lab: Configure Azure DNS Private Resolver with inbound + outbound endpoints
-- [ ] Lab: SQL DB with Private Endpoint
-- [ ] Compare Service Endpoint vs Private Endpoint (cost, granularity, when to use)
+### Self-check
+- [ ] Can I pick a VPN SKU from tunnel, user and throughput numbers?
+- [ ] Do I know which authentication method works with which tunnel type?
 
 ---
 
-## Week 7 - Monitoring, Bastion, Misc
+## Week 4 - Connectivity services: ExpressRoute and Virtual WAN
 
-- [ ] Read [notes/05-private-link-and-monitoring.md](./notes/05-private-link-and-monitoring.md) - Network Watcher and monitoring sections
-- [ ] Lab: Azure Bastion deployment
-- [ ] Lab: NSG Flow Logs to Storage; enable Traffic Analytics
-- [ ] Lab: Connection Troubleshoot test from VM to internet (then through firewall, observe difference)
-- [ ] Lab: VPN Diagnostics on a VPN Gateway tunnel
-- [ ] Read about Network Insights dashboards in Azure Monitor
+- [ ] Read [notes/02-connectivity-services.md](./notes/02-connectivity-services.md), sections 3 and 4
+- [ ] ExpressRoute cannot be fully built in a personal lab (it needs a provider). Read the docs end to end and use the Microsoft Learn exercises
+- [ ] Write one-paragraph answers: four connectivity models; Local versus Standard versus Premium; private versus Microsoft peering; Global Reach, FastPath and Direct; MACsec versus IPsec; BFD
+- [ ] Lab: Virtual WAN Standard with two hubs, two connected VNets and a VPN site; inspect the default route table, association and propagation
+- [ ] Read: routing intent and partner NVAs in the hub
 
 ---
 
-## Week 8 - Practice Exams + Review
+## Week 5 - Application delivery services
+
+- [ ] Read [notes/03-application-delivery-services.md](./notes/03-application-delivery-services.md)
+- [ ] Lab: Standard Load Balancer with two VMs, a health probe, a load balancing rule, an inbound NAT rule and an outbound rule
+- [ ] Lab: internal load balancer with HA ports in front of two NVA VMs
+- [ ] Lab: Application Gateway WAF_v2 with autoscale, two multi-site listeners, a path-based rule, a custom probe, a Key Vault certificate and a rewrite set that removes the `Server` header
+- [ ] Lab: Front Door Standard with two origins in different regions; test failover with priority, then split traffic with weight; add a rule set redirect and purge the cache
+- [ ] Lab: Traffic Manager with priority routing and then a nested performance profile
+
+### Self-check
+- [ ] Can I pick the right service for any delivery requirement in under 30 seconds?
+- [ ] Can I list three causes of an Application Gateway 502?
+
+---
+
+## Week 6 - Private access to Azure services
+
+- [ ] Read [notes/04-private-access-to-azure-services.md](./notes/04-private-access-to-azure-services.md)
+- [ ] Lab: storage account with private endpoints for `blob` and `dfs`; integrate with private DNS zones; disable public access; test from a VM and from outside
+- [ ] Lab: enable private endpoint network policies on the subnet and route endpoint traffic through the NVA from week 2
+- [ ] Lab: resolve the private endpoint from a "simulated on-premises" VNet through the Private Resolver inbound endpoint
+- [ ] Lab: service endpoint for `Microsoft.Storage` with a VNet rule, then a service endpoint policy that allows only one storage account
+- [ ] Lab: Private Link service behind a Standard internal load balancer, consumed from another VNet
+
+---
+
+## Week 7 - Network security services
+
+- [ ] Read [notes/05-network-security-services.md](./notes/05-network-security-services.md)
+- [ ] Lab: NSGs on subnet and NIC with ASGs for web, app and db tiers; verify with IP flow verify
+- [ ] Lab: Azure Bastion with the required NSG rules on `AzureBastionSubnet`
+- [ ] Lab: virtual network flow logs with traffic analytics; read raw tuples and find a denied flow
+- [ ] Lab: AVNM security admin rule that denies inbound SSH from the internet; show that a local NSG allow cannot override it
+- [ ] Lab: Azure Firewall Standard in the hub with a parent and child Firewall Policy, a DNAT rule, a network rule and an application rule using an FQDN tag; force spoke traffic through it
+- [ ] Read: Firewall Premium (TLS inspection, IDPS), secured virtual hub
+- [ ] Lab: WAF policy in detection mode on the Application Gateway from week 5, add an exclusion, then switch to prevention; add a rate-limit custom rule
+
+---
+
+## Week 8 - Practice exams and review
 
 - [ ] Re-read [fact-sheet.md](./fact-sheet.md) cover to cover
-- [ ] Work through [scenarios.md](./scenarios.md)
-- [ ] Microsoft Learn AZ-700 Practice Assessment
-- [ ] One paid practice exam (MeasureUp, Whizlabs)
-- [ ] Score 80%+ before scheduling
+- [ ] Work through [scenarios.md](./scenarios.md) and the [practice questions](../../../resources/practice-questions/azure-network-engineer-az-700.md)
+- [ ] Take the free Microsoft Learn AZ-700 practice assessment
+- [ ] Re-read the notes for any skill area that scores below 75%
+- [ ] Score 80%+ twice before scheduling
 
 ---
 
 ## Stop signals (you're ready)
 
-- [ ] You can sketch a hub-spoke with VPN/ER, Azure Firewall, force-tunnel, and PE-to-Storage from memory
-- [ ] You can pick the right LB option for any prompt
-- [ ] You know App Gateway vs Front Door tradeoffs
-- [ ] You know Service Endpoint vs Private Endpoint tradeoffs
-- [ ] You can troubleshoot connectivity issues using Network Watcher tools
+- [ ] You can sketch a hub-and-spoke with VPN or ExpressRoute, Azure Firewall, forced tunneling, Private Resolver and a private endpoint to Storage from memory
+- [ ] You can predict route selection for overlapping UDR, BGP and system routes
+- [ ] You can pick the right delivery service for any prompt
+- [ ] You know private endpoint versus service endpoint trade-offs and the DNS steps
+- [ ] You can troubleshoot connectivity with Network Watcher tools and flow logs
 - [ ] You score 80%+ on practice exams twice in a row
