@@ -91,7 +91,7 @@ Goals: pass under realistic conditions.
 ## Lab Costs
 
 - Local simulator: free
-- SV1, DM1, TN1: cheap, often pennies per minute
+- SV1, DM1: cheap, often pennies per minute
 - IonQ Aria task: typically a few cents per shot, plus per-task fee
 - Rigetti, IQM: similar order of magnitude
 - Hybrid Jobs: classical compute fee per minute plus quantum task fees
@@ -102,7 +102,7 @@ Budget 50-150 USD for hands-on practice across the plan.
 
 - Cannot compute the matrix for H or CNOT from memory
 - Cannot prepare a Bell state in Braket
-- Do not know the difference between SV1, DM1, TN1
+- Do not know the difference between SV1, DM1 and the local simulators
 - Cannot explain when to use a QPU vs a simulator
 - Cannot estimate the cost of a 1000-shot circuit on IonQ Aria
 - Mock exam scores below 65 percent

@@ -18,7 +18,7 @@ Charged for each shot executed on a QPU. Varies by device:
 For a 1000-shot run, per-shot cost dominates per-task cost.
 
 ### Simulator pricing
-Per-minute of execution time for managed simulators (SV1, DM1, TN1). LocalSimulator runs in your own process at no Braket cost (you still pay for the host compute).
+Per-minute of execution time for managed simulators (SV1, DM1). LocalSimulator runs in your own process at no Braket cost (you still pay for the host compute).
 
 ### Hybrid Jobs pricing
 - Classical compute: per-instance-hour for the orchestrator container

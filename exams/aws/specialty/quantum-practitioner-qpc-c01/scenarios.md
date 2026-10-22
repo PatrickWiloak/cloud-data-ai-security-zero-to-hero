@@ -8,7 +8,7 @@ A team wants to debug a 28-qubit circuit with deep entanglement. They do not nee
 
 Question: Which Braket simulator?
 
-Answer: SV1. State vector handles up to ~34 qubits and provides exact results. TN1 would not fit deep entanglement. DM1 is for noise simulation and would not scale. LocalSimulator is too small for 28 qubits.
+Answer: SV1. State vector handles up to ~34 qubits and provides exact results. DM1 is for noise simulation and would not scale. LocalSimulator is too small for 28 qubits.
 
 ## Scenario 2: Algorithm for Drug Discovery
 

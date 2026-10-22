@@ -37,7 +37,6 @@ By weight (anticipated):
 ### Trap 1: Confusing simulators
 - SV1: state vector, exact, scales to ~34 qubits, fast for small circuits
 - DM1: density matrix, simulates noise, fewer qubits
-- TN1: tensor network, large circuits with limited entanglement
 - LocalSimulator: in-process, free, small only
 
 Pick by use case, not always SV1.
@@ -89,7 +88,7 @@ Braket Direct provides reservation: dedicated time on a QPU at a flat rate. Use 
 ## Pre-Exam Checklist
 
 - Review Braket SDK methods (Circuit, Device, run, hybrid_job)
-- Memorize simulator characteristics (SV1 / DM1 / TN1 / Local)
+- Memorize simulator characteristics (SV1 / DM1 / Local); TN1 was retired and no longer appears in the device list
 - Memorize each hardware modality's strengths and limits
 - Memorize algorithm-to-problem mapping
 - Cost model on a sticky note

@@ -49,7 +49,7 @@ This certification is anticipated based on AWS direction with Amazon Braket. As 
 - Braket service architecture: notebooks, hybrid jobs, tasks, devices
 - SDK (Python amazon-braket-sdk)
 - Supported hardware: IonQ (Aria, Forte), Rigetti (Ankaa), IQM (Garnet), QuEra (Aquila, neutral atom)
-- Simulators: SV1 (state vector), DM1 (density matrix), TN1 (tensor network), local simulators
+- Simulators: SV1 (state vector), DM1 (density matrix), local simulators (TN1 is retired)
 - IAM permissions: braket:CreateQuantumTask, GetQuantumTask, etc.
 - S3 result storage
 - CloudWatch metrics, CloudTrail audit
@@ -110,7 +110,6 @@ Hardware comes and goes from Braket; always check `device.is_available` and the 
 |-----------|------|-----|
 | SV1 | State vector | General purpose, up to ~34 qubits |
 | DM1 | Density matrix | Simulating noise, smaller qubit count |
-| TN1 | Tensor network | Larger circuits with limited entanglement |
 | LocalSimulator | In-process | Free for development; limited size |
 
 ## Official Resources

@@ -43,7 +43,6 @@ Hardware roster changes; check current Braket console for live availability.
 | LocalSimulator | In-process | Small (~25 qubits) | Free, fast iteration during development |
 | SV1 | State vector | Up to ~34 qubits | Exact simulation, general purpose |
 | DM1 | Density matrix | Up to ~17 qubits | Simulate noise channels |
-| TN1 | Tensor network | Larger circuits | Limited entanglement, structured circuits |
 
 ## SDK Basics
 
@@ -149,7 +148,7 @@ For research workflows that need below-gate control, Braket Pulse lets you speci
 ## Common Exam Traps
 
 - Confusing tasks (single circuit) with hybrid jobs (orchestrated workflow)
-- Choosing the wrong simulator (DM1 for noise, SV1 for general, TN1 for structured large)
+- Choosing the wrong simulator (DM1 for noise, SV1 for general; TN1, the old tensor network simulator, is retired)
 - Believing reservation is always required (it is not; on-demand is the default)
 - Missing the role of S3 in result storage
 - Picking IonQ when fast gate time is the priority (superconducting wins on speed)
