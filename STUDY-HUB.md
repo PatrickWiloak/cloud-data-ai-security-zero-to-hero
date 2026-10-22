@@ -90,7 +90,7 @@ What's your starting point?
 └─ Cross-cutting specializations
    ├─ Kubernetes          → KCNA → CKA → CKAD → ICA (Istio) | OpenShift EX280
    ├─ Cloud native        → CAPA (Argo) | CGOA (GitOps) | CCA (Cilium) | PCA (Prometheus) | OTCA (OpenTelemetry) | CNPA
-   ├─ Terraform/IaC       → Terraform Associate → Terraform Authoring & Operations Pro | Packer | Nomad
+   ├─ Terraform/IaC       → Terraform Associate → Terraform Authoring & Operations Advanced | Packer | Nomad
    ├─ Networking          → Network+ → CCNA → CCNP ENCOR | AWS Adv Networking | GCP Cloud Network Engineer | AZ-700
    ├─ Linux / Platform    → LFCS | RHCSA → OpenShift EX280
    ├─ CI/CD               → GitHub Foundations → GitHub Actions → GitHub Administration

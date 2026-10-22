@@ -1,194 +1,206 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
 ---
 
-# Terraform Authoring and Operations Professional - Fact Sheet
+# HashiCorp Certified: Terraform Authoring and Operations Advanced - Fact Sheet
+
+This exam was previously listed by HashiCorp as "Terraform Authoring and Operations Professional"; the old objectives URL now redirects to the Advanced page. "Terraform Infrastructure Engineer Professional" is a different, multiple-choice exam that this guide does not cover.
 
 ## Exam Logistics
 
 | Attribute | Value |
 |-----------|-------|
-| Exam name | HashiCorp Certified: Terraform Authoring and Operations Professional |
-| Delivery | Performance-based hands-on labs in a live Terraform environment |
-| Duration | 4 hours |
-| Number of tasks | Approximately 15 to 25 lab tasks across multiple scenarios |
-| Passing score | HashiCorp does not publish a numeric cut score; result reported as pass or fail |
-| Cost | $295 USD |
-| Proctoring | PSI online proctoring, webcam and screen share required |
-| Language | English |
+| Exam name | HashiCorp Certified: Terraform Authoring and Operations Advanced |
+| Level | Advanced (professional tier) |
+| Format | Lab-based scenarios plus multiple choice; objective 6 (HCP Terraform) is multiple choice only |
+| Delivery | Online proctored |
+| Duration | 4 hours, with one 15-minute break |
+| Questions | Not published (no published count of labs or questions) |
+| Passing score | Not published; HashiCorp publishes no numeric cut score |
+| Cost | $295 USD plus taxes, free retake included |
+| Terraform version | 1.6 |
+| Cloud version | AWS or Azure; both earn the same credential, and renewal can use either |
+| Language | English (common non-US QWERTY keyboard layouts available on request) |
 | Validity | 2 years |
-| Retake policy | 14-day wait after first attempt, 30-day wait after second, 1-year wait after third |
-| Recommended experience | 12+ months hands-on production Terraform, Associate-level knowledge assumed |
+| Prerequisites | None required; Terraform Associate (or equivalent) strongly recommended |
 
-## Exam Domains and Weights
+### What the exam environment gives you
 
-The current exam blueprint (subject to revision by HashiCorp) covers six major domains. Weights below are realistic estimates based on HashiCorp's published objectives.
+- Terraform documentation, a limited part of the Terraform Registry, limited cloud provider documentation, and the cloud console. No search engines.
+- Labs can be done in any order and are scored independently. Grading checks configuration syntax, state files and the settings of provisioned resources, so the end state is what counts, not the commands you used.
+- Multiple-choice items can be flagged for review.
 
-### Domain 1: Author and maintain Terraform modules (approximately 25%)
+## Exam Objectives
 
-- Design module interfaces (inputs, outputs, type constraints, validation blocks)
-- Use `optional()` and nullable attributes in complex types
-- Apply `for_each`, `count`, and `dynamic` blocks correctly
-- Use `moved` blocks to refactor resources without destroy/create
-- Use `removed` blocks (Terraform 1.7+) to drop resources from state without destroy
-- Use `import` blocks for declarative imports (Terraform 1.5+)
-- Author `terraform test` files (`.tftest.hcl`) with `run` blocks and mocked providers
-- Publish modules to a private registry (HCP Terraform or Terraform Enterprise)
-- Version modules using semantic versioning and pin module sources
-- Document modules with README, examples/, and input/output descriptions
+HashiCorp publishes six objectives and **no weights**. The study-time split below is **this guide's estimate, not HashiCorp's**. It leans towards the lab-heavy objectives because those take longest to build skill in.
 
-### Domain 2: Understand and manage Terraform state (approximately 20%)
+| # | Objective | Official weight | Suggested study time (this guide's estimate) | Note |
+|---|---|---|---|---|
+| 1 | Manage resource lifecycle | Not published | 20% | [notes/01](./notes/01-manage-resource-lifecycle.md) |
+| 2 | Develop and troubleshoot dynamic configuration | Not published | 25% | [notes/02](./notes/02-dynamic-configuration.md) |
+| 3 | Develop collaborative Terraform workflows | Not published | 15% | [notes/03](./notes/03-collaborative-workflows.md) |
+| 4 | Create, maintain, and use Terraform modules | Not published | 15% | [notes/04](./notes/04-modules.md) |
+| 5 | Configure and use Terraform providers | Not published | 10% | [notes/05](./notes/05-providers.md) |
+| 6 | Collaborate on infrastructure as code using HCP Terraform (multiple choice only) | Not published | 15% | [notes/06](./notes/06-hcp-terraform.md) |
 
-- Choose an appropriate remote backend (S3+DynamoDB, GCS, Azure Blob, HCP, Consul)
-- Configure state locking and understand lock conflicts
-- Perform `terraform state list`, `show`, `mv`, `rm`, `replace-provider`, `pull`, `push`
-- Handle state migration between backends (`terraform init -migrate-state`)
-- Recover from corrupt or lost state
-- Use `-refresh-only` plans to reconcile drift safely
-- Split monolithic state using `terraform state mv` or `moved` blocks
-- Use `terraform_remote_state` data source vs published outputs
-- Secure state files (encryption at rest, access control, secret handling)
+### Objective 1: Manage resource lifecycle
 
-### Domain 3: Use the Terraform CLI for operations and debugging (approximately 15%)
+- 1a Initialize a configuration using `terraform init` and its options
+- 1b Generate an execution plan using `terraform plan` and its options
+- 1c Apply configuration changes using `terraform apply` and its options
+- 1d Destroy resources using `terraform destroy` and its options
+- 1e Manage resource state, including importing resources and reconciling resource drift
 
-- Use `TF_LOG`, `TF_LOG_PATH`, and `TF_LOG_PROVIDER` for debugging
-- Use `terraform console` to evaluate expressions
-- Use `terraform graph` and `terraform providers` for dependency analysis
-- Use `terraform plan -out` and `terraform apply plan.tfplan` for approval flows
-- Use `-target`, `-replace`, and `-refresh=false` judiciously
-- Use `terraform force-unlock` safely
-- Interpret error messages from providers and core
-- Use `terraform validate`, `fmt`, and pre-commit hooks
-- Debug provider plugin issues, lock file conflicts, and version constraints
+High-yield facts:
 
-### Domain 4: Operate HCP Terraform and Terraform Enterprise (approximately 15%)
+- `-migrate-state` copies state to a new backend; `-reconfigure` ignores the old backend and copies nothing; `-upgrade` moves providers within constraints and rewrites the lock file; `-backend-config` supplies partial backend settings (backend blocks cannot use variables).
+- Plan modes are normal, `-destroy` and `-refresh-only`. `-replace` supersedes `taint`. `-target` is for exceptions only. `-out` saves a plan; `apply tfplan` takes no planning options and fails if state changed since the plan.
+- `terraform destroy` equals `terraform apply -destroy`. `prevent_destroy` makes destroy plans fail. Removing a resource block destroys the resource on the next apply.
+- `terraform state rm` forgets without destroying. `moved` blocks (1.1+) and `terraform state mv` change addresses. Import blocks (1.5+) and `terraform plan -generate-config-out` (1.5+) import declaratively.
+- **Newer than the tested version:** `removed` blocks and `for_each` in import blocks (1.7).
+- Drift: `plan -refresh-only` to see it, then revert with a normal apply, accept by changing config, or `ignore_changes`.
 
-- Configure CLI-driven, VCS-driven, and API-driven workspaces
-- Manage variable sets (workspace, project, organization scope)
-- Configure run triggers and workspace notifications
-- Use agents for private networks
-- Configure SSO, teams, and team access permissions
-- Use projects to group workspaces
-- Understand no-code provisioning and the public module registry
-- Use dynamic provider credentials (OIDC) for AWS, Azure, GCP, Vault
-- Configure run tasks for third-party integrations (Snyk, Checkov, Bridgecrew, etc.)
+### Objective 2: Develop and troubleshoot dynamic configuration
 
-### Domain 5: Implement policy as code with Sentinel and OPA (approximately 10%)
+- 2a Use language features to validate configuration
+- 2b Query providers using data sources
+- 2c Compute and interpolate data using HCL functions
+- 2d Use meta-arguments in configuration
+- 2e Configure input variables and outputs, including complex types
+- 2f Analyze best practices for managing sensitive data, such as using Vault for secrets management
 
-- Author Sentinel policies using `tfplan/v2`, `tfconfig/v2`, `tfstate/v2`, `tfrun` imports
-- Use enforcement levels (advisory, soft-mandatory, hard-mandatory)
-- Package policies into policy sets and attach to workspaces or projects
-- Author OPA Rego policies for Terraform plans
-- Test Sentinel policies with `sentinel test`
-- Understand cost estimation policies and how they integrate with runs
+High-yield facts:
 
-### Domain 6: Automate Terraform with VCS, run tasks, and CI/CD (approximately 15%)
+- Variable `validation` fails before planning; `precondition`/`postcondition` (1.2+) fail the run; `check` blocks (1.5+) only warn.
+- In 1.6 a validation condition may reference only its own variable (cross-variable references are 1.9, newer than the tested version).
+- `terraform test` is generally available in 1.6 (`.tftest.hcl`, `run`, `assert`, `expect_failures`); mock providers are 1.7, newer.
+- Data sources read at plan time unless they depend on unknown values, then at apply.
+- `for_each` keys must be known at plan time. `count` addresses by index, `for_each` by key.
+- `optional(type, default)` in object types (1.3+); `nullable = false`; `sensitive = true` redacts output but the value is still in state.
+- Vault data sources still write the secret to state; dynamic short-lived secrets reduce the impact. Ephemeral resources (1.10) and write-only arguments (1.11) are newer than the tested version.
 
-- Configure VCS integration (GitHub, GitLab, Bitbucket, Azure DevOps)
-- Use speculative plans on pull requests
-- Use `working_directory` and trigger patterns to scope workspace runs
-- Integrate Terraform with GitHub Actions or GitLab CI using `hashicorp/setup-terraform`
-- Use API-driven workflows with `tfe` provider for self-service workspace provisioning
-- Implement drift detection using HCP Terraform health assessments or scheduled runs
-- Use run tasks to integrate security scanners into the run lifecycle
+### Objective 3: Develop collaborative Terraform workflows
 
-## Key CLI Commands to Master
+- 3a Manage the Terraform binary, providers, and modules using version constraints
+- 3b Configure remote state
+- 3c Use the Terraform workflow in automation
+- 3d Share data across configurations and workspaces
 
-```
-terraform init [-backend-config=...] [-migrate-state] [-reconfigure] [-upgrade]
-terraform plan -out=tfplan [-target=...] [-replace=...] [-refresh-only] [-var-file=...]
-terraform apply tfplan
+High-yield facts:
+
+- `~> 5.30` means `>= 5.30, < 6.0`; `~> 5.30.0` means `>= 5.30.0, < 5.31.0`.
+- `.terraform.lock.hcl` pins providers only, not modules. Commit it. `terraform providers lock -platform=...` adds hashes for other platforms.
+- S3 backend in 1.6 locks with `dynamodb_table` (partition key `LockID`); `use_lockfile` is 1.10+, newer. azurerm locks natively with a blob lease. The `cloud` block connects to HCP Terraform.
+- Automation: `TF_IN_AUTOMATION=1`, `-input=false` (or `TF_INPUT=0`), `plan -out` then `apply tfplan`, `-detailed-exitcode`.
+- `terraform_remote_state` exposes root outputs but needs read access to the whole state; HashiCorp recommends `tfe_outputs` for HCP Terraform.
+
+### Objective 4: Create, maintain, and use Terraform modules
+
+- 4a Create a module
+- 4b Use a module in configuration
+- 4c Refactor a module and use module versioning
+- 4d Refactor an existing configuration into modules
+
+High-yield facts:
+
+- Reusable modules declare `required_providers` but no `provider` blocks.
+- `version` works only with registry sources; Git uses `?ref=`; `//` selects a subdirectory.
+- Module blocks accept `count`, `for_each`, `depends_on`, `providers`.
+- Registry repos are named `terraform-<PROVIDER>-<NAME>` with semver tags.
+- `moved` blocks inside a module carry the refactor to every consumer; keep them until the next major version.
+- Refactor into a module: `moved { from = aws_vpc.main  to = module.network.aws_vpc.this }`, then plan shows 0 add, 0 change, 0 destroy.
+
+### Objective 5: Configure and use Terraform providers
+
+- 5a Understand Terraform's plugin-based architecture
+- 5b Configure providers, including aliasing, versioning, sourcing, and managing upgrades
+- 5c Manage provider authentication
+- 5d Troubleshoot provider errors
+
+High-yield facts:
+
+- Core talks to provider processes over gRPC; providers call the APIs. Registry tiers: official, partner, community.
+- Source address `[hostname/]namespace/type`; omitting `source` means `hashicorp/<name>`.
+- Aliased providers are passed to modules explicitly (`providers = { aws.replica = aws.dr }`) and declared with `configuration_aliases`.
+- Upgrade with `terraform init -upgrade`, read the upgrade guide, plan for no changes, commit the lock file.
+- Credentials from environment variables, profiles, roles or OIDC, never in `.tf` files.
+- `TF_LOG` (TRACE, DEBUG, INFO, WARN, ERROR, JSON), `TF_LOG_PATH`, `TF_LOG_CORE`, `TF_LOG_PROVIDER`.
+
+### Objective 6: Collaborate on infrastructure as code using HCP Terraform (multiple choice only)
+
+- 6a Analyze the HCP Terraform run workflow
+- 6b Understand HCP Terraform workspaces and their configuration options, including access management
+- 6c Manage provider credentials in HCP Terraform
+- 6d Analyze policy as code and governance features
+
+High-yield facts:
+
+- Run stages: pending, fetching, pre-plan tasks, plan, post-plan tasks, OPA policy check, cost estimation, Sentinel policy check, confirm, pre-apply tasks, apply, post-apply tasks.
+- Workflows: VCS-driven (speculative plans on pull requests), CLI-driven, API-driven. Execution modes: remote, local, agent.
+- Variable precedence: priority variable sets beat everything; then CLI values; then workspace variables; then variable sets (narrower scope wins); then `*.auto.tfvars` and `terraform.tfvars`.
+- Project roles: Read, Write, Maintain, Admin (or Custom). Workspace roles: Read, Plan, Write, Admin (or Custom).
+- Dynamic credentials for AWS: `TFC_AWS_PROVIDER_AUTH=true` plus `TFC_AWS_RUN_ROLE_ARN`; trust policy on the `sub` claim `organization:ORG:project:PROJECT:workspace:WS:run_phase:PHASE`; audience `aws.workload.identity`.
+- Sentinel: advisory, soft-mandatory, hard-mandatory. OPA: advisory, mandatory. Overrides need Manage policy overrides.
+
+## Key CLI Commands
+
+```text
+terraform init [-upgrade] [-reconfigure] [-migrate-state] [-backend-config=FILE|k=v] [-input=false] [-lockfile=readonly]
+terraform plan [-out=tfplan] [-refresh-only] [-destroy] [-replace=ADDR] [-target=ADDR] [-var-file=F] [-detailed-exitcode]
+terraform plan -generate-config-out=generated.tf     # with import blocks
+terraform apply [tfplan] [-auto-approve] [-replace=ADDR] [-refresh-only] [-parallelism=N]
+terraform destroy [-target=ADDR] [-auto-approve]
+terraform import ADDR ID
 terraform state list | show | mv | rm | pull | push | replace-provider
-terraform import ADDRESS ID
 terraform force-unlock LOCK_ID
-terraform workspace list | new | select | delete
-terraform console
-terraform graph | terraform providers | terraform providers lock
-terraform test
-terraform fmt -recursive
-terraform validate
-terraform login | logout
+terraform output [-raw NAME] [-json]
+terraform console | graph | validate | fmt -recursive | test
+terraform providers | providers lock -platform=... | providers mirror DIR | version
+terraform login | workspace list|new|select
 ```
 
-## Key HCL Features to Master
+## Language Features by Version (know which are in 1.6)
 
-- `optional()` and `nullable` in object type constraints
-- `validation` blocks with `condition`, `error_message`
-- `precondition` and `postcondition` blocks in resources and data sources
-- `check` blocks (Terraform 1.5+) for continuous validation
-- `moved` blocks for refactoring
-- `removed` blocks for dropping resources without destroy (Terraform 1.7+)
-- `import` blocks for declarative imports
-- Ephemeral resources and write-only attributes (Terraform 1.10+)
-- `for_each` with sets and maps, `count` with conditional creation
-- `dynamic` blocks with nested iteration
-- `terraform_data` resource (replaces `null_resource` in modern configs)
+| Feature | Version | In scope for 1.6? |
+|---|---|---|
+| `moved` blocks | 1.1 | Yes |
+| Preconditions and postconditions, `replace_triggered_by` | 1.2 | Yes |
+| `optional()` with defaults in object types | 1.3 | Yes |
+| `terraform_data` | 1.4 | Yes |
+| `import` blocks, `check` blocks, `-generate-config-out` | 1.5 | Yes |
+| `terraform test` (GA), S3 backend `assume_role` block | 1.6 | Yes |
+| `removed` blocks, import `for_each`, test mocks | 1.7 | No, newer than the tested version |
+| Provider-defined functions, cross-type `moved` | 1.8 | No, newer |
+| Cross-variable validation, `templatestring` | 1.9 | No, newer |
+| Ephemeral resources and values, S3 `use_lockfile` | 1.10 | No, newer |
+| Write-only arguments | 1.11 | No, newer |
 
-## Sentinel Policy Example
+## Policy Enforcement Levels
 
-```python
-import "tfplan/v2" as tfplan
-
-allowed_regions = ["us-east-1", "us-west-2"]
-
-main = rule {
-  all tfplan.resource_changes as _, rc {
-    rc.type is not "aws_instance" or
-    rc.change.after.availability_zone[:len(rc.change.after.availability_zone)-1] in allowed_regions
-  }
-}
-```
+| Engine | Level | Behavior |
+|-------|-------|----------|
+| Sentinel | advisory | Logs failure, run proceeds |
+| Sentinel | soft-mandatory | Run stops; a user with Manage policy overrides can override |
+| Sentinel | hard-mandatory | Run stops; no override by default; fix the code |
+| OPA | advisory | Logs failure, run proceeds |
+| OPA | mandatory | Run stops; overridable with Manage policy overrides |
 
 ## HCP Terraform Workspace Execution Modes
 
 | Mode | Description | When to use |
 |------|-------------|-------------|
-| Remote | Plans and applies run in HCP Terraform | Default, full UI history |
-| Local | State stored remotely, execution local | Legacy pipelines, agent-unfriendly networks |
-| Agent | Runs execute on self-hosted agent | Private networks, custom tooling |
+| Remote | Plans and applies run on HCP Terraform workers | Default; full run history and governance |
+| Local | State stored in HCP Terraform, execution on your machine or runner | Existing pipelines that only need remote state |
+| Agent | Runs execute on self-hosted agents in your network | Private resources; credentials from the agent's own identity |
 
-## Policy Enforcement Levels
+## Readiness Check
 
-| Level | Behavior |
-|-------|----------|
-| advisory | Logs failure, run proceeds |
-| soft-mandatory | Run blocked, organization owner can override |
-| hard-mandatory | Run blocked, no override possible (except via code fix) |
+You are ready to book when you can, on Terraform 1.6 and without notes:
 
-## Dynamic Provider Credentials Flow (AWS example)
-
-1. HCP Terraform issues an OIDC token per run.
-2. Workspace sends token to AWS STS via `AssumeRoleWithWebIdentity`.
-3. AWS returns short-lived credentials.
-4. Terraform AWS provider uses those credentials for the run.
-5. Credentials expire at run end. No static keys stored.
-
-Required workspace variables: `TFC_AWS_PROVIDER_AUTH=true`, `TFC_AWS_RUN_ROLE_ARN=arn:aws:iam::...`.
-
-## Common Exam Task Types (performance-based)
-
-- "Refactor this module to use `for_each` instead of `count`, preserve state."
-- "This `terraform apply` is failing with a lock error. Resolve without data loss."
-- "Split a monolithic workspace into dev and prod using workspace naming and state mv."
-- "Author a Sentinel policy that blocks public S3 buckets."
-- "Configure a VCS-driven workspace with speculative plans on PRs."
-- "Import an existing EC2 instance into a new Terraform module."
-- "Write a `terraform test` file that validates module behavior."
-
-## Scoring Philosophy
-
-Tasks are scored by the end state of the lab environment, not by the exact commands you ran. If your final state file, module outputs, and workspace configuration match the rubric, you earn the points even if your approach differed from the expected one.
-
-## Version Scope
-
-As of the 2025 exam refresh, the exam covers Terraform CLI versions 1.5 through 1.10. Expect questions and tasks involving `import` blocks, `check` blocks, `moved` and `removed` blocks, `terraform test`, and (for newer revisions) ephemeral resources.
-
-## Red Flags That Indicate You Are Not Ready
-
-- You have never published a module to a registry.
-- You have never migrated state between backends.
-- You have never written a Sentinel or OPA policy.
-- You cannot explain when to use `-target` and why it is usually wrong.
-- You have never debugged a broken provider lock file.
-
-If any of the above apply, spend more lab time before scheduling.
+- Migrate state from local to a remote backend and prove "No changes".
+- Import an existing resource with an import block and generated config, and tidy the result.
+- Refactor a flat configuration into a module with `moved` blocks and zero replacements.
+- Write a variable with a `map(object)` type, `optional()` attributes and validation.
+- Configure an aliased provider and pass it into a module.
+- Diagnose a provider error with `TF_LOG` and fix the cause.
+- Explain the HCP Terraform run stages, variable precedence, team roles, dynamic credentials and policy enforcement levels.

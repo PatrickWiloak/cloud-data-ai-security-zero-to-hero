@@ -1,172 +1,115 @@
-# Terraform Authoring and Operations Professional - Practice Plan
+---
+last-updated: 2026-10-22
+---
 
-This is an 8-week plan assuming 8 to 12 hours per week of dedicated study plus lab time. Compress to 6 weeks if you already have strong production experience, or extend to 12 weeks if you are coming directly from the Associate exam.
+# HashiCorp Certified: Terraform Authoring and Operations Advanced - Practice Plan
 
-## Prerequisites Before Week 1
+An 8-week plan at 8 to 12 hours a week, mostly hands-on. Weeks 1 to 6 each map onto one exam objective; weeks 7 and 8 are mixed labs and review. Compress to 6 weeks if you already do this work daily. HashiCorp publishes no objective weights, so the time per week is this guide's estimate.
 
-- HCP Terraform account (free tier is sufficient for most labs)
-- AWS or Azure or GCP sandbox account with budget alarms configured
-- Local Terraform CLI 1.9 or newer installed
-- Git and a GitHub or GitLab account for VCS-driven workspace labs
-- `tfenv` or `asdf` for managing multiple Terraform versions
+## Before Week 1
 
-## Week 1: Module Authoring Foundations
+- Install **Terraform 1.6.x** (with `tfenv` or `asdf` so you can pin it) and use it for every lab. Newer versions accept syntax the exam will not.
+- A sandbox in the cloud you will sit the exam for: **AWS or Azure**, with a budget alert.
+- A free HCP Terraform organization and `terraform login`.
+- Git, `jq`, and an editor.
 
-**Reading**
-- Notes file `01-state-management-advanced.md` sections on state fundamentals (skim)
-- Notes file `02-modules-and-registry.md` in full
-- Official docs: Module Development, Module Composition
+## Week 1: Objective 1 - Manage resource lifecycle
 
-**Labs**
-- Build a VPC module with public and private subnets using `for_each` over a subnet map
-- Add variable validation for CIDR overlap
-- Add `precondition` and `postcondition` checks to assert VPC health
-- Write a `README.md` and `examples/complete/` directory
-
-**Checkpoint**
-- Your module must accept a map of AZ to subnet CIDRs and output subnet IDs keyed by AZ.
-- Run `terraform fmt -recursive` and `terraform validate` with zero errors.
-
-## Week 2: Advanced HCL and terraform test
-
-**Reading**
-- Notes file `02-modules-and-registry.md` sections on testing and publishing
-- Official docs: `terraform test`, `check` blocks, `moved` blocks
+**Read:** [notes/01-manage-resource-lifecycle.md](./notes/01-manage-resource-lifecycle.md)
 
 **Labs**
-- Add a `tests/` directory to last week's module
-- Write three `.tftest.hcl` files: one unit (plan only), one integration (apply), one validation of outputs
-- Refactor a resource using `moved` blocks without destroying
-- Use `removed` blocks to drop an output or resource from state
+- Build a small configuration (network plus one VM) on local state. Then add a remote backend and run `terraform init -migrate-state`; confirm "No changes".
+- Use partial backend configuration with `-backend-config=dev.tfbackend` and `prod.tfbackend`.
+- Practice `plan -out`, `show -json`, `apply tfplan`; then `plan -replace`, `plan -target`, `plan -destroy -out`.
+- Create a resource in the console and import it twice: once with `terraform import`, once with an import block and `-generate-config-out`. Tidy the generated file until plan shows only the import.
+- Change a tag in the console, then run `plan -refresh-only`, `apply -refresh-only`, and decide revert or accept.
+- Rename a resource with a `moved` block, and forget one with `terraform state rm`.
 
-**Checkpoint**
-- `terraform test` runs clean with at least 3 `run` blocks.
-- You can explain the difference between `check` blocks and `validation` blocks.
+**Checkpoint:** you can state from memory what `-upgrade`, `-reconfigure` and `-migrate-state` each do, and every lab ends with a clean plan.
 
-## Week 3: State Management Deep Dive
+## Week 2: Objective 2 - Dynamic configuration
 
-**Reading**
-- Notes file `01-state-management-advanced.md` in full
-- Official docs: backends, state locking, import blocks
+**Read:** [notes/02-dynamic-configuration.md](./notes/02-dynamic-configuration.md)
 
 **Labs**
-- Configure an S3 + DynamoDB backend with KMS encryption
-- Migrate a workspace from local state to S3 backend using `terraform init -migrate-state`
-- Import three existing resources (one with `terraform import` CLI, two with `import` blocks)
-- Simulate a lock conflict and use `terraform force-unlock` to recover
-- Split a state into two by using `terraform state mv` and a new backend prefix
+- Write a `map(object)` variable with `optional()` attributes and two validation blocks.
+- Create subnets with `for_each` from that map, and security group rules with a `dynamic` block.
+- Flatten a nested input (networks containing subnets) into a `for_each` map.
+- Add a postcondition to an AMI or image data source, a precondition that compares two inputs, and a `check` block. Make each one fail on purpose and note error versus warning.
+- Write a `terraform test` file with a plan-only run, an assertion, and an `expect_failures` run for a bad input.
+- Mark a password variable sensitive, apply, then find the value in state with `terraform show -json`.
 
-**Checkpoint**
-- You can recover from a corrupt state by pulling, editing, and pushing.
-- You understand when `-refresh-only` is safer than a regular plan.
+**Checkpoint:** you can explain when to use validation, precondition, postcondition and check, and why `sensitive` does not protect state.
 
-## Week 4: CLI Workflows and Debugging
+## Week 3: Objective 3 - Collaborative workflows
 
-**Reading**
-- Notes file `03-cli-workflows-and-debugging.md` in full
+**Read:** [notes/03-collaborative-workflows.md](./notes/03-collaborative-workflows.md)
 
 **Labs**
-- Run `TF_LOG=TRACE terraform plan` and read the provider RPC traffic
-- Use `terraform console` to test `for` expressions and `try()` calls
-- Use `terraform graph | dot -Tpng > graph.png` to visualize dependencies
-- Generate a saved plan file, inspect with `terraform show -json tfplan | jq`, then apply
-- Debug a broken `.terraform.lock.hcl` by regenerating with `terraform providers lock`
+- Set up an S3 backend with a DynamoDB lock table (AWS) or an azurerm backend (Azure). Hold a lock in one terminal and watch the second run fail; use `-lock-timeout`.
+- Experiment with version constraints: set two conflicting provider constraints across modules and read the error; fix it. Upgrade a provider with `init -upgrade` and inspect the lock file diff.
+- Run `terraform providers lock -platform=linux_amd64 -platform=darwin_arm64`.
+- Write a small pipeline (GitHub Actions or a shell script) with `TF_IN_AUTOMATION`, `-input=false`, `plan -out`, `-detailed-exitcode` and `apply tfplan`.
+- Split network and app into two configurations. Share VPC and subnet IDs with `terraform_remote_state`, then with a `cloud` block and `tfe_outputs`.
 
-**Checkpoint**
-- Given a failing plan, you can narrow the failure to a specific resource and produce a minimal reproduction.
+**Checkpoint:** you can explain why `tfe_outputs` is preferred over `terraform_remote_state` in HCP Terraform.
 
-## Week 5: HCP Terraform and Enterprise Operations
+## Week 4: Objective 4 - Modules
 
-**Reading**
-- Notes file `04-terraform-cloud-enterprise.md` in full
-- Official docs: workspaces, variable sets, projects, dynamic credentials
+**Read:** [notes/04-modules.md](./notes/04-modules.md)
 
 **Labs**
-- Create a CLI-driven workspace and push a local state
-- Create a VCS-driven workspace connected to a GitHub repo, enable speculative plans on PRs
-- Create an API-driven workspace using the `tfe` provider
-- Configure dynamic AWS credentials via OIDC (no static keys)
-- Set up variable sets at organization scope and apply to a project
-- Configure a run trigger so workspace B runs after workspace A applies
+- Turn the week 2 network code into a module with typed inputs, outputs, a README and an example.
+- Call it from a local path, from a Git tag with `?ref=`, and (if you can) from the HCP Terraform private registry with `version`.
+- Call the module with `for_each` for two environments.
+- Refactor a flat configuration into the module with `moved` blocks until plan shows 0 add, 0 change, 0 destroy.
+- Rename a resource inside the module, add a `moved` block in the module, tag a new version, and upgrade a consumer.
 
-**Checkpoint**
-- You can explain the tradeoffs between the three execution modes (remote, local, agent).
-- You have a working OIDC integration and can prove no long-lived AWS keys are stored.
+**Checkpoint:** you can refactor into a module without a single replacement.
 
-## Week 6: Policy as Code with Sentinel and OPA
+## Week 5: Objective 5 - Providers
 
-**Reading**
-- Notes file `05-policy-as-code-sentinel-opa.md` in full
-- Official docs: Sentinel language, Sentinel imports, OPA Conftest
+**Read:** [notes/05-providers.md](./notes/05-providers.md)
 
 **Labs**
-- Write three Sentinel policies: block public S3, require tags, restrict instance types
-- Test each with `sentinel test` using mock data generated from a real plan
-- Package into a policy set, attach to a workspace, run a plan that violates and one that passes
-- Write equivalent policies in Rego and evaluate with `conftest` against a plan JSON
+- Add a second aliased provider (another region, or another subscription) and create a resource with it.
+- Write a module that needs two configurations of the same provider (`configuration_aliases`) and pass them in from the root.
+- Authenticate with environment variables, then with a role or managed identity; never with keys in HCL.
+- Break things on purpose: wrong `source`, impossible constraint, missing credentials, missing permission. Read each error, then use `TF_LOG_PROVIDER=DEBUG` and `TF_LOG_PATH` to find the API call.
+- Run `terraform providers`, `terraform version` and `terraform providers mirror`.
 
-**Checkpoint**
-- You can explain the three enforcement levels and when to use each.
-- You can generate Sentinel mock data from a real run.
+**Checkpoint:** given any provider error, you can say whether it is installation, configuration, authentication, authorization, or a provider bug.
 
-## Week 7: CI/CD Automation and Run Tasks
+## Week 6: Objective 6 - HCP Terraform
 
-**Reading**
-- Notes file `06-collaboration-and-automation.md` in full
-- Official docs: run tasks, GitHub Actions `setup-terraform`
+**Read:** [notes/06-hcp-terraform.md](./notes/06-hcp-terraform.md)
 
-**Labs**
-- Build a GitHub Actions pipeline that runs `terraform fmt`, `validate`, `plan` on PRs
-- Configure a run task pointing to a local Checkov webhook (use a sample signed receiver)
-- Use the `tfe` provider to provision workspaces for a new team self-service flow
-- Enable drift detection (health assessments) on a production workspace and review results
+**Activities** (this objective is multiple choice, so aim for understanding)
+- Create a VCS-driven workspace, open a pull request and watch the speculative plan; merge and follow the run through its stages.
+- Create a project, a team with Write on it, and a variable set scoped to the project. Test variable precedence with a workspace variable of the same name.
+- Configure dynamic provider credentials for your cloud and remove static keys.
+- Read a Sentinel policy and an OPA policy, and work out what each would block. If your organization's plan includes policies, attach an advisory policy set.
+- Set up a run trigger between the network and app workspaces.
 
-**Checkpoint**
-- You understand the difference between speculative plans, run triggers, and run tasks.
-- You can provision a workspace end-to-end via API using `tfe`.
+**Checkpoint:** you can list the run stages in order and name the project and workspace roles.
 
-## Week 8: Full Lab Simulations and Weak Area Reinforcement
+## Week 7: Mixed labs
 
-**Activities**
-- Take a 4-hour timed mock lab (build your own scenario list from `scenarios.md`)
-- Review every scenario in `scenarios.md` and write out your solution steps before reading the answer
-- Re-do any lab from weeks 1 to 7 where you were slow or needed to look up commands
-- Read `strategy.md` and `fact-sheet.md` end to end two days before the exam
+- Work every scenario in [scenarios.md](./scenarios.md) by hand before reading the answer.
+- Redo any week 1 to 5 lab that felt slow, without notes.
+- Practice finding things fast in the Terraform docs: import ID formats, function signatures, backend arguments.
 
-**Daily drills (15 minutes each, last 7 days)**
-- `terraform state` subcommands from memory
-- Sentinel `tfplan/v2` traversal idioms
-- HCP Terraform API endpoints for workspace and variable management
-- CLI flags for `plan` and `apply` (`-target`, `-replace`, `-refresh-only`, `-out`, `-var-file`)
+## Week 8: Mock exam and review
 
-## Mock Exam Structure (build your own)
+- Build a 4-hour mock with one break: pick six to eight labs from the weeks above (for example migrate state, import with generated config, refactor into a module, add an aliased provider, fix a broken `for_each`, set up a backend with locking) plus a page of HCP Terraform questions you write yourself from note 06.
+- Review [fact-sheet.md](./fact-sheet.md) and [strategy.md](./strategy.md) two days before.
+- Day before: rest, light review of CLI options, no new material.
 
-Pick 5 of the following as a 4-hour timed drill:
+## Lab Environment Checklist
 
-1. Refactor a `count`-based module to `for_each` preserving state (30 min)
-2. Import 3 existing resources into a new module using `import` blocks (30 min)
-3. Migrate a workspace from S3 to HCP Terraform preserving state (30 min)
-4. Write a Sentinel policy blocking unencrypted EBS volumes, test and attach (45 min)
-5. Configure a VCS workspace with OIDC AWS credentials, prove zero static keys (45 min)
-6. Debug a failing plan with a provider lock conflict (30 min)
-7. Author a module test suite covering plan, apply, and failure cases (45 min)
-8. Split a monolithic workspace into 3 using state mv and run triggers (45 min)
-
-## Hands-on Lab Environment Checklist
-
-- [ ] `terraform -version` shows 1.9 or newer
-- [ ] `terraform login` completed against HCP Terraform
-- [ ] AWS/Azure/GCP credentials available via OIDC or env vars
-- [ ] Private GitHub or GitLab repo for VCS-driven workspaces
-- [ ] `sentinel` CLI installed for policy testing
-- [ ] `conftest` installed for OPA testing (optional)
-- [ ] `jq` and `yq` installed for plan inspection
-- [ ] Budget alert set at $50 to catch runaway labs
-
-## Final Week Tactics
-
-- Day 7 to 4: wrap up any incomplete labs from weeks 1 to 7
-- Day 3: full 4-hour mock exam using your scenario stack
-- Day 2: targeted review of weakest domain
-- Day 1: rest, light review of CLI flags and Sentinel syntax, no new material
-- Exam day: set up a quiet workspace, ensure stable network, have water on hand, and do not plan anything else for the 4 hours
+- [ ] `terraform version` shows 1.6.x
+- [ ] Sandbox credentials for AWS or Azure available without keys in code
+- [ ] `terraform login` done against HCP Terraform
+- [ ] A Git repository for VCS-driven workspaces and module tags
+- [ ] `jq` installed for reading `show -json` output
+- [ ] Budget alert on the sandbox

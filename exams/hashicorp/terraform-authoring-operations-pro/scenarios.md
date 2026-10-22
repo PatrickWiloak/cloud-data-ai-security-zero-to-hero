@@ -1,6 +1,12 @@
-# Terraform Authoring and Operations Professional - Real-World Scenarios
+---
+last-updated: 2026-10-22
+---
 
-Each scenario models a real production situation similar to what you will encounter on the exam. Work through the "Question" first, then read the "Answer" to validate your thinking.
+# HashiCorp Certified: Terraform Authoring and Operations Advanced - Real-World Scenarios
+
+Each scenario models a real production situation similar to what you will encounter on the exam. Work through the "Question" first, then read the "Answer" to validate your thinking. The exam tests Terraform 1.6, so the answers stick to features available in 1.6. Objective numbers refer to the six exam objectives (see [README.md](./README.md)).
+
+Scenarios by objective: 1 lifecycle (2, 3, 4), 2 dynamic configuration (8), 3 collaborative workflows (9), 4 modules (1, 11), 5 providers (10), 6 HCP Terraform (5, 6, 7, 12).
 
 ## Scenario 1: Refactor count to for_each Without Destroying
 
@@ -35,12 +41,10 @@ import {
   id = "vpc-0abc123"
 }
 
-resource "aws_vpc" "prod" {
-  # placeholder, will be filled
-}
+# no resource "aws_vpc" "prod" block yet: Terraform generates it
 ```
 
-Then run `terraform plan -generate-config-out=generated.tf`. Review `generated.tf`, clean it up, and commit. Follow with `terraform plan` which should show no changes. Then `terraform apply` records the import into state.
+Then run `terraform plan -generate-config-out=generated.tf`. Terraform only generates configuration for import targets that have **no** resource block, so do not write a placeholder. Review `generated.tf`, clean it up (remove conflicting or computed arguments, replace literals with references), and commit. Run `terraform plan` again: it should show 1 to import and 0 to add, change or destroy. Then `terraform apply` records the import into state. (Config generation was experimental in 1.5 and 1.6; `terraform import aws_vpc.prod vpc-0abc123` with a hand-written block is the fallback.)
 
 ## Scenario 4: Split Monolith into Dev and Prod
 
@@ -96,13 +100,13 @@ Test with `sentinel test -run block-public-s3` using mocks generated from `terra
 5. Run a speculative plan to validate.
 6. If plan succeeds, you are migrated. If not, re-add the static vars, debug the trust policy, and retry.
 
-The order matters: if you remove the static vars before the dynamic path works, you get failed runs. If you keep both, static wins and the migration is a no-op.
+The order matters: if you remove the static vars before the dynamic path works, you get failed runs. Do not leave both in place: HashiCorp warns that other credential settings for the provider can interfere with dynamic credentials, and you would not know which identity a run actually used. A clean finish is dynamic credentials only, with the trust policy bound to the workspace's `sub` claim.
 
 ## Scenario 7: Drift Detection on Critical Workspace
 
 **Question:** Your ops team wants to know within an hour if someone makes a console change to a production resource. How do you enable this with HCP Terraform and what are the caveats?
 
-**Answer:** Enable **health assessments** on the workspace. HCP Terraform periodically runs `terraform plan -refresh-only` and reports drift to the UI and via notifications. Caveats: assessments count against your run concurrency and may incur cost on the paid tier; they do not auto-remediate, only report. For auto-remediation, pair with a scheduled run trigger that applies. For stronger enforcement, combine with AWS Config rules that alert on changes outside Terraform.
+**Answer:** Enable **health assessments** on the workspace (drift detection, plus continuous validation of `check` blocks). HCP Terraform periodically runs a refresh-only plan and reports drift in the UI and through notifications. Caveats: assessments run on HCP Terraform's own schedule rather than one you set, so they may not meet a strict one-hour target; whether they are available depends on your HCP Terraform plan; and they only report, never remediate. Remediation is a normal run (revert with an apply, or accept by updating the configuration). For near-real-time alerts on critical resources, add cloud-native change detection such as AWS Config rules or Azure Activity Log alerts.
 
 ## Scenario 8: terraform test for a Module
 
@@ -120,13 +124,13 @@ Run via `terraform test` in CI. Unit tests (`command = plan`) are cheap and catc
 
 **Question:** Workspace `network` manages the VPC. Workspace `apps` consumes the VPC ID via `terraform_remote_state`. When `network` changes CIDRs, `apps` must re-plan. How do you automate?
 
-**Answer:** Configure a run trigger on `apps`: "Trigger runs when these source workspaces apply: [network]". Now, whenever `network` applies, `apps` automatically queues a plan. Pair this with `terraform_remote_state` data source in `apps` so the new VPC ID flows through. For tighter coupling, consider publishing `network` outputs as a module and consuming via the private registry instead of remote state.
+**Answer:** Configure a run trigger on `apps`: "Trigger runs when these source workspaces apply: [network]". Now, whenever `network` applies, `apps` automatically queues a plan. Read the VPC ID in `apps` with the `tfe_outputs` data source, which HashiCorp recommends over `terraform_remote_state` because it does not need access to the whole `network` state. `network` must expose the ID as a root-level output, and its remote state sharing setting must allow `apps` to read it.
 
 ## Scenario 10: Debugging a Provider Lock Conflict
 
 **Question:** A teammate committed a `.terraform.lock.hcl` after upgrading the AWS provider. Your local CI runs on Linux AMD64 but produces a hash mismatch error. What is happening and how do you fix?
 
-**Answer:** The lock file pins hashes for specific platforms. Your teammate likely locked on macOS ARM64 only. The fix: `terraform providers lock -platform=linux_amd64 -platform=darwin_arm64 -platform=darwin_amd64`. Commit the updated lock. This adds hashes for all platforms your team runs on. Alternatively, run `terraform init -upgrade` in CI to refresh. Long-term fix: add a pre-commit hook that runs `terraform providers lock` with all supported platforms.
+**Answer:** The lock file pins hashes for specific platforms. Your teammate likely locked on macOS ARM64 only. The fix: `terraform providers lock -platform=linux_amd64 -platform=darwin_arm64 -platform=darwin_amd64`. Commit the updated lock. This adds hashes for all platforms your team runs on without changing the selected version. Do not "fix" it with `terraform init -upgrade` in CI: that can select a different provider version than the one reviewed. Long-term fix: run `terraform providers lock` with all supported platforms whenever the lock file changes, and use `terraform init -lockfile=readonly` in CI.
 
 ## Scenario 11: Private Module Registry Versioning
 

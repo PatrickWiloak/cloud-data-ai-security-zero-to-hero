@@ -3,11 +3,11 @@ last-updated: 2026-10-22
 difficulty: advanced
 ---
 
-# HashiCorp Terraform Authoring and Operations Professional - Practice Questions
+# HashiCorp Terraform Authoring and Operations Advanced - Practice Questions
 
-30 questions for the Terraform Professional exam, covering module design, state operations, workspaces, testing, and troubleshooting. HashiCorp now lists this lab-based exam as Terraform Authoring and Operations Advanced; questions 16-30 are spread across its six published objectives (resource lifecycle, dynamic configuration, collaborative workflows, modules, providers, and HCP Terraform), which carry no published weights.
+30 questions for the Terraform Authoring and Operations Advanced exam (previously listed as Terraform Authoring and Operations Professional), covering module design, state operations, workspaces, testing, and troubleshooting. Questions 16-30 are spread across its six published objectives (resource lifecycle, dynamic configuration, collaborative workflows, modules, providers, and HCP Terraform), which carry no published weights.
 
-This exam is performance-based: four hours of hands-on lab tasks in a live environment. These questions reinforce the reasoning behind the tasks rather than substituting for practice at a keyboard.
+This exam is mostly performance-based: four hours of hands-on lab scenarios in a live environment, plus multiple-choice items (objective 6, HCP Terraform, is multiple choice only). These questions reinforce the reasoning behind the tasks rather than substituting for practice at a keyboard.
 
 > **Cert page:** [exams/hashicorp/terraform-authoring-operations-pro/](../../exams/hashicorp/terraform-authoring-operations-pro/)
 

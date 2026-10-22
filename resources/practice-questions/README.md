@@ -120,7 +120,7 @@ Scenario-based practice question banks, one per certification. Every bank follow
 - [HashiCorp Nomad Associate Certification](./hashicorp-nomad-associate.md)
 - [HashiCorp Packer Associate (003) Certification](./hashicorp-packer-associate.md)
 - [HashiCorp Terraform Associate (003) Certification](./hashicorp-terraform-associate.md)
-- [HashiCorp Terraform Authoring and Operations Professional Certification](./hashicorp-terraform-authoring-operations-pro.md)
+- [HashiCorp Certified: Terraform Authoring and Operations Advanced](./hashicorp-terraform-authoring-operations-pro.md)
 - [HashiCorp Vault Associate (003) Certification](https://security.noblerworks.com/resources/practice-questions/hashicorp-vault-associate/)
 
 ### Oracle (7)

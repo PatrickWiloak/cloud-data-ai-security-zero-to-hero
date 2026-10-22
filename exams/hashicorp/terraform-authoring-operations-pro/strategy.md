@@ -1,117 +1,76 @@
-# Terraform Authoring and Operations Professional - Exam Strategy
+---
+last-updated: 2026-10-22
+---
 
-This exam is performance-based. You will not be answering multiple-choice questions. You will be executing real Terraform tasks in a live environment with a live CLI, a live HCP Terraform org, and in some cases a live cloud sandbox. Your strategy must be different from the Associate exam.
+# HashiCorp Certified: Terraform Authoring and Operations Advanced - Exam Strategy
+
+This exam mixes two kinds of work. Most of it is **labs**: real tasks in a live environment with a terminal, an editor, the cloud console and Terraform 1.6, each scored by inspecting what you leave behind. The rest is **multiple choice**, and objective 6 (HCP Terraform) is tested by multiple choice only. You have 4 hours with one 15-minute break. HashiCorp does not publish how many labs or questions there are, or how they are weighted, so plan your time by what is in front of you rather than by fixed numbers.
+
+## Time Allocation
+
+HashiCorp publishes **no objective weights**. The split below is **this guide's estimate** of where your preparation time pays off, not an official weighting.
+
+| Objective | Suggested share of prep time (this guide's estimate) | Why |
+|---|---|---|
+| 1. Manage resource lifecycle | 20% | Every lab touches init, plan, apply and state; import and drift are fiddly |
+| 2. Dynamic configuration | 25% | Most HCL you type; functions, for_each and validation take practice |
+| 3. Collaborative workflows | 15% | Backends, version constraints and automation flags are precise details |
+| 4. Modules | 15% | Refactoring into modules without replacements is a classic lab |
+| 5. Providers | 10% | Aliases, sourcing and debugging; smaller surface area |
+| 6. HCP Terraform (multiple choice) | 15% | Concepts, stages, settings and policy; no lab practice needed beyond familiarity |
+
+On the day: when you start, look at what the exam presents and how many items there are, then set yourself checkpoints (for example a quarter of the items done per hour). Use the 15-minute break deliberately, not at a random moment mid-task.
 
 ## The Week Before
 
-- Confirm your testing environment: stable wired internet if possible, quiet room, webcam working.
-- Run the PSI system compatibility check at least 48 hours before.
-- Lock down your schedule: 4 hours plus 30 minutes buffer for check-in. Do not schedule anything within 5 hours.
-- Sleep normally. Cramming HCL syntax the night before is less valuable than rest.
+- Run the proctoring provider's system check well ahead, on the machine and network you will use.
+- If you use a non-US keyboard layout, request it in advance; HashiCorp supports common non-US QWERTY layouts on request.
+- Make sure your daily practice CLI is Terraform 1.6.x, not the newest release.
+- Sleep. Typing speed and calm reading matter more than one more evening of review.
 
-## The Day Of
+## Lab Tactics
 
-- Eat a real meal 90 minutes before. No caffeine spike right before.
-- Close everything except your browser. PSI will ask you to shut down non-essentials anyway.
-- Have your ID ready and your room cleared of notes, second monitors, and phones.
-- Take a bathroom break immediately before check-in. There are limited or no breaks during the exam.
+For every lab task:
 
-## Time Management Within the Exam
+1. **Read the whole task twice** and write down the exact end state: names, counts, tags, which resources must not be replaced.
+2. **Inspect before you change.** `terraform state list`, read the existing configuration, check the backend and versions block.
+3. **Make the smallest change** that reaches the end state. Do not tidy unrelated code.
+4. **Plan before you apply**, and read the summary line. Unexpected `-/+` or destroy counts mean stop and rethink.
+5. **Verify the end state.** After apply, run `terraform plan` again. "No changes" is usually what a finished task looks like. Run `terraform fmt` and `terraform validate`.
+6. **Use the docs.** You have the Terraform docs and limited provider docs. Look up import ID formats and argument names instead of guessing.
 
-You have approximately 4 hours for roughly 15 to 25 tasks. That is 10 to 15 minutes per task on average. Some tasks will be shorter (a state surgery fix), others longer (build a module from scratch). Budget accordingly.
+Labs are scored independently and can be done in any order. If one is stuck after a reasonable effort, move on and come back; a later lab does not depend on it.
 
-**Rule of thumb:** If a task has consumed 20 minutes and you are not close, flag it, move on, and come back.
+### Per-objective tactics
 
-Break the exam into rough phases:
+**Objective 1 - lifecycle.** Know which init option a scenario calls for (`-migrate-state` keeps state, `-reconfigure` does not, `-upgrade` moves providers). Prefer `import` blocks and `moved` blocks to CLI state surgery, unless the task asks for the CLI. Remember `removed` blocks do not exist in 1.6; use `terraform state rm`. For drift, decide explicitly between reverting (normal apply), accepting (change config) and ignoring (`ignore_changes`).
 
-- Minutes 0 to 15: read every task, make a mental or scratch note of which are easy wins, which are medium, which are hard.
-- Minutes 15 to 180: execute tasks in order of confidence (easy first, then medium).
-- Minutes 180 to 210: tackle hard or flagged tasks.
-- Minutes 210 to 240: verify end-state of completed tasks by re-running plan or inspecting state.
+**Objective 2 - dynamic configuration.** Build expressions in `terraform console` before putting them in files. When `for_each` complains about unknown values, key on input variables. Cross-variable rules in 1.6 go in a `precondition`, not a validation block. If a task says the run must fail on a condition, a `check` block is wrong (it only warns).
 
-## Task Approach Playbook
+**Objective 3 - collaborative workflows.** For an S3 backend in 1.6, locking means `dynamodb_table`. Backend settings that vary per environment come from `-backend-config`. In automation, combine `-input=false` with a saved plan. For sharing outputs, root-level `output` blocks are required in the producer.
 
-For every task, in this order:
+**Objective 4 - modules.** When refactoring into a module, put `moved` blocks in the calling configuration, run `terraform init`, and iterate until plan shows zero add, change and destroy. Reusable modules get `required_providers`, not `provider` blocks. Registry sources take `version`; Git sources take `?ref=`.
 
-1. **Read twice.** Understand the exact end-state being asked. Scoring is based on end-state, not approach.
-2. **Check the starting state.** Run `terraform state list`, inspect the workspace, review the module inputs. Do not assume.
-3. **Plan your minimal change.** The fewer files you touch, the fewer ways to break it.
-4. **Run plan before apply.** Always. The exam will not penalize you for running plan twice, but it will penalize a broken apply.
-5. **Verify the end-state matches the prompt exactly.** If it says "the workspace must be named `prod-vpc`", do not name it `prod_vpc`.
+**Objective 5 - providers.** For a second region or account, add an aliased provider and pass it to modules through `providers`. If a provider will not install, check `source` and constraints with `terraform providers`. If it fails at runtime, turn on `TF_LOG_PROVIDER=DEBUG` and read the API error.
 
-## Common Task Types and Fast-Paths
+**Objective 6 - HCP Terraform (multiple choice).** Questions are about which feature or setting meets a requirement. Know the run stage order (OPA before cost estimation, Sentinel after), variable precedence, the project and workspace roles, the dynamic credentials variables, and the enforcement levels. Eliminate answers that put the right feature at the wrong scope.
 
-### "Refactor module using for_each preserving state"
-Fast-path: Use `moved` blocks. Do not `state mv` manually unless explicitly required. `moved` blocks are cleaner, reviewable, and survive in source control.
+## Multiple-Choice Tactics
 
-### "Import existing resource"
-Fast-path: Prefer `import` blocks over `terraform import` CLI when possible. They are declarative, reviewable, and can generate configuration with `terraform plan -generate-config-out=generated.tf`.
+- Read every option before choosing. Many distractors are real Terraform features used in the wrong place.
+- Watch version wording. If an option relies on a feature newer than 1.6 (removed blocks, ephemeral values, `use_lockfile`), it is unlikely to be the intended answer.
+- Flag anything you are unsure of and return at the end.
 
-### "Resolve state lock"
-Fast-path: Check if the lock is genuinely stale (run ID, age, who holds it). Only then `terraform force-unlock LOCK_ID`. Never force-unlock a running operation.
+## Frequent Pitfalls
 
-### "Write Sentinel policy"
-Fast-path: Start from `tfplan/v2`, filter `resource_changes`, check the `change.after` map. Use the `sentinel test` workflow with mock data. Keep policies small and testable.
+1. **Using a newer Terraform habit.** Syntax that works on your laptop's latest version may fail in the 1.6 environment.
+2. **Leaving pending changes.** A lab whose final plan still shows changes is probably not finished.
+3. **Destroying during a refactor or import.** Always check the plan summary before apply.
+4. **`-reconfigure` when you meant `-migrate-state`.** You lose the link to existing state.
+5. **Credentials in `.tf` files.** Use environment variables or the provided identity.
+6. **Names that almost match.** If the task says `prod-vpc`, `prod_vpc` is wrong.
+7. **Unformatted code.** Run `terraform fmt` before moving on.
 
-### "Configure dynamic AWS credentials"
-Fast-path: Set workspace variables `TFC_AWS_PROVIDER_AUTH=true` and `TFC_AWS_RUN_ROLE_ARN`. Do not also set `AWS_ACCESS_KEY_ID`. If both are set, the static key wins and you lose points.
+## After the Exam
 
-### "Configure VCS-driven workspace"
-Fast-path: Workspace > Settings > Version Control. Pick repo, set working directory if module lives in a subdir, enable speculative plans. Check connection status before saving.
-
-### "Split monolithic state"
-Fast-path: Create new workspace(s), pull current state, use `terraform state mv -state-out=new.tfstate ...` for each address, push to new workspace. Validate with `terraform plan` showing zero changes.
-
-## Frequent Pitfalls to Avoid
-
-1. **Forgetting to save a plan file.** If a task asks for `terraform apply tfplan`, you need the saved plan. `-out=tfplan` is not optional.
-2. **Destroying resources during import.** If `import` block is missing, a plan will want to create the resource. Always verify with plan before apply.
-3. **Wrong working directory.** VCS-driven workspaces have a working directory setting. Leaving it blank vs setting `modules/vpc` changes which files Terraform sees.
-4. **Static credentials alongside dynamic.** Static wins. Unset them.
-5. **Uppercase vs lowercase workspace names.** Case matters. Match the prompt exactly.
-6. **Missing `required_providers` or `required_version`.** Professional-level modules must pin these. Lose points for omitting.
-7. **Using `-target` as a crutch.** The graders notice. Use it only when explicitly asked.
-8. **Ignoring `terraform fmt`.** Unformatted HCL is an easy deduction. Run fmt before finishing each task.
-
-## Reading Error Messages
-
-Terraform errors are verbose but informative. Train yourself to scan for:
-
-- The resource address (which resource triggered it)
-- The provider (AWS, Azure, etc.) vs core error
-- Hints in the error body (e.g., "consider using `-refresh-only`")
-
-Provider errors often include the underlying API response. If you see `AccessDenied`, it is not a Terraform bug. Check IAM.
-
-## Keyboard and Tooling Efficiency
-
-You will be switching between a CLI, the HCP Terraform UI, and an editor. Tips:
-
-- Keep one terminal pinned at the module root. Use a second for `terraform console`.
-- Use shell history (`Ctrl-R`) for repeated commands.
-- Have `terraform -help plan` and `-help state` mentally indexed.
-- If the lab provides a browser-based editor, resist using your local editor. Stay in-env.
-
-## When to Give Up on a Task
-
-If you have spent 20 minutes and are no closer, flag it and move on. A partially complete task is worth zero. Three fully complete tasks plus one abandoned is better than two half-done plus one stuck.
-
-Come back only if time allows after the rest are done.
-
-## Mental State
-
-- This exam rewards calm, methodical work. Panicking speeds up typing but slows down thinking.
-- If you hit a wall, take 30 seconds to look away from the screen, breathe, and come back.
-- Trust your preparation. You have done these tasks before in labs. Treat the exam as another lab.
-
-## After Submitting
-
-- Results are typically emailed within 24 to 48 hours.
-- If you pass, your certification is valid for 2 years. Add it to HashiCorp's Credly integration for shareable badges.
-- If you do not pass, you get a domain-level breakdown. Use it to focus the retake.
-
-## Post-Certification
-
-- Recertification means taking the current version of the exam. HashiCorp updates the blueprint roughly annually.
-- Stay current by reading the Terraform changelog and trying new language features as they ship.
-- Contribute a public module or Sentinel policy to reinforce learning beyond the exam.
+HashiCorp emails results; the credential is valid for 2 years and includes a free retake if you need one. Renewal means passing the current version of the exam, in either the AWS or the Azure version.

@@ -1,101 +1,109 @@
-# HashiCorp Terraform Authoring and Operations Professional Certification
+---
+last-updated: 2026-10-22
+---
+
+# HashiCorp Certified: Terraform Authoring and Operations Advanced
 
 ## Exam Overview
 
-The HashiCorp Terraform Authoring and Operations Professional certification (current exam, which replaces the older Terraform Associate Professional exam) validates advanced, hands-on Terraform expertise across the full lifecycle of writing, reviewing, debugging, and operating production-grade Terraform code. It targets senior cloud engineers, platform engineers, SREs, and infrastructure architects who are responsible for designing module systems, managing large state ecosystems, and operating Terraform at scale through HCP Terraform (formerly Terraform Cloud) or Terraform Enterprise.
+The HashiCorp Certified: Terraform Authoring and Operations Advanced certification validates hands-on Terraform skill beyond the Associate level: writing dynamic configuration and modules, managing the full resource lifecycle and state, running Terraform collaboratively and in automation, configuring providers, and working with HCP Terraform. HashiCorp previously listed this same exam as "Terraform Authoring and Operations Professional", and the old Professional objectives page now redirects to the Advanced one, so guides and posts using either name describe this exam. "Terraform Infrastructure Engineer Professional" is a different, multiple-choice exam that this guide does not cover.
 
-Unlike the Terraform Associate exam, which emphasizes conceptual understanding and basic workflow, the Professional exam is a **performance-based, hands-on lab exam**. Candidates are given access to a live Terraform environment and must complete real authoring and operations tasks, including writing HCL, debugging broken configurations, remediating state issues, configuring workspaces, and authoring policy-as-code.
+Most of the exam is **lab-based**: you work in a live environment with a terminal, an editor and a cloud account, and each lab is scored by checking what you leave behind (configuration syntax, state files and the settings on provisioned resources). There are also multiple-choice questions, and objective 6 (HCP Terraform) is tested by multiple choice only.
 
-**Exam Code:** Terraform Authoring and Operations Professional
-**Exam Duration:** 4 hours
-**Exam Format:** Hands-on performance-based labs (live Terraform CLI and HCP Terraform environment)
-**Passing Score:** Variable threshold determined by HashiCorp (pass/fail reporting)
-**Cost:** $295 USD
-**Proctoring:** PSI online proctored
+**Exam Name:** HashiCorp Certified: Terraform Authoring and Operations Advanced
+**Format:** Lab-based scenarios plus multiple choice (objective 6 is multiple-choice only)
+**Duration:** 4 hours, with one 15-minute break
+**Terraform Version Tested:** 1.6
+**Cost:** $295 USD plus taxes, with a free retake included
+**Delivery:** Online proctored
+**Cloud Version:** Choose AWS or Azure; both give the same credential
+**Passing Score:** Not published (no numeric cut score, no published question or lab count)
 **Validity:** 2 years
-**Prerequisites:** Terraform Associate (003) certification recommended; at least 12 months hands-on production Terraform experience strongly advised
+**Language:** English
+**Prerequisites:** None required; HashiCorp strongly recommends the Terraform Associate certification or equivalent experience
+
+During the exam you can use the Terraform documentation, a limited part of the Terraform Registry, limited cloud provider documentation and the cloud console. Search engines are not available. Labs can be done in any order and are scored independently, and multiple-choice items can be flagged for review.
 
 ## Who Should Take This Exam
 
-- Senior infrastructure engineers authoring reusable Terraform modules consumed across an organization
-- Platform engineers building internal developer platforms on top of HCP Terraform or Terraform Enterprise
-- SREs and DevOps leads operating Terraform pipelines, policy frameworks, and drift remediation workflows
-- Consultants implementing Terraform adoption, migration, or governance patterns for clients
-- Architects defining state layout, workspace structure, and module boundaries for complex organizations
+- Engineers who already write and run Terraform in production and want to prove it hands-on
+- Platform engineers who build modules and workflows other teams consume
+- DevOps and SRE leads who run Terraform pipelines and HCP Terraform organizations
+- Consultants who adopt, migrate and govern Terraform for clients
 
 ## Prerequisites and Recommended Experience
 
-- Strong working knowledge of HCL2 including dynamic blocks, for expressions, type constraints, and complex variable validation
-- Experience authoring and publishing modules to a private registry (HCP or Terraform Enterprise)
-- Experience with remote state backends (S3, GCS, Azure Blob, HCP) including state locking and migration
-- Familiarity with Sentinel or OPA policy-as-code
-- Practical experience with VCS-driven, CLI-driven, and API-driven workflows in HCP Terraform
-- Comfort with Terraform CLI subcommands beyond plan and apply (state, import, taint/replace, console, graph, refresh, force-unlock)
+HashiCorp's orientation page lists the skills it assumes: Terraform Associate-level knowledge or equivalent, comfort on the Linux command line, working cloud credentials, reading YAML, JSON, HCL and CSV, basic TCP/IP and UDP networking, advanced Terraform authoring, and production experience. In practice that means you have imported resources, refactored into modules, migrated state and debugged provider errors yourself, not only read about them.
 
-## Exam Domains (high-level breakdown)
+## Exam Domains
 
-1. Author and maintain Terraform modules (approximately 25%)
-2. Understand and manage Terraform state (approximately 20%)
-3. Use the Terraform CLI for operations and debugging (approximately 15%)
-4. Operate HCP Terraform and Terraform Enterprise (approximately 15%)
-5. Implement policy as code with Sentinel and OPA (approximately 10%)
-6. Automate Terraform with VCS integrations, run tasks, and CI/CD (approximately 15%)
+HashiCorp publishes six objectives but **does not publish weights** for them.
 
-See `fact-sheet.md` for the detailed topic list per domain.
+| # | Objective | Weight | Note |
+|---|---|---|---|
+| 1 | Manage resource lifecycle | Not published | [01-manage-resource-lifecycle.md](./notes/01-manage-resource-lifecycle.md) |
+| 2 | Develop and troubleshoot dynamic configuration | Not published | [02-dynamic-configuration.md](./notes/02-dynamic-configuration.md) |
+| 3 | Develop collaborative Terraform workflows | Not published | [03-collaborative-workflows.md](./notes/03-collaborative-workflows.md) |
+| 4 | Create, maintain, and use Terraform modules | Not published | [04-modules.md](./notes/04-modules.md) |
+| 5 | Configure and use Terraform providers | Not published | [05-providers.md](./notes/05-providers.md) |
+| 6 | Collaborate on infrastructure as code using HCP Terraform (multiple choice only) | Not published | [06-hcp-terraform.md](./notes/06-hcp-terraform.md) |
+
+[fact-sheet.md](./fact-sheet.md) lists the sub-objectives (1a to 6d) and a suggested study-time split, which is this guide's estimate, not HashiCorp's.
+
+## Study Materials
+
+| File | What it covers |
+|---|---|
+| [fact-sheet.md](./fact-sheet.md) | Exam logistics, every sub-objective, high-yield facts per objective |
+| [notes/01-manage-resource-lifecycle.md](./notes/01-manage-resource-lifecycle.md) | init, plan, apply and destroy options; state commands; import; moved; drift |
+| [notes/02-dynamic-configuration.md](./notes/02-dynamic-configuration.md) | Validation, preconditions, check blocks, `terraform test`; data sources; functions; meta-arguments; complex types; sensitive data and Vault |
+| [notes/03-collaborative-workflows.md](./notes/03-collaborative-workflows.md) | Version constraints and the lock file; S3, azurerm and HCP Terraform backends; automation; `terraform_remote_state` and `tfe_outputs` |
+| [notes/04-modules.md](./notes/04-modules.md) | Writing, calling, versioning and refactoring modules |
+| [notes/05-providers.md](./notes/05-providers.md) | Plugin architecture, aliases, sourcing, upgrades, authentication, TF_LOG debugging |
+| [notes/06-hcp-terraform.md](./notes/06-hcp-terraform.md) | Run workflow, workspaces and permissions, dynamic provider credentials, Sentinel and OPA policy |
+| [practice-plan.md](./practice-plan.md) | Week-by-week lab plan mapped to the six objectives |
+| [scenarios.md](./scenarios.md) | Real-world scenarios with worked answers |
+| [strategy.md](./strategy.md) | Time management and per-objective tactics for exam day |
 
 ## Study Path
 
-1. Start with the `fact-sheet.md` to understand exam format and weights.
-2. Work through the six note files under `notes/` in order. Each covers one major domain and includes command examples, HCL snippets, and common pitfalls.
-3. Complete the labs in `practice-plan.md` over a 6 to 8 week schedule.
-4. Run through `scenarios.md` to test real-world decision making.
-5. Use `strategy.md` the week before the exam to finalize tactics.
+1. Read [fact-sheet.md](./fact-sheet.md) for the format and the objective list.
+2. Work through the six notes in order. Notes 01 to 05 are lab territory: type every example yourself on Terraform 1.6.
+3. Follow [practice-plan.md](./practice-plan.md), which builds a lab for each objective.
+4. Work [scenarios.md](./scenarios.md) without looking at the answers first.
+5. Read [strategy.md](./strategy.md) in the last week.
 
 ## Hands-on Lab Requirements
 
-Because this is a performance-based exam, passive reading is not enough. You must practice:
+Because labs are graded on end state, you need muscle memory, not recognition. Set up:
 
-- Writing modules from scratch against AWS, Azure, or GCP providers
-- Remediating broken configurations (syntax, logic, provider version conflicts)
-- Using `terraform state mv`, `terraform state rm`, and `terraform import` to reconcile drift
-- Configuring HCP Terraform workspaces in CLI-driven, VCS-driven, and API-driven modes
-- Authoring Sentinel policies and attaching policy sets to workspaces
-
-Recommended lab environment: a free HCP Terraform account, an AWS/Azure/GCP sandbox, and a local Terraform CLI (at least version 1.6 or newer to cover `terraform test`).
+- **Terraform 1.6.x** as your main CLI (a version manager such as `tfenv` lets you switch). Newer versions accept syntax the exam environment will reject, such as `removed` blocks (1.7) or cross-variable validation (1.9).
+- A sandbox in the cloud you will choose for the exam: AWS or Azure.
+- A free HCP Terraform organization for objective 6 concepts and for the `cloud` block.
+- Git, `jq`, and an editor you can use quickly.
 
 ## Official Resources
 
-- Exam page: https://developer.hashicorp.com/certifications/infrastructure-automation
-- Exam review guide: https://developer.hashicorp.com/terraform/tutorials/certification-004 (associate) and the Professional review page on developer.hashicorp.com
-- HCP Terraform documentation: https://developer.hashicorp.com/terraform/cloud-docs
-- Terraform CLI documentation: https://developer.hashicorp.com/terraform/cli
-- Sentinel documentation: https://developer.hashicorp.com/sentinel/docs
-- Terraform language reference: https://developer.hashicorp.com/terraform/language
-- HashiCorp Learn Terraform tutorials: https://developer.hashicorp.com/terraform/tutorials
-
-## Recommended Supplementary Resources
-
-- "Terraform: Up and Running" (3rd edition) by Yevgeniy Brikman for module and state patterns
-- HashiCorp Well-Architected Framework for Terraform
-- Public module examples on registry.terraform.io for reading real-world HCL
-- `terraform-aws-modules/*` GitHub repositories for production module patterns
+- **[📖 Terraform Authoring and Operations Advanced certification](https://developer.hashicorp.com/certifications/terraform-advanced)** - official exam page: format, cost, version, registration
+- **[📖 Exam objectives (review guide)](https://developer.hashicorp.com/terraform/tutorials/pro-cert/adv-review)** - the six objectives and sub-objectives, with links to docs and tutorials
+- **[📖 Exam orientation](https://developer.hashicorp.com/terraform/tutorials/pro-cert/adv-orientation)** - what the lab environment looks like and which resources are available during the exam
+- **[📖 Learning path](https://developer.hashicorp.com/terraform/tutorials/pro-cert/adv-study)** - HashiCorp's suggested study tutorials
+- **[📖 Terraform language documentation](https://developer.hashicorp.com/terraform/language)** - the reference you will also have in the exam
+- **[📖 Terraform CLI documentation](https://developer.hashicorp.com/terraform/cli)** - every command and option
+- **[📖 HCP Terraform documentation](https://developer.hashicorp.com/terraform/cloud-docs)** - workspaces, runs, permissions and policy
 
 ## Recertification
 
-The certification is valid for 2 years. Recertification requires passing the current version of the exam. Because the Professional exam is hands-on, continued production work with Terraform is the most efficient preparation for recertification.
+The credential is valid for 2 years. You renew by passing the current version of the exam, and you can take either the AWS or the Azure version to renew, whichever you sat originally.
 
 ## Common Pitfalls to Avoid
 
-- Treating it like the Associate exam. It is not multiple choice, so memorization alone will not suffice.
-- Neglecting HCP Terraform features. Workspaces, run triggers, and policy sets are heavily tested.
-- Skipping Sentinel. Even if your organization uses OPA, HashiCorp tests Sentinel authoring.
-- Ignoring `terraform test`. Module testing is part of the authoring domain on current exam blueprints.
-- Poor CLI muscle memory. The lab environment does not forgive slow typing or frequent doc lookups.
+- **Studying on the newest Terraform.** The exam tests 1.6. Practice on 1.6 so the environment never surprises you.
+- **Treating it as multiple choice.** Only part of it is. Labs need you to produce working configuration and correct state.
+- **Leaving pending changes.** After each lab task, run `terraform plan` and confirm the end state the task asked for.
+- **Skipping HCP Terraform because it is "only" multiple choice.** Objective 6 still needs a solid grasp of runs, workspaces, permissions, credentials and policy.
+- **Guessing import ID formats and argument names.** You have the docs in the exam; get used to finding things in them fast.
 
 ## Time Investment Estimate
 
-- If you already have 12+ months production Terraform experience: 40 to 60 hours of focused prep
-- If you have 6 to 12 months experience: 80 to 120 hours including heavy lab time
-- If you only have Associate-level knowledge: consider deferring until you have more production reps
-
-See `practice-plan.md` for a concrete week-by-week schedule.
+This guide's estimate, not HashiCorp's: with a year or more of production Terraform, 40 to 60 hours of focused prep, most of it in labs; with less, 80 to 120 hours. See [practice-plan.md](./practice-plan.md) for the schedule.
