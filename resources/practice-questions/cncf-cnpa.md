@@ -1,6 +1,6 @@
 # Cloud Native Platform Engineering Associate (CNPA) - Practice Questions
 
-15 questions for CNPA prep. The organizing idea: a platform is a product whose users can choose not to use it.
+30 questions for CNPA prep. The organizing idea: a platform is a product whose users can choose not to use it.
 
 > **Cert page:** [exams/kubernetes/cnpa/](../../exams/kubernetes/cnpa/)
 
@@ -276,8 +276,278 @@ D. The platform team compiles a report each quarter manually from tickets, pipel
 
 ---
 
+### Question 16
+**Scenario:** Using Team Topologies vocabulary, how should a platform team usually interact with the stream-aligned teams that consume its platform?
+
+A. X-as-a-Service, where teams consume the platform through clear interfaces with little coordination
+B. Permanent collaboration, where platform engineers join every stream-aligned team's sprint work
+C. Facilitating, where the platform team writes the stream-aligned teams' code for them
+D. Gatekeeping, where every deployment needs the platform team's approval before release
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The default interaction for a mature platform is X-as-a-Service: the platform is consumed through APIs, templates, and documentation with minimal hand-offs. Collaboration is useful for limited periods, such as discovering a new capability, but not permanently. Facilitating means helping teams learn, not doing their work. Gatekeeping is not a Team Topologies interaction mode and creates bottlenecks.
+</details>
+
+---
+
+### Question 17
+**Scenario:** Application developers spend much of their time learning Kubernetes networking, certificate management, and cloud IAM before they can ship a simple service. What is the platform's main goal here?
+
+A. Train every developer to expert level in each infrastructure tool before they ship anything
+B. Reduce the cognitive load on developers by providing paved, self-service capabilities
+C. Move all infrastructure work into a central operations team that takes tickets
+D. Ban direct use of infrastructure tools, so that developers only work on application code
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Platform engineering aims to cut the extraneous cognitive load on application teams, so they can focus on their domain, by offering self-service capabilities with sensible defaults. Training everyone to expert level does not scale. A ticket-driven ops team creates waiting. Outright bans remove the escape hatch that advanced teams need.
+</details>
+
+---
+
+### Question 18
+**Scenario:** A platform team decides each quarter's work by what its own engineers find interesting. Adoption is flat. What would most help?
+
+A. Adopt the newest CNCF projects each quarter so the platform stays current and attractive
+B. Freeze new work until adoption grows, so the team can concentrate on stability
+C. A platform product manager who runs user research and builds a roadmap from user needs
+D. Ask leadership to set adoption targets for every application team in the company
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Treating the platform as a product means someone owns understanding users, prioritizing their problems, and shaping a roadmap from evidence. Chasing new tools solves the platform team's interests, not users' problems. A freeze does not address fit. Targets push adoption without making the platform more valuable.
+</details>
+
+---
+
+### Question 19
+**Scenario:** Application teams keep asking for small platform features faster than the platform team can build them, and several teams have the skills to build them.
+
+A. Reject the requests, since only the platform team may change the platform
+B. Let each team fork the platform and maintain its own copy with the feature
+C. Hire contractors to clear the backlog, then reduce the team after the backlog is gone
+D. Accept contributions through an inner source model with clear guidelines and code owners
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Inner source lets consuming teams contribute to the platform under guidelines, review, and ownership by the platform team, which scales capacity and keeps one platform. Rejecting requests leaves needs unmet. Forks fragment the platform. Contractors clear a backlog once without changing the dynamic.
+</details>
+
+---
+
+### Question 20
+**Scenario:** An application team uses the platform's deployment pipeline. Their service crashes in production because of a bug in the application code. Who owns the incident?
+
+A. The platform team, since the service was deployed with the platform
+B. The application team, while the platform team owns platform capabilities and their SLOs
+C. A central operations team, since neither team should be on call
+D. Whichever team notices the incident first, regardless of the cause
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Platforms keep "you build it, you run it" for applications. The application team owns its service, and the platform team owns the platform's capabilities and the SLOs it publishes for them. Making the platform team own every app incident makes it a bottleneck. Separate ops teams and "first to notice" both blur accountability.
+</details>
+
+---
+
+### Question 21
+**Scenario:** A platform provisions resources with imperative scripts. Over time, environments diverge from what was requested and nobody notices until something breaks.
+
+A. Run the scripts twice each time, so that missed steps are applied by the second run
+B. Add more logging to the scripts, so that every change they make is recorded
+C. Declarative APIs with controllers that continuously reconcile actual state toward desired state
+D. Have engineers review each environment by hand once a month and fix differences
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Declarative resource management with continuous reconciliation, the Kubernetes controller model, detects and corrects drift automatically. Running scripts twice and adding logs do not detect drift made outside the scripts. Monthly manual reviews leave long windows of divergence.
+</details>
+
+---
+
+### Question 22
+**Scenario:** The platform team wants every service on the golden path to emit traces, metrics, and logs in a vendor-neutral way, so the observability backend can change later.
+
+A. OpenTelemetry instrumentation and the OpenTelemetry Collector, built into the templates
+B. Each team's choice of vendor agent, with dashboards rebuilt whenever the vendor changes
+C. Only application logs written to disk, collected later if an incident needs investigating
+D. A proprietary SDK from the current vendor, embedded in every service at build time
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** OpenTelemetry provides vendor-neutral APIs, SDKs, and a collector for traces, metrics, and logs, and building it into golden path templates gives consistent telemetry by default with a swappable backend. Per-team vendor agents and proprietary SDKs create lock-in and inconsistency. Logs alone miss traces and metrics.
+</details>
+
+---
+
+### Question 23
+**Scenario:** Auditors ask the platform to prove what each deployed image contains and how it was built.
+
+A. A spreadsheet maintained by each team listing the libraries they remember using
+B. Images rebuilt from source at deploy time, so their contents always match the code
+C. Scanning running containers once a year and keeping the scan output as evidence
+D. Generate an SBOM and signed build provenance (for example SLSA) in the pipeline
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A software bill of materials lists the components in each artifact, and signed provenance, as described by SLSA, records how and where it was built. Generated automatically in the pipeline and stored with the artifact, they give auditors verifiable evidence. Spreadsheets are unreliable. Rebuilding at deploy time breaks reproducibility. Annual scans miss most of the lifecycle.
+</details>
+
+---
+
+### Question 24
+**Scenario:** Applications need secrets from a central vault, and developers must not paste secret values into Kubernetes manifests in Git.
+
+A. Base64-encode the secrets in the manifests, since encoding protects them in the repository
+B. External Secrets Operator syncing values from the vault into Kubernetes Secrets at runtime
+C. A shared password file in the repository, readable only by members of the platform team
+D. Environment variables typed by hand into each Deployment by the on-call engineer
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** External Secrets Operator lets manifests reference secrets by name while the controller fetches the values from the external store and creates Kubernetes Secrets, so no secret value is committed. Base64 is encoding, not encryption. Files in the repository leak to anyone with access. Hand-typed values are error-prone and unaudited.
+</details>
+
+---
+
+### Question 25
+**Scenario:** A platform team wants deployments to every cluster to be auditable, reversible with a revert, and corrected automatically if someone changes resources by hand.
+
+A. A CI job that runs `kubectl apply` after each merge, with credentials for every cluster
+B. Engineers apply changes by hand during a weekly maintenance window, following a runbook
+C. GitOps, with an in-cluster agent reconciling cluster state from a Git repository
+D. A nightly script that redeploys everything from the latest container images available
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** GitOps keeps desired state in Git, giving an audit trail and revert-based rollback, while an agent continuously reconciles and corrects manual drift. A CI push does not correct drift between runs and spreads cluster credentials. Manual windows are slow and error-prone. Redeploying the latest images ignores what was approved.
+</details>
+
+---
+
+### Question 26
+**Scenario:** Test passes in staging, but production behaves differently because the pipeline rebuilds the container image separately for each environment.
+
+A. Build the artifact once, then promote the same immutable image through each environment
+B. Rebuild the image in production with the same Dockerfile, but pin the base image tag
+C. Skip staging and test in production only, so the build is done for one environment
+D. Use the `latest` tag in every environment, so that each one runs the newest build
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Building once and promoting the same immutable artifact, ideally referenced by digest, ensures that what was tested is what runs, with configuration supplied per environment. Rebuilding can pull different dependencies even with a pinned base tag. Skipping staging removes testing. `latest` is mutable and hides what runs.
+</details>
+
+---
+
+### Question 27
+**Scenario:** Developers should request a "PostgreSQL database" with a size and a backup policy through a Kubernetes API, while the platform decides the cloud resources behind it.
+
+A. Give developers cloud console access and a wiki page on how to create a database correctly
+B. A Crossplane composite resource definition with compositions that map to the cloud resources
+C. A ConfigMap per database request, which the platform team reads and fulfills by hand
+D. A Helm chart that installs PostgreSQL in the developer's namespace with no options exposed
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Crossplane lets the platform define its own API (a composite resource definition) with a small developer-facing schema, and compositions translate each request into the underlying managed cloud resources. Console access exposes complexity and credentials. ConfigMaps read by hand reintroduce ticket ops. A fixed Helm chart ignores the request parameters and the cloud service.
+</details>
+
+---
+
+### Question 28
+**Scenario:** A platform team wants to extend Kubernetes with a new resource type, `Tenant`, that automatically creates namespaces, quotas, and policies when one is created.
+
+A. Write a shell script that a cron job runs every hour to create any missing tenant objects
+B. Store each tenant as a row in a database and have engineers apply the YAML by hand
+C. Use an admission webhook alone, which creates the namespace and quota objects itself
+D. Define a CustomResourceDefinition for `Tenant` and a controller that reconciles it
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The operator pattern pairs a CRD, which adds the new API type, with a controller that watches it and reconciles the namespaces, quotas, and policies it implies, including repairing drift. Cron scripts and database rows are not Kubernetes APIs and do not reconcile. Admission webhooks validate or mutate requests and are not meant to create and maintain other resources.
+</details>
+
+---
+
+### Question 29
+**Scenario:** Creating a new service takes two weeks of tickets for a repository, CI pipeline, catalog entry, and baseline monitoring. The platform team wants this to take minutes.
+
+A. A wiki page listing each step, so that developers can file the tickets in the right order
+B. A software template in the developer portal that scaffolds the repository, CI, catalog entry, and monitoring
+C. A shared repository that every new service copies, with the setup steps done later by hand
+D. A monthly onboarding session in which the platform team creates services for teams in a batch
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Software templates, such as Backstage scaffolder templates, generate a new service with its repository, pipeline, catalog registration, and observability wiring in one self-service action, encoding the golden path. A wiki keeps the tickets. Copying a repository leaves manual setup. Batch onboarding still makes teams wait.
+</details>
+
+---
+
+### Question 30
+**Scenario:** Which four metrics make up the DORA software delivery performance measures commonly used to assess a platform's effect on delivery?
+
+A. Lines of code, story points completed, number of commits, and code review comments
+B. Platform uptime, number of platform features, ticket count, and cloud spend for the quarter
+C. Deployment frequency, lead time for changes, change failure rate, and time to restore service
+D. Developer satisfaction, onboarding time, number of templates, and number of catalog entries
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** The DORA four key metrics are deployment frequency, lead time for changes, change failure rate, and time to restore service (also called failed deployment recovery time). Output measures such as lines of code, features, and tickets do not show outcomes. Satisfaction and onboarding time are useful, for example in SPACE-style measures, but they are not the DORA four.
+</details>
+
+---
+
 ## Scoring guide
 
-- **13-15 correct (85%+):** Ready. 75% is the pass mark.
-- **10-12 correct (65-80%):** Re-read the CNCF Platforms White Paper and the Maturity Model; the exam follows their vocabulary closely.
-- **Below 10:** Work the [scenarios](../../exams/kubernetes/cnpa/scenarios.md), watching for the product-framing pattern in each.
+- **26-30 correct (85%+):** Ready. 75% is the pass mark.
+- **20-25 correct (67-83%):** Re-read the CNCF Platforms White Paper and the Maturity Model; the exam follows their vocabulary closely.
+- **Below 20:** Work the [scenarios](../../exams/kubernetes/cnpa/scenarios.md), watching for the product-framing pattern in each.

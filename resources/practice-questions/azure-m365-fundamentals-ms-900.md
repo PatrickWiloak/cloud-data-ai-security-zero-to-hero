@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: beginner
 ---
 
 # Microsoft 365 Fundamentals (MS-900) - Practice Questions
 
-15 questions for MS-900 prep across cloud concepts, Microsoft 365 apps and services, security and compliance, and pricing, licensing, and support.
+30 questions for MS-900 prep across cloud concepts, Microsoft 365 apps and services, security and compliance, and pricing, licensing, and support.
 
 MS-900 is a business-and-vocabulary exam. It rewards knowing what each product is for, not how to configure it.
 
@@ -279,6 +279,276 @@ D. A virtual desktop service that streams a Windows desktop to remote users from
 **Correct: A**
 
 **Why:** Purview is the umbrella for data governance and compliance across Microsoft 365 and beyond. Intune manages devices, Entra ID is identity, and Azure Virtual Desktop is the desktop service. Matching the product to the requirement is the whole skill this exam measures.
+</details>
+
+---
+
+### Question 16
+**Scenario:** An organization moves email from its own Exchange servers to Exchange Online. Which cloud service model is it now consuming?
+
+A. Infrastructure as a service, because Microsoft supplies the virtual machines that the organization manages
+B. Platform as a service, because the organization deploys its own code onto Microsoft's runtime
+C. Software as a service, because Microsoft runs the complete application and the organization uses it
+D. On-premises hosting, because the mailboxes still belong to the organization's own domain name
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Exchange Online is a finished application delivered over the internet, with Microsoft running the servers, operating system, and application, which is SaaS. IaaS would leave the organization managing virtual machines and Exchange itself. PaaS is for deploying your own code. Using your own domain name does not make a service on-premises.
+</details>
+
+---
+
+### Question 17
+**Scenario:** Under the shared responsibility model for Microsoft 365, which responsibility always stays with the customer?
+
+A. Patching the Exchange and SharePoint servers that host the tenant's mailboxes and sites
+B. Its data, user accounts and identities, and the devices that connect to the service
+C. Physical security of the datacenters, including guards, cameras, and access badges
+D. Replacing failed disks and network hardware in the regions that host the tenant
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** In every cloud model the customer keeps responsibility for its information and data, accounts and identities, and endpoint devices. In SaaS, Microsoft is responsible for the application, servers, hardware, and physical datacenters, which covers patching, disk replacement, and site security.
+</details>
+
+---
+
+### Question 18
+**Scenario:** An employee needs a personal place to store work files, sync them to a laptop, and share individual files with colleagues when needed.
+
+A. OneDrive, the personal work file storage that syncs to devices and supports sharing
+B. A SharePoint communication site, created by the employee for their own working files
+C. An Exchange Online shared mailbox, with files stored as attachments in the mailbox folders
+D. A Teams channel, created by the employee so that the files sit in the channel's Files tab
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** OneDrive is each user's personal file storage in Microsoft 365, with sync to devices and per-file sharing. SharePoint sites and Teams channels are for team and organizational content. A mailbox is not a file store, and attachments do not sync as files.
+</details>
+
+---
+
+### Question 19
+**Scenario:** A team wants a table of action items that can be edited live inside a Teams chat and an Outlook email at the same time, staying in sync everywhere it appears.
+
+A. A Word document attached to the email and posted in the chat, with track changes enabled for edits
+B. A Power BI report embedded in both places, so that the action items are refreshed on a schedule
+C. A Microsoft Forms survey sent to the team, with responses collected into a shared Excel workbook
+D. A Microsoft Loop component, which stays in sync across Teams, Outlook, and other Microsoft 365 apps
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Loop components are portable pieces of content, such as tables, lists, and task lists, that stay in sync wherever they are shared, so edits in Teams appear in Outlook. An attachment creates separate copies. Power BI reports are for analytics, not shared editing. Forms collects responses rather than providing a shared table.
+</details>
+
+---
+
+### Question 20
+**Scenario:** Leadership wants a company-wide place for communities, announcements, and conversations across the whole organization, beyond individual team chats.
+
+A. Microsoft Viva Engage, the community and social networking experience in Microsoft 365
+B. Microsoft Bookings, which schedules appointments between staff members and customers
+C. Microsoft Planner, which assigns tasks to people and tracks them on shared boards
+D. Microsoft Stream, which stores and shares recorded meetings and other video files
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Viva Engage (formerly Yammer) provides organization-wide communities, announcements, and conversations. Bookings is for scheduling appointments, Planner for task tracking, and Stream for video. Each has a place in Microsoft 365, but none is the community hub the scenario describes.
+</details>
+
+---
+
+### Question 21
+**Scenario:** Contractors need a full, personalized Windows desktop with a fixed monthly price per user, streamed to any device, without the company managing virtual machine hosts.
+
+A. Azure Virtual Desktop host pools, which the company sizes, scales, and pays for by the hour
+B. Windows 365 Cloud PCs, which provide a dedicated cloud Windows desktop per user at a fixed price
+C. Microsoft 365 Apps for business, which install the desktop Office apps on each contractor's device
+D. Remote Desktop to an on-premises server, which each contractor reaches over a VPN connection
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Windows 365 gives each user a Cloud PC licensed per user per month, managed through Intune, with no host infrastructure to run. Azure Virtual Desktop is flexible but needs the company to build and scale host pools and pay for consumption. Microsoft 365 Apps provides Office apps, not a desktop. On-premises Remote Desktop keeps the company running servers.
+</details>
+
+---
+
+### Question 22
+**Scenario:** Which mail-related service is a core part of Microsoft 365 and provides mailboxes, calendars, and contacts?
+
+A. Exchange Online, the cloud email and calendaring service used by Outlook
+B. SharePoint Online, which stores mail in document libraries for each user
+C. Microsoft Teams, which replaces mailboxes with persistent chat for each user
+D. Microsoft Entra ID, which stores each user's email messages with their identity
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Exchange Online hosts mailboxes, calendars, and contacts, and Outlook is the client that uses them. SharePoint stores files and sites. Teams uses Exchange for calendars and does not replace mailboxes. Entra ID holds identities and group memberships, not mail.
+</details>
+
+---
+
+### Question 23
+**Scenario:** A security team adopts Zero Trust. Which set of principles is it adopting?
+
+A. Trust devices on the corporate network, block devices outside it, and audit the network once a year
+B. Encrypt all data at rest, disable MFA to reduce friction, and allow access from any device
+C. Verify explicitly, use least privilege access, and assume breach
+D. Rely on a strong perimeter firewall, since attackers cannot reach anything that sits behind it
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Microsoft's Zero Trust model rests on three principles: verify every request explicitly using all available signals, grant only the access needed, and design as if attackers are already inside. Trusting the corporate network or relying on the perimeter is the model Zero Trust replaces. Disabling MFA contradicts verifying explicitly.
+</details>
+
+---
+
+### Question 24
+**Scenario:** Users must complete MFA when signing in from outside the office, and sign-ins from non-compliant devices must be blocked from SharePoint.
+
+A. Microsoft Purview retention policies, which apply to sign-ins as well as to files and mail
+B. Microsoft Entra Conditional Access policies that evaluate location and device compliance at sign-in
+C. Microsoft Defender for Office 365, which scans every sign-in for malicious attachments
+D. A password expiry policy, which forces users to change passwords every 30 days
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Conditional Access evaluates signals such as user, location, device compliance, and risk at sign-in, and then requires MFA, allows, or blocks access. Retention policies govern how long content is kept. Defender for Office 365 protects mail and collaboration content. Password expiry does not consider location or device, and Microsoft no longer recommends forced periodic expiry.
+</details>
+
+---
+
+### Question 25
+**Scenario:** Phishing emails with malicious links and weaponized attachments are reaching users. The organization wants links checked at click time and attachments opened in a sandbox before delivery.
+
+A. Microsoft Purview Data Loss Prevention, which scans outbound mail for sensitive data
+B. Microsoft Intune app protection policies, which stop users opening untrusted attachments
+C. Microsoft Entra ID Protection, which flags risky users after a phishing email is opened
+D. Microsoft Defender for Office 365 Safe Links and Safe Attachments
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Safe Links rewrites and checks URLs when they are clicked, and Safe Attachments detonates attachments in a sandbox before delivery. DLP stops sensitive data from leaving, which is the opposite direction. Intune app protection governs data inside apps. Entra ID Protection detects risky sign-ins and users but does not inspect mail.
+</details>
+
+---
+
+### Question 26
+**Scenario:** An auditor asks for Microsoft's independent audit reports, such as ISO 27001 and SOC 2, for the Microsoft 365 cloud services.
+
+A. The Microsoft Service Trust Portal, which publishes audit reports and compliance documents
+B. The Microsoft 365 admin center Message center, which publishes certificates each month
+C. Microsoft Defender XDR, which generates ISO and SOC reports for the tenant on demand
+D. The Microsoft Purview audit log, which contains Microsoft's own third-party audit results
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The Service Trust Portal hosts Microsoft's third-party audit reports, certifications, and compliance guides for its cloud services. The Message center announces service changes. Defender XDR is a security operations tool. The Purview audit log records user and admin activity in the tenant, not Microsoft's audits.
+</details>
+
+---
+
+### Question 27
+**Scenario:** A company with 150 employees wants Microsoft 365 apps, device management, and advanced security in one plan designed for small and medium businesses.
+
+A. Microsoft 365 E5, which is the only plan that includes Intune for device management
+B. Microsoft 365 F3, which is the plan designed for small and medium businesses
+C. Office 365 E1, which includes desktop Office apps and Intune for small teams
+D. Microsoft 365 Business Premium, the SMB plan for up to 300 users
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Business Premium is aimed at organizations of up to 300 users and combines the apps with Intune, Entra ID P1, and Defender for Business. E5 is an enterprise plan, and Intune is in several plans, not only E5. F3 is for frontline workers. Office 365 E1 has web apps only and no Intune.
+</details>
+
+---
+
+### Question 28
+**Scenario:** Retail store staff share devices, mostly use Teams for shift communication, and need web and mobile apps rather than full desktop Office.
+
+A. Microsoft 365 E5, which is required for any Teams access
+B. Microsoft 365 F3, a frontline license with web and mobile apps
+C. Microsoft 365 Apps for enterprise, which is a desktop-only license
+D. A Microsoft 365 Copilot license, which includes Teams and Office
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Frontline plans such as F3 target staff who use shared or mobile devices, giving web and mobile Office apps, Teams, and device management at a lower price. E5 is far more than needed. Microsoft 365 Apps for enterprise covers Office apps only. Copilot is an add-on to a qualifying base license, not a standalone suite.
+</details>
+
+---
+
+### Question 29
+**Scenario:** A small company wants a partner to sell it Microsoft 365, bill it monthly, and be its first line of support, rather than buying directly from Microsoft.
+
+A. An Enterprise Agreement, signed directly with Microsoft for organizations with thousands of users
+B. Buying through the Cloud Solution Provider program, where the partner handles billing and support
+C. A trial subscription, which converts into a partner-managed subscription after thirty days
+D. Volume licensing through the Microsoft Store, which assigns a partner automatically
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** In the Cloud Solution Provider program, a partner sells the subscriptions, bills the customer, and provides first-line support. An Enterprise Agreement is a direct agreement for large organizations. A trial does not change the purchasing channel. The Microsoft Store is a retail channel and does not assign partners.
+</details>
+
+---
+
+### Question 30
+**Scenario:** An administrator wants to know how Microsoft 365 licenses are actually used, such as how many assigned users have been active in Teams and Exchange over the last 90 days.
+
+A. Microsoft Purview Compliance Manager, which reports license use as a compliance score
+B. The Service Trust Portal, which lists each tenant's license usage by service
+C. Usage reports in the Microsoft 365 admin center
+D. Microsoft Defender XDR, which tracks app usage in its incident queue
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** The admin center's usage reports show activity by service and period, so administrators can spot unused licenses and plan adoption work. Compliance Manager scores compliance controls. The Service Trust Portal holds Microsoft's audit documents. Defender XDR is for security incidents.
 </details>
 
 ---

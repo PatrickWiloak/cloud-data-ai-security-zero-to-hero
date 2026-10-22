@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: beginner
 ---
 
 # Microsoft Power Platform Fundamentals (PL-900) - Practice Questions
 
-15 questions for PL-900 prep across business value, foundational components, and the capabilities of Power BI, Power Apps, Power Automate, and Copilot Studio.
+30 questions for PL-900 prep across business value, foundational components, and the capabilities of Power BI, Power Apps, Power Automate, and Copilot Studio.
 
 > **Cert page:** [exams/azure/pl-900/](../../exams/azure/pl-900/)
 
@@ -277,6 +277,276 @@ D. Letting people close to the business build and automate solutions quickly, wi
 **Correct: D**
 
 **Why:** The value is speed and proximity to the problem, with fusion teams where pro developers extend what makers build. Governance becomes more important rather than less, which is why environments, DLP policies, and the Center of Excellence toolkit exist.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A maker with no coding experience wants to describe an app in plain language, such as "track equipment loans with due dates", and have Power Apps propose the table and the app.
+
+A. Power Automate desktop flows, which record the maker's screen and generate an app from the recording
+B. Copilot in Power Apps, which builds a Dataverse table and an app from a natural language description
+C. Power BI Q&A, which turns the description into a report that users can edit like an app
+D. AI Builder form processing, which reads the description and generates the app's screens
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Copilot in Power Apps takes a natural language description, proposes a Dataverse table with columns, and generates an app the maker can refine. Desktop flows automate UI tasks and do not build apps. Q&A answers questions over data in Power BI. AI Builder form processing extracts data from documents.
+</details>
+
+---
+
+### Question 17
+**Scenario:** Business users build apps for their own processes, while professional developers add custom connectors and code components. What is this collaboration called?
+
+A. A fusion team, where makers and professional developers build solutions together on one platform
+B. Shadow IT, where business units build tools without any involvement from the IT department
+C. A center of excellence, which is the team that builds every app in the organization
+D. Outsourcing, where an external vendor builds the apps that business users specify
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Fusion teams combine business makers, professional developers, and IT on the same platform, each contributing what they do best. Shadow IT describes ungoverned tools built outside IT. A center of excellence sets governance and supports makers rather than building everything. Outsourcing removes the business users from building.
+</details>
+
+---
+
+### Question 18
+**Scenario:** An organization wants a separate space for the finance department's apps, flows, and data, with its own security and its own Dataverse database.
+
+A. A Power BI workspace, which holds apps and flows alongside reports and semantic models
+B. A SharePoint site collection, which stores the apps and flows with Dataverse tables
+C. A Power Platform environment, a container for apps, flows, and at most one Dataverse database
+D. A solution, which isolates its own Dataverse database from the other solutions in a tenant
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Environments are containers for apps, flows, connections, and data, each with its own security roles and up to one Dataverse database. Power BI workspaces hold BI content. SharePoint sites do not host Power Platform apps and flows as a boundary. Solutions package components for transport and share the environment's database.
+</details>
+
+---
+
+### Question 19
+**Scenario:** Makers write expressions such as `Filter(Orders, Status = "Open")` in canvas apps. What is this formula language?
+
+A. DAX, the formula language used to build measures in Power BI and Power Pivot
+B. Power Fx, the low-code formula language used across Power Platform
+C. M, the language Power Query uses for data transformation steps
+D. JavaScript, which runs in the browser that hosts the canvas app
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Power Fx is the Excel-like low-code language used in canvas apps and increasingly elsewhere in Power Platform. DAX is for Power BI measures and calculated columns. M is the Power Query language. Canvas app formulas are not JavaScript.
+</details>
+
+---
+
+### Question 20
+**Scenario:** An administrator must create environments, review Dataverse storage capacity, and manage data policies for the tenant.
+
+A. The Power Apps maker portal, which is where every administrative setting is managed
+B. The Microsoft 365 admin center only, since Power Platform has no admin portal of its own
+C. Power BI Desktop, which administers environments and capacity from its options menu
+D. The Power Platform admin center
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The Power Platform admin center is where administrators manage environments, capacity, data policies, and analytics. The maker portal is for building apps. The Microsoft 365 admin center handles licenses and users but not environments. Power BI Desktop is an authoring tool.
+</details>
+
+---
+
+### Question 21
+**Scenario:** An analyst built a report in Power BI Desktop and now wants colleagues to view it in a browser, with the data refreshed on a schedule.
+
+A. Email the .pbix file to colleagues, who then refresh the data from their own copies
+B. Export the report to PDF every morning and save it to a shared folder for colleagues
+C. Publish the report to the Power BI service, share it, and configure scheduled refresh
+D. Copy the visuals into an Excel workbook, which refreshes the data from the report
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Power BI Desktop is the authoring tool. Publishing to the Power BI service makes the report available in the browser, where you can share it and schedule refresh of the semantic model. Emailing .pbix files creates uncontrolled copies. PDFs are static. Excel does not refresh from report visuals.
+</details>
+
+---
+
+### Question 22
+**Scenario:** Sales data arrives with inconsistent date formats, extra header rows, and a column that needs splitting before it can be used in a Power BI report.
+
+A. Power Query, which applies repeatable cleaning and shaping steps when the data is loaded
+B. A dashboard tile, which formats each value correctly when pinned
+C. Row-level security, which hides badly formatted rows from viewers
+D. A bookmark, which saves a view of the report with the data fixed
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Power Query records transformation steps, such as removing rows, changing types, and splitting columns, and replays them on every refresh. Dashboard tiles display visuals. Row-level security filters data by user and does not clean it. Bookmarks save report states such as filters and visibility.
+</details>
+
+---
+
+### Question 23
+**Scenario:** Managers want to type questions such as "total sales by region last quarter" in a report and get a chart back without building visuals themselves.
+
+A. A paginated report, which prints pixel-perfect pages
+B. The Q&A visual, which answers natural language questions
+C. A Power Automate visual, which runs a flow from the report
+D. A dataflow, which stores prepared data for reuse
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The Q&A visual lets users ask questions in natural language and returns a suitable visual. Paginated reports are for fixed-layout printing. The Power Automate visual triggers flows. Dataflows prepare and store data for reuse but do not answer questions.
+</details>
+
+---
+
+### Question 24
+**Scenario:** A team keeps a list of assets in a SharePoint list and wants a working canvas app over that data in minutes, which it will refine later.
+
+A. Write the app in Visual Studio, then import it into Power Apps as a code component
+B. Build a Power BI report on the list, then convert the report into a canvas app
+C. Create a model-driven app directly on the SharePoint list, without Dataverse tables
+D. Start from data in Power Apps, which generates a browse, detail, and edit app from the list
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Creating a canvas app from data generates a working app with browse, detail, and edit screens connected to the source, which makers then customize. Visual Studio is not how canvas apps are built. Power BI reports cannot be converted into apps. Model-driven apps are built on Dataverse tables, not SharePoint lists.
+</details>
+
+---
+
+### Question 25
+**Scenario:** Which statement about how a model-driven app's user interface is created is correct?
+
+A. The interface is generated from Dataverse components such as tables, forms, views, and dashboards
+B. The maker places every control pixel by pixel on a blank canvas, as in a canvas app
+C. The interface is generated from a Power BI report, which supplies the forms and views
+D. The interface is written in HTML by a developer, then attached to the Dataverse tables
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Model-driven apps are built from the data model: makers pick tables, forms, views, charts, and dashboards, and the app renders a consistent responsive interface from them. Pixel-level layout is the canvas app approach. Power BI does not supply forms. No HTML is written by hand.
+</details>
+
+---
+
+### Question 26
+**Scenario:** A summary of overdue invoices must be emailed to the finance team every Monday at 8:00 without anyone starting it.
+
+A. An instant cloud flow, which a user starts from a button
+B. A desktop flow, which records clicks on a user's computer
+C. A scheduled cloud flow with a weekly recurrence trigger
+D. A business process flow, which guides users through stages
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A scheduled cloud flow runs on a recurrence, such as weekly on Mondays at a set time, with no user action. Instant flows need someone to start them. Desktop flows automate UI tasks on a machine. Business process flows guide users through stages in model-driven apps.
+</details>
+
+---
+
+### Question 27
+**Scenario:** Field staff want to start a flow from their phone that sends their current location and a photo to a supervisor, only when they choose to.
+
+A. An automated cloud flow triggered whenever a new photo is saved to the phone
+B. A scheduled cloud flow that checks every staff member's location each hour
+C. A desktop flow running on the supervisor's computer, which polls each phone
+D. An instant cloud flow, started manually from the Power Automate mobile app
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Instant cloud flows are started on demand, for example from a button in the Power Automate mobile app, and can collect inputs such as location and files. Automated flows fire on events without user choice. Scheduled flows run on a timer. Desktop flows automate a desktop and do not take input from phones.
+</details>
+
+---
+
+### Question 28
+**Scenario:** A Copilot Studio agent must handle "reset my password" with a fixed, guided set of steps and questions every time.
+
+A. A topic that defines the conversation path for that request
+B. A Power BI report that the agent displays to the user
+C. A dataflow that loads password reset data into Dataverse
+D. A canvas app embedded in the agent's welcome message
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** In Copilot Studio, topics define conversation paths: how the agent recognizes a request and the questions, messages, and actions that follow. A report displays data. A dataflow loads data. An embedded app is not how agents structure a guided conversation.
+</details>
+
+---
+
+### Question 29
+**Scenario:** An HR agent built in Copilot Studio should be available to employees where they already chat every day.
+
+A. Publish it as a Power BI dashboard tile that employees pin in the workspace
+B. Publish it to the Microsoft Teams channel, so employees chat with it in Teams
+C. Export it as a desktop flow, which employees start from Power Automate Desktop
+D. Embed it in a Dataverse view, which employees open from a model-driven app
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Copilot Studio agents are published to channels, and Teams is a standard channel for internal employee agents, alongside websites and others. Dashboard tiles, desktop flows, and Dataverse views are not channels for conversational agents.
+</details>
+
+---
+
+### Question 30
+**Scenario:** A department wants to stop retyping data from vendor invoices into a system, extracting fields such as invoice number and total automatically.
+
+A. A Power BI paginated report, which reads printed invoices and summarizes the totals
+B. A Power Pages form, which vendors fill in by hand for each invoice they send
+C. AI Builder's invoice processing model, used in a Power Automate flow
+D. A Dataverse business rule, which reads the invoice files when they are uploaded
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** AI Builder offers a prebuilt invoice processing model that extracts fields from invoices and can be called from Power Automate to write the data into a system. Paginated reports produce output, not input. A vendor portal shifts typing to vendors instead of removing it. Business rules apply field logic and cannot read files.
 </details>
 
 ---

@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
 # Power Platform App Maker Associate (PL-100) - Practice Questions
 
-15 questions for PL-100 prep, weighted toward creating apps (30-35%), then designing business solutions (20-25%), working with data and services (15-20%), and deployment and business logic.
+30 questions for PL-100 prep, weighted toward creating apps (30-35%), then designing business solutions (20-25%), working with data and services (15-20%), and deployment and business logic.
 
 > **Cert page:** [exams/azure/pl-100/](../../exams/azure/pl-100/)
 
@@ -277,6 +277,276 @@ D. Open the app to the entire tenant
 **Correct: B**
 
 **Why:** Group-based sharing means joiners and leavers are handled by group membership, which is already maintained. Individual sharing turns every personnel change into an administrative task and reliably leaves ex-members with access.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A new solution needs related tables, role-based security at the row level, and business rules, and data volume will grow past what a simple list handles well.
+
+A. An Excel workbook on OneDrive, with one worksheet per table and formulas linking the rows
+B. Dataverse, which provides relational tables, security roles, and business rules
+C. SharePoint lists, with a lookup column for each relationship and item-level permissions set by hand
+D. A Power BI semantic model, which stores the tables and lets apps write back to them
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Dataverse is designed for relational business data, with security roles, business units, business rules, and scale. Excel is not a multi-user database. SharePoint lists work for simple data but have weak relational and row-level security support at scale. Power BI models are read-only analytical stores.
+</details>
+
+---
+
+### Question 17
+**Scenario:** Several apps need the same header with a logo, a user name, and a menu, and changes to it should flow to every app.
+
+A. Copy the header controls into each app by hand, then edit each copy when the design changes
+B. Build the header as a Power Pages template and embed the template in each canvas app
+C. Build the header as a canvas component in a component library and import it into each app
+D. Put the header in a Power BI report and embed the report at the top of each app screen
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A component library holds reusable canvas components. Apps that use them are notified of updates and can take the new version, so the header is maintained once. Copying controls creates drift. Power Pages templates are for websites. A Power BI report is not a navigation header.
+</details>
+
+---
+
+### Question 18
+**Scenario:** Field staff need a highly tailored phone interface that combines data from Dataverse, SharePoint, and a SQL database on one screen.
+
+A. A canvas app, which allows a custom layout and connects to many data sources
+B. A model-driven app, which renders a standard layout from Dataverse tables only
+C. A Power BI dashboard, which phone users edit through tiles pinned from reports
+D. A Power Pages site, which field staff open in a browser with an external login
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Canvas apps give full control of layout and can combine many connectors on one screen, which suits a tailored mobile experience. Model-driven apps generate a standard UI from Dataverse and do not combine other sources the same way. Dashboards are for viewing data. Power Pages targets external or web audiences.
+</details>
+
+---
+
+### Question 19
+**Scenario:** Inspectors lose connectivity on site. The app must keep entered inspections on the device and submit them later.
+
+A. Store each inspection in a global variable, which persists on the device after the app closes
+B. Write each inspection straight to Dataverse, which queues writes on the device automatically
+C. Use a timer control that retries the Patch call every second until the network returns
+D. Collect inspections locally and use SaveData and LoadData, then Patch them when Connection.Connected is true
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A collection saved with SaveData persists on the device and can be reloaded with LoadData. When Connection.Connected becomes true, the app patches the queued records to the data source. Variables are lost when the app closes. A plain canvas app does not queue writes on its own (Dataverse offline mode is a separate, configured feature). A tight retry timer does not survive closing the app.
+</details>
+
+---
+
+### Question 20
+**Scenario:** A button must mark the selected gallery item as Complete in Dataverse, without using an edit form.
+
+A. Patch(Tasks, ThisItem, {Status: "Complete"})
+B. SubmitForm(Gallery1), with the status set on the gallery's Default property
+C. UpdateContext({Status: "Complete"}), which writes the value to the record
+D. Navigate(Tasks, ThisItem), which opens the record with the new status
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Patch modifies or creates records in a data source directly, so patching the current item with a new status updates it without a form. SubmitForm works only with form controls. UpdateContext sets a local variable on the screen and does not write data. Navigate changes screens.
+</details>
+
+---
+
+### Question 21
+**Scenario:** A canvas app must adapt its layout to phones, tablets, and desktop browsers without separate screens for each size.
+
+A. Turn on Scale to fit and lock the aspect ratio, which reflows controls for each screen size
+B. Build three copies of every screen and pick one with an If on the screen width
+C. Use horizontal and vertical containers with relative sizing, and turn off Scale to fit
+D. Set every control's X and Y to fixed values, sized for the smallest phone the users have
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Responsive canvas apps use layout containers and formulas based on the parent's width and height, with Scale to fit turned off so the app can reflow. Scale to fit shrinks a fixed layout rather than reflowing it. Duplicate screens multiply maintenance. Fixed positions do not adapt.
+</details>
+
+---
+
+### Question 22
+**Scenario:** A value chosen on one screen must be read on several other screens of the same canvas app.
+
+A. UpdateContext, which creates a variable visible on every screen of the app
+B. Set, which creates a global variable visible on every screen of the app
+C. A label control on the first screen, read by name from the other screens
+D. Collect, which is the only way to store a single value across screens
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Set creates a global variable available throughout the app. UpdateContext creates a context variable scoped to one screen, unless you pass it with Navigate. Reading a label across screens couples screens together and is fragile. Collect creates a table, which is unnecessary for a single value.
+</details>
+
+---
+
+### Question 23
+**Scenario:** A maker published a change that broke the app, and users need the previous working version back immediately.
+
+A. Delete the app and ask users to wait while it is rebuilt from the last saved file
+B. Export the app to a package and import it again, which rolls it back by one version
+C. Ask an administrator to restore the whole environment from its most recent backup
+D. Restore the previous version from the app's Versions list, which makes it the live version
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Canvas apps keep a version history, and restoring an earlier version creates a new version from it that can be published, giving users the working app back. Deleting the app loses its sharing and history. Exporting and importing does not roll back. An environment restore affects every app and data, far beyond what is needed.
+</details>
+
+---
+
+### Question 24
+**Scenario:** A second maker must be able to edit and share a canvas app while the original maker is on leave.
+
+A. Share the app with the second maker as a co-owner
+B. Give the second maker the original maker's password
+C. Share the app with the second maker as a user
+D. Export the app and send the file to the second maker
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Co-owners can edit the app, share it, and manage it without being the original owner. Sharing credentials breaks security policy. User permission allows running the app only. An exported copy is a different app, so edits would not affect the one users run.
+</details>
+
+---
+
+### Question 25
+**Scenario:** The account form must show the total estimated revenue of all open opportunities related to that account.
+
+A. A calculated column on the account table that sums the opportunities through the lookup
+B. A text column filled by hand by each salesperson whenever an opportunity changes
+C. A rollup column on the account table that aggregates the related opportunity values
+D. A choice column that lists each related opportunity's value as one of its options
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Rollup columns aggregate values, such as sums or counts, from related records in a one-to-many relationship, which fits totals of child records. Calculated columns work on values in the same record and related parent records, not aggregates of many children. Manual entry drifts. Choice columns hold fixed options.
+</details>
+
+---
+
+### Question 26
+**Scenario:** An app must call an internal REST API that has an OpenAPI definition but no prebuilt connector.
+
+A. Call the API with the Launch function, which sends the request and returns the JSON response
+B. Store the API's data in Excel each night and use the Excel connector from the app
+C. Use the SQL Server connector, which can call any REST endpoint given its address
+D. Create a custom connector from the OpenAPI definition, then add it to the app
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A custom connector can be created from an OpenAPI definition, with authentication configured, and then used in apps and flows like any connector. Launch opens a URL or app and returns nothing. A nightly Excel copy is stale. The SQL Server connector talks only to SQL databases.
+</details>
+
+---
+
+### Question 27
+**Scenario:** Each inspection record must point to exactly one site record, and users should pick the site from the list of existing sites.
+
+A. A lookup column on the inspection table referencing the site table
+B. A choice column with each site name typed in as an option
+C. A text column where users type the site's name each time
+D. A many-to-many relationship between inspections and sites
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A lookup column creates a many-to-one relationship, so each inspection points to one site chosen from existing records. Choices are static and must be edited as sites change. Free text produces inconsistent values. Many-to-many would allow several sites per inspection, which the requirement rules out.
+</details>
+
+---
+
+### Question 28
+**Scenario:** A canvas app button must start a flow that creates a PDF, then show the returned file link in the app.
+
+A. A scheduled cloud flow that runs every minute and checks whether the button was pressed
+B. A flow with the Power Apps (V2) trigger, run from the button, that returns the link with a respond action
+C. A desktop flow started from the app, which opens the PDF on the user's own computer
+D. An automated flow triggered when the app is published, which writes the link to a label
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A cloud flow with the Power Apps (V2) trigger is called from the app with parameters, and the "Respond to a Power App or flow" action returns values the app can show. Polling on a schedule is slow and wasteful. A desktop flow is for UI automation. Publishing an app is not a per-click event.
+</details>
+
+---
+
+### Question 29
+**Scenario:** A rule that sets a field's value must apply when records are created from a model-driven form and also through data imports.
+
+A. Set the business rule scope to the main form only, so it runs on the server for imports too
+B. Write the rule as a JavaScript web resource on the form, which also runs during imports
+C. Set the business rule scope to Entity (all forms and server), so it also runs on the server
+D. Create the rule in a canvas app, since canvas app formulas also run during imports
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A business rule with Entity scope runs server-side as well as on model-driven forms, so it applies to imports and other server operations. A rule scoped to a form runs only in that form. Form JavaScript does not run during imports. Canvas app formulas run only in the app.
+</details>
+
+---
+
+### Question 30
+**Scenario:** Before building, a maker wants to capture who will use the app and what each person needs to do with it.
+
+A. Start building screens straight away and collect needs as users find problems in production
+B. Copy an existing app from another department and change the labels to fit the new process
+C. Pick the data source first, then work out which users can be served by the tables it already has
+D. Write user stories for each persona, such as "as a technician I need to log a repair offline"
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Personas and user stories capture who the users are and what they need, which guides choices about app type, data, and offline support. Building first and discovering needs in production causes rework. Copying another department's app assumes their process. Choosing data first lets technology drive requirements.
 </details>
 
 ---

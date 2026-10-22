@@ -1,6 +1,6 @@
 # Certified Argo Project Associate (CAPA) - Practice Questions
 
-15 questions for CAPA prep, weighted like the exam: Argo Workflows 36%, Argo CD 34%, Rollouts 18%, Events 12%.
+30 questions for CAPA prep, weighted like the exam: Argo Workflows 36%, Argo CD 34%, Rollouts 18%, Events 12%.
 
 > **Cert page:** [exams/kubernetes/capa/](../../exams/kubernetes/capa/)
 
@@ -276,8 +276,278 @@ D. The Workflow reads the EventBus directly
 
 ---
 
+### Question 16
+**Scenario:** Ten teams copy the same build-and-scan steps into their own Workflows in different namespaces. The platform team wants one shared definition that all namespaces can reference.
+
+A. A WorkflowTemplate in each team namespace, kept in sync by hand when the steps change
+B. A ClusterWorkflowTemplate, referenced from each Workflow with `templateRef` and `clusterScope: true`
+C. A ConfigMap holding the step YAML, mounted into each Workflow's pods at runtime
+D. A CronWorkflow in the argo namespace that runs the steps for every team on a schedule
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A ClusterWorkflowTemplate is cluster-scoped, so Workflows in any namespace can reference its templates through `templateRef` with `clusterScope: true`. Namespaced WorkflowTemplates would need a copy per namespace. A ConfigMap of YAML is not something the controller executes. A single CronWorkflow does not let each team run the steps in its own Workflow when it needs them.
+</details>
+
+---
+
+### Question 17
+**Scenario:** A nightly CronWorkflow sometimes runs longer than 24 hours. A new run must never start while the previous one is still running.
+
+A. Set `startingDeadlineSeconds` to 0, which stops any run starting while another is active
+B. Set `successfulJobsHistoryLimit` to 1, so only one run of the CronWorkflow can exist at once
+C. Set `concurrencyPolicy: Forbid` on the CronWorkflow
+D. Set `activeDeadlineSeconds` to 24 hours on each run, so the old run is killed when the next starts
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** `concurrencyPolicy: Forbid` skips a scheduled run while the previous one is still running, matching Kubernetes CronJob semantics. `startingDeadlineSeconds` controls how late a missed run may start. History limits control how many finished runs are kept. A deadline kills the long run, which is not what is wanted.
+</details>
+
+---
+
+### Question 18
+**Scenario:** A step calling a flaky external API should be retried up to three times with growing delays, but only for failures of the step's own container, not for infrastructure errors.
+
+A. `retryStrategy` with `limit: 3`, `retryPolicy: OnFailure`, and a `backoff` with duration and factor
+B. `retryStrategy` with `limit: 3` and `retryPolicy: OnError`, which covers only container failures
+C. An `onExit` handler that resubmits the whole Workflow three times when the step fails
+D. `activeDeadlineSeconds: 3` on the step, which restarts it three times before failing
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** `retryPolicy: OnFailure` retries when the main container fails, `OnError` retries on Argo-level errors such as pod deletion, and `Always` covers both. `backoff` adds increasing delays. `OnError` is the wrong policy for container failures. An exit handler resubmitting the Workflow re-runs everything. `activeDeadlineSeconds` is a timeout, not a retry count.
+</details>
+
+---
+
+### Question 19
+**Scenario:** A deploy step should run only if the previous test step output the parameter `result` with the value `pass`.
+
+A. Put the deploy step inside an `onExit` handler, which runs it only when tests pass
+B. Add a `when` clause to the deploy step comparing the test step's output parameter to `pass`
+C. Set `continueOn: failed` on the test step, which skips the deploy step automatically
+D. Use `withParam` on the deploy step with the test result, which loops zero times on failure
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A `when` expression such as `"{{steps.test.outputs.parameters.result}} == pass"` makes a step or task conditional. Exit handlers run at the end whether the Workflow succeeded or failed. `continueOn` lets a Workflow continue past failures; it does not skip steps. `withParam` is for loops over lists, and using it as a condition is fragile.
+</details>
+
+---
+
+### Question 20
+**Scenario:** A release Workflow must pause after staging tests until a human approves, then continue to production.
+
+A. A `sleep` step with a very long duration, which an operator deletes to approve the release
+B. A `synchronization` mutex, which an operator releases by hand to let the Workflow continue
+C. A `suspend` template between staging and production, resumed with `argo resume` or from the UI
+D. Two separate Workflows, with production started by the operator copying staging's YAML
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A `suspend` template pauses the Workflow indefinitely or for a set duration until it is resumed through the CLI, UI, or API, which is the built-in approval gate. Deleting a sleeping pod would fail the step. Mutexes control concurrency between Workflows, not approvals. Splitting by hand loses the single audited run.
+</details>
+
+---
+
+### Question 21
+**Scenario:** A database schema migration must run as a Job before Argo CD applies the new Deployment in each sync, and the sync must stop if the migration fails.
+
+A. A Job with the `argocd.argoproj.io/hook: PreSync` annotation
+B. A Job with the `argocd.argoproj.io/hook: PostSync` annotation
+C. A Job in the same wave as the Deployment, with a long backoffLimit
+D. A Job outside the Application, run by a CronJob every five minutes
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** PreSync hooks run before the sync applies the main resources, and if the hook fails the sync fails, so the Deployment is not updated. PostSync runs after a successful sync, which is too late. Placing the Job in the same wave gives no ordering guarantee with the Deployment. A CronJob is not tied to syncs at all.
+</details>
+
+---
+
+### Question 22
+**Scenario:** Every cluster registered in Argo CD with the label `env=prod` must automatically get the monitoring stack, including clusters added in the future.
+
+A. An App of Apps, with one child Application file added to Git for each new cluster
+B. An ApplicationSet with the list generator, with each cluster's name typed into the list
+C. An ApplicationSet with the Git directory generator, which finds clusters by folder name
+D. An ApplicationSet with the cluster generator and a label selector on `env=prod`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The cluster generator creates one Application per registered cluster whose secret matches the selector, so new `env=prod` clusters get the stack automatically. App of Apps and the list generator both need manual edits for each new cluster. The Git directory generator discovers repository paths, not registered clusters.
+</details>
+
+---
+
+### Question 23
+**Scenario:** Applications that contain a custom resource from an in-house operator always show as Healthy, even when the operator reports the resource as failed in its status.
+
+A. Enable automated sync with self-heal, which recalculates health from the resource's status field
+B. Add a custom health check in Lua for that resource kind in the `argocd-cm` ConfigMap
+C. Add a PostSync hook that deletes the resource if its status reports a failure
+D. Set the resource's sync wave to a negative number, so health is checked before other resources
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Argo CD has built-in health checks for common kinds. For other custom resources, a Lua health script configured in `argocd-cm` (`resource.customizations`) reads the status and returns Healthy, Progressing, or Degraded. Self-heal fixes drift, not health assessment. Deleting failed resources hides the problem. Sync waves order applies and do not define health.
+</details>
+
+---
+
+### Question 24
+**Scenario:** An Application shows Sync Status: OutOfSync and Health Status: Healthy. What does this mean?
+
+A. The live resources differ from Git, but the running workloads are currently healthy
+B. The sync has failed, and Argo CD has rolled the workloads back to the last healthy state
+C. The Git repository is unreachable, so Argo CD reports the last known health only
+D. The workloads are running the Git version, but some health checks have not run yet
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Sync status compares the live state with the desired state in Git, and health status reports whether the resources are working. They are independent, so a cluster can be healthy and still differ from Git, for example before an automated sync runs or with automated sync disabled. A failed sync is shown in the operation state. An unreachable repository raises a comparison error. Matching Git would show Synced.
+</details>
+
+---
+
+### Question 25
+**Scenario:** Members of the `team-a` SSO group must be able to view and sync Applications in the `team-a` project only, and nothing else.
+
+A. Add the group to the `admin` role in `argocd-rbac-cm`, then restrict it with an AppProject source list
+B. Grant the group read access to the `argocd` namespace with a Kubernetes RoleBinding
+C. Define a role in `argocd-rbac-cm` (or a project role) allowing get and sync on `team-a/*`, bound to the group
+D. Give each member a local Argo CD account with the password shared within the team
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Argo CD RBAC policies in `argocd-rbac-cm`, or project roles, grant actions such as get and sync on `<project>/<application>` patterns and can be bound to SSO groups. The admin role grants everything, and source restrictions do not limit actions. Kubernetes RBAC on the argocd namespace does not govern Argo CD API actions. Shared local accounts lose individual identity.
+</details>
+
+---
+
+### Question 26
+**Scenario:** A canary step should query Prometheus for the success rate every minute, failing the rollout if the rate drops below 99% more than twice.
+
+A. An `AnalysisTemplate` with a Prometheus provider, `interval: 1m`, `successCondition: result[0] >= 0.99`, and `failureLimit: 2`
+B. A Prometheus alerting rule that pages an operator, who then aborts the rollout with the kubectl plugin
+C. A `readinessProbe` on the canary pods that queries Prometheus and fails below 99%
+D. A `pause` step of ten minutes followed by a manual check of the Grafana dashboard
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** An AnalysisTemplate defines metrics with a provider, an interval, and success or failure conditions. When failed measurements exceed `failureLimit`, the analysis fails and the Rollout aborts and rolls back automatically. Paging an operator or checking a dashboard is manual. Readiness probes check pod health, not service-level metrics from Prometheus.
+</details>
+
+---
+
+### Question 27
+**Scenario:** In a blue-green Rollout, the new version should receive test traffic through a separate service and pass analysis before it becomes active, with no automatic promotion.
+
+A. Set `scaleDownDelaySeconds: 0`, which tests the preview service before switching traffic
+B. Use a canary strategy with `setWeight: 100`, which is the same as a blue-green promotion
+C. Remove the `activeService` field, so that traffic is sent to the preview service until promoted
+D. Configure `previewService`, `prePromotionAnalysis`, and `autoPromotionEnabled: false`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** In blue-green, `previewService` routes to the new ReplicaSet for testing, `prePromotionAnalysis` runs before the switch, and `autoPromotionEnabled: false` waits for a manual promote. `scaleDownDelaySeconds` controls how long the old version is kept after the switch. A 100% canary weight shifts all traffic at once with no preview. `activeService` is required for blue-green.
+</details>
+
+---
+
+### Question 28
+**Scenario:** A canary Rollout with `setWeight: 20` runs without any traffic router such as an ingress controller or service mesh. How is the 20% achieved?
+
+A. Argo Rollouts installs a sidecar proxy in each pod that drops 80% of requests to the canary
+B. The Rollout fails validation, since canary steps cannot run without a configured traffic router
+C. It approximates the weight by scaling canary and stable ReplicaSets so about 20% of pods are canary
+D. The Service is edited so that its selector matches the canary pods for 20% of the time
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Without a traffic router, Argo Rollouts splits traffic through the replica ratio behind the same Service, so the weight is only as precise as the replica count allows. Rollouts does not inject proxies. Canary steps work without a router, just less precisely. Services do not time-share selectors.
+</details>
+
+---
+
+### Question 29
+**Scenario:** A Sensor listens to a Git webhook EventSource but should trigger the build Workflow only for pushes to the `main` branch.
+
+A. Add a data filter on the Sensor dependency matching the branch ref field in the event payload
+B. Create a separate EventBus for main-branch events, which receives only events from main
+C. Add a `when` clause to the triggered Workflow, which cancels itself on any other branch
+D. Configure the EventSource to drop events from other branches before they reach any bus
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Sensor dependencies support filters, such as data filters on JSON paths in the payload, so only matching events satisfy the dependency and fire the trigger. A second EventBus does not filter by content. A Workflow that cancels itself still starts for every push. Generic webhook EventSources do not filter on payload fields; filtering belongs on the Sensor.
+</details>
+
+---
+
+### Question 30
+**Scenario:** A training Workflow should start only after both a new dataset arrives in S3 and a model config change is pushed to Git.
+
+A. Two Sensors, each with one dependency, which both trigger the same Workflow on every event
+B. One Sensor with both dependencies, and a trigger whose `conditions` require both, such as `dataset && config`
+C. One EventSource that combines the S3 and Git events into a single event before the bus
+D. A CronWorkflow that polls S3 and Git every minute and starts training when both have changed
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A Sensor can declare several dependencies, and trigger `conditions` combine them with boolean logic, so the trigger fires only when both have occurred. Two independent Sensors would start the Workflow twice, once for each event. EventSources do not merge different event types. Polling replaces the event-driven design with delay and extra load.
+</details>
+
+---
+
 ## Scoring guide
 
-- **13-15 correct (85%+):** Ready. 75% is the pass mark.
-- **10-12 correct (65-80%):** Check whether your misses cluster in Argo Workflows, which is the largest domain and the one most candidates under-study.
-- **Below 10:** Work the [scenarios](../../exams/kubernetes/capa/scenarios.md) and practice reading Workflow and Application YAML and saying what it does.
+- **26-30 correct (85%+):** Ready. 75% is the pass mark.
+- **20-25 correct (67-83%):** Check whether your misses cluster in Argo Workflows, which is the largest domain and the one most candidates under-study.
+- **Below 20:** Work the [scenarios](../../exams/kubernetes/capa/scenarios.md) and practice reading Workflow and Application YAML and saying what it does.

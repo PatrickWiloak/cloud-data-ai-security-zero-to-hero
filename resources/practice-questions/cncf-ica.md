@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: advanced
 ---
 
 # Istio Certified Associate (ICA) - Practice Questions
 
-15 questions for ICA prep across installation, traffic management, security, observability, resilience, troubleshooting, and multi-cluster and ambient mode.
+30 questions for ICA prep across installation, traffic management, security, observability, resilience, troubleshooting, and multi-cluster and ambient mode.
 
 ICA is performance-based in a live cluster. These questions target the configuration reasoning behind the tasks.
 
@@ -279,6 +279,276 @@ D. A single Gateway resource in one cluster that is attached to the namespaces o
 **Correct: B**
 
 **Why:** Multi-cluster requires a common root of trust so workload identities validate across clusters, endpoint discovery between control planes, and east-west gateways when pod IPs are not directly routable. A VPN gives connectivity without shared identity or service discovery, and Prometheus federation is only observability.
+</details>
+
+---
+
+### Question 16
+**Scenario:** You install Istio for production with `istioctl` and want istiod plus an ingress gateway, without the extra tracing and high-verbosity settings meant for demos.
+
+A. `istioctl install --set profile=demo`, then remove the demo add-ons by hand
+B. `istioctl install --set profile=minimal`, which installs istiod and an ingress gateway
+C. `istioctl install --set profile=empty`, which installs the recommended production components
+D. `istioctl install --set profile=default`, which installs istiod and an ingress gateway
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The default profile is the recommended starting point for production: istiod plus an ingress gateway. The demo profile enables extra features and high trace sampling for showcasing. Minimal installs only the control plane, with no gateway. Empty installs nothing and is a base for custom configuration.
+</details>
+
+---
+
+### Question 17
+**Scenario:** You install Istio with Helm instead of istioctl. In what order should the charts be installed?
+
+A. `istiod` first, then `base`, then a gateway, since the control plane creates the CRDs
+B. `base` first for CRDs and cluster resources, then `istiod`, then any gateway charts
+C. A gateway chart first, then `istiod`, then `base`, so traffic can enter before the mesh exists
+D. All three charts at once with a single `helm install` command, since order does not matter
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The `base` chart installs the CRDs and cluster-wide resources that the control plane needs, `istiod` installs the control plane, and gateways come after, since they need istiod for configuration and certificates. Installing istiod first fails without the CRDs. A gateway without istiod cannot get configuration. Each chart is a separate release.
+</details>
+
+---
+
+### Question 18
+**Scenario:** Requests carrying the header `x-beta-user: true` must go to the `v2` subset of `reviews`, and all other requests to `v1`.
+
+A. A VirtualService with a first route matching the header to `v2`, then a default route to `v1`
+B. A DestinationRule with a header-based load balancer that sends beta users to the `v2` subset
+C. An AuthorizationPolicy that allows only beta users to reach the `v2` pods of the service
+D. A Gateway with a header match, which routes beta users to `v2` for traffic inside the mesh
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** VirtualService HTTP routes are evaluated in order, so a route matching the header to subset `v2` followed by a catch-all route to `v1` gives the required behavior. DestinationRules define subsets and policies but not request routing. AuthorizationPolicy allows or denies and does not route. A Gateway configures ingress listeners, not routing between services inside the mesh.
+</details>
+
+---
+
+### Question 19
+**Scenario:** Calls to `ratings` should time out after 2 seconds, and failed calls with connection errors or 5xx responses should be retried up to 3 times.
+
+A. A DestinationRule with `outlierDetection` set to 3 errors and an interval of 2 seconds
+B. A PeerAuthentication with a 2 second timeout and 3 retries on the `ratings` workload
+C. A VirtualService route with `timeout: 2s` and `retries` with `attempts: 3` and a `retryOn` list
+D. A Sidecar resource limiting egress to `ratings` with a 2 second connect timeout
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Request timeouts and retries are set on VirtualService routes, with `retryOn` choosing conditions such as `connect-failure` and `5xx`. Outlier detection ejects unhealthy hosts and does not retry. PeerAuthentication configures mTLS. The Sidecar resource scopes configuration and has no request timeout or retries.
+</details>
+
+---
+
+### Question 20
+**Scenario:** A new version of `payments` must receive a copy of live production traffic for testing, while its responses are discarded and users see only `v1`.
+
+A. Route 1% of traffic to `v2` with a weight, so only a few users see its responses
+B. Set `mirror` to the `v2` subset in the VirtualService route, with `mirrorPercentage` as needed
+C. Deploy `v2` with a fault injection abort of 100%, so its responses are never returned
+D. Add `v2` to an AuthorizationPolicy with action AUDIT, which copies traffic to it
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Mirroring sends a copy of each request to the mirror destination fire-and-forget, discarding its responses, while the primary route serves users. Weighted routing exposes real users to `v2`. Abort faults return errors to callers. AUDIT actions mark requests for logging and do not copy traffic.
+</details>
+
+---
+
+### Question 21
+**Scenario:** All traffic from the mesh to `api.partner.com` must leave through dedicated egress nodes, so the partner can allowlist their addresses.
+
+A. A ServiceEntry for the host only, which makes sidecars send the traffic through istiod
+B. A DestinationRule with `tls.mode: DISABLE` for the host, which routes traffic to the egress nodes
+C. An egress gateway with a ServiceEntry, a Gateway, and VirtualServices that route through it
+D. Set `outboundTrafficPolicy` to `ALLOW_ANY`, which sends unknown hosts to the egress nodes
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** The egress gateway pattern uses a ServiceEntry for the external host, a Gateway on the egress gateway, and VirtualServices that send sidecar traffic to the gateway and from the gateway to the host, so traffic exits from the gateway pods' nodes. A ServiceEntry alone lets sidecars connect directly. TLS settings do not change the path. `ALLOW_ANY` lets traffic out directly from each pod.
+</details>
+
+---
+
+### Question 22
+**Scenario:** A stateful service needs requests from the same user to keep reaching the same pod, based on a `user-id` header.
+
+A. A DestinationRule with `loadBalancer.consistentHash.httpHeaderName: user-id`
+B. A VirtualService route match on `user-id` with one route per pod in the service
+C. A DestinationRule with `loadBalancer.simple: ROUND_ROBIN` and outlier detection
+D. A Service with `sessionAffinity: ClientIP` in place of any Istio configuration
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Consistent hash load balancing on a header gives soft session affinity: requests with the same header value map to the same endpoint while the set of endpoints is stable. Routes per pod do not scale and break when pods change. Round robin spreads requests. Kubernetes `sessionAffinity` is not applied by the sidecar, which does its own load balancing.
+</details>
+
+---
+
+### Question 23
+**Scenario:** A RequestAuthentication with a JWT issuer is applied to `orders`. Requests with invalid tokens are rejected, but requests with no token at all still succeed.
+
+A. The issuer URL is wrong, since a correct issuer makes RequestAuthentication reject requests without a token
+B. PeerAuthentication must be STRICT, which also requires a JWT on every request to the workload
+C. The JWKS cache is stale, so requests without tokens are allowed until it refreshes
+D. Add an AuthorizationPolicy that requires `requestPrincipals: ["*"]`, so requests without a token are denied
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** RequestAuthentication only validates tokens that are present. Requests without a token are allowed unless an AuthorizationPolicy requires a request principal. Pairing it with a policy requiring `requestPrincipals` denies tokenless requests. The issuer and JWKS do not change that behavior. PeerAuthentication concerns mTLS between workloads, not end-user JWTs.
+</details>
+
+---
+
+### Question 24
+**Scenario:** A namespace has an ALLOW policy permitting everything from the `frontend` service account, and a DENY policy blocking requests to the path `/admin`. A request from `frontend` to `/admin` arrives.
+
+A. Allowed, because ALLOW policies are evaluated first and the request already matches one
+B. Denied, because DENY policies are evaluated before ALLOW policies
+C. Allowed, because the more specific source match outranks a path match
+D. Denied, because any ALLOW policy denies all paths it does not list explicitly
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Istio evaluates CUSTOM policies first, then DENY, then ALLOW. A request matching a DENY policy is rejected regardless of ALLOW policies. Specificity does not change the order. The ALLOW policy here allows all paths from `frontend`; it is the DENY policy that blocks `/admin`.
+</details>
+
+---
+
+### Question 25
+**Scenario:** You want a default-deny posture in the `finance` namespace, so that only traffic explicitly allowed by later policies reaches its workloads.
+
+A. A PeerAuthentication in `finance` with mode STRICT and no other settings
+B. A Sidecar resource in `finance` with an empty egress list
+C. An AuthorizationPolicy in `finance` with an empty `spec: {}`
+D. A DestinationRule in `finance` with `trafficPolicy` set to DENY
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** An AuthorizationPolicy with an empty spec selects every workload in the namespace and, as an ALLOW policy with no rules, matches nothing, so all requests are denied until further ALLOW policies are added. STRICT mTLS requires mTLS but allows any authenticated peer. A Sidecar resource scopes outbound configuration. DestinationRules have no DENY setting.
+</details>
+
+---
+
+### Question 26
+**Scenario:** An engineer wants a live graph of services in the mesh, showing traffic rates, error rates, and whether connections use mTLS.
+
+A. Kiali, which builds a service graph from mesh telemetry
+B. `istioctl analyze`, which prints the service graph for a namespace
+C. Jaeger, which draws the mTLS status of each connection
+D. `kubectl top`, which shows traffic and errors between pods
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Kiali uses Prometheus metrics and Istio configuration to draw a service graph with traffic, errors, and security indicators such as mTLS, and it validates configuration. `istioctl analyze` finds configuration problems. Jaeger shows individual traces. `kubectl top` shows CPU and memory.
+</details>
+
+---
+
+### Question 27
+**Scenario:** Envoy access logs must be turned on for workloads in the `checkout` namespace only, without changing mesh-wide settings.
+
+A. Edit the istio ConfigMap to set `accessLogFile`, which applies to a single namespace
+B. A Telemetry resource in `checkout` that enables access logging with the `envoy` provider
+C. An EnvoyFilter in `istio-system` that enables logging for every proxy in the mesh
+D. Restart the `checkout` pods with a log-level flag on the application containers
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The Telemetry API configures access logging, metrics, and tracing at mesh, namespace, or workload scope, so a namespaced Telemetry resource enabling the `envoy` access log provider affects only that namespace. `accessLogFile` in mesh config is mesh-wide. An EnvoyFilter in the root namespace applies everywhere. Application log levels do not control Envoy access logs.
+</details>
+
+---
+
+### Question 28
+**Scenario:** A slow dependency causes callers to queue thousands of pending requests, exhausting their memory. Requests beyond a limit should fail fast instead.
+
+A. A VirtualService with a longer timeout, so pending requests finish before memory runs out
+B. A fault injection delay on the dependency, which lowers the number of requests queued
+C. An AuthorizationPolicy limiting which callers may reach the dependency during load
+D. A DestinationRule `connectionPool` with limits such as `http1MaxPendingRequests` and `maxConnections`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Connection pool settings act as circuit breakers: when connections or pending requests exceed the limits, Envoy rejects new requests immediately, protecting callers. Longer timeouts make queues longer. Fault injection adds failures for testing. Authorization limits who may call, not how many requests are in flight.
+</details>
+
+---
+
+### Question 29
+**Scenario:** You changed a VirtualService, but one pod's behavior has not changed. You want to know whether that proxy has received the latest configuration from istiod.
+
+A. `istioctl proxy-status`, which shows whether each proxy is SYNCED or STALE
+B. `kubectl logs` on istiod, which lists the configuration version of each proxy
+C. `istioctl install --verify`, which redeploys the configuration to all proxies
+D. `kubectl describe virtualservice`, which shows each proxy's sync state
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** `istioctl proxy-status` reports, for each proxy, whether its clusters, listeners, routes, and endpoints are in sync with istiod. Then `istioctl proxy-config` can inspect the proxy's actual routes. istiod logs do not give a clear per-proxy sync view. Reinstalling is not a diagnostic. The VirtualService object holds no proxy sync state.
+</details>
+
+---
+
+### Question 30
+**Scenario:** A namespace runs in ambient mode. L4 mTLS works, but an AuthorizationPolicy with HTTP path rules for a service is not enforced.
+
+A. Restart the ztunnel DaemonSet, which reloads the L7 policy for the namespace
+B. Re-label the namespace for sidecar injection, since ambient mode never supports L7
+C. Deploy a waypoint proxy for the service or namespace and target the policy at it
+D. Switch PeerAuthentication to PERMISSIVE, which turns on L7 processing in ztunnel
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** In ambient mode, ztunnel handles L4 features such as mTLS and L4 authorization. L7 features, including HTTP-based authorization, need a waypoint proxy, and the policy should target the waypoint. Restarting ztunnel does not add L7 processing. Ambient supports L7 through waypoints, so sidecars are not required. PERMISSIVE affects mTLS acceptance, not L7 handling.
 </details>
 
 ---
