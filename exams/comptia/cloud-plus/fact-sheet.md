@@ -1,5 +1,7 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
+applies-to: CompTIA Cloud+ CV0-004 exam objectives v2.0, checked 2026-10-22
+difficulty: intermediate
 ---
 
 # CompTIA Cloud+ (CV0-004) Fact Sheet
@@ -8,257 +10,312 @@ last-updated: 2026-05-03
 
 **Exam Code:** CV0-004
 **Duration:** 90 minutes
-**Questions:** Up to 90 (MCQ + performance-based)
-**Passing Score:** 750/900
+**Questions:** Maximum of 90 (multiple choice and performance-based)
+**Passing Score:** 750 (on a scale of 100-900)
 **Cost:** $369 USD
 **Validity:** 3 years
 **Delivery:** Pearson VUE (testing center or online proctored)
 
+Launched December 18, 2024. Recommended experience: 2-3 years as a systems administrator or cloud engineer, plus Network+ and Server+ level knowledge.
+
+**[📖 CV0-004 Exam Objectives v2.0 (PDF)](https://comptiacdn.azureedge.net/webcontent/docs/default-source/exam-objectives/comptia-cloud-cv0-004-exam-objectives-%282-0%29.pdf)** - the authoritative domain and objective list.
+
+**[📖 CompTIA Cloud+ certification page](https://www.comptia.org/en-us/certifications/cloud/)** - exam details and official training.
+
 ## Exam Domain Breakdown
 
-| Domain | Weight | Focus |
-|--------|--------|-------|
-| Cloud Architecture | 13% | Deployment models, service models, design principles |
-| Security | 20% | IAM, data protection, network security, compliance |
-| Deployment | 23% | Migration, automation, IaC, containers, CI/CD |
-| Operations and Support | 22% | Monitoring, optimization, change management, SLAs |
-| Troubleshooting | 22% | Connectivity, performance, security, automation |
+| # | Domain | Weight | Objectives | Notes |
+|---|---|---|---|---|
+| 1 | Cloud Architecture | 23% | 1.1-1.11 | [01-cloud-architecture](notes/01-cloud-architecture.md) |
+| 2 | Deployment | 19% | 2.1-2.5 | [02-deployment](notes/02-deployment.md) |
+| 3 | Operations | 17% | 3.1-3.4 | [03-operations](notes/03-operations.md) |
+| 4 | Security | 19% | 4.1-4.6 | [04-security](notes/04-security.md) |
+| 5 | DevOps Fundamentals | 10% | 5.1-5.4 | [05-devops-fundamentals](notes/05-devops-fundamentals.md) |
+| 6 | Troubleshooting | 12% | 6.1-6.3 | [06-troubleshooting](notes/06-troubleshooting.md) |
 
-## Cloud Deployment Models
+## Domain 1: Cloud Architecture
 
-| Model | Description | Use Case |
-|-------|-------------|----------|
-| **Public** | Resources shared across tenants, provider-managed | Cost-effective, scalable workloads |
-| **Private** | Dedicated infrastructure for single organization | Compliance, sensitive data, full control |
-| **Hybrid** | Mix of public and private with orchestration | Burst capacity, data sovereignty |
-| **Multi-cloud** | Services across multiple cloud providers | Avoid vendor lock-in, best-of-breed |
-| **Community** | Shared by organizations with common concerns | Government, healthcare, research |
+### Service models and shared responsibility
 
-**Documentation:**
-- **[📖 CompTIA Cloud+ Objectives](https://www.comptia.org/certifications/cloud#examdetails)** - Official exam objectives
-- **[📖 NIST Cloud Computing Definition](https://csrc.nist.gov/publications/detail/sp/800-145/final)** - SP 800-145 cloud definitions
-- **[📖 NIST Cloud Reference Architecture](https://www.nist.gov/publications/nist-cloud-computing-reference-architecture)** - SP 500-292 reference architecture
+| Model | Provider runs | You run | Examples |
+|---|---|---|---|
+| **IaaS** | Hardware, network, hypervisor | OS, runtime, apps, data | EC2, Azure VMs, Compute Engine |
+| **PaaS** | IaaS plus OS, middleware, runtime | Apps, data | App Service, Elastic Beanstalk, App Engine |
+| **SaaS** | Whole application | Configuration, users, data | Microsoft 365, Salesforce |
+| **FaaS** | Everything but the function | Function code, triggers | Lambda, Azure Functions |
 
-## Cloud Service Models
+- Provider: security **of** the cloud. Customer: security **in** the cloud. Data and identity are always the customer's.
+- IaaS guest OS patching is the customer's job.
 
-| Model | Provider Manages | Customer Manages | Examples |
-|-------|-----------------|-----------------|----------|
-| **IaaS** | Hardware, networking, virtualization | OS, middleware, apps, data | EC2, Azure VMs, GCE |
-| **PaaS** | IaaS + OS, middleware, runtime | Applications, data | Elastic Beanstalk, App Engine, Azure App Service |
-| **SaaS** | Entire stack | Configuration, user access | Microsoft 365, Salesforce, Gmail |
-| **FaaS** | Everything except function code | Function logic | Lambda, Azure Functions, Cloud Functions |
-| **DBaaS** | Database infrastructure and management | Schema, queries, data | RDS, Cloud SQL, Cosmos DB |
-| **XaaS** | Anything as a Service | Varies | Storage, networking, security, desktop |
+### Availability and DR
 
-**Documentation:**
-- **[📖 NIST Cloud Service Models](https://csrc.nist.gov/publications/detail/sp/800-145/final)** - Service model definitions
-- **[📖 CompTIA Cloud Essentials+](https://www.comptia.org/certifications/cloud-essentials)** - Foundation cloud concepts
+- **Region** - geographic area. **AZ** - isolated data centre(s) inside a region.
+- **Cloud bursting** - overflow from private to public cloud at peak.
+- **Edge computing** - compute near users or devices for low latency.
+- **RTO** - max downtime. **RPO** - max data loss, in time.
 
-## High Availability and Disaster Recovery
+| DR site | State | Recovery time | Cost |
+|---|---|---|---|
+| **Hot** | Fully running, current data | Minutes or less | Highest |
+| **Warm** | Partly running, recent data | Hours | Medium |
+| **Cold** | Space and power, restore from backup | Days | Lowest |
 
-### HA Concepts
-- **Redundancy** - Duplicate components to eliminate single points of failure
-- **Fault tolerance** - System continues operating despite component failure
-- **Failover** - Automatic switching to standby system
-- **Load balancing** - Distribute traffic across multiple instances
-- **Clustering** - Group of servers acting as a single system
-- **Replication** - Synchronous or asynchronous data copying
+### Networking
 
-### DR Metrics
-| Metric | Definition | Example |
-|--------|-----------|---------|
-| **RTO** | Recovery Time Objective - max acceptable downtime | 4 hours |
-| **RPO** | Recovery Point Objective - max acceptable data loss | 1 hour |
-| **MTTR** | Mean Time to Recovery - average recovery time | 2 hours |
-| **MTBF** | Mean Time Between Failures - average uptime | 720 hours |
+| Item | Remember |
+|---|---|
+| **VPN** | Encrypted over internet, quick, cheap, variable latency |
+| **Dedicated connection** | Private circuit (Direct Connect, ExpressRoute, Cloud Interconnect), steady latency, weeks to provision, not encrypted by default |
+| **Application load balancer** | Layer 7, routes by path or host, terminates TLS |
+| **Network load balancer** | Layer 4, TCP and UDP, very high throughput, static IP |
+| **Application gateway** | Layer 7 proxy, often with WAF |
+| **CDN** | Edge caching for static content, lower latency, DDoS absorption |
+| **VPC peering** | One-to-one, **not transitive**, no overlapping CIDRs |
+| **Transit gateway** | Hub and spoke for many VPCs and on-premises links, transitive |
+| **VLAN** | Layer 2 segmentation by 802.1Q tag |
+| **SDN** | Central software control plane; every cloud VPC is SDN |
+| **BGP** | Dynamic route exchange, automatic failover on dedicated links |
+| **Route table** | Longest prefix match wins |
 
-### DR Strategies (Cost/Speed Trade-off)
-1. **Backup and Restore** - Lowest cost, highest RTO (hours to days)
-2. **Pilot Light** - Minimal core infrastructure running (minutes to hours)
-3. **Warm Standby** - Scaled-down copy of production (minutes)
-4. **Hot Standby/Active-Active** - Full duplicate running (near-zero RTO)
+### Storage
 
-## Identity and Access Management
+| Tier | Access | Store cost | Retrieval |
+|---|---|---|---|
+| **Hot** | Frequent | Highest | Cheapest, instant |
+| **Warm** | Monthly | Lower | Per-access fee |
+| **Cold** | Rare | Lower again | Higher fee |
+| **Archive** | Compliance, almost never | Lowest | Hours, highest fee |
 
-### Authentication Methods
-- **Multi-factor authentication (MFA)** - Something you know, have, are
-- **Single sign-on (SSO)** - One credential set for multiple systems
-- **Federation** - Trust between identity providers (SAML, OIDC, OAuth 2.0)
-- **Certificate-based** - PKI certificates for authentication
-- **API keys/tokens** - Programmatic access credentials
+- **Block** - VM disks, lowest latency (EBS, Managed Disks). **File** - shared NFS or SMB mounts (EFS, Azure Files). **Object** - HTTP API, buckets, massive scale (S3, Blob, Cloud Storage).
+- **SSD** - high IOPS, databases and boot. **HDD** - cheap, sequential throughput.
+- **IOPS** - small random operations. **Throughput** - MB per second for large sequential transfers.
 
-### Access Control Models
-| Model | Description | Use Case |
-|-------|-------------|----------|
-| **RBAC** | Role-Based Access Control | Enterprise environments, standard access |
-| **ABAC** | Attribute-Based Access Control | Dynamic, context-aware decisions |
-| **MAC** | Mandatory Access Control | Government, classified data |
-| **DAC** | Discretionary Access Control | File systems, resource owners |
+### Cloud-native, containers, virtualization
 
-**Documentation:**
-- **[📖 NIST Access Control Guide](https://csrc.nist.gov/publications/detail/sp/800-162/final)** - SP 800-162 ABAC guide
-- **[📖 NIST Identity Management](https://csrc.nist.gov/pubs/sp/800/63/3/final)** - SP 800-63 digital identity guidelines
+- **Microservices**, **loose coupling** (queues and events), **fan-out** (one message to many consumers), **service discovery** (registry or DNS instead of hard-coded IPs).
+- **Stand-alone container** - one host, no self-healing. **Orchestration** - Kubernetes schedules, heals, scales.
+- **Port mapping** - host port to container port. **Persistent volume** survives restarts; **ephemeral storage** does not.
+- **Image registry** - public (Docker Hub) or private (ECR, ACR, Artifact Registry).
+- **Clustering** - hosts pooled, live migration. **Cloning** - copy a VM. **Host affinity / anti-affinity** - keep VMs together or apart. **Hardware pass-through** - direct GPU or NIC access, blocks live migration.
+- **Overlay network** - virtual L2 over L3 (VXLAN). **SAN** - block over Fibre Channel or iSCSI. **NAS** - file over NFS or SMB.
 
-## Encryption and Data Security
+### Cost
 
-### Encryption Types
-| Type | Description | Use Case |
-|------|-------------|----------|
-| **At rest** | Stored data encryption (AES-256) | Databases, storage volumes, backups |
-| **In transit** | Data moving between systems (TLS 1.2/1.3) | API calls, web traffic, replication |
-| **In use** | Data being processed (confidential computing) | Sensitive computations |
-| **Client-side** | Encrypted before sending to cloud | Maximum control, compliance |
-| **Server-side** | Cloud provider encrypts at storage | Default protection, managed keys |
+| Model | Best for | Watch out |
+|---|---|---|
+| **Pay-as-you-go** | New, short or unpredictable | Highest unit price |
+| **Reserved** | Steady baseload, 1 or 3 years | Commitment; rightsize first |
+| **Spot** | Batch, CI, rendering | Reclaimed at short notice |
+| **Dedicated host** | Per-core licensing, compliance | Most expensive |
 
-### Key Management
-- **Provider-managed keys** - Cloud provider creates and manages keys
-- **Customer-managed keys (CMK)** - Customer controls key lifecycle
-- **Customer-supplied keys (CSEK)** - Customer provides encryption keys
-- **Hardware Security Modules (HSM)** - FIPS 140-2 validated key storage
-- **Key rotation** - Regular replacement of encryption keys
+- **Metering** - usage measured per resource. **Tagging** - cost allocation by team or project. **Rightsizing** - match size to real use.
 
-## Compliance Frameworks
+### Databases, workloads, evolving tech
 
-| Framework | Scope | Industry |
-|-----------|-------|----------|
-| **SOC 2** | Security, availability, processing integrity, confidentiality, privacy | Technology, SaaS |
-| **ISO 27001** | Information security management system | Global standard |
-| **HIPAA** | Protected Health Information (PHI) | Healthcare (US) |
-| **PCI-DSS** | Cardholder data protection | Payment card processing |
-| **GDPR** | Personal data protection | EU/EEA data subjects |
-| **FedRAMP** | Cloud security assessment | US Federal government |
-| **NIST CSF** | Cybersecurity framework - Identify, Protect, Detect, Respond, Recover | US organizations |
+- **Relational** - SQL, schema, ACID transactions. **Non-relational** - key-value, document, wide-column, graph; scale out.
+- **Self-managed** - full control, you patch and back up. **Provider-managed** - DBaaS, less effort.
+- **VM** for full control, **container** for density and portability, **serverless** for spiky event-driven work.
+- **Workflow** services coordinate multi-step processes with retries (Step Functions, Logic Apps).
+- AI services: text recognition (OCR), translation, visual recognition, sentiment analysis, speech-to-text, text-to-speech, generative AI.
+- IoT: sensors, gateways (edge processing, protocol translation), communication (Wi-Fi, cellular, LoRaWAN), protocols (MQTT, CoAP, AMQP).
 
-## Migration Strategies (The 7 Rs)
+## Domain 2: Deployment
 
-| Strategy | Description | Effort | Cost |
-|----------|-------------|--------|------|
-| **Rehost** | Lift-and-shift - move as-is | Low | Low initial |
-| **Replatform** | Lift-and-reshape - minor optimization | Medium | Medium |
-| **Refactor** | Re-architect for cloud-native | High | High initial, low ongoing |
-| **Repurchase** | Replace with SaaS solution | Medium | Variable |
-| **Retire** | Decommission unused applications | Low | Savings |
-| **Retain** | Keep on-premises for now | None | Existing |
-| **Relocate** | Move to different cloud/region | Low-Medium | Medium |
+- **Public / private (on premises or hosted) / hybrid / community.** A VPC is still public cloud.
 
-## Automation and IaC Tools
+| Strategy | Downtime | Extra cost | Rollback |
+|---|---|---|---|
+| **Blue-green** | None | High | Instant switch back |
+| **Canary** | None | Low | Route canary traffic back |
+| **Rolling** | None | None | Roll old version back out |
+| **In-place** | Yes | None | Reinstall |
 
-| Tool | Type | Language | Provider |
-|------|------|----------|----------|
-| **Terraform** | IaC - provisioning | HCL | Multi-cloud |
-| **CloudFormation** | IaC - provisioning | JSON/YAML | AWS |
-| **ARM Templates/Bicep** | IaC - provisioning | JSON/Bicep | Azure |
-| **Ansible** | Configuration management | YAML | Multi-platform |
-| **Puppet** | Configuration management | Puppet DSL | Multi-platform |
-| **Chef** | Configuration management | Ruby DSL | Multi-platform |
-| **Docker** | Containerization | Dockerfile | Multi-platform |
-| **Kubernetes** | Container orchestration | YAML | Multi-platform |
+- Migration types: **on-premises to cloud**, **cloud to on-premises** (repatriation), **cloud to cloud**.
+- Considerations: storage, platform compatibility, compute, cost (egress), networking, management overhead, service availability, vendor lock-in, power and cooling, regulatory and compliance.
+- **Rehost** (lift and shift) / **replatform** (managed services, minimal code change) / **refactor** (code changes) / **re-architect** (redesign, microservices) / **retain** / **retire**.
+- **IaC** builds infrastructure (Terraform, CloudFormation, Bicep). **CaC** configures inside it (Ansible, Chef, Puppet).
+- Scripting: variables, conditionals, operators, data types (string, integer, boolean, list, map), functions.
+- **Drift** - manual change not in code; find it with `terraform plan` or drift detection.
+- **JSON** - braces, quoted keys, no comments. **YAML** - indentation is syntax, `#` comments, dashes for lists.
 
-**Documentation:**
-- **[📖 Terraform Documentation](https://developer.hashicorp.com/terraform/docs)** - IaC provisioning tool
-- **[📖 Ansible Documentation](https://docs.ansible.com/)** - Configuration management
-- **[📖 Kubernetes Documentation](https://kubernetes.io/docs/)** - Container orchestration
+### Uptime math
 
-## Container Concepts
+| SLA | Per year | Per 30-day month |
+|---|---|---|
+| 99% | 3.65 days | 7.2 hours |
+| 99.9% | 8.77 hours | 43.8 minutes |
+| 99.95% | 4.38 hours | 21.9 minutes |
+| 99.99% | 52.6 minutes | 4.4 minutes |
+| 99.999% | 5.26 minutes | 26 seconds |
 
-### Docker
-- **Image** - Read-only template for creating containers
-- **Container** - Running instance of an image
-- **Dockerfile** - Build instructions for images
-- **Registry** - Storage for container images (Docker Hub, ECR, ACR, GCR)
-- **Compose** - Multi-container application definition
+Series: multiply availabilities. Parallel redundant: 1 - (product of failure rates).
 
-### Kubernetes
-- **Pod** - Smallest deployable unit (one or more containers)
-- **Service** - Network endpoint for accessing pods
-- **Deployment** - Declarative pod management and scaling
-- **Namespace** - Virtual cluster for resource isolation
-- **Ingress** - HTTP/HTTPS routing rules
-- **ConfigMap/Secret** - Configuration and sensitive data management
+## Domain 3: Operations
 
-## Monitoring and Logging
+- **Logs** (what happened) - collect, aggregate, retain. **Metrics** (how much) - dashboards and alarms. **Traces** (where in the call path) - spans with a trace ID.
+- **Alerting** - triage by severity and owner, respond with runbooks or automation. Alert on symptoms.
 
-### Key Metrics
-| Category | Metrics | Tools |
-|----------|---------|-------|
-| **Compute** | CPU, memory, disk I/O | CloudWatch, Azure Monitor, Cloud Monitoring |
-| **Network** | Bandwidth, latency, packet loss | VPC Flow Logs, NSG Flow Logs |
-| **Storage** | IOPS, throughput, capacity | Provider-native monitoring |
-| **Application** | Response time, error rate, throughput | APM tools, custom metrics |
-| **Cost** | Spend, budget alerts, forecasts | Cost Explorer, Azure Cost Management |
+### Scaling
 
-### Logging Hierarchy
-1. **Infrastructure logs** - OS, hypervisor, network devices
-2. **Application logs** - Application events, errors, transactions
-3. **Security logs** - Authentication, authorization, access events
-4. **Audit logs** - Configuration changes, API calls, compliance events
+| Approach | Trigger |
+|---|---|
+| **Trend** | Predicted from history (predictive scaling) |
+| **Load** | Live metric threshold (CPU, queue depth) |
+| **Event** | A message, file or webhook arrives |
+| **Scheduled** | Calendar time |
+| **Manual** | Operator |
 
-## Service Level Agreements
+- **Horizontal** - add instances, needs stateless app. **Vertical** - bigger instance, ceiling and restart.
 
-| Metric | Definition | Typical Target |
-|--------|-----------|----------------|
-| **Availability** | Uptime percentage | 99.9% - 99.999% |
-| **Response Time** | API/service response latency | < 200ms |
-| **Throughput** | Transactions per second | Application-specific |
-| **Support Response** | Time to acknowledge issues | 15 min - 4 hours |
+### Backup types
 
-### Uptime Calculations
-| SLA | Annual Downtime | Monthly Downtime |
-|-----|-----------------|------------------|
-| 99% | 3.65 days | 7.31 hours |
-| 99.9% | 8.77 hours | 43.83 minutes |
-| 99.95% | 4.38 hours | 21.92 minutes |
-| 99.99% | 52.60 minutes | 4.38 minutes |
-| 99.999% | 5.26 minutes | 26.30 seconds |
+| Type | Copies | Backup speed | Restore needs |
+|---|---|---|---|
+| **Full** | Everything | Slowest | One set |
+| **Incremental** | Changes since last backup of any type | Fastest | Full plus every incremental |
+| **Differential** | Changes since last full | Medium, grows daily | Full plus latest differential |
 
-## Troubleshooting Methodology
+- **On-site** - fast restore, same disaster. **Off-site** - survives site loss.
+- Schedule set by RPO. Retention set by law, contract and policy. Encrypt backups. Replication is not a backup.
+- Test **recoverability** (can it restore, within RTO) and **integrity** (is the data correct).
+- **In-place** - overwrite original. **Parallel** - restore alongside. **Bulk** - whole system. **Granular** - one file, mailbox or table.
+- 3-2-1: three copies, two media, one off site; add an immutable copy against ransomware.
 
-1. **Identify** - Gather information, define the problem
-2. **Establish theory** - Consider probable causes
-3. **Test theory** - Validate or eliminate causes
-4. **Establish plan** - Define resolution steps
-5. **Implement** - Execute the fix
-6. **Verify** - Confirm resolution
-7. **Document** - Record findings and resolution
+### Life cycle
 
-## Common Exam Scenarios
+- **Patch** - urgent fix. **Minor update** - compatible. **Major update** - may break, plan and test.
+- **Ephemeral data** - dies with the resource. **Persistent data** - survives, must be deleted deliberately.
+- **End of life** - no longer sold or developed. **End of support** - no more patches.
 
-1. **"Vendor-neutral high availability"** - Multi-cloud with load balancing and failover
-2. **"Compliance requirement"** - Match framework to industry (HIPAA for healthcare, PCI-DSS for payments)
-3. **"Cost optimization"** - Right-sizing, reserved instances, auto-scaling, spot instances
-4. **"Migration strategy"** - Match application characteristics to migration approach
-5. **"Secure data in transit"** - TLS/SSL, VPN, encrypted connections
-6. **"Automate infrastructure"** - IaC tools (Terraform for multi-cloud, CloudFormation for AWS-only)
-7. **"Container orchestration"** - Kubernetes for scaling, Docker for packaging
-8. **"Troubleshoot connectivity"** - DNS, firewall rules, routing tables, VPN tunnels
-9. **"Disaster recovery"** - Match RTO/RPO requirements to DR strategy
-10. **"Identity federation"** - SAML, OIDC, SSO for cross-organization access
+## Domain 4: Security
 
-## Study Priorities
+- Vulnerability management: **scope, identify, assess, remediate**, then rescan. **CVE** - ID. **CVSS** - 0-10 score. **CWE** - weakness type.
+- **Sovereignty** - whose laws apply. **Locality** - where data sits. **Ownership** - who decides. **Classification** - sensitivity labels. **Litigation hold** - overrides deletion.
+- **SOC 2** - audit report (Type II covers a period). **PCI DSS** - card data. **ISO 27001** - ISMS certification. **CSA** - Cloud Controls Matrix and STAR registry.
 
-### High Priority (Must Know)
-- Cloud deployment and service models
-- Security controls and compliance frameworks
-- Migration strategies and planning
-- Monitoring, logging, and alerting
-- Troubleshooting methodology and common issues
-- High availability and disaster recovery concepts
+### IAM
 
-### Medium Priority (Important)
-- IaC tools and automation
-- Container and orchestration concepts
-- Identity and access management models
-- Encryption and key management
-- SLA management and calculations
-- Change management processes
+| Term | Meaning |
+|---|---|
+| **API / SDK / CLI** | Programmatic access to the management plane; prefer short-lived credentials |
+| **Bastion host** | Hardened jump box; never open SSH (22) or RDP (3389) to the world |
+| **Federation** | Trust an external IdP |
+| **SAML** | XML assertions, enterprise SSO |
+| **OIDC** | JSON tokens, identity on top of OAuth 2.0 |
+| **OAuth 2.0** | Delegated authorization with scopes |
+| **MFA** | Two different factor types |
+| **RBAC** | Permissions by role |
+| **DAC** | Owner decides access |
+| **Audit trail** | CloudTrail, Activity Log, Cloud Audit Logs |
 
-### Lower Priority (Good to Know)
-- Specific cloud provider implementations
-- Advanced networking concepts
-- DevOps pipeline details
-- Cost optimization strategies
-- Performance tuning specifics
+### Best practices and controls
 
----
+- Zero Trust, CIS and vendor benchmarks, hardening, patching, encryption in transit (TLS 1.2+) and at rest (AES-256), secrets manager, API security, least privilege, unprivileged containers, block public object storage.
 
-**Good luck on your exam!** Focus on understanding vendor-neutral cloud concepts that apply across all major cloud providers.
+| Control | Layer | State |
+|---|---|---|
+| **Network ACL** | Subnet | Stateless, allow and deny, numbered order |
+| **Network security group** | Instance or NIC | Stateful |
+| **WAF** | Layer 7 | Blocks SQL injection, XSS, bots |
+| **IDS / IPS** | Network or host | Detect only / inline block |
+| **DLP** | Data | Stops sensitive data leaving |
+
+### Attack signs
+
+| Sign | Attack |
+|---|---|
+| High CPU on idle instances, unknown regions, surprise bill | Cryptojacking |
+| Mass file changes, deleted snapshots | Ransomware |
+| Logins from new locations after suspicious email | Phishing |
+| Credential requests to 169.254.169.254 via the web app | Metadata service abuse (SSRF) |
+| Old unmanaged instances still running | Zombie instances |
+| Traffic flood from many sources | DDoS |
+
+## Domain 5: DevOps Fundamentals
+
+- **Commit** (local snapshot), **push** (to remote), **branch** (isolated line of work), **pull request** (ask to merge), **code review**, **merge**.
+- **CI** - integrate and test every change. **Continuous delivery** - ready to release, manual approval. **Continuous deployment** - automatic to production.
+- Pipeline: build, test, security scan, publish artifact, deploy, monitor. Build once, promote the same artifact.
+- Artifacts: VM images, container images, packages (**RPM**, **Debian**, **ZIP**, **tar**), flat files. Repositories: public or private.
+
+### Integration styles
+
+| Style | Use it when |
+|---|---|
+| **Event-driven** | Many consumers react independently; loose coupling |
+| **REST** | Resource URLs and HTTP verbs, JSON, stateless |
+| **SOAP** | Strict XML contract, WS-Security, legacy enterprise |
+| **RPC (gRPC)** | Fast typed service-to-service calls |
+| **WebSockets** | Two-way real-time push |
+| **GraphQL** | Client asks for exactly the fields it needs |
+
+### DevOps tools
+
+| Tool | Purpose |
+|---|---|
+| **Terraform** | Declarative multi-cloud IaC with state |
+| **Ansible** | Agentless configuration management, YAML playbooks over SSH |
+| **Docker** | Build and run container images |
+| **Kubernetes** | Orchestrate containers at scale |
+| **Git** | Distributed version control |
+| **GitHub Actions** | CI/CD workflows in GitHub, YAML |
+| **Jenkins** | Self-hosted CI/CD server, plugins, Jenkinsfile |
+| **ELK** | Elasticsearch store and search, Logstash ingest, Kibana dashboards |
+| **Grafana** | Dashboards and alerts across many data sources |
+
+## Domain 6: Troubleshooting
+
+### Methodology
+
+1. Identify the problem
+2. Establish a theory of probable cause
+3. Test the theory
+4. Establish a plan of action
+5. Implement the solution or escalate
+6. Verify full functionality and add preventive measures
+7. Document findings
+
+### Deployment
+
+- **403 / AccessDenied** - permissions. **429 / Rate exceeded** - API throttling, use backoff. **LimitExceeded** - service quota, request increase.
+- **Oversubscription** - high steal time or storage latency. **Sizing** - wrong instance or volume size.
+- **Outdated definitions** and **deprecation** - old images, runtimes, API versions fail.
+- **Regional availability** - service or instance type missing in that region.
+- **ImagePullBackOff** - wrong image or registry auth. **CrashLoopBackOff** - app exits, read logs. **Pending** - no capacity.
+
+### Network
+
+| Symptom | Likely cause |
+|---|---|
+| 169.254.x.x address | DHCP failure |
+| "Could not resolve host" | DNS record, resolver or zone association |
+| Auth fails, "request expired" | NTP clock skew |
+| Private subnet cannot reach internet | NAT gateway or its route |
+| Cannot peer or route two networks | Overlapping CIDR |
+| New instances fail, no free IPs | Scope exhaustion |
+| VPN up, no traffic | Missing route |
+| VMs on one VLAN lost after port change | Access port or VLAN not allowed on trunk |
+| Old clients fail TLS after update | Protocol or cipher suite deprecation |
+
+### HTTP status codes
+
+- **401** unauthenticated, **403** forbidden, **404** not found, **429** throttled.
+- **500** app error, **502** bad response from backend, **503** no healthy backend, **504** backend timeout.
+
+### Security
+
+- **Leaked credentials** - revoke first, then investigate the audit trail.
+- **Privilege escalation** - remove self-granting permissions, use permission boundaries.
+- **Unauthorized access** - remove public exposure, revoke sessions, add guardrails.
+- **Cipher suite deprecation** - upgrade the client, do not weaken the server.
+- **Unauthorized software** - remove, find the entry point, enforce allow-lists.
+
+## Further reading
+
+**[📖 NIST SP 800-145 - The NIST Definition of Cloud Computing](https://csrc.nist.gov/pubs/sp/800/145/final)** - service and deployment model definitions.
+
+**[📖 CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks)** - hardening baselines for OS, Kubernetes and cloud accounts.
+
+**[📖 Cloud Security Alliance](https://cloudsecurityalliance.org/)** - Cloud Controls Matrix and STAR registry.
+
+**[📖 OWASP](https://owasp.org/)** - Top 10 web and API security risks.

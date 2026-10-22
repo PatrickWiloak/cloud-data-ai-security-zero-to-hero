@@ -1,271 +1,229 @@
+---
+last-updated: 2026-10-22
+applies-to: CompTIA Cloud+ CV0-004 exam objectives v2.0, checked 2026-10-22
+difficulty: intermediate
+---
+
 # CompTIA Cloud+ (CV0-004) Study Plan
 
-## 6-Week Comprehensive Study Schedule
+A six-week plan at about 1.5 to 2 hours a day, built around the six CV0-004 domains and their weights. Each day names the note to read. Practice questions are in [comptia-cloud-plus.md](../../../resources/practice-questions/comptia-cloud-plus.md).
 
-### Week 1: Cloud Architecture and Fundamentals
+## Time allocation by weight
 
-#### Day 1-2: Cloud Deployment Models
-- [ ] Public cloud characteristics and shared responsibility
-- [ ] Private cloud - on-premises vs hosted private cloud
-- [ ] Hybrid cloud - integration patterns and orchestration
-- [ ] Multi-cloud strategies and vendor lock-in avoidance
-- [ ] Community cloud use cases
-- [ ] Review Notes: `01-cloud-architecture.md`
+| Domain | Weight | Study days | Note |
+|---|---|---|---|
+| 1. Cloud Architecture | 23% | 9 | [01-cloud-architecture.md](notes/01-cloud-architecture.md) |
+| 2. Deployment | 19% | 4 plus week 2 review | [02-deployment.md](notes/02-deployment.md) |
+| 3. Operations | 17% | 5 | [03-operations.md](notes/03-operations.md) |
+| 4. Security | 19% | 6 | [04-security.md](notes/04-security.md) |
+| 5. DevOps Fundamentals | 10% | 3 | [05-devops-fundamentals.md](notes/05-devops-fundamentals.md) |
+| 6. Troubleshooting | 12% | 3 plus week 5 review | [06-troubleshooting.md](notes/06-troubleshooting.md) |
+| Weekly reviews and full practice exams | - | 12 | [fact-sheet.md](fact-sheet.md), [strategy.md](strategy.md) |
 
-#### Day 3-4: Cloud Service Models
-- [ ] IaaS - infrastructure components and management boundaries
-- [ ] PaaS - application platforms and developer services
-- [ ] SaaS - software delivery and subscription models
-- [ ] XaaS - FaaS, DBaaS, CaaS, and emerging service models
-- [ ] Shared responsibility model for each service type
-- [ ] Review Notes: `01-cloud-architecture.md`
+## Week 1: Cloud Architecture, part 1
 
-#### Day 5-6: Design Principles
-- [ ] High availability - redundancy, failover, clustering
-- [ ] Scalability - vertical vs horizontal scaling, auto-scaling
-- [ ] Elasticity - dynamic resource allocation
-- [ ] Fault tolerance and resilience patterns
-- [ ] Loose coupling and microservices architecture
-- [ ] Disaster recovery strategies - backup, pilot light, warm/hot standby
-- [ ] Review Notes: `01-cloud-architecture.md`
+#### Day 1: Service models and shared responsibility (1.1)
+- [ ] Read `notes/01-cloud-architecture.md` section 1.1
+- [ ] Reproduce the shared responsibility table from memory
+- [ ] For IaaS, PaaS, SaaS and FaaS, write one scenario that points to each
 
-#### Day 7: Week 1 Review
-- [ ] Practice questions on cloud architecture (target: 65%+)
-- [ ] Review deployment model comparison chart
-- [ ] Map service models to real-world examples
+#### Day 2: Availability and DR (1.2)
+- [ ] Read section 1.2: regions, AZs, cloud bursting, edge, availability monitoring
+- [ ] RTO versus RPO; hot, warm and cold sites; multicloud tenancy
+- [ ] Work the "Designing for High Availability" entry in [scenarios.md](scenarios.md)
 
-### Week 2: Cloud Security
+#### Day 3-4: Cloud networking (1.3)
+- [ ] Read section 1.3: VPN versus dedicated connection, ALB versus NLB, application gateway, CDN
+- [ ] VPC peering (not transitive) versus transit gateway
+- [ ] Subnets, VLAN, SDN, BGP, static routes, route tables
+- [ ] Hands on if possible: build a VPC with a public and a private subnet, an internet gateway and a NAT gateway, then read the route tables
 
-#### Day 8-9: Identity and Access Management
-- [ ] Authentication methods - MFA, SSO, federation
-- [ ] Authorization models - RBAC, ABAC, MAC, DAC
-- [ ] Identity providers and directory services
-- [ ] SAML, OAuth 2.0, and OIDC protocols
-- [ ] Privileged access management
-- [ ] Review Notes: `02-security.md`
+#### Day 5: Storage (1.4)
+- [ ] Read section 1.4: hot, warm, cold, archive; SSD versus HDD
+- [ ] Object versus block versus file, with a use case for each
+- [ ] IOPS versus throughput; retrieval cost traps
 
-#### Day 10-11: Data Security and Encryption
-- [ ] Encryption at rest - AES, volume encryption, database encryption
-- [ ] Encryption in transit - TLS/SSL, VPN, IPsec
-- [ ] Key management - provider-managed, CMK, HSM
-- [ ] Data classification and handling procedures
-- [ ] Data loss prevention (DLP) strategies
-- [ ] Review Notes: `02-security.md`
+#### Day 6: Cloud-native and containers (1.5, 1.6)
+- [ ] Microservices, loose coupling, fan-out, service discovery
+- [ ] Stand-alone versus orchestrated containers, port mapping, persistent versus ephemeral storage, registries
 
-#### Day 12-13: Network Security and Compliance
-- [ ] Firewalls, security groups, NACLs
-- [ ] Network segmentation and micro-segmentation
-- [ ] VPN types - site-to-site, client-to-site
-- [ ] Compliance frameworks - SOC 2, ISO 27001, HIPAA, PCI-DSS, GDPR
-- [ ] Audit and assessment processes
-- [ ] Review Notes: `02-security.md`
+#### Day 7: Week 1 review
+- [ ] Practice questions for objectives 1.1-1.6 (target 65%+)
+- [ ] Re-read every section where you missed a question
 
-#### Day 14: Week 2 Review
-- [ ] Practice questions on security (target: 65%+)
-- [ ] Review compliance framework comparison
-- [ ] Map security controls to threat scenarios
+## Week 2: Cloud Architecture, part 2, and Deployment begins
 
-### Week 3: Cloud Deployment
+#### Day 8: Virtualization (1.7)
+- [ ] Clustering, cloning, host affinity and anti-affinity, hardware pass-through
+- [ ] Overlay versus VM networks; local storage versus SAN (block) versus NAS (file)
 
-#### Day 15-16: Migration Planning and Strategies
-- [ ] Migration assessment and planning
-- [ ] The 7 Rs - Rehost, Replatform, Refactor, Repurchase, Retire, Retain, Relocate
-- [ ] Dependency mapping and application discovery
-- [ ] Data migration strategies - online, offline, hybrid
-- [ ] Testing and validation procedures
-- [ ] Review Notes: `03-deployment.md`
+#### Day 9: Cost and databases (1.8, 1.9)
+- [ ] Dedicated host, reserved, pay-as-you-go, spot; metering, tagging, rightsizing
+- [ ] Relational versus non-relational; self-managed versus provider-managed
+- [ ] Work the "Cost Optimization" scenario
 
-#### Day 17-18: Automation and Infrastructure as Code
-- [ ] IaC concepts - declarative vs imperative
-- [ ] Terraform - providers, resources, state management
-- [ ] Configuration management - Ansible, Puppet, Chef
-- [ ] Template-based provisioning
-- [ ] Version control for infrastructure code
-- [ ] Review Notes: `03-deployment.md`
+#### Day 10: Workload optimization and evolving tech (1.10, 1.11)
+- [ ] VM versus container versus serverless; orchestration versus workflow; latency versus throughput; IOPS
+- [ ] AI services by what they do; generative AI; IoT sensors, gateways, communication, MQTT
 
-#### Day 19-20: Containers and CI/CD
-- [ ] Docker - images, containers, Dockerfiles, registries
-- [ ] Kubernetes - pods, services, deployments, namespaces
-- [ ] Container orchestration patterns
-- [ ] CI/CD pipeline stages - build, test, deploy
-- [ ] Deployment strategies - blue/green, canary, rolling
-- [ ] Review Notes: `03-deployment.md`
+#### Day 11: Deployment models and strategies (2.1, 2.2)
+- [ ] Read `notes/02-deployment.md` sections 2.1 and 2.2
+- [ ] Learn the blue-green, canary, rolling, in-place table: downtime, cost, rollback
 
-#### Day 21: Week 3 Review
-- [ ] Practice questions on deployment (target: 70%+)
-- [ ] Review migration strategy decision matrix
-- [ ] Compare IaC and configuration management tools
+#### Day 12: Migration (2.3)
+- [ ] Migration types including cloud to on-premises
+- [ ] Considerations: compatibility, cost and egress, vendor lock-in, power and cooling, regulatory
+- [ ] Rehost, replatform, refactor, re-architect, retain, retire
+- [ ] Work the "Migration Strategy Selection" scenario
 
-### Week 4: Operations and Support
+#### Day 13: Code to deploy (2.4)
+- [ ] IaC versus CaC, declarative versus imperative, idempotency
+- [ ] Variables, conditionals, operators, data types, functions
+- [ ] Drift detection, versioning, testing, documentation
+- [ ] Read and write a short JSON and YAML file describing the same thing
 
-#### Day 22-23: Monitoring and Logging
-- [ ] Monitoring types - infrastructure, application, network
-- [ ] Key metrics - CPU, memory, disk, network, latency
-- [ ] Log management - collection, aggregation, analysis
-- [ ] Alerting and notification strategies
-- [ ] Dashboard design and visualization
-- [ ] Review Notes: `04-operations-support.md`
+#### Day 14: Week 2 review
+- [ ] Practice questions for 1.7-1.11 and 2.1-2.4 (target 70%+)
+- [ ] Full Domain 1 review against the [fact sheet](fact-sheet.md)
 
-#### Day 24-25: Optimization and Cost Management
-- [ ] Right-sizing resources
-- [ ] Reserved instances and savings plans
-- [ ] Auto-scaling strategies
-- [ ] Storage tiering and lifecycle policies
-- [ ] Cost allocation, tagging, and budgeting
-- [ ] Review Notes: `04-operations-support.md`
+## Week 3: Deployment ends, Operations
 
-#### Day 26-27: Change Management and SLAs
-- [ ] Change management processes - RFC, CAB, impact analysis
-- [ ] Configuration management databases (CMDB)
-- [ ] Patch management strategies
-- [ ] SLA definitions, calculations, and enforcement
-- [ ] Incident management and escalation procedures
-- [ ] Review Notes: `04-operations-support.md`
+#### Day 15: Provisioning to requirements (2.5)
+- [ ] Read section 2.5 and the uptime math table
+- [ ] Take three scenarios and list every requirement type they contain before choosing resources
 
-#### Day 28: Week 4 Review
-- [ ] Practice questions on operations (target: 70%+)
-- [ ] Review SLA calculation examples
-- [ ] Practice cost optimization scenarios
+#### Day 16: Observability (3.1)
+- [ ] Read `notes/03-operations.md` section 3.1
+- [ ] Logging collection, aggregation, retention; tracing; metrics; alert triage and response
+- [ ] Work the "Monitoring and Alerting Strategy" scenario
 
-### Week 5: Troubleshooting
+#### Day 17: Scaling (3.2)
+- [ ] Trend, load, event, scheduled, manual triggers
+- [ ] Horizontal versus vertical; why state breaks scale-in
 
-#### Day 29-30: Connectivity and Network Troubleshooting
-- [ ] DNS resolution issues and diagnostics
-- [ ] Firewall and security group misconfigurations
-- [ ] Routing table problems and VPN tunnel issues
-- [ ] Load balancer health checks and configuration
-- [ ] Network diagnostic tools and commands
-- [ ] Review Notes: `05-troubleshooting.md`
+#### Day 18-19: Backup and recovery (3.3)
+- [ ] Full, incremental, differential: what each copies and what a restore needs
+- [ ] On-site versus off-site, schedule from RPO, retention, replication, encryption
+- [ ] Testing recoverability and integrity
+- [ ] In-place versus parallel; bulk versus granular
+- [ ] Work the backup and recovery scenarios
 
-#### Day 31-32: Performance and Security Troubleshooting
-- [ ] CPU, memory, and storage performance issues
-- [ ] Application performance bottlenecks
-- [ ] Network throughput and latency problems
-- [ ] Unauthorized access investigation
-- [ ] Security misconfiguration identification
-- [ ] Review Notes: `05-troubleshooting.md`
+#### Day 20: Life cycle (3.4)
+- [ ] Patches, minor and major updates, testing
+- [ ] Ephemeral versus persistent data; end of life versus end of support; decommissioning steps
 
-#### Day 33-34: Deployment and Automation Troubleshooting
-- [ ] IaC template errors and state drift
-- [ ] Container deployment failures
-- [ ] CI/CD pipeline failures
-- [ ] Configuration management issues
-- [ ] Systematic troubleshooting methodology
-- [ ] Review Notes: `05-troubleshooting.md`
+#### Day 21: Week 3 review
+- [ ] Practice questions for 2.5 and Domain 3 (target 70%+)
 
-#### Day 35: Week 5 Review
-- [ ] Practice questions on troubleshooting (target: 75%+)
-- [ ] Walk through troubleshooting scenarios
-- [ ] Practice performance-based question techniques
+## Week 4: Security
 
-### Week 6: Review and Exam Preparation
+#### Day 22: Vulnerability management and compliance (4.1, 4.2)
+- [ ] Read `notes/04-security.md` sections 4.1 and 4.2
+- [ ] Scope, identify, assess, remediate; CVE, CVSS, CWE
+- [ ] Sovereignty, ownership, locality, classification, retention, litigation hold
+- [ ] SOC 2, PCI DSS, ISO 27001, Cloud Security Alliance
 
-#### Day 36-37: Full Practice Exams
-- [ ] Complete full-length practice exam 1
-- [ ] Review all incorrect answers thoroughly
-- [ ] Identify weak areas and knowledge gaps
-- [ ] Target score: 80%+
+#### Day 23-24: Identity and access management (4.3)
+- [ ] Programmatic access (API, SDK, CLI), web portal, SSH, RDP, bastion hosts
+- [ ] Local users, federation, SAML, token-based, directory, MFA, OIDC
+- [ ] RBAC, group-based, OAuth 2.0, discretionary; audit trail
+- [ ] Work the "Implementing Zero Trust Access" scenario
 
-#### Day 38-39: Weak Area Deep Dive
-- [ ] Review notes for identified weak domains
-- [ ] Additional practice questions on weak areas
-- [ ] Re-study key concepts and comparisons
-- [ ] Complete full-length practice exam 2
+#### Day 25: Best practices (4.4)
+- [ ] Zero Trust, CIS and vendor benchmarks, hardening, encryption, secrets management
+- [ ] API security, least privilege, privileged versus unprivileged containers, storage security
 
-#### Day 40-41: Performance-Based Question Practice
-- [ ] Practice scenario-based questions
-- [ ] Review troubleshooting methodology
-- [ ] Practice time management under pressure
-- [ ] Review common exam scenarios
+#### Day 26: Controls and attacks (4.5, 4.6)
+- [ ] Endpoint protection, DLP, IDS versus IPS, DDoS, IAM policies
+- [ ] Network ACL versus network security group versus WAF
+- [ ] Attack signs: phishing, ransomware, DDoS, cryptojacking, zombie instances, metadata abuse
 
-#### Day 42: Final Review and Exam Day Prep
-- [ ] Review fact sheet and quick reference
-- [ ] Skim through all study notes
-- [ ] Light review - avoid cramming new material
-- [ ] Prepare exam logistics and get rest
+#### Day 27: Security scenarios
+- [ ] Work every Security scenario in [scenarios.md](scenarios.md)
 
-## Daily Study Routine (2-3 hours/day)
+#### Day 28: Week 4 review
+- [ ] Practice questions for Domain 4 (target 75%+)
 
-### Recommended Schedule
-1. **30 minutes**: Read study notes and official documentation
-2. **45 minutes**: Review key concepts and create flashcards
-3. **45 minutes**: Practice questions and scenario analysis
-4. **15 minutes**: Review incorrect answers and note weak areas
+## Week 5: DevOps Fundamentals and Troubleshooting
 
-## Practice Exam Strategy
+#### Day 29: Source control and CI/CD (5.1, 5.2)
+- [ ] Read `notes/05-devops-fundamentals.md` sections 5.1 and 5.2
+- [ ] Commit, push, branch, pull request, review, merge
+- [ ] CI versus continuous delivery versus continuous deployment; artifacts and repositories
 
-### Target Scores by Week
-- [ ] Week 2: 60%+ on domain-specific practice
-- [ ] Week 3: 65%+ on domain-specific practice
-- [ ] Week 4: 70%+ on domain-specific practice
-- [ ] Week 5: 75%+ on mixed practice exams
+#### Day 30: Integration and tools (5.3, 5.4)
+- [ ] Event-driven, REST, SOAP, RPC, WebSockets, GraphQL
+- [ ] One sentence each: Ansible, Docker, ELK, Git, GitHub Actions, Grafana, Jenkins, Kubernetes, Terraform
+
+#### Day 31: DevOps review
+- [ ] Practice questions for Domain 5 (target 75%+)
+- [ ] Work the DevOps scenarios
+
+#### Day 32: Methodology and deployment issues (6.1)
+- [ ] Read `notes/06-troubleshooting.md` methodology and section 6.1
+- [ ] Permissions, oversubscription, sizing, deprecation, throttling, quotas, regional availability
+
+#### Day 33: Network issues (6.2)
+- [ ] DHCP, DNS, NTP, NAT, HTTP status codes
+- [ ] Scope exhaustion, overlap, missing and misconfigured routes, VLAN tags, access versus trunk
+- [ ] Run the diagnostic commands in the note on a Linux VM
+
+#### Day 34: Security issues (6.3)
+- [ ] Cipher suite deprecation, privilege escalation, unauthorized access, leaked credentials, vulnerable and unauthorized software
+- [ ] Work every Troubleshooting scenario
+
+#### Day 35: Week 5 review
+- [ ] Mixed practice questions across all six domains (target 75%+)
+
+## Week 6: Full practice exams and final review
+
+#### Day 36-37: Full practice exams
+- [ ] Two timed full-length practice exams (90 minutes each)
+- [ ] Tag every wrong answer with its objective number
+
+#### Day 38-39: Weak areas
+- [ ] Re-read the note sections for your three weakest objectives
+- [ ] Redo the matching scenarios
+
+#### Day 40-41: PBQ preparation and final practice exam
+- [ ] Review the PBQ shapes in [strategy.md](strategy.md)
+- [ ] One more timed full practice exam (target 80%+)
+
+#### Day 42: Final review
+- [ ] [Fact sheet](fact-sheet.md) only
+- [ ] Exam logistics: ID, time, room or test centre
+
+## Daily routine (about 1.5 to 2 hours)
+
+1. **40 minutes** - read the day's note section
+2. **20 minutes** - check yourself against the fact sheet tables and flashcards
+3. **30 minutes** - practice questions or scenarios for the same objectives
+4. **15 minutes** - review wrong answers and note which objective they map to
+
+## Target scores
+
+- [ ] Week 1: 65%+ on Domain 1 questions
+- [ ] Week 2: 70%+ on Domains 1-2
+- [ ] Week 3: 70%+ on Domains 2-3
+- [ ] Week 4: 75%+ on Domain 4
+- [ ] Week 5: 75%+ on mixed questions
 - [ ] Week 6: 80%+ consistently on full practice exams
 
-## Study Resources
+## Resources
 
-### Official CompTIA Resources
-- **[📖 CompTIA Cloud+ Certification](https://www.comptia.org/certifications/cloud)** - Official certification page
-- **[📖 CertMaster Learn for Cloud+](https://www.comptia.org/training/certmaster-learn/cloud)** - Official interactive training
-- **[📖 CertMaster Practice for Cloud+](https://www.comptia.org/training/certmaster-practice/cloud)** - Official practice questions
-- **[📖 CertMaster Labs for Cloud+](https://www.comptia.org/training/certmaster-labs/cloud)** - Official hands-on labs
+**[📖 CV0-004 Exam Objectives v2.0 (PDF)](https://comptiacdn.azureedge.net/webcontent/docs/default-source/exam-objectives/comptia-cloud-cv0-004-exam-objectives-%282-0%29.pdf)** - tick off each objective as you finish it.
 
-### Additional Resources
-- **[📖 NIST SP 800-145](https://csrc.nist.gov/publications/detail/sp/800-145/final)** - Cloud computing definition
-- **[📖 NIST SP 800-146](https://csrc.nist.gov/publications/detail/sp/800-146/final)** - Cloud computing overview
-- **[📖 Kubernetes Documentation](https://kubernetes.io/docs/)** - Container orchestration reference
-- **[📖 Terraform Documentation](https://developer.hashicorp.com/terraform/docs)** - IaC reference
+**[📖 CompTIA Cloud+ certification page](https://www.comptia.org/en-us/certifications/cloud/)** - official CertMaster Learn, Practice and Labs.
 
-### Practice Exams
-1. **CompTIA CertMaster Practice** - Official practice platform
-2. **Kaplan IT Training** - Practice exams with explanations
-3. **Pearson Practice Tests** - Cloud+ question bank
-4. **ExamCompass** - Free Cloud+ practice questions
+**[📖 NIST SP 800-145](https://csrc.nist.gov/pubs/sp/800/145/final)** - cloud definitions behind 1.1 and 2.1.
 
-## Key Exam Topics Summary
+**[📖 Terraform documentation](https://developer.hashicorp.com/terraform/docs)** - IaC reference for 2.4 and 5.4.
 
-### Cloud Architecture (13%)
-- Deployment models and their characteristics
-- Service models and shared responsibility
-- High availability and disaster recovery design
-- Performance and cost optimization principles
+**[📖 Kubernetes documentation](https://kubernetes.io/docs/home/)** - container orchestration for 1.6 and 5.4.
 
-### Security (20%)
-- Identity and access management models
-- Data encryption and key management
-- Network security controls
-- Compliance frameworks and audit requirements
+## Final checklist
 
-### Deployment (23%)
-- Migration strategies and planning
-- IaC tools and automation
-- Container and orchestration concepts
-- CI/CD pipelines and deployment strategies
-
-### Operations and Support (22%)
-- Monitoring and logging best practices
-- Resource optimization and cost management
-- Change and patch management
-- SLA management and calculations
-
-### Troubleshooting (22%)
-- Network connectivity diagnosis
-- Performance issue identification
-- Security incident investigation
-- Systematic troubleshooting approach
-
-## Final Exam Checklist
-
-### Content Preparation
-- [ ] All five domain notes reviewed
-- [ ] Fact sheet memorized for key numbers and thresholds
-- [ ] Common scenarios practiced
-- [ ] Performance-based questions practiced
-- [ ] Weak areas addressed
-
-### Exam Day Strategy
-- [ ] Time management: ~1 minute per question
-- [ ] Read questions carefully for keywords
-- [ ] Eliminate obviously wrong answers first
-- [ ] Flag uncertain questions and return later
-- [ ] Reserve 15 minutes for review
-- [ ] Performance-based questions may take more time - budget accordingly
+- [ ] Every objective in the PDF ticked
+- [ ] Can reproduce the fact sheet tables (deployment strategies, backup types, scaling triggers, HTTP codes, DevOps tools) from memory
+- [ ] 80%+ on two consecutive full practice exams
+- [ ] Exam booked and logistics confirmed
