@@ -104,6 +104,7 @@
 - [Interview prep](resources/interview-prep/) - {{interview_prep}} role-specific guides
 - [Freshness ledger](docs/freshness.md) - what was last verified, and when
 - [Curated YouTube](learn/youtube.md) - the videos worth your time
+- [Which Zero to Hero site?](learn/which-site.md) - cloud, data, security or AI: pick by goal
 
 </div>
 
@@ -155,7 +156,7 @@ Cloud is one of four free sites. When your study crosses into another subject, t
 
 </div>
 
-All four are free, by [Nobler Works](https://noblerworks.com/).
+All four are free, by [Nobler Works](https://noblerworks.com/). Not sure which to start with? [Pick a site by your goal](learn/which-site.md).
 
 ## Who made this
 
