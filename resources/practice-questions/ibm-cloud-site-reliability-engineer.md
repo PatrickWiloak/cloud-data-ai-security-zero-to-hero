@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: advanced
 ---
 
 # IBM Cloud Site Reliability Engineer - Practice Questions
 
-15 questions for this exam, weighted toward monitoring and observability (25%), incident management (20%), automation and IaC (20%), then availability, capacity, and Kubernetes operations.
+30 questions for this exam, weighted toward monitoring and observability (25%), incident management (20%), automation and IaC (20%), then availability, capacity, and Kubernetes operations.
 
 > **Cert page:** [exams/ibm/cloud-site-reliability-engineer/](../../exams/ibm/cloud-site-reliability-engineer/)
 
@@ -277,6 +277,306 @@ D. One person permanently, a senior engineer who knows the systems best and answ
 **Correct: C**
 
 **Why:** Sustainability is a reliability control, not a perk: an exhausted engineer makes worse decisions during the incident that matters. Treating a high page count as a defect to investigate is what keeps the rotation from degrading over time.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A service has a 99.9% availability SLO over 30 days. Its alert fires whenever the error rate exceeds 0.1% for one minute, which pages the team several times a week for blips that barely touch the error budget. What is a better alerting approach?
+
+A. Raise the threshold to 5% errors for one minute so that only the big outages page
+B. Alert on error budget burn rate over multiple windows, paging on fast burns
+C. Remove error alerts and rely on users to report problems through support
+D. Alert on CPU above 80%, since high CPU usually comes before errors
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Burn-rate alerts measure how fast the error budget is being spent, and using a long and a short window together pages quickly for serious burns while ignoring brief blips. A fixed 5% threshold misses slow, steady burns that still exhaust the budget. Users reporting problems means slow detection. CPU is a cause-based signal that often fires with no user impact.
+
+**Key Concept:** Alert on the SLO, using multi-window burn rates. See [Alerting on SLOs](https://sre.google/workbook/alerting-on-slos/).
+</details>
+
+---
+
+### Question 17
+**Scenario:** An application on IBM Cloud Kubernetes Service exposes metrics at `/metrics` in Prometheus format. The team uses IBM Cloud Monitoring and wants those custom metrics alongside the platform metrics. What should they do?
+
+A. Write the metrics to the application log and build charts from log lines
+B. Install a separate Grafana server and point it at every pod by hand
+C. Push the metrics into Activity Tracker as custom audit events once every minute
+D. Deploy the Monitoring agent in the cluster and let it scrape Prometheus metrics
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The IBM Cloud Monitoring agent runs in the cluster, collects platform and container metrics, and can scrape Prometheus-format endpoints, so custom metrics land next to everything else. Parsing metrics out of logs is fragile and costly. A hand-wired Grafana server adds a second stack and still needs a metrics store. Activity Tracker records audit events, not application metrics.
+
+**Key Concept:** Use one monitoring pipeline for platform and custom metrics. See [Getting started with IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started).
+</details>
+
+---
+
+### Question 18
+**Scenario:** During incidents, engineers struggle to follow one customer request through the logs of five services, because each service logs free text with no shared fields. What change helps most?
+
+A. Structured JSON logs that carry a correlation or trace ID through every service
+B. More verbose free-text logs in every service, all written at debug level
+C. Separate log destinations per service so that each log stream is smaller
+D. Shorter log retention so that searches across services run faster
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Structured logs with a shared correlation or trace ID let a single query return every line for one request across all services. More verbose text adds cost without making lines joinable. Splitting destinations makes cross-service search harder. Shorter retention speeds searches but loses history and does not link anything.
+
+**Key Concept:** Correlate signals with shared identifiers in structured logs. See [What is observability?](https://www.ibm.com/think/topics/observability)
+</details>
+
+---
+
+### Question 19
+**Scenario:** A checkout API failed at 3 a.m. and nobody noticed until customers complained at 8 a.m. There was almost no traffic overnight, so error-rate alerts never fired. What would have caught it?
+
+A. Real user monitoring, which measures what actual visitors experience
+B. A dashboard showing request rates, reviewed by the team at the morning stand-up
+C. Synthetic monitoring that runs a scripted checkout at a regular interval
+D. Longer log retention, so engineers can look back at the night's errors
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Synthetic checks run scripted transactions on a schedule, so they detect failures even when no real users are present. Real user monitoring needs real users, which were absent. A dashboard reviewed in the morning is what already happened. Retention helps investigation, not detection.
+
+**Key Concept:** Synthetic monitoring covers low-traffic periods and critical paths. See [What is observability?](https://www.ibm.com/think/topics/observability)
+</details>
+
+---
+
+### Question 20
+**Scenario:** During a major incident, six engineers are all debugging different theories, two are changing production at once, and nobody is updating stakeholders. What practice addresses this most directly?
+
+A. Ask the most senior engineer to fix the problem alone while the others watch
+B. Pause all work on the incident until the postmortem has been written
+C. Open a separate chat channel for each engineer's theory about the cause
+D. Name an incident commander who coordinates roles, changes, and updates
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** An incident commander coordinates the response: assigning roles such as operations and communications, controlling who changes production, and making sure stakeholders get updates. One senior engineer working alone loses parallel effort and still leaves communication undone. Postmortems come after resolution. More channels fragment the response further.
+
+**Key Concept:** Clear incident roles prevent chaos and conflicting changes. See [Managing incidents](https://sre.google/sre-book/managing-incidents/).
+</details>
+
+---
+
+### Question 21
+**Scenario:** Ten minutes after a deployment, error rates spike. The team does not yet know the root cause. What should they do first?
+
+A. Keep debugging in production until the exact root cause has been found
+B. Mitigate first by rolling back the deployment, then investigate the cause
+C. Scale the service out to twice the number of instances and wait to see
+D. Write the postmortem now while the details are still fresh in memory
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The priority in an incident is to stop user impact; a recent deployment is the most likely cause, and rolling back is usually the fastest mitigation. Root cause analysis continues once users are safe. Debugging in production prolongs the outage. Scaling out rarely fixes a code defect. Postmortems come after the incident is resolved.
+
+**Key Concept:** Mitigate first, diagnose second. See [Incident response](https://sre.google/workbook/incident-response/).
+</details>
+
+---
+
+### Question 22
+**Scenario:** Leadership wants a metric showing how long problems go on before the team even knows about them, to justify investment in monitoring. Which metric fits?
+
+A. Mean time to detect (MTTD)
+B. Mean time to repair (MTTR)
+C. Mean time between failures (MTBF)
+D. Change failure rate
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** MTTD measures the time from when a problem starts to when it is detected, which is exactly what better monitoring improves. MTTR measures time to restore service after a failure. MTBF measures how often failures happen. Change failure rate is the share of deployments that cause problems.
+
+**Key Concept:** Break incident duration into detect, respond, and recover to see where time goes. See [What is MTTR?](https://www.ibm.com/think/topics/mttr)
+</details>
+
+---
+
+### Question 23
+**Scenario:** Infrastructure is managed with Terraform through IBM Cloud Schematics. An engineer changed a security group rule in the console during an incident and forgot to tell anyone. How should the team find this kind of change?
+
+A. Read the IBM Cloud invoice each month for unexpected new line items
+B. Delete and recreate all infrastructure each night from the Terraform code
+C. Run a Terraform plan or drift detection to compare real state with the code
+D. Rely on the engineer's memory and ask them to update the code later
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A plan compares the real resources with the configuration and shows differences, which is how drift from console changes is found; Schematics workspaces can run plans and drift detection. Invoices do not show rule changes. Nightly rebuilds are disruptive and risky. Memory is what failed here.
+
+**Key Concept:** Detect drift regularly and fold emergency changes back into code. See [Getting started with Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started).
+</details>
+
+---
+
+### Question 24
+**Scenario:** A team wants every change to its Kubernetes clusters to come from a reviewed pull request, and wants any manual change in the cluster to be reverted automatically. Which approach fits?
+
+A. Give every engineer cluster-admin access and ask them to log each change
+B. Run `kubectl apply` from engineers' laptops after each pull request merges
+C. Take a nightly backup of every cluster and restore it each morning
+D. GitOps, where a controller such as Argo CD reconciles the cluster to Git
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** In GitOps, Git holds the desired state and a controller continuously reconciles the cluster to it, so changes arrive through pull requests and manual drift is reverted. Broad admin access and change logs rely on discipline. Laptop applies are unauditable and inconsistent. Nightly restores lose legitimate changes and still leave drift during the day.
+
+**Key Concept:** Git as the source of truth, with continuous reconciliation. See [Argo CD documentation](https://argo-cd.readthedocs.io/en/stable/).
+</details>
+
+---
+
+### Question 25
+**Scenario:** Servers in a fleet were patched by hand over two years, and now no two are the same. A fix that works on one server fails on another. What practice prevents this in future?
+
+A. Keep patching in place, but write down every change in a shared document
+B. Use immutable infrastructure: build new images and replace servers
+C. Give each server its own patch schedule tuned to its own workload
+D. Stop patching servers so that their configurations stay the same
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Immutable infrastructure replaces servers with new ones built from a versioned image instead of changing them in place, so every server matches its definition. Documents drift from reality. Individual schedules create even more variation. Not patching leaves known vulnerabilities in place.
+
+**Key Concept:** Replace, do not repair, to eliminate configuration drift. See [What is infrastructure as code?](https://www.ibm.com/think/topics/infrastructure-as-code)
+</details>
+
+---
+
+### Question 26
+**Scenario:** A public web application runs in two IBM Cloud regions. If one region fails, users should automatically go to the healthy region without any DNS changes by hand. What should the team configure?
+
+A. A global load balancer in Cloud Internet Services, with health checks on each region's origin pool
+B. A single VPC load balancer in the first region, which also forwards traffic on to the second region
+C. Two DNS records with a long TTL, which the on-call engineer edits by hand during an outage
+D. A Transit Gateway between the two regions, which redirects public users to the healthy one
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A global load balancer in Cloud Internet Services sends traffic to origin pools in each region and uses health checks to steer users away from a failed pool automatically. A regional load balancer fails with its region. Hand-edited DNS with a long TTL is slow and manual. Transit Gateway connects private networks; it does not route public users.
+
+**Key Concept:** Use health-checked global load balancing for multi-region failover. See [CIS global load balancer pools](https://cloud.ibm.com/docs/cis?topic=cis-glb-features-pools).
+</details>
+
+---
+
+### Question 27
+**Scenario:** A downstream API has a brief outage. When it recovers, thousands of clients retry at the same instant and knock it over again. What client behaviour prevents this?
+
+A. Retry immediately and as often as possible until the call succeeds
+B. Retry at a fixed one-second interval for every client at the same time
+C. Never retry, and return an error to the user on any first failure
+D. Retry with exponential backoff, random jitter, and a capped retry count
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Exponential backoff spaces retries further apart, jitter spreads clients out so they do not retry in sync, and a cap stops endless retries. Immediate, unlimited retries create the retry storm. A fixed interval keeps clients synchronized. Never retrying turns brief blips into user-facing errors.
+
+**Key Concept:** Retries must be bounded and desynchronized to avoid cascading failures. See [Addressing cascading failures](https://sre.google/sre-book/addressing-cascading-failures/).
+</details>
+
+---
+
+### Question 28
+**Scenario:** A service peaks at 900 requests per second and runs evenly across three zones. It must keep serving peak traffic if any one zone fails. What is the minimum capacity each zone must handle?
+
+A. 300 requests per second
+B. 600 requests per second
+C. 450 requests per second
+D. 900 requests per second
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** If one zone fails, the remaining two zones must carry 900 requests per second between them, so each needs 450. Sizing each zone for 300 handles peak only when all three are up. 600 per zone is more than needed. 900 per zone would survive losing two zones, which is beyond the requirement and costs much more.
+
+**Key Concept:** Plan capacity for N-1: peak load divided by the zones that remain after a failure. See [What is disaster recovery?](https://www.ibm.com/think/topics/disaster-recovery)
+</details>
+
+---
+
+### Question 29
+**Scenario:** A dashboard shows average API latency of 120 ms, well within target, yet users complain that some requests take several seconds. What should the team measure instead?
+
+A. High percentiles such as p95 and p99, which show the slow tail of requests
+B. The median latency only, since it ignores any unusual outlier requests
+C. The minimum latency, which shows how fast the API can respond at best
+D. The average latency measured over a longer window, such as a full day of traffic
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Averages hide the slow tail; p95 and p99 show what the slowest requests experience, which is what the complaints describe. The median also hides the tail. Minimum latency describes the best case. A longer averaging window smooths the problem away even more.
+
+**Key Concept:** Use percentiles, not averages, for latency SLIs. See [Monitoring distributed systems](https://sre.google/sre-book/monitoring-distributed-systems/).
+</details>
+
+---
+
+### Question 30
+**Scenario:** A Horizontal Pod Autoscaler set to scale on 70% CPU never scales the deployment, and its targets show `<unknown>`. The metrics server is running. What is the most likely cause?
+
+A. The deployment has too few replicas for the autoscaler to start working
+B. The pods have no CPU requests, so CPU utilization cannot be calculated
+C. Autoscalers only work on StatefulSets, not on standard Deployments
+D. The cluster is using more than one zone, which disables autoscaling
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** CPU utilization targets are a percentage of each pod's CPU request; without requests, the autoscaler cannot compute utilization and shows `<unknown>`. Replica count does not block metrics. Autoscalers work with Deployments as well as StatefulSets. Multi-zone clusters support autoscaling.
+
+**Key Concept:** Set resource requests; autoscaling and scheduling both depend on them. See [Horizontal Pod Autoscaling](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/).
 </details>
 
 ---

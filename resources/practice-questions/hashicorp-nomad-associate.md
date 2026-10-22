@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
 # HashiCorp Nomad Associate - Practice Questions
 
-15 questions for Nomad Associate prep across architecture, job specification, scheduling, operations, and integration with Consul and Vault.
+30 questions for Nomad Associate prep across architecture, job specification, scheduling, operations, and integration with Consul and Vault.
 
 > **Cert page:** [exams/hashicorp/nomad-associate/](../../exams/hashicorp/nomad-associate/)
 
@@ -277,6 +277,306 @@ D. Only cluster autoscaling exists, so the number of allocations stays fixed whi
 **Correct: A**
 
 **Why:** The Nomad Autoscaler is a separate component supporting horizontal application autoscaling driven by an APM such as Prometheus, and horizontal cluster autoscaling to add or remove client nodes. Both are needed to scale end to end.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A company runs Nomad in three locations: `us-east-dc1`, `us-east-dc2`, and `eu-west-dc1`. The US sites have low latency between them; Europe does not. How should regions and datacenters be laid out?
+
+A. One `us` region with two datacenters sharing a server cluster, and a separate federated `eu` region
+B. One global region whose server cluster spans all three locations with a single Raft group
+C. Three regions, one per datacenter, with no federation configured between any of them
+D. One datacenter containing all clients, with servers placed only in the European location
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A region is a set of servers running one Raft group, and it can schedule onto several datacenters with low latency between them. Regions are federated for cross-region job submission and visibility. Stretching Raft across high-latency links hurts consensus. Three unfederated regions add overhead and lose the shared view. Putting all servers in Europe makes every US scheduling decision cross the ocean.
+
+**Key Concept:** Regions are the consensus and failure boundary; datacenters are placement targets inside a region. See [Nomad architecture](https://developer.hashicorp.com/nomad/docs/architecture).
+</details>
+
+---
+
+### Question 17
+**Scenario:** A Nomad client running several service allocations loses power. What does Nomad do by default?
+
+A. It waits for an operator to run `nomad node drain` on that node before it takes any action
+B. It keeps the allocations marked as running until the client returns
+C. It deletes the job, because one of its allocations can no longer be reached
+D. Servers mark the node down after missed heartbeats and reschedule its allocations
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Clients heartbeat to the servers; when heartbeats stop, the servers mark the node down, its allocations are marked lost, and the scheduler places replacements on healthy nodes. A drain is for planned maintenance, not failures. Leaving the allocations as running would hide the outage. The job definition remains; only placement changes.
+
+**Key Concept:** Nomad keeps declared job state true by replacing lost allocations. See [How scheduling works](https://developer.hashicorp.com/nomad/docs/concepts/scheduling/how-scheduling-works).
+</details>
+
+---
+
+### Question 18
+**Scenario:** An operator runs `nomad job run web.nomad.hcl`. What does Nomad create first, before any allocation is placed?
+
+A. A deployment, which is created only after every allocation becomes healthy
+B. An evaluation, which a scheduler processes to produce a placement plan
+C. A node pool, which the job needs before any of its tasks can run
+D. A snapshot, which is taken by the servers before any change is made
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Any change in desired or actual state, such as a job submission, creates an evaluation. A scheduler worker processes it, produces a plan of allocations, and the leader applies the plan. Deployments track rollouts of service jobs but do not come first. Node pools are configured on clients and are not created by jobs. Snapshots are a backup operation.
+
+**Key Concept:** Job submission, evaluation, plan, allocation: the core scheduling flow. See [How scheduling works](https://developer.hashicorp.com/nomad/docs/concepts/scheduling/how-scheduling-works).
+</details>
+
+---
+
+### Question 19
+**Scenario:** An operator needs to run a short cleanup script once on every client node in the cluster, and it should exit when it is done rather than being restarted. Which job type fits?
+
+A. `service`, with a count equal to the number of nodes in the cluster
+B. `batch`, with a constraint naming each node one by one in the job
+C. `sysbatch`, which runs a batch task once on every eligible node
+D. `system`, which keeps a long-running task on every eligible node
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** `sysbatch` combines system placement, one per eligible node, with batch behaviour, run to completion. `service` jobs are long-running and restart when tasks exit, and a count does not guarantee one per node. A `batch` job with hand-written constraints breaks as nodes change. A `system` job restarts a task that exits, which suits daemons, not one-off scripts.
+
+**Key Concept:** Four job types: service, batch, system, and sysbatch. See [Schedulers](https://developer.hashicorp.com/nomad/docs/concepts/scheduling/schedulers).
+</details>
+
+---
+
+### Question 20
+**Scenario:** Two engineers might change the same job at once. An engineer wants to preview the changes a job file will make and then submit only if nobody has modified the job since the preview. What workflow does this?
+
+A. Run `nomad job validate` and then submit with `nomad job run` using the `-detach` flag
+B. Run `nomad job status` and then edit the job directly in the web UI
+C. Run `nomad job inspect` and then submit the job with `nomad job revert`
+D. Run `nomad job plan`, then `nomad job run -check-index` with the index it printed
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** `nomad job plan` shows a dry run of the scheduler's decisions and prints a job modify index. Passing that to `nomad job run -check-index` makes the run fail if the job changed since the plan. `validate` only checks syntax, and `-detach` just returns without monitoring. Status and inspect show current state but do not guard the update. `revert` rolls back to an earlier version.
+
+**Key Concept:** Plan, then run with check-index, like a Terraform plan and apply. See [nomad job plan](https://developer.hashicorp.com/nomad/commands/job/plan).
+</details>
+
+---
+
+### Question 21
+**Scenario:** A task reads its config from a file rendered from Consul KV. When the KV values change, the file should update and the application should reload on SIGHUP without a restart. How should the `template` block be configured?
+
+A. `change_mode = "signal"` with `change_signal = "SIGHUP"`
+B. `change_mode = "restart"` with `splay = "0s"` set on it
+C. `change_mode = "noop"` with a cron job that sends SIGHUP
+D. `change_mode = "script"` that deletes and re-creates the task
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The template block re-renders when its data changes, and `change_mode = "signal"` with `change_signal` sends that signal to the task, so it can reload in place. `restart` restarts the task, which the team wants to avoid. `noop` plus a cron job adds lag and moving parts. A script that re-creates the task is equivalent to a restart, done the hard way.
+
+**Key Concept:** Templates keep config in sync, and change_mode decides how the task reacts. See [template block](https://developer.hashicorp.com/nomad/docs/job-specification/template).
+</details>
+
+---
+
+### Question 22
+**Scenario:** A service group runs 4 instances. The team wants blue-green deployments: start a full set of new instances alongside the old ones, test them, then switch over. How should the `update` block be set?
+
+A. `max_parallel = 4` with no canaries, so all instances are replaced at once
+B. `canary = 4` matching the group count, then promote once checks pass
+C. `canary = 1` with `auto_revert = true` and every other setting left as default
+D. `stagger = "0s"` with `health_check = "manual"` so updates happen together
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Setting `canary` equal to the group count starts a complete new set alongside the old one, which is a blue-green deployment; promoting the deployment, by hand or with `auto_promote`, then retires the old set. Replacing all four at once is not blue-green, since the old set stops. One canary is a canary deployment, not a full parallel set. Stagger and manual health settings do not create a second set.
+
+**Key Concept:** Canary count less than group count gives canary deployments; equal gives blue-green. See [Blue-green and canary deployments](https://developer.hashicorp.com/nomad/docs/job-declare/strategy/blue-green-canary).
+</details>
+
+---
+
+### Question 23
+**Scenario:** A service has 6 instances, and the team wants half of them in `dc1` and half in `dc2`, so one datacenter failing does not take out the service. Which job specification block expresses this?
+
+A. A `constraint` that requires the `dc1` datacenter for every instance
+B. An `affinity` with a high weight toward the `dc2` datacenter only
+C. A `reschedule` block with `unlimited = true` for the whole group
+D. A `spread` on `${node.datacenter}` with a 50 percent target for each
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The `spread` block distributes allocations across values of an attribute, such as datacenter or rack, with optional percentage targets. A constraint to `dc1` puts everything in one place. An affinity toward `dc2` pulls instances there rather than balancing them. Rescheduling controls what happens after failures, not initial placement.
+
+**Key Concept:** Spread for failure-domain balance, constraints for hard rules, affinities for preferences. See [spread block](https://developer.hashicorp.com/nomad/docs/job-specification/spread).
+</details>
+
+---
+
+### Question 24
+**Scenario:** A task crashes occasionally because of a transient dependency. The team wants Nomad to try restarting it on the same node a few times, and only if that fails, place it on a different node. Which blocks control these two behaviours?
+
+A. `update` for local restarts, and `migrate` for moving it to another node
+B. `spread` for local restarts, and `affinity` for moving it to another node
+C. `restart` for local restarts, and `reschedule` for moving it to another node
+D. `lifecycle` for local restarts, and `constraint` for moving it to another node
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** The `restart` block controls how many times and how quickly the client restarts a failed task in place. When those attempts are exhausted, the allocation fails and the `reschedule` block controls placing a replacement, typically on another node. `update` governs deployments, and `migrate` governs drains. Spread and affinity influence placement scoring. `lifecycle` orders tasks within a group.
+
+**Key Concept:** Restart is local and handled by the client; reschedule is cluster-wide and handled by the servers. See [restart block](https://developer.hashicorp.com/nomad/docs/job-specification/restart).
+</details>
+
+---
+
+### Question 25
+**Scenario:** A batch job runs faster on nodes with a newer CPU generation, but it should still run on older nodes when the newer ones are busy. How should this be expressed?
+
+A. An `affinity` on the CPU attribute, with a positive weight toward the newer CPUs
+B. A `constraint` on the CPU attribute that requires the newer CPU generation
+C. A `spread` on the CPU attribute with 100 percent on the newer CPU generation
+D. A separate node pool for newer nodes, with the job restricted to that pool
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Affinities are soft preferences that raise a node's placement score without excluding other nodes. A constraint is a hard filter, so the job would wait when newer nodes are busy. A spread target of 100 percent still steers toward one value and is meant for balancing. Restricting to a dedicated node pool is also a hard limit.
+
+**Key Concept:** Use affinity when you prefer, constraint when you require. See [affinity block](https://developer.hashicorp.com/nomad/docs/job-specification/affinity).
+</details>
+
+---
+
+### Question 26
+**Scenario:** Three instances of a container that listens on port 8080 must run on the same client node using bridge networking. How should the group's `network` block handle ports?
+
+A. Use `static = 8080` for each instance, so the three share the host port
+B. Use a dynamic host port with `to = 8080`, so each instance gets its own host port
+C. Use host networking with the same port, and let the OS resolve the clash
+D. Remove the `network` block, and Nomad will discover the ports at runtime
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A dynamic port lets Nomad pick a free host port for each allocation, and `to = 8080` maps it to the port the application listens on inside its network namespace. Three allocations cannot all bind static host port 8080 on one node. Host networking with the same port causes bind failures. Without a port declaration, nothing is mapped or registered.
+
+**Key Concept:** Dynamic ports avoid host port clashes; `to` maps them to the app's port. See [network block](https://developer.hashicorp.com/nomad/docs/job-specification/network).
+</details>
+
+---
+
+### Question 27
+**Scenario:** A small team runs Nomad without Consul. They want services registered with health checks and discoverable by other jobs through templates. What is the simplest approach?
+
+A. Install Consul anyway, because Nomad has no service discovery of its own
+B. Write each allocation's IP address and port to a shared file by hand
+C. Use Nomad variables to store addresses that each job updates when it starts
+D. Use the `service` block with `provider = "nomad"` and look services up in templates
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Nomad has built-in service discovery: a `service` block with `provider = "nomad"` registers services and their checks in Nomad, and templates can query them with the `nomadService` function. Consul adds features such as a mesh but is no longer required for basic discovery. Hand-maintained files and self-updating variables are fragile and miss health status.
+
+**Key Concept:** Native service discovery covers simple clusters; Consul adds mesh and richer features. See [service block](https://developer.hashicorp.com/nomad/docs/job-specification/service).
+</details>
+
+---
+
+### Question 28
+**Scenario:** A task needs a directory that already exists on certain client nodes, mounted read-only into its container. Which combination is required?
+
+A. A CSI plugin job, a registered CSI volume, and a `volume_mount` in the task
+B. A `template` block that copies the files and a `restart` block on change
+C. A `host_volume` in the client config, a group `volume` block, and a `volume_mount`
+D. An `artifact` block that downloads the directory into the task at start
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Host volumes are declared on the client, requested by the group with a `volume` block of type `host`, and mounted into the task with `volume_mount`, where `read_only` can be set. Groups requesting the volume are only placed on nodes that provide it. CSI is for external storage systems, not local directories. Templates render config files, and artifacts download files rather than mounting existing ones.
+
+**Key Concept:** Declare, request, then mount. See [volume block](https://developer.hashicorp.com/nomad/docs/job-specification/volume).
+</details>
+
+---
+
+### Question 29
+**Scenario:** A database job needs a persistent cloud block storage volume that follows the allocation if it is rescheduled to another client node. What should the team use?
+
+A. A CSI volume backed by the cloud provider's storage, with its CSI plugin jobs running
+B. A host volume on each node, kept in sync with a nightly copy between the nodes
+C. The task's ephemeral disk with `sticky = true`, so the data moves to any node
+D. A `template` block that writes the database files out of Consul KV at startup
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** CSI volumes are managed by storage plugins, run as Nomad jobs, which can attach the same external volume to whichever node the allocation lands on. Host volumes are local to a node, and a nightly copy loses data. The ephemeral disk with `sticky` tries to reuse the same node, and `migrate` can copy data on a best-effort basis, but neither is durable storage. KV is not a database store.
+
+**Key Concept:** Use CSI for storage that must outlive and follow allocations. See [CSI storage](https://developer.hashicorp.com/nomad/docs/architecture/storage/csi).
+</details>
+
+---
+
+### Question 30
+**Scenario:** An operator has just enabled ACLs on all Nomad servers and clients. No tokens exist yet. What is the next step?
+
+A. Restart the servers with ACLs disabled, then create tokens through the web UI
+B. Run `nomad acl bootstrap` once to create the initial management token
+C. Create a client policy first, then attach it to the anonymous token
+D. Copy the gossip encryption key, which also acts as the first ACL token
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** `nomad acl bootstrap` creates the first management token, which is then used to write policies and create other tokens; it works once per cluster unless bootstrap is reset. Disabling ACLs to create tokens defeats the purpose. Writing a policy requires a management token, which does not exist yet. The gossip key is unrelated to ACLs.
+
+**Key Concept:** Bootstrap once, store the management token safely, then use least-privilege tokens. See [nomad acl bootstrap](https://developer.hashicorp.com/nomad/commands/acl/bootstrap).
 </details>
 
 ---

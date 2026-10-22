@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
 # IBM Certified Application Developer - Cloud Platform - Practice Questions
 
-15 questions for this exam, weighted toward IBM Cloud platform services (25%), development fundamentals (20%), then data services, AI and Watson integration, security, and messaging.
+30 questions for this exam, weighted toward IBM Cloud platform services (25%), development fundamentals (20%), then data services, AI and Watson integration, security, and messaging.
 
 > **Cert page:** [exams/ibm/cloud-developer/](../../exams/ibm/cloud-developer/)
 
@@ -277,6 +277,306 @@ D. Update once a year
 **Correct: B**
 
 **Why:** Most application vulnerabilities arrive through dependencies rather than your own code. Automating both detection and the update pull request keeps the effort small and continuous, which is the only way it survives contact with a delivery schedule.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A web app stores user sessions in process memory. When it scales from one instance to four, users are randomly logged out. What is the cloud-native fix?
+
+A. Pin each user to one instance with sticky sessions and never scale in
+B. Increase the memory of each instance so sessions are kept for longer
+C. Move session state to an external store such as Databases for Redis
+D. Run a single large instance instead of four smaller instances
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Cloud-native processes should be stateless, with shared state held in a backing service, so any instance can serve any request and instances can come and go. Sticky sessions break when an instance is replaced or scaled in. More memory does not share sessions between instances. One large instance gives up horizontal scaling and resilience.
+
+**Key Concept:** Keep processes stateless and put state in backing services. See [Getting started with Databases for Redis](https://cloud.ibm.com/docs/databases-for-redis?topic=databases-for-redis-getting-started).
+</details>
+
+---
+
+### Question 17
+**Scenario:** A containerized service on Kubernetes takes 60 seconds to load its cache at startup. During that time it receives traffic and returns errors. Separately, it sometimes hangs and needs restarting. Which probes address both problems?
+
+A. A readiness probe to hold traffic until it is ready, and a liveness probe to restart it when hung
+B. A liveness probe to hold traffic until it is ready, and a readiness probe to restart it when hung
+C. Only a liveness probe with a short timeout, which handles both startup and hangs
+D. No probes; a larger replica count hides both problems from users
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A failing readiness probe removes the pod from service endpoints without restarting it, which fits a slow start. A failing liveness probe restarts the container, which fits a hang. Swapping them restarts healthy-but-starting pods and leaves hung pods in service. A short liveness probe alone would kill the pod during its 60 second start; a startup probe can also help here. More replicas still send some traffic to bad pods.
+
+**Key Concept:** Readiness controls traffic; liveness controls restarts. See [Liveness, readiness, and startup probes](https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/).
+</details>
+
+---
+
+### Question 18
+**Scenario:** An order service consumes messages with at-least-once delivery. After a network blip, some messages arrive twice and customers are charged twice. What should the developer change?
+
+A. Switch to at-most-once delivery so a message can never arrive twice
+B. Add a sleep before each message is processed so duplicates expire first
+C. Increase the consumer count so duplicates are spread across instances
+D. Make processing idempotent, for example by tracking processed order IDs
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** With at-least-once delivery, duplicates are expected, so consumers must be idempotent: processing the same message twice has the same effect as once, for example by recording each order ID. At-most-once delivery can lose payments instead. Sleeping does not remove duplicates. More consumers make duplicates more likely to run in parallel.
+
+**Key Concept:** Design consumers to be idempotent in event-driven systems. See [What is event-driven architecture?](https://www.ibm.com/think/topics/event-driven-architecture)
+</details>
+
+---
+
+### Question 19
+**Scenario:** A nightly task processes a batch of files and then exits. It does not serve HTTP requests. The team wants to run it on Code Engine. Which Code Engine resource fits?
+
+A. An application, configured with a minimum scale of one instance
+B. A job, which runs instances to completion and then stops
+C. A build, which compiles the code and runs it as part of the build
+D. A configmap, which stores the batch logic and runs on a schedule
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Code Engine jobs run one or more instances to completion and stop, which suits batch work; they can be run on a schedule with a cron subscription. Applications serve HTTP requests and keep running or scale on traffic. Builds turn source into images. Configmaps hold configuration data, not code to run.
+
+**Key Concept:** Apps for request-driven workloads, jobs for run-to-completion workloads. See [Planning for Code Engine jobs](https://cloud.ibm.com/docs/codeengine?topic=codeengine-job-plan).
+</details>
+
+---
+
+### Question 20
+**Scenario:** A Code Engine application is cheap to run because it scales to zero, but the first request after a quiet period is slow. The team wants to remove that delay for a latency-sensitive API. What should they change?
+
+A. Set the minimum number of instances to one so an instance is always running
+B. Lower the maximum number of instances so the application starts faster
+C. Move the application to a Code Engine job that runs on a schedule
+D. Increase the request timeout so slow first requests do not fail
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** With a minimum scale of zero, the first request after idle waits for an instance to start. Setting the minimum to one keeps an instance warm, at the cost of paying for it. Lowering the maximum limits scale-out and does not affect start time. Jobs do not serve requests. A longer timeout hides failures but keeps the delay.
+
+**Key Concept:** Scale-to-zero trades cold-start latency for cost. See [Configuring application scaling](https://cloud.ibm.com/docs/codeengine?topic=codeengine-app-scale).
+</details>
+
+---
+
+### Question 21
+**Scenario:** A team has a Node.js application in a Git repository with no Dockerfile. They want Code Engine to turn the source into a container image and run it. What should they use?
+
+A. A Code Engine job that clones the repository and runs `npm start` on each run
+B. A Kubernetes Service cluster, because Code Engine only runs prebuilt images
+C. A manual build on a laptop, pushed to Container Registry before each deploy
+D. A Code Engine build using the buildpacks strategy to create the image
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Code Engine builds can create images from source using a Dockerfile strategy or a buildpacks strategy, which detects the language and builds without a Dockerfile. A job that clones and runs source on each run is slow and unrepeatable. Code Engine can build from source, so a cluster is not needed. Laptop builds are not reproducible or automated.
+
+**Key Concept:** Buildpacks build images from source without a Dockerfile. See [Planning your build](https://cloud.ibm.com/docs/codeengine?topic=codeengine-plan-build).
+</details>
+
+---
+
+### Question 22
+**Scenario:** Before deploying, a team wants to know whether their container images in IBM Cloud Container Registry contain packages with known vulnerabilities. What should they use?
+
+A. IBM Cloud Monitoring alerts on each running container's CPU usage
+B. Activity Tracker events for every image push to the registry
+C. Vulnerability Advisor, which scans images in Container Registry
+D. Secrets Manager, which rotates credentials stored inside each image
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Vulnerability Advisor scans images stored in Container Registry for known vulnerable packages and reports issues to fix. Monitoring tracks runtime metrics. Activity Tracker records who pushed an image, not what is in it. Secrets Manager manages secrets and should be used instead of putting credentials in images.
+
+**Key Concept:** Scan images before they reach production. See [Managing image security with Vulnerability Advisor](https://cloud.ibm.com/docs/Registry?topic=Registry-va_index).
+</details>
+
+---
+
+### Question 23
+**Scenario:** A new billing feature needs strict relational integrity, multi-table transactions, and complex joins. Which managed database fits best?
+
+A. IBM Cloudant, a JSON document store
+B. Databases for PostgreSQL, a relational database
+C. Databases for Redis, an in-memory key-value store
+D. IBM Cloud Object Storage, an object store
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** PostgreSQL is a relational database with ACID transactions, foreign keys, and rich joins, which billing data needs. Cloudant is a document store that suits flexible JSON and sync, not multi-table transactions. Redis is fast for caching and sessions but is not a system of record for relational data. Object Storage holds files, not transactional records.
+
+**Key Concept:** Choose the data store by access pattern and consistency needs. See [Getting started with Databases for PostgreSQL](https://cloud.ibm.com/docs/databases-for-postgresql?topic=databases-for-postgresql-getting-started).
+</details>
+
+---
+
+### Question 24
+**Scenario:** Users upload video files of several gigabytes. Routing uploads through the application server is slow and costly. The team wants browsers to upload straight to Object Storage for a short, controlled time. What should the app do?
+
+A. Make the bucket publicly writable so that browsers can upload without credentials
+B. Send the bucket's API key to each browser so that it can authenticate by itself
+C. Stream every upload through a Code Engine function that writes the object
+D. Generate a short-lived presigned URL, using HMAC credentials, for each upload
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A presigned URL grants time-limited permission for one operation on one object, so the browser uploads directly to Object Storage without receiving long-term credentials; Object Storage presigned URLs require HMAC credentials. A publicly writable bucket lets anyone upload anything. Sending API keys to browsers leaks them. Streaming through a function keeps the slow, costly hop.
+
+**Key Concept:** Presigned URLs delegate narrow, temporary access to clients. See [Creating a presigned URL](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-presign-url).
+</details>
+
+---
+
+### Question 25
+**Scenario:** A support chatbot built on a watsonx.ai foundation model gives confident but wrong answers about the company's own products, which the model was never trained on. What is the most suitable approach?
+
+A. Retrieval-augmented generation, adding relevant company documents to each prompt
+B. A higher temperature setting, so the model explores more possible answers
+C. A longer maximum output length, so the model can explain itself fully
+D. A larger model, which will know the company's products from pretraining
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** RAG retrieves relevant passages from the company's own content and includes them in the prompt, grounding answers in facts the model was never trained on. Higher temperature adds randomness and usually more errors. Longer output does not add knowledge. A larger model still has not seen private product documents.
+
+**Key Concept:** Ground foundation models in your own data with retrieval. See [What is retrieval-augmented generation?](https://www.ibm.com/think/topics/retrieval-augmented-generation)
+</details>
+
+---
+
+### Question 26
+**Scenario:** A contact center app must turn recorded customer calls into text so they can be searched and analysed. Which IBM service fits directly?
+
+A. Watson Text to Speech, which produces audio from text
+B. Watson Speech to Text, which transcribes audio to text
+C. IBM Cloud Object Storage, which indexes audio contents
+D. Event Streams, which converts audio into text events
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Speech to Text transcribes spoken audio into text through an API, including for recorded audio files. Text to Speech does the reverse. Object Storage stores the audio files but does not transcribe them. Event Streams moves messages between systems; it does not process audio.
+
+**Key Concept:** Pick the AI service whose input and output match the task. See [Getting started with Speech to Text](https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-gettingStarted).
+</details>
+
+---
+
+### Question 27
+**Scenario:** Several independent services must read the same stream of order events at their own pace, and a new analytics service must be able to replay the last seven days of events. Which service fits best?
+
+A. Databases for Redis, using a list as a work queue that each service drains
+B. An HTTP webhook from the order service to each consumer, sent once
+C. IBM Event Streams, a Kafka-based service that retains events for replay
+D. IBM Cloud Object Storage, polled every second by each consuming service
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Event Streams is managed Apache Kafka: events are kept in a log for a set retention time, each consumer group reads at its own offset, and consumers can replay from earlier offsets. A Redis list is drained by whoever pops first, so services would compete for events. Webhooks are fire-once with no replay. Polling object storage is slow and not built for streams.
+
+**Key Concept:** Use a log-based event stream when many consumers need the same events and replay. See [About Event Streams](https://cloud.ibm.com/docs/EventStreams?topic=EventStreams-about).
+</details>
+
+---
+
+### Question 28
+**Scenario:** A payment system exchanges messages with a core banking platform. Each message must be delivered once and only once, inside transactions, even if a system restarts mid-transfer. Which messaging service is the strongest fit?
+
+A. A plain HTTP call from one system to the other with no retries
+B. A shared file in Object Storage that each system reads and writes
+C. Databases for Redis publish and subscribe channels between systems
+D. IBM MQ, which provides assured, transactional message delivery
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** IBM MQ is built for assured, once-only delivery with transactional support, which is why it is common in banking. A plain HTTP call can lose messages on failure. A shared file has no delivery guarantees and invites conflicts. Redis pub/sub is fire-and-forget: subscribers that are offline miss messages.
+
+**Key Concept:** Match the messaging service to the delivery guarantee the business needs. See [IBM MQ](https://www.ibm.com/products/mq).
+</details>
+
+---
+
+### Question 29
+**Scenario:** A Code Engine application needs to call other IBM Cloud APIs. The team does not want to create, store, or rotate an API key for it. What should they use?
+
+A. A trusted profile, so the workload gets IAM tokens without a stored API key
+B. The account owner's personal API key, stored in a Code Engine secret
+C. A service ID API key, hard-coded in the source code for convenience
+D. No authentication, because calls from inside IBM Cloud are trusted
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Trusted profiles let compute resources, including Code Engine workloads, obtain IAM tokens based on their identity, so there is no long-lived key to store or rotate. A personal key ties the app to one user and grants far too much. Hard-coded keys leak through source control. IBM Cloud APIs always require authentication.
+
+**Key Concept:** Prefer workload identity over stored keys. See [Using trusted profiles with Code Engine](https://cloud.ibm.com/docs/codeengine?topic=codeengine-trusted-profiles).
+</details>
+
+---
+
+### Question 30
+**Scenario:** A regulated customer requires that data in an Object Storage bucket be encrypted with a root key they control and can revoke, rather than with provider-managed keys. What should the developer configure?
+
+A. Client-side base64 encoding of each object before it is uploaded
+B. A Key Protect root key used to encrypt the bucket's data encryption keys
+C. A private endpoint for the bucket so data never crosses the internet
+D. A bucket retention policy so that objects cannot be deleted early
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** With Key Protect, a customer-managed root key wraps the data encryption keys for the bucket (envelope encryption), so the customer controls access and can revoke the key to make data unreadable. Base64 is encoding, not encryption. Private endpoints protect data in transit, not key control. Retention policies prevent deletion but do not change encryption.
+
+**Key Concept:** Envelope encryption with customer-managed keys gives control over data access. See [Envelope encryption](https://cloud.ibm.com/docs/key-protect?topic=key-protect-envelope-encryption).
 </details>
 
 ---

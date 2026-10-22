@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
 # HashiCorp Packer Associate (003) - Practice Questions
 
-15 questions for Packer Associate prep across templates, builders, provisioners, post-processors, variables, and HCP Packer.
+30 questions for Packer Associate prep across templates, builders, provisioners, post-processors, variables, and HCP Packer.
 
 > **Cert page:** [exams/hashicorp/packer-associate/](../../exams/hashicorp/packer-associate/)
 
@@ -277,6 +277,306 @@ D. Terraform builds images by running its own provisioners inside a temporary in
 **Correct: B**
 
 **Why:** The separation keeps each tool doing what it is good at: Packer produces an artifact, Terraform manages the lifecycle of resources referencing it. Terraform provisioners exist but are documented as a last resort precisely because baking is the better answer.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A developer clones a repository with a working Packer template and runs `packer build .` on a fresh laptop. It fails because the `amazon-ebs` source type is unknown. The template has a `required_plugins` block. What should they run first?
+
+A. `packer fmt .`, which also installs any plugins the template is missing
+B. `packer init .`, which installs the plugins listed in `required_plugins`
+C. `packer validate .`, which downloads plugins as part of its syntax checks
+D. `packer build -force .`, which forces Packer to fetch the missing builders
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** `packer init` reads `required_plugins` and installs matching plugin versions, which recent Packer releases need because most plugins are no longer bundled with the binary. `fmt` only rewrites formatting. `validate` checks configuration but does not install plugins. `-force` overwrites existing artifacts and has nothing to do with plugins.
+
+**Key Concept:** Declare plugins in `required_plugins`, then run `packer init` before building. See [packer init](https://developer.hashicorp.com/packer/docs/commands/init).
+</details>
+
+---
+
+### Question 17
+**Scenario:** A CI pipeline should reject a template change with a syntax error or missing required variable, without launching any cloud instances. Which command should the pipeline run?
+
+A. `packer build -debug .`, stopping after the first step completes
+B. `packer inspect .`, which runs each provisioner in dry-run mode
+C. `packer console .`, which evaluates the whole template and exits
+D. `packer validate .`, which checks syntax and configuration only
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** `packer validate` checks the template's syntax and configuration, including required variables, without creating resources, which makes it a cheap CI gate. `build -debug` still launches instances and pauses between steps. `inspect` lists variables, sources, and provisioners but does not validate a full build. `console` is an interactive expression evaluator, not a validation gate.
+
+**Key Concept:** Gate CI with `packer fmt -check` and `packer validate` before any build. See [packer validate](https://developer.hashicorp.com/packer/docs/commands/validate).
+</details>
+
+---
+
+### Question 18
+**Scenario:** A template defines `source "amazon-ebs" "ubuntu" { ... }` and a `build` block with `sources = ["source.amazon-ebs.ubuntu"]`. What is the relationship between these blocks?
+
+A. The source configures a builder once, and the build block uses it and adds provisioners
+B. The build block replaces the source, so the settings in the source block are ignored
+C. The source block runs the provisioners, and the build block only sets the image name
+D. They are two separate builds that run in parallel and produce two separate images
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** A `source` block holds reusable builder configuration, and a `build` block references one or more sources and adds provisioners and post-processors to run on them. The build does not discard the source settings. Provisioners belong in the build block. Referencing one source from one build produces one image, not two.
+
+**Key Concept:** Sources say where and how to build; builds say what to do with them. See [build block](https://developer.hashicorp.com/packer/docs/templates/hcl_templates/blocks/build).
+</details>
+
+---
+
+### Question 19
+**Scenario:** An image needs an NGINX configuration file from the repository copied into it before a shell script enables the service. Which provisioner should copy the file?
+
+A. A `shell-local` provisioner, which runs on the image during the build
+B. A `breakpoint` provisioner, which uploads the file when the build pauses
+C. A `file` provisioner, followed by a `shell` provisioner for the script
+D. A `manifest` post-processor, which writes files into the finished image
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** The `file` provisioner uploads files or directories to the machine being built, and a following `shell` provisioner can move and enable them. `shell-local` runs on the machine running Packer, not on the image. `breakpoint` pauses the build for debugging. The manifest post-processor writes build metadata to a local file after the build, and does not change the image.
+
+**Key Concept:** Provisioners run in order; upload with `file`, configure with `shell` or a config management tool. See [File provisioner](https://developer.hashicorp.com/packer/docs/provisioners/file).
+</details>
+
+---
+
+### Question 20
+**Scenario:** A downstream script needs the AMI ID that each Packer build produced, in a machine-readable file, without parsing console output. What should be added to the template?
+
+A. A `shell` provisioner that echoes the AMI ID into the image's root folder
+B. A `manifest` post-processor that writes artifact IDs to a JSON file
+C. A `breakpoint` provisioner that prints the AMI ID before the build ends
+D. A `variable` block named `ami_id` that Packer fills in after the build
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The manifest post-processor writes a JSON file listing each build's artifacts, including their IDs, which scripts can read. A provisioner runs before the image exists, so it cannot know the final AMI ID, and writing it inside the image does not help a script outside it. A breakpoint pauses rather than exports. Input variables are inputs, not outputs filled in after a build.
+
+**Key Concept:** Post-processors act on finished artifacts; the manifest records them. See [Manifest post-processor](https://developer.hashicorp.com/packer/docs/post-processors/manifest).
+</details>
+
+---
+
+### Question 21
+**Scenario:** One build block uses two sources, `amazon-ebs.web` and `azure-arm.web`. A Windows-specific provisioner must run only on the Azure image. How should it be limited?
+
+A. Put the provisioner in a separate template and build the Azure image twice
+B. Wrap the provisioner in a `dynamic` block that checks the cloud name
+C. Add a `variable` named `cloud` and set it before each build by hand
+D. Add `only = ["azure-arm.web"]` to that provisioner block
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Provisioners and post-processors accept `only` and `except` lists naming sources, so one build block can run source-specific steps. A separate template duplicates configuration and building twice wastes time. `dynamic` blocks generate nested blocks and are not a way to filter by source. A manual variable adds error-prone steps.
+
+**Key Concept:** Use `only` and `except` to tailor steps per source. See [Only and except](https://developer.hashicorp.com/packer/docs/templates/hcl_templates/onlyexcept).
+</details>
+
+---
+
+### Question 22
+**Scenario:** The `region` variable has a default of `us-east-1`. A `prod.auto.pkrvars.hcl` file sets it to `us-west-2`, `PKR_VAR_region` is set to `eu-west-1`, and the build runs with `-var region=ap-south-1`. Which value is used?
+
+A. `ap-south-1`, from the `-var` flag on the command line
+B. `us-west-2`, from the `.auto.pkrvars.hcl` variable file
+C. `eu-west-1`, from the `PKR_VAR_region` environment variable
+D. `us-east-1`, from the default value set in the variable block
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Later sources override earlier ones: the default first, then `PKR_VAR_` environment variables, then `*.auto.pkrvars.hcl` files, then `-var` and `-var-file` options on the command line, which have the highest priority. So the `-var` value wins. The auto file beats the environment variable but loses to the command line. The default is used only when nothing else sets the value.
+
+**Key Concept:** Command-line values override files, which override environment variables, which override defaults. See [Input variables](https://developer.hashicorp.com/packer/docs/templates/hcl_templates/variables).
+</details>
+
+---
+
+### Question 23
+**Scenario:** An engineer writes `variable "ami_name" { default = "web-${timestamp()}" }` and Packer rejects it. They want every image name to include the build time. What should they use instead?
+
+A. A `PKR_VAR_ami_name` environment variable containing the text `timestamp()`
+B. A `data` block that reads the system clock through the AWS provider
+C. A `locals` block that builds the name with `timestamp()` or `formatdate()`
+D. A post-processor that renames the image after the build has finished
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A variable's `default` must be a literal value, so it cannot call functions. Locals can use expressions and functions, so `local.ami_name` built with `formatdate` and `timestamp()` works and can be referenced in the source. An environment variable passes the literal text, not a call. There is no clock data source in the AWS plugin. Renaming afterwards is awkward and many clouds do not allow it.
+
+**Key Concept:** Use variables for inputs and locals for computed values. See [Local values](https://developer.hashicorp.com/packer/docs/templates/hcl_templates/locals).
+</details>
+
+---
+
+### Question 24
+**Scenario:** A provisioner fails near the end of a 40 minute build, and Packer cleans up the instance before the engineer can see why. How can they keep the instance for inspection on the next run?
+
+A. Run `packer build -force`, which skips cleanup when a provisioner fails
+B. Run `packer validate -debug` to replay the build with full logging
+C. Run `packer build -parallel-builds=0` so the instance stays running
+D. Run `packer build -on-error=ask` and choose to leave the instance running
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** `-on-error=ask` pauses on failure and lets the engineer clean up, abort and keep the resources, or retry; `-on-error=abort` keeps them without asking. The default, `cleanup`, deletes them. `-force` overwrites existing artifacts. `validate` does not build anything. `-parallel-builds` controls concurrency, not cleanup.
+
+**Key Concept:** Use `-on-error` and `PACKER_LOG=1` when debugging builds, and remember to delete kept resources. See [Debugging Packer](https://developer.hashicorp.com/packer/docs/debugging).
+</details>
+
+---
+
+### Question 25
+**Scenario:** Terraform modules should always deploy the image that the platform team has approved for production, without anyone pasting AMI IDs into code. The team uses HCP Packer. What connects the two?
+
+A. A Terraform variable holding the latest AMI ID, updated by hand after each build
+B. An HCP Packer channel the team assigns approved versions to, read by Terraform's HCP provider
+C. A Packer `manifest` file committed to the Terraform repository after every build
+D. The AWS console's AMI catalog, filtered by name in a Terraform data source
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** HCP Packer stores build metadata, and channels such as `production` point to an approved version. Terraform reads the channel through the HCP provider's artifact data source, so promotion is a channel change, not a code change. Hand-edited variables and committed manifests rely on people and lag behind. Name filters can pick up unapproved images.
+
+**Key Concept:** Channels decouple image promotion from infrastructure code. See [HCP Packer channels](https://developer.hashicorp.com/hcp/docs/packer/manage/channel).
+</details>
+
+---
+
+### Question 26
+**Scenario:** A critical vulnerability is found in a base image version that is tracked in HCP Packer and used by several teams. What should the platform team do in HCP Packer?
+
+A. Revoke the affected version so consumers checking its status stop using it
+B. Delete the HCP Packer bucket so that no team can reference the image at all
+C. Rename the version in HCP Packer so that teams cannot find it by its old name
+D. Leave the registry unchanged and email each team asking them to stop using it
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Revoking a version marks it as unsafe, and builds or Terraform runs that check revocation can refuse it, while a patched version is assigned to channels. Deleting the bucket breaks every consumer, including those on safe versions. Renaming is not a security control. Email depends on every team noticing and acting.
+
+**Key Concept:** Revocation spreads a "do not use" signal through the image supply chain. See [Revoke and restore versions](https://developer.hashicorp.com/hcp/docs/packer/manage/revoke-restore).
+</details>
+
+---
+
+### Question 27
+**Scenario:** A template builds images for AWS, Azure, and Google Cloud. On a small CI runner, running all three builds at once exhausts memory. What is the simplest fix?
+
+A. Split the template into three files and run them on three separate CI runners
+B. Add `sleep` provisioners so the builds start at staggered times on the runner
+C. Remove two of the sources and build only one cloud's image on each release
+D. Run `packer build -parallel-builds=1 .` so the builds run one at a time
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Packer runs builds in parallel by default, and `-parallel-builds` limits how many run at once, so a value of 1 runs them in sequence on the same runner. Splitting templates duplicates configuration. Sleep provisioners delay steps inside builds but builds still overlap. Dropping clouds removes required images.
+
+**Key Concept:** Control build concurrency from the command line. See [packer build](https://developer.hashicorp.com/packer/docs/commands/build).
+</details>
+
+---
+
+### Question 28
+**Scenario:** A template contains AWS and Azure sources. A hotfix is needed for the AWS image only. How can the engineer build just that source without editing the template?
+
+A. Comment out the Azure source in the file and remember to restore it later
+B. Set `PKR_VAR_azure=false` so that Packer skips the Azure source this time
+C. Run `packer build -only='amazon-ebs.*' .` to build only the AWS sources
+D. Run `packer build -except='*' .` and then add the AWS source back manually
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** The `-only` flag limits a run to matching sources, with glob patterns supported, so no file edits are needed. Commenting out code risks a broken commit. An environment variable does nothing unless the template uses it, and variables cannot remove sources. `-except='*'` excludes everything.
+
+**Key Concept:** Filter builds at run time with `-only` and `-except`. See [packer build](https://developer.hashicorp.com/packer/docs/commands/build).
+</details>
+
+---
+
+### Question 29
+**Scenario:** A template passes a registry password through a variable, and the password shows up in CI logs when Packer prints the configuration. What change hides it from Packer's output?
+
+A. Set `sensitive = true` on the variable so Packer masks its value
+B. Rename the variable to `password` so Packer detects it as secret
+C. Add the variable to a `.gitignore` file in the template repository
+D. Move the variable's default value into a `locals` block instead
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Variables marked `sensitive = true` have their string values masked in Packer's output. Packer does not guess secrets from variable names. `.gitignore` keeps files out of Git but does not change log output. A local holding the secret is still printed and makes it easier to commit by accident.
+
+**Key Concept:** Mark secrets sensitive and source them from a secret store or environment, never a default. See [Input variables](https://developer.hashicorp.com/packer/docs/templates/hcl_templates/variables).
+</details>
+
+---
+
+### Question 30
+**Scenario:** A template contains `access_key` and `secret_key` values for AWS so the CI job can build AMIs. Security wants no cloud credentials stored in the template or repository. What should the team do?
+
+A. Move the keys into a `.auto.pkrvars.hcl` file committed next to the template
+B. Remove them and let the builder use the CI role's temporary credentials from its environment
+C. Encode the keys in base64 inside the template so they are no longer readable
+D. Store the keys in the image itself so later builds can read them from there
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The Amazon builders use the standard AWS credential chain, so the CI runner's role or OIDC-issued temporary credentials can be picked up from the environment with no keys in code. A committed variable file is still stored credentials. Base64 is encoding, not encryption. Baking keys into an image leaks them to everyone who uses it.
+
+**Key Concept:** Authenticate builds with short-lived, environment-supplied credentials. See [Amazon EBS builder](https://developer.hashicorp.com/packer/integrations/hashicorp/amazon/latest/components/builder/ebs).
 </details>
 
 ---

@@ -1,6 +1,6 @@
 # OpenTelemetry Certified Associate (OTCA) - Practice Questions
 
-15 questions for OTCA prep. Weighted toward the API and SDK (46%) and the Collector (26%), matching the exam.
+30 questions for OTCA prep. Weighted toward the API and SDK (46%) and the Collector (26%), matching the exam.
 
 > **Cert page:** [exams/kubernetes/otca/](../../exams/kubernetes/otca/)
 
@@ -276,8 +276,308 @@ D. Delta applies only to histograms and cumulative only to counters
 
 ---
 
+### Question 16
+**Scenario:** An HTTP server instrumentation records a request that returns 404 Not Found because the caller asked for an order ID that does not exist. What span status should the server span carry?
+
+A. Error, because every 4xx or 5xx response code means the request failed on the server
+B. Unset, because a 4xx on a server span reflects a caller mistake, not a server failure
+C. Ok, because the server handled the request and sent back a well-formed response
+D. Error only when the response body is empty, otherwise Ok with the code as an event
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** The HTTP semantic conventions say a server span leaves status Unset for 4xx codes, because the server behaved correctly and the caller made the mistake. 5xx codes mark a server span as Error. Treating all 4xx as Error inflates server error rates with client mistakes. Ok is reserved for an application developer explicitly overriding the status, so instrumentation should not set it. The response body plays no part in the rule.
+
+**Key Concept:** Server spans: 5xx is Error, 4xx stays Unset. Client spans: both 4xx and 5xx are Error. See [HTTP span semantic conventions](https://opentelemetry.io/docs/specs/semconv/http/http-spans/).
+</details>
+
+---
+
+### Question 17
+**Scenario:** A consumer pulls 50 messages from a queue and processes them in one operation. Each message carries the trace context of the request that produced it. How should the processing span relate to those 50 producer traces?
+
+A. Make the processing span a child of the first message and record the other 49 as span events
+B. Copy all 50 trace IDs into baggage so every downstream service can see the full batch
+C. Create the processing span with a link to the span context of each message in the batch
+D. Start 50 separate root spans and store the batch ID as a resource attribute on each one
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** A span has one parent, but it can carry many links, and links exist for exactly this fan-in case: one operation causally related to many other traces. Parenting to the first message misrepresents the other 49. Baggage carries application key-values downstream and is not a way to relate spans. Fifty root spans fragment the work, and a resource attribute describes the emitting entity, not a single operation.
+
+**Key Concept:** Span links connect a span to other span contexts, often in other traces, for batch and async work. See [Span links](https://opentelemetry.io/docs/concepts/signals/traces/#span-links).
+</details>
+
+---
+
+### Question 18
+**Scenario:** A latency histogram uses default bucket boundaries, which are too coarse for an API whose requests mostly finish under 50 ms. The team wants new boundaries for this one instrument without touching the instrumentation call sites. What should they do?
+
+A. Recreate the instrument in each call site with the new boundaries passed at creation
+B. Add a Collector processor that rebuckets histogram data points after they are exported
+C. Put the boundaries in baggage so that every service applies the same bucket layout
+D. Register a View in the SDK MeterProvider that overrides the aggregation for that instrument
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Views are the SDK mechanism for changing how an instrument is aggregated, including explicit bucket boundaries, renaming, and dropping attributes, all without editing the code that records measurements. Recreating the instrument at each call site is the code change the team wanted to avoid. Rebucketing after export cannot recover detail the coarse buckets already discarded. Baggage is request context and has nothing to do with aggregation.
+
+**Key Concept:** A View selects instruments and customises their stream: name, attributes, and aggregation. See [Metrics SDK: View](https://opentelemetry.io/docs/specs/otel/metrics/sdk/#view).
+</details>
+
+---
+
+### Question 19
+**Scenario:** A busy production service exports spans over OTLP. Which span processor should the TracerProvider use, and why?
+
+A. BatchSpanProcessor, because it queues ended spans and exports them in groups off the request path
+B. SimpleSpanProcessor, because exporting each span the moment it ends guarantees nothing is lost
+C. SimpleSpanProcessor, because holding no queue makes it use less memory under heavy load
+D. No processor at all, because the exporter can be attached directly to the TracerProvider
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The batch processor buffers ended spans and exports them on a schedule or when the batch fills, so export cost is amortised and kept off the hot path. The simple processor exports synchronously on every span end, which adds latency per span and suits only debugging. It does not guarantee delivery either, since an export can still fail. Exporters are attached through a processor; there is no supported way to skip that layer.
+
+**Key Concept:** Use the batch processor in production and the simple processor for tests and debugging. See [Tracing SDK: built-in span processors](https://opentelemetry.io/docs/specs/otel/trace/sdk/#built-in-span-processors).
+</details>
+
+---
+
+### Question 20
+**Scenario:** A team wants each service to start sampling 10% of new traces, while always following the sampling decision of an incoming parent span. Which environment variables do this?
+
+A. `OTEL_TRACES_SAMPLER=traceidratio` with `OTEL_TRACES_SAMPLER_ARG=10`
+B. `OTEL_TRACES_SAMPLER=always_on` with `OTEL_TRACES_SAMPLER_ARG=0.1`
+C. `OTEL_TRACES_SAMPLER=parentbased_traceidratio` with `OTEL_TRACES_SAMPLER_ARG=0.1`
+D. `OTEL_TRACES_SAMPLER=parentbased_always_off` with `OTEL_TRACES_SAMPLER_ARG=0.1`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** `parentbased_traceidratio` honours the parent's sampled flag when there is one and applies the ratio to new root traces. The argument is a probability between 0 and 1, so 10% is `0.1`. Plain `traceidratio` ignores the parent, and an argument of `10` is not a valid ratio. `always_on` ignores the argument and keeps everything. `parentbased_always_off` drops every new root trace.
+
+**Key Concept:** Parent-based samplers keep traces whole across services; the ratio only decides for roots. See [SDK environment variables](https://opentelemetry.io/docs/languages/sdk-configuration/general/).
+</details>
+
+---
+
+### Question 21
+**Scenario:** A team runs a Java service they cannot change or rebuild this quarter. They want traces for its inbound HTTP and database calls. What is the quickest route?
+
+A. Add the OpenTelemetry API dependency and rely on its default implementation
+B. Deploy a Collector with the k8sattributes processor next to the service pods
+C. Enable the Collector's Prometheus receiver to scrape the service's JVM metrics
+D. Attach the OpenTelemetry Java agent to the JVM with the `-javaagent` flag
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The Java agent is zero-code instrumentation: it is added at JVM startup and instruments common libraries such as HTTP servers and JDBC without a rebuild. The API on its own is a no-op without an SDK, and it would need code changes anyway. The k8sattributes processor only enriches telemetry that already exists. Scraping JVM metrics gives metrics, not traces.
+
+**Key Concept:** Zero-code instrumentation gives broad coverage fast; add manual spans later for business logic. See [Java agent](https://opentelemetry.io/docs/zero-code/java/agent/).
+</details>
+
+---
+
+### Question 22
+**Scenario:** A developer asks whether they should replace their SLF4J logging calls with calls to the OpenTelemetry Logs API. What is the intended role of the Logs API?
+
+A. Bridging existing logging libraries, such as SLF4J or Log4j, into OpenTelemetry log records
+B. Replacing logging frameworks with a new call that developers use directly in application code
+C. Converting spans into log lines for teams that do not have a tracing backend available
+D. Tailing log files from disk inside the SDK, which replaces the Collector's filelog receiver
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The Logs API is designed for log appenders and bridges, so the logging library a team already uses can emit OpenTelemetry log records with trace context attached. Developers keep their existing logging calls. It is not a new end-user logging framework, it does not turn spans into logs, and reading files from disk is the job of the Collector's filelog receiver, not the SDK.
+
+**Key Concept:** OpenTelemetry embraces existing logging libraries rather than replacing them. See [Logs specification](https://opentelemetry.io/docs/specs/otel/logs/).
+</details>
+
+---
+
+### Question 23
+**Scenario:** An engineer adds a second `otlp` exporter for a new backend under the `exporters:` key of a Collector config. The Collector starts cleanly, but no data reaches the new backend. What is the most likely cause?
+
+A. The new exporter needs its own batch processor declared directly above it in the file
+B. The exporter is defined but not listed in any pipeline under `service: pipelines:`
+C. Exporters added to the file stay inactive until the Collector binary is rebuilt
+D. A pipeline can hold one exporter per signal, so the first exporter always wins
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Defining a component only configures it. A component runs when it is referenced in a pipeline in the `service` section, and an unreferenced exporter is silently ignored. Processor placement is set in the pipeline, not by position in the file. Configuration changes need a restart, not a rebuild, unless the component is missing from the distribution. A pipeline can fan out to many exporters.
+
+**Key Concept:** Configure components in their sections, then enable them in `service.pipelines`. See [Collector configuration: service](https://opentelemetry.io/docs/collector/configuration/#service).
+</details>
+
+---
+
+### Question 24
+**Scenario:** Spans reach a fleet of node-level Collector agents and then a pool of gateway Collectors that run the tail sampling processor. Sampling decisions are inconsistent because spans of one trace land on different gateways. What fixes this?
+
+A. Run tail sampling in every node agent, since each agent sees the full trace
+B. Move the tail sampling decision into the SDK so it is made before export
+C. Route spans by trace ID with the loadbalancing exporter in the agent tier
+D. Put a round-robin load balancer in front of the gateway pool instead
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Tail sampling needs every span of a trace on the same Collector instance. The loadbalancing exporter hashes on trace ID so all spans of a trace go to one gateway. A node agent sees only the spans produced on its node, not the whole trace. The SDK cannot make a tail decision because it never sees the complete trace. Round-robin balancing is what causes the split in the first place.
+
+**Key Concept:** Tail sampling at scale is a two-tier pattern: trace-aware load balancing in front of sampling gateways. See [Gateway deployment](https://opentelemetry.io/docs/collector/deployment/gateway/).
+</details>
+
+---
+
+### Question 25
+**Scenario:** A security team wants the Collector to contain only the OTLP receiver, the batch and memory limiter processors, and one vendor exporter, to keep the binary and its attack surface small. What should the platform team do?
+
+A. Build a custom distribution with the OpenTelemetry Collector Builder listing those components
+B. Run the contrib distribution and leave the unused components out of the config file
+C. Run the core distribution, which already includes every vendor exporter by default
+D. Use the SDK's built-in exporter and skip running a Collector at all for this service
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The Collector Builder (`ocb`) produces a binary containing only the components named in its manifest, which is the documented way to minimise size and attack surface. Contrib ships hundreds of components; leaving them out of the config does not remove them from the binary. Core is small but does not include vendor exporters. Dropping the Collector removes the processing the team wants to keep.
+
+**Key Concept:** Core, contrib, and vendor distributions are starting points; production teams often build their own. See [Build a custom Collector](https://opentelemetry.io/docs/collector/custom-collector/).
+</details>
+
+---
+
+### Question 26
+**Scenario:** Kubernetes liveness probes hit `/healthz` every few seconds, and their spans make up 30% of trace volume. The team wants to drop them in the Collector before export. Which component fits?
+
+A. The attributes processor, which can delete the `url.path` attribute from those spans
+B. The batch processor, configured with a smaller batch size for that endpoint only
+C. The memory limiter processor, which sheds the lowest-value spans under pressure
+D. The filter processor, with a condition that matches spans whose path is `/healthz`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** The filter processor drops telemetry that matches configured conditions, written in OTTL, which is exactly this job. The attributes processor changes attributes on a span but still forwards the span. The batch processor groups data for export and does not drop anything by content. The memory limiter refuses data when memory is high, regardless of value, and is a safety valve, not a filter.
+
+**Key Concept:** Drop noise as early as possible, ideally before it costs storage. See [Filter processor](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/filterprocessor).
+</details>
+
+---
+
+### Question 27
+**Scenario:** A firewall team asks which ports to open so services can send OTLP to a Collector using its default receiver settings. What do you tell them?
+
+A. 9411 for gRPC and 14268 for HTTP
+B. 4317 for gRPC and 4318 for HTTP
+C. 4318 for gRPC and 4317 for HTTP
+D. 9090 for gRPC and 8888 for HTTP
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** OTLP uses 4317 for gRPC and 4318 for HTTP by default. Swapping them is a common mistake. 9411 is the Zipkin port and 14268 a legacy Jaeger collector port. 9090 is the usual Prometheus server port, and 8888 is where the Collector exposes its own internal metrics, not a receiver.
+
+**Key Concept:** OTLP is the native protocol for all signals, over gRPC or HTTP. See [OTLP specification](https://opentelemetry.io/docs/specs/otlp/).
+</details>
+
+---
+
+### Question 28
+**Scenario:** During an incident, an engineer finds a suspicious error log line and wants to jump straight to the request trace that produced it. What makes this possible?
+
+A. The log line and the trace share the same `service.name`, which links each log to one trace
+B. The backend matches the log timestamp to the nearest span start time in the same service
+C. The log record carries the active trace ID and span ID, which are recorded when it is emitted
+D. Baggage copies every log line into the span as an event, so the trace already holds the log
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** When a log is emitted inside an active span, OpenTelemetry log bridges attach the trace ID and span ID to the log record, so a backend can link the log to that exact span. `service.name` identifies a service, which has thousands of traces. Timestamp matching is a guess that breaks under concurrency. Baggage carries key-values between services and does not copy logs into spans.
+
+**Key Concept:** Shared context, not shared timing, is what correlates signals. See [Logs: trace context](https://opentelemetry.io/docs/concepts/signals/logs/).
+</details>
+
+---
+
+### Question 29
+**Scenario:** Two teams record the HTTP method under different attribute names, `method` and `http_verb`, and a shared dashboard only works for one of them. What is the standard fix?
+
+A. Pick whichever name the larger team uses and ask the other team to rename later
+B. Add a resource attribute to each service that says which naming scheme it follows
+C. Record the method as a span event rather than as an attribute so names do not matter
+D. Adopt the semantic convention name, `http.request.method`, in both teams' instrumentation
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Semantic conventions define standard names, such as `http.request.method`, so telemetry from different teams, languages, and libraries lines up without per-team mapping. Picking a house name just recreates the problem with the next team. A resource attribute describing the scheme still leaves every query needing two paths. Events still have attribute names, so moving the data does not help.
+
+**Key Concept:** Semantic conventions make telemetry portable across teams and backends. See [Semantic conventions](https://opentelemetry.io/docs/specs/semconv/).
+</details>
+
+---
+
+### Question 30
+**Scenario:** An engineer suspects a processor in the Collector is stripping attributes and wants to see exactly what the Collector is about to export, without changing the backend. What is the simplest check?
+
+A. Add the debug exporter with `verbosity: detailed` to the pipeline alongside the real exporter
+B. Raise the Collector's own log level to debug, which prints every span it receives in full
+C. Point the SDK at a second backend and compare what the two backends end up storing
+D. Remove the processors one at a time and wait for users to report what has changed
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The debug exporter writes telemetry to the Collector's console, and at `verbosity: detailed` it prints every attribute, so adding it next to the real exporter shows exactly what leaves the pipeline. Debug logging shows the Collector's own operation, not the full content of every span. A second backend adds its own processing and cost. Removing processors in production trades one problem for another and gives slow feedback.
+
+**Key Concept:** Fan the pipeline out to the debug exporter to inspect data in flight. See [Debug exporter](https://github.com/open-telemetry/opentelemetry-collector/tree/main/exporter/debugexporter).
+</details>
+
+---
+
 ## Scoring guide
 
-- **13-15 correct (85%+):** Ready. 75% is the pass mark, so this puts you comfortably clear.
-- **10-12 correct (65-80%):** Focus on the API and SDK domain, which is 46% of the exam.
-- **Below 10:** Work the [scenarios](../../exams/kubernetes/otca/scenarios.md) and read the OpenTelemetry concepts documentation directly; the exam tracks it closely.
+- **26-30 correct (85%+):** Ready. 75% is the pass mark, so this puts you comfortably clear.
+- **20-25 correct (67-83%):** Focus on the API and SDK domain, which is 46% of the exam.
+- **Below 20:** Work the [scenarios](../../exams/kubernetes/otca/scenarios.md) and read the OpenTelemetry concepts documentation directly; the exam tracks it closely.
