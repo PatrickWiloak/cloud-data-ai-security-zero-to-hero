@@ -1,3 +1,9 @@
+---
+last-updated: 2026-10-22
+applies-to: KCNA curriculum revised November 2025, checked 2026-10-22
+difficulty: beginner
+---
+
 # KCNA High-Yield Scenarios and Practice Problems
 
 ## Scenario 1: Kubernetes Architecture
@@ -137,18 +143,74 @@
 
 **Key Takeaway**: StatefulSets are designed for stateful workloads that need stable identities and persistent storage. Deployments are for stateless workloads.
 
+---
+
+## Scenario 8: A Pod That Will Not Stay Up (Troubleshooting)
+
+**Scenario**: After a deploy, `kubectl get pods` shows one Pod with STATUS `CrashLoopBackOff` and a RESTARTS count that keeps climbing, and a second Pod in another Deployment stuck in `Pending`. A third Deployment's Pods are `Running` but its Service returns connection timeouts. What is the most likely cause of each, and where do you look?
+
+**Solution Pattern**:
+- **CrashLoopBackOff**: The container starts and exits, and the kubelet waits longer before each restart. Read `kubectl logs <pod> --previous` to see why the last instance died (missing environment variable, bad config, app error). Check `describe` for a failing liveness probe or `OOMKilled` as the last state.
+- **Pending**: The scheduler could not place the Pod, or it is waiting for something. `kubectl describe pod` Events usually say why, for example "Insufficient cpu", an untolerated taint, unmatched node affinity or an unbound PVC.
+- **Running but unreachable**: Check the Service's endpoints. An empty list means the Service selector does not match the Pod labels, or the Pods are not ready because the readiness probe fails. Also check that `targetPort` matches the container port.
+
+**Common Distractors**:
+- "CrashLoopBackOff is a Pod phase" (it is a container waiting reason; the phase is usually Running)
+- "Pending means the image is downloading slowly" (possible, but the classic cause is scheduling)
+- "Restart kube-proxy to fix the Service" (kube-proxy is rarely the problem; an empty endpoint list points to selectors or readiness)
+
+**Key Takeaway**: Read state before guessing. `describe` Events, previous logs and Service endpoints answer most troubleshooting questions.
+
+---
+
+## Scenario 9: Locking Down a Shared Cluster (Security)
+
+**Scenario**: Several teams share one cluster, one namespace each. An audit finds that every app uses the `default` ServiceAccount, one team's Pods run as root with privileged mode, database passwords sit in Secrets that "are encrypted because they look scrambled", and any Pod can connect to any other Pod. What should the platform team change?
+
+**Solution Pattern**:
+- **Identity and permissions**: Give each app its own ServiceAccount and bind only the verbs it needs with a Role and RoleBinding in its namespace (least privilege). Disable token mounting where the app never calls the API.
+- **Pod hardening**: Label each namespace for Pod Security Admission with the `restricted` (or at least `baseline`) profile in `enforce` mode, and set `runAsNonRoot`, `allowPrivilegeEscalation: false` and dropped capabilities in the securityContext.
+- **Secrets**: Secrets are base64-encoded, not encrypted. Turn on encryption at rest (ideally with a KMS provider), restrict `get` and `list` on Secrets with RBAC, and consider an external secret manager.
+- **Network**: Add a default-deny NetworkPolicy per namespace, then allow only the required flows, on a CNI plugin that enforces policies.
+- **Guardrails**: Use a policy engine such as OPA Gatekeeper or Kyverno to reject privileged Pods, images without a digest or signature, and Pods without resource limits.
+
+**Common Distractors**:
+- "Namespaces alone isolate teams" (namespaces scope names and policies, but do not block network traffic or grant permissions by themselves)
+- "Re-enable PodSecurityPolicy" (it was removed in v1.25; Pod Security Admission replaced it)
+- "Base64 is good enough because it is not human-readable" (anyone with read access can decode it)
+
+**Key Takeaway**: Security is layered: identity (RBAC, ServiceAccounts), workload (Pod Security, securityContext), data (Secrets encryption), network (NetworkPolicy) and admission policy.
+
+---
+
+## Scenario 10: A Rollout That Went Wrong (Debugging)
+
+**Scenario**: A team updates a Deployment's image from `v1.8` to `v1.9`. Ten minutes later, half the Pods run `v1.9` and are not ready, half still run `v1.8`, and the Deployment reports `ProgressDeadlineExceeded`. The cluster is managed by Argo CD. The `v1.9` image is distroless and has no shell. How should they debug and recover?
+
+**Solution Pattern**:
+- **Read the rollout**: `kubectl rollout status` and `kubectl describe deployment` show the stalled progress; `kubectl rollout history` lists revisions. Kubernetes does not roll back by itself, which is why old and new Pods are mixed.
+- **Find the cause**: Check events and `kubectl logs` for the new Pods. Since there is no shell, use `kubectl debug` to attach an ephemeral container with debugging tools, or `kubectl port-forward` to hit the new Pod directly.
+- **Recover**: In a GitOps-managed cluster, revert the commit that bumped the image tag so Argo CD syncs back to `v1.8`. A `kubectl rollout undo` would work briefly, but Argo CD would see drift (OutOfSync) and reapply `v1.9`.
+- **Prevent**: Use correct readiness probes and consider progressive delivery (Argo Rollouts or Flagger) to stop and roll back automatically on bad metrics.
+
+**Common Distractors**:
+- "Kubernetes automatically rolls back after the progress deadline" (it only reports the condition)
+- "Use `kubectl exec` to open a shell in the new Pod" (a distroless image has no shell)
+- "`kubectl rollout undo` is the permanent fix" (under GitOps, Git is the source of truth)
+
+**Key Takeaway**: Debug from rollout state, events and logs; fix through the source of truth. In GitOps, rollback is a Git revert.
+
 ## Key Decision Factors
 
 ### Domain Priority for Study
-1. **Kubernetes Fundamentals (46%)** - Architecture, objects, networking, storage
-2. **Container Orchestration (22%)** - Containers, runtimes, scheduling, scaling
-3. **Cloud Native Architecture (16%)** - Principles, CNCF ecosystem, microservices
-4. **Cloud Native Observability (8%)** - Metrics, logs, traces, Prometheus, Grafana
-5. **Cloud Native Application Delivery (8%)** - GitOps, Helm, Kustomize, CI/CD
+1. **Kubernetes Fundamentals (44%)** - Core concepts, administration, scheduling, containerization
+2. **Container Orchestration (28%)** - Networking, security, troubleshooting, storage
+3. **Cloud Native Application Delivery (16%)** - GitOps, Helm, Kustomize, rollout strategies, debugging
+4. **Cloud Native Architecture (12%)** - Observability, CNCF ecosystem and principles, community and collaboration
 
 ### Common Anti-Patterns
 - Memorizing commands instead of understanding concepts (this is a knowledge exam)
-- Ignoring the CNCF ecosystem beyond Kubernetes
+- Studying from a guide written for the pre-November-2025 five-domain outline
+- Ignoring the CNCF ecosystem and community beyond Kubernetes itself
 - Not understanding the relationships between components
-- Confusing similar-sounding concepts (StatefulSet vs Deployment, ConfigMap vs Secret)
-- Focusing only on Kubernetes while neglecting cloud native architecture principles
+- Confusing similar-sounding concepts (StatefulSet vs Deployment, ConfigMap vs Secret, liveness vs readiness)

@@ -1,163 +1,138 @@
+---
+last-updated: 2026-10-22
+applies-to: KCNA curriculum revised November 2025, checked 2026-10-22
+difficulty: beginner
+---
+
 # KCNA Study Strategy
+
+This strategy follows the revised outline for exams taken on or after 24 November 2025. If you studied from an older guide, the main changes are: Container Orchestration is now 28% and owns networking, security, troubleshooting and storage; Application Delivery doubled to 16% and added debugging; observability moved into Cloud Native Architecture (12%) alongside a new community and collaboration competency.
+
+## How to split your time
+
+| Domain | Weight | Share of study time | Why |
+|---|---|---|---|
+| 1. Kubernetes Fundamentals | 44% | About 40% | Biggest domain, and everything else builds on it |
+| 2. Container Orchestration | 28% | About 30% | Security and troubleshooting are new emphasis and reward real understanding |
+| 3. Cloud Native Application Delivery | 16% | About 15% | GitOps principles and rollout strategies are quick, reliable points |
+| 4. Cloud Native Architecture | 12% | About 15% | Small weight but broad vocabulary; worth slightly more than its weight |
+
+Domain 4 gets a little more than its weight because it is mostly recall of names and definitions (CNCF projects, maturity levels, TAGs versus SIGs, metric types), and recall needs repetition.
 
 ## Study Approach
 
-### Phase 1: Kubernetes Core (Weeks 1-2)
-1. **Kubernetes Architecture**
-   - Learn control plane and worker node components
-   - Understand the API server as the central communication hub
-   - Study etcd's role as the cluster state store
-   - Learn how the scheduler and controller manager work together
+### Phase 1: Kubernetes Fundamentals (Week 1)
+Read [01-kubernetes-fundamentals.md](./notes/01-kubernetes-fundamentals.md).
+1. **Core concepts** - Control plane and node components, how a `kubectl apply` flows through the API server, controllers and reconciliation, the workload types and when to use each, namespaces, labels and selectors, ConfigMaps and Secrets.
+2. **Administration** - kubeconfig contexts, imperative versus declarative, ResourceQuota and LimitRange, kubeadm, upgrade order and version skew.
+3. **Scheduling** - Filter and score, requests versus limits, QoS classes, affinity, taints and tolerations, priority and preemption.
+4. **Containerization** - Containers versus VMs, layers, tags versus digests, OCI, CRI, containerd and CRI-O, dockershim, multi-stage builds.
 
-2. **Kubernetes Objects and Workloads**
-   - Pods, Deployments, ReplicaSets, DaemonSets, StatefulSets
-   - Services and their types (ClusterIP, NodePort, LoadBalancer)
-   - ConfigMaps, Secrets, and configuration management
-   - Namespaces, labels, selectors, and annotations
+### Phase 2: Container Orchestration (Week 2)
+Read [02-container-orchestration.md](./notes/02-container-orchestration.md).
+1. **Networking** - The flat Pod network and CNI, Service types and how kube-proxy routes them, CoreDNS names, Ingress versus Gateway API, NetworkPolicy behaviour.
+2. **Security** - The 4Cs, authentication versus authorization versus admission, RBAC objects, ServiceAccounts, Pod Security Standards, why Secrets are not encrypted by default, scanning, signing and policy engines.
+3. **Troubleshooting** - Pod phases versus container reasons, the symptom table (Pending, ImagePullBackOff, CrashLoopBackOff, OOMKilled), the three probes, empty Service endpoints, NotReady nodes.
+4. **Storage** - emptyDir versus PVs, PV, PVC and StorageClass, access modes including RWOP, reclaim policies, CSI, StatefulSet volumes.
 
-3. **Storage and Networking**
-   - Persistent Volumes and Persistent Volume Claims
-   - StorageClasses and dynamic provisioning
-   - CNI plugins and the flat networking model
-   - Ingress resources and controllers
+### Phase 3: Delivery and Architecture (Week 3)
+Read [03-application-delivery.md](./notes/03-application-delivery.md) and [04-cloud-native-architecture.md](./notes/04-cloud-native-architecture.md).
+1. **Application delivery** - CI versus continuous delivery versus continuous deployment, the four OpenGitOps principles word for word, Argo CD and Flux, Helm vocabulary, Kustomize, the four rollout strategies, progressive delivery.
+2. **Debugging** - Rollout status, history and undo, ProgressDeadlineExceeded, `kubectl debug` and ephemeral containers, Helm release states, GitOps OutOfSync versus Degraded.
+3. **Observability** - Three signals, Prometheus pull model and components, metrics-server versus kube-state-metrics, Fluent Bit, OpenTelemetry versus Jaeger, SLIs and SLOs.
+4. **Ecosystem and community** - CNCF definition, twelve-factor, microservices trade-offs, serverless, maturity levels and examples, TOC, TAGs, SIGs, KEPs, release cadence.
 
-### Phase 2: Container Orchestration and Architecture (Weeks 2-3)
-1. **Container Fundamentals**
-   - Containers vs virtual machines
-   - Container images, layers, and registries
-   - Container runtimes (containerd, CRI-O)
-   - OCI standards and specifications
-
-2. **Orchestration Concepts**
-   - Why orchestration is needed (scaling, self-healing, rolling updates)
-   - Health checks: liveness, readiness, startup probes
-   - Horizontal Pod Autoscaler (HPA)
-   - Resource requests and limits
-
-3. **Cloud Native Architecture**
-   - 12-factor application methodology
-   - Microservices patterns and trade-offs
-   - Declarative configuration and immutable infrastructure
-   - CNCF Cloud Native Definition
-
-### Phase 3: Ecosystem and Exam Prep (Weeks 3-4)
-1. **CNCF Ecosystem**
-   - CNCF project maturity levels (Sandbox, Incubating, Graduated)
-   - Key graduated projects and their purposes
-   - Service mesh concepts (Istio, Linkerd)
-   - Serverless concepts (Knative)
-
-2. **Observability**
-   - Three pillars: metrics, logs, traces
-   - Prometheus for metrics
-   - Fluentd/Fluent Bit for logs
-   - OpenTelemetry for distributed tracing
-   - Grafana for visualization
-
-3. **Application Delivery**
-   - GitOps principles (ArgoCD, Flux)
-   - Helm for package management
-   - Kustomize for manifest customization
-   - CI/CD pipeline concepts
-
-4. **Practice Exams**
-   - Take practice tests and review weak areas
-   - Focus on the highest-weighted domain (Kubernetes Fundamentals at 46%)
-   - Review CNCF terminology and definitions
+### Phase 4: Practice and review (Week 4)
+Timed practice questions, [scenarios.md](./scenarios.md), [flashcards.csv](./flashcards.csv) and targeted re-reading of weak sections.
 
 ## Study Resources
 
 ### Primary Resources
-- **[Kubernetes Documentation](https://kubernetes.io/docs/)** - Official documentation (read Concepts sections thoroughly)
-- **[KCNA Exam Curriculum](https://github.com/cncf/curriculum)** - Official exam objectives
-- **[CNCF Cloud Native Glossary](https://glossary.cncf.io/)** - Terminology reference
-- **[CNCF Landscape](https://landscape.cncf.io/)** - Visual map of the ecosystem
+- **[KCNA exam page](https://training.linuxfoundation.org/certification/kubernetes-cloud-native-associate/)** - Current domains and weights
+- **[KCNA program changes](https://training.linuxfoundation.org/kcna-program-changes/)** - The November 2025 revision
+- **[Kubernetes Documentation](https://kubernetes.io/docs/concepts/)** - Read the Concepts section thoroughly
+- **[CNCF curriculum](https://github.com/cncf/curriculum)** - Official curriculum PDFs
+- **[Cloud Native Glossary](https://glossary.cncf.io/)** - Terminology
+- **[CNCF Landscape](https://landscape.cncf.io/)** - Project map
+- **[OpenGitOps](https://opengitops.dev/)** - GitOps principles
 
 ### Supplementary Resources
-- **[Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)** - Deep architecture understanding
-- **[CNCF YouTube Channel](https://www.youtube.com/c/cloudnativefdn)** - Talks and presentations
-- **[Prometheus Documentation](https://prometheus.io/docs/)** - Monitoring concepts
-- **[Helm Documentation](https://helm.sh/docs/)** - Package management
+- **[Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)** - Builds deep architecture intuition
+- **[Prometheus Documentation](https://prometheus.io/docs/introduction/overview/)** - Monitoring concepts
+- **[Helm Documentation](https://helm.sh/docs/)** - Packaging
 - **[12-Factor App](https://12factor.net/)** - Application design principles
+- **[Kubernetes community repository](https://github.com/kubernetes/community)** - SIGs and governance, for the community competency
+- **[Practice questions](../../../resources/practice-questions/cncf-kcna.md)** - Original practice questions
 
-### Community and Forums
-- **r/kubernetes** - Reddit community for discussions and tips
-- **CNCF Slack** - Official community channels
-- **KodeKloud Community** - Study groups and discussions
-
-### Video Courses
-1. **KodeKloud KCNA** - Comprehensive with visual explanations
-2. **A Cloud Guru Kubernetes Essentials** - Good for fundamentals
-3. **TechWorld with Nana** - Kubernetes crash course on YouTube
-4. **freeCodeCamp Kubernetes Course** - Free comprehensive introduction
+### Courses
+- **Linux Foundation LFS250** - Kubernetes and Cloud Native Essentials, the official course
+- **KodeKloud, freeCodeCamp and similar** - Visual introductions; check that a course has been updated for the November 2025 outline
 
 ## Exam Tactics
 
-### Time Management (90 minutes, 60 questions)
-- Average 1.5 minutes per question
-- Answer confident questions first (aim for under 1 minute each)
-- Flag uncertain questions for review
-- Reserve 10-15 minutes at the end for flagged questions
-- Do not spend more than 2 minutes on any single question in the first pass
+### Time Management (90 minutes, about 60 questions)
+- About 90 seconds per question on average
+- Answer the ones you know first, in under a minute each
+- Flag uncertain questions and move on
+- Keep 10-15 minutes at the end for flagged questions
 
 ### Question Strategy
-1. **Read the full question** before looking at answer choices
-2. **Eliminate obviously wrong answers** to improve your odds
-3. **Look for keywords** - "best," "most," "primary," "NOT" change the meaning significantly
-4. **Be wary of absolute statements** - answers with "always" or "never" are often incorrect
-5. **Choose the most specific correct answer** when multiple options seem right
-6. **Trust your first instinct** unless you have a clear reason to change your answer
-
-### Domain Prioritization
-- **Kubernetes Fundamentals (46%)** - Spend the most time here. This is nearly half the exam
-- **Container Orchestration (22%)** - Second priority, builds on fundamentals
-- **Cloud Native Architecture (16%)** - Understand principles and the CNCF ecosystem
-- **Observability (8%)** - Know the three pillars and key tools
-- **Application Delivery (8%)** - Understand GitOps, Helm, and CI/CD concepts
+1. **Read the whole question** before the options
+2. **Eliminate clearly wrong answers** first
+3. **Watch keywords** - "best", "most", "primary" and "NOT" change the answer
+4. **Distrust absolutes** - "always" and "never" are often wrong
+5. **Pick the most specific correct answer** when several look right
+6. **Change an answer only for a clear reason**
 
 ## Common Pitfalls
 
 ### Study Mistakes
-- **Going too deep on hands-on** - This is a knowledge exam, not performance-based. Hands-on experience helps understanding, but do not spend all your time in a terminal
-- **Ignoring the CNCF ecosystem** - Questions cover the broader cloud native landscape, not just Kubernetes
-- **Skipping observability and delivery** - Even though they are only 8% each, that is 16% combined and easy points if you study them
-- **Not reviewing CNCF terminology** - Many questions test your understanding of specific terms
+- **Using a pre-November-2025 guide** - The weights and some topics have changed; security, troubleshooting, debugging and community now have explicit weight
+- **Too much terminal time** - Hands-on helps understanding, but this is a knowledge exam
+- **Skipping Domain 4** - 12% is roughly seven questions, and most are fast recall
+- **Learning commands instead of meanings** - Know what `kubectl rollout undo` does, not its flags
 
 ### Content Mistakes
-- Confusing etcd with the API server's role
-- Not knowing which components run on control plane vs worker nodes
-- Mixing up Deployment vs StatefulSet use cases
-- Confusing CNCF project maturity levels (Sandbox vs Incubating vs Graduated)
-- Not understanding when to use each Service type
-- Thinking containers are lightweight VMs (they share the host kernel)
+- Thinking the scheduler starts containers (the kubelet does)
+- Thinking Secrets are encrypted by default (they are base64-encoded)
+- Treating CrashLoopBackOff as a Pod phase
+- Confusing liveness (restart) with readiness (remove from endpoints)
+- Confusing RWO (one node) with RWOP (one Pod)
+- Calling push-based CI deploys "GitOps"
+- Confusing metrics-server with kube-state-metrics
+- Confusing CNCF TAGs with Kubernetes SIGs
+- Thinking containers have their own kernel
 
 ## Progress Tracking
 
 ### Self-Assessment Questions
-After each study phase, verify you can answer these without references:
 
-**Phase 1:**
-- Can I name all control plane and worker node components and their roles?
-- Do I understand the full pod lifecycle?
-- Can I explain each Service type and when to use it?
-- Do I know the difference between PV, PVC, and StorageClass?
+**Domain 1:**
+- Can I trace a `kubectl apply` of a Deployment through every component?
+- Can I explain requests versus limits and the three QoS classes?
+- Can I explain taints versus affinity and when to combine them?
+- Can I explain why dockershim's removal did not break Docker-built images?
 
-**Phase 2:**
-- Can I explain containers vs VMs and why orchestration is needed?
-- Do I understand the 12-factor methodology?
-- Can I describe what makes an application "cloud native"?
-- Do I know the difference between liveness, readiness, and startup probes?
+**Domain 2:**
+- Can I name every Service type and when to use it?
+- Can I explain the order authentication, authorization, admission?
+- Can I diagnose Pending, ImagePullBackOff, CrashLoopBackOff and OOMKilled from a description?
+- Can I explain PV, PVC, StorageClass and the four access modes?
 
-**Phase 3:**
-- Can I name key CNCF graduated projects and their purposes?
-- Do I understand the three pillars of observability?
-- Can I explain GitOps principles and key tools?
-- Am I scoring 80%+ on practice exams?
+**Domain 3:**
+- Can I state the four OpenGitOps principles?
+- Can I compare rolling, recreate, blue-green and canary?
+- Can I explain what OutOfSync and Degraded mean in Argo CD?
+
+**Domain 4:**
+- Can I describe the Prometheus pull model and Alertmanager's role?
+- Can I name the three CNCF maturity levels with examples?
+- Can I explain TOC, TAG, SIG and KEP?
 
 ### Readiness Indicators
-You are ready for the exam when:
-- [ ] You can explain all Kubernetes components from memory
-- [ ] You understand the CNCF ecosystem and project maturity levels
-- [ ] You score 80%+ on practice exams consistently
-- [ ] You can define all key cloud native terms
-- [ ] You understand relationships between components, not just definitions
+You are ready when:
+- [ ] You can explain every control plane and node component from memory
+- [ ] You can diagnose the common Pod symptoms from a description
+- [ ] You can state the four GitOps principles and the four rollout strategies
+- [ ] You know the main CNCF projects by category and maturity
+- [ ] You score 80% or more on timed practice sets, consistently
