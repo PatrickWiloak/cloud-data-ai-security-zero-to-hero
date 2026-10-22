@@ -1,6 +1,10 @@
+---
+last-updated: 2026-10-22
+---
+
 # High-Yield Scenarios and Patterns - CloudOps Engineer (SOA-C03)
 
-## Monitoring and Remediation Scenarios
+## Monitoring, Logging, and Remediation Scenarios (Domain 1)
 
 ### CloudWatch Alarm Remediation
 **Scenario**: An application running on EC2 experiences intermittent CPU spikes causing user-facing latency. The operations team needs automated remediation.
@@ -14,7 +18,7 @@
 **Common Distractors**:
 - Manual SSH to restart (wrong - not automated)
 - Lambda function to reboot instance (wrong - SSM Automation is more appropriate for operational tasks)
-- CloudWatch Events only (wrong - EventBridge is the current service name, but they are the same)
+- A CloudWatch Events rule with no target (wrong - CloudWatch Events is the older name for EventBridge, and a rule only remediates when it has a target such as an Automation runbook)
 
 ### Log Analysis and Troubleshooting
 **Scenario**: Application errors are increasing but the team cannot identify the root cause. They need centralized log analysis.
@@ -44,7 +48,7 @@
 - VPC Flow Logs (wrong - network-level, not application-level)
 - CloudTrail (wrong - API auditing, not application performance)
 
-## Reliability and Business Continuity Scenarios
+## Reliability and Business Continuity Scenarios (Domain 2)
 
 ### Multi-AZ High Availability
 **Scenario**: A company needs a web application that can survive an AZ failure with minimal downtime.
@@ -89,7 +93,7 @@
 - Change instance type (wrong - investigate root cause first)
 - Create new ASG (wrong - troubleshoot existing configuration)
 
-## Deployment and Automation Scenarios
+## Deployment, Provisioning, and Automation Scenarios (Domain 3)
 
 ### CloudFormation Stack Update Failure
 **Scenario**: A CloudFormation stack update failed and rolled back. The team needs to understand why and fix it.
@@ -103,7 +107,7 @@
 **Common Distractors**:
 - Delete and recreate stack (wrong - lose existing resources and data)
 - Manually create the resource (wrong - breaks IaC management)
-- Ignore rollback and proceed (wrong - stack is in ROLLBACK_COMPLETE state)
+- Ignore the rollback and proceed (wrong - the stack is back in its previous state, UPDATE_ROLLBACK_COMPLETE, so the change was never applied)
 
 ### Blue/Green Deployment
 **Scenario**: Company needs zero-downtime deployments for a web application with the ability to quickly roll back.
@@ -133,7 +137,7 @@
 - Ignore drift (wrong - leads to configuration inconsistency)
 - Recreate entire stack (wrong - unnecessary and disruptive)
 
-## Security and Compliance Scenarios
+## Security and Compliance Scenarios (Domain 4)
 
 ### Unauthorized API Calls
 **Scenario**: Security team detects unusual API calls from an IAM user. They need to investigate and remediate.
@@ -177,7 +181,7 @@
 - CloudTrail in each account independently (wrong - use Organization trail)
 - Manual security reviews (wrong - not scalable for 50 accounts)
 
-## Networking Scenarios
+## Networking and Content Delivery Scenarios (Domain 5)
 
 ### VPC Connectivity Troubleshooting
 **Scenario**: EC2 instance in a private subnet cannot reach the internet to download software updates.
@@ -222,35 +226,35 @@
 - Disable caching entirely (wrong - defeats purpose of CDN)
 - Wait for TTL to expire (wrong - too slow for urgent updates)
 
-## Cost and Performance Optimization Scenarios
+## Performance Optimization and Network Cost Scenarios (Domain 1 Task 1.3, Domain 5 Task 5.1.4)
 
 ### Right-Sizing Instances
-**Scenario**: Company's EC2 instances consistently show CPU utilization below 10%. They need to reduce costs.
+**Scenario**: A fleet of EC2 instances consistently shows CPU utilization below 10% while an application tier on another fleet is slow. The team needs to fix both with the least effort.
 
 **Solution Pattern**:
-- **Analysis**: AWS Compute Optimizer recommendations
-- **Verification**: CloudWatch metrics history for utilization patterns
-- **Action**: Resize instances to recommended types
-- **Monitoring**: Set up Cost Explorer reports and Budgets alerts
+- **Analysis**: AWS Compute Optimizer recommendations (install the CloudWatch agent so memory is considered)
+- **Verification**: CloudWatch metrics history for CPU, memory, disk and network
+- **Action**: Resize over-provisioned instances down and under-provisioned ones up, or change instance family
+- **Monitoring**: Alarms on the bottleneck metric to confirm the change helped
 
 **Common Distractors**:
-- Switch all to Spot instances (wrong - may not be suitable for all workloads)
+- Switch all to Spot Instances (wrong - not suitable for every workload and does not fix sizing)
 - Delete underutilized instances (wrong - they may still be needed)
-- Buy Reserved Instances for current size (wrong - right-size first)
+- Commit to Reserved Instances or Savings Plans first (wrong - right-size first; purchase analysis is out of scope for SOA-C03)
 
-### Cost Anomaly Detection
-**Scenario**: Monthly AWS bill increased by 40% unexpectedly. The team needs to identify the cause and prevent recurrence.
+### NAT Gateway Data Processing Charges
+**Scenario**: Private-subnet instances read and write large volumes of data to Amazon S3 through a NAT gateway, and NAT gateway data processing has become a large share of the network bill.
 
 **Solution Pattern**:
-- **Investigation**: Cost Explorer with daily granularity and service breakdown
-- **Root Cause**: Identify service and resource causing cost spike
-- **Prevention**: AWS Budgets with threshold alerts and budget actions
-- **Monitoring**: Cost Anomaly Detection for automatic alerts
+- **Investigation**: VPC Flow Logs (with `pkt-dstaddr`) show most NAT traffic goes to S3
+- **Fix**: Add an S3 **gateway endpoint** to the private subnets' route tables (no hourly or data processing charge)
+- **Control**: Endpoint policy and bucket policy with `aws:SourceVpce` to keep access private
+- **Related**: Keep each AZ's private subnets routed to their own AZ's NAT gateway to avoid cross-AZ charges
 
 **Common Distractors**:
-- Review only monthly total (wrong - need granular breakdown)
-- Contact AWS support immediately (wrong - investigate first)
-- Reduce all resources (wrong - identify specific cause)
+- Replace the NAT gateway with a NAT instance (wrong - more operational work and a single point of failure)
+- Move instances to public subnets (wrong - weakens security)
+- An S3 interface endpoint (works, but has hourly and per-GB charges; the gateway endpoint is the cheaper fit inside the VPC)
 
 ## Key Decision Factors
 

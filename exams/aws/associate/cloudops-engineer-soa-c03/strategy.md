@@ -1,123 +1,74 @@
+---
+last-updated: 2026-10-22
+---
+
 # SOA-C03 Study Strategy
 
-## Study Approach
+SOA-C03 has five domains with three of them tied for the largest share. That shapes the plan: no single domain dominates, so you cannot pass by mastering one area. Breadth with operational depth is what scores.
 
-### Phase 1: Foundation (2-3 weeks)
-1. **Operations Fundamentals**
-   - Review AWS Well-Architected Framework - Operational Excellence pillar
-   - Understand shared responsibility model for operations
-   - Learn core monitoring concepts (metrics, logs, traces, alarms)
+## Time allocation by weight
 
-2. **Core Services Deep Dive**
-   - Focus on CloudWatch (metrics, logs, alarms, dashboards)
-   - Master CloudFormation (templates, stacks, updates, drift detection)
-   - Understand Systems Manager capabilities (Session Manager, Run Command, Patch Manager)
+| Domain | Weight | Share of study time | Notes |
+|---|---|---|---|
+| 1. Monitoring, Logging, Analysis, Remediation, and Performance Optimization | 22% | about 25% (it has three tasks and the most services) | [01](./notes/01-monitoring-logging.md), [01b](./notes/01b-performance-optimization.md) |
+| 2. Reliability and Business Continuity | 22% | about 20% | [02](./notes/02-reliability-business-continuity.md) |
+| 3. Deployment, Provisioning, and Automation | 22% | about 22% | [03](./notes/03-deployment-automation.md) |
+| 4. Security and Compliance | 16% | about 15% | [04](./notes/04-security-compliance.md) |
+| 5. Networking and Content Delivery | 18% | about 18% | [05](./notes/05-networking.md) |
 
-### Phase 2: Operational Patterns (3-4 weeks)
-1. **Automation and Deployment**
-   - CloudFormation and CDK for infrastructure as code
-   - CI/CD pipelines with CodePipeline
-   - Deployment strategies (rolling, blue/green, canary)
-   - Systems Manager Automation runbooks
+Domain 1 gets a little more than its weight because Task 1.3 (performance across EC2, EBS, S3, EFS, FSx, S3 Files and RDS) is wide, and because CloudWatch and EventBridge show up inside questions from every other domain too. Domain 2 gets a little less because much of it (Auto Scaling, ELB, Multi-AZ) overlaps with what you learn for Domains 1 and 3.
 
-2. **Security and Reliability**
-   - IAM policies and multi-account management
-   - VPC architecture and troubleshooting
-   - High availability patterns and DR strategies
-   - Backup and restore with AWS Backup
+In exam terms, the 50 scored questions split roughly 11 / 11 / 11 / 8 / 9.
 
-3. **Hands-on Practice**
-   - Build monitoring dashboards for real applications
-   - Automate deployments with CloudFormation
-   - Configure Auto Scaling and load balancing
-   - Practice incident response workflows
+## Study approach
 
-### Phase 3: Exam Preparation (1-2 weeks)
-1. **Practice Exams**
-   - Take multiple practice tests
-   - Review incorrect answers thoroughly
-   - Identify knowledge gaps
+### Phase 1: Foundations (weeks 1-2)
 
-2. **Final Review**
-   - Review cheat sheets and summaries
-   - Practice scenario-based questions
-   - Focus on weak domains
+Start with Domain 1, because everything else depends on reading signals. Get hands-on with CloudWatch metrics, the CloudWatch agent, alarms, Logs Insights, CloudTrail and EventBridge. Build one end-to-end loop yourself: an alarm on a custom metric, an EventBridge rule on its state change, and a Systems Manager Automation runbook that fixes the resource. Then work through performance (note 01b) with real EBS and RDS metrics.
 
-## Comprehensive Study Resources
+### Phase 2: Operating patterns (weeks 3-5)
 
-**Official Resources:**
-- **[SOA-C03 Official Exam Page](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/)** - Registration and exam details
-- **[AWS Skill Builder](https://skillbuilder.aws/)** - FREE official exam preparation and labs
-- **[CloudOps Learning Plan](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/)** - Official study plan
-- **[AWS Documentation](https://docs.aws.amazon.com/)** - Complete service documentation
-- **[AWS Free Tier](https://aws.amazon.com/free/)** - 12 months free + always-free services
+Domains 2 and 3 together. Build an Auto Scaling group behind an ALB across three AZs, break its health checks on purpose and fix them. Deploy it with CloudFormation, then change it with a change set, cause a rollback, and recover. Create an Image Builder pipeline. Restore an RDS instance to a point in time and notice it is a new endpoint. Set up AWS Backup by tag.
 
-### Recommended Courses
-1. **AWS Skill Builder - SOA-C03 Exam Prep** (FREE)
-2. **Stephane Maarek's AWS CloudOps/SysOps Associate** (Udemy) - Comprehensive and well-structured
-3. **Adrian Cantrill's SysOps Administrator Course** - Deep technical explanations
-4. **Tutorials Dojo Practice Exams (Jon Bonso)** - Highly recommended for practice
+### Phase 3: Security and networking (weeks 5-7)
 
-## Exam Tactics
+Domain 4: use the policy simulator and Access Analyzer on a deliberately broken policy; set up Config conformance packs with automatic remediation; encrypt an unencrypted EBS volume via snapshot copy. Domain 5: build public and private subnets with a NAT gateway and a gateway endpoint, break routing and NACLs, use Reachability Analyzer and flow logs to find the fault, and configure Resolver endpoints if you can.
 
-### Question Strategy
-1. **Read Carefully**: Identify the operational requirement and constraints
-2. **Eliminate**: Remove obviously incorrect answers first
-3. **Keywords**: Look for "automate", "monitor", "least effort", "most efficient"
-4. **Operational Focus**: This exam emphasizes how to operate and manage, not just design
-5. **AWS Native**: Prefer AWS managed services and built-in automation
+### Phase 4: Practice and review (week 8)
 
-### Time Management
-- **2 minutes per question** average
-- **Flag and move**: Don't spend too long on difficult questions
-- **Review time**: Reserve 15-20 minutes for flagged questions
-- **Quick wins**: Answer easy questions first to build confidence
+Official practice question set and practice exam on AWS Skill Builder, then third-party practice exams. Review every wrong answer back to the note and the AWS documentation page.
 
-### Domain Focus by Weight
-- **Deployment, Provisioning, and Automation (25%)** - Largest domain, prioritize this
-- **Monitoring, Logging, and Remediation (20%)** - Second priority
-- **Security and Compliance (20%)** - Equal priority with monitoring
-- **Reliability and Business Continuity (15%)** - Important but smaller weight
-- **Networking and Content Delivery (15%)** - Important but smaller weight
-- **Cost and Performance Optimization (5%)** - Smallest weight, don't over-invest
+## Per-domain tactics
 
-### Common Patterns
-- **Monitoring**: CloudWatch metrics + alarms + SNS for notification
-- **Automation**: CloudFormation + Systems Manager for provisioning
-- **Security**: IAM roles + Config rules + remediation
-- **High Availability**: Multi-AZ + Auto Scaling + health checks
-- **Troubleshooting**: VPC Flow Logs + CloudTrail + CloudWatch Logs
+**Domain 1.** Questions describe a missing or wrong signal. Ask: is the data collected (agent, data events)? Is the alarm evaluating correctly (dimensions, period, missing data)? Can the action run (SNS policy, EventBridge target permission, runbook assume role)? For performance, match the bottleneck metric to the fix: `VolumeQueueLength` to a faster volume or bigger instance, `DatabaseConnections` to RDS Proxy, `CPUCreditBalance` to unlimited mode or a fixed-performance instance.
 
-## Common Pitfalls
+**Domain 2.** Look for the scaling or resilience mechanism that is **automatic**. Target tracking over manual changes, ELB health checks over EC2 checks, Multi-AZ over single-AZ, AWS Backup over scripts. For restores, match the option to the stated RPO and RTO and remember PITR creates a new resource.
 
-### Study Mistakes
-- Memorizing CLI commands instead of understanding operational concepts
-- Skipping hands-on labs - this exam requires practical knowledge
-- Not understanding CloudFormation update behaviors
-- Focusing only on individual services without understanding integration
-- Ignoring multi-account management scenarios
+**Domain 3.** Know what each CloudFormation state means and the one action that recovers from it. Prefer managed, repeatable options: Image Builder over hand-built AMIs, StackSets over per-account deploys, RAM sharing over duplication, Systems Manager over SSH scripts. OpsWorks is never the answer.
 
-### Exam Mistakes
-- Not reading questions carefully - missing "MOST operationally efficient"
-- Choosing manual solutions when automated ones exist
-- Overlooking Systems Manager as a solution
-- Confusing CloudWatch Events with EventBridge (they are the same service)
-- Not considering cost implications in operational decisions
-- Selecting overly complex solutions when simple ones work
+**Domain 4.** Most questions are "why is this denied?" or "how do we enforce this automatically?". Trace the policy layers (SCP, boundary, identity, resource, session) and pick the tool that answers the question asked: simulator, Access Analyzer or CloudTrail. For findings, the answer is usually EventBridge to an automated fix.
 
-## Progress Tracking
+**Domain 5.** Troubleshoot in order: security group, NACL, route table, gateway, DNS. Know the cost-saving moves (gateway endpoints, same-AZ traffic, CloudFront) and the logging specifics (flow log fields, WAF log naming, query logging Regions).
 
-### Weekly Milestones
-- **Week 1-2**: Master CloudWatch, CloudTrail, and monitoring fundamentals
-- **Week 3-4**: Complete CloudFormation, CDK, and deployment automation
-- **Week 5-6**: Finish security, networking, and reliability topics
-- **Week 7**: Practice exams and gap analysis
-- **Week 8**: Final review and exam day
+## Exam tactics
 
-### Self-Assessment Questions
-- Can I set up comprehensive monitoring with CloudWatch?
-- Do I understand CloudFormation template syntax and update behaviors?
-- Can I configure Auto Scaling with appropriate health checks?
-- Do I know how to troubleshoot VPC connectivity issues?
-- Can I implement IAM policies following least privilege?
-- Do I understand backup and DR strategies and their trade-offs?
+- **2 minutes per question** on average (130 minutes, 65 questions). Flag anything over 3 minutes and return.
+- **Keywords**: "least operational overhead" (managed, automated), "least privilege", "without downtime", "most cost-effective" (still only within the stated requirements).
+- **Eliminate** answers that are manual, use retired services (OpsWorks), or design something the question did not ask for.
+- **Multiple response**: the question tells you how many to pick; each must be independently correct.
+- There are **no exam labs** on SOA-C03, but practice in a real account anyway: hands-on time is what makes troubleshooting questions easy.
+
+## Resources
+
+- **[📖 SOA-C03 exam guide](https://docs.aws.amazon.com/aws-certification/latest/sysops-administrator-associate-03/sysops-administrator-associate-03.html)** - domains, tasks and in-scope services
+- **[📖 Official exam page](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/)** - registration and exam prep resources
+- **[📖 AWS Skill Builder](https://skillbuilder.aws/)** - official exam prep, question sets and practice exam
+- **[📖 AWS Free Tier](https://aws.amazon.com/free/)** - hands-on practice
+
+## Common pitfalls
+
+- Treating the exam as a design exam. It asks how to operate and fix, with the least effort.
+- Skipping the CloudWatch agent and EventBridge details; they appear in every domain.
+- Studying old SOA-C02 material: it has exam labs, a separate cost domain and OpsWorks, all of which are gone.
+- Over-studying billing and TCO, which are out of scope.
+- Ignoring the v1.1 additions (Bedrock monitoring, DevOps Agent, Security Agent, Kiro, Health Dashboard, S3 Files). Expect light, "which tool fits" questions on them.

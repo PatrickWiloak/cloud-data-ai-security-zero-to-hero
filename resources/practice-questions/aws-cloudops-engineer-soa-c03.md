@@ -5,9 +5,9 @@ difficulty: intermediate
 
 # AWS Certified CloudOps Engineer - Associate (SOA-C03) - Practice Questions
 
-30 questions for SOA-C03 prep. The exam guide weights monitoring, logging, analysis, remediation, and performance optimization; reliability and business continuity; and deployment, provisioning, and automation at 22% each, then networking and content delivery (18%) and security and compliance (16%).
+30 questions for SOA-C03 prep. The exam guide (version 1.1, June 2026) has five domains: monitoring, logging, analysis, remediation, and performance optimization (22%); reliability and business continuity (22%); deployment, provisioning, and automation (22%); security and compliance (16%); and networking and content delivery (18%). There is no separate cost domain: performance tuning sits in Domain 1 and network cost in Domain 5.
 
-SOA-C03 is the successor to SOA-C02. Confirm the current domain list on the AWS exam page before you build a study plan around it.
+SOA-C03 is the successor to SOA-C02 (SysOps Administrator).
 
 > **Cert page:** [exams/aws/associate/cloudops-engineer-soa-c03/](../../exams/aws/associate/cloudops-engineer-soa-c03/)
 
