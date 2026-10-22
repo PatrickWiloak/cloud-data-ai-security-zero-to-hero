@@ -45,7 +45,7 @@ Each lab maps to the certs it exercises. The reverse index lives in [labs-by-cer
 
 | Lab | Certs it supports |
 |------|-------------------|
-| [Hands-On Project: Build a CI/CD Pipeline](./build-ci-cd-pipeline.md) | [GitHub Actions Certification](../../exams/github/actions/), [AZ-400](../../exams/azure/az-400/), [DOP-C02](../../exams/aws/professional/devops-engineer-pro-dop-c02/), [Google Cloud Professional Cloud DevOps Engineer Certification](../../exams/gcp/cloud-devops-engineer/) |
+| [Hands-On Project: Build a CI/CD Pipeline](./build-ci-cd-pipeline.md) | [GH-200](../../exams/github/actions/), [AZ-400](../../exams/azure/az-400/), [DOP-C02](../../exams/aws/professional/devops-engineer-pro-dop-c02/), [Google Cloud Professional Cloud DevOps Engineer Certification](../../exams/gcp/cloud-devops-engineer/) |
 | [Hands-On Project: Build a Landing Zone](./build-a-landing-zone.md) | [SAP-C02](../../exams/aws/professional/solutions-architect-pro-sap-c02/), [AZ-305](../../exams/azure/az-305/), [Professional Cloud Architect](../../exams/gcp/cloud-architect/) |
 | [Hands-On Project: Build a Serverless Application](./serverless-application.md) | [DVA-C02](../../exams/aws/associate/developer-dva-c02/), [AZ-204](../../exams/azure/az-204/), [Google Cloud Professional Cloud Developer Certification](../../exams/gcp/cloud-developer/) |
 | [Hands-On Project: Build Infrastructure with Terraform](./terraform-infrastructure.md) | [Terraform Associate (003)](../../exams/hashicorp/terraform-associate/), [HashiCorp Terraform Authoring and Operations Professional Certification](../../exams/hashicorp/terraform-authoring-operations-pro/) |

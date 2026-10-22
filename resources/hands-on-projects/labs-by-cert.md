@@ -59,7 +59,7 @@ Which [hands-on projects](./README.md) back up which certification. Doing the la
 
 | Cert | Labs |
 |------|------|
-| [GitHub Actions Certification](../../exams/github/actions/) | [Hands-On Project: Build a CI/CD Pipeline](./build-ci-cd-pipeline.md) |
+| [GitHub Actions Certification (GH-200)](../../exams/github/actions/) | [Hands-On Project: Build a CI/CD Pipeline](./build-ci-cd-pipeline.md) |
 
 ### Red Hat
 
